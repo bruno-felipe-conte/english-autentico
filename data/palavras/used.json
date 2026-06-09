@@ -1,0 +1,7364 @@
+[
+  {
+    "id": 73256,
+    "italiano": "area",
+    "trad_port": "area",
+    "categoria": "geometria",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 52899,
+    "italiano": "circolo",
+    "trad_port": "circulo",
+    "categoria": "forma",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 47665,
+    "italiano": "pittore",
+    "trad_port": "pintor",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 57791,
+    "italiano": "museu",
+    "trad_port": "museu",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 60768,
+    "italiano": "piazza",
+    "trad_port": "praca",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 66112,
+    "italiano": "rettangolo",
+    "trad_port": "retangulo",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 74063,
+    "italiano": "monumento",
+    "trad_port": "monumento",
+    "categoria": "cultura",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 60578,
+    "italiano": "calligrafia",
+    "trad_port": "caligrafia",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 82343,
+    "italiano": "spazio",
+    "trad_port": "espaco",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  [
+    "liberta",
+    "liberdade",
+    "substantivo"
+  ],
+  {
+    "id": 72199,
+    "italiano": "leggenda",
+    "trad_port": "lenda",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 69288,
+    "italiano": "museu",
+    "trad_port": "museu",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 11446,
+    "italiano": "contratto",
+    "trad_port": "contrato",
+    "categoria": "juridico",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 10696,
+    "italiano": "elissoide",
+    "trad_port": "elipsoide",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  [
+    "politica",
+    "politica",
+    "substantivo"
+  ],
+  {
+    "id": 20924,
+    "italiano": "segretario",
+    "trad_port": "secretario",
+    "categoria": "cargo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 20943,
+    "italiano": "massa",
+    "trad_port": "massa",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 86034,
+    "italiano": "linguistica",
+    "trad_port": "linguistica",
+    "categoria": "estudo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 12493,
+    "italiano": "architettura",
+    "trad_port": "arquitetura",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 34306,
+    "italiano": "dipendente",
+    "trad_port": "funcionario",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 66711,
+    "italiano": "calligrafia",
+    "trad_port": "caligrafia",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  [
+    "societa",
+    "sociedade",
+    "substantivo"
+  ],
+  {
+    "id": 51095,
+    "italiano": "autostrada",
+    "trad_port": "autopista",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 88418,
+    "italiano": "musica",
+    "trad_port": "musica",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 83081,
+    "italiano": "poesia",
+    "trad_port": "poesia",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 41373,
+    "italiano": "gestione",
+    "trad_port": "gestao",
+    "categoria": "gestao",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 86239,
+    "italiano": "tradizione",
+    "trad_port": "tradio",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  [
+    "quartiere",
+    "bairro",
+    "lugar"
+  ],
+  {
+    "id": 50511,
+    "italiano": "tratta",
+    "trad_port": "trecho",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 30914,
+    "italiano": "storia",
+    "trad_port": "historia",
+    "categoria": "cultura",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 92279,
+    "italiano": "linguistica",
+    "trad_port": "linguistica",
+    "categoria": "estudo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 43432,
+    "italiano": "biblioteca",
+    "trad_port": "biblioteca",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  [
+    "guerra",
+    "guerra",
+    "substantivo"
+  ],
+  {
+    "id": 56462,
+    "italiano": "misura",
+    "trad_port": "medida",
+    "categoria": "quantidade",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 67622,
+    "italiano": "storia",
+    "trad_port": "historia",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 59092,
+    "italiano": "viaggio",
+    "trad_port": "jornada",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 39604,
+    "italiano": "strada",
+    "trad_port": "estrada",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 41310,
+    "italiano": "quadrato",
+    "trad_port": "quadado",
+    "categoria": "forma",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 30437,
+    "italiano": "poesia",
+    "trad_port": "poesia",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 59133,
+    "italiano": "monumento",
+    "trad_port": "monumento",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 86632,
+    "italiano": "impiegato",
+    "trad_port": "empregado",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 98059,
+    "italiano": "piazza",
+    "trad_port": "praca",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 39104,
+    "italiano": "piramide",
+    "trad_port": "piramides",
+    "categoria": "forma",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  [
+    "economia",
+    "economia",
+    "substantivo"
+  ],
+  {
+    "id": 39971,
+    "italiano": "numero",
+    "trad_port": "numero",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 79528,
+    "italiano": "comodita",
+    "trad_port": "conforto",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 21695,
+    "italiano": "perimetro",
+    "trad_port": "perimetro",
+    "categoria": "geometria",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 76489,
+    "italiano": "pittore",
+    "trad_port": "pintor",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 38362,
+    "italiano": "romanzo",
+    "trad_port": "romance",
+    "categoria": "literatura",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  [
+    "democrazia",
+    "democracia",
+    "substantivo"
+  ],
+  {
+    "id": 18386,
+    "italiano": "architettura",
+    "trad_port": "arquitetura",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 72911,
+    "italiano": "peso",
+    "trad_port": "peso",
+    "categoria": "quantidade",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 36794,
+    "italiano": "percursso",
+    "trad_port": "percurso",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 48741,
+    "italiano": "cilindro",
+    "trad_port": "cilindro",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69085,
+    "italiano": "scultura",
+    "trad_port": "escultura",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 21710,
+    "italiano": "triangolo",
+    "trad_port": "triangulo",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 90293,
+    "italiano": "biblioteca",
+    "trad_port": "biblioteca",
+    "categoria": "cultura",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 12389,
+    "italiano": "cono",
+    "trad_port": "cono",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 95686,
+    "italiano": "energico",
+    "trad_port": "energético",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 41503,
+    "italiano": "amministratore",
+    "trad_port": "administrador",
+    "categoria": "cargo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 89258,
+    "italiano": "sicurezza",
+    "trad_port": "seguranga",
+    "categoria": "estado",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 84393,
+    "italiano": "disponibilita",
+    "trad_port": "disponibilidade",
+    "categoria": "estado",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 56708,
+    "italiano": "prosa",
+    "trad_port": "prosas",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 85837,
+    "italiano": "felice",
+    "trad_port": "feliz",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 63733,
+    "italiano": "contabile",
+    "trad_port": "contador",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 78157,
+    "italiano": "capo",
+    "trad_port": "chefe",
+    "categoria": "cargo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 39956,
+    "italiano": "budget",
+    "trad_port": "orcamento",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 90598,
+    "italiano": "affidabilita",
+    "trad_port": "confiabilidade",
+    "categoria": "qualidade",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 61565,
+    "italiano": "contento",
+    "trad_port": "satisfeito",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 74349,
+    "italiano": "musica",
+    "trad_port": "musica",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 51468,
+    "italiano": "disteso",
+    "trad_port": "relaxado",
+    "categoria": "estado",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 35632,
+    "italiano": "scultura",
+    "trad_port": "escultura",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 44294,
+    "italiano": "teatro",
+    "trad_port": "teatro",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77221,
+    "italiano": "tunnel",
+    "trad_port": "tuneis",
+    "categoria": "estrutura",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80425,
+    "italiano": "cubo",
+    "trad_port": "cubo",
+    "categoria": "forma",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47248,
+    "italiano": "salute",
+    "trad_port": "saude",
+    "categoria": "bemestar",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 24951,
+    "italiano": "tranquillo",
+    "trad_port": "tranquilo",
+    "categoria": "estado",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 37338,
+    "italiano": "calmo",
+    "trad_port": "calmo",
+    "categoria": "estado",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 34593,
+    "italiano": "leggenda",
+    "trad_port": "lenda",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 38687,
+    "italiano": "ponte",
+    "trad_port": "ponte",
+    "categoria": "estrutura",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 53006,
+    "italiano": "imprenditore",
+    "trad_port": "empreendedor",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 48921,
+    "italiano": "dimensione",
+    "trad_port": "dimensao",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 46621,
+    "italiano": "volume",
+    "trad_port": "volume",
+    "categoria": "dimensao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 13438,
+    "italiano": "puntuale",
+    "trad_port": "pontual",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  [
+    "capitale",
+    "capital",
+    "substantivo"
+  ],
+  [
+    "citta",
+    "cidade",
+    "lugar"
+  ],
+  {
+    "id": 92041,
+    "italiano": "sfera",
+    "trad_port": "esfera",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 52849,
+    "italiano": "teatro",
+    "trad_port": "teatro",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 37058,
+    "italiano": "prosa",
+    "trad_port": "prosas",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 21670,
+    "italiano": "superficie",
+    "trad_port": "superficie",
+    "categoria": "geometria",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 41904,
+    "italiano": "benessere",
+    "trad_port": "bem estar",
+    "categoria": "bemestar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 55195,
+    "italiano": "romanzo",
+    "trad_port": "romance",
+    "categoria": "literatura",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  [
+    "popolo",
+    "povo",
+    "substantivo"
+  ],
+  {
+    "id": 69469,
+    "italiano": "tradizione",
+    "trad_port": "tradio",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 53208,
+    "italiano": "famiglia",
+    "trad_port": "familia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 76762,
+    "italiano": "cugino",
+    "trad_port": "primo",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 67341,
+    "italiano": "ieri",
+    "trad_port": "ontem",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 84552,
+    "italiano": "sentire",
+    "trad_port": "sentir",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 19995,
+    "italiano": "tristezza",
+    "trad_port": "tristeza",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 76626,
+    "italiano": "ascoltare",
+    "trad_port": "ouvir",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 60786,
+    "italiano": "internet",
+    "trad_port": "internet",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 87280,
+    "italiano": "indaginare",
+    "trad_port": "investigar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 74022,
+    "italiano": "telefono",
+    "trad_port": "telefone",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 71263,
+    "italiano": "ansia",
+    "trad_port": "ansiedade",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 94858,
+    "italiano": "metropoli",
+    "trad_port": "metrópole",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 91468,
+    "italiano": "giovedì",
+    "trad_port": "quinta-feira",
+    "categoria": "dia",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 16031,
+    "italiano": "felicità",
+    "trad_port": "felicidade",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 20307,
+    "italiano": "carne",
+    "trad_port": "carne",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 21469,
+    "italiano": "probar",
+    "trad_port": "provar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 51597,
+    "italiano": "computer",
+    "trad_port": "computador",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 85586,
+    "italiano": "figlio",
+    "trad_port": "filho",
+    "categoria": "parente",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 94345,
+    "italiano": "desiderio",
+    "trad_port": "desejo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 19852,
+    "italiano": "stazione",
+    "trad_port": "estação",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 53294,
+    "italiano": "gioia",
+    "trad_port": "alegria",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 28212,
+    "italiano": "mouse",
+    "trad_port": "mouse",
+    "categoria": "dispositivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 67631,
+    "italiano": "viaggio",
+    "trad_port": "jornada",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 74965,
+    "italiano": "passeggiate",
+    "trad_port": "passeios",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 73456,
+    "italiano": "stasera",
+    "trad_port": "hoje a noite",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 97922,
+    "italiano": "dati",
+    "trad_port": "dados",
+    "categoria": "informatica",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 73986,
+    "italiano": "hotel",
+    "trad_port": "hotéis",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 57870,
+    "italiano": "nonna",
+    "trad_port": "avó",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 89324,
+    "italiano": "fratello",
+    "trad_port": "irmão",
+    "categoria": "parente",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 28420,
+    "italiano": "verdura",
+    "trad_port": "vegetal",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 32344,
+    "italiano": "nonno",
+    "trad_port": "avô",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 91176,
+    "italiano": "pesce",
+    "trad_port": "peixe",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 47235,
+    "italiano": "udire",
+    "trad_port": "ouvir",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 86954,
+    "italiano": "aeroporto",
+    "trad_port": "aeroporto",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 87820,
+    "italiano": "gustare",
+    "trad_port": "provar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 12708,
+    "italiano": "wifi",
+    "trad_port": "wifi",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 17317,
+    "italiano": "vedere",
+    "trad_port": "ver",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 40853,
+    "italiano": "lunedì",
+    "trad_port": "segunda-feira",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 61877,
+    "italiano": "cibi",
+    "trad_port": "comidas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 51942,
+    "italiano": "programmi",
+    "trad_port": "programas",
+    "categoria": "software",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 75115,
+    "italiano": "zio",
+    "trad_port": "tio",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 89726,
+    "italiano": "cammino",
+    "trad_port": "caminho",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 97657,
+    "italiano": "schermo",
+    "trad_port": "tela",
+    "categoria": "parte",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 44825,
+    "italiano": "pizza",
+    "trad_port": "pizza",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25804,
+    "italiano": "toccare",
+    "trad_port": "tocar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 52154,
+    "italiano": "rabbia",
+    "trad_port": "raiva",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 75957,
+    "italiano": "oggi",
+    "trad_port": "hoje",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 54055,
+    "italiano": "sabato",
+    "trad_port": "sábado",
+    "categoria": "dia",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 52368,
+    "italiano": "tours",
+    "trad_port": "turismo",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 40663,
+    "italiano": "speranza",
+    "trad_port": "esperança",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 38273,
+    "italiano": "genitore",
+    "trad_port": "genitor",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 76502,
+    "italiano": "frutta",
+    "trad_port": "fruta",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 64476,
+    "italiano": "nipote",
+    "trad_port": "neto",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 76097,
+    "italiano": "pericolo",
+    "trad_port": "perigo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 28118,
+    "italiano": "calma",
+    "trad_port": "calma",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 55035,
+    "italiano": "martedì",
+    "trad_port": "terça-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 60946,
+    "italiano": "password",
+    "trad_port": "senha",
+    "categoria": "seguranca",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 24097,
+    "italiano": "paura",
+    "trad_port": "medo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 92141,
+    "italiano": "spavento",
+    "trad_port": "medo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 32544,
+    "italiano": "mercoledì",
+    "trad_port": "quarta-feira",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 28531,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 76976,
+    "italiano": "latte",
+    "trad_port": "leite",
+    "categoria": "bebida",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 87233,
+    "italiano": "caffè",
+    "trad_port": "café",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 84797,
+    "italiano": "annusare",
+    "trad_port": "cheirar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 53463,
+    "italiano": "guardare",
+    "trad_port": "olhar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 86464,
+    "italiano": "domani",
+    "trad_port": "amanha",
+    "categoria": "tempo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 18831,
+    "italiano": "vino",
+    "trad_port": "vinho",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 65168,
+    "italiano": "venerdì",
+    "trad_port": "sexta-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 81376,
+    "italiano": "sorella",
+    "trad_port": "irma",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 12110,
+    "italiano": "tastiera",
+    "trad_port": "teclado",
+    "categoria": "parte",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 80578,
+    "italiano": "noleggio",
+    "trad_port": "aluguel",
+    "categoria": "servico",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 19327,
+    "italiano": "calcio",
+    "trad_port": "futebol",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 79150,
+    "italiano": "benessere",
+    "trad_port": "bem-estar",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 88579,
+    "italiano": "corsa",
+    "trad_port": "corrida",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 22735,
+    "italiano": "cerimonia",
+    "trad_port": "cerimônia",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80325,
+    "italiano": "basketball",
+    "trad_port": "basquete",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 39443,
+    "italiano": "ambiente",
+    "trad_port": "ambiente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 44062,
+    "italiano": "televisione",
+    "trad_port": "televisão",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 99736,
+    "italiano": "ginnastica",
+    "trad_port": "ginástica",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 28502,
+    "italiano": "festa",
+    "trad_port": "festas",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 86845,
+    "italiano": "notte",
+    "trad_port": "noite",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 86803,
+    "italiano": "serie TV",
+    "trad_port": "séries de TV",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 59226,
+    "italiano": "periferia",
+    "trad_port": "periferia",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 99155,
+    "italiano": "ballata",
+    "trad_port": "balada",
+    "categoria": "música",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 44753,
+    "italiano": "malattia",
+    "trad_port": "doença",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 48555,
+    "italiano": "natura",
+    "trad_port": "natureza",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 89155,
+    "italiano": "tempo",
+    "trad_port": "clima",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 39083,
+    "italiano": "rugby",
+    "trad_port": "rugby",
+    "categoria": "esporte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 70226,
+    "italiano": "medico",
+    "trad_port": "médico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 78786,
+    "italiano": "biodiversita",
+    "trad_port": "biodiversidade",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 37279,
+    "italiano": "recita",
+    "trad_port": "representação",
+    "categoria": "teatro",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 70976,
+    "italiano": "musica pop",
+    "trad_port": "música pop",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29171,
+    "italiano": "giocatori",
+    "trad_port": "jogadores",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 18789,
+    "italiano": "equilibrio",
+    "trad_port": "equilíbrio",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 10370,
+    "italiano": "ospedale",
+    "trad_port": "hospital",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 72142,
+    "italiano": "tennis",
+    "trad_port": "tenis",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 68729,
+    "italiano": "rock",
+    "trad_port": "rock",
+    "categoria": "genero musica",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 18319,
+    "italiano": "salute",
+    "trad_port": "saúde",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 75862,
+    "italiano": "fuoco",
+    "trad_port": "fogo",
+    "categoria": "elemento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 55803,
+    "italiano": "radionone",
+    "trad_port": "rádio",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 64312,
+    "italiano": "piazza",
+    "trad_port": "praça",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 11974,
+    "italiano": "crepuscolo",
+    "trad_port": "crépusculo",
+    "categoria": "tempo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 89307,
+    "italiano": "tradizione",
+    "trad_port": "tradição",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 49373,
+    "italiano": "zona",
+    "trad_port": "zona",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 80459,
+    "italiano": "sagre",
+    "trad_port": "festas populares",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29801,
+    "italiano": "mercato",
+    "trad_port": "mercado",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 53998,
+    "italiano": "cura",
+    "trad_port": "cura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 32149,
+    "italiano": "fiera",
+    "trad_port": "feira",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 39186,
+    "italiano": "quartiere",
+    "trad_port": "bairro",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 32906,
+    "italiano": "ombra",
+    "trad_port": "sombra",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 98993,
+    "italiano": "mondo",
+    "trad_port": "mundo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 27867,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "elemento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 16889,
+    "italiano": "fauna",
+    "trad_port": "fauna",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 35206,
+    "italiano": "terra",
+    "trad_port": "terra",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 20569,
+    "italiano": "vicolo",
+    "trad_port": "rua estreita",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 92671,
+    "italiano": "luce",
+    "trad_port": "luz",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 63611,
+    "italiano": "parco",
+    "trad_port": "parque",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 49090,
+    "italiano": "centro",
+    "trad_port": "centro",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 43016,
+    "italiano": "spettacoli",
+    "trad_port": "espetáculos",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 50305,
+    "italiano": "cielo",
+    "trad_port": "céu",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 15425,
+    "italiano": "farmacia",
+    "trad_port": "farmácia",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 24382,
+    "italiano": "flora",
+    "trad_port": "flora",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 42971,
+    "italiano": "ciclismo",
+    "trad_port": "ciclismo",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 64407,
+    "italiano": "ecosistema",
+    "trad_port": "ecossistema",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 62115,
+    "italiano": "muscoli",
+    "trad_port": "músculos",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 90260,
+    "italiano": "marea",
+    "trad_port": "marés",
+    "categoria": "fenomeno",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 33074,
+    "italiano": "rituale",
+    "trad_port": "rito",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 74791,
+    "italiano": "atleti",
+    "trad_port": "atletas",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 12671,
+    "italiano": "sole",
+    "trad_port": "sol",
+    "categoria": "astro",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 81659,
+    "italiano": "concerti",
+    "trad_port": "consertos",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 29083,
+    "italiano": "infermiera",
+    "trad_port": "enfermeira",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 39973,
+    "italiano": "canto",
+    "trad_port": "canção",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 84071,
+    "italiano": "jazz",
+    "trad_port": "jazz",
+    "categoria": "genero musica",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 37582,
+    "italiano": "città",
+    "trad_port": "cidade",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 26074,
+    "italiano": "nuoto",
+    "trad_port": "natação",
+    "categoria": "esporte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 81823,
+    "italiano": "film",
+    "trad_port": "filmes",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 42290,
+    "italiano": "vento",
+    "trad_port": "vento",
+    "categoria": "elemento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 93890,
+    "italiano": "aria",
+    "trad_port": "ar",
+    "categoria": "elemento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 17566,
+    "italiano": "alba",
+    "trad_port": "amanhecer",
+    "categoria": "tempo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 75928,
+    "italiano": "ripresto",
+    "trad_port": "recuperação",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 27916,
+    "italiano": "viale",
+    "trad_port": " avenida",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 93677,
+    "italiano": "pantalone",
+    "trad_port": "calça",
+    "categoria": "roupa",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 62881,
+    "italiano": "universita",
+    "trad_port": "universidade",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 95317,
+    "italiano": "camicia",
+    "trad_port": "camisa",
+    "categoria": "roupa",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 86646,
+    "italiano": "supporti",
+    "trad_port": "suportes",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 37181,
+    "italiano": "maestro",
+    "trad_port": "instrutor",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 48902,
+    "italiano": "borsa nuziale",
+    "trad_port": "cesta noivais",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 58505,
+    "italiano": "contante",
+    "trad_port": "espaço",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 62803,
+    "italiano": "spese",
+    "trad_port": "despesas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 35872,
+    "italiano": "lezione",
+    "trad_port": "aula",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 95239,
+    "italiano": "anello",
+    "trad_port": "anel",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 37077,
+    "italiano": "credito",
+    "trad_port": "crédito",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 46469,
+    "italiano": "cap",
+    "trad_port": "boné",
+    "categoria": "acessorio",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 67338,
+    "italiano": "studio",
+    "trad_port": "estudo",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 81505,
+    "italiano": "campeggio",
+    "trad_port": "camping",
+    "categoria": "atividade",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 92352,
+    "italiano": "esame",
+    "trad_port": "exame",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 73543,
+    "italiano": "regalo",
+    "trad_port": "presente",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 39622,
+    "italiano": "montagna",
+    "trad_port": "montanha",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 54874,
+    "italiano": "pranzare",
+    "trad_port": "jantar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 50171,
+    "italiano": "avvocato",
+    "trad_port": "advogado",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 77552,
+    "italiano": "valigia",
+    "trad_port": "maleta",
+    "categoria": "bagagem",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 77275,
+    "italiano": "camicia",
+    "trad_port": "camisa",
+    "categoria": "roupa",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 32027,
+    "italiano": "sposa",
+    "trad_port": "noiva",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 48246,
+    "italiano": "insegnante",
+    "trad_port": "professor",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 94911,
+    "italiano": "cena",
+    "trad_port": "refeição",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 63190,
+    "italiano": "spiaggia",
+    "trad_port": "praia",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 44477,
+    "italiano": "cavaliere",
+    "trad_port": "cavaleiro",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 70763,
+    "italiano": "sposo",
+    "trad_port": "noivo",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 26620,
+    "italiano": "borsa",
+    "trad_port": "mala",
+    "categoria": "bagagem",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 93657,
+    "italiano": "scuola",
+    "trad_port": "escola",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 68208,
+    "italiano": "donazione",
+    "trad_port": "doação",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 93636,
+    "italiano": "escursionismo",
+    "trad_port": "trekking",
+    "categoria": "atividade",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 48711,
+    "italiano": "giacca",
+    "trad_port": "jaqueta",
+    "categoria": "roupa",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 19805,
+    "italiano": "ristoro",
+    "trad_port": "descanso",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 77992,
+    "italiano": "fotografo",
+    "trad_port": "fotógrafo",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 37556,
+    "italiano": "cestino",
+    "trad_port": "cesto",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 31632,
+    "italiano": "risparmio",
+    "trad_port": "poupança",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 95353,
+    "italiano": "artista",
+    "trad_port": "artista",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 20305,
+    "italiano": "professore",
+    "trad_port": "professor",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56239,
+    "italiano": "cartella",
+    "trad_port": "pasta",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 44706,
+    "italiano": "montre",
+    "trad_port": "relógio",
+    "categoria": "acessorio",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 34831,
+    "italiano": "moneta",
+    "trad_port": "moeda",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 53389,
+    "italiano": "corso",
+    "trad_port": "curso",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 48868,
+    "italiano": "prezzo",
+    "trad_port": "preço",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 39527,
+    "italiano": "giureconsulto",
+    "trad_port": "jurista",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 55048,
+    "italiano": "tesi",
+    "trad_port": "tese",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 23871,
+    "italiano": "passeggiata",
+    "trad_port": "passeio",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 38293,
+    "italiano": "tassa",
+    "trad_port": "taxa",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 97276,
+    "italiano": "nuziale",
+    "trad_port": "de noivas",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 38053,
+    "italiano": "dipartimento",
+    "trad_port": "departamento",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 26788,
+    "italiano": "portafoglio",
+    "trad_port": "carteira",
+    "categoria": "acessorio",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 21295,
+    "italiano": "scatola",
+    "trad_port": "caixa",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 43426,
+    "italiano": "celebrare",
+    "trad_port": "celebrar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 95374,
+    "italiano": "taschino",
+    "trad_port": "bolso",
+    "categoria": "acessorio",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 25149,
+    "italiano": "budget",
+    "trad_port": "orçamento",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 58847,
+    "italiano": "cuoco",
+    "trad_port": "cozinheiro",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 15722,
+    "italiano": "investimento",
+    "trad_port": "investimento",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 93329,
+    "italiano": "matrimonio",
+    "trad_port": "casamento",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 31873,
+    "italiano": "zaino",
+    "trad_port": "mochila",
+    "categoria": "bagagem",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 53036,
+    "italiano": "borsa",
+    "trad_port": "bolsa",
+    "categoria": "acessorio",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 56300,
+    "italiano": "nuziale",
+    "trad_port": "noivais",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 13904,
+    "italiano": "vacazione",
+    "trad_port": "férias",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 91936,
+    "italiano": "abito",
+    "trad_port": "vestido",
+    "categoria": "roupa",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 26179,
+    "italiano": "borsetta",
+    "trad_port": "bolso pequeno",
+    "categoria": "acessorio",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 30022,
+    "italiano": "relax",
+    "trad_port": "relax",
+    "categoria": "conceito",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 52498,
+    "italiano": "custodia",
+    "trad_port": "capinha",
+    "categoria": "acessorio",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 43210,
+    "italiano": "compito",
+    "trad_port": "tarefa",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 31855,
+    "italiano": "ricordo",
+    "trad_port": "memória",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 72720,
+    "italiano": "debito",
+    "trad_port": "dívida",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 85741,
+    "italiano": "scarpa",
+    "trad_port": "sapato",
+    "categoria": "roupa",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 29580,
+    "italiano": "attore",
+    "trad_port": "ator",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 92512,
+    "italiano": "anno",
+    "trad_port": "ano",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 34376,
+    "italiano": "popolare",
+    "trad_port": "popular",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 62636,
+    "italiano": "momento",
+    "trad_port": "momento",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 91542,
+    "italiano": "inverno",
+    "trad_port": "inverno",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 89344,
+    "italiano": "luce",
+    "trad_port": "luz",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 10304,
+    "italiano": "periodo",
+    "trad_port": "período",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 58259,
+    "italiano": "sicurezza",
+    "trad_port": "segurança",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 75496,
+    "italiano": "celebrare",
+    "trad_port": "celebrar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 68500,
+    "italiano": "autunno",
+    "trad_port": "outono",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 27599,
+    "italiano": "vento",
+    "trad_port": "vento",
+    "categoria": "elemento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 57897,
+    "italiano": "fredda",
+    "trad_port": "fria",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 20568,
+    "italiano": "barometrico",
+    "trad_port": "bárometro",
+    "categoria": "instrumento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93042,
+    "italiano": "tradizionale",
+    "trad_port": "tradicional",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 16636,
+    "italiano": "sabato",
+    "trad_port": "sábado",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 15205,
+    "italiano": "mese",
+    "trad_port": "mês",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 66314,
+    "italiano": "clima",
+    "trad_port": "clima",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 34194,
+    "italiano": "occasione",
+    "trad_port": "ocasião",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 86857,
+    "italiano": "mostro",
+    "trad_port": "exposição",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 55705,
+    "italiano": "sole",
+    "trad_port": "sol",
+    "categoria": "astro",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 82562,
+    "italiano": "giornata internazionale",
+    "trad_port": "dia internacional",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77795,
+    "italiano": "contemporaneo",
+    "trad_port": "contemporâneo",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 18396,
+    "italiano": "antico",
+    "trad_port": "antigo",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 62556,
+    "italiano": "martedì",
+    "trad_port": "terça-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 96923,
+    "italiano": "santificazioni",
+    "trad_port": "santificações",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 89711,
+    "italiano": "storico",
+    "trad_port": "histórico",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 45455,
+    "italiano": "equinozio",
+    "trad_port": "equinócio",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 41950,
+    "italiano": "giovedì",
+    "trad_port": "quinta-feira",
+    "categoria": "dia",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59136,
+    "italiano": "neve",
+    "trad_port": "neve",
+    "categoria": "fenomeno",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 54962,
+    "italiano": "festa di compleanno",
+    "trad_port": "aniversário de nascença",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 53178,
+    "italiano": "ciclo",
+    "trad_port": "ciclo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 27878,
+    "italiano": "mercoledì",
+    "trad_port": "quarta-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 48138,
+    "italiano": "celebrazioni",
+    "trad_port": "celebrações",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 22100,
+    "italiano": "primavera",
+    "trad_port": "primavera",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 31693,
+    "italiano": "luna",
+    "trad_port": "lua",
+    "categoria": "astro",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 51804,
+    "italiano": "previsioni",
+    "trad_port": "previsões",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 50812,
+    "italiano": "venerdì",
+    "trad_port": "sexta-feira",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 45915,
+    "italiano": "estate",
+    "trad_port": "verão",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 41663,
+    "italiano": "caldi",
+    "trad_port": "quente",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 96374,
+    "italiano": "tradizione locale",
+    "trad_port": "tradição local",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 72510,
+    "italiano": "eredita",
+    "trad_port": "herança",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 29207,
+    "italiano": "pioggia",
+    "trad_port": "chuva",
+    "categoria": "fenomeno",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 77790,
+    "italiano": "appuntamento",
+    "trad_port": "citação",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 77766,
+    "italiano": "stagione",
+    "trad_port": "estação",
+    "categoria": "tempo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 13288,
+    "italiano": "meteo",
+    "trad_port": "meteorologia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 14498,
+    "italiano": "freddi",
+    "trad_port": "frio",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 67064,
+    "italiano": "temporale",
+    "trad_port": "tempestade",
+    "categoria": "fenomeno",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 98867,
+    "italiano": "capodanno",
+    "trad_port": "aniversário do novo ano",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 12783,
+    "italiano": "umidita",
+    "trad_port": "humidade",
+    "categoria": "conceito",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 21564,
+    "italiano": "folklore",
+    "trad_port": "folclore",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 78501,
+    "italiano": "temperatura",
+    "trad_port": "temperatura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 93878,
+    "italiano": "ombra",
+    "trad_port": "sombra",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 86195,
+    "italiano": "nuvole",
+    "trad_port": "nubens",
+    "categoria": "atmosfera",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 81810,
+    "italiano": "protezioni",
+    "trad_port": "proteções",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 77049,
+    "italiano": "ricorrenze",
+    "trad_port": "aniversários",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 60838,
+    "italiano": "primavera",
+    "trad_port": "primavera",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 79945,
+    "italiano": "allerte",
+    "trad_port": "alertas",
+    "categoria": "noticia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56209,
+    "italiano": "festival",
+    "trad_port": "festas",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 40002,
+    "italiano": "solstizio",
+    "trad_port": "solstício",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 22835,
+    "italiano": "meteo",
+    "trad_port": "meteorologia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 17964,
+    "italiano": "inverno",
+    "trad_port": "inverno",
+    "categoria": "tempo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 10932,
+    "italiano": "domenica",
+    "trad_port": "domingo",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 24129,
+    "italiano": "giorno",
+    "trad_port": "dia",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 97368,
+    "italiano": "pressione",
+    "trad_port": "pressão",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 45827,
+    "italiano": "patrimonio",
+    "trad_port": "patrimônio",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 99286,
+    "italiano": "moderno",
+    "trad_port": "moderno",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 27339,
+    "italiano": "confenza",
+    "trad_port": "conferência",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 90781,
+    "italiano": "lunedì",
+    "trad_port": "segunda-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29244,
+    "italiano": "incontri",
+    "trad_port": "encontros",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 53668,
+    "italiano": "ghiaccio",
+    "trad_port": "gelo",
+    "categoria": "fenomeno",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 27950,
+    "italiano": "riunione",
+    "trad_port": "reunião",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 10897,
+    "italiano": "avvisi",
+    "trad_port": "avisos",
+    "categoria": "noticia",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 42230,
+    "italiano": "pasqua",
+    "trad_port": "páscoa",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 36132,
+    "italiano": "natale",
+    "trad_port": "natal",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93726,
+    "italiano": "tiepido",
+    "trad_port": "morno",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 11992,
+    "italiano": "festivita",
+    "trad_port": "festividades",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 65722,
+    "italiano": "cerimonie",
+    "trad_port": "cerimônias",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 46863,
+    "italiano": "caldo",
+    "trad_port": "quente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 92943,
+    "italiano": "anniversario",
+    "trad_port": "aniversário",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 46839,
+    "italiano": "classico",
+    "trad_port": "clássico",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 46575,
+    "italiano": "concerto",
+    "trad_port": "conserto",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 60998,
+    "italiano": "apprendimento",
+    "trad_port": "aprendizagem",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 36715,
+    "italiano": "venture capital",
+    "trad_port": "capital de risco",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 88627,
+    "italiano": "trasparenza",
+    "trad_port": "transparência",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 77262,
+    "italiano": "reale",
+    "trad_port": "real",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 10182,
+    "italiano": "cybersecurity",
+    "trad_port": "segurança cibernética",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 76339,
+    "italiano": "target",
+    "trad_port": "público-alvo",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 26891,
+    "italiano": "conneti",
+    "trad_port": "conectados",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 80452,
+    "italiano": "tutorial",
+    "trad_port": "tutorial",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 62356,
+    "italiano": "prospettiva",
+    "trad_port": "perspectiva",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 68058,
+    "italiano": "social awareness",
+    "trad_port": "consciência social",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 82797,
+    "italiano": "influencer",
+    "trad_port": "influenciador",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 27896,
+    "italiano": "pionierismo",
+    "trad_port": "pioneirismo",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 15408,
+    "italiano": "business plan",
+    "trad_port": "plano de negócios",
+    "categoria": "documento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 89817,
+    "italiano": "instagram",
+    "trad_port": "instagram",
+    "categoria": "plataforma",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 85551,
+    "italiano": "opportunita",
+    "trad_port": "oportunidades",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 81574,
+    "italiano": "startup",
+    "trad_port": "startups",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 16429,
+    "italiano": "email",
+    "trad_port": "e-mail",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 12503,
+    "italiano": "skill",
+    "trad_port": "habilidades",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 18790,
+    "italiano": "generazione",
+    "trad_port": "geração",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 26210,
+    "italiano": "commenti",
+    "trad_port": "comentários",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25908,
+    "italiano": "social media",
+    "trad_port": "mídia social",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 84238,
+    "italiano": "rischi",
+    "trad_port": "riscos",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 91175,
+    "italiano": "software",
+    "trad_port": "software",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 98055,
+    "italiano": "produzione",
+    "trad_port": "produção",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 77584,
+    "italiano": "like",
+    "trad_port": "curtir",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 30898,
+    "italiano": "cloud",
+    "trad_port": "nuvem",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 30216,
+    "italiano": "innovazione",
+    "trad_port": "inovação",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 72536,
+    "italiano": "intelligenza artificiale",
+    "trad_port": "inteligência artificial",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 64266,
+    "italiano": "certificazione",
+    "trad_port": "certificação",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 52599,
+    "italiano": "esplorazione",
+    "trad_port": "exploração",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 42724,
+    "italiano": "vendita",
+    "trad_port": "vendas",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 25448,
+    "italiano": "share",
+    "trad_port": "compartilhar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 17082,
+    "italiano": "chat",
+    "trad_port": "chat",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 89592,
+    "italiano": "twitter",
+    "trad_port": "twitter",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 12837,
+    "italiano": "internet",
+    "trad_port": "internet",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 93165,
+    "italiano": "dati personali",
+    "trad_port": "dados pessoais",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 77119,
+    "italiano": "reazione",
+    "trad_port": "reação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 91031,
+    "italiano": "crittografia",
+    "trad_port": "criptografia",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 64399,
+    "italiano": "blockchain",
+    "trad_port": "blockchain",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 34848,
+    "italiano": "corsi",
+    "trad_port": "cursos",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 33122,
+    "italiano": "corsi intensivi",
+    "trad_port": "cursos intensivos",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 53759,
+    "italiano": "snapchat",
+    "trad_port": "snapchat",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 73631,
+    "italiano": "mercato",
+    "trad_port": "mercado",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 12622,
+    "italiano": "messaggi",
+    "trad_port": "mensagens",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80717,
+    "italiano": "automazione",
+    "trad_port": "automação",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 59706,
+    "italiano": "tiktok",
+    "trad_port": "tiktok",
+    "categoria": "plataforma",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 30101,
+    "italiano": "robotica",
+    "trad_port": "robótica",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 96620,
+    "italiano": "sviluppo",
+    "trad_port": "desenvolvimento",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 97984,
+    "italiano": "millennials",
+    "trad_port": "milennials",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 87565,
+    "italiano": "cursi online",
+    "trad_port": "cursos online",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 48113,
+    "italiano": "content creator",
+    "trad_port": "criador de conteúdo",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 61019,
+    "italiano": "futurista",
+    "trad_port": "futurista",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 84793,
+    "italiano": "facebook",
+    "trad_port": "facebook",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 70505,
+    "italiano": "virtuale",
+    "trad_port": "virtual",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 66952,
+    "italiano": "youtube",
+    "trad_port": "youtube",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 58075,
+    "italiano": "consenso informato",
+    "trad_port": "consentimento informado",
+    "categoria": "documento",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 40287,
+    "italiano": "collaborazione",
+    "trad_port": "colaboração",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 73113,
+    "italiano": "engagement",
+    "trad_port": "engajamento",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 54904,
+    "italiano": "formazione",
+    "trad_port": "formação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 45218,
+    "italiano": "cambia",
+    "trad_port": "mudar",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 96466,
+    "italiano": "cliente",
+    "trad_port": "cliente",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 11148,
+    "italiano": "data",
+    "trad_port": "dados",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 62032,
+    "italiano": "improvvisazione",
+    "trad_port": "improviso",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 65571,
+    "italiano": "fatturato",
+    "trad_port": "faturamento",
+    "categoria": "financeiro",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 96894,
+    "italiano": "distribuzione",
+    "trad_port": "distribuição",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59042,
+    "italiano": "webinar",
+    "trad_port": "webinar",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 22774,
+    "italiano": "programmatori",
+    "trad_port": "programador",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 71067,
+    "italiano": "digital native",
+    "trad_port": "nativo digital",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 70686,
+    "italiano": "creativita",
+    "trad_port": "criatividade",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 54852,
+    "italiano": "attivismo",
+    "trad_port": "ativismo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 64655,
+    "italiano": "videoconferenza",
+    "trad_port": "videoconferência",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 33861,
+    "italiano": "privacy",
+    "trad_port": "privacidade",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 57996,
+    "italiano": "competenze",
+    "trad_port": "competências",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 78569,
+    "italiano": "hardware",
+    "trad_port": "hardware",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 51335,
+    "italiano": "linkedin",
+    "trad_port": "linkedin",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 12285,
+    "italiano": "digiatale",
+    "trad_port": "digital",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 28811,
+    "italiano": "sistemi",
+    "trad_port": "sistemas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 35166,
+    "italiano": "community",
+    "trad_port": "comunidade",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 25432,
+    "italiano": "retweet",
+    "trad_port": "retweet",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 41939,
+    "italiano": "imprenditori",
+    "trad_port": "empreendedores",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 73592,
+    "italiano": "medico",
+    "trad_port": "médico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 68890,
+    "italiano": "canto polifonico",
+    "trad_port": "canto polifônico",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 28622,
+    "italiano": "canzone popolare",
+    "trad_port": "canção popular",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 75546,
+    "italiano": "strumenti musicali",
+    "trad_port": "instrumentos musicais",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 28424,
+    "italiano": "cavalli",
+    "trad_port": "cavalos",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 48659,
+    "italiano": "pizzo",
+    "trad_port": "renda",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 90402,
+    "italiano": "agricolture",
+    "trad_port": "agricultura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59577,
+    "italiano": "pollini",
+    "trad_port": "pássaros",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 82464,
+    "italiano": "trattoria",
+    "trad_port": "boteco",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 65763,
+    "italiano": "gatto",
+    "trad_port": "gato",
+    "categoria": "animal",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 22262,
+    "italiano": "pigeone",
+    "trad_port": "pombos",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 35142,
+    "italiano": "montagna",
+    "trad_port": "montanha",
+    "categoria": "geografia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 88322,
+    "italiano": "trattore",
+    "trad_port": "tratores",
+    "categoria": "machina",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 15442,
+    "italiano": "dentista",
+    "trad_port": "dentista",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 58225,
+    "italiano": "semina",
+    "trad_port": "semente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 63422,
+    "italiano": "albero",
+    "trad_port": "árvore",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 80185,
+    "italiano": "legno",
+    "trad_port": "madeira",
+    "categoria": "material",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 40821,
+    "italiano": "mietitura",
+    "trad_port": "safra de grãos",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 24013,
+    "italiano": "feste religiose",
+    "trad_port": "festas religiosas",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 39714,
+    "italiano": "fisioterapista",
+    "trad_port": "fisioterapeuta",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 11903,
+    "italiano": "mare",
+    "trad_port": "mar",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 62229,
+    "italiano": "uccello",
+    "trad_port": "ave",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 95173,
+    "italiano": "cascina",
+    "trad_port": "chácara",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 39701,
+    "italiano": "penitenza",
+    "trad_port": "punição",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 75851,
+    "italiano": "muratura",
+    "trad_port": "alvenaria",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 79900,
+    "italiano": "oro",
+    "trad_port": "ouro",
+    "categoria": "material",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 20874,
+    "italiano": "coltivazione",
+    "trad_port": "cultivo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56372,
+    "italiano": "tradizioni popolari",
+    "trad_port": "tradições populares",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 77186,
+    "italiano": "foresta",
+    "trad_port": "floresta",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 66198,
+    "italiano": "tessuto",
+    "trad_port": "tecido",
+    "categoria": "material",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 47357,
+    "italiano": "raccolta",
+    "trad_port": "safra",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 21304,
+    "italiano": "cane",
+    "trad_port": "cachorro",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 80172,
+    "italiano": "inferniera",
+    "trad_port": "enfermeira",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 13470,
+    "italiano": "composizione",
+    "trad_port": "composição",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 40006,
+    "italiano": "psicologo",
+    "trad_port": "psicólogo",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 80158,
+    "italiano": "concerti acustici",
+    "trad_port": "consertos acústicos",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 40861,
+    "italiano": "festival folk",
+    "trad_port": "festival de música folclórica",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 22064,
+    "italiano": "argento",
+    "trad_port": "prata",
+    "categoria": "material",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 53905,
+    "italiano": "gesso",
+    "trad_port": "gesso",
+    "categoria": "material",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 31158,
+    "italiano": "sostenibile",
+    "trad_port": "sustentável",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 47376,
+    "italiano": "vetro",
+    "trad_port": "vidro",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 30166,
+    "italiano": "santuari",
+    "trad_port": "santuários",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 52431,
+    "italiano": "leggende",
+    "trad_port": "lendas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 63205,
+    "italiano": "musica folk",
+    "trad_port": "música folk",
+    "categoria": "genero",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 29574,
+    "italiano": "nutrizionista",
+    "trad_port": "nutricionista",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 55303,
+    "italiano": "ceramica",
+    "trad_port": "cerâmica",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 85593,
+    "italiano": "vendemmia",
+    "trad_port": "safra de uvas",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 29293,
+    "italiano": "irrigazione",
+    "trad_port": "irrigação",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 87566,
+    "italiano": "coniglio",
+    "trad_port": "coelho",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 50983,
+    "italiano": "annunci",
+    "trad_port": "declarações",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 54077,
+    "italiano": "biodinamico",
+    "trad_port": "biológico",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 61189,
+    "italiano": "farmacista",
+    "trad_port": "farmacêutico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 49972,
+    "italiano": "pediatra",
+    "trad_port": "pediatria",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 24265,
+    "italiano": "culti",
+    "trad_port": "cultos",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 28106,
+    "italiano": "concime",
+    "trad_port": "adubo",
+    "categoria": "material",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 16755,
+    "italiano": "oliveto",
+    "trad_port": "oliveiral",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 57940,
+    "italiano": "folclore",
+    "trad_port": "folclore",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 11964,
+    "italiano": "ceramiche",
+    "trad_port": "cerâmicas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 22639,
+    "italiano": "rettili",
+    "trad_port": "répteis",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 26925,
+    "italiano": "voto",
+    "trad_port": "votos",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 13769,
+    "italiano": "chirurgo",
+    "trad_port": "cirurgião",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 59822,
+    "italiano": "mitologia",
+    "trad_port": "mitologia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 29891,
+    "italiano": "aratro",
+    "trad_port": "arado",
+    "categoria": "instrumento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 89153,
+    "italiano": "valle",
+    "trad_port": "vale",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 62151,
+    "italiano": "tartaruga",
+    "trad_port": "tartaruga",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 66959,
+    "italiano": "vigna",
+    "trad_port": "vinha",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 96040,
+    "italiano": "palude",
+    "trad_port": "pântano",
+    "categoria": "geografia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 62294,
+    "italiano": "improvvisazione",
+    "trad_port": "improviso",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80732,
+    "italiano": "processioni",
+    "trad_port": "procissões",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 63131,
+    "italiano": "galline",
+    "trad_port": "galinhas",
+    "categoria": "animal",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 75382,
+    "italiano": "fiore",
+    "trad_port": "flor",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 84707,
+    "italiano": "fattoria",
+    "trad_port": "fazenda",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 92197,
+    "italiano": "piazza village",
+    "trad_port": "praça da aldeia",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 45753,
+    "italiano": "ottico",
+    "trad_port": "óptico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 20970,
+    "italiano": "fiume",
+    "trad_port": "rio",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 35754,
+    "italiano": "melodia",
+    "trad_port": "melodia",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 34891,
+    "italiano": "deserto",
+    "trad_port": "deserto",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 83097,
+    "italiano": "stagioni",
+    "trad_port": "estações",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 40294,
+    "italiano": "ritmo",
+    "trad_port": "ritmo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 17353,
+    "italiano": "erba",
+    "trad_port": "grama",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 26421,
+    "italiano": "vetrina",
+    "trad_port": "vitrine",
+    "categoria": "móvel",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 15722,
+    "italiano": "cuffie",
+    "trad_port": "fone",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 90325,
+    "italiano": "chiavi",
+    "trad_port": "chaves",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 87470,
+    "italiano": "bicchiere",
+    "trad_port": "copo",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 38679,
+    "italiano": "candelabro",
+    "trad_port": "candelabro",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 50541,
+    "italiano": "bicchiere",
+    "trad_port": "copo",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 84159,
+    "italiano": "sacco",
+    "trad_port": "saco",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 10072,
+    "italiano": "divano",
+    "trad_port": "sofá",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 71723,
+    "italiano": "microonde",
+    "trad_port": "microondas",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 60034,
+    "italiano": "frigo",
+    "trad_port": "geladeira",
+    "categoria": "elettronica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 13867,
+    "italiano": "secchielli",
+    "trad_port": "balde",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 99954,
+    "italiano": "specchio",
+    "trad_port": "espelho",
+    "categoria": "móvel",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 32001,
+    "italiano": "giocatori",
+    "trad_port": "jogadores",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69738,
+    "italiano": "friggitore",
+    "trad_port": "fritadeira",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 44677,
+    "italiano": "piano",
+    "trad_port": "forno",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 38622,
+    "italiano": "lettore DVD",
+    "trad_port": "leitor de DVD",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 49652,
+    "italiano": "bollitore",
+    "trad_port": "bujão",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 14575,
+    "italiano": "forchettini",
+    "trad_port": "garfo",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 22797,
+    "italiano": "cassetto",
+    "trad_port": "gaveta",
+    "categoria": "partes",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 70967,
+    "italiano": "fornello",
+    "trad_port": "fogão",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 17739,
+    "italiano": "cassettiere",
+    "trad_port": "baú",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 31062,
+    "italiano": "pentolini",
+    "trad_port": "caçulhas",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 25800,
+    "italiano": "supporti",
+    "trad_port": "suportes",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 73929,
+    "italiano": "tavolo",
+    "trad_port": "mesa",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 62732,
+    "italiano": "spazzola",
+    "trad_port": "pincel",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 12591,
+    "italiano": "tostapane",
+    "trad_port": "torradeira",
+    "categoria": "elettronica",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 91454,
+    "italiano": "cornici",
+    "trad_port": "caixas de molduras",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 73598,
+    "italiano": "cestino",
+    "trad_port": "cesto",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93022,
+    "italiano": "teglia",
+    "trad_port": "forma de bolo",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 83957,
+    "italiano": "scrivania",
+    "trad_port": "escritório de trabalho",
+    "categoria": "móvel",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 97178,
+    "italiano": "videogame",
+    "trad_port": "videogames",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 13196,
+    "italiano": "controller",
+    "trad_port": "controlador",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 52577,
+    "italiano": "stoviglie",
+    "trad_port": "louças",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 55148,
+    "italiano": "quadrato",
+    "trad_port": "quadros",
+    "categoria": "decoração",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 81444,
+    "italiano": "tappeto",
+    "trad_port": "tapete",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 62446,
+    "italiano": "pentola",
+    "trad_port": "panela",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 99384,
+    "italiano": "fotografie",
+    "trad_port": "fotos",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 94545,
+    "italiano": "teglie forno",
+    "trad_port": "formas para forno",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 16166,
+    "italiano": "sedia da cucina",
+    "trad_port": "cadeira de cozinha",
+    "categoria": "móvel",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 57481,
+    "italiano": "armadio",
+    "trad_port": "guarda-roupas",
+    "categoria": "mobiliario",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 84649,
+    "italiano": "consolle",
+    "trad_port": "console",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 54205,
+    "italiano": "tumbler",
+    "trad_port": "tumbler",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 15070,
+    "italiano": "vase",
+    "trad_port": "vaso",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 52244,
+    "italiano": "stendino",
+    "trad_port": "cabide",
+    "categoria": "objetos",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 41877,
+    "italiano": "televisore",
+    "trad_port": "televisão",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 15389,
+    "italiano": "saponi",
+    "trad_port": "sabões",
+    "categoria": "produto",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 30873,
+    "italiano": "vestiario",
+    "trad_port": "guarda-roupa",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 95016,
+    "italiano": "maniglia",
+    "trad_port": "alças",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 99313,
+    "italiano": "sottosopra",
+    "trad_port": "debaixo",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 55952,
+    "italiano": "towel",
+    "trad_port": "toalha",
+    "categoria": "objetos",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 25811,
+    "italiano": "poltrona",
+    "trad_port": "poltrona",
+    "categoria": "mobiliario",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 11986,
+    "italiano": "cassetta",
+    "trad_port": "caixa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77759,
+    "italiano": "guscio",
+    "trad_port": "casco",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 83611,
+    "italiano": "capo",
+    "trad_port": "capa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 94148,
+    "italiano": "lavastoviglie",
+    "trad_port": "máquina de louças",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 27055,
+    "italiano": "scatola",
+    "trad_port": "caixa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 78136,
+    "italiano": "auricolari",
+    "trad_port": "fones de ouvido",
+    "categoria": "acessorios",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 22432,
+    "italiano": "decorazione",
+    "trad_port": "decoração",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 43305,
+    "italiano": "tiroli",
+    "trad_port": "panelas",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 84321,
+    "italiano": "bustacartoline",
+    "trad_port": "buste para cartas",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 26114,
+    "italiano": "vasetto",
+    "trad_port": "vasinho",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 36890,
+    "italiano": "caffettiera",
+    "trad_port": "cafeteira",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 21658,
+    "italiano": "serrature",
+    "trad_port": "trancas",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 69223,
+    "italiano": "spazzolino",
+    "trad_port": "escova de dente",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 40795,
+    "italiano": "piatto",
+    "trad_port": "prato",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 63439,
+    "italiano": "cinturino",
+    "trad_port": "cinto",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 24449,
+    "italiano": "coltello",
+    "trad_port": "facas",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 66550,
+    "italiano": "aspirapolvere",
+    "trad_port": "aspirador de pó",
+    "categoria": "elettronica",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 70247,
+    "italiano": "fascia",
+    "trad_port": "faixa",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 94452,
+    "italiano": "cuscino",
+    "trad_port": "almofada",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 59639,
+    "italiano": "statua",
+    "trad_port": "estátua",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 98504,
+    "italiano": "detersivo",
+    "trad_port": "detergente",
+    "categoria": "produto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 88681,
+    "italiano": "bacchetta",
+    "trad_port": "varinha",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56629,
+    "italiano": "tovaglia",
+    "trad_port": "toalha de mesa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 47698,
+    "italiano": "sacchettine",
+    "trad_port": "sachês",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 55391,
+    "italiano": "portaoggetti",
+    "trad_port": "porte objetos",
+    "categoria": "móvel",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 92040,
+    "italiano": "scaffale",
+    "trad_port": "estante",
+    "categoria": "mobiliario",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 41413,
+    "italiano": "posata",
+    "trad_port": "talher",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 91381,
+    "italiano": "lampada",
+    "trad_port": "lâmpada",
+    "categoria": "objetos",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 16081,
+    "italiano": "forno",
+    "trad_port": "forno",
+    "categoria": "elettronica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 64791,
+    "italiano": "olio extravergine",
+    "trad_port": "azeite extra virgem",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 95807,
+    "italiano": "pasticciotto",
+    "trad_port": "pastelinho",
+    "categoria": "doce",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 80796,
+    "italiano": "ricetta",
+    "trad_port": "receita",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 41873,
+    "italiano": "pera",
+    "trad_port": "pera",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 36026,
+    "italiano": "formaggio",
+    "trad_port": "queijo",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 50725,
+    "italiano": "peperoncino",
+    "trad_port": "pimenta",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 95984,
+    "italiano": "arancia",
+    "trad_port": "laranja",
+    "categoria": "fruta",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 38315,
+    "italiano": "pollo",
+    "trad_port": "frango",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 67869,
+    "italiano": "aglio",
+    "trad_port": "alho",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 46815,
+    "italiano": "cotolette",
+    "trad_port": "cotilletos",
+    "categoria": "carne",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 35017,
+    "italiano": "aperitivo",
+    "trad_port": "apetite",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 42173,
+    "italiano": "basilico",
+    "trad_port": "manjericão",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 80159,
+    "italiano": "equilibrio nutrizionale",
+    "trad_port": "equilíbrio nutricional",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 49219,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 77178,
+    "italiano": "rosmarino",
+    "trad_port": "alecrim",
+    "categoria": "erva",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 61598,
+    "italiano": "prezzemolo",
+    "trad_port": "salsão",
+    "categoria": "ervas",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 89762,
+    "italiano": "friggerre",
+    "trad_port": "fritar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 74195,
+    "italiano": "cappuccino",
+    "trad_port": "capuchino",
+    "categoria": "bebida",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 83094,
+    "italiano": "dolce",
+    "trad_port": "doce",
+    "categoria": "confeitaria",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 90065,
+    "italiano": "grana",
+    "trad_port": "grana padano",
+    "categoria": "queijo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 32777,
+    "italiano": "caffellatte",
+    "trad_port": "café com leite",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 65084,
+    "italiano": "zuccheri naturali",
+    "trad_port": "açúcares naturais",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 29849,
+    "italiano": "ricotta",
+    "trad_port": "riquitá",
+    "categoria": "queijo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 57408,
+    "italiano": "erbe aromatiche",
+    "trad_port": "ervas aromáticas",
+    "categoria": "condimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 84298,
+    "italiano": "fibre",
+    "trad_port": "fibras",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 43403,
+    "italiano": "mela",
+    "trad_port": "maçã",
+    "categoria": "fruta",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 76238,
+    "italiano": "tè",
+    "trad_port": "chá",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 39490,
+    "italiano": "panna",
+    "trad_port": "creme",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 63822,
+    "italiano": "gelato",
+    "trad_port": "sorvete",
+    "categoria": "sobra",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 75269,
+    "italiano": "cucina italiana",
+    "trad_port": "cozinha italiana",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 82691,
+    "italiano": "vino bianco",
+    "trad_port": "vinho branco",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 34493,
+    "italiano": "aceto",
+    "trad_port": "vinagre",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 85475,
+    "italiano": "birra",
+    "trad_port": "cerveja",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 39610,
+    "italiano": "sale",
+    "trad_port": "sal",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 25964,
+    "italiano": "pane",
+    "trad_port": "pão",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 67221,
+    "italiano": "infornare",
+    "trad_port": "assar no forno",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 22207,
+    "italiano": "bollire",
+    "trad_port": "fervura",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 45001,
+    "italiano": "polpo",
+    "trad_port": "polvo",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 86622,
+    "italiano": "mozzarella",
+    "trad_port": "mozzarela",
+    "categoria": "queijo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 39953,
+    "italiano": "frutti di mare",
+    "trad_port": "peixes e frutos do mar",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 85652,
+    "italiano": "zucchero",
+    "trad_port": "açúcar",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 34526,
+    "italiano": "banano",
+    "trad_port": "banana",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 42111,
+    "italiano": "carboidrati",
+    "trad_port": "carboidratos",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 35044,
+    "italiano": "vitamina",
+    "trad_port": "vitamina",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 32677,
+    "italiano": "riso",
+    "trad_port": "arroz",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 70708,
+    "italiano": "pecorino",
+    "trad_port": "pecorino",
+    "categoria": "queijo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 41134,
+    "italiano": "lasagne",
+    "trad_port": "lasanha",
+    "categoria": "prato",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 52500,
+    "italiano": "latte",
+    "trad_port": "leite",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 13869,
+    "italiano": "minerali",
+    "trad_port": "minerais",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 56804,
+    "italiano": "stufare",
+    "trad_port": "refogar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 35861,
+    "italiano": "curcuma",
+    "trad_port": "cúrcuma",
+    "categoria": "condimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 76488,
+    "italiano": "fragola",
+    "trad_port": "morango",
+    "categoria": "fruta",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47624,
+    "italiano": "salmone",
+    "trad_port": "salmon",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69792,
+    "italiano": "saltare",
+    "trad_port": "saltear",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 46579,
+    "italiano": "vino rosso",
+    "trad_port": "vinho tinto",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 10283,
+    "italiano": "friggere",
+    "trad_port": "fritar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 63683,
+    "italiano": "pane di segale",
+    "trad_port": "pão de centeio",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 18728,
+    "italiano": "maiale",
+    "trad_port": "porco",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 88977,
+    "italiano": "antiossidante",
+    "trad_port": "antioxido",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 40202,
+    "italiano": "mescolare",
+    "trad_port": "misturar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 23256,
+    "italiano": "tonno",
+    "trad_port": "atum",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 95297,
+    "italiano": "omeostasi",
+    "trad_port": "homeostase",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 72632,
+    "italiano": "succo di frutta",
+    "trad_port": "suco de fruta",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 70817,
+    "italiano": "cantuccini",
+    "trad_port": "cantucci",
+    "categoria": "docinho",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 21344,
+    "italiano": "tiramisù",
+    "trad_port": "tiremisu",
+    "categoria": "doce",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 59733,
+    "italiano": "polpette",
+    "trad_port": "bolas de carne",
+    "categoria": "prato",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 51274,
+    "italiano": "cuocere",
+    "trad_port": "cozinhar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 10413,
+    "italiano": "timo",
+    "trad_port": "timó",
+    "categoria": "ervas",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 55623,
+    "italiano": "anguria",
+    "trad_port": "melancia",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 73372,
+    "italiano": "scolare",
+    "trad_port": "escorrer",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 41441,
+    "italiano": "minestrone",
+    "trad_port": "minestrone",
+    "categoria": "sopa",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 44189,
+    "italiano": "proteine",
+    "trad_port": "proteinas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 42674,
+    "italiano": "pizza margherita",
+    "trad_port": "pizza maraghrinha",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 60756,
+    "italiano": "kiwi",
+    "trad_port": "quiwi",
+    "categoria": "fruta",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 10703,
+    "italiano": "limone",
+    "trad_port": "limão",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 94794,
+    "italiano": "mirtilli",
+    "trad_port": "mirtilos",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 75360,
+    "italiano": "olio",
+    "trad_port": "azeite",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29982,
+    "italiano": "ciambella",
+    "trad_port": "rosca",
+    "categoria": "confeitaria",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 97400,
+    "italiano": "maggiorana",
+    "trad_port": "orégano",
+    "categoria": "erva",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 74711,
+    "italiano": "cantucci",
+    "trad_port": "cantucci",
+    "categoria": "queijo/cookie",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 43037,
+    "italiano": "basilico fresco",
+    "trad_port": "manjericão fresco",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 44824,
+    "italiano": "gorgonzola",
+    "trad_port": "gorgonzola",
+    "categoria": "queijo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 30921,
+    "italiano": "salvia",
+    "trad_port": "sálvia",
+    "categoria": "ervas",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 63283,
+    "italiano": "parmigiano",
+    "trad_port": "parmesão",
+    "categoria": "queijo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 47080,
+    "italiano": "caffè",
+    "trad_port": "café",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 66575,
+    "italiano": "seppia",
+    "trad_port": "lula",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 98445,
+    "italiano": "preparazione",
+    "trad_port": "preparaçao",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 15379,
+    "italiano": "carne",
+    "trad_port": "carne",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 91678,
+    "italiano": "taleggio",
+    "trad_port": "taleggio",
+    "categoria": "queijo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 19022,
+    "italiano": "cocomo",
+    "trad_port": "abacaxi",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 28062,
+    "italiano": "manzo",
+    "trad_port": "boi",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 30406,
+    "italiano": "pasta",
+    "trad_port": "massa",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 89573,
+    "italiano": "ingredienti",
+    "trad_port": "ingredientes",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 28521,
+    "italiano": "pomodoro",
+    "trad_port": "tomate",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 22437,
+    "italiano": "focaccia",
+    "trad_port": "focazza",
+    "categoria": "padaria",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 23187,
+    "italiano": "grassi sani",
+    "trad_port": "gorduras sãas",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 31900,
+    "italiano": "grigliare",
+    "trad_port": "assar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 75937,
+    "italiano": "pesce",
+    "trad_port": "peixe",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 73464,
+    "italiano": "caffellatte",
+    "trad_port": "café com leite",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47714,
+    "italiano": "provolone",
+    "trad_port": "provola",
+    "categoria": "queijo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 65165,
+    "italiano": "mi dispiace",
+    "trad_port": "lamento",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 33437,
+    "italiano": "fratello",
+    "trad_port": "irmão",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 75226,
+    "italiano": "qualificazioni",
+    "trad_port": "classificação",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 32299,
+    "italiano": "ho dimenticato",
+    "trad_port": "esqueci",
+    "categoria": "passado",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 17226,
+    "italiano": "kilobyte",
+    "trad_port": "quilobytes",
+    "categoria": "unidade",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 45052,
+    "italiano": "titolare",
+    "trad_port": "titular",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 73068,
+    "italiano": "sì certo",
+    "trad_port": "sim claro",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25228,
+    "italiano": "nessuno lo sapeva",
+    "trad_port": "ninguém sabia",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 62469,
+    "italiano": "non lo so",
+    "trad_port": "eu não sei",
+    "categoria": "negativo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93143,
+    "italiano": "affine",
+    "trad_port": "afim",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 25766,
+    "italiano": "capoclanella",
+    "trad_port": "líder",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 92492,
+    "italiano": "medaglia",
+    "trad_port": "medalha",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 70497,
+    "italiano": "se ne va di qui",
+    "trad_port": "ele sai daqui",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 39506,
+    "italiano": "record",
+    "trad_port": "recorde",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29647,
+    "italiano": "buona fortuna",
+    "trad_port": "boa sorte",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 13957,
+    "italiano": "armonia",
+    "trad_port": "harmonia",
+    "categoria": "musica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 30679,
+    "italiano": "papà",
+    "trad_port": "pai",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29447,
+    "italiano": "si è fermato",
+    "trad_port": "ele parou",
+    "categoria": "passado",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 29733,
+    "italiano": "tempo migliore",
+    "trad_port": "melhor tempo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25668,
+    "italiano": "improvvisare",
+    "trad_port": "improvisar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 23727,
+    "italiano": "pixel",
+    "trad_port": "píxeis",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 41399,
+    "italiano": "zio",
+    "trad_port": "tio",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 14976,
+    "italiano": "finale",
+    "trad_port": "final",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 11759,
+    "italiano": "vendita",
+    "trad_port": "venda",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 62190,
+    "italiano": "quante volte",
+    "trad_port": "quantas vezes",
+    "categoria": "expressao",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 92149,
+    "italiano": "rappresentazione",
+    "trad_port": "representação",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 64863,
+    "italiano": "4K",
+    "trad_port": "4K",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 69991,
+    "italiano": "scusi",
+    "trad_port": "desculpe",
+    "categoria": "perdão",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 63593,
+    "italiano": "suonare",
+    "trad_port": "tocar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 81148,
+    "italiano": "hai ragione",
+    "trad_port": "você tem razão",
+    "categoria": "afirmação",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 90109,
+    "italiano": "sinfonia",
+    "trad_port": "sinfonia",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 19326,
+    "italiano": "piano di lavoro",
+    "trad_port": "plano de trabalho",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 14447,
+    "italiano": "squadra",
+    "trad_port": "time",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 70682,
+    "italiano": "torneio",
+    "trad_port": "torneio",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 81059,
+    "italiano": "strategia",
+    "trad_port": "estratégia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 90039,
+    "italiano": "perché non lo dici",
+    "trad_port": "por que você não diz",
+    "categoria": "frase",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 46880,
+    "italiano": "lasciami in pace",
+    "trad_port": "deixa-me em paz",
+    "categoria": "imperativo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 14810,
+    "italiano": "obiettivi",
+    "trad_port": "objetivos",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 94218,
+    "italiano": "streaming",
+    "trad_port": "streaming",
+    "categoria": "servico",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 93379,
+    "italiano": "stagione",
+    "trad_port": "temporada",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 88849,
+    "italiano": "competizioni",
+    "trad_port": "competições",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 71501,
+    "italiano": "e se fosse",
+    "trad_port": "e se fosse",
+    "categoria": "frase",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 17167,
+    "italiano": "all'ordine!",
+    "trad_port": "em ordem!",
+    "categoria": "imperativo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 65830,
+    "italiano": "orchestra",
+    "trad_port": "orquestra",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 97829,
+    "italiano": "quando torni?",
+    "trad_port": "quando volta?",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47380,
+    "italiano": "cantare",
+    "trad_port": "cantar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 80725,
+    "italiano": "tesserato",
+    "trad_port": "registrado",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 45681,
+    "italiano": "scusat",
+    "trad_port": "desculpem",
+    "categoria": "plural",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 24052,
+    "italiano": "allenatore",
+    "trad_port": "treinador",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 45219,
+    "italiano": "mi sembra strano",
+    "trad_port": "me parece estranho",
+    "categoria": "opinião",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 65814,
+    "italiano": "melodia",
+    "trad_port": "melodia",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 62718,
+    "italiano": "stanco della vita",
+    "trad_port": "cansado da vida",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 17832,
+    "italiano": "nonno",
+    "trad_port": "avô",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 64846,
+    "italiano": "non c'è problema",
+    "trad_port": "não há problema",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 30883,
+    "italiano": "campione",
+    "trad_port": "campeão",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 35776,
+    "italiano": "budget annuale",
+    "trad_port": "orçamento anual",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 90620,
+    "italiano": "beato chi",
+    "trad_port": "feliz aquele que",
+    "categoria": "frase latina",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 31118,
+    "italiano": "marketing",
+    "trad_port": "marketing",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 65014,
+    "italiano": "come va?",
+    "trad_port": "vai bem?",
+    "categoria": "frase",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 63624,
+    "italiano": "mi fa venire fame",
+    "trad_port": "dá fome",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 94742,
+    "italiano": "a presto",
+    "trad_port": "até mais",
+    "categoria": "saluto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 30940,
+    "italiano": "megabyte",
+    "trad_port": "megabytes",
+    "categoria": "unidade",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 46391,
+    "italiano": "complimenti",
+    "trad_port": "parabéns",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 14599,
+    "italiano": "per favore",
+    "trad_port": "por favor",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 40854,
+    "italiano": "gara ufficiale",
+    "trad_port": "corrida oficial",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 73822,
+    "italiano": "non importa",
+    "trad_port": "não importa",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 33145,
+    "italiano": "mamma",
+    "trad_port": "mamãe",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 41023,
+    "italiano": "ciao",
+    "trad_port": "oi",
+    "categoria": "saluto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 44427,
+    "italiano": "terabyte",
+    "trad_port": "terabytes",
+    "categoria": "unidade",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 81010,
+    "italiano": "prego",
+    "trad_port": "de nada",
+    "categoria": "politeza",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 51805,
+    "italiano": "semifinali",
+    "trad_port": "semifinais",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 70423,
+    "italiano": "nipoti",
+    "trad_port": "netos",
+    "categoria": "parente",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 73006,
+    "italiano": "cosa c'è di nuovo",
+    "trad_port": "o que há de novo",
+    "categoria": "frase",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 10930,
+    "italiano": "cognato",
+    "trad_port": "cunhado",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 61150,
+    "italiano": "cugino",
+    "trad_port": "primo/primas",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69317,
+    "italiano": "screen resolution",
+    "trad_port": "resolução de tela",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 74962,
+    "italiano": "progetto",
+    "trad_port": "projeto",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 20976,
+    "italiano": "comporre",
+    "trad_port": "compor",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 79727,
+    "italiano": "gigabyte",
+    "trad_port": "gigabytes",
+    "categoria": "unidade",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 67087,
+    "italiano": "concerto",
+    "trad_port": "conserto",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 79175,
+    "italiano": "tanti auguri",
+    "trad_port": "muitas felicidades",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 17040,
+    "italiano": "riserve",
+    "trad_port": "reservas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 23117,
+    "italiano": "podio",
+    "trad_port": "pódio",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 71014,
+    "italiano": "full HD",
+    "trad_port": "full HD",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 43939,
+    "italiano": "record personale",
+    "trad_port": "recorde pessoal",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 22877,
+    "italiano": "aziendale",
+    "trad_port": "empresarial",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77012,
+    "italiano": "arrivederci",
+    "trad_port": "até logo",
+    "categoria": "saluto",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59767,
+    "italiano": "mi ha fatto arrabbiare",
+    "trad_port": "deixou-me irritado",
+    "categoria": "passado",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 67486,
+    "italiano": "non mi riguarda",
+    "trad_port": "não me diz respeito",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 21564,
+    "italiano": "8K",
+    "trad_port": "8K",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 29357,
+    "italiano": "buongiorno",
+    "trad_port": "bom dia",
+    "categoria": "saluto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 78574,
+    "italiano": "come stai?",
+    "trad_port": "como está?",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 41660,
+    "italiano": "partita",
+    "trad_port": "partida/jogo",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 30045,
+    "italiano": "investimenti",
+    "trad_port": "investimentos",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 34421,
+    "italiano": "dove vai?",
+    "trad_port": "para onde vai?",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 72213,
+    "italiano": "vorrei una birra",
+    "trad_port": "quero uma cerveja",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 58134,
+    "italiano": "sorella",
+    "trad_port": "irmã",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 20139,
+    "italiano": "non mi sento bene",
+    "trad_port": "não estou bem",
+    "categoria": "frase",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 84461,
+    "italiano": "grazie",
+    "trad_port": "obrigado",
+    "categoria": "politeza",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 47973,
+    "italiano": "rendita",
+    "trad_port": "rendimento",
+    "categoria": "financeiro",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 87973,
+    "italiano": "aiutante",
+    "trad_port": "ajudante",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 50501,
+    "italiano": "ambito",
+    "trad_port": "âmbito",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29768,
+    "italiano": "allocazione",
+    "trad_port": "alocação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 88576,
+    "italiano": "angoscia",
+    "trad_port": "angústia",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 13896,
+    "italiano": "allegra",
+    "trad_port": "alegre",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 17740,
+    "italiano": "antico",
+    "trad_port": "antigo",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 62431,
+    "italiano": "andare",
+    "trad_port": "andar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 57730,
+    "italiano": "acquisire",
+    "trad_port": "adquirir",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 23290,
+    "italiano": "apri",
+    "trad_port": "abra",
+    "categoria": "imperativo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 85435,
+    "italiano": "ancora",
+    "trad_port": "âncora",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 85953,
+    "italiano": "accoglienza",
+    "trad_port": "acolhimento",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 38948,
+    "italiano": "alcove",
+    "trad_port": "alcova",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 54765,
+    "italiano": "allevare",
+    "trad_port": "criar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 15221,
+    "italiano": "annuncio",
+    "trad_port": "anúncio",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 28124,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "elemento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 72827,
+    "italiano": "ammalarsi",
+    "trad_port": "doar-se",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 41510,
+    "italiano": "alluminio",
+    "trad_port": "alumínio",
+    "categoria": "material",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 18774,
+    "italiano": "adesione",
+    "trad_port": "adesão",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 58191,
+    "italiano": "appuntamento",
+    "trad_port": "encontro",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 69202,
+    "italiano": "apparecchiatura",
+    "trad_port": "equipamento",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 60339,
+    "italiano": "analogo",
+    "trad_port": "análogo",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 83245,
+    "italiano": "aiguë",
+    "trad_port": "aguá",
+    "categoria": "agua",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 85056,
+    "italiano": "ammasso",
+    "trad_port": "montanha",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 17195,
+    "italiano": "amministratore",
+    "trad_port": "administrador",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 14409,
+    "italiano": "aiuto",
+    "trad_port": "ajuda",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 56229,
+    "italiano": "accidente",
+    "trad_port": "acidente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 45772,
+    "italiano": "aggio",
+    "trad_port": "agiu",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 11649,
+    "italiano": "ammenda",
+    "trad_port": "multa",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 61986,
+    "italiano": "angelico",
+    "trad_port": "anxélico",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 96636,
+    "italiano": "animale",
+    "trad_port": "animal",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 93494,
+    "italiano": "aggettivo",
+    "trad_port": "adjetivo",
+    "categoria": "gramatica",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 53979,
+    "italiano": "anticipo",
+    "trad_port": "adiante",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 48561,
+    "italiano": "algebra",
+    "trad_port": "álgebra",
+    "categoria": "matematica",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 12285,
+    "italiano": "allegranza",
+    "trad_port": "alegria",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 30267,
+    "italiano": "apprezzo",
+    "trad_port": "aprecio",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 77327,
+    "italiano": "ambasciatori",
+    "trad_port": "embaixadores",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 26079,
+    "italiano": "appalto",
+    "trad_port": "contrato",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 88300,
+    "italiano": "approfondire",
+    "trad_port": "aprofundir",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 48058,
+    "italiano": "appartenenza",
+    "trad_port": "pertinência",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 22022,
+    "italiano": "acrobacia",
+    "trad_port": "acrobatia",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 48180,
+    "italiano": "adenoma",
+    "trad_port": "adenoma",
+    "categoria": "medicina",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 24273,
+    "italiano": "aia",
+    "trad_port": "terreiro",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 78831,
+    "italiano": "aereo",
+    "trad_port": "avião",
+    "categoria": "aerea",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 14274,
+    "italiano": "allora",
+    "trad_port": "então",
+    "categoria": "advérbio",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 68034,
+    "italiano": "aggiungo",
+    "trad_port": "adiciono",
+    "categoria": "passado",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 17709,
+    "italiano": "apparare",
+    "trad_port": "aparecer",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 76802,
+    "italiano": "adipe",
+    "trad_port": "gordura",
+    "categoria": "anatomia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 33170,
+    "italiano": "adotta",
+    "trad_port": "adopta",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 21572,
+    "italiano": "allargare",
+    "trad_port": "alargar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 63499,
+    "italiano": "analisi",
+    "trad_port": "análise",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 21767,
+    "italiano": "alfa",
+    "trad_port": "alfa",
+    "categoria": "letra",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 31045,
+    "italiano": "albuminoide",
+    "trad_port": "albuminoide",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 17053,
+    "italiano": "adequato",
+    "trad_port": "adequado",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 57511,
+    "italiano": "appetito",
+    "trad_port": "apetite",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 16909,
+    "italiano": "aderire",
+    "trad_port": "aderir",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 55523,
+    "italiano": "album",
+    "trad_port": "álbum",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 11232,
+    "italiano": "aisla",
+    "trad_port": "isla",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 69411,
+    "italiano": "addome",
+    "trad_port": "abdômen",
+    "categoria": "anatomia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 77153,
+    "italiano": "adeguare",
+    "trad_port": "adeuar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 92865,
+    "italiano": "alcolico",
+    "trad_port": "alcoólico",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 28783,
+    "italiano": "affermazione",
+    "trad_port": "afirmação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 14920,
+    "italiano": "ammore",
+    "trad_port": "amorre",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 23393,
+    "italiano": "amore",
+    "trad_port": "amor",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 13576,
+    "italiano": "allegato",
+    "trad_port": "anexo",
+    "categoria": "adjunto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 75754,
+    "italiano": "acido",
+    "trad_port": "ácido",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 81393,
+    "italiano": "alieno",
+    "trad_port": "alienógeno",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 10196,
+    "italiano": "amministrazione",
+    "trad_port": "administração",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 59732,
+    "italiano": "airone",
+    "trad_port": "garça",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 51895,
+    "italiano": "allergia",
+    "trad_port": "alergía",
+    "categoria": "medicina",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29838,
+    "italiano": "applicazione",
+    "trad_port": "aplicação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 21692,
+    "italiano": "accesso",
+    "trad_port": "acesso",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 13876,
+    "italiano": "allontanarsi",
+    "trad_port": "afastar-se",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 93209,
+    "italiano": "ammozione",
+    "trad_port": "remoção",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 72719,
+    "italiano": "afrontare",
+    "trad_port": "enfrentar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 41021,
+    "italiano": "aloe",
+    "trad_port": "aloe",
+    "categoria": "planta",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 74719,
+    "italiano": "appuntino",
+    "trad_port": "anotação",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 89231,
+    "italiano": "alpaca",
+    "trad_port": "alpaca",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 30430,
+    "italiano": "afferire",
+    "trad_port": "ferir",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 26606,
+    "italiano": "agenzia",
+    "trad_port": "agência",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 56770,
+    "italiano": "affitto",
+    "trad_port": "aluguel",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 88816,
+    "italiano": "accounting",
+    "trad_port": "contabilidade",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 59577,
+    "italiano": "accademia",
+    "trad_port": "academia",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 72821,
+    "italiano": "alimentare",
+    "trad_port": "alimentar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 73624,
+    "italiano": "accordo",
+    "trad_port": "acordo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 21847,
+    "italiano": "affare",
+    "trad_port": "negócio",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 91035,
+    "italiano": "amarezza",
+    "trad_port": "amargura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 10786,
+    "italiano": "ambra",
+    "trad_port": "âmbar",
+    "categoria": "material",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 94125,
+    "italiano": "alfabeto",
+    "trad_port": "alfabeto",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 19537,
+    "italiano": "addio",
+    "trad_port": "adeus",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 51593,
+    "italiano": "ago",
+    "trad_port": "agulha",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 47861,
+    "italiano": "antipasto",
+    "trad_port": "antepasto",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 56356,
+    "italiano": "allarme",
+    "trad_port": "alerta",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 28442,
+    "italiano": "aiolo",
+    "trad_port": "ajóló",
+    "categoria": "adjunto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 36083,
+    "italiano": "anarchia",
+    "trad_port": "anarquia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 61158,
+    "italiano": "appropriato",
+    "trad_port": "adequado",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 66880,
+    "italiano": "alabastro",
+    "trad_port": "alabastro",
+    "categoria": "material",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 63570,
+    "italiano": "agonismo",
+    "trad_port": "agonismo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 35216,
+    "italiano": "angolo",
+    "trad_port": "ângulo",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 61591,
+    "italiano": "affinità",
+    "trad_port": "afinidade",
+    "categoria": "conceito",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 42842,
+    "italiano": "aditivo",
+    "trad_port": "adicivo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  }
+]
