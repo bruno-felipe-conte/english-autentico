@@ -6,13 +6,13 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v81';
+const CACHE = 'english-v1';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
   './',
   './index.html',
-  './css/italia.css',
+  './css/english.css',
   './css/styles.css',
   // JS — módulos da aplicação (URLs com ?v=60 para forçar atualização de cache)
   './js/audio.js?v=60',
@@ -140,7 +140,7 @@ self.addEventListener('message', event => {
         body:    corpo,
         icon:    './icons/icon.svg',
         badge:   './icons/icon.svg',
-        tag:     tag || 'italiano-lembrete',
+        tag:     tag || 'english-reminder',
         renotify: true,
         data:    { url: './' },
       });
@@ -153,7 +153,7 @@ self.addEventListener('notificationclick', event => {
   event.notification.close();
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then(lista => {
-      const existente = lista.find(c => c.url.includes('italiano') || c.url.endsWith('/'));
+      const existente = lista.find(c => c.url.includes('english') || c.url.endsWith('/'));
       if (existente) return existente.focus();
       return clients.openWindow(event.notification.data?.url || './');
     })

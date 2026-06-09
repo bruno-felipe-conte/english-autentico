@@ -18,7 +18,7 @@ const Imitazione = {
     }
     // Mescla frases customizadas — custom primeiro
     try {
-      const custom = JSON.parse(localStorage.getItem('it_imitazioni_custom') || '[]');
+      const custom = JSON.parse(localStorage.getItem('en_imitazioni_custom') || '[]');
       if (custom.length) {
         this.dados.imitazioni = [...custom, ...(this.dados.imitazioni || [])];
       }

@@ -8,7 +8,7 @@
 // ============================================================
 
 const Tour = {
-  STORAGE_KEY: 'it_tour_done',
+  STORAGE_KEY: 'en_tour_done',
 
   reiniciar() {
     try { localStorage.removeItem(this.STORAGE_KEY); } catch(e) {}

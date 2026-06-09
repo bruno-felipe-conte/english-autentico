@@ -282,7 +282,7 @@ const Progressao = {
     const xpPorDia = diasRestantes > 0 ? Math.ceil(xpFaltante / diasRestantes) : xpFaltante;
     
     // Velocidade atual (média últimos 7 dias)
-    const diario = JSON.parse(localStorage.getItem('it_diario') || '{}');
+    const diario = JSON.parse(localStorage.getItem('en_diario') || '{}');
     const hoje7 = new Date(); 
     let xpSemana = 0;
     for (let i = 0; i < 7; i++) {

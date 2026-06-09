@@ -10,13 +10,13 @@ const SomFeedback = {
   // property here as it would be silently overwritten by the method definition.
 
   init() {
-    this.ativo = localStorage.getItem('it_som') === '1';
+    this.ativo = localStorage.getItem('en_som') === '1';
     this._atualizarBotao();
   },
 
   toggle() {
     this.ativo = !this.ativo;
-    localStorage.setItem('it_som', this.ativo ? '1' : '0');
+    localStorage.setItem('en_som', this.ativo ? '1' : '0');
     this._atualizarBotao();
     // Ao mutar: para imediatamente qualquer fala em andamento
     if (!this.ativo && 'speechSynthesis' in window) {

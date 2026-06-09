@@ -72,16 +72,16 @@ const App = {
   // Temple names (index = templo number)
   TEMPLO_NOMES: [
     null,
-    'Le Fondamenta',       // 1 Roma
-    'Il Cuore',            // 2 Venezia
-    'Il Viaggio',          // 3 Firenze
-    'Il Gusto',            // 4 Napoli
-    'Il Tempo',            // 5 Milano
-    'La Grammatica',       // 6 Bologna
-    'La Conversazione',    // 7 Torino
-    'La Cultura',          // 8 Palermo
-    'Il Lavoro',           // 9 Bari
-    'La Letteratura',      // 10 Siena
+    'The Foundations',     // 1 New York
+    'The Everyday',        // 2 Los Angeles
+    'The Journey',         // 3 Chicago
+    'The Flavors',         // 4 Nashville
+    'The Time',            // 5 San Francisco
+    'The Grammar',         // 6 Boston
+    'The Conversation',    // 7 New Orleans
+    'The Culture',         // 8 Atlanta
+    'The Workplace',       // 9 Austin
+    'The Literature',      // 10 Washington DC
   ],
 
   // Minimum level to unlock each temple (matches Progressao.TEMPLO_NIVEL)
@@ -105,29 +105,29 @@ const App = {
   // Secret unlock code — change to your personal password
   UNLOCK_CODE: '2012',
 
-  // Italian descriptions per temple (difficulty proportional to level)
+  // English descriptions per temple (difficulty proportional to level)
   TEMPLO_DESC: [
     null,
-    // 1 Roma — A1
-    'Roma è grande e bella. Qui inizi a parlare italiano. Impari "buongiorno", "grazie", "per favore" — i primi passi. Con queste parole puoi salutare, contare e presentarti. Le fondamenta di tutto.',
-    // 2 Venezia — A1→A2
-    'Venezia è unica al mondo. In questo tempio parli della famiglia e della casa: chi è tua madre, come si chiama tuo fratello, dove abiti. Impari a descrivere le persone e i luoghi della tua vita quotidiana.',
-    // 3 Firenze — A2
-    'Firenze è la culla del Rinascimento. Qui trovi tutto il vocabolario per viaggiare in Italia: la stazione, il treno, l\'albergo, le indicazioni stradali. Questo tempio ti prepara per ogni avventura in terra italiana.',
-    // 4 Napoli — A2→B1
-    'Napoli ha inventato la pizza e ha insegnato al mondo come mangiare con passione. In questo tempio entri nella cucina italiana: ingredienti, piatti tipici, abitudini a tavola. Imparare a parlare di cibo è imparare la cultura italiana.',
-    // 5 Milano — B1
-    'Milano è veloce, precisa, sempre in movimento. Questo tempio ti insegna a gestire il tempo in italiano — le ore, gli appuntamenti, le stagioni — e a descrivere la tua routine quotidiana con naturalezza e precisione.',
-    // 6 Bologna — B1→B2
-    'Bologna, sede della più antica università d\'Europa, è il luogo ideale per studiare la struttura della lingua. Qui affronti il congiuntivo, i pronomi relativi, le costruzioni implicite. Non solo regole: impari a pensare in italiano.',
-    // 7 Torino — B2
-    'Torino, città sobria e intellettuale, è dove si impara a conversare con stile. In questo tempio esplori l\'argomentazione, il dibattito e la cortesia formale. Come si difende un\'opinione? Come si negozia con eleganza? L\'italiano fluente ti aspetta.',
-    // 8 Palermo — B2
-    'Palermo porta i segni di tutte le civiltà che l\'hanno abitata: greci, arabi, normanni. Questo tempio ti apre al patrimonio culturale dell\'Italia — l\'arte, la storia, le tradizioni regionali di un popolo complesso e affascinante.',
-    // 9 Bari — B1→B2
-    'Bari, porta d\'Italia verso il Mediterraneo, è una città che lavora. Questo tempio ti fornisce il vocabolario professionale: curriculum, riunioni, negoziazioni. L\'italiano del lavoro richiede precisione e rispetto delle forme.',
-    // 10 Siena — B2
-    'Siena custodisce il volgare illustre, la lingua di Dante. Nel decimo tempio raggiungi la vetta: il linguaggio della letteratura, della filosofia e dell\'espressione artistica. Le parole non comunicano soltanto — evocano, suggeriscono, trasformano.',
+    // 1 New York — A1
+    'New York is where everything begins. In this temple you take your first steps in English: greetings, numbers, introductions. "Hello", "thank you", "excuse me" — the foundations of every conversation. The city that never sleeps is waiting for you.',
+    // 2 Los Angeles — A1→A2
+    'Los Angeles is sun, family, and everyday life. In this temple you talk about your home, your family, and daily routines. Who is your sister? Where do you live? What do you do on weekends? The language of life.',
+    // 3 Chicago — A2
+    'Chicago is always on the move. Here you master travel vocabulary: airports, trains, hotels, directions. This temple prepares you for any journey through the English-speaking world.',
+    // 4 Nashville — A2→B1
+    'Nashville is music, food, and culture. In this temple you discover American flavors and traditions: food, drinks, recipes, restaurants. To talk about food is to talk about a culture.',
+    // 5 San Francisco — B1
+    'San Francisco moves fast and thinks ahead. This temple teaches you to manage time in English — schedules, appointments, seasons — and to describe your routine with clarity and confidence.',
+    // 6 Boston — B1→B2
+    'Boston, home to some of the world\'s greatest universities, is the ideal place to study the structure of the language. Here you tackle complex grammar, relative clauses, and advanced structures. You learn to think in English.',
+    // 7 New Orleans — B2
+    'New Orleans is jazz, debate, and eloquence. In this temple you explore argumentation, formal conversation, and elegant expression. How do you defend an opinion? How do you negotiate with grace? Fluent English awaits.',
+    // 8 Atlanta — B2
+    'Atlanta is a crossroads of cultures, stories, and voices. This temple opens you to American cultural heritage — history, civil rights, music, regional traditions of a vast and fascinating country.',
+    // 9 Austin — B1→B2
+    'Austin is the city of tech, creativity, and work. This temple gives you professional vocabulary: resumes, meetings, negotiations, emails. The English of the workplace demands precision and respect.',
+    // 10 Washington DC — B2
+    'Washington DC is the home of American literature, rhetoric, and ideas. In the tenth temple you reach the summit: the language of literature, speeches, philosophy, and artistic expression. Words don\'t just communicate — they inspire.',
   ],
 
   // ── Initialization ─────────────────────────────────────────
@@ -157,7 +157,7 @@ const App = {
     if ('speechSynthesis' in window) {
       speechSynthesis.getVoices(); // trigger async load
       speechSynthesis.onvoiceschanged = () => {
-        this._getVozItaliana(); // cache Italian voice on first load
+        this._getVozAmericana(); // cache American English voice on first load
         speechSynthesis.onvoiceschanged = null;
       };
     }
@@ -224,7 +224,7 @@ const App = {
 
     // Injeta vocabulário customizado (via IA Import)
     try {
-      const custom = JSON.parse(localStorage.getItem('it_vocab_custom') || '[]');
+      const custom = JSON.parse(localStorage.getItem('en_vocab_custom') || '[]');
       if (custom.length) {
         custom.forEach(w => { if (!w.templo_num) w.templo_num = 0; });
         this.estado.vocabCache.unshift(...custom);
@@ -300,7 +300,7 @@ const App = {
   // ── localStorage ───────────────────────────────────────────
   carregarProgresso() {
     try {
-      const raw = localStorage.getItem('it_progresso');
+      const raw = localStorage.getItem('en_progresso');
       if (raw) {
         const p = JSON.parse(raw);
         // Backward compatibility
@@ -338,13 +338,13 @@ const App = {
 
   salvarProgresso() {
     try {
-      localStorage.setItem('it_progresso', JSON.stringify(this.estado.progresso));
+      localStorage.setItem('en_progresso', JSON.stringify(this.estado.progresso));
     } catch (e) { /* ignore */ }
   },
 
   carregarFlashcards() {
     try {
-      const raw = localStorage.getItem('it_flashcards');
+      const raw = localStorage.getItem('en_flashcards');
       if (raw) return JSON.parse(raw);
     } catch (e) { /* ignore */ }
     return {};
@@ -352,7 +352,7 @@ const App = {
 
   salvarFlashcards() {
     try {
-      localStorage.setItem('it_flashcards', JSON.stringify(this.estado.flashcardData));
+      localStorage.setItem('en_flashcards', JSON.stringify(this.estado.flashcardData));
     } catch (e) { /* ignore */ }
   },
 
@@ -378,14 +378,14 @@ const App = {
 
     // Check localStorage cache
     let cached = null;
-    try { cached = JSON.parse(localStorage.getItem('it_palavra_dia') || 'null'); } catch (_) {}
+    try { cached = JSON.parse(localStorage.getItem('en_palavra_dia') || 'null'); } catch (_) {}
     const todayStr = now.toISOString().slice(0, 10);
     let palavra;
     if (cached && cached.data === todayStr) {
       palavra = vocab.find(p => p.id === cached.id) || vocab[dayN % vocab.length];
     } else {
       palavra = vocab[dayN % vocab.length];
-      try { localStorage.setItem('it_palavra_dia', JSON.stringify({ data: todayStr, id: palavra.id })); } catch (_) {}
+      try { localStorage.setItem('en_palavra_dia', JSON.stringify({ data: todayStr, id: palavra.id })); } catch (_) {}
     }
     if (!palavra) { container.style.display = 'none'; return; }
 
@@ -399,19 +399,19 @@ const App = {
 
     container.innerHTML = `
       <div class="pdd-header">
-        <span class="pdd-label">🇮🇹 Parola del Giorno</span>
+        <span class="pdd-label">🇺🇸 Word of the Day</span>
         <span class="pdd-data">${data}</span>
       </div>
       <div class="pdd-body">
-        <div class="pdd-palavra">${palavra.italiano}</div>
+        <div class="pdd-palavra">${palavra.word || palavra.italiano || ''}</div>
         ${ipa ? `<div class="pdd-ipa">${ipa}</div>` : ''}
-        <div class="pdd-traducao">${palavra.portugues}</div>
-        ${palavra.categoria ? `<span class="pdd-cat">${palavra.categoria}</span>` : ''}
-        ${palavra.exemplo ? `<div class="pdd-exemplo">"${palavra.exemplo}"${palavra.exemplo_pt ? ` — ${palavra.exemplo_pt}` : ''}</div>` : ''}
+        <div class="pdd-traducao">${palavra.translation || palavra.portugues || ''}</div>
+        ${palavra.category || palavra.categoria ? `<span class="pdd-cat">${palavra.category || palavra.categoria}</span>` : ''}
+        ${palavra.example || palavra.exemplo ? `<div class="pdd-exemplo">"${palavra.example || palavra.exemplo}"${palavra.exemplo_pt ? ` — ${palavra.exemplo_pt}` : ''}</div>` : ''}
       </div>
       <div class="pdd-acoes">
-        <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
-        <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Studiare</button>
+        <button class="pdd-btn" onclick="App.pronunciar('${(palavra.word || palavra.italiano || '').replace(/'/g, "\\'")}')">🔊 Listen</button>
+        <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Study</button>
         <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
           ${favEmoji} Fav
         </button>
@@ -497,7 +497,7 @@ const App = {
       const cor = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
 
       // If data not loaded but temple is unlocked, show placeholder
-      const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Tempio ${i}`);
+      const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
       const cidade = data ? data.cidade : '—';
       const nivel = data ? data.nivel : '—';
       const totalPalavras = data && data.palavras ? data.palavras.length : 0;
@@ -522,16 +522,16 @@ const App = {
         card.onclick = () => this.estudarTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}">
-            <div class="templo-num">Tempio ${i}</div>
+            <div class="templo-num">Temple ${i}</div>
             <div class="templo-nome">${nome}</div>
             <div class="templo-meta">
               <span class="templo-cidade">📍 ${cidade}</span>
               <span class="nivel-badge">${nivel}</span>
-              ${concluido ? '<span class="nivel-badge">✅ Completo</span>' : ''}
+              ${concluido ? '<span class="nivel-badge">✅ Done</span>' : ''}
             </div>
           </div>
           <div class="templo-body">
-            <div class="progresso-label">${dominadas}/${totalPalavras} parole dominate</div>
+            <div class="progresso-label">${dominadas}/${totalPalavras} words mastered</div>
             <div class="progresso-bar-container">
               <div class="progresso-bar-fill" style="width:${progPercent}%"></div>
             </div>
@@ -542,7 +542,7 @@ const App = {
         card.onclick = () => this.abrirModalTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
-            <div class="templo-num">Tempio ${i}</div>
+            <div class="templo-num">Temple ${i}</div>
             <div class="templo-nome">🔒 ${nome}</div>
             <div class="templo-meta">
               <span class="templo-cidade">📍 ${cidade}</span>
@@ -604,7 +604,7 @@ const App = {
     const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
     const concluido    = this.estado.progresso.templos_concluidos.includes(i);
     const cor          = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
-    const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Tempio ${i}`);
+    const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
     const cidade       = data ? data.cidade : '—';
     const nivel        = data ? data.nivel : '—';
     const desc         = this.TEMPLO_DESC[i] || '';
@@ -624,35 +624,35 @@ const App = {
     const body = document.getElementById('templo-modal-body');
     body.innerHTML = `
       <div class="tm-header" style="background:${cor}${!desbloqueado ? ';filter:grayscale(0.5)' : ''}">
-        <button class="tm-close" onclick="App.fecharModalTemplo()" title="Chiudi">✕</button>
-        <div class="tm-num">Tempio ${i}</div>
+        <button class="tm-close" onclick="App.fecharModalTemplo()" title="Close">✕</button>
+        <div class="tm-num">Temple ${i}</div>
         <div class="tm-nome">${nome}</div>
         <div class="tm-meta">
           <span class="tm-badge">📍 ${cidade}</span>
           <span class="tm-badge">${nivel}</span>
-          ${concluido ? '<span class="tm-badge">✅ Completo</span>' : ''}
+          ${concluido ? '<span class="tm-badge">✅ Completed</span>' : ''}
         </div>
       </div>
       <div class="tm-content">
         ${desbloqueado ? `
           <div class="tm-progress-wrap">
-            <div class="tm-progress-label">${dominadas} / ${totalPalavras} parole dominate · ${progPercent}%</div>
+            <div class="tm-progress-label">${dominadas} / ${totalPalavras} words mastered · ${progPercent}%</div>
             <div class="tm-progress-bar"><div class="tm-progress-fill" style="width:${progPercent}%"></div></div>
           </div>
-        ` : `<div class="tm-lock-banner">🔒 Richiede Livello ${nivelMinimo}</div>`}
+        ` : `<div class="tm-lock-banner">🔒 Requires Level ${nivelMinimo}</div>`}
         <p class="tm-desc">${desc}</p>
         ${desbloqueado ? `
           <div class="tm-actions">
-            <button class="tm-btn-primary" onclick="App.fecharModalTemplo();App.estudarTemplo(${i})">📚 Studia i vocaboli</button>
-            <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">❓ Fai il Quiz</button>
+            <button class="tm-btn-primary" onclick="App.fecharModalTemplo();App.estudarTemplo(${i})">📚 Study vocabulary</button>
+            <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">❓ Take the Quiz</button>
           </div>
         ` : `
           <details class="tm-unlock-area">
-            <summary>Hai un codice di accesso?</summary>
+            <summary>Have an access code?</summary>
             <div class="tm-unlock-form">
-              <input id="tm-code-input" type="password" placeholder="Inserisci il codice..." class="tm-code-input"
+              <input id="tm-code-input" type="password" placeholder="Enter code..." class="tm-code-input"
                 onkeydown="if(event.key==='Enter')App.tentarDesbloquear(${i})">
-              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">Sblocca</button>
+              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">Unlock</button>
             </div>
           </details>
         `}
@@ -669,8 +669,8 @@ const App = {
   },
 
   pedirSenhaTemplo(temploNum) {
-    const nome = this.TEMPLO_NOMES[temploNum] || `Tempio ${temploNum}`;
-    const codigo = prompt(`🔒 Tempio ${temploNum} — ${nome}\n\nInsira o código de acesso:`);
+    const nome = this.TEMPLO_NOMES[temploNum] || `Temple ${temploNum}`;
+    const codigo = prompt(`🔒 Temple ${temploNum} — ${nome}\n\nEnter access code:`);
     if (codigo === null) return; // cancelou
     if (codigo.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
@@ -702,8 +702,8 @@ const App = {
     } else {
       input.style.borderColor = '#C0392B';
       input.value = '';
-      input.placeholder = 'Codice non corretto…';
-      setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'Inserisci il codice...'; }, 2000);
+      input.placeholder = 'Incorrect code…';
+      setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'Enter code...'; }, 2000);
     }
   },
 
@@ -733,10 +733,10 @@ const App = {
     const percent = range > 0 ? Math.min(100, Math.round((current / range) * 100)) : 0;
 
     const totalTemplos = Object.keys(this.TEMPLO_NIVEL_MINIMO || {}).length || 50;
-    if (elNivel)   elNivel.textContent   = `Livello ${p.nivel}`;
+    if (elNivel)   elNivel.textContent   = `Level ${p.nivel}`;
     if (elXp)      elXp.textContent      = `XP: ${p.xp}/${xpFim}`;
-    if (elTempli)  elTempli.textContent  = `Templi: ${p.templos_desbloqueados.length}/${totalTemplos}`;
-    if (elParole)  elParole.textContent  = `Parole: ${p.total_palavras}`;
+    if (elTempli)  elTempli.textContent  = `Temples: ${p.templos_desbloqueados.length}/${totalTemplos}`;
+    if (elParole)  elParole.textContent  = `Words: ${p.total_palavras}`;
     if (elBarFill) elBarFill.style.width = percent + '%';
     const s = p.streak || 0;
     if (elStreak)  elStreak.textContent  = I18n.t(s !== 1 ? 'streak_dias' : 'streak_dia').replace('{n}', s);
@@ -901,28 +901,28 @@ const App = {
   },
 
   // ── Text-to-speech ─────────────────────────────────────────
-  _vozItaliana: null,      // cache da voz italiana (null = ainda não resolvido)
-  _vozItalianaResolvida: false, // true quando já procuramos (mesmo se não achou)
+  _vozAmericana: null,      // cache da voz americana (null = ainda não resolvido)
+  _vozAmericanaResolvida: false, // true quando já procuramos (mesmo se não achou)
 
-  _getVozItaliana() {
+  _getVozAmericana() {
     // Reseta cache se as vozes mudaram desde a última busca
-    if (!this._vozItalianaResolvida) {
+    if (!this._vozAmericanaResolvida) {
       const vozes = speechSynthesis.getVoices();
       if (!vozes.length) return null; // ainda carregando
-      this._vozItaliana =
-        vozes.find(v => v.lang === 'it-IT') ||
-        vozes.find(v => v.lang.startsWith('it')) ||
+      this._vozAmericana =
+        vozes.find(v => v.lang === 'en-US') ||
+        vozes.find(v => v.lang.startsWith('en')) ||
         null;
-      this._vozItalianaResolvida = true;
+      this._vozAmericanaResolvida = true;
     }
-    return this._vozItaliana;
+    return this._vozAmericana;
   },
 
-  // ResponsiveVoice — fallback garantido de voz italiana
+  // ResponsiveVoice — fallback garantido de voz americana
   _pronunciarRV(texto) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      responsiveVoice.speak(texto, 'Italian Female', { rate: 0.9, pitch: 1 });
+      responsiveVoice.speak(texto, 'US English Female', { rate: 0.9, pitch: 1 });
     }
   },
 
@@ -936,18 +936,18 @@ const App = {
     speechSynthesis.cancel();
 
     const tentarFalar = () => {
-      const voz = this._getVozItaliana();
+      const voz = this._getVozAmericana();
 
       const u = new SpeechSynthesisUtterance(texto);
-      u.lang  = 'it-IT';
+      u.lang  = 'en-US';
       u.rate  = 0.85;
       u.pitch = 1;
       if (voz) u.voice = voz;
-      // Se não há voz italiana específica, usa lang='it-IT' sem voice explícita
+      // Se não há voz americana específica, usa lang='en-US' sem voice explícita
       // (a maioria dos browsers ainda sintetiza com o melhor disponível)
 
       u.onerror = (e) => {
-        // Voz IT indisponível no browser → ResponsiveVoice
+        // Voz EN indisponível no browser → ResponsiveVoice
         if (['language-unavailable','synthesis-failed','not-allowed'].includes(e.error)) {
           this._pronunciarRV(texto);
         }
@@ -955,8 +955,8 @@ const App = {
 
       speechSynthesis.speak(u);
 
-      // Também tenta RV em paralelo se não há voz italiana nativa
-      if (!voz && this._vozItalianaResolvida) {
+      // Também tenta RV em paralelo se não há voz americana nativa
+      if (!voz && this._vozAmericanaResolvida) {
         this._pronunciarRV(texto);
       }
     };
@@ -967,7 +967,7 @@ const App = {
       // Vozes ainda não carregaram — aguarda e reseta cache
       speechSynthesis.onvoiceschanged = () => {
         speechSynthesis.onvoiceschanged = null;
-        this._vozItalianaResolvida = false; // força nova busca com lista completa
+        this._vozAmericanaResolvida = false; // força nova busca com lista completa
         tentarFalar();
       };
     }

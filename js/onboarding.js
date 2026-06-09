@@ -3,7 +3,7 @@
 // ============================================================
 
 const Onboarding = {
-  STORAGE_KEY: 'it_onboarding_done',
+  STORAGE_KEY: 'en_onboarding_done',
   slideAtual: 0,
 
   deveExibir() {

@@ -1,13 +1,13 @@
 {
-  "name": "Italiano Autentico",
-  "short_name": "Italiano",
-  "description": "Apprendi l'italiano con autenticità — Flashcard, Quiz e Vocabolario",
+  "name": "English Autentico",
+  "short_name": "English",
+  "description": "Learn American English — Flashcards, Stories, Dialogues & Songs",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5EDD8",
   "theme_color": "#9B2335",
-  "lang": "it",
+  "lang": "en-US",
   "dir": "ltr",
   "orientation": "portrait-primary",
   "categories": ["education", "lifestyle"],
@@ -31,14 +31,14 @@
     {
       "name": "Flashcard",
       "short_name": "Flashcard",
-      "description": "Iniciar sessão de flashcards",
+      "description": "Start a flashcard session",
       "url": "./#flashcard",
       "icons": [{ "src": "./icons/icon.svg", "sizes": "any" }]
     },
     {
       "name": "Quiz",
       "short_name": "Quiz",
-      "description": "Fazer um quiz",
+      "description": "Take a quiz",
       "url": "./#quiz",
       "icons": [{ "src": "./icons/icon.svg", "sizes": "any" }]
     }

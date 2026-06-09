@@ -52,7 +52,7 @@ const Profilo = {
     // ── Quiz history stats ─────────────────────────────────
     let quizAcuracia = '—';
     try {
-      const hist = JSON.parse(localStorage.getItem('it_quiz_historico') || '[]');
+      const hist = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]');
       if (hist.length > 0) {
         const media = hist.reduce((s, h) => s + (h.pontuacao || 0), 0) / hist.length;
         quizAcuracia = Math.round(media) + '%';
@@ -149,7 +149,7 @@ const Profilo = {
   // ── Build last-7-days chart data ──────────────────────────
   _dadosSemana() {
     const diario = (() => {
-      try { return JSON.parse(localStorage.getItem('it_diario') || '{}'); }
+      try { return JSON.parse(localStorage.getItem('en_diario') || '{}'); }
       catch(e) { return {}; }
     })();
 
@@ -177,7 +177,7 @@ const Profilo = {
 
     // Add quiz XP from it_quiz_historico (not stored in diário)
     try {
-      const hist = JSON.parse(localStorage.getItem('it_quiz_historico') || '[]');
+      const hist = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]');
       const semanaAtras = Date.now() - 7 * 86400000;
       totalXP += hist.filter(h => h.data >= semanaAtras).reduce((s, h) => s + (h.xp_ganho || 0), 0);
     } catch(e) {}
@@ -205,20 +205,20 @@ const Profilo = {
     const backup = {
       versao: 2,
       data: new Date().toISOString(),
-      progresso:         JSON.parse(localStorage.getItem('it_progresso')        || 'null'),
-      flashcards:        JSON.parse(localStorage.getItem('it_flashcards')       || '{}'),
-      diario:            JSON.parse(localStorage.getItem('it_diario')           || '{}'),
-      onboarding:        localStorage.getItem('it_onboarding_done'),
-      tema:              localStorage.getItem('it_tema'),
-      idioma:            localStorage.getItem('it_idioma') || 'pt',
+      progresso:         JSON.parse(localStorage.getItem('en_progresso')        || 'null'),
+      flashcards:        JSON.parse(localStorage.getItem('en_flashcards')       || '{}'),
+      diario:            JSON.parse(localStorage.getItem('en_diario')           || '{}'),
+      onboarding:        localStorage.getItem('en_onboarding_done'),
+      tema:              localStorage.getItem('en_tema'),
+      idioma:            localStorage.getItem('en_idioma') || 'pt',
       // conteúdo customizado
-      canzoni_custom:    JSON.parse(localStorage.getItem('it_canzoni_custom')   || '[]'),
-      dialoghi_custom:   JSON.parse(localStorage.getItem('it_dialoghi_custom')  || '[]'),
-      storie_custom:     JSON.parse(localStorage.getItem('it_storie_custom')    || '[]'),
-      imitazioni_custom: JSON.parse(localStorage.getItem('it_imitazioni_custom')|| '[]'),
-      vocab_custom:      JSON.parse(localStorage.getItem('it_vocab_custom')     || '[]'),
+      canzoni_custom:    JSON.parse(localStorage.getItem('en_canzoni_custom')   || '[]'),
+      dialoghi_custom:   JSON.parse(localStorage.getItem('en_dialoghi_custom')  || '[]'),
+      storie_custom:     JSON.parse(localStorage.getItem('en_storie_custom')    || '[]'),
+      imitazioni_custom: JSON.parse(localStorage.getItem('en_imitazioni_custom')|| '[]'),
+      vocab_custom:      JSON.parse(localStorage.getItem('en_vocab_custom')     || '[]'),
       // preferências de ocultação
-      canzoni_ocultas:   JSON.parse(localStorage.getItem('it_canzoni_ocultas')  || '[]'),
+      canzoni_ocultas:   JSON.parse(localStorage.getItem('en_canzoni_ocultas')  || '[]'),
     };
     const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
     const url  = URL.createObjectURL(blob);
@@ -240,18 +240,18 @@ const Profilo = {
         const backup = JSON.parse(e.target.result);
         if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
         if (!confirm(I18n.t('prof_confirm_importar'))) return;
-        if (backup.progresso)         localStorage.setItem('it_progresso',         JSON.stringify(backup.progresso));
-        if (backup.flashcards)        localStorage.setItem('it_flashcards',        JSON.stringify(backup.flashcards));
-        if (backup.diario)            localStorage.setItem('it_diario',            JSON.stringify(backup.diario));
-        if (backup.onboarding)        localStorage.setItem('it_onboarding_done',   backup.onboarding);
-        if (backup.tema)              localStorage.setItem('it_tema',              backup.tema);
-        if (backup.idioma)            localStorage.setItem('it_idioma',            backup.idioma);
-        if (backup.canzoni_custom?.length)    localStorage.setItem('it_canzoni_custom',    JSON.stringify(backup.canzoni_custom));
-        if (backup.dialoghi_custom?.length)   localStorage.setItem('it_dialoghi_custom',   JSON.stringify(backup.dialoghi_custom));
-        if (backup.storie_custom?.length)     localStorage.setItem('it_storie_custom',     JSON.stringify(backup.storie_custom));
-        if (backup.imitazioni_custom?.length) localStorage.setItem('it_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
-        if (backup.vocab_custom?.length)      localStorage.setItem('it_vocab_custom',      JSON.stringify(backup.vocab_custom));
-        if (backup.canzoni_ocultas?.length)   localStorage.setItem('it_canzoni_ocultas',   JSON.stringify(backup.canzoni_ocultas));
+        if (backup.progresso)         localStorage.setItem('en_progresso',         JSON.stringify(backup.progresso));
+        if (backup.flashcards)        localStorage.setItem('en_flashcards',        JSON.stringify(backup.flashcards));
+        if (backup.diario)            localStorage.setItem('en_diario',            JSON.stringify(backup.diario));
+        if (backup.onboarding)        localStorage.setItem('en_onboarding_done',   backup.onboarding);
+        if (backup.tema)              localStorage.setItem('en_tema',              backup.tema);
+        if (backup.idioma)            localStorage.setItem('en_idioma',            backup.idioma);
+        if (backup.canzoni_custom?.length)    localStorage.setItem('en_canzoni_custom',    JSON.stringify(backup.canzoni_custom));
+        if (backup.dialoghi_custom?.length)   localStorage.setItem('en_dialoghi_custom',   JSON.stringify(backup.dialoghi_custom));
+        if (backup.storie_custom?.length)     localStorage.setItem('en_storie_custom',     JSON.stringify(backup.storie_custom));
+        if (backup.imitazioni_custom?.length) localStorage.setItem('en_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
+        if (backup.vocab_custom?.length)      localStorage.setItem('en_vocab_custom',      JSON.stringify(backup.vocab_custom));
+        if (backup.canzoni_ocultas?.length)   localStorage.setItem('en_canzoni_ocultas',   JSON.stringify(backup.canzoni_ocultas));
         App.notificar('notif_backup_imp', 'sucesso');
         setTimeout(() => location.reload(), 1200);
       } catch(err) {
@@ -266,20 +266,20 @@ const Profilo = {
   resetProgresso() {
     if (!confirm(I18n.t('prof_confirm_apagar1'))) return;
     if (!confirm(I18n.t('prof_confirm_apagar2'))) return;
-    ['it_progresso','it_flashcards','it_diario','it_onboarding_done','it_palavra_dia',
-     'it_canzoni_custom','it_dialoghi_custom','it_storie_custom','it_imitazioni_custom',
-     'it_vocab_custom','it_canzoni_ocultas'].forEach(k => localStorage.removeItem(k));
+    ['en_progresso','en_flashcards','en_diario','en_onboarding_done','en_palavra_dia',
+     'en_canzoni_custom','en_dialoghi_custom','en_storie_custom','en_imitazioni_custom',
+     'en_vocab_custom','en_canzoni_ocultas'].forEach(k => localStorage.removeItem(k));
     App.notificar('notif_prog_reset', 'alerta');
     setTimeout(() => location.reload(), 1200);
   },
 
   // ── Exportar/Importar Apenas Conteúdo Custom ──────────────
   exportarConteudoCustom() {
-    const canzoni    = JSON.parse(localStorage.getItem('it_canzoni_custom')    || '[]');
-    const dialoghi   = JSON.parse(localStorage.getItem('it_dialoghi_custom')   || '[]');
-    const storie     = JSON.parse(localStorage.getItem('it_storie_custom')     || '[]');
-    const imitazioni = JSON.parse(localStorage.getItem('it_imitazioni_custom') || '[]');
-    const vocab      = JSON.parse(localStorage.getItem('it_vocab_custom')      || '[]');
+    const canzoni    = JSON.parse(localStorage.getItem('en_canzoni_custom')    || '[]');
+    const dialoghi   = JSON.parse(localStorage.getItem('en_dialoghi_custom')   || '[]');
+    const storie     = JSON.parse(localStorage.getItem('en_storie_custom')     || '[]');
+    const imitazioni = JSON.parse(localStorage.getItem('en_imitazioni_custom') || '[]');
+    const vocab      = JSON.parse(localStorage.getItem('en_vocab_custom')      || '[]');
     const backup = {
       versao: 2,
       tipo: 'conteudo_custom',
@@ -319,11 +319,11 @@ const Profilo = {
           const ids = new Set(exist.map(x => x.id));
           localStorage.setItem(lsKey, JSON.stringify([...exist, ...novos.filter(x => !ids.has(x.id))]));
         };
-        _merge('it_canzoni_custom',    backup.canzoni);
-        _merge('it_dialoghi_custom',   backup.dialoghi);
-        _merge('it_storie_custom',     backup.storie);
-        _merge('it_imitazioni_custom', backup.imitazioni);
-        _merge('it_vocab_custom',      backup.vocab);
+        _merge('en_canzoni_custom',    backup.canzoni);
+        _merge('en_dialoghi_custom',   backup.dialoghi);
+        _merge('en_storie_custom',     backup.storie);
+        _merge('en_imitazioni_custom', backup.imitazioni);
+        _merge('en_vocab_custom',      backup.vocab);
 
         App.notificar(`✅ Conteúdo importado com sucesso!`, 'sucesso');
         setTimeout(() => location.reload(), 1200);

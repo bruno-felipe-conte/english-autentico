@@ -32,14 +32,14 @@ const Storie = {
     }
     // Mescla histórias customizadas — custom primeiro
     try {
-      const custom = JSON.parse(localStorage.getItem('it_storie_custom') || '[]');
+      const custom = JSON.parse(localStorage.getItem('en_storie_custom') || '[]');
       if (custom.length) {
         const normalizadas = custom.map(s => this._normalizar(s));
         this.dados.storie = [...normalizadas, ...this.dados.storie];
       }
     } catch (e) {}
     try {
-      this.completate = JSON.parse(localStorage.getItem('it_storie_lidas') || '[]');
+      this.completate = JSON.parse(localStorage.getItem('en_storie_lidas') || '[]');
     } catch { this.completate = []; }
   },
 
@@ -72,7 +72,7 @@ const Storie = {
   },
 
   _salvarCompletate() {
-    localStorage.setItem('it_storie_lidas', JSON.stringify(this.completate));
+    localStorage.setItem('en_storie_lidas', JSON.stringify(this.completate));
   },
 
   // ── Renderizar seletor de histórias ────────────────────────
@@ -531,7 +531,7 @@ const Storie = {
 
     // Persistir em localStorage
     try {
-      const key    = 'it_vocab_custom';
+      const key    = 'en_vocab_custom';
       const custom = JSON.parse(localStorage.getItem(key) || '[]');
       if (!custom.find(v => (v.italiano||'').toLowerCase() === palavra.toLowerCase())) {
         custom.push(entrada);

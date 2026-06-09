@@ -14,7 +14,7 @@ const Dialoghi = {
       } catch { this.dados = { dialogi: [] }; }
     }
     try {
-      this.custom = JSON.parse(localStorage.getItem('it_dialoghi_custom') || '[]');
+      this.custom = JSON.parse(localStorage.getItem('en_dialoghi_custom') || '[]');
     } catch { this.custom = []; }
   },
 
@@ -26,7 +26,7 @@ const Dialoghi = {
   },
 
   _salvarCustom() {
-    localStorage.setItem('it_dialoghi_custom', JSON.stringify(this.custom));
+    localStorage.setItem('en_dialoghi_custom', JSON.stringify(this.custom));
   },
   
   _filtroNivel: '',

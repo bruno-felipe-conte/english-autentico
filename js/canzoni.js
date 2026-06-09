@@ -19,11 +19,11 @@ const Canzoni = {
     }
     // 2. Carrega custom do localStorage
     try {
-      this.custom = JSON.parse(localStorage.getItem('it_canzoni_custom') || '[]');
+      this.custom = JSON.parse(localStorage.getItem('en_canzoni_custom') || '[]');
     } catch { this.custom = []; }
     // 3. Carrega lista de nativas ocultas
     try {
-      this._ocultas = JSON.parse(localStorage.getItem('it_canzoni_ocultas') || '[]');
+      this._ocultas = JSON.parse(localStorage.getItem('en_canzoni_ocultas') || '[]');
     } catch { this._ocultas = []; }
   },
 
@@ -37,7 +37,7 @@ const Canzoni = {
 
   // ── Salvar custom no localStorage ─────────────────────────
   _salvarCustom() {
-    localStorage.setItem('it_canzoni_custom', JSON.stringify(this.custom));
+    localStorage.setItem('en_canzoni_custom', JSON.stringify(this.custom));
   },
 
   // ── Ocultar música nativa (guarda ID no localStorage) ─────
@@ -46,7 +46,7 @@ const Canzoni = {
     if (!can) return;
     if (!confirm(`Ocultar "${can.titulo}"?\nEla desaparece da lista mas pode ser restaurada depois.`)) return;
     if (!this._ocultas.includes(id)) this._ocultas.push(id);
-    localStorage.setItem('it_canzoni_ocultas', JSON.stringify(this._ocultas));
+    localStorage.setItem('en_canzoni_ocultas', JSON.stringify(this._ocultas));
     App.notificar('Música ocultada. Use "Restaurar" para trazer de volta.', 'alerta');
     this.renderizarSeletor();
   },
@@ -55,7 +55,7 @@ const Canzoni = {
   restaurarNativas() {
     if (!this._ocultas.length) return;
     this._ocultas = [];
-    localStorage.removeItem('it_canzoni_ocultas');
+    localStorage.removeItem('en_canzoni_ocultas');
     App.notificar('Músicas nativas restauradas!', 'sucesso');
     this.renderizarSeletor();
   },

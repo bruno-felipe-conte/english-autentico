@@ -1,6 +1,6 @@
 // ============================================================
 // heatmap.js — GitHub-style activity heatmap
-// Uses localStorage key 'it_diario': { "2026-05-15": 14, ... }
+// Uses localStorage key 'en_diario': { "2026-05-15": 14, ... }
 // Renders 6 months of daily study activity.
 // ============================================================
 
@@ -27,12 +27,12 @@ const Calor = {
     const hoje = new Date().toISOString().split('T')[0];
     let diario = {};
     try {
-      diario = JSON.parse(localStorage.getItem('it_diario') || '{}');
+      diario = JSON.parse(localStorage.getItem('en_diario') || '{}');
     } catch (e) {}
     const anterior = this._lerEntrada(diario[hoje]);
     diario[hoje] = { cards: anterior.cards + quantidade, xp: anterior.xp + xp };
     try {
-      localStorage.setItem('it_diario', JSON.stringify(diario));
+      localStorage.setItem('en_diario', JSON.stringify(diario));
     } catch (e) {}
 
     // Compute current streak and persist to progress
@@ -76,7 +76,7 @@ const Calor = {
     if (!container) return;
 
     let diario = {};
-    try { diario = JSON.parse(localStorage.getItem('it_diario') || '{}'); } catch (e) {}
+    try { diario = JSON.parse(localStorage.getItem('en_diario') || '{}'); } catch (e) {}
 
     const today = new Date();
     const todayStr = [

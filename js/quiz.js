@@ -253,7 +253,7 @@ const Quiz = {
   // ── Persiste / restaura sessão parcial ────────────────────
   _salvarSessao() {
     try {
-      sessionStorage.setItem('it_quiz_sessao', JSON.stringify({
+      sessionStorage.setItem('en_quiz_sessao', JSON.stringify({
         temploAtual:   this.temploAtual,
         perguntas:     this.perguntas,
         perguntaAtual: this.perguntaAtual,
@@ -266,13 +266,13 @@ const Quiz = {
 
   _carregarSessao() {
     try {
-      const raw = sessionStorage.getItem('it_quiz_sessao');
+      const raw = sessionStorage.getItem('en_quiz_sessao');
       return raw ? JSON.parse(raw) : null;
     } catch(_) { return null; }
   },
 
   _limparSessao() {
-    try { sessionStorage.removeItem('it_quiz_sessao'); } catch(_) {}
+    try { sessionStorage.removeItem('en_quiz_sessao'); } catch(_) {}
   },
 
   mostrarResultado() {
@@ -322,7 +322,7 @@ const Quiz = {
 
     // Save to quiz history
     try {
-      const historico = JSON.parse(localStorage.getItem('it_quiz_historico') || '[]');
+      const historico = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]');
       historico.unshift({
         templo: this.temploAtual,
         pontuacao: pct,
@@ -332,7 +332,7 @@ const Quiz = {
         data: Date.now()
       });
       // Keep only last 50 entries
-      localStorage.setItem('it_quiz_historico', JSON.stringify(historico.slice(0, 50)));
+      localStorage.setItem('en_quiz_historico', JSON.stringify(historico.slice(0, 50)));
     } catch (e) { /* ignore */ }
   },
 

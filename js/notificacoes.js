@@ -4,8 +4,8 @@
 // ============================================================
 
 const Notificacoes = {
-  STORAGE_KEY: 'it_notif_hora',  // hora preferida do lembrete (ex: "20:00")
-  STORAGE_PERM: 'it_notif_perm', // 'granted' | 'denied' | 'pending'
+  STORAGE_KEY: 'en_notif_hora',  // hora preferida do lembrete (ex: "20:00")
+  STORAGE_PERM: 'en_notif_perm', // 'granted' | 'denied' | 'pending'
 
   // ── Pede permissão ao usuário ────────────────────────────
   async pedirPermissao() {
@@ -73,9 +73,9 @@ const Notificacoes = {
       reg.active?.postMessage({
         type:    'AGENDAR_LEMBRETE',
         delayMs,
-        titulo:  '🇮🇹 Italiano Autentico',
+        titulo:  '🇺🇸 English Autentico',
         corpo,
-        tag:     'italiano-revisao',
+        tag:     'english-review',
       });
     });
   },

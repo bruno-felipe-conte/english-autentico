@@ -8,265 +8,226 @@ const IAImport = {
 
   // ── Prompts por tipo ─────────────────────────────────────
   prompts: {
-    dialogo: `Crie um diálogo em italiano para aprendizes de português. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+    dialogo: `Create a dialogue in American English for Portuguese-speaking learners. Return ONLY the JSON, no text before or after.
 
-REGRAS OBRIGATÓRIAS:
-1. Turnos do PERSONAGEM: campos "frase" (italiano), "traducao" (português), "audio_ipa" (deixe "")
-2. Turnos do "Tu": campo "frase" = a resposta CORRETA em italiano, "traducao" = tradução dessa resposta, MAIS "alternativas" (4 opções em italiano, a correta INCLUÍDA) e "resposta_correta" = índice 0-3 da correta em alternativas
-3. Alterne sempre: PERSONAGEM → Tu → PERSONAGEM → Tu... (sem limite de turnos — use quantos forem necessários para cobrir a conversa completa)
-4. Todas as falas em italiano correto, todas as traduções em português brasileiro
+MANDATORY RULES:
+1. CHARACTER turns: fields "frase" (English), "traducao" (Portuguese), "audio_ipa" (leave "")
+2. "Tu" turns: "frase" = the CORRECT English answer, "traducao" = Portuguese translation, PLUS "alternativas" (4 options in English, correct one INCLUDED) and "resposta_correta" = 0-3 index of correct option
+3. Always alternate: CHARACTER → Tu → CHARACTER → Tu... (no limit on turns)
+4. All speech in natural American English, all translations in Brazilian Portuguese
 
-EXEMPLO de dois turnos (copie exatamente este formato):
+FULL EXAMPLE (copy exactly this format):
 {
   "id": "dial_custom_001",
-  "titulo": "No Mercato",
-  "icone": "🛒",
+  "titulo": "At the Coffee Shop",
+  "icone": "☕",
   "nivel": "A1",
-  "contexto": "Você está num mercado comprando frutas.",
+  "contexto": "You are ordering coffee at a café.",
   "turni": [
     {
       "id": 1,
-      "personaggio": "Venditore",
-      "frase": "Buongiorno! Cosa desidera?",
-      "traducao": "Bom dia! O que deseja?",
+      "personaggio": "Barista",
+      "frase": "Hi! What can I get for you?",
+      "traducao": "Oi! O que posso te oferecer?",
       "audio_ipa": ""
     },
     {
       "id": 2,
       "personaggio": "Tu",
-      "frase": "Vorrei delle mele, per favore.",
-      "traducao": "Eu gostaria de algumas maçãs, por favor.",
+      "frase": "I'd like a large coffee, please.",
+      "traducao": "Eu gostaria de um café grande, por favor.",
       "audio_ipa": "",
       "alternativas": [
-        "Vorrei delle mele, per favore.",
-        "Non mi piace la frutta.",
-        "Dov'è il bagno?",
-        "Quanto costa questo vestito?"
+        "I'd like a large coffee, please.",
+        "I don't like coffee at all.",
+        "Where is the bathroom?",
+        "How much does this cost?"
       ],
       "resposta_correta": 0
-    },
-    {
-      "id": 3,
-      "personaggio": "Venditore",
-      "frase": "Certo! Quante ne vuole?",
-      "traducao": "Claro! Quantas quer?",
-      "audio_ipa": ""
-    },
-    {
-      "id": 4,
-      "personaggio": "Tu",
-      "frase": "Un chilo, grazie.",
-      "traducao": "Um quilo, obrigado.",
-      "audio_ipa": "",
-      "alternativas": [
-        "Non lo so.",
-        "Un chilo, grazie.",
-        "Sono a dieta.",
-        "Preferisco le banane."
-      ],
-      "resposta_correta": 1
     }
   ],
-  "vocabulario_chave": ["desiderare", "mela", "chilo"],
+  "vocabulario_chave": ["order", "large", "please"],
   "xp_recompensa": 50
 }
 
-TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "comprando passagem de trem em Milão", "pedindo ajuda numa farmácia", "fazendo check-in no hotel". Pode ter quantos turnos forem necessários para cobrir a conversa completa — sem limite]`,
+DIALOGUE TOPIC: [REPLACE HERE — e.g., "buying a subway ticket in New York", "asking for help at a pharmacy", "checking in at a hotel"]`,
 
-    canzone: `Crie os dados de uma música italiana para estudo. Pode ser qualquer música — italiana, traduzida para o italiano, ou uma composição própria. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+    canzone: `Create data for an American English song for study. It can be any song — original or popular. Return ONLY the JSON, no text before or after.
 
-REGRAS OBRIGATÓRIAS:
-1. Inclua TODOS os versos da música, sem limite de quantidade
-2. Para versos com conteúdo único e palavra interessante para aprender:
-   - "palavra_oculta" = a palavra a ser adivinhada
-   - "texto_lacuna" = o verso com essa palavra substituída por ___
-   - "dica" = explicação gramatical breve
-   - "repeticoes" = quantas vezes consecutivas esse verso se repete na música (1 se não repete)
-3. Para versos PURAMENTE repetitivos (refrão idêntico já incluído antes, interjeições sem valor pedagógico):
-   - Deixe "palavra_oculta" como "" (string vazia)
-   - "texto_lacuna" = "" (vazio)
-   - "dica" = "" (vazio)
-   - "repeticoes" = número de vezes que aparece em sequência
-4. NUNCA omita versos — use o campo "repeticoes" para indicar repetições em vez de duplicar linhas
+MANDATORY RULES:
+1. Include ALL lines of the song, no limit
+2. For lines with a unique, pedagogically interesting word:
+   - "palavra_oculta" = the word to guess
+   - "texto_lacuna" = the line with that word replaced by ___
+   - "dica" = brief grammatical note
+   - "repeticoes" = how many consecutive times this line appears (1 if no repeat)
+3. For PURELY repetitive lines (identical refrain already included, filler with no learning value):
+   - Leave "palavra_oculta" as "" (empty string)
+   - "texto_lacuna" = "" (empty)
+   - "dica" = "" (empty)
+   - "repeticoes" = number of times it appears in sequence
+4. NEVER omit lines — use "repeticoes" for repetitions instead of duplicating
 
-EXEMPLO COMPLETO com repetições (copie exatamente este formato):
+FULL EXAMPLE (copy exactly this format):
 {
   "id": "can_custom_001",
-  "titulo": "Bella Ciao",
-  "artista": "Canto Partigiano",
+  "titulo": "Take Me Home, Country Roads",
+  "artista": "John Denver",
   "nivel": "A2",
-  "icone": "🌹",
-  "tema": "storia",
+  "icone": "🏔️",
+  "tema": "travel",
   "estrofes": [
     {
       "id": 1,
-      "texto_completo": "Una mattina mi sono alzato",
-      "texto_lacuna": "Una mattina mi sono ___",
-      "palavra_oculta": "alzato",
-      "traducao": "Uma manhã eu me levantei",
-      "dica": "participio passato de 'alzarsi' (levantar-se)",
+      "texto_completo": "Almost heaven, West Virginia",
+      "texto_lacuna": "Almost ___, West Virginia",
+      "palavra_oculta": "heaven",
+      "traducao": "Quase paraíso, West Virginia",
+      "dica": "noun — heaven = paraíso, céu",
       "repeticoes": 1
     },
     {
       "id": 2,
-      "texto_completo": "O bella ciao, bella ciao, bella ciao ciao ciao",
-      "texto_lacuna": "O ___ ciao, bella ciao, bella ciao ciao ciao",
-      "palavra_oculta": "bella",
-      "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
-      "dica": "aggettivo feminino singular — bela, bonita",
-      "repeticoes": 3
-    },
-    {
-      "id": 3,
-      "texto_completo": "E questo è il fiore del partigiano",
-      "texto_lacuna": "E questo è il ___ del partigiano",
-      "palavra_oculta": "fiore",
-      "traducao": "E esta é a flor do partigiano",
-      "dica": "sostantivo maschile — flor",
-      "repeticoes": 1
-    },
-    {
-      "id": 4,
-      "texto_completo": "O bella ciao, bella ciao, bella ciao ciao ciao",
-      "texto_lacuna": "",
-      "palavra_oculta": "",
-      "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
-      "dica": "",
+      "texto_completo": "Take me home, country roads",
+      "texto_lacuna": "Take me ___, country roads",
+      "palavra_oculta": "home",
+      "traducao": "Me leve para casa, estradas do interior",
+      "dica": "noun/adverb — home = casa, lar",
       "repeticoes": 2
     }
   ],
-  "vocabulario_chave": ["alzarsi", "fiore", "partigiano"],
+  "vocabulario_chave": ["heaven", "home", "country"],
   "xp_recompensa": 40
 }
 
-MÚSICA: [SUBSTITUA AQUI — pode ser qualquer música, ex: "Azzurro de Adriano Celentano", "uma música que compus sobre Roma", "Volare de Domenico Modugno"]`,
+SONG: [REPLACE HERE — e.g., "Hey Jude by The Beatles", "a song I wrote about New York City", "Somewhere Over the Rainbow"]`,
 
-    storia: `Crie uma história curta em italiano para aprendizes. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+    storia: `Create a short story in American English for learners. Return ONLY the JSON, no text before or after.
 
-REGRAS OBRIGATÓRIAS:
-1. "italiano" = parágrafo em italiano correto
-2. "portugues" = tradução COMPLETA do parágrafo em português brasileiro
-3. "parole" = lista com TODAS as palavras do parágrafo — SEM EXCEÇÃO
-   - Inclua substantivos, verbos, adjetivos, advérbios, artigos, preposições, pronomes, conjunções
-   - Cada token de palavra deve ter sua própria entrada (não pule nenhuma palavra)
-   - "parola" = a palavra exatamente como aparece no texto italiano
-   - "traduzione" = tradução em português (pode ser 1-3 palavras)
-   - "ipa" = transcrição fonética IPA apenas da palavra isolada (ex: "/ˈsoːle/")
-   - "categoria": "sostantivo", "verbo", "aggettivo", "avverbio", "articolo", "preposizione", "pronome", "congiunzione" ou "espressione"
-4. Inclua de 4 a 6 parágrafos
-5. "nivel" deve ser A1, A2, B1, B2, C1 ou C2
+MANDATORY RULES:
+1. "italiano" = paragraph in correct American English (this field keeps the name "italiano" for technical compatibility)
+2. "portugues" = COMPLETE translation of the paragraph in Brazilian Portuguese
+3. "parole" = list with ALL words of the paragraph — NO EXCEPTIONS
+   - Include nouns, verbs, adjectives, adverbs, articles, prepositions, pronouns, conjunctions
+   - Each word token must have its own entry (do not skip any word)
+   - "parola" = the word exactly as it appears in the English text
+   - "traduzione" = translation in Portuguese (1-3 words)
+   - "ipa" = IPA phonetic transcription of the word in isolation (e.g., "/hɛloʊ/")
+   - "categoria": "noun", "verb", "adjective", "adverb", "article", "preposition", "pronoun", "conjunction" or "expression"
+4. Include 4 to 6 paragraphs
+5. "nivel" must be A1, A2, B1, B2, C1 or C2
 
-EXEMPLO COMPLETO — note que TODAS as palavras aparecem em "parole" (copie exatamente este formato):
+FULL EXAMPLE — note ALL words appear in "parole" (copy exactly this format):
 {
   "id": "stor_custom_001",
-  "titulo": "Una Mattina a Roma",
-  "titulo_pt": "Uma Manhã em Roma",
+  "titulo": "A Morning in New York",
+  "titulo_pt": "Uma Manhã em Nova York",
   "nivel": "A1",
-  "icone": "🏛️",
-  "autor": "Italiano Autentico",
-  "tema": "quotidiano",
-  "descricao": "Marco si sveglia presto e cammina per le strade di Roma.",
-  "descricao_pt": "Marco acorda cedo e caminha pelas ruas de Roma.",
+  "icone": "🗽",
+  "autor": "English Autentico",
+  "tema": "everyday",
+  "descricao": "Sarah wakes up early and walks through the streets of New York.",
+  "descricao_pt": "Sarah acorda cedo e caminha pelas ruas de Nova York.",
   "xp_recompensa": 80,
   "testo": [
     {
       "id": "stor_custom_001_p1",
-      "italiano": "Marco si sveglia alle sette. Apre la finestra e vede il sole.",
-      "portugues": "Marco acorda às sete. Ele abre a janela e vê o sol.",
+      "italiano": "Sarah wakes up at seven. She opens the window and sees the sun.",
+      "portugues": "Sarah acorda às sete. Ela abre a janela e vê o sol.",
       "parole": [
-        {"parola": "Marco",    "traduzione": "Marco",    "ipa": "/ˈmarko/",      "categoria": "sostantivo"},
-        {"parola": "si",       "traduzione": "se",       "ipa": "/si/",          "categoria": "pronome"},
-        {"parola": "sveglia",  "traduzione": "acorda",   "ipa": "/ˈzveʎʎa/",    "categoria": "verbo"},
-        {"parola": "alle",     "traduzione": "às",       "ipa": "/ˈalle/",       "categoria": "preposizione"},
-        {"parola": "sette",    "traduzione": "sete",     "ipa": "/ˈsɛtte/",      "categoria": "sostantivo"},
-        {"parola": "Apre",     "traduzione": "abre",     "ipa": "/ˈaːpre/",      "categoria": "verbo"},
-        {"parola": "la",       "traduzione": "a",        "ipa": "/la/",          "categoria": "articolo"},
-        {"parola": "finestra", "traduzione": "janela",   "ipa": "/fiˈnɛstra/",   "categoria": "sostantivo"},
-        {"parola": "e",        "traduzione": "e",        "ipa": "/e/",           "categoria": "congiunzione"},
-        {"parola": "vede",     "traduzione": "vê",       "ipa": "/ˈveːde/",      "categoria": "verbo"},
-        {"parola": "il",       "traduzione": "o",        "ipa": "/il/",          "categoria": "articolo"},
-        {"parola": "sole",     "traduzione": "sol",      "ipa": "/ˈsoːle/",      "categoria": "sostantivo"}
+        {"parola": "Sarah",   "traduzione": "Sarah",   "ipa": "/ˈsɛrə/",    "categoria": "noun"},
+        {"parola": "wakes",   "traduzione": "acorda",  "ipa": "/weɪks/",    "categoria": "verb"},
+        {"parola": "up",      "traduzione": "up",      "ipa": "/ʌp/",       "categoria": "adverb"},
+        {"parola": "at",      "traduzione": "às",      "ipa": "/æt/",       "categoria": "preposition"},
+        {"parola": "seven",   "traduzione": "sete",    "ipa": "/ˈsɛvən/",   "categoria": "noun"},
+        {"parola": "She",     "traduzione": "ela",     "ipa": "/ʃiː/",      "categoria": "pronoun"},
+        {"parola": "opens",   "traduzione": "abre",    "ipa": "/ˈoʊpənz/",  "categoria": "verb"},
+        {"parola": "the",     "traduzione": "a",       "ipa": "/ðə/",       "categoria": "article"},
+        {"parola": "window",  "traduzione": "janela",  "ipa": "/ˈwɪndoʊ/",  "categoria": "noun"},
+        {"parola": "and",     "traduzione": "e",       "ipa": "/ænd/",      "categoria": "conjunction"},
+        {"parola": "sees",    "traduzione": "vê",      "ipa": "/siːz/",     "categoria": "verb"},
+        {"parola": "sun",     "traduzione": "sol",     "ipa": "/sʌn/",      "categoria": "noun"}
       ]
     }
   ]
 }
 
-TEMA DA HISTÓRIA: [SUBSTITUA AQUI — ex: "um dia de compras num mercado em Florença", "férias numa praia da Sicília", "primeiro dia de trabalho em Milão"]`,
+STORY TOPIC: [REPLACE HERE — e.g., "a day at a farmer's market in Chicago", "a road trip through California", "first day at work in San Francisco"]`,
 
-    imitazione: `Crie frases italianas para prática de pronúncia. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
+    imitazione: `Create American English phrases for pronunciation practice. Return ONLY a JSON array, no text before or after.
 
-REGRAS OBRIGATÓRIAS:
-1. Gere de 8 a 12 frases relacionadas ao tema
-2. "frase_italiano" = frase natural em italiano, nem curta demais nem longa demais
-3. "frase_portugues" = tradução em português brasileiro
-4. "contexto" = explicação em português de quando/como usar a frase (1-2 frases)
-5. "nivel" deve ser A1, A2, B1, B2 ou C1
-6. Deixe "audio_ipa" sempre como string vazia ""
+MANDATORY RULES:
+1. Generate 8 to 12 phrases related to the topic
+2. "frase_italiano" = natural American English phrase (this field keeps the name for technical compatibility)
+3. "frase_portugues" = translation in Brazilian Portuguese
+4. "contexto" = Portuguese explanation of when/how to use the phrase (1-2 sentences)
+5. "nivel" must be A1, A2, B1, B2 or C1
+6. Leave "audio_ipa" always as empty string ""
 
-EXEMPLO COMPLETO (copie exatamente este formato):
+FULL EXAMPLE (copy exactly this format):
 [
   {
     "id": "imi_custom_001",
-    "frase_italiano": "Mi scusi, sa dov'è la stazione?",
-    "frase_portugues": "Com licença, o senhor sabe onde é a estação?",
+    "frase_italiano": "Excuse me, do you know where the subway is?",
+    "frase_portugues": "Com licença, você sabe onde fica o metrô?",
     "nivel": "A1",
-    "contexto": "Use para pedir informações sobre direções de forma educada para um desconhecido.",
+    "contexto": "Use to politely ask a stranger for directions to the subway.",
     "audio_ipa": "",
     "xp_recompensa": 15
   },
   {
     "id": "imi_custom_002",
-    "frase_italiano": "Potrebbe ripetere più lentamente, per favore?",
-    "frase_portugues": "Poderia repetir mais devagar, por favor?",
+    "frase_italiano": "Could you please speak more slowly?",
+    "frase_portugues": "Poderia falar mais devagar, por favor?",
     "nivel": "A2",
-    "contexto": "Use quando não entender o que alguém disse e precisar que repita mais devagar.",
+    "contexto": "Use when you didn't understand what someone said and need them to repeat more slowly.",
     "audio_ipa": "",
     "xp_recompensa": 15
   }
 ]
 
-TEMA DAS FRASES: [SUBSTITUA AQUI — ex: "pedir informações na rua", "no restaurante pedindo a conta", "expressões de surpresa e admiração"]`,
+PHRASE TOPIC: [REPLACE HERE — e.g., "asking for directions on the street", "at a restaurant ordering food", "expressions of surprise and admiration"]`,
 
-    vocab: `Crie palavras de vocabulário italiano. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
+    vocab: `Create American English vocabulary words. Return ONLY a JSON array, no text before or after.
 
-REGRAS OBRIGATÓRIAS:
-1. Gere de 12 a 20 palavras relacionadas ao tema
-2. "genero": "m" para masculino, "f" para feminino, null para verbos e expressões
-3. "plural": forma plural do substantivo/adjetivo, null para verbos
-4. "exemplo" = frase real em italiano usando a palavra em contexto
-5. "exemplo_pt" = tradução da frase de exemplo em português brasileiro
-6. "audio_ipa" = transcrição IPA da palavra (só a palavra, não a frase)
-7. "dificuldade": "facil" (básica), "medio" (intermediária) ou "dificil" (avançada)
+MANDATORY RULES:
+1. Generate 12 to 20 words related to the topic
+2. "genero": null (English has no grammatical gender — always null)
+3. "plural": plural form of the noun, null for verbs and expressions
+4. "exemplo" = real English sentence using the word in context
+5. "exemplo_pt" = translation of the example sentence in Brazilian Portuguese
+6. "audio_ipa" = IPA transcription of the word (the word only, not the sentence)
+7. "dificuldade": "facil" (basic), "medio" (intermediate) or "dificil" (advanced)
 
-EXEMPLO COMPLETO (copie exatamente este formato):
+FULL EXAMPLE (copy exactly this format):
 [
   {
     "id": "vocab_custom_001",
-    "italiano": "treno",
-    "portugues": "trem",
-    "genero": "m",
-    "plural": "treni",
-    "exemplo": "Il treno parte alle nove dalla stazione centrale.",
-    "exemplo_pt": "O trem parte às nove da estação central.",
-    "categoria": "viaggio",
+    "italiano": "subway",
+    "portugues": "metrô",
+    "genero": null,
+    "plural": "subways",
+    "exemplo": "The subway is the fastest way to get around New York.",
+    "exemplo_pt": "O metrô é a forma mais rápida de se deslocar em Nova York.",
+    "categoria": "travel",
     "dificuldade": "facil",
-    "audio_ipa": "/ˈtrɛːno/"
+    "audio_ipa": "/ˈsʌbweɪ/"
   },
   {
     "id": "vocab_custom_002",
-    "italiano": "prenotare",
-    "portugues": "reservar",
+    "italiano": "commute",
+    "portugues": "deslocamento diário",
     "genero": null,
     "plural": null,
-    "exemplo": "Ho prenotato un posto sul treno per Venezia.",
-    "exemplo_pt": "Reservei um lugar no trem para Veneza.",
-    "categoria": "verbi",
+    "exemplo": "My commute to work takes about forty minutes.",
+    "exemplo_pt": "Meu trajeto até o trabalho leva cerca de quarenta minutos.",
+    "categoria": "work",
     "dificuldade": "medio",
-    "audio_ipa": "/prenoˈtaːre/"
+    "audio_ipa": "/kəˈmjuːt/"
   }
 ]
 
-TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", "palavras do restaurante e comida", "partes do corpo humano"]`
+VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "restaurant and food words", "parts of the human body"]`
   },
 
   // ── Títulos do modal por tipo ────────────────────────────
@@ -365,7 +326,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
   // ── Importadores por tipo ────────────────────────────────
   _importarDialogo(data) {
     const arr = Array.isArray(data) ? data : [data];
-    const key = 'it_dialoghi_custom';
+    const key = 'en_dialoghi_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     arr.forEach((d, i) => {
       if (!d.id) d.id = 'dial_custom_' + Date.now() + '_' + i;
@@ -381,7 +342,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
 
   _importarCanzone(data) {
     const arr = Array.isArray(data) ? data : [data];
-    const key = 'it_canzoni_custom';
+    const key = 'en_canzoni_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     arr.forEach((d, i) => {
       if (!d.id) d.id = 'can_custom_' + Date.now() + '_' + i;
@@ -396,7 +357,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
 
   _importarStoria(data) {
     const arr = Array.isArray(data) ? data : [data];
-    const key = 'it_storie_custom';
+    const key = 'en_storie_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     arr.forEach((d, i) => {
       if (!d.id) d.id = 'stor_custom_' + Date.now() + '_' + i;
@@ -411,7 +372,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
 
   _importarImitazione(data) {
     const arr = Array.isArray(data) ? data : [data];
-    const key = 'it_imitazioni_custom';
+    const key = 'en_imitazioni_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     arr.forEach((d, i) => {
       if (!d.id) d.id = 'imi_custom_' + Date.now() + '_' + i;
@@ -426,7 +387,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
 
   _importarVocab(data) {
     const arr = Array.isArray(data) ? data : [data];
-    const key = 'it_vocab_custom';
+    const key = 'en_vocab_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     arr.forEach((d, i) => {
       if (!d.id) d.id = 'vocab_custom_' + Date.now() + '_' + i;
@@ -449,11 +410,11 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
   excluir(tipo, id) {
     if (!confirm('Remover este item?')) return;
     const keys = {
-      dialogo: 'it_dialoghi_custom',
-      canzone: 'it_canzoni_custom',
-      storia:  'it_storie_custom',
-      imitazione: 'it_imitazioni_custom',
-      vocab:   'it_vocab_custom',
+      dialogo: 'en_dialoghi_custom',
+      canzone: 'en_canzoni_custom',
+      storia:  'en_storie_custom',
+      imitazione: 'en_imitazioni_custom',
+      vocab:   'en_vocab_custom',
     };
     const key = keys[tipo];
     if (!key) return;

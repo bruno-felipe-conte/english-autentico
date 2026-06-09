@@ -76,10 +76,10 @@ const Conquistas = {
       }
     },
     {
-      id: 'italiano_autentico',
-      emoji: '🇮🇹',
-      nome: 'Italiano Autentico',
-      get descricao() { return I18n.t('ach_italiano_autentico'); },
+      id: 'english_autentico',
+      emoji: '🇺🇸',
+      nome: 'English Autentico',
+      get descricao() { return I18n.t('ach_english_autentico'); },
       verificar(p) { return (p.nivel || 1) >= 10; }
     },
     {
