@@ -116,7 +116,7 @@ const Dialoghi = {
     const contexto = existente?.contexto || '';
     const turni = existente?.turni || [
       { id:1, personaggio:'Character', frase:'', traducao:'', audio_ipa:'', tipo:'fala' },
-      { id:2, personaggio:'Tu', frase:'', traducao:'', audio_ipa:'', tipo:'resposta', alternativas:['','','',''], resposta_correta:0 }
+      { id:2, personaggio:'You', frase:'', traducao:'', audio_ipa:'', tipo:'resposta', alternativas:['','','',''], resposta_correta:0 }
     ];
 
     let turniHtml = '';
@@ -180,7 +180,7 @@ const Dialoghi = {
   },
 
   _htmlTurnoForm(turno, i) {
-    const ehResposta = turno.personaggio === 'Tu' && turno.alternativas;
+    const ehResposta = (turno.personaggio === 'Tu' || turno.personaggio === 'You' || turno.personaggio === 'User') && turno.alternativas;
     const alts = turno.alternativas || ['','','',''];
     const correto = turno.resposta_correta || 0;
     return `
@@ -235,7 +235,7 @@ const Dialoghi = {
     if (!container) return;
     const i = container.querySelectorAll('.dial-turno-form').length;
     const div = document.createElement('div');
-    div.innerHTML = this._htmlTurnoForm({ personaggio:'Tu', frase:'', traducao:'', alternativas:['','','',''], resposta_correta:0 }, i);
+    div.innerHTML = this._htmlTurnoForm({ personaggio:'You', frase:'', traducao:'', alternativas:['','','',''], resposta_correta:0 }, i);
     container.appendChild(div.firstElementChild);
   },
 
@@ -270,7 +270,7 @@ const Dialoghi = {
       if (tipo === 'resposta') {
         const alts = [0,1,2,3].map(ai => campos[`alt-${ai}`] || '').filter(Boolean);
         const correto = parseInt(campos['resposta_correta'] || '0');
-        turni.push({ id: i+1, personaggio:'Tu', frase, traducao: campos['traducao'] || '', audio_ipa:'', alternativas: alts.length >= 2 ? alts : [frase,'','',''], resposta_correta: correto });
+        turni.push({ id: i+1, personaggio:'You', frase, traducao: campos['traducao'] || '', audio_ipa:'', alternativas: alts.length >= 2 ? alts : [frase,'','',''], resposta_correta: correto });
       } else {
         turni.push({ id: i+1, personaggio: campos['personaggio'] || 'Personaggio', frase, traducao: campos['traducao'] || '', audio_ipa: campos['audio_ipa'] || '' });
       }
@@ -345,7 +345,7 @@ const Dialoghi = {
     
     if (this.modo === 'leitura') {
       for (const t of d.turni) {
-        const isUtente = t.personaggio === 'Tu';
+        const isUtente = t.personaggio === 'Tu' || t.personaggio === 'You' || t.personaggio === 'User';
         const cssClass = isUtente ? 'utente' : 'personaggio';
         // Fallback: se frase estiver vazia mas há alternativas, usa a resposta correta
         const fraseExibir = t.frase || (t.alternativas ? t.alternativas[t.resposta_correta || 0] : '');
@@ -369,7 +369,7 @@ const Dialoghi = {
       // Modo prática: renderiza apenas o turno atual e os anteriores
       for (let i = 0; i <= this.turnoAtual; i++) {
         const t = d.turni[i];
-        const isUtente = t.personaggio === 'Tu';
+        const isUtente = t.personaggio === 'Tu' || t.personaggio === 'You' || t.personaggio === 'User';
         const cssClass = isUtente ? 'utente' : 'personaggio';
         
         if (i < this.turnoAtual) {
@@ -459,7 +459,7 @@ const Dialoghi = {
   
   mostrarResultado() {
     const d = this.dialogoAtual;
-    const totalTu = d.turni.filter(t => t.personaggio === 'Tu').length;
+    const totalTu = d.turni.filter(t => t.personaggio === 'Tu' || t.personaggio === 'You' || t.personaggio === 'User').length;
     const pct = Math.round((this.acertos / totalTu) * 100);
     
     // Apenas ganha XP se acertar a maioria e estiver no modo prática
