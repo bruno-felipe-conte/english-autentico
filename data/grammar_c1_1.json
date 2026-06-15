@@ -1,0 +1,502 @@
+[
+  {
+    "id": "c1-lez1",
+    "num": "Lesson 1",
+    "titulo": "Inversion with Negative Adverbials",
+    "subtitulo": "Rarely have I seen...",
+    "alerta": "Ao começar uma frase com um advérbio negativo, devemos inverter o sujeito e o verbo auxiliar para dar ênfase dramática e formalidade.",
+    "observacao_cards": [
+      {
+        "italiano": "Hardly had I...",
+        "traducao": "Mal eu tinha...",
+        "genero": "Negative Adverb",
+        "motivo": "Formalidade / Ênfase"
+      },
+      {
+        "italiano": "Under no circumstances...",
+        "traducao": "Sob nenhuma circunstância...",
+        "genero": "Prepositional Phrase",
+        "motivo": "Ênfase extrema"
+      }
+    ],
+    "tabela_visual": "| Advérbio Negativo | Auxiliar | Sujeito | Verbo Principal |\n|---|---|---|---|\n| Never | have | I | felt |\n| Seldom | does | she | visit |\n| Hardly | had | we | arrived |",
+    "exemplos_prc": [
+      {
+        "oracao": "Rarely have I seen such a beautiful sunset.",
+        "pergunta": "O que acontece com o auxiliar e o sujeito após 'Rarely'?",
+        "resposta": "Eles são invertidos, como em uma pergunta.",
+        "conclusao": "A inversão traz um tom mais poético e formal."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Never I have been to Paris.",
+        "certo": "Never have I been to Paris.",
+        "explicacao": "Sempre coloque o auxiliar antes do sujeito ao começar a frase com o advérbio negativo."
+      }
+    ],
+    "coda": "Inversões impressionam! Use com cautela e elegância em redações formais e discursos.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete the sentence: Never before ____ such a beautiful sunset.",
+        "opcoes": [
+          "I have seen",
+          "have I seen",
+          "did I saw",
+          "I saw"
+        ],
+        "resposta": 1,
+        "explicacao": "Após 'Never before' no início da frase, inverte-se sujeito e auxiliar (have I seen)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: Hardly ____ the house when it started to rain.",
+        "opcoes": [
+          "we left",
+          "had we left",
+          "we had left",
+          "left we"
+        ],
+        "resposta": 1,
+        "explicacao": "'Hardly' requer inversão, geralmente com Past Perfect para indicar ações em sequência rápida."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a inversão da frase 'She rarely goes out': Rarely ____ she go out.",
+        "resposta": "does",
+        "explicacao": "Usa-se 'does' para presente simples antes do sujeito 'she'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Not only ____ the exam, but she also got the highest grade.",
+        "opcoes": [
+          "she passed",
+          "she did pass",
+          "did she pass",
+          "passed she"
+        ],
+        "resposta": 2,
+        "explicacao": "Inversão com 'Not only... but also', usa-se o auxiliar 'did' para past simple."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a inversão (duas palavras): Under no circumstances ____ allowed to leave.",
+        "resposta": "are you",
+        "explicacao": "Inversão com 'Under no circumstances', colocando o verbo to be na frente do pronome."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Seldom ____ such an interesting book.",
+        "opcoes": [
+          "have I read",
+          "I have read",
+          "read I",
+          "I read"
+        ],
+        "resposta": 0,
+        "explicacao": "'Seldom' também é um advérbio negativo que força inversão (have I read)."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez2",
+    "num": "Lesson 2",
+    "titulo": "Cleft Sentences",
+    "subtitulo": "It was John who... / What I need is...",
+    "alerta": "As 'cleft sentences' (orações clivadas) são usadas para focar em uma parte específica da frase que queremos destacar e dar atenção especial.",
+    "observacao_cards": [
+      {
+        "italiano": "It was Mary who...",
+        "traducao": "Foi a Mary que...",
+        "genero": "It-cleft",
+        "motivo": "Foco no sujeito"
+      },
+      {
+        "italiano": "What I need is...",
+        "traducao": "O que eu preciso é...",
+        "genero": "Wh-cleft",
+        "motivo": "Foco no objeto/ideia"
+      }
+    ],
+    "tabela_visual": "| Tipo | Estrutura | Exemplo |\n|---|---|---|\n| It-cleft | It + be + [foco] + rel. pron. | It was John who broke it. |\n| Wh-cleft | What/All + oração + be + [foco] | What I want is peace. |",
+    "exemplos_prc": [
+      {
+        "oracao": "It was the weather that ruined the trip.",
+        "pergunta": "Qual informação está recebendo ênfase aqui?",
+        "resposta": "A causa: o clima (the weather).",
+        "conclusao": "Isso deixa claro que o clima foi o culpado, e não outra coisa."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Is what I need a coffee.",
+        "certo": "What I need is a coffee.",
+        "explicacao": "A estrutura de uma Wh-cleft coloca o 'What' (O que) no início, seguido da cláusula, depois o verbo to be, e por fim o foco."
+      }
+    ],
+    "coda": "As cleft sentences são perfeitas para persuadir, argumentar ou apenas deixar suas ideias claríssimas. Em caso de dúvida, 'What you need is practice!'",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Which is a correct cleft sentence for 'I need a vacation'?",
+        "opcoes": [
+          "What I need is a vacation.",
+          "A vacation is I need.",
+          "It is a vacation I needs.",
+          "What a vacation I need."
+        ],
+        "resposta": 0,
+        "explicacao": "É uma 'What-cleft sentence' com o foco em 'a vacation'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Emphasize 'Mary' in the sentence 'Mary broke the vase.':",
+        "opcoes": [
+          "It was the vase that Mary broke.",
+          "It was Mary who broke the vase.",
+          "What Mary broke was the vase.",
+          "Mary is who broke the vase."
+        ],
+        "resposta": 1,
+        "explicacao": "'It-cleft' enfatizando o sujeito Mary no início."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ___ was in Paris that they first met.",
+        "resposta": "It",
+        "explicacao": "Usa-se o padrão 'It was ... that ...' para focar no lugar."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Emphasize the whole idea of 'I enjoy reading.':",
+        "opcoes": [
+          "What I enjoy is reading.",
+          "It is reading that I enjoy.",
+          "What I do enjoy is reading.",
+          "I do enjoy reading."
+        ],
+        "resposta": 0,
+        "explicacao": "A 'What-cleft' focalizando o que a pessoa aprecia é 'What I enjoy is reading'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete the cleft sentence: All I want ___ to rest.",
+        "resposta": "is",
+        "explicacao": "'All' funciona como 'The only thing', portanto o verbo to be concorda no singular (is)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Identify the element being emphasized: 'It was yesterday that he called.'",
+        "opcoes": [
+          "O Sujeito",
+          "O Objeto",
+          "A Ação",
+          "O Advérbio de tempo"
+        ],
+        "resposta": 3,
+        "explicacao": "O foco está em 'yesterday' (quando aconteceu), que é um advérbio de tempo."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez3",
+    "num": "Lesson 3",
+    "titulo": "Participle Clauses",
+    "subtitulo": "Having finished dinner, he left.",
+    "alerta": "As orações reduzidas de particípio permitem juntar informações de forma elegante e concisa, indicando tempo, causa ou condição no nível avançado.",
+    "observacao_cards": [
+      {
+        "italiano": "Having finished...",
+        "traducao": "Tendo terminado...",
+        "genero": "Perfect Participle",
+        "motivo": "Ação concluída antes"
+      },
+      {
+        "italiano": "Waiting for the bus...",
+        "traducao": "Esperando pelo ônibus...",
+        "genero": "Present Participle",
+        "motivo": "Ações simultâneas/Causa"
+      }
+    ],
+    "tabela_visual": "| Forma | Exemplo | Significado |\n|---|---|---|\n| Presente (-ing) | Walking home, I met an old friend. | Enquanto caminhava... |\n| Perfeito (Having + -ed) | Having seen the movie, I knew the end. | Como já tinha visto... |\n| Passado (-ed) | Built in 1920, the house is old. | Construída em... |",
+    "exemplos_prc": [
+      {
+        "oracao": "Not knowing what to do, she asked for help.",
+        "pergunta": "Por que ela pediu ajuda?",
+        "resposta": "Porque não sabia o que fazer.",
+        "conclusao": "A Participle Clause (Not knowing) funciona como explicação (Causa)."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Looked at him, she smiled.",
+        "certo": "Looking at him, she smiled.",
+        "explicacao": "Para uma ação ativa que ela fez ao mesmo tempo que sorria, use o particípio presente (Looking). O particípio passado (Looked) daria sentido passivo."
+      }
+    ],
+    "coda": "Participle clauses dão fluidez absurda ao seu texto em inglês. Tente incluí-las em suas redações para atingir um tom sofisticado.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Combine the sentences using a participle clause: 'She opened the door. She found a package.'",
+        "opcoes": [
+          "Opened the door, she found a package.",
+          "Opening the door, she found a package.",
+          "She opening the door, found a package.",
+          "To open the door, she found a package."
+        ],
+        "resposta": 1,
+        "explicacao": "'Opening the door' é a Present Participle clause indicando ação simultânea ou imediatamente anterior."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Indicate the cause using a participle clause: 'Because he was tired, he went to bed.'",
+        "opcoes": [
+          "Tired he was, he went to bed.",
+          "Being tired, he went to bed.",
+          "Having tired, he went to bed.",
+          "Been tired, he went to bed."
+        ],
+        "resposta": 1,
+        "explicacao": "'Being tired' (Estando cansado) expressa perfeitamente a razão pela qual ele foi dormir."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete the perfect participle: ___ completed the project, they celebrated. (Tendo completado)",
+        "resposta": "Having",
+        "explicacao": "Perfect Participle clause 'Having completed' é usada para enfatizar a conclusão antes da celebração."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Which sentence has a passive (past) participle clause?",
+        "opcoes": [
+          "Feeling hungry, I ate an apple.",
+          "Having eaten the apple, I left.",
+          "Built in 1920, the house is still beautiful.",
+          "To build the house took a year."
+        ],
+        "resposta": 2,
+        "explicacao": "'Built in 1920' (Construída em 1920) é um Particípio Passado (sentido passivo)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Reescreva o início: 'Because she had seen the movie before' -> '___ seen the movie before...'",
+        "resposta": "Having",
+        "explicacao": "'Having seen' condensa toda a oração de passado perfeito indicando causa."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "'Not wanting to wake him, she walked quietly.' What does the participle clause express in this context?",
+        "opcoes": [
+          "Condition",
+          "Reason / Cause",
+          "Time",
+          "Contrast"
+        ],
+        "resposta": 1,
+        "explicacao": "Ela andou quieta *porque* não queria acordá-lo, logo expressa uma razão ou causa."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez4",
+    "num": "Lesson 4",
+    "titulo": "Advanced Conditionals",
+    "subtitulo": "Inverted Conditionals (Had I known), But for...",
+    "alerta": "Estruturas condicionais avançadas, como a inversão de auxiliares ou o uso de 'but for', elevam muito a formalidade e a sofisticação do seu inglês.",
+    "observacao_cards": [
+      {
+        "italiano": "Had I known...",
+        "traducao": "Se eu soubesse...",
+        "genero": "Inversion",
+        "motivo": "Omitir o 'If' na 3ª condicional"
+      },
+      {
+        "italiano": "But for your help...",
+        "traducao": "Se não fosse por sua ajuda...",
+        "genero": "Alternative",
+        "motivo": "Mais curto e poético"
+      }
+    ],
+    "tabela_visual": "| Condicional Normal | Versão Invertida Avançada |\n|---|---|\n| If I had seen him... | Had I seen him... |\n| If you should need help... | Should you need help... |\n| If I were you... | Were I you... |",
+    "exemplos_prc": [
+      {
+        "oracao": "Had I known it was going to rain, I would have brought an umbrella.",
+        "pergunta": "Onde está a palavra 'If' nesta frase?",
+        "resposta": "Ela não está na frase. Foi omitida pela inversão de 'Had I'.",
+        "conclusao": "Inverter o verbo e omitir 'If' não muda o sentido, apenas torna a frase mais avançada."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Had it rain, we would have stayed home.",
+        "certo": "Had it rained, we would have stayed home.",
+        "explicacao": "Como a inversão vem do Past Perfect, o verbo principal deve continuar no particípio passado (rained)."
+      }
+    ],
+    "coda": "As condicionais avançadas soam quase como a literatura clássica, mas caem perfeitamente em discursos ou ensaios persuasivos.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Invert the conditional structure: 'If I had known, I would have stayed.'",
+        "opcoes": [
+          "Had I known, I would have stayed.",
+          "Known had I, I would have stayed.",
+          "Did I know, I would have stayed.",
+          "Have I known, I would have stayed."
+        ],
+        "resposta": 0,
+        "explicacao": "Substitui-se o 'If' colocando o auxiliar na frente: 'Had I known'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Which option elegantly replaces 'If it hadn't been for his help'?",
+        "opcoes": [
+          "But with his help",
+          "Had it not his help",
+          "But for his help",
+          "Except his help"
+        ],
+        "resposta": 2,
+        "explicacao": "'But for' é uma expressão avançada e mais curta para dizer 'Se não fosse por'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a inversão (1ª condicional com should): ___ you need more information, let me know.",
+        "resposta": "Should",
+        "explicacao": "'Should you need' substitui 'If you should need' ou 'If you need'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Invert the 2nd conditional: 'If I were a bird...'",
+        "opcoes": [
+          "Were a bird I...",
+          "Was I a bird...",
+          "Were I a bird...",
+          "Did I be a bird..."
+        ],
+        "resposta": 2,
+        "explicacao": "Faz-se a inversão na 2ª condicional usando 'Were I + complemento'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase alternativa: ___ for the rain, we would have gone to the beach. (Se não fosse pela chuva)",
+        "resposta": "But",
+        "explicacao": "Usa-se a condicional avançada 'But for'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Which of these inverted conditionals contains a grammatical mistake?",
+        "opcoes": [
+          "Had she arrived earlier, she could have seen him.",
+          "Should they call, please take a message.",
+          "Were he to apologize, I would forgive him.",
+          "Had it rain, we would stay home."
+        ],
+        "resposta": 3,
+        "explicacao": "A opção correta seria 'Had it rained'. A opção D usa 'rain' sem o 'ed' do particípio."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez5",
+    "num": "Lesson 5",
+    "titulo": "Subjunctive Mood",
+    "subtitulo": "I suggest that he go...",
+    "alerta": "O modo subjuntivo em inglês soa bastante formal e é usado em orações após verbos de sugestão, recomendação ou exigência, exigindo o verbo na forma base.",
+    "observacao_cards": [
+      {
+        "italiano": "I suggest that he go...",
+        "traducao": "Eu sugiro que ele vá...",
+        "genero": "Subjunctive",
+        "motivo": "Uso da forma base (go)"
+      },
+      {
+        "italiano": "It is crucial that she be...",
+        "traducao": "É crucial que ela seja/esteja...",
+        "genero": "Subjunctive (To Be)",
+        "motivo": "Uso de 'be' mesmo na 3ª pessoa"
+      }
+    ],
+    "tabela_visual": "| Verbo/Adjetivo de Gatilho | Cláusula no Subjuntivo |\n|---|---|\n| Demand | ...that they **stop** immediately. |\n| Suggest | ...that he **leave** early. |\n| Essential | ...that it **be** done. |",
+    "exemplos_prc": [
+      {
+        "oracao": "They insisted that Mary take the exam again.",
+        "pergunta": "Por que o verbo é 'take' e não 'takes' para a Mary?",
+        "resposta": "Porque após 'insisted that', usamos o subjuntivo com a forma base do verbo.",
+        "conclusao": "Não conjugamos a 3ª pessoa com 's' no modo subjuntivo."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I recommend that he goes to see a doctor.",
+        "certo": "I recommend that he go to see a doctor.",
+        "explicacao": "A armadilha mais comum é conjugar como presente simples. Sempre use a forma base, sem 's'."
+      }
+    ],
+    "coda": "Saber dominar o subjuntivo é como assinar um documento em inglês avançado: elegante, limpo e direto.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete the sentence: The doctor recommended that he ___ smoking.",
+        "opcoes": [
+          "quits",
+          "quit",
+          "quitted",
+          "to quit"
+        ],
+        "resposta": 1,
+        "explicacao": "No subjuntivo após 'recommended that', usa-se a forma base do verbo ('quit')."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "It is imperative that she ___ on time.",
+        "opcoes": [
+          "is",
+          "be",
+          "was",
+          "to be"
+        ],
+        "resposta": 1,
+        "explicacao": "Usa-se o verbo na forma base 'be' no modo subjuntivo, não importando qual seja o sujeito."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete para fazer a negação no subjuntivo: I suggest that he ___ go there.",
+        "resposta": "not",
+        "explicacao": "A negação no subjuntivo é feita colocando apenas 'not' antes da forma base (not go), sem auxílio de 'does'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Which sentence uses the subjunctive mood correctly?",
+        "opcoes": [
+          "She insisted that he goes to the doctor.",
+          "She insisted that he go to the doctor.",
+          "She insisted that he went to the doctor.",
+          "She insisted him to go to the doctor."
+        ],
+        "resposta": 1,
+        "explicacao": "Deve-se usar a base 'go' após 'insisted that'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: It is essential that they ___ prepared for the exam.",
+        "resposta": "be",
+        "explicacao": "Assim como para a 3ª pessoa do singular, usa-se o verbo 'be' (forma base) em toda a conjugação."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete the sentence: They demanded that the manager ___.",
+        "opcoes": [
+          "resigns",
+          "resigned",
+          "resign",
+          "resigning"
+        ],
+        "resposta": 2,
+        "explicacao": "Base form (resign) após o verbo de exigência 'demanded that'."
+      }
+    ]
+  }
+]

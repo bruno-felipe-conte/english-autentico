@@ -1,0 +1,474 @@
+[
+  {
+    "id": "b2-lez11",
+    "num": "Lesson 11",
+    "titulo": "Articles (Advanced): Omissões Institucionais e Abstrações",
+    "subtitulo": "Hospital, Prison, Love",
+    "alerta": "Sabia que usar ou omitir 'the' muda completamente o sentido em instituições e ideias abstratas?",
+    "observacao_cards": [
+      {
+        "italiano": "Go to hospital",
+        "traducao": "Ir ao hospital (como paciente)",
+        "genero": "Institutional",
+        "motivo": "Foco no propósito da instituição"
+      },
+      {
+        "italiano": "Go to the hospital",
+        "traducao": "Ir ao hospital (como visitante)",
+        "genero": "Specific Location",
+        "motivo": "Foco no prédio físico"
+      },
+      {
+        "italiano": "Love",
+        "traducao": "O amor (em geral)",
+        "genero": "Abstract",
+        "motivo": "Sem artigo para conceitos gerais"
+      }
+    ],
+    "tabela_visual": "| Uso | Exemplo | Contexto |\n|---|---|---|\n| Sem 'the' | She is in prison. | Ela é prisioneira. |\n| Com 'the' | He went to the prison. | Ele foi lá (visitar). |\n| Abstrato Geral | Life is beautiful. | A vida em geral. |\n| Abstrato Específico| The life of a star. | A vida específica. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Love is all you need.",
+        "pergunta": "Por que não usamos 'The love'?",
+        "resposta": "Porque estamos falando do conceito de amor em geral.",
+        "conclusao": "Para abstrações gerais, omitimos o artigo 'the'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "The time is money.",
+        "certo": "Time is money.",
+        "explicacao": "Conceitos abstratos em seu sentido amplo não recebem o artigo 'the'."
+      }
+    ],
+    "coda": "Dominar as omissões do 'the' faz seu inglês soar muito mais nativo e preciso nas suas intenções!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase indica que John é um paciente?",
+        "opcoes": [
+          "John is in hospital.",
+          "John is in the hospital.",
+          "John is a hospital."
+        ],
+        "resposta": 0,
+        "explicacao": "Estar 'in hospital' sem o artigo significa estar lá para receber tratamento médico."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o artigo adequado ou escreva '-' (sem artigo): I think ___ history is a fascinating subject.",
+        "resposta": "-",
+        "explicacao": "Não usamos artigos antes de disciplinas ou conceitos gerais."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Escolha a frase correta que fala sobre um conceito geral de beleza:",
+        "opcoes": [
+          "The beauty is in the eye of the beholder.",
+          "Beauty is in the eye of the beholder.",
+          "A beauty is in the eye of the beholder."
+        ],
+        "resposta": 1,
+        "explicacao": "'Beauty' é um substantivo abstrato em sentido amplo, logo não leva artigo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: They went to ___ prison to visit their son.",
+        "resposta": "the",
+        "explicacao": "Como foram apenas visitar (e não cumprir pena), usamos 'the' para o prédio físico."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "We go to ___ church every Sunday to pray.",
+        "opcoes": [
+          "church",
+          "the church",
+          "a church"
+        ],
+        "resposta": 0,
+        "explicacao": "Como estão indo pela função religiosa institucional da igreja, não se usa artigo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com the ou '-' (sem artigo): Do you like ___ music they are playing?",
+        "resposta": "the",
+        "explicacao": "Usamos 'the' pois trata-se de uma música específica (a que eles estão tocando)."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez12",
+    "num": "Lesson 12",
+    "titulo": "Adjectives ending in -ed vs -ing",
+    "subtitulo": "Bored vs Boring / Interested vs Interesting",
+    "alerta": "Você causa ou você sente? É a diferença entre ser 'boring' ou estar 'bored'.",
+    "observacao_cards": [
+      {
+        "italiano": "Bored",
+        "traducao": "Entediado(a)",
+        "genero": "Feeling (-ed)",
+        "motivo": "Descreve como alguém se sente."
+      },
+      {
+        "italiano": "Boring",
+        "traducao": "Entediante / Chato(a)",
+        "genero": "Cause (-ing)",
+        "motivo": "Descreve a coisa ou pessoa que causa o sentimento."
+      }
+    ],
+    "tabela_visual": "| Causa (-ing) | Sentimento (-ed) | Exemplo Prático |\n|---|---|---|\n| Tiring (cansativo) | Tired (cansado) | Work is tiring, so I am tired. |\n| Interesting (interessante) | Interested (interessado) | The book is interesting. I am interested. |",
+    "exemplos_prc": [
+      {
+        "oracao": "This movie is so boring, I'm getting bored.",
+        "pergunta": "Quem está sentindo o tédio e quem o causou?",
+        "resposta": "O falante sente (bored) e o filme causa (boring).",
+        "conclusao": "Objetos inanimados geralmente são '-ing', pois não têm sentimentos!"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am very boring today.",
+        "certo": "I am very bored today.",
+        "explicacao": "Dizer 'I am boring' significa que você é uma pessoa chata. Para dizer que não tem nada para fazer, diga 'I am bored'."
+      }
+    ],
+    "coda": "Pessoas e coisas podem ser '-ing', mas apenas quem tem sentimentos (como nós) pode estar '-ed'.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "The movie was so ___ that I fell asleep.",
+        "opcoes": [
+          "bored",
+          "boring",
+          "bore"
+        ],
+        "resposta": 1,
+        "explicacao": "O filme causou o tédio, portanto usamos '-ing'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o adjetivo adequado a partir de interest: I am very ___ in learning new languages.",
+        "resposta": "interested",
+        "explicacao": "Você está expressando como se sente, então usa a terminação '-ed'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase descreve uma pessoa que deixa os outros cansados?",
+        "opcoes": [
+          "He is very tired.",
+          "He is very tiring.",
+          "He is very tiredness."
+        ],
+        "resposta": 1,
+        "explicacao": "Se ele causa o cansaço nos outros, ele é 'tiring'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o adjetivo a partir de shock: The news was very ___!",
+        "resposta": "shocking",
+        "explicacao": "As notícias não sentem choque, elas o causam (shocking)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Are you ___ of the dark? (frighten)",
+        "opcoes": [
+          "frightened",
+          "frightening",
+          "fright"
+        ],
+        "resposta": 0,
+        "explicacao": "A pergunta é sobre o seu sentimento em relação ao escuro (-ed)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o adjetivo a partir de embarrass: It was an extremely ___ situation.",
+        "resposta": "embarrassing",
+        "explicacao": "A situação causou constrangimento, logo é 'embarrassing'."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez13",
+    "num": "Lesson 13",
+    "titulo": "Contrast Linkers",
+    "subtitulo": "Despite, In spite of, Although, Even though",
+    "alerta": "Ligar ideias de contraste exige cuidado! Algumas estruturas exigem verbo, outras apenas substantivo.",
+    "observacao_cards": [
+      {
+        "italiano": "Although / Even though",
+        "traducao": "Embora / Apesar de que",
+        "genero": "Clause Linker",
+        "motivo": "Exige uma oração completa (Sujeito + Verbo)"
+      },
+      {
+        "italiano": "Despite / In spite of",
+        "traducao": "Apesar de",
+        "genero": "Noun Linker",
+        "motivo": "Exige apenas Substantivo, Pronome ou Verbo-ING"
+      }
+    ],
+    "tabela_visual": "| Conector | Estrutura Seguidora | Exemplo |\n|---|---|---|\n| Although | Sujeito + Verbo | Although it rained, we left. |\n| Even though | Sujeito + Verbo | Even though I was tired, I read. |\n| Despite | Substantivo ou -ING | Despite the rain, we left. |\n| In spite of | Substantivo ou -ING | In spite of being tired, I read. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Despite the heavy rain, we went for a walk.",
+        "pergunta": "Poderíamos usar 'although' no mesmo lugar sem mudar mais nada?",
+        "resposta": "Não, pois 'although' exige verbo. Ficaríamos: Although it was raining heavily...",
+        "conclusao": "A escolha do conector de contraste dita o restante da frase."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Despite of the rain, we played soccer.",
+        "certo": "Despite the rain, we played soccer.",
+        "explicacao": "'Despite' não é seguido por 'of'. Apenas 'In spite' leva 'of'."
+      }
+    ],
+    "coda": "Lembre-se da regra de ouro: 'Despite/In spite of' + Coisa/Ação-ING. 'Although/Even though' + Pessoa e Verbo.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "___ it was cold, she didn't wear a coat.",
+        "opcoes": [
+          "Despite",
+          "In spite of",
+          "Although"
+        ],
+        "resposta": 2,
+        "explicacao": "'it was' é sujeito + verbo, portanto usamos 'Although'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com uma única palavra que comece com D: ___ the noise, I managed to sleep.",
+        "resposta": "Despite",
+        "explicacao": "Seguido por substantivo ('the noise'), usamos 'Despite' ou 'In spite of', mas foi pedida uma única palavra."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual destas frases está correta?",
+        "opcoes": [
+          "Despite of being late, he won the race.",
+          "In spite of the fact that he was late, he won.",
+          "Although the delay, he won."
+        ],
+        "resposta": 1,
+        "explicacao": "'In spite of' aceita 'the fact that' (que aí sim leva oração). 'Despite of' não existe e 'Although' precisa de verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a forma do verbo 'study' no gerúndio, exigida após 'despite': Despite ___ hard, he failed.",
+        "resposta": "studying",
+        "explicacao": "Após 'despite' e 'in spite of', quando há verbo, ele deve estar na forma -ing."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual estrutura SEMPRE segue 'Even though'?",
+        "opcoes": [
+          "A noun (um substantivo)",
+          "A verb in -ing (um verbo com ing)",
+          "A subject and a verb (um sujeito e um verbo)"
+        ],
+        "resposta": 2,
+        "explicacao": "'Even though' é uma conjunção que inicia orações completas."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com duas palavras: ___ ___ she was exhausted, she kept running.",
+        "resposta": "Even though",
+        "explicacao": "Como temos sujeito e verbo ('she was'), usamos 'Even though' (embora)."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez14",
+    "num": "Lesson 14",
+    "titulo": "Condition Linkers",
+    "subtitulo": "Provided that, As long as, Unless",
+    "alerta": "Expressar condições em inglês vai além do simples 'If'. Descubra como colocar limites e definir exceções.",
+    "observacao_cards": [
+      {
+        "italiano": "As long as",
+        "traducao": "Contanto que / Desde que",
+        "genero": "Condition",
+        "motivo": "Estabelece uma condição ou limite temporal"
+      },
+      {
+        "italiano": "Provided (that)",
+        "traducao": "Contanto que / Sob a condição de que",
+        "genero": "Condition (Formal)",
+        "motivo": "Igual a 'As long as', mas um pouco mais formal"
+      },
+      {
+        "italiano": "Unless",
+        "traducao": "A menos que / A não ser que",
+        "genero": "Exception",
+        "motivo": "Substitui 'if not'"
+      }
+    ],
+    "tabela_visual": "| Conector | Significado | Exemplo Prático |\n|---|---|---|\n| As long as | Contanto que | You can go as long as you behave. |\n| Provided that | Sob a condição | I will go provided that you pay. |\n| Unless | A menos que | I won't go unless you pay. |",
+    "exemplos_prc": [
+      {
+        "oracao": "You can borrow my car as long as you drive carefully.",
+        "pergunta": "Qual é a exigência para o empréstimo?",
+        "resposta": "Dirigir com cuidado. É o limite/condição estabelecida.",
+        "conclusao": "Use 'as long as' para 'apenas se' / 'contanto que'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Unless you don't study, you will fail.",
+        "certo": "Unless you study, you will fail.",
+        "explicacao": "'Unless' já tem sentido negativo ('a menos que'). Não use outro verbo negativo logo depois dele, senão a frase fica com dupla negativa."
+      }
+    ],
+    "coda": "Condições bem expressadas mostram fluência e clareza no pensamento lógico em inglês!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "We will go to the beach ___ it rains.",
+        "opcoes": [
+          "provided that",
+          "as long as",
+          "unless"
+        ],
+        "resposta": 2,
+        "explicacao": "Nós iremos à praia 'a menos que' chova."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com 3 palavras: You can play videogames ___ ___ ___ you finish your homework first.",
+        "resposta": "as long as",
+        "explicacao": "A condição é terminar a tarefa de casa (contanto que)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "___ you have a valid ticket, you can enter the stadium.",
+        "opcoes": [
+          "Unless",
+          "Provided that",
+          "Despite"
+        ],
+        "resposta": 1,
+        "explicacao": "'Provided that' introduz a condição (contanto que você tenha ingresso)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com 1 palavra: He won't pass the exam ___ he studies harder.",
+        "resposta": "unless",
+        "explicacao": "Ele não passará 'a menos que' estude mais."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "'Unless' is generally equivalent to:",
+        "opcoes": [
+          "if",
+          "if not",
+          "only if"
+        ],
+        "resposta": 1,
+        "explicacao": "'Unless' carrega o sentido de 'se não' (if not)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com duas palavras: They will agree to the terms ___ ___ you pay them in advance.",
+        "resposta": "provided that",
+        "explicacao": "Estabelecendo uma condição mais formal: 'provided that'."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez15",
+    "num": "Lesson 15",
+    "titulo": "Phrasal Verbs (Separable vs Inseparable)",
+    "subtitulo": "A lógica por trás da estrutura",
+    "alerta": "Onde o objeto da frase deve ficar? Descubra quando podemos (ou devemos) separar um Phrasal Verb.",
+    "observacao_cards": [
+      {
+        "italiano": "Turn it on",
+        "traducao": "Ligue (isso)",
+        "genero": "Separable (Pronoun)",
+        "motivo": "Quando o objeto é pronome, DEVE separar o verbo"
+      },
+      {
+        "italiano": "Turn on the TV",
+        "traducao": "Ligue a TV",
+        "genero": "Separable (Noun)",
+        "motivo": "Com substantivos, pode separar ou ficar junto"
+      },
+      {
+        "italiano": "Look after it",
+        "traducao": "Cuidar (disso)",
+        "genero": "Inseparable",
+        "motivo": "Nunca se separam, seja com pronome ou substantivo"
+      }
+    ],
+    "tabela_visual": "| Tipo | Substantivo (The TV/John) | Pronome (It/Him/Them) |\n|---|---|---|\n| Separable | Turn on the TV / Turn the TV on | Turn it on (Turn on it ❌) |\n| Inseparable| Look after John | Look after him (Look him after ❌) |",
+    "exemplos_prc": [
+      {
+        "oracao": "Take off your shoes / Take your shoes off.",
+        "pergunta": "Ambos estão corretos?",
+        "resposta": "Sim, com substantivos podemos escolher separar ou não em verbos separáveis.",
+        "conclusao": "A verdadeira regra aparece com pronomes: eles sempre exigem a separação (Take them off)."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Turn on it.",
+        "certo": "Turn it on.",
+        "explicacao": "Se o objeto de um phrasal verb separável for um pronome (it/them/me/us), ele DEVE ficar no meio."
+      }
+    ],
+    "coda": "Não há regra mágica para saber qual verbo é separável ou não, mas lembrar da regra do pronome já evita os maiores erros!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Which sentence is CORRECT?",
+        "opcoes": [
+          "Please, turn off it.",
+          "Please, turn it off.",
+          "Please, turn off they."
+        ],
+        "resposta": 1,
+        "explicacao": "O pronome 'it' deve ficar entre o verbo e a partícula."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Escreva a ordem correta das duas palavras: Please, pick ___ ___ (up / them).",
+        "resposta": "them up",
+        "explicacao": "Como 'them' é pronome e o verbo é separável, o pronome fica no meio."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "'Look after' is an inseparable phrasal verb. How do you say 'Cuidar deles'?",
+        "opcoes": [
+          "Look them after",
+          "Look after them",
+          "Look after they"
+        ],
+        "resposta": 1,
+        "explicacao": "Verbos inseparáveis nunca se separam, nem mesmo com pronomes."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Escreva a ordem correta para 'throw away' (separable) com o pronome 'it': throw ___ ___",
+        "resposta": "it away",
+        "explicacao": "O pronome 'it' deve separar as duas partes do phrasal verb."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual tipo de Phrasal Verb permite duas posições diferentes quando usado com um substantivo?",
+        "opcoes": [
+          "Separable phrasal verbs",
+          "Inseparable phrasal verbs"
+        ],
+        "resposta": 0,
+        "explicacao": "Verbos separáveis com substantivos podem ficar juntos ou separados (Turn on the TV ou Turn the TV on)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete o inseparable phrasal verb 'get over' com o pronome 'it': She finally got ___ ___.",
+        "resposta": "over it",
+        "explicacao": "Sendo inseparável, o pronome sempre vem após a preposição."
+      }
+    ]
+  }
+]

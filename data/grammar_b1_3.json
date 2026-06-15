@@ -1,0 +1,478 @@
+[
+  {
+    "id": "b1-lez11",
+    "num": "Lesson 11",
+    "titulo": "Question Tags",
+    "subtitulo": "Confirmando informações",
+    "alerta": "Question tags são pequenas perguntas no final da frase para confirmar uma informação ou pedir concordância.",
+    "observacao_cards": [
+      {
+        "italiano": "You are Brazilian, aren't you?",
+        "traducao": "Você é brasileiro, não é?",
+        "genero": "Frase Afirmativa",
+        "motivo": "Tag Negativa"
+      },
+      {
+        "italiano": "He doesn't like tea, does he?",
+        "traducao": "Ele não gosta de chá, gosta?",
+        "genero": "Frase Negativa",
+        "motivo": "Tag Afirmativa"
+      }
+    ],
+    "tabela_visual": "| Afirmação | Question Tag |\n|---|---|\n| You are late, | aren't you? |\n| She didn't go, | did she? |\n| They will come, | won't they? |\n| I am right, | aren't I? |",
+    "exemplos_prc": [
+      {
+        "oracao": "It's a beautiful day, isn't it?",
+        "pergunta": "Como formamos a question tag aqui?",
+        "resposta": "Como 'It's' é afirmativo, usamos a forma negativa do verbo to be: 'isn't it?'.",
+        "conclusao": "Afirmativa -> Tag Negativa."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am right, am not I?",
+        "certo": "I am right, aren't I?",
+        "explicacao": "A question tag para 'I am' em uma frase afirmativa é sempre 'aren't I?' (exceção à regra)."
+      }
+    ],
+    "coda": "Agora você consegue confirmar informações com os falantes nativos, não consegue?",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: She is your sister, ___?",
+        "opcoes": [
+          "isn't she",
+          "doesn't she",
+          "is she",
+          "hasn't she"
+        ],
+        "resposta": 0,
+        "explicacao": "A frase principal é afirmativa com o verbo 'is', logo a tag é negativa 'isn't she'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a question tag: They don't eat meat, ___ they?",
+        "resposta": "do",
+        "explicacao": "Frase negativa com 'don't', então a tag é afirmativa 'do'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a question tag correta para: 'You have finished your homework'?",
+        "opcoes": [
+          "don't you",
+          "haven't you",
+          "didn't you",
+          "aren't you"
+        ],
+        "resposta": 1,
+        "explicacao": "O verbo auxiliar é 'have', logo a tag usa 'haven't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a question tag: He will travel tomorrow, ___ he?",
+        "resposta": "won't",
+        "explicacao": "'will' na afirmativa vira 'won't' na question tag."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a question tag correta para: 'I am late, ___?'",
+        "opcoes": [
+          "am not I",
+          "don't I",
+          "aren't I",
+          "isn't I"
+        ],
+        "resposta": 2,
+        "explicacao": "'aren't I?' é a exceção usada com 'I am'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a question tag: Mary went to the party, ___ she?",
+        "resposta": "didn't",
+        "explicacao": "O verbo 'went' está no passado simples, então o auxiliar é 'did'. Frase afirmativa -> 'didn't'."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez12",
+    "num": "Lesson 12",
+    "titulo": "Reflexive Pronouns",
+    "subtitulo": "Myself, yourself, himself",
+    "alerta": "Usamos os pronomes reflexivos quando o sujeito e o objeto da ação são a mesma pessoa.",
+    "observacao_cards": [
+      {
+        "italiano": "myself",
+        "traducao": "a mim mesmo(a)",
+        "genero": "1ª Pessoa Singular",
+        "motivo": "Refere-se a 'I'"
+      },
+      {
+        "italiano": "themselves",
+        "traducao": "a si mesmos(as)",
+        "genero": "3ª Pessoa Plural",
+        "motivo": "Refere-se a 'They'"
+      }
+    ],
+    "tabela_visual": "| Sujeito | Pronome Reflexivo |\n|---|---|\n| I | myself |\n| You | yourself (Sing) / yourselves (Pl) |\n| He | himself |\n| She | herself |\n| It | itself |\n| We | ourselves |\n| They | themselves |",
+    "exemplos_prc": [
+      {
+        "oracao": "I cut myself while cooking.",
+        "pergunta": "Quem sofreu o corte?",
+        "resposta": "Eu mesmo (I cut myself). Sujeito = Objeto.",
+        "conclusao": "A ação reflete no próprio sujeito."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He bought a gift for hisself.",
+        "certo": "He bought a gift for himself.",
+        "explicacao": "O pronome reflexivo correto para 'He' é 'himself', não 'hisself'."
+      }
+    ],
+    "coda": "Não se esqueça de praticar, you can teach yourself English!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "She looked at ___ in the mirror.",
+        "opcoes": [
+          "herself",
+          "himself",
+          "itself",
+          "myself"
+        ],
+        "resposta": 0,
+        "explicacao": "'She' é o sujeito, então usamos 'herself'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: We built this house ___.",
+        "resposta": "ourselves",
+        "explicacao": "O pronome reflexivo de 'We' é 'ourselves'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Did you guys do the homework by ___?",
+        "opcoes": [
+          "yourself",
+          "yourselves",
+          "ourselves",
+          "themselves"
+        ],
+        "resposta": 1,
+        "explicacao": "O 'you guys' indica plural, então a forma reflexiva correta é 'yourselves'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The cat cleaned ___ after eating.",
+        "resposta": "itself",
+        "explicacao": "Para animais (quando não referenciados por gênero), usamos 'itself'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I can't believe he fixed the car ___!",
+        "opcoes": [
+          "hisself",
+          "himself",
+          "itself",
+          "myself"
+        ],
+        "resposta": 1,
+        "explicacao": "O pronome reflexivo correspondente a 'he' é 'himself'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Make ___ at home. (Falando com uma pessoa)",
+        "resposta": "yourself",
+        "explicacao": "Como a ordem é para uma pessoa singular, o correto é 'yourself' (Sinta-se em casa)."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez13",
+    "num": "Lesson 13",
+    "titulo": "Both, Either, Neither",
+    "subtitulo": "Falando sobre escolhas",
+    "alerta": "Use 'both', 'either' e 'neither' para falar sobre duas coisas, pessoas ou opções.",
+    "observacao_cards": [
+      {
+        "italiano": "Both",
+        "traducao": "Ambos(as)",
+        "genero": "Inclusivo",
+        "motivo": "Significa 'um e o outro'."
+      },
+      {
+        "italiano": "Either",
+        "traducao": "Qualquer um(a) (dos dois)",
+        "genero": "Alternativo",
+        "motivo": "Significa 'um ou o outro'."
+      },
+      {
+        "italiano": "Neither",
+        "traducao": "Nenhum(a) (dos dois)",
+        "genero": "Exclusivo (Negativo)",
+        "motivo": "Significa 'nem um, nem o outro'."
+      }
+    ],
+    "tabela_visual": "| Palavra | Uso | Exemplo |\n|---|---|---|\n| Both | Os dois juntos | Both books are good. |\n| Either | Uma opção entre duas | We can watch either movie. |\n| Neither | Nenhuma das duas | Neither restaurant is open. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Neither of my parents speaks Spanish.",
+        "pergunta": "Quantos dos pais falam espanhol?",
+        "resposta": "Zero. Nenhum dos dois fala.",
+        "conclusao": "'Neither' nega as duas opções juntas."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I don't like neither.",
+        "certo": "I don't like either.",
+        "explicacao": "Não se usa dupla negação em inglês. Se o verbo estiver na negativa (don't), use 'either'."
+      }
+    ],
+    "coda": "Você conseguiu entender both das opções? Excellent!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Would you like tea or coffee? ___, I don't mind.",
+        "opcoes": [
+          "Both",
+          "Neither",
+          "Either",
+          "None"
+        ],
+        "resposta": 2,
+        "explicacao": "'Either' significa qualquer um dos dois. A pessoa aceita um ou outro."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ___ my brother and my sister live in London. (Ambos)",
+        "resposta": "Both",
+        "explicacao": "'Both' junta as duas opções (irmão e irmã)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "___ of them came to the party. They were both busy.",
+        "opcoes": [
+          "Either",
+          "Neither",
+          "Both",
+          "None"
+        ],
+        "resposta": 1,
+        "explicacao": "'Neither' indica que nenhum dos dois veio."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I don't speak French, and I don't speak Italian ___. (Também não)",
+        "resposta": "either",
+        "explicacao": "No final de frases negativas, usamos 'either' com o sentido de 'também não'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "You can have ___ the chicken or the fish.",
+        "opcoes": [
+          "both",
+          "neither",
+          "either",
+          "any"
+        ],
+        "resposta": 2,
+        "explicacao": "A estrutura 'either ... or ...' significa 'ou ... ou ...'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a palavra que indica que as DUAS opções são corretas: ___ answers are correct.",
+        "resposta": "Both",
+        "explicacao": "'Both' é usado para se referir a duas coisas (as duas respostas)."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez14",
+    "num": "Lesson 14",
+    "titulo": "As... As / Not as... As",
+    "subtitulo": "Comparações de igualdade",
+    "alerta": "Use 'as ... as' para dizer que duas coisas são iguais em algum aspecto, e 'not as ... as' para dizer que não são.",
+    "observacao_cards": [
+      {
+        "italiano": "as fast as",
+        "traducao": "tão rápido quanto",
+        "genero": "Igualdade",
+        "motivo": "Compara as duas partes com a mesma intensidade"
+      },
+      {
+        "italiano": "not as tall as",
+        "traducao": "não tão alto quanto",
+        "genero": "Diferença",
+        "motivo": "Indica que o primeiro é menor/menos intenso que o segundo"
+      }
+    ],
+    "tabela_visual": "| Estrutura | Significado | Exemplo |\n|---|---|---|\n| as + adjetivo + as | Tão ... quanto | She is as tall as me. |\n| not as + adjetivo + as | Não tão ... quanto | It is not as hot as yesterday. |",
+    "exemplos_prc": [
+      {
+        "oracao": "My car is not as fast as yours.",
+        "pergunta": "Qual carro é mais rápido?",
+        "resposta": "O seu (yours). Meu carro 'não é tão rápido quanto' o seu.",
+        "conclusao": "'Not as... as' mostra inferioridade de forma suave."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He is as taller as his brother.",
+        "certo": "He is as tall as his brother.",
+        "explicacao": "Não coloque o adjetivo no grau comparativo (com -er) entre os 'as'. Use o adjetivo em sua forma normal."
+      }
+    ],
+    "coda": "Pronto para fazer comparações? Seu progresso será as fast as light!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Your house is ___ mine.",
+        "opcoes": [
+          "as bigger as",
+          "as big as",
+          "as big than",
+          "more big as"
+        ],
+        "resposta": 1,
+        "explicacao": "A estrutura correta é 'as + adjetivo em forma normal + as'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Today is not ___ cold as yesterday. (tão)",
+        "resposta": "as",
+        "explicacao": "A estrutura para a negativa é 'not as ... as'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She runs ___ fast as a cheetah.",
+        "opcoes": [
+          "so",
+          "as",
+          "like",
+          "how"
+        ],
+        "resposta": 1,
+        "explicacao": "Para comparações de igualdade, usamos 'as... as'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a forma normal do adjetivo: He is as ___ (good) as you.",
+        "resposta": "good",
+        "explicacao": "Na estrutura 'as ... as', o adjetivo (good) não sofre alteração."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "This movie is ___ the other one. They are both terrible.",
+        "opcoes": [
+          "as bad as",
+          "worse as",
+          "as worse as",
+          "so bad than"
+        ],
+        "resposta": 0,
+        "explicacao": "Nós usamos o adjetivo original (bad) no meio da estrutura 'as... as'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Learning English is ___ as difficult as people think. (não é tão...)",
+        "resposta": "not",
+        "explicacao": "Formamos a negação colocando 'not' antes de 'as ... as'."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez15",
+    "num": "Lesson 15",
+    "titulo": "Gerund vs Infinitive",
+    "subtitulo": "Stop to do vs Stop doing",
+    "alerta": "Alguns verbos mudam completamente de sentido dependendo se são seguidos por gerúndio (-ing) ou infinitivo (to).",
+    "observacao_cards": [
+      {
+        "italiano": "Remember to lock the door",
+        "traducao": "Lembre-se de trancar a porta",
+        "genero": "Infinitive",
+        "motivo": "Lembra de algo que precisa ser feito (futuro/pendência)"
+      },
+      {
+        "italiano": "I remember locking the door",
+        "traducao": "Eu me lembro de ter trancado a porta",
+        "genero": "Gerund",
+        "motivo": "Lembra de algo que já aconteceu (passado)"
+      }
+    ],
+    "tabela_visual": "| Verbo | Com Infinitivo (to do) | Com Gerúndio (doing) |\n|---|---|---|\n| Stop | Parar para fazer algo | Parar de fazer algo |\n| Remember | Lembrar de fazer algo | Lembrar de ter feito algo |\n| Try | Tentar (esforço, é difícil) | Tentar (experimentar, ver se dá certo) |",
+    "exemplos_prc": [
+      {
+        "oracao": "I stopped smoking.",
+        "pergunta": "A pessoa vai fumar agora ou parou o hábito?",
+        "resposta": "Parou o hábito.",
+        "conclusao": "Stop + gerúndio significa abandonar uma ação."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I stopped to smoke a month ago.",
+        "certo": "I stopped smoking a month ago.",
+        "explicacao": "'Stopped to smoke' significa que você parou o que estava fazendo PARA fumar. Para dizer que você abandonou o cigarro, use 'smoking'."
+      }
+    ],
+    "coda": "Remember to practice everyday! (Ou seria remember practicing?)",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "I was walking down the street and stopped ___ hello to my friend.",
+        "opcoes": [
+          "to say",
+          "saying",
+          "said",
+          "say"
+        ],
+        "resposta": 0,
+        "explicacao": "Você parou o que estava fazendo (andando) PARA dizer oi. Usa-se o infinitivo 'to say'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o gerúndio (parar de comer): You must stop ___ so much junk food.",
+        "resposta": "eating",
+        "explicacao": "Parar um hábito é 'stop' seguido de verbo com -ing (eating)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Did you remember ___ the oven off before we left?",
+        "opcoes": [
+          "turn",
+          "turning",
+          "to turn",
+          "turned"
+        ],
+        "resposta": 2,
+        "explicacao": "Lembrar de uma obrigação/tarefa antes de fazê-la exige o infinitivo 'to turn'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete (lembro de tê-lo visto): I remember ___ him at the party last night.",
+        "resposta": "seeing",
+        "explicacao": "Lembrar de uma memória passada exige gerúndio 'seeing'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "If you have a headache, try ___ an aspirin.",
+        "opcoes": [
+          "take",
+          "to take",
+          "taking",
+          "took"
+        ],
+        "resposta": 2,
+        "explicacao": "'Try' + gerúndio ('taking') significa experimentar algo como solução para um problema."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete (experimente abrir): It's very hot in here. Try ___ the window.",
+        "resposta": "opening",
+        "explicacao": "'Try' seguido de gerúndio (-ing) significa 'fazer uma experiência para ver se resolve'."
+      }
+    ]
+  }
+]

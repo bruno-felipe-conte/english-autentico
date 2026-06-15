@@ -1,0 +1,484 @@
+[
+  {
+    "id": "b1-lez6",
+    "num": "Lesson 6",
+    "titulo": "Passive Voice (Present & Past)",
+    "subtitulo": "Foco na ação, não no agente",
+    "alerta": "A Voz Passiva é usada quando a ação ou o objeto que recebe a ação é mais importante do que quem a realizou.",
+    "observacao_cards": [
+      {
+        "italiano": "The house is cleaned every day.",
+        "traducao": "A casa é limpa todos os dias.",
+        "genero": "Present Passive",
+        "motivo": "Foco na casa (objeto) e não em quem limpa."
+      },
+      {
+        "italiano": "The book was written in 1999.",
+        "traducao": "O livro foi escrito em 1999.",
+        "genero": "Past Passive",
+        "motivo": "Foco no livro, o autor não é o principal."
+      }
+    ],
+    "tabela_visual": "| Tense | Active Voice | Passive Voice |\n|---|---|---|\n| Present | She **makes** the cake. | The cake **is made** by her. |\n| Past | She **made** the cake. | The cake **was made** by her. |",
+    "exemplos_prc": [
+      {
+        "oracao": "My car was stolen yesterday.",
+        "pergunta": "Por que usamos a voz passiva aqui?",
+        "resposta": "Porque o foco está no carro roubado e provavelmente não sabemos quem roubou.",
+        "conclusao": "was stolen = foi roubado"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "The letter was wrote by John.",
+        "certo": "The letter was written by John.",
+        "explicacao": "Na voz passiva, o verbo principal deve estar sempre no Particípio Passado (written), não no Passado Simples (wrote)."
+      }
+    ],
+    "coda": "Para formar a voz passiva, lembre-se: verbo 'to be' + particípio passado do verbo principal. Simples assim!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "The email ___ sent yesterday.",
+        "opcoes": [
+          "is",
+          "was",
+          "were",
+          "are"
+        ],
+        "resposta": 1,
+        "explicacao": "O advérbio 'yesterday' indica passado e 'email' é singular, logo usamos 'was'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete the passive sentence: Many books ___ (read) by students every year.",
+        "resposta": "are read",
+        "explicacao": "'Every year' indica presente. 'Books' é plural, então usamos 'are' + particípio de read (read)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a voz passiva de 'They build cars here'?",
+        "opcoes": [
+          "Cars are build here.",
+          "Cars is built here.",
+          "Cars are built here.",
+          "Cars built here."
+        ],
+        "resposta": 2,
+        "explicacao": "'Cars' é plural (are) e o particípio passado de 'build' é 'built'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo no particípio passado: This song was ___ (sing) by a famous artist.",
+        "resposta": "sung",
+        "explicacao": "O particípio passado de 'sing' é 'sung'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está na voz passiva?",
+        "opcoes": [
+          "Someone cleaned the room.",
+          "The room is cleaning.",
+          "The room was cleaned.",
+          "They clean the room."
+        ],
+        "resposta": 2,
+        "explicacao": "'The room was cleaned' usa o verbo 'to be' (was) + particípio passado (cleaned)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Passe para a voz passiva (apenas o verbo): Shakespeare wrote Hamlet. -> Hamlet ___ ___ by Shakespeare.",
+        "resposta": "was written",
+        "explicacao": "A frase original está no passado, então usamos 'was' e o particípio de 'write' é 'written'."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez7",
+    "num": "Lesson 7",
+    "titulo": "Relative Clauses (Defining)",
+    "subtitulo": "Who, Which, That, Where",
+    "alerta": "Relative Clauses (Orações Relativas) são usadas para identificar exatamente de qual pessoa, coisa ou lugar estamos falando.",
+    "observacao_cards": [
+      {
+        "italiano": "The man who lives next door.",
+        "traducao": "O homem que mora ao lado.",
+        "genero": "Pessoas",
+        "motivo": "Usa-se 'who' (ou 'that') para pessoas."
+      },
+      {
+        "italiano": "The book which is on the table.",
+        "traducao": "O livro que está na mesa.",
+        "genero": "Coisas",
+        "motivo": "Usa-se 'which' (ou 'that') para coisas."
+      },
+      {
+        "italiano": "The city where I was born.",
+        "traducao": "A cidade onde eu nasci.",
+        "genero": "Lugares",
+        "motivo": "Usa-se 'where' para indicar um lugar."
+      }
+    ],
+    "tabela_visual": "| Relative Pronoun | Used for | Example |\n|---|---|---|\n| **Who / That** | People | The girl **who** works here. |\n| **Which / That** | Things / Animals | The car **which** is red. |\n| **Where** | Places | The park **where** we met. |",
+    "exemplos_prc": [
+      {
+        "oracao": "She is the woman who helped me.",
+        "pergunta": "Por que usamos 'who' nesta frase?",
+        "resposta": "Porque 'who' se refere a 'the woman', uma pessoa.",
+        "conclusao": "who = que (para pessoas)"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "This is the dog who bit me.",
+        "certo": "This is the dog which (ou that) bit me.",
+        "explicacao": "Não se usa 'who' para animais ou objetos. Use 'which' ou 'that'."
+      }
+    ],
+    "coda": "Definir pessoas, coisas e lugares fica muito mais fácil com os Relative Pronouns. 'That' é um grande coringa para pessoas e coisas em frases restritivas!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "He is the teacher ___ teaches math.",
+        "opcoes": [
+          "which",
+          "who",
+          "where",
+          "what"
+        ],
+        "resposta": 1,
+        "explicacao": "'Teacher' é uma pessoa, por isso usamos 'who'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o pronome para lugares: This is the restaurant ___ we ate yesterday.",
+        "resposta": "where",
+        "explicacao": "'Restaurant' é um lugar onde a ação aconteceu."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I lost the watch ___ you gave me.",
+        "opcoes": [
+          "who",
+          "where",
+          "which",
+          "whose"
+        ],
+        "resposta": 2,
+        "explicacao": "'Watch' é um objeto, então usamos 'which' (ou 'that')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The woman ___ (ou that) is talking to John is my sister.",
+        "resposta": "who",
+        "explicacao": "Referindo-se à 'woman', devemos usar 'who'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está INCORRETA?",
+        "opcoes": [
+          "The book that I bought is good.",
+          "The boy who is running is my brother.",
+          "The car who is parked outside is mine.",
+          "The house where I live is big."
+        ],
+        "resposta": 2,
+        "explicacao": "'Car' é um objeto, então não podemos usar 'who'. O correto seria 'which' ou 'that'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Substitua 'which' pelo pronome relativo coringa: The movie which we watched was great. -> The movie ___ we watched was great.",
+        "resposta": "that",
+        "explicacao": "'That' pode ser usado no lugar de 'which' em orações restritivas (Defining Relative Clauses)."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez8",
+    "num": "Lesson 8",
+    "titulo": "Reported Speech (Basic)",
+    "subtitulo": "Contando o que disseram",
+    "alerta": "Usamos o Reported Speech para relatar o que alguém disse sem usar as falas exatas (aspas). A regra principal é: dê 'um passo atrás' no tempo verbal.",
+    "observacao_cards": [
+      {
+        "italiano": "He said (that) he was tired.",
+        "traducao": "Ele disse que estava cansado.",
+        "genero": "Present -> Past",
+        "motivo": "A fala original 'I am tired' muda para o passado."
+      },
+      {
+        "italiano": "She told me (that) she lived in London.",
+        "traducao": "Ela me disse que morava em Londres.",
+        "genero": "Say x Tell",
+        "motivo": "Use 'tell' com objeto (told me), e 'say' sem (said)."
+      }
+    ],
+    "tabela_visual": "| Direct Speech (Fala Original) | Reported Speech (Relato) |\n|---|---|\n| I **am** happy. | He said he **was** happy. |\n| I **work** hard. | She said she **worked** hard. |\n| I **can** help. | He said he **could** help. |",
+    "exemplos_prc": [
+      {
+        "oracao": "They said that they were busy.",
+        "pergunta": "Qual era a frase original (Direct Speech)?",
+        "resposta": "'We are busy.'",
+        "conclusao": "O verbo 'are' (presente) mudou para 'were' (passado) no Reported Speech."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "She said me that she was hungry.",
+        "certo": "She told me that she was hungry. / She said that she was hungry.",
+        "explicacao": "Não use objeto indireto (me, him, us) imediatamente após 'say'. Para usar o objeto, use 'tell' (told)."
+      }
+    ],
+    "coda": "Lembre-se do 'passo atrás' no tempo verbal e escolha corretamente entre 'say' e 'tell'. O 'that' é opcional na maioria dos casos!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Direct Speech: 'I am hungry.' Qual o Reported Speech correto?",
+        "opcoes": [
+          "He said he is hungry.",
+          "He told he was hungry.",
+          "He said he was hungry.",
+          "He said me he was hungry."
+        ],
+        "resposta": 2,
+        "explicacao": "O verbo 'am' vai para o passado 'was'. 'Said' não leva objeto diretamente."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo correto (say/tell no passado): She ___ me that she loved the movie.",
+        "resposta": "told",
+        "explicacao": "Como temos o objeto 'me', usamos 'told'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Direct Speech: 'We can play guitar.' Reported Speech: They said they ___ play guitar.",
+        "opcoes": [
+          "can",
+          "could",
+          "will",
+          "would"
+        ],
+        "resposta": 1,
+        "explicacao": "O passado de 'can' é 'could', o 'passo atrás' no Reported Speech."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Passe o verbo para o tempo correto: 'I want a car.' -> He said he ___ a car.",
+        "resposta": "wanted",
+        "explicacao": "O presente simples 'want' muda para o passado simples 'wanted'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "He told that he was tired.",
+          "He said me he was tired.",
+          "He told me he was tired.",
+          "He told to me he was tired."
+        ],
+        "resposta": 2,
+        "explicacao": "'Tell' (told no passado) exige objeto direto sem preposição: told + pessoa."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Direct Speech: 'I don't like fish.' -> She said that she ___ like fish.",
+        "resposta": "didn't",
+        "explicacao": "O auxiliar do presente 'don't' muda para o passado 'didn't'."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez9",
+    "num": "Lesson 9",
+    "titulo": "Used to",
+    "subtitulo": "Hábitos que não existem mais",
+    "alerta": "A estrutura 'Used to' é exclusiva para falar de hábitos, rotinas ou estados no passado que não são mais verdadeiros no presente.",
+    "observacao_cards": [
+      {
+        "italiano": "I used to play tennis.",
+        "traducao": "Eu costumava jogar tênis.",
+        "genero": "Hábito Passado",
+        "motivo": "Jogava no passado, não jogo mais."
+      },
+      {
+        "italiano": "She didn't use to like coffee.",
+        "traducao": "Ela não costumava gostar de café.",
+        "genero": "Negativa",
+        "motivo": "Atenção: com o auxiliar 'didn't', o 'use' perde o 'd'."
+      }
+    ],
+    "tabela_visual": "| Form | Structure | Example |\n|---|---|---|\n| Affirmative | subject + used to + verb | I **used to** smoke. |\n| Negative | subject + didn't use to + verb | I **didn't use to** exercise. |\n| Question | Did + subject + use to + verb? | **Did** you **use to** live here? |",
+    "exemplos_prc": [
+      {
+        "oracao": "He used to have long hair.",
+        "pergunta": "Ele tem cabelo comprido hoje em dia?",
+        "resposta": "Não. Ele tinha no passado, mas não tem mais.",
+        "conclusao": "Used to indica que algo mudou."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am use to play soccer.",
+        "certo": "I used to play soccer.",
+        "explicacao": "Para falar de hábitos passados, não coloque o verbo 'to be' antes de 'used to' e lembre-se do 'd' em afirmações."
+      }
+    ],
+    "coda": "'Used to' traz muita clareza quando queremos focar em contrastar o que éramos ou fazíamos com o nosso eu de hoje!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizer 'Eu costumava nadar'?",
+        "opcoes": [
+          "I use to swim.",
+          "I used to swimming.",
+          "I used to swim.",
+          "I am used to swim."
+        ],
+        "resposta": 2,
+        "explicacao": "Afirmativa no passado: 'used to' + verbo na forma base (swim)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a negativa: I ___ use to like vegetables when I was a kid.",
+        "resposta": "didn't",
+        "explicacao": "No passado, usamos o auxiliar 'didn't' para negativas."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma correta para a pergunta?",
+        "opcoes": [
+          "Did you used to smoke?",
+          "Did you use to smoke?",
+          "Do you used to smoke?",
+          "Did you use to smoked?"
+        ],
+        "resposta": 1,
+        "explicacao": "Na pergunta, usamos 'Did', então o verbo volta para a forma base 'use to' (sem 'd')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: She ___ to work in a bank, but now she works in a school.",
+        "resposta": "used",
+        "explicacao": "Ação que era verdade no passado e não é mais (used to work)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "O que a frase 'I used to play video games' significa?",
+        "opcoes": [
+          "Eu estou acostumado a jogar.",
+          "Eu uso video games para jogar.",
+          "Eu vou jogar video games.",
+          "Eu costumava jogar (mas não jogo mais)."
+        ],
+        "resposta": 3,
+        "explicacao": "Indica um hábito ou rotina no passado que parou no presente."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase corretamente com o verbo base: Did he use to ___ (play) basketball?",
+        "resposta": "play",
+        "explicacao": "Após 'use to', o verbo principal vem sempre na sua forma base (infinitivo sem 'to')."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez10",
+    "num": "Lesson 10",
+    "titulo": "Modals of Deduction (Present)",
+    "subtitulo": "Must be, might be, can't be",
+    "alerta": "Usamos modais de dedução quando não temos 100% de certeza de algo no presente, mas podemos tirar conclusões lógicas com base nas evidências.",
+    "observacao_cards": [
+      {
+        "italiano": "He must be tired.",
+        "traducao": "Ele deve estar cansado.",
+        "genero": "Quase 100% de certeza (Sim)",
+        "motivo": "Usa-se 'must' quando você tem certeza de que algo é verdade baseando-se no que vê (ex: ele trabalhou 12h)."
+      },
+      {
+        "italiano": "It might be raining.",
+        "traducao": "Pode ser que esteja chovendo.",
+        "genero": "Possibilidade (50%)",
+        "motivo": "Usa-se 'might', 'may' ou 'could' quando algo é possível, mas você não tem certeza."
+      },
+      {
+        "italiano": "That can't be John.",
+        "traducao": "Aquele não pode ser o John.",
+        "genero": "Quase 100% de certeza (Não)",
+        "motivo": "Usa-se 'can't' quando você tem certeza de que algo é impossível (ex: John está viajando)."
+      }
+    ],
+    "tabela_visual": "| Certainty Level | Modal Verb | Example |\n|---|---|---|\n| 99% Certain (True) | **Must** | They **must** be at home (lights are on). |\n| 50% Possible | **Might / May / Could** | She **might** be lost. |\n| 99% Certain (False) | **Can't** | He **can't** be 60 years old! |",
+    "exemplos_prc": [
+      {
+        "oracao": "You've been traveling all day. You must be exhausted.",
+        "pergunta": "Por que a pessoa usou 'must be'?",
+        "resposta": "Porque viajar o dia todo leva logicamente ao cansaço extremo.",
+        "conclusao": "must be = dedução forte afirmativa."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He mustn't be at work, it's Sunday.",
+        "certo": "He can't be at work, it's Sunday.",
+        "explicacao": "Para deduzir que algo NÃO é verdade, usamos 'can't', e não 'mustn't'."
+      }
+    ],
+    "coda": "As deduções funcionam como um trabalho de detetive. Se tem evidências muito fortes para sim, use 'must'. Se muito fortes para não, use 'can't'. Se for apenas uma chance, 'might/may/could'!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "The phone is ringing. It ___ be my mother, she always calls at this time.",
+        "opcoes": [
+          "can't",
+          "might",
+          "must",
+          "couldn't"
+        ],
+        "resposta": 2,
+        "explicacao": "Como ela *sempre* liga nesse horário, você tem uma dedução muito forte (must)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com dedução forte negativa: He ___ be 50. He looks like 30!",
+        "resposta": "can't",
+        "explicacao": "Você tem certeza de que ele não tem 50 pela aparência jovem. Usamos 'can't'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I don't know where my keys are. They ___ be in the car.",
+        "opcoes": [
+          "must",
+          "can't",
+          "might",
+          "should"
+        ],
+        "resposta": 2,
+        "explicacao": "Como a pessoa *não sabe* onde estão, é apenas uma possibilidade ('might be')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo modal de alta certeza afirmativa: She has 3 Ferraris. She ___ be rich.",
+        "resposta": "must",
+        "explicacao": "Ter 3 Ferraris é uma evidência forte de riqueza."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a melhor opção para a frase: 'He just ate a huge pizza. He ___ be hungry again.'",
+        "opcoes": [
+          "must",
+          "can't",
+          "might",
+          "may"
+        ],
+        "resposta": 1,
+        "explicacao": "Se ele acabou de comer uma pizza enorme, é logicamente impossível estar com fome novamente ('can't')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o modal que indica possibilidade (50%): Take an umbrella. It ___ rain later.",
+        "resposta": "might",
+        "explicacao": "Pode também ser 'may' ou 'could'. 'Might' é o mais comum para indicar possibilidade incerta de chuva."
+      }
+    ]
+  }
+]

@@ -1,0 +1,520 @@
+[
+  {
+    "id": "c1-lez6",
+    "num": "Lesson 6",
+    "titulo": "Nuances of Future Forms",
+    "subtitulo": "Be bound to, be about to, be to",
+    "alerta": "Além de 'will' e 'going to', o inglês avançado usa estruturas precisas para descrever futuros iminentes, oficiais ou inevitáveis.",
+    "observacao_cards": [
+      {
+        "italiano": "Be bound to",
+        "traducao": "Estar fadado a / Ser muito provável",
+        "genero": "Future",
+        "motivo": "Expressa forte certeza de que algo vai acontecer."
+      },
+      {
+        "italiano": "Be about to",
+        "traducao": "Estar prestes a",
+        "genero": "Future",
+        "motivo": "Algo no futuro imediato, quase acontecendo."
+      },
+      {
+        "italiano": "Be to",
+        "traducao": "Estar programado para / Ter que",
+        "genero": "Future",
+        "motivo": "Usado para planos oficiais ou ordens formais."
+      }
+    ],
+    "tabela_visual": "| Expression | Meaning | Example |\n|---|---|---|\n| be bound to | Certainty | She is bound to win. |\n| be about to | Immediate future | I am about to leave. |\n| be to | Official arrangement | The president is to visit. |",
+    "exemplos_prc": [
+      {
+        "oracao": "They are about to make an announcement.",
+        "pergunta": "Quando o anúncio será feito?",
+        "resposta": "A qualquer momento, em instantes.",
+        "conclusao": "Be about to indica um evento muito próximo."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He is bound that he will fail.",
+        "certo": "He is bound to fail.",
+        "explicacao": "'Be bound to' é seguido pelo infinitivo do verbo, e não por uma nova oração com 'will'."
+      }
+    ],
+    "coda": "Dominar essas estruturas deixará sua fala incrivelmente sofisticada e natural!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual estrutura expressa que algo está prestes a acontecer em instantes?",
+        "opcoes": [
+          "be bound to",
+          "be about to",
+          "be to",
+          "going to"
+        ],
+        "resposta": 1,
+        "explicacao": "'Be about to' significa que a ação ocorrerá num futuro imediato."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The Prime Minister ___ to announce the new law tomorrow. (programado/oficial)",
+        "resposta": "is",
+        "explicacao": "O verbo 'to be' + 'to' expressa um evento ou plano oficial."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I wouldn't lie to her. She is ______ find out anyway.",
+        "opcoes": [
+          "about to",
+          "bound to",
+          "due to",
+          "will"
+        ],
+        "resposta": 1,
+        "explicacao": "'Is bound to' expressa certeza de que ela vai descobrir."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: It’s highly probable. It’s bound ___ happen.",
+        "resposta": "to",
+        "explicacao": "A estrutura completa é 'be bound to' seguido de verbo no infinitivo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase indica uma ordem ou instrução formal?",
+        "opcoes": [
+          "You are to wait here.",
+          "You are about to wait here.",
+          "You are bound to wait here.",
+          "You bound to wait."
+        ],
+        "resposta": 0,
+        "explicacao": "'Be to' é frequentemente usado para ordens: 'You are to wait' = 'Você deve esperar'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Look at the sky! It is ___ to rain any second now.",
+        "resposta": "about",
+        "explicacao": "'About to' indica que algo está prestes a acontecer."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez7",
+    "num": "Lesson 7",
+    "titulo": "Advanced Modals",
+    "subtitulo": "Dare, need, would rather, had better",
+    "alerta": "Modais menos comuns como 'dare' e expressões de preferência e conselho dão um tom muito nativo ao seu discurso.",
+    "observacao_cards": [
+      {
+        "italiano": "Dare",
+        "traducao": "Ousar",
+        "genero": "Modal",
+        "motivo": "Pode funcionar como modal em frases negativas e interrogativas (dare not)."
+      },
+      {
+        "italiano": "Needn't",
+        "traducao": "Não precisar",
+        "genero": "Modal",
+        "motivo": "Indica ausência de obrigação ou necessidade."
+      },
+      {
+        "italiano": "Would rather",
+        "traducao": "Preferir",
+        "genero": "Preference",
+        "motivo": "Seguido de passado simples quando o sujeito da preferência é diferente de quem realiza a ação."
+      },
+      {
+        "italiano": "Had better",
+        "traducao": "É melhor",
+        "genero": "Advice",
+        "motivo": "Um conselho forte com um tom de alerta sobre consequências negativas."
+      }
+    ],
+    "tabela_visual": "| Expression | Usage | Example |\n|---|---|---|\n| dare not | Lack of courage | I dare not ask him. |\n| needn't | No obligation | You needn't worry. |\n| would rather | Preference | I'd rather stay home. |\n| had better | Strong advice | You'd better go now. |",
+    "exemplos_prc": [
+      {
+        "oracao": "I'd rather you didn't do that.",
+        "pergunta": "A ação já ocorreu?",
+        "resposta": "Não, o 'didn't' indica uma preferência irreal no presente para a ação de outra pessoa.",
+        "conclusao": "Would rather + sujeito + simple past expressa um desejo sobre o outro."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You had better to leave early.",
+        "certo": "You had better leave early.",
+        "explicacao": "'Had better' é seguido pelo infinitivo sem 'to'."
+      }
+    ],
+    "coda": "Dominar esses modais fará com que você consiga expressar nuances precisas de conselho, preferência e necessidade!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma negativa correta para 'had better'?",
+        "opcoes": [
+          "had not better",
+          "had better not",
+          "had better don't",
+          "hadn't better not"
+        ],
+        "resposta": 1,
+        "explicacao": "A negação de 'had better' se faz colocando 'not' no final: 'had better not'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o passado apropriado: I would rather you ___ (stay) here tonight.",
+        "resposta": "stayed",
+        "explicacao": "Após 'would rather' e um novo sujeito (you), usamos o passado simples."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "O que significa 'You needn't come'?",
+        "opcoes": [
+          "Você não deve vir (proibição).",
+          "Você não precisa vir (opcional).",
+          "Você não pode vir (impossibilidade).",
+          "Você ousa não vir."
+        ],
+        "resposta": 1,
+        "explicacao": "'Needn't' significa ausência de obrigação (não precisa)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a expressão clássica de indignação: How ___ you speak to me like that!",
+        "resposta": "dare",
+        "explicacao": "'How dare you' (Como você ousa) age aqui como verbo modal."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "It's getting late. We ______ go home.",
+        "opcoes": [
+          "had better",
+          "would rather",
+          "dare to",
+          "needn't"
+        ],
+        "resposta": 0,
+        "explicacao": "Conselho forte de que seria melhor ir para casa = 'had better'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I would ___ stay at home than go out.",
+        "resposta": "rather",
+        "explicacao": "'Would rather' significa preferir."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez8",
+    "num": "Lesson 8",
+    "titulo": "Ellipsis & Substitution",
+    "subtitulo": "Omitindo palavras para evitar repetições",
+    "alerta": "Falantes nativos odeiam repetição! Aprender a omitir (ellipsis) e substituir (substitution) palavras deixa sua fala fluida e coesa.",
+    "observacao_cards": [
+      {
+        "italiano": "Ellipsis",
+        "traducao": "Elipse",
+        "genero": "Omission",
+        "motivo": "Omitimos palavras ou expressões quando o contexto já deixa claro o significado."
+      },
+      {
+        "italiano": "So",
+        "traducao": "Substituição com 'so'",
+        "genero": "Substitution",
+        "motivo": "Substitui uma cláusula inteira após verbos como think, hope, suppose."
+      },
+      {
+        "italiano": "One / Ones",
+        "traducao": "Substituição com 'one(s)'",
+        "genero": "Substitution",
+        "motivo": "Substitui um substantivo para evitar repeti-lo, adaptando-se a singular ou plural."
+      }
+    ],
+    "tabela_visual": "| Concept | Full form | Short form |\n|---|---|---|\n| Ellipsis | I won't go, but you should go. | I won't go, but you should. |\n| 'So' Substitution | I hope he passes the exam. | I hope so. |\n| 'One' Substitution | I prefer the red car. | I prefer the red one. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Are they coming? I hope so.",
+        "pergunta": "O que a palavra 'so' representa aqui?",
+        "resposta": "A frase inteira 'that they are coming'.",
+        "conclusao": "Usamos 'so' para não repetir toda a ideia afirmativa."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Do you think it will rain? I don't think.",
+        "certo": "Do you think it will rain? I don't think so.",
+        "explicacao": "Verbos de pensamento precisam de 'so' para substituir a oração completiva; não podem simplesmente terminar no verbo."
+      }
+    ],
+    "coda": "Substituir e omitir palavras como um nativo transformará completamente sua fluência!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a melhor resposta curta e natural para: 'Will they be angry?'",
+        "opcoes": [
+          "I suppose.",
+          "I suppose it.",
+          "I suppose so.",
+          "I suppose they will be."
+        ],
+        "resposta": 2,
+        "explicacao": "'I suppose so' é a forma correta de usar substituição."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o pronome substituto: I like the green apples, but I don't like the red ___.",
+        "resposta": "ones",
+        "explicacao": "'Ones' substitui 'apples' no plural."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual das frases usa 'Ellipsis' corretamente?",
+        "opcoes": [
+          "She wanted to play, but she didn't want to play.",
+          "She wanted to play, but she didn't.",
+          "She wanted to play, but she didn't so.",
+          "She wanted to play, but she didn't one."
+        ],
+        "resposta": 1,
+        "explicacao": "A elipse omite 'want to play' deixando apenas o auxiliar 'didn't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a elipse com a palavra adequada: I haven't done my homework, but I meant ___.",
+        "resposta": "to",
+        "explicacao": "Frequentemente omitimos o resto da frase após o 'to' do infinitivo (I meant to do it)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "A negação de 'I hope so' é:",
+        "opcoes": [
+          "I don't hope so.",
+          "I hope not.",
+          "I don't hope.",
+          "I hope no."
+        ],
+        "resposta": 1,
+        "explicacao": "Diferente de 'think', o verbo 'hope' usa 'hope not' para a forma negativa."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Which shoes are yours? The black ___.",
+        "resposta": "ones",
+        "explicacao": "Para plural, usa-se 'ones' para substituir 'shoes'."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez9",
+    "num": "Lesson 9",
+    "titulo": "Discourse Markers",
+    "subtitulo": "Consequentemente, nevertheless, broadly speaking",
+    "alerta": "Discourse markers são as 'pontes' do discurso: eles organizam as ideias, mostram contrastes e definem a atitude do falante em relação ao texto.",
+    "observacao_cards": [
+      {
+        "italiano": "Nevertheless",
+        "traducao": "Não obstante / Apesar disso",
+        "genero": "Contrast",
+        "motivo": "Introduz uma concessão ou contraste formal, semelhante a 'however'."
+      },
+      {
+        "italiano": "Consequently",
+        "traducao": "Consequentemente",
+        "genero": "Result",
+        "motivo": "Apresenta o resultado lógico de um evento prévio."
+      },
+      {
+        "italiano": "Broadly speaking",
+        "traducao": "Em termos gerais",
+        "genero": "Generalizing",
+        "motivo": "Indica que a afirmação a seguir é uma regra geral com possíveis exceções."
+      },
+      {
+        "italiano": "Furthermore",
+        "traducao": "Além disso",
+        "genero": "Addition",
+        "motivo": "Adiciona uma informação complementar de peso em discursos formais."
+      }
+    ],
+    "tabela_visual": "| Marker | Function | Example |\n|---|---|---|\n| Furthermore | Addition | Furthermore, the data shows... |\n| Nevertheless | Contrast | It was hard; nevertheless, we won. |\n| Consequently | Result | Consequently, sales dropped. |\n| Broadly speaking | Generalizing | Broadly speaking, it is true. |",
+    "exemplos_prc": [
+      {
+        "oracao": "It was raining heavily; nevertheless, we went for a run.",
+        "pergunta": "Por que usar 'nevertheless'?",
+        "resposta": "Para destacar que, contra as expectativas (estava chovendo), eles foram correr.",
+        "conclusao": "Nevertheless = apesar disso / ainda assim."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He was sick consequently he stayed home.",
+        "certo": "He was sick; consequently, he stayed home.",
+        "explicacao": "Marcadores discursivos no meio de frases exigem pontuação forte antes (ponto ou ponto e vírgula) e vírgula depois."
+      }
+    ],
+    "coda": "Você agora tem as ferramentas para estruturar textos e conversas longas de maneira impecável!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual marcador expressa um resultado ou consequência?",
+        "opcoes": [
+          "Nevertheless",
+          "Furthermore",
+          "Consequently",
+          "Broadly speaking"
+        ],
+        "resposta": 2,
+        "explicacao": "'Consequently' indica que o evento atual é resultado do anterior."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The business failed. ___, they had to sell their house.",
+        "resposta": "Consequently",
+        "explicacao": "Usado para mostrar resultado direto."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual o sinônimo mais próximo de 'nevertheless'?",
+        "opcoes": [
+          "Therefore",
+          "Moreover",
+          "However",
+          "As a result"
+        ],
+        "resposta": 2,
+        "explicacao": "Ambos 'however' e 'nevertheless' introduzem contraste ou oposição de ideias."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o marcador de adição formal: The house is beautiful. ___, it is located in a safe area.",
+        "resposta": "Furthermore",
+        "explicacao": "'Furthermore' adiciona pontos positivos em uma argumentação."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a frase: '______ speaking, men are taller than women.'",
+        "opcoes": [
+          "Consequently",
+          "Nevertheless",
+          "Broadly",
+          "Furthermore"
+        ],
+        "resposta": 2,
+        "explicacao": "'Broadly speaking' é usado para dar uma declaração geral."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He didn't study at all. ___, he passed the exam. (Apesar disso)",
+        "resposta": "Nevertheless",
+        "explicacao": "'Nevertheless' mostra um resultado inesperado dado o contexto anterior."
+      }
+    ]
+  },
+  {
+    "id": "c1-lez10",
+    "num": "Lesson 10",
+    "titulo": "Idioms & Collocations",
+    "subtitulo": "Como combinar palavras de forma natural (Make vs Do)",
+    "alerta": "Collocations são pares de palavras que soam corretos (make a decision), e Idioms são expressões com sentido figurado. Errar isso não impede de ser entendido, mas usá-los faz você soar nativo!",
+    "observacao_cards": [
+      {
+        "italiano": "Make a decision",
+        "traducao": "Tomar uma decisão",
+        "genero": "Collocation",
+        "motivo": "Com 'decision' usa-se sempre 'make', e nunca 'do' ou 'take'."
+      },
+      {
+        "italiano": "Do business",
+        "traducao": "Fazer negócios",
+        "genero": "Collocation",
+        "motivo": "'Do' é usado para ações, trabalho e tarefas rotineiras."
+      },
+      {
+        "italiano": "Under the weather",
+        "traducao": "Sentindo-se mal / doente",
+        "genero": "Idiom",
+        "motivo": "Expressão figurada que significa não estar se sentindo 100%."
+      },
+      {
+        "italiano": "Bite the bullet",
+        "traducao": "Encarar uma situação difícil",
+        "genero": "Idiom",
+        "motivo": "Expressão usada para tomar coragem e fazer algo desagradável."
+      }
+    ],
+    "tabela_visual": "| Use MAKE (Create) | Use DO (Actions) |\n|---|---|\n| a mistake | your homework |\n| an effort | someone a favor |\n| money | damage |\n| a decision | your best |",
+    "exemplos_prc": [
+      {
+        "oracao": "Can you do me a favor?",
+        "pergunta": "Por que 'do' e não 'make'?",
+        "resposta": "Porque 'favor' é tratado como uma ação que você realiza, não algo que você cria do zero.",
+        "conclusao": "Com 'favor' usamos sempre o verbo 'do'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I need to take a decision soon.",
+        "certo": "I need to make a decision soon.",
+        "explicacao": "Apesar de 'tomar uma decisão' em português usar 'tomar', em inglês a collocation correta é 'make'."
+      }
+    ],
+    "coda": "Memorize essas combinações ao longo do tempo. Elas são a chave para a fluência de alto nível!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a combinação (collocation) correta para 'mistake'?",
+        "opcoes": [
+          "do a mistake",
+          "take a mistake",
+          "make a mistake",
+          "have a mistake"
+        ],
+        "resposta": 2,
+        "explicacao": "A combinação correta é sempre 'make a mistake'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I wasn't feeling well, I felt a bit under the ___.",
+        "resposta": "weather",
+        "explicacao": "A expressão 'under the weather' significa estar indisposto ou doente."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I have a lot of work to ____ today.",
+        "opcoes": [
+          "make",
+          "take",
+          "do",
+          "have"
+        ],
+        "resposta": 2,
+        "explicacao": "Com 'work', 'job' e tarefas em geral, usamos o verbo 'do'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete o idiom: I hate going to the dentist, but I'll have to ___ the bullet.",
+        "resposta": "bite",
+        "explicacao": "'Bite the bullet' significa encarar com bravura algo difícil ou desagradável."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "He wants to ______ business with our company.",
+        "opcoes": [
+          "make",
+          "take",
+          "run",
+          "do"
+        ],
+        "resposta": 3,
+        "explicacao": "A collocation correta para tratar de negócios é 'do business'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Don't worry about the results. Just ___ your best.",
+        "resposta": "do",
+        "explicacao": "A expressão correta para 'fazer o seu melhor' é 'do your best'."
+      }
+    ]
+  }
+]

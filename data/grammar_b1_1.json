@@ -1,0 +1,478 @@
+[
+  {
+    "id": "b1-lez1",
+    "num": "Lesson 1",
+    "titulo": "Present Perfect vs Past Simple",
+    "subtitulo": "O grande divisor de águas",
+    "alerta": "O Past Simple descreve ações que terminaram em um momento específico no passado. O Present Perfect descreve ações no passado que têm uma conexão com o presente, sem focar em quando aconteceram.",
+    "observacao_cards": [
+      {
+        "italiano": "I traveled yesterday.",
+        "traducao": "Eu viajei ontem.",
+        "genero": "Past Simple",
+        "motivo": "Tempo definido ('yesterday')"
+      },
+      {
+        "italiano": "I have traveled to Japan.",
+        "traducao": "Eu (já) viajei para o Japão.",
+        "genero": "Present Perfect",
+        "motivo": "Experiência de vida, tempo não especificado"
+      }
+    ],
+    "tabela_visual": "| Tempo Verbal | Estrutura | Uso Principal | Exemplo |\n|---|---|---|---|\n| Past Simple | Verbo no passado | Ação concluída com tempo específico | She lived in Paris in 2010. |\n| Present Perfect | have/has + Particípio Passado | Experiências ou ações com impacto no presente | She has lived in Paris. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Did you see him this morning?",
+        "pergunta": "Por que usamos o Past Simple aqui?",
+        "resposta": "Porque 'this morning' já acabou.",
+        "conclusao": "A manhã já passou."
+      },
+      {
+        "oracao": "Have you seen him this morning?",
+        "pergunta": "Por que usar o Present Perfect agora?",
+        "resposta": "Porque ainda estamos na parte da manhã, o período não acabou.",
+        "conclusao": "O período de tempo ainda está em andamento."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I have finished my work two hours ago.",
+        "certo": "I finished my work two hours ago.",
+        "explicacao": "Não podemos usar palavras de tempo definido no passado (como 'ago' ou 'yesterday') com o Present Perfect."
+      }
+    ],
+    "coda": "Saber quando uma ação no passado importa para o presente é o segredo do Present Perfect!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "We ______ to London last year.",
+        "opcoes": [
+          "go",
+          "have gone",
+          "went",
+          "have been"
+        ],
+        "resposta": 2,
+        "explicacao": "'Last year' indica um momento específico e encerrado, por isso usamos o Past Simple (went)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o Past Simple ou Present Perfect: I ________ (lose) my keys. I can't find them anywhere now.",
+        "resposta": "have lost",
+        "explicacao": "A ação (perder as chaves) aconteceu no passado, mas o resultado é o que importa agora. Present Perfect!"
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "______ you ______ breakfast yet?",
+        "opcoes": [
+          "Did / have",
+          "Have / had",
+          "Do / have",
+          "Are / having"
+        ],
+        "resposta": 1,
+        "explicacao": "A palavra 'yet' sugere conexão até o momento presente, típico do Present Perfect: 'Have you had...'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Shakespeare ________ (write) Romeo and Juliet.",
+        "resposta": "wrote",
+        "explicacao": "Shakespeare morreu há muito tempo, o período da vida dele está encerrado. Portanto, usamos o Past Simple."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual das frases está CORRETA?",
+        "opcoes": [
+          "I have seen him yesterday.",
+          "Did you ever eat sushi in your life?",
+          "She has worked here since 2020.",
+          "We didn't went to the party."
+        ],
+        "resposta": 2,
+        "explicacao": "'She has worked here since 2020' está correta pois uma ação que começou no passado e continua usa Present Perfect. A opção 'Did you ever eat' seria melhor com 'Have you ever eaten'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o Past Simple do verbo 'go': They ______ to the beach last Sunday.",
+        "resposta": "went",
+        "explicacao": "'Last Sunday' é passado finalizado."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez2",
+    "num": "Lesson 2",
+    "titulo": "Present Perfect Continuous",
+    "subtitulo": "Ações que começaram no passado e continuam",
+    "alerta": "Este tempo verbal foca na *duração* de uma atividade que tem ocorrido até o presente. A fórmula é: have/has + been + verbo com -ing.",
+    "observacao_cards": [
+      {
+        "italiano": "I have been reading this book.",
+        "traducao": "Eu tenho lido este livro / Eu estive lendo este livro.",
+        "genero": "Estrutura",
+        "motivo": "Ação que ainda não acabou, iniciada no passado."
+      },
+      {
+        "italiano": "It has been raining all day.",
+        "traducao": "Tem chovido o dia todo.",
+        "genero": "Duração",
+        "motivo": "Enfatiza que a chuva não parou e continua agora."
+      }
+    ],
+    "tabela_visual": "| Pronome | Auxiliar | Been | Verbo (-ing) |\n|---|---|---|---|\n| I / You / We / They | have | been | studying |\n| He / She / It | has | been | playing |",
+    "exemplos_prc": [
+      {
+        "oracao": "She is out of breath. She has been running.",
+        "pergunta": "Por que usar o Continuous aqui?",
+        "resposta": "Porque vemos o resultado no presente (ela sem fôlego) de uma atividade intensa que acabou de acontecer.",
+        "conclusao": "Ação recente com evidência visual = Present Perfect Continuous."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am working here for three years.",
+        "certo": "I have been working here for three years.",
+        "explicacao": "Com 'for' e 'since' indicando quanto tempo algo ocorre, não use o Present Continuous, mas sim o Present Perfect Continuous."
+      }
+    ],
+    "coda": "Lembre-se: 'have been doing' é como dizer 'venho fazendo' isso há um tempo!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "We __________ for you for two hours! Where were you?",
+        "opcoes": [
+          "have been waiting",
+          "wait",
+          "are waiting",
+          "waited"
+        ],
+        "resposta": 0,
+        "explicacao": "Enfatiza a duração de algo que começou no passado e perdurou até agora ('for two hours')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com 'has been' ou 'have been': He ________ learning English since 2018.",
+        "resposta": "has been",
+        "explicacao": "Usamos 'has' para a terceira pessoa do singular (He/She/It)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase indica que as ruas estão molhadas AGORA porque a ação acabou de acontecer?",
+        "opcoes": [
+          "It rained yesterday.",
+          "It has been raining.",
+          "It is going to rain.",
+          "It rains everyday."
+        ],
+        "resposta": 1,
+        "explicacao": "'It has been raining' foca na atividade que gerou um resultado que podemos ver no presente."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete o verbo no gerúndio (-ing): I have been ________ (work) all day long.",
+        "resposta": "working",
+        "explicacao": "A estrutura pede o verbo com o sufixo -ing."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I __________ this TV show, but I'm only on episode 3.",
+        "opcoes": [
+          "have watched",
+          "have been watching",
+          "watched",
+          "watching"
+        ],
+        "resposta": 1,
+        "explicacao": "Como você ainda está no episódio 3, a ação não está terminada. Present Perfect Continuous é a melhor escolha."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase: How long have you _______ (be) living here?",
+        "resposta": "been",
+        "explicacao": "A fórmula do tempo verbal é have + been + verbo(ing)."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez3",
+    "num": "Lesson 3",
+    "titulo": "Past Perfect",
+    "subtitulo": "O 'passado do passado' (Had done)",
+    "alerta": "O Past Perfect descreve uma ação que aconteceu *antes* de outra ação no passado. É como apertar o 'rewind' em uma história já no passado.",
+    "observacao_cards": [
+      {
+        "italiano": "I had eaten",
+        "traducao": "Eu tinha comido",
+        "genero": "Past Perfect",
+        "motivo": "Ação mais antiga."
+      },
+      {
+        "italiano": "I arrived",
+        "traducao": "Eu cheguei",
+        "genero": "Past Simple",
+        "motivo": "Ação mais recente no passado."
+      }
+    ],
+    "tabela_visual": "| Ordem no tempo | Ação mais antiga | Ação no passado |\n|---|---|---|\n| Estrutura | Past Perfect (had + Particípio) | Past Simple |\n| Exemplo | When I arrived, they **had eaten**. | When I **arrived**... |",
+    "exemplos_prc": [
+      {
+        "oracao": "When we got to the station, the train had left.",
+        "pergunta": "O que aconteceu primeiro?",
+        "resposta": "O trem partiu.",
+        "conclusao": "Past Perfect mostra o que ocorreu antes."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I arrived and the movie had started.",
+        "certo": "When I arrived, the movie had already started.",
+        "explicacao": "Geralmente usamos palavras como 'when', 'already', ou 'by the time' para conectar a ação mais antiga à mais nova."
+      }
+    ],
+    "coda": "Pense no Past Perfect como o passado do passado!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "When I arrived at the party, Mary ______ home.",
+        "opcoes": [
+          "goes",
+          "went",
+          "had gone",
+          "has gone"
+        ],
+        "resposta": 2,
+        "explicacao": "A ação de Mary ir para casa ocorreu antes de eu chegar (outra ação no passado). Portanto, usamos 'had gone'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He failed the test because he ________ (not study) enough.",
+        "resposta": "had not studied",
+        "explicacao": "A falta de estudo ocorreu antes da falha no teste. Por isso usamos o Past Perfect."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a estrutura do Past Perfect?",
+        "opcoes": [
+          "have + verbo(ing)",
+          "had + verbo no passado simples",
+          "had + particípio passado",
+          "did + verbo base"
+        ],
+        "resposta": 2,
+        "explicacao": "O Past Perfect é formado por 'had' (para todas as pessoas) mais o verbo principal no particípio passado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o particípio: By the time we arrived, they had already ________ (finish) dinner.",
+        "resposta": "finished",
+        "explicacao": "O verbo 'finish' é regular, logo seu particípio passado é 'finished'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I didn't want to see the film because I _______ it twice.",
+        "opcoes": [
+          "had already seen",
+          "have already seen",
+          "saw",
+          "already see"
+        ],
+        "resposta": 0,
+        "explicacao": "Como a recusa (didn't want) está no passado, o fato de ter visto antes deve estar no 'passado do passado' (had seen)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o auxiliar do Past Perfect: She _______ never seen snow before she moved to Canada.",
+        "resposta": "had",
+        "explicacao": "'Had' é o verbo auxiliar usado em todas as pessoas do Past Perfect."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez4",
+    "num": "Lesson 4",
+    "titulo": "Second Conditional",
+    "subtitulo": "Hipóteses irrealistas (If I won the lottery...)",
+    "alerta": "Usamos a Second Conditional para falar de situações imaginárias, improváveis ou impossíveis no presente/futuro.",
+    "observacao_cards": [
+      {
+        "italiano": "If I had money",
+        "traducao": "Se eu tivesse dinheiro",
+        "genero": "Condição",
+        "motivo": "Passado simples indicando hipótese"
+      },
+      {
+        "italiano": "I would travel",
+        "traducao": "Eu viajaria",
+        "genero": "Resultado",
+        "motivo": "'Would' indica o resultado imaginário"
+      }
+    ],
+    "tabela_visual": "| Condição (If) | Resultado (Would) |\n|---|---|\n| If + Past Simple | would/could + verbo no infinitivo |\n| If I lived in Japan | I would eat sushi every day. |",
+    "exemplos_prc": [
+      {
+        "oracao": "If I were you, I would study more.",
+        "pergunta": "Por que usar 'were' e não 'was' com 'I'?",
+        "resposta": "Em condicionais imaginárias, é formalmente correto e muito comum usar 'were' para todas as pessoas do verbo To Be.",
+        "conclusao": "If I were, if he were..."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "If I will have money, I would buy a car.",
+        "certo": "If I had money, I would buy a car.",
+        "explicacao": "Na parte da frase que leva o 'If', usamos o verbo no passado simples para criar a hipótese, não usamos o futuro ou condicional."
+      }
+    ],
+    "coda": "Use a imaginação! A Second Conditional é a melhor forma de sonhar acordado em inglês.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "If I ______ a million dollars, I would buy an island.",
+        "opcoes": [
+          "have",
+          "will have",
+          "had",
+          "would have"
+        ],
+        "resposta": 2,
+        "explicacao": "Na oração do 'If' da Second Conditional, usamos o verbo no Simple Past ('had')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo modal: What _______ you do if you saw an alien?",
+        "resposta": "would",
+        "explicacao": "'Would' forma a consequência de uma condição irreal."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "If she lived closer, we _______ more often.",
+        "opcoes": [
+          "will meet",
+          "meet",
+          "would meet",
+          "met"
+        ],
+        "resposta": 2,
+        "explicacao": "Como a condição está no passado (lived), indicando situação hipotética, o resultado usa 'would' + verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo to be: If I _______ you, I wouldn't do that.",
+        "resposta": "were",
+        "explicacao": "Na 2ª Condicional, o verbo 'to be' tradicionalmente é 'were' para todas as pessoas (If I were, if she were)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual das frases representa uma Second Conditional?",
+        "opcoes": [
+          "If it rains, I will stay home.",
+          "If he goes to the party, I will go too.",
+          "If dogs could talk, life would be crazy.",
+          "Water boils if you heat it to 100°C."
+        ],
+        "resposta": 2,
+        "explicacao": "A opção 3 usa passado (could talk) e condicional (would be) para uma situação irreal."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a estrutura do resultado: If I had a car, I would ________ (drive) to work.",
+        "resposta": "drive",
+        "explicacao": "Após 'would' ou 'could', o verbo principal fica em sua forma básica (infinitivo sem o 'to')."
+      }
+    ]
+  },
+  {
+    "id": "b1-lez5",
+    "num": "Lesson 5",
+    "titulo": "Zero Conditional",
+    "subtitulo": "Fatos e verdades científicas",
+    "alerta": "A Zero Conditional fala sobre situações que são *sempre verdadeiras*. Se a condição acontece, o resultado é uma consequência certa.",
+    "observacao_cards": [
+      {
+        "italiano": "If you heat ice",
+        "traducao": "Se você aquece gelo",
+        "genero": "Condição",
+        "motivo": "Present Simple"
+      },
+      {
+        "italiano": "it melts",
+        "traducao": "ele derrete",
+        "genero": "Resultado",
+        "motivo": "Present Simple"
+      }
+    ],
+    "tabela_visual": "| Condição (If / When) | Resultado |\n|---|---|\n| If + Present Simple | Present Simple |\n| If you mix blue and yellow | you get green. |",
+    "exemplos_prc": [
+      {
+        "oracao": "When the sun goes down, it gets dark.",
+        "pergunta": "Podemos usar 'When' no lugar de 'If'?",
+        "resposta": "Sim! Na Zero Conditional, 'when' tem praticamente o mesmo significado que 'if'.",
+        "conclusao": "Acontece com 100% de certeza."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "If you freeze water, it will become solid.",
+        "certo": "If you freeze water, it becomes solid.",
+        "explicacao": "Para fatos universais, não usamos o futuro 'will', usamos o presente simples nas duas partes da frase."
+      }
+    ],
+    "coda": "Regra simples: presente atrai presente. Verdades absolutas são fáceis assim!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "If you touch a fire, you ______ burned.",
+        "opcoes": [
+          "got",
+          "get",
+          "will get",
+          "would get"
+        ],
+        "resposta": 1,
+        "explicacao": "Zero conditional (fatos reais e universais): If + Present Simple, Present Simple."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If babies are hungry, they _______ (cry).",
+        "resposta": "cry",
+        "explicacao": "Ambas as partes da oração usam o presente simples."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual palavra pode muitas vezes substituir 'If' na Zero Conditional sem mudar o sentido?",
+        "opcoes": [
+          "Although",
+          "Because",
+          "When",
+          "But"
+        ],
+        "resposta": 2,
+        "explicacao": "'When' (quando) indica a mesma certeza, ex: When you freeze water, it expands."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo no presente (3ª pessoa): If it rains, the grass ________ (get) wet.",
+        "resposta": "gets",
+        "explicacao": "O sujeito do verbo 'get' na segunda parte é 'the grass' (It), por isso adicionamos 's'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "______ plants don't get enough water, they die.",
+        "opcoes": [
+          "Would",
+          "If",
+          "Why",
+          "Will"
+        ],
+        "resposta": 1,
+        "explicacao": "A palavra que inicia a condição é 'If'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If you mix red and white, you _______ (get) pink.",
+        "resposta": "get",
+        "explicacao": "Essa é uma verdade universal. Usamos o verbo base (Present Simple) com o pronome 'you'."
+      }
+    ]
+  }
+]

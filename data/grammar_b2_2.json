@@ -1,0 +1,533 @@
+[
+  {
+    "id": "b2-lez6",
+    "num": "Lesson 6",
+    "titulo": "Modals of Deduction (Past)",
+    "subtitulo": "Must have done, might have done, should have done",
+    "alerta": "Como fazer deduções sobre algo que já aconteceu? Aprenda a usar os modais no passado para expressar certeza, possibilidade ou arrependimento.",
+    "observacao_cards": [
+      {
+        "italiano": "must have + past participle",
+        "traducao": "deve ter + particípio",
+        "genero": "Certeza",
+        "motivo": "Quando você tem quase certeza de algo no passado."
+      },
+      {
+        "italiano": "might have + past participle",
+        "traducao": "pode/poderia ter + particípio",
+        "genero": "Possibilidade",
+        "motivo": "Quando algo era possível, mas não há certeza."
+      },
+      {
+        "italiano": "should have + past participle",
+        "traducao": "deveria ter + particípio",
+        "genero": "Arrependimento / Crítica",
+        "motivo": "Para algo que seria ideal ter acontecido, mas não aconteceu."
+      },
+      {
+        "italiano": "can't have + past participle",
+        "traducao": "não pode ter + particípio",
+        "genero": "Certeza Negativa",
+        "motivo": "Quando é quase impossível que algo tenha acontecido."
+      }
+    ],
+    "tabela_visual": "| Modal | Uso | Exemplo |\n|---|---|---|\n| Must have | Certeza (quase total) | They must have left. |\n| Might have | Possibilidade | She might have forgotten. |\n| Should have | Crítica ou arrependimento | I should have studied. |\n| Can't have | Impossibilidade | He can't have done it. |",
+    "exemplos_prc": [
+      {
+        "oracao": "The streets are wet. It must have rained.",
+        "pergunta": "Por que usamos 'must have'?",
+        "resposta": "Porque há uma evidência forte (ruas molhadas).",
+        "conclusao": "Dedução lógica no passado."
+      },
+      {
+        "oracao": "You should have called me.",
+        "pergunta": "O que isso significa?",
+        "resposta": "Que a pessoa não ligou, mas era o esperado.",
+        "conclusao": "Crítica sobre uma ação passada."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You must to have gone.",
+        "certo": "You must have gone.",
+        "explicacao": "Nunca usamos 'to' depois de modais como 'must', 'might' e 'should'."
+      },
+      {
+        "errado": "He shouldn't did that.",
+        "certo": "He shouldn't have done that.",
+        "explicacao": "A estrutura correta no passado exige 'have + particípio', não o verbo no passado simples."
+      }
+    ],
+    "coda": "Lembre-se: Modal + Have + Particípio Passado. Essa é a chave para falar de possibilidades, certezas e arrependimentos em relação a coisas que já passaram!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual modal usamos para expressar um arrependimento no passado?",
+        "opcoes": [
+          "must have",
+          "might have",
+          "should have",
+          "can't have"
+        ],
+        "resposta": 2,
+        "explicacao": "'should have' indica algo que seria bom ter feito, mas não fizemos."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: They didn't come to the party. They ___ have forgotten about it. (Dedução com alta certeza)",
+        "resposta": "must",
+        "explicacao": "Usamos 'must have' para deduções lógicas de quase certeza no passado."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a estrutura correta?",
+        "opcoes": [
+          "You might had seen it.",
+          "You might to have seen it.",
+          "You might have seen it.",
+          "You might have see it."
+        ],
+        "resposta": 2,
+        "explicacao": "A estrutura correta é modal + have (no infinitivo sem to) + particípio passado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o particípio de 'go': She can't have ___ to the mall, it is closed.",
+        "resposta": "gone",
+        "explicacao": "A estrutura dos modais no passado exige sempre o particípio do verbo principal."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "O que significa 'He can't have stolen the car'?",
+        "opcoes": [
+          "Ele não podia roubar o carro.",
+          "É muito improvável/impossível que ele tenha roubado o carro.",
+          "Ele deveria ter roubado o carro.",
+          "Ele deve não ter roubado o carro."
+        ],
+        "resposta": 1,
+        "explicacao": "'can't have' indica uma certeza lógica de que algo NÃO aconteceu no passado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I missed the train. I ___ have woken up earlier. (Arrependimento)",
+        "resposta": "should",
+        "explicacao": "'should have' expressa uma crítica a nós mesmos ou aos outros, demonstrando arrependimento."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez7",
+    "num": "Lesson 7",
+    "titulo": "Wish e If Only",
+    "subtitulo": "Expressando desejos e frustrações",
+    "alerta": "Sabe aquela vontade de mudar o presente ou aquele arrependimento do passado? Use 'wish' e 'if only' para expressar o que você queria que fosse diferente.",
+    "observacao_cards": [
+      {
+        "italiano": "wish + past simple",
+        "traducao": "desejar que + passado (fosse/tivesse)",
+        "genero": "Desejo presente",
+        "motivo": "Desejo de que uma situação no presente fosse diferente do que é."
+      },
+      {
+        "italiano": "wish + past perfect",
+        "traducao": "desejar que + tivesse sido",
+        "genero": "Arrependimento passado",
+        "motivo": "Desejo de mudar algo que já passou (mas é tarde demais)."
+      },
+      {
+        "italiano": "wish + would",
+        "traducao": "desejar que + fizesse (futuro/irritação)",
+        "genero": "Irritação",
+        "motivo": "Para expressar irritação e vontade de que alguém mude de atitude."
+      }
+    ],
+    "tabela_visual": "| Estrutura | Uso | Exemplo |\n|---|---|---|\n| Wish + Past Simple | Desejo no presente | I wish I had more money. |\n| Wish + Past Perfect | Arrependimento (passado) | I wish I had studied more. |\n| Wish + Would | Irritação ou pedido | I wish you would stop talking. |",
+    "exemplos_prc": [
+      {
+        "oracao": "I wish I knew the answer.",
+        "pergunta": "A pessoa sabe a resposta?",
+        "resposta": "Não, por isso ela deseja saber.",
+        "conclusao": "Desejo sobre uma situação presente que não é real."
+      },
+      {
+        "oracao": "If only I hadn't eaten so much.",
+        "pergunta": "O que a pessoa sente?",
+        "resposta": "Arrependimento por ter comido muito no passado.",
+        "conclusao": "If only é parecido com wish, mas mais dramático/intenso."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I wish I am rich.",
+        "certo": "I wish I were rich.",
+        "explicacao": "Para situações irreais no presente com o verbo To Be, usamos o passado ('were' é usado para todas as pessoas em inglês mais formal)."
+      },
+      {
+        "errado": "I wish I will pass the exam.",
+        "certo": "I hope I pass the exam.",
+        "explicacao": "Não usamos 'will' depois de 'wish'. Para desejos futuros reais (que podem acontecer), usamos 'hope'."
+      }
+    ],
+    "coda": "O 'wish' e 'if only' te levam para a dimensão do 'e se...'. Preste atenção no tempo verbal que vem depois para acertar o sentido do seu desejo (presente irreal, passado ou incômodo)!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase indica um desejo para mudar uma situação no presente?",
+        "opcoes": [
+          "I wish I had a car.",
+          "I wish I had bought a car.",
+          "I wish you would buy a car.",
+          "I wish I will buy a car."
+        ],
+        "resposta": 0,
+        "explicacao": "'Wish + Past Simple' é usado para expressar desejos sobre o presente que são opostos à realidade."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I wish I ___ taller. (Verbo To Be, forma usada em condicionais)",
+        "resposta": "were",
+        "explicacao": "Usamos 'were' no lugar de 'was' com 'wish' para situações irreais."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual estrutura indica arrependimento sobre algo no passado?",
+        "opcoes": [
+          "Wish + Present Simple",
+          "Wish + Past Simple",
+          "Wish + Past Perfect",
+          "Wish + Would"
+        ],
+        "resposta": 2,
+        "explicacao": "'Wish + Past Perfect' expressa que gostaríamos que algo no passado tivesse sido diferente do que realmente foi."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I wish you ___ stop tapping your pen! (Irritação/Desejo de mudança)",
+        "resposta": "would",
+        "explicacao": "'Wish + would' é usado para expressar irritação e vontade de que o outro mude um comportamento."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a tradução mais próxima do sentimento de 'If only I had studied more'?",
+        "opcoes": [
+          "Se apenas eu estudo mais.",
+          "Quem me dera ter estudado mais.",
+          "Se ao menos eu estudasse mais.",
+          "Apenas se eu estudar mais."
+        ],
+        "resposta": 1,
+        "explicacao": "'If only + Past Perfect' expressa um forte arrependimento sobre o passado, traduzido comumente por 'Quem me dera ter...' ou 'Se eu ao menos tivesse...'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I have to work tomorrow. I wish I ___ have to work. (Passado negativo de don't)",
+        "resposta": "didn't",
+        "explicacao": "Para formar o Past Simple na negativa, usamos o auxiliar 'didn't'."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez8",
+    "num": "Lesson 8",
+    "titulo": "Future Continuous",
+    "subtitulo": "Ações em andamento no futuro (I will be doing)",
+    "alerta": "Como descrever algo que estará acontecendo num momento exato do futuro? O Future Continuous é perfeito para imaginar a cena!",
+    "observacao_cards": [
+      {
+        "italiano": "will be + verb-ing",
+        "traducao": "estarei fazendo",
+        "genero": "Ação em andamento",
+        "motivo": "Focar em uma ação que ainda não estará terminada em um certo ponto do futuro."
+      }
+    ],
+    "tabela_visual": "| Afirmativa | Negativa | Interrogativa |\n|---|---|---|\n| I will be working | I won't be working | Will you be working? |\n| She will be flying | She won't be flying | Will she be flying? |",
+    "exemplos_prc": [
+      {
+        "oracao": "This time tomorrow, I will be flying to Paris.",
+        "pergunta": "A pessoa já estará em Paris?",
+        "resposta": "Não, ela estará no meio da viagem (no avião).",
+        "conclusao": "Ação acontecendo no meio do processo num tempo futuro."
+      },
+      {
+        "oracao": "Don't call at 8 PM. I will be having dinner.",
+        "pergunta": "Por que não ligar?",
+        "resposta": "Porque o jantar estará acontecendo nesse momento.",
+        "conclusao": "Indica uma interrupção em potencial numa atividade em curso."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I will working at 9 AM.",
+        "certo": "I will be working at 9 AM.",
+        "explicacao": "Não se esqueça do verbo 'be'! Ele é o auxiliar junto com o 'will'."
+      },
+      {
+        "errado": "I am going to be know the results.",
+        "certo": "I will know the results.",
+        "explicacao": "Verbos de estado (know, want, like) raramente são usados na forma contínua (-ing)."
+      }
+    ],
+    "coda": "Use o Future Continuous para 'pintar um quadro' do que estará rolando no futuro. Ele foca na atividade acontecendo, não no início ou no fim dela.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está no Future Continuous?",
+        "opcoes": [
+          "I will sleep at 10.",
+          "I will be sleeping at 10.",
+          "I will have slept at 10.",
+          "I sleep at 10."
+        ],
+        "resposta": 1,
+        "explicacao": "O Future Continuous usa a estrutura will + be + verbo com -ing."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: At 9 AM tomorrow, they will ___ taking a test.",
+        "resposta": "be",
+        "explicacao": "Não se esqueça do verbo 'be' após o 'will' na estrutura do Future Continuous."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Quando usamos o Future Continuous?",
+        "opcoes": [
+          "Para ações já terminadas.",
+          "Para rotinas diárias.",
+          "Para ações que estarão em andamento em um momento no futuro.",
+          "Para promessas."
+        ],
+        "resposta": 2,
+        "explicacao": "Ele descreve uma ação que estará no meio de sua duração em um tempo futuro específico."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo no formato correto (work): This time next week, I will be ___ on the beach.",
+        "resposta": "working",
+        "explicacao": "O verbo principal deve estar com a terminação -ing."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma negativa correta de 'I will be driving'?",
+        "opcoes": [
+          "I will don't be driving.",
+          "I will be not driving.",
+          "I won't be driving.",
+          "I don't will be driving."
+        ],
+        "resposta": 2,
+        "explicacao": "A negação de 'will' é 'won't', logo fica 'won't be driving'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a interrogativa: ___ you be using your laptop tonight?",
+        "resposta": "Will",
+        "explicacao": "Em perguntas de futuro, o 'Will' vem antes do sujeito."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez9",
+    "num": "Lesson 9",
+    "titulo": "Future Perfect",
+    "subtitulo": "Ações concluídas até certo momento no futuro (I will have done)",
+    "alerta": "E quando você quiser dizer que, até ano que vem, você JÁ TERÁ terminado o curso? Para isso, usamos o Future Perfect.",
+    "observacao_cards": [
+      {
+        "italiano": "will have + past participle",
+        "traducao": "terei feito",
+        "genero": "Conclusão no Futuro",
+        "motivo": "Indica que a ação vai terminar antes de um determinado ponto no futuro."
+      },
+      {
+        "italiano": "by",
+        "traducao": "até (um momento)",
+        "genero": "Preposição Típica",
+        "motivo": "Geralmente usado com o Future Perfect para estipular o prazo limite (ex: by next year)."
+      }
+    ],
+    "tabela_visual": "| Afirmativa | Negativa | Interrogativa |\n|---|---|---|\n| We will have finished | We won't have finished | Will we have finished? |\n| He will have arrived | He won't have arrived | Will he have arrived? |",
+    "exemplos_prc": [
+      {
+        "oracao": "By 2030, I will have bought a house.",
+        "pergunta": "Quando a compra ocorrerá?",
+        "resposta": "Em algum momento entre o agora e o início de 2030.",
+        "conclusao": "A ação estará 100% concluída até aquele prazo."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I will have finish by tomorrow.",
+        "certo": "I will have finished by tomorrow.",
+        "explicacao": "Sempre use o particípio passado (terminação -ed para regulares ou forma irregular) depois de 'have'."
+      },
+      {
+        "errado": "At Friday, I will have left.",
+        "certo": "By Friday, I will have left.",
+        "explicacao": "Usamos 'by' para indicar 'não mais tarde do que' / 'até este momento', e não 'at'."
+      }
+    ],
+    "coda": "O Future Perfect é um olhar voltado do futuro para trás (um evento que, no momento futuro, já será passado). Lembre-se de usar a preposição 'by' para definir o limite de tempo!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual o significado da frase 'I will have finished my homework by 8 PM'?",
+        "opcoes": [
+          "Começarei a lição de casa às 8 PM.",
+          "Estarei fazendo a lição às 8 PM.",
+          "Terei terminado a lição de casa antes das 8 PM.",
+          "Não farei a lição de casa até as 8 PM."
+        ],
+        "resposta": 2,
+        "explicacao": "O Future Perfect indica que uma ação será concluída antes de um certo prazo no futuro."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: By next year, she will ___ graduated from college.",
+        "resposta": "have",
+        "explicacao": "A estrutura padrão é 'will + have + particípio passado' para todas as pessoas."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual preposição é muito comum com o Future Perfect para indicar o prazo final?",
+        "opcoes": [
+          "in",
+          "on",
+          "by",
+          "at"
+        ],
+        "resposta": 2,
+        "explicacao": "'By' significa 'até (certo momento)' ou 'não mais tarde que'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o particípio de 'read': By tomorrow, I will have ___ the entire book.",
+        "resposta": "read",
+        "explicacao": "O particípio passado do verbo 'read' escreve-se da mesma forma (read), embora a pronúncia mude para /rɛd/."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma negativa correta?",
+        "opcoes": [
+          "They won't have arrive.",
+          "They won't have arrived.",
+          "They will haven't arrived.",
+          "They won't has arrived."
+        ],
+        "resposta": 1,
+        "explicacao": "A negação usa 'won't have' seguido do particípio passado do verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a interrogativa: ___ he have finished the report by Friday?",
+        "resposta": "Will",
+        "explicacao": "Para formar perguntas, o auxiliar 'Will' vai para o início da frase."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez10",
+    "num": "Lesson 10",
+    "titulo": "Causative Form",
+    "subtitulo": "Have / Get something done",
+    "alerta": "Você cortou o próprio cabelo ou ALGUÉM cortou para você? Em inglês, há uma estrutura específica para quando pagamos ou pedimos para alguém fazer um serviço por nós.",
+    "observacao_cards": [
+      {
+        "italiano": "have + object + past participle",
+        "traducao": "mandar / pedir para fazer",
+        "genero": "Delegação de Serviço",
+        "motivo": "Quando um profissional ou terceiros fazem o trabalho por você."
+      },
+      {
+        "italiano": "get + object + past participle",
+        "traducao": "mandar fazer (informal)",
+        "genero": "Delegação Informal",
+        "motivo": "Mesmo sentido de 'have something done', mas com um tom um pouco mais informal e cotidiano."
+      }
+    ],
+    "tabela_visual": "| Sujeito | Have/Get (qualquer tempo) | Objeto (o quê) | Particípio Passado (ação) |\n|---|---|---|---|\n| I | had | my car | repaired. |\n| She | is getting | her hair | cut. |\n| We | will have | the house | painted. |",
+    "exemplos_prc": [
+      {
+        "oracao": "I had my computer fixed.",
+        "pergunta": "Quem consertou o computador?",
+        "resposta": "Alguém (um técnico), não a própria pessoa que fala.",
+        "conclusao": "Ação feita por terceiros."
+      },
+      {
+        "oracao": "She is getting her nails done.",
+        "pergunta": "A ação está no passado?",
+        "resposta": "Não, está acontecendo agora (present continuous).",
+        "conclusao": "O verbo 'have/get' pode ser conjugado em qualquer tempo verbal."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I cut my hair at the salon.",
+        "certo": "I had my hair cut at the salon.",
+        "explicacao": "Se você diz 'I cut', literalmente significa que você mesmo pegou a tesoura e cortou. O correto para falar de serviços delegados é usar a causative form."
+      },
+      {
+        "errado": "I had repaired my car.",
+        "certo": "I had my car repaired.",
+        "explicacao": "O objeto ('my car') deve vir ANTES do particípio ('repaired'), senão a frase vira um Past Perfect, significando que você fez a ação antes de outra ação no passado."
+      }
+    ],
+    "coda": "Sempre que você utilizar um serviço prestado por outros (mecânico, cabeleireiro, reforma), lembre-se desta fórmula matemática: Sujeito + Have/Get + O que foi feito + Particípio!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Quando usamos a Causative Form (have/get something done)?",
+        "opcoes": [
+          "Quando nós mesmos fazemos um serviço ou conserto.",
+          "Quando arrumamos as coisas em nossa própria casa.",
+          "Quando alguém (geralmente um profissional) faz um serviço para nós.",
+          "Quando não queremos fazer absolutamente nada."
+        ],
+        "resposta": 2,
+        "explicacao": "Usamos a causative form para indicar que contratamos, delegamos ou pagamos por um serviço feito por outra pessoa."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I am going to the salon. I need to have my hair ___ (cortado).",
+        "resposta": "cut",
+        "explicacao": "O particípio passado de 'cut' é o próprio 'cut'. A estrutura exige objeto + particípio."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Se eu paguei alguém para pintar minha casa no mês passado, como eu afirmo isso em inglês?",
+        "opcoes": [
+          "I painted my house.",
+          "I had painted my house.",
+          "I had my house painted.",
+          "I have my house painted."
+        ],
+        "resposta": 2,
+        "explicacao": "No passado, conjugamos o 'have' para 'had', seguido do objeto ('my house') e do particípio ('painted')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a palavra informal que substitui 'have' na estrutura causal (no presente): I usually ___ my car washed on Saturdays.",
+        "resposta": "get",
+        "explicacao": "'Get' tem o mesmo sentido de 'have' na causative form, porém soa mais informal."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a principal diferença de sentido entre 'She fixed the roof' e 'She had the roof fixed'?",
+        "opcoes": [
+          "Na primeira ela pagou alguém, na segunda ela mesma consertou.",
+          "Na primeira ela consertou com as próprias mãos, na segunda ela pagou ou mandou alguém consertar.",
+          "Não há diferença de sentido.",
+          "A primeira está no presente simples e a segunda no passado."
+        ],
+        "resposta": 1,
+        "explicacao": "Usar a causative ('had the roof fixed') tira o foco de quem ordenou e enfatiza o serviço que foi prestado por outra pessoa."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a interrogativa: Did you have your computer ___ (consertado)?",
+        "resposta": "fixed",
+        "explicacao": "Mesmo em perguntas no passado (com o auxiliar Did), a estrutura segue sendo 'have + objeto + particípio passado'."
+      }
+    ]
+  }
+]

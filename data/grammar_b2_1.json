@@ -1,0 +1,484 @@
+[
+  {
+    "id": "b2-lez1",
+    "num": "Lesson 1",
+    "titulo": "Third Conditional",
+    "subtitulo": "Arrependimentos do passado (If I had known...)",
+    "alerta": "Usamos o Third Conditional para imaginar um passado diferente do que realmente aconteceu, geralmente expressando arrependimentos ou consequências de ações não realizadas.",
+    "observacao_cards": [
+      {
+        "italiano": "If I had studied",
+        "traducao": "Se eu tivesse estudado",
+        "genero": "If Clause",
+        "motivo": "Past Perfect para a condição irreal no passado"
+      },
+      {
+        "italiano": "I would have passed",
+        "traducao": "Eu teria passado",
+        "genero": "Main Clause",
+        "motivo": "Would have + Past Participle para o resultado hipotético"
+      }
+    ],
+    "tabela_visual": "| If Clause (Past Perfect) | Main Clause (Would have + Particípio) |\n|---|---|\n| If I had known, | I would have gone. |\n| If we hadn't missed the bus, | we wouldn't have been late. |",
+    "exemplos_prc": [
+      {
+        "oracao": "If she had seen him, she would have said hello.",
+        "pergunta": "Ela o viu na vida real?",
+        "resposta": "Não, essa é uma situação imaginária no passado.",
+        "conclusao": "If + Past Perfect -> Would have + Past Participle"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "If I would have known, I had gone.",
+        "certo": "If I had known, I would have gone.",
+        "explicacao": "Nunca use 'would have' na cláusula do 'if'."
+      }
+    ],
+    "coda": "O Third Conditional é a chave para falar sobre 'o que poderia ter sido'. Lembre-se: o passado não pode ser mudado, mas podemos falar sobre ele!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "If I ___ you were coming, I would have baked a cake.",
+        "opcoes": [
+          "had known",
+          "have known",
+          "know",
+          "knew"
+        ],
+        "resposta": 0,
+        "explicacao": "Para uma condição irreal no passado, usamos o Past Perfect (had known)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "We wouldn't have been late if we ___ a taxi.",
+        "opcoes": [
+          "take",
+          "took",
+          "have taken",
+          "had taken"
+        ],
+        "resposta": 3,
+        "explicacao": "A condição 'if' no Third Conditional exige o Past Perfect (had taken)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "If she had studied harder, she ___ the test.",
+        "opcoes": [
+          "would pass",
+          "would have passed",
+          "passed",
+          "had passed"
+        ],
+        "resposta": 1,
+        "explicacao": "O resultado hipotético no passado usa 'would have' + particípio."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a forma correta: If they ___ (listen) to me, this wouldn't have happened.",
+        "resposta": "had listened",
+        "explicacao": "O verbo na cláusula 'if' fica no Past Perfect."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I would ___ (go) to the party if I had been invited.",
+        "resposta": "have gone",
+        "explicacao": "Na cláusula principal, usamos 'would have' seguido do particípio passado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If he had left earlier, he ___ (not / miss) the flight.",
+        "resposta": "wouldn't have missed",
+        "explicacao": "A forma negativa de 'would have missed' é 'wouldn't have missed'."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez2",
+    "num": "Lesson 2",
+    "titulo": "Mixed Conditionals",
+    "subtitulo": "Passado afetando o presente e vice-versa",
+    "alerta": "Mixed Conditionals misturam tempos verbais para mostrar como uma condição irreal no passado afeta o presente, ou como um estado irreal no presente afetou o passado.",
+    "observacao_cards": [
+      {
+        "italiano": "If I had worked harder",
+        "traducao": "Se eu tivesse trabalhado mais",
+        "genero": "Past Condition",
+        "motivo": "Past Perfect (ação no passado)"
+      },
+      {
+        "italiano": "I would be rich now",
+        "traducao": "Eu seria rico agora",
+        "genero": "Present Result",
+        "motivo": "Would + verbo base (consequência no presente)"
+      }
+    ],
+    "tabela_visual": "| Tipo de Mistura | Condição (If) | Resultado (Main) |\n|---|---|---|\n| Passado afeta Presente | If I had saved money, | I would buy a car now. |\n| Presente afeta Passado | If I were taller, | I would have played basketball. |",
+    "exemplos_prc": [
+      {
+        "oracao": "If I spoke French, I would have got the job in Paris.",
+        "pergunta": "O fato de eu não falar francês é passageiro?",
+        "resposta": "Não, é uma condição geral do presente que afetou um evento no passado.",
+        "conclusao": "If + Simple Past -> Would have + Past Participle"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "If I was you, I would have done it.",
+        "certo": "If I were you, I would have done it.",
+        "explicacao": "Para conselhos ou condições irreais com o verbo 'to be', use 'were' para todas as pessoas."
+      }
+    ],
+    "coda": "As Mixed Conditionals mostram o quão interligados o passado e o presente podem estar em nossas vidas e abrem um leque de novas expressões!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "If I had gone to bed earlier last night, I ___ so tired right now.",
+        "opcoes": [
+          "wouldn't have been",
+          "wouldn't be",
+          "am not",
+          "wasn't"
+        ],
+        "resposta": 1,
+        "explicacao": "Ação no passado afetando o presente. Usamos 'would(n't)' + infinitivo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "If I ___ French fluently, I would have understood the movie we watched yesterday.",
+        "opcoes": [
+          "speak",
+          "spoke",
+          "had spoken",
+          "was speaking"
+        ],
+        "resposta": 1,
+        "explicacao": "Fato no presente (não falar francês) afetando algo que aconteceu ontem. 'If' + Simple Past."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She would have a better job now if she ___ university.",
+        "opcoes": [
+          "finished",
+          "had finished",
+          "finish",
+          "finishes"
+        ],
+        "resposta": 1,
+        "explicacao": "Resultado no presente ('would have a better job') devido a uma ação no passado ('had finished')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If he ___ (be) smarter, he wouldn't have invested in that scam.",
+        "resposta": "were",
+        "explicacao": "Condição geral no presente (ele não é esperto). Com o verbo to be, usamos 'were'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If we had won the lottery, we ___ (be) rich now.",
+        "resposta": "would be",
+        "explicacao": "Condição irreal no passado (se tivéssemos ganho) com reflexo hoje (nós seríamos)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I wouldn't be lost now if I ___ (bring) a map.",
+        "resposta": "had brought",
+        "explicacao": "Resultado no presente ('wouldn't be') causado por não ter feito algo no passado ('had brought')."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez3",
+    "num": "Lesson 3",
+    "titulo": "Passive Voice (Advanced)",
+    "subtitulo": "Continuous, Perfect e Modals na passiva",
+    "alerta": "Em níveis avançados, usamos a voz passiva com tempos contínuos, tempos perfeitos e verbos modais para dar foco à ação ou a quem a recebe de forma mais sofisticada.",
+    "observacao_cards": [
+      {
+        "italiano": "The house is being built",
+        "traducao": "A casa está sendo construída",
+        "genero": "Present Continuous",
+        "motivo": "To be (is) + being + Past Participle"
+      },
+      {
+        "italiano": "The letter has been sent",
+        "traducao": "A carta foi enviada",
+        "genero": "Present Perfect",
+        "motivo": "Has/have + been + Past Participle"
+      },
+      {
+        "italiano": "It can be done",
+        "traducao": "Isso pode ser feito",
+        "genero": "Modals",
+        "motivo": "Modal + be + Past Participle"
+      }
+    ],
+    "tabela_visual": "| Tempo / Verbo | Voz Ativa | Voz Passiva |\n|---|---|---|\n| Continuous | They are fixing it. | It is being fixed. |\n| Perfect | She has finished the report. | The report has been finished. |\n| Modal | You must wear a seatbelt. | A seatbelt must be worn. |",
+    "exemplos_prc": [
+      {
+        "oracao": "The project must be completed by tomorrow.",
+        "pergunta": "Quem vai completar o projeto?",
+        "resposta": "Não sabemos ou não importa; o foco está no prazo e no projeto em si.",
+        "conclusao": "Para modais na passiva, usamos: Modal + be + Particípio"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "The car is fixing.",
+        "certo": "The car is being fixed.",
+        "explicacao": "Em tempos contínuos na passiva, não esqueça de colocar 'being' antes do particípio."
+      }
+    ],
+    "coda": "A voz passiva avançada deixa sua comunicação mais formal e sofisticada, ideal para ambientes acadêmicos e profissionais.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "The road ___ right now, so we need to take a detour.",
+        "opcoes": [
+          "is repaired",
+          "is being repaired",
+          "has been repaired",
+          "repairs"
+        ],
+        "resposta": 1,
+        "explicacao": "Como está acontecendo agora (right now), usamos o Present Continuous na passiva."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "All the cookies ___ by the time I arrived.",
+        "opcoes": [
+          "were eaten",
+          "had been eaten",
+          "have been eaten",
+          "are eaten"
+        ],
+        "resposta": 1,
+        "explicacao": "Uma ação que ocorreu antes de outra no passado (by the time I arrived) pede o Past Perfect passivo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Rules must ___ at all times in this building.",
+        "opcoes": [
+          "be followed",
+          "been followed",
+          "followed",
+          "be following"
+        ],
+        "resposta": 0,
+        "explicacao": "Para modais na passiva, a estrutura é modal (must) + be + particípio passado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: A new shopping mall is ___ (build) near my house right now.",
+        "resposta": "being built",
+        "explicacao": "Em uma frase contínua passiva, usamos 'being' seguido do particípio 'built'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The project has already ___ (complete).",
+        "resposta": "been completed",
+        "explicacao": "Com present perfect passivo, usamos 'has/have been' + particípio."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: This door should not ___ (open) during the flight.",
+        "resposta": "be opened",
+        "explicacao": "Após o modal 'should not', usamos 'be' + particípio 'opened'."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez4",
+    "num": "Lesson 4",
+    "titulo": "Reported Speech (Advanced)",
+    "subtitulo": "Perguntas e ordens reportadas",
+    "alerta": "Reportar perguntas e ordens exige mais do que apenas mudar o tempo verbal; precisamos reestruturar as frases e usar verbos introdutórios adequados.",
+    "observacao_cards": [
+      {
+        "italiano": "She asked if I was ready",
+        "traducao": "Ela perguntou se eu estava pronto",
+        "genero": "Yes/No Question",
+        "motivo": "Usamos 'if' ou 'whether' em vez de verbo auxiliar"
+      },
+      {
+        "italiano": "He asked what I wanted",
+        "traducao": "Ele perguntou o que eu queria",
+        "genero": "Wh- Question",
+        "motivo": "Ordem direta (sujeito + verbo), sem auxiliar 'do/did'"
+      },
+      {
+        "italiano": "She told me to stop",
+        "traducao": "Ela me mandou parar",
+        "genero": "Command/Order",
+        "motivo": "Verbo + objeto + to + infinitivo"
+      }
+    ],
+    "tabela_visual": "| Tipo | Discurso Direto | Discurso Indireto (Reported) |\n|---|---|---|\n| Pergunta W/H | \"Where do you live?\" | He asked where I lived. |\n| Ordem | \"Open the door!\" | She told me to open the door. |\n| Pedido | \"Please, help me.\" | He asked me to help him. |",
+    "exemplos_prc": [
+      {
+        "oracao": "They asked whether the train had arrived.",
+        "pergunta": "Como era a pergunta original?",
+        "resposta": "Era \"Has the train arrived?\".",
+        "conclusao": "O tempo recua um passo para o passado e a ordem das palavras vira afirmativa."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He asked me where was the station.",
+        "certo": "He asked me where the station was.",
+        "explicacao": "Em reported questions, não invertemos o verbo e o sujeito como nas perguntas diretas."
+      }
+    ],
+    "coda": "Com Reported Speech avançado, você pode contar histórias complexas e repassar instruções com muita naturalidade e fluidez.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Direct: 'Are you hungry?' -> She asked me ___ I was hungry.",
+        "opcoes": [
+          "that",
+          "if",
+          "what",
+          "how"
+        ],
+        "resposta": 1,
+        "explicacao": "Para perguntas de 'sim ou não' reportadas, usamos 'if' ou 'whether'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Direct: 'Where do you live?' -> He asked me where ___.",
+        "opcoes": [
+          "did I live",
+          "do I live",
+          "I lived",
+          "I live"
+        ],
+        "resposta": 2,
+        "explicacao": "Em reported speech, a pergunta se transforma em uma estrutura afirmativa (sujeito + verbo)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Direct: 'Don't touch that!' -> She told me ___ touch that.",
+        "opcoes": [
+          "to not",
+          "not to",
+          "don't",
+          "didn't"
+        ],
+        "resposta": 1,
+        "explicacao": "Para ordens negativas no discurso indireto, usamos 'not to' antes do verbo principal."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete o relato do pedido: 'Please, sit down.' -> He asked me ___ sit down.",
+        "resposta": "to",
+        "explicacao": "Para reportar um pedido afirmativo, usamos o verbo 'ask' + objeto + 'to' + infinitivo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: 'What time is it?' -> She asked what time it ___.",
+        "resposta": "was",
+        "explicacao": "O tempo verbal 'is' retrocede um tempo para o passado, virando 'was', no final da frase."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta reportada: 'Will you help me?' -> He asked whether I ___ help him.",
+        "resposta": "would",
+        "explicacao": "O auxiliar 'will' muda para 'would' no discurso indireto."
+      }
+    ]
+  },
+  {
+    "id": "b2-lez5",
+    "num": "Lesson 5",
+    "titulo": "Relative Clauses (Non-defining)",
+    "subtitulo": "Informações extras entre vírgulas",
+    "alerta": "As Non-defining Relative Clauses adicionam informações extras a uma frase. Se as removermos, a frase principal continua a fazer sentido. Sempre usamos vírgulas!",
+    "observacao_cards": [
+      {
+        "italiano": "My brother, who lives in Paris, is older.",
+        "traducao": "Meu irmão, que mora em Paris, é mais velho.",
+        "genero": "Extra Info (Person)",
+        "motivo": "Usamos 'who' entre vírgulas para pessoas"
+      },
+      {
+        "italiano": "The Eiffel Tower, which was built in 1889, is famous.",
+        "traducao": "A Torre Eiffel, que foi construída em 1889, é famosa.",
+        "genero": "Extra Info (Thing)",
+        "motivo": "Usamos 'which' para coisas ou ideias (nunca 'that')"
+      }
+    ],
+    "tabela_visual": "| Relativo | Uso Principal | Exemplo |\n|---|---|---|\n| who | Pessoas | John, who is my friend,... |\n| which | Coisas / Ideias | The car, which is blue,... |\n| whose | Posse | Anna, whose car is new,... |",
+    "exemplos_prc": [
+      {
+        "oracao": "London, which is the capital of the UK, is a massive city.",
+        "pergunta": "A frase faz sentido se tirarmos o trecho entre vírgulas?",
+        "resposta": "Sim. 'London is a massive city' é uma frase completa.",
+        "conclusao": "Essa é a marca de uma Non-defining Relative Clause."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "My boss, that is very strict, fired him.",
+        "certo": "My boss, who is very strict, fired him.",
+        "explicacao": "Nunca use 'that' em Non-defining Relative Clauses. Use 'who' para pessoas e 'which' para coisas."
+      }
+    ],
+    "coda": "Informações extras enriquecem a escrita, dando contexto sem confundir. Use as vírgulas corretamente e eleve seu nível de inglês!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Paris, ___ is the capital of France, is beautiful.",
+        "opcoes": [
+          "who",
+          "that",
+          "which",
+          "where"
+        ],
+        "resposta": 2,
+        "explicacao": "Para adicionar informação extra sobre um lugar, coisa ou ideia, usamos 'which'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "My brother, ___ lives in Japan, is coming to visit.",
+        "opcoes": [
+          "that",
+          "which",
+          "who",
+          "whose"
+        ],
+        "resposta": 2,
+        "explicacao": "Como 'my brother' é uma pessoa, usamos 'who' na cláusula explicativa."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Marie Curie, ___ discoveries changed science, won two Nobel Prizes.",
+        "opcoes": [
+          "who",
+          "which",
+          "that",
+          "whose"
+        ],
+        "resposta": 3,
+        "explicacao": "Para indicar posse (as descobertas DELA), usamos o pronome relativo 'whose'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The sun, ___ is actually a star, gives us light.",
+        "resposta": "which",
+        "explicacao": "Sendo uma 'coisa/astro', e em uma frase explicativa, usamos 'which'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Mr. Smith, ___ teaches math, is retiring next year.",
+        "resposta": "who",
+        "explicacao": "Mr. Smith é uma pessoa, por isso preenchemos a lacuna com 'who'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o pronome de posse correto: That house, ___ roof is damaged, needs repairs.",
+        "resposta": "whose",
+        "explicacao": "Para relacionar a casa ao telhado (o telhado da casa), usamos 'whose'."
+      }
+    ]
+  }
+]
