@@ -106,12 +106,25 @@ const Profilo = {
           : ''}
 
         <div class="profilo-card" style="margin-top:1.5rem">
-          <div class="profilo-card-titulo">${I18n.t('prof_gestao_dati')}</div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">${I18n.t('prof_backup_desc')}</p>
+          <div class="profilo-card-titulo" data-i18n="prof_audio_speed">${I18n.t('prof_audio_speed') || 'Audio Speed'}</div>
+          <div style="display:flex; align-items:center; gap:1rem; margin-top:1rem;">
+            <span style="font-size:1.5rem">🐢</span>
+            <input type="range" min="0.5" max="1.5" step="0.05" id="audio-speed-slider" value="${localStorage.getItem('en_audio_speed') || '0.85'}" oninput="document.getElementById('audio-speed-val').innerText = this.value + 'x'" onchange="Profilo.salvarAudioSpeed(this.value)" style="flex:1;">
+            <span style="font-size:1.5rem">🐇</span>
+          </div>
+          <div style="text-align:center; font-weight:bold; color:var(--cor-brand);" id="audio-speed-val">${localStorage.getItem('en_audio_speed') || '0.85'}x</div>
+          <div style="text-align:center; margin-top:1rem;">
+            <button class="btn-secondario" onclick="App.pronunciar('The quick brown fox jumps over the lazy dog')" data-i18n="prof_test_audio">${I18n.t('prof_test_audio') || '🔊 Test Audio'}</button>
+          </div>
+        </div>
+
+        <div class="profilo-card" style="margin-top:1.5rem">
+          <div class="profilo-card-titulo" data-i18n="prof_gestao_dati">${I18n.t('prof_gestao_dati')}</div>
+          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;" data-i18n="prof_backup_desc">${I18n.t('prof_backup_desc')}</p>
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button class="btn-secondario" onclick="Profilo.exportarDados()">${I18n.t('prof_exp_backup')}</button>
-            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${I18n.t('prof_imp_backup')}</button>
-            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
+            <button class="btn-secondario" onclick="Profilo.exportarDados()" data-i18n="prof_exp_backup">${I18n.t('prof_exp_backup')}</button>
+            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()" data-i18n="prof_imp_backup">${I18n.t('prof_imp_backup')}</button>
+            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()" data-i18n="prof_azzera">${I18n.t('prof_azzera')}</button>
           </div>
           <!-- Tour -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
@@ -333,6 +346,11 @@ const Profilo = {
     };
     reader.readAsText(file);
     event.target.value = '';
+  },
+
+  // ── Salvar Velocidade do Áudio ────────────────────────────
+  salvarAudioSpeed(val) {
+    localStorage.setItem('en_audio_speed', val);
   },
 
   // ── Helper: stat row ──────────────────────────────────────

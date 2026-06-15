@@ -37,7 +37,7 @@ const App = {
     'linear-gradient(135deg, #16A085, #148F77)',   // 18
     'linear-gradient(135deg, #D35400, #BA4A00)',   // 19
     'linear-gradient(135deg, #2980B9, #1A5276)',   // 20
-    'linear-gradient(135deg, #C0392B, #9B2335)',   // 21
+    'linear-gradient(135deg, #1565C0, #0D47A1)',   // 21
     'linear-gradient(135deg, #27AE60, #196F3D)',   // 22
     'linear-gradient(135deg, #8E44AD, #512E6D)',   // 23
     'linear-gradient(135deg, #E67E22, #CA6F1E)',   // 24
@@ -66,7 +66,7 @@ const App = {
     'linear-gradient(135deg, #E65100, #BF360C)',   // 47
     'linear-gradient(135deg, #37474F, #1C313A)',   // 48
     'linear-gradient(135deg, #4E342E, #3E2723)',   // 49
-    'linear-gradient(135deg, #9B2335, #4A0A15)',   // 50
+    'linear-gradient(135deg, #0D47A1, #002171)',   // 50
   ],
 
   // Temple names (index = templo number, 1-50 — thematic English titles)
@@ -795,7 +795,7 @@ const App = {
       this.atualizarStats();
       this.notificar('notif_tutti_sbloccati', 'sucesso');
     } else {
-      input.style.borderColor = '#C0392B';
+      input.style.borderColor = '#003E8A';
       input.value = '';
       input.placeholder = 'Incorrect code…';
       setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'Enter code...'; }, 2000);
@@ -1017,7 +1017,8 @@ const App = {
   _pronunciarRV(texto) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      responsiveVoice.speak(texto, 'US English Female', { rate: 0.9, pitch: 1 });
+      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 0.9;
+      responsiveVoice.speak(texto, 'US English Female', { rate: speed, pitch: 1 });
     }
   },
 
@@ -1033,9 +1034,10 @@ const App = {
     const tentarFalar = () => {
       const voz = this._getVozAmericana();
 
+      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 0.85;
       const u = new SpeechSynthesisUtterance(texto);
       u.lang  = 'en-US';
-      u.rate  = 0.85;
+      u.rate  = speed;
       u.pitch = 1;
       if (voz) u.voice = voz;
       // Se não há voz americana específica, usa lang='en-US' sem voice explícita

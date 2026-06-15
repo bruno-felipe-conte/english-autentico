@@ -62,7 +62,9 @@ const I18n = {
     
     // ── Perfil e Gestão de Dados ──
     'prof_gestao_dati': { pt: '⚙️ Gestão de Dados', en: '⚙️ Data Management' },
-    'prof_backup_desc': { pt: 'O English Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.', en: 'English Autentico saves your progress locally on your device. Back up regularly to avoid losing data if you clear your browser history.' },
+    'prof_backup_desc': { pt: 'O English Autentico guarda seu progresso apenas neste navegador. Exporte regularmente para não perder caso limpe o cache.', en: 'English Autentico saves your progress only in this browser. Export regularly to avoid losing it if you clear the cache.' },
+    'prof_audio_speed': { pt: 'Velocidade do Áudio', en: 'Audio Speed' },
+    'prof_test_audio': { pt: '🔊 Testar Áudio', en: '🔊 Test Audio' },
     'prof_exp_backup': { pt: '⬇️ Exportar Backup', en: '⬇️ Export Backup' },
     'prof_imp_backup': { pt: '⬆️ Importar Backup', en: '⬆️ Import Backup' },
     'prof_azzera': { pt: '⚠️ Apagar Tudo', en: '⚠️ Delete All' },
