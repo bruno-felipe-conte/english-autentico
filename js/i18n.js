@@ -37,7 +37,7 @@ const I18n = {
 
     // ── Modal de Configurações ──
     'cfg_titulo': { pt: 'Configurações', en: 'Settings' },
-    'cfg_idioma_app': { pt: 'Idioma do App', en: 'Lingua dell\'App' },
+    'cfg_idioma_app': { pt: 'Idioma do App', en: 'App Language' },
     'cfg_idioma_pt': { pt: 'Português (PT)', en: 'Portuguese (PT)' },
     'cfg_idioma_it': { pt: 'English (EN) - Immersion', en: 'English (EN) - Immersion' },
     'cfg_tema_claro': { pt: 'Modo Claro', en: 'Light Mode' },

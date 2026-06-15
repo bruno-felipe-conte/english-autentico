@@ -270,7 +270,7 @@
     .btn-secondario { padding: 0.55rem 1.1rem; border: none; border-radius: 20px; cursor: pointer; font-size: 0.95rem; font-weight: 600; font-family: 'EB Garamond', Georgia, serif; letter-spacing: 0.02em; transition: all 0.2s; background: #7F8C8D; color: white; }
     .btn-secondario:hover { background: #6c7a7b; }
     .empty-state { text-align: center; padding: 2rem; background: var(--cor-marmore); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 1rem; }
-    .ornamento-italiano { font-family: 'EB Garamond', Georgia, serif; font-size: 2rem; color: var(--cor-veneziano-escuro); font-style: italic; margin-bottom: 0.5rem; }
+    .ornamento-ingles { font-family: 'EB Garamond', Georgia, serif; font-size: 2rem; color: var(--cor-veneziano-escuro); font-style: italic; margin-bottom: 0.5rem; }
     .em-revisao { color: var(--cor-pietra); font-size: 0.88rem; margin: 0.5rem 0 1rem; }
 
     /* ── Mode toggle buttons ── */
@@ -2652,7 +2652,7 @@
           <div id="swipe-hint-right" class="swipe-hint"></div>
           <div class="card-inner">
             <div class="card-frente">
-              <div class="palavra-italiana" id="card-italiano" data-i18n="fc_selecione_tempio">Selecione um Tempio</div>
+              <div class="palavra-ingles" id="card-italiano" data-i18n="fc_selecione_tempio">Selecione um Temple</div>
               <div class="card-dica" id="card-dica" data-i18n="fc_use_seletor">↑ use o seletor acima</div>
               <div class="card-categoria" id="card-categoria"></div>
             </div>
@@ -2689,7 +2689,7 @@
           </button>
         </div>
         <div class="empty-state" id="flashcard-vazio" style="display:none">
-          <p class="ornamento-italiano">Bravissimo!</p>
+          <p class="ornamento-ingles">Excellent!</p>
           <p data-i18n="fc_todas_estudadas">Todas as cartas estudadas hoje.</p>
           <p class="em-revisao" data-i18n="fc_volte_amanha">Volte amanhã para as próximas revisões.</p>
           <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
@@ -2704,7 +2704,7 @@
 
     <!-- SECTION: Quiz -->
     <section id="sec-quiz" class="section">
-      <h2 class="section-titulo">Verifica le tue Conoscenze</h2>
+      <h2 class="section-titulo">Test your Knowledge</h2>
       <div class="quiz-templo-selector" id="quiz-templo-selector"></div>
       <div class="quiz-container" id="quiz-container" style="display:none">
         <div class="quiz-progresso">
@@ -2754,12 +2754,12 @@
     <section id="sec-vocabolario" class="section">
       <h2 class="section-titulo">Vocabulary</h2>
       <div class="vocab-filtros">
-        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Cerca in italiano o portoghese..." oninput="Vocab.buscar(this.value)">
+        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Search in English or Portuguese..." oninput="Vocab.buscar(this.value)">
         <select id="vocab-templo-filtro" onchange="Vocab.filtrarTemplo(this.value)">
-          <option value="">Tutti i templi</option>
+          <option value="">All temples</option>
         </select>
         <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
-          <option value="">Tutte le categorie</option>
+          <option value="">All categories</option>
         </select>
       </div>
       <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
@@ -2773,7 +2773,7 @@
         <button class="btn-ia-add" onclick="IAImport.abrir('vocab')">🤖 Adicionar via IA</button>
         <div id="vocab-blur-btns" style="display:flex;gap:0.4rem;flex-shrink:0">
           <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt" data-i18n-title="title_blur_pt">🙈 Ocultar PT</button>
-          <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar IT</button>
+          <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em inglês para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar EN</button>
         </div>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
@@ -2834,7 +2834,7 @@
         <div class="onb-slide active">
           <div class="onb-emoji">🇺🇸</div>
           <h3>Welcome!</h3>
-          <p data-i18n="ob_descricao">Este app foi desenhado para te levar do zero ao italiano falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.</p>
+          <p data-i18n="ob_descricao">Este app foi desenhado para te levar do zero ao inglês falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.</p>
         </div>
         <!-- Slide 2 -->
         <div class="onb-slide">
@@ -2852,8 +2852,7 @@
             <li>🎤 <strong>Listen &amp; Repeat:</strong> Train your pronunciation.</li>
           </ul>
         </div>
-        <!-- Slide 3 -->
-        <div class="onb-slide">
+              <div class="onb-slide">
           <div class="onb-emoji">🚀</div>
           <h3>Where to Start?</h3>
           <p data-i18n="ob_como_comecar">É muito fácil começar sua jornada:</p>
@@ -2881,18 +2880,6 @@
     </div>
   </div>
 
-  <!-- Bottom navigation for mobile -->
-  <nav class="bottom-nav" id="bottom-nav">
-    <button class="nav-tab-btn ativa" data-section="templi" onclick="App.navegar('templi')" data-i18n="nav_inicio">🏛️<span>Temples</span></button>
-    <button class="nav-tab-btn" data-section="dialoghi" onclick="App.navegar('dialoghi')" data-i18n="nav_dialogos">💬<span>Dialogues</span></button>
-    <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')" data-i18n="nav_canzoni">🎵<span>Songs</span></button>
-    <button class="nav-tab-btn" data-section="imitazione" onclick="App.navegar('imitazione')" data-i18n="nav_imitacao">🗣️<span>Listen</span></button>
-    <button class="nav-tab-btn" data-section="flashcard" onclick="App.navegar('flashcard')" data-i18n="nav_flashcard">🃏<span>Flashcards</span></button>
-    <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')" data-i18n="nav_quiz">❓<span>Quiz</span></button>
-    <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')" data-i18n="nav_vocab">📖<span>Vocab</span></button>
-    <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')" data-i18n="nav_gramatica">📚<span>Grammar</span></button>
-    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📜<span>Reading</span></button>
-  </nav>
 
   <!-- ResponsiveVoice — English TTS fallback (free for educational use) -->
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>

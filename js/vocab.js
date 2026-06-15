@@ -251,7 +251,7 @@ const Vocab = {
       if (!data) return;
       const opt = document.createElement('option');
       opt.value = num;
-      const nome = (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || data.nome || data.cidade || `Tempio ${num}`;
+      const nome = (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || data.nome || data.cidade || `Temple ${num}`;
       opt.textContent = `${num}. ${nome}`;
       sel.appendChild(opt);
     });

@@ -26,7 +26,7 @@ const LevelUp = {
     // Desbloqueios relacionados
     const templos = Object.entries(Progressao.TEMPLO_NIVEL)
       .filter(([,n]) => n === nivel)
-      .map(([t]) => `🏛️ Tempio ${t} desbloqueado!`);
+      .map(([t]) => `🏛️ Temple ${t} unlocked!`);
     if (el('levelup-desbloqueios')) {
       el('levelup-desbloqueios').textContent = templos.join(' · ') || '';
     }

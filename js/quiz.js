@@ -374,7 +374,7 @@ const Quiz = {
     todosTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Tempio ${i}`;
+      const nome = (data && data.nome) || `Temple ${i}`;
       const nivel = data ? data.nivel : '—';
 
       const btn = document.createElement('button');
@@ -397,7 +397,7 @@ const Quiz = {
     todosTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Tempio ${i}`;
+      const nome = (data && data.nome) || `Temple ${i}`;
       const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
 
       const btn = document.createElement('button');
@@ -418,7 +418,7 @@ const Quiz = {
     todosTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Tempio ${i}`;
+      const nome = (data && data.nome) || `Temple ${i}`;
 
       const btn = document.createElement('button');
       btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado ? '' : ' bloqueado'}`;

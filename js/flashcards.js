@@ -953,7 +953,7 @@ const Flashcards = {
       if (!data) return;
       const opt        = document.createElement('option');
       opt.value        = num;
-      const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
+      const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Temple ${num}`;
       opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
       sel.appendChild(opt);
     });
