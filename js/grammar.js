@@ -62,11 +62,11 @@ const Grammatica = {
 
     for (const mod of this.dados.moduli) {
       const bloqueado = nivel < mod.nivel_minimo && !this._adminMods.has(mod.id);
-      const totalUnid = mod.lezioni.length;
+      const totalUnid = (mod.lezioni || []).length;
       if (bloqueado || totalUnid === 0) continue; // skip locked/empty modules
 
-      const totalEx   = mod.lezioni.reduce((s, u) => s + u.exercicios.length, 0);
-      const completas = mod.lezioni.filter(u => completadas.includes(u.id)).length;
+      const totalEx   = (mod.lezioni || []).reduce((s, u) => s + u.exercicios.length, 0);
+      const completas = (mod.lezioni || []).filter(u => completadas.includes(u.id)).length;
       const pct       = totalUnid > 0 ? Math.round((completas / totalUnid) * 100) : 0;
 
       // Module banner (clicável para colapsar/expandir)
@@ -83,7 +83,7 @@ const Grammatica = {
 
       // Grid of lezione cards (id para colapso)
       html += `<div class="gram-lezioni-grid" id="gram-grid-${mod.id}">`;
-      for (const u of mod.lezioni) {
+      for (const u of (mod.lezioni || [])) {
         const feita = completadas.includes(u.id);
         const nEx = u.exercicios.length;
         html += `<button class="gram-lez-card${feita ? ' feita' : ''}" onclick="Grammatica.abrirUnidade('${mod.id}','${u.id}')">`;
@@ -100,7 +100,7 @@ const Grammatica = {
     }
 
     // Locked modules (compact pills — clicáveis para admin)
-    const bloqueados = this.dados.moduli.filter(m => nivel < m.nivel_minimo && !this._adminMods.has(m.id) && m.lezioni.length > 0);
+    const bloqueados = this.dados.moduli.filter(m => nivel < m.nivel_minimo && !this._adminMods.has(m.id) && (m.lezioni || []).length > 0);
     if (bloqueados.length > 0) {
       html += '<div class="gram-locked-row">';
       for (const mod of bloqueados) {
@@ -149,7 +149,7 @@ const Grammatica = {
           autocomplete="off"
           onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
         />
-        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Password errata. Riprova.</div>
+        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Wrong password. Try again.</div>
         <div class="gram-admin-btns">
           <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Annulla</button>
           <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Conferma</button>
@@ -208,7 +208,7 @@ const Grammatica = {
   abrirUnidade(moduloId, unidadeId) {
     const mod  = this.dados.moduli.find(m => m.id === moduloId);
     if (!mod) return;
-    const unid = mod.lezioni.find(u => u.id === unidadeId);
+    const unid = (mod.lezioni || []).find(u => u.id === unidadeId);
     if (!unid) return;
 
     this.moduloAtual  = mod;
@@ -278,10 +278,10 @@ const Grammatica = {
     let html = '<div class="gram-card">';
 
     // Progresso + tipo badge na mesma linha
-    const tipoLabel = ex.tipo === 'revelar' ? '👁️ Descubra' : ex.tipo === 'digitar' ? '⌨️ Escreva' : '🔘 Escolha';
+    const tipoLabel = ex.tipo === 'revelar' ? '👁️ Reveal' : ex.tipo === 'digitar' ? '⌨️ Type' : '🔘 Choose';
     const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : ex.tipo === 'digitar' ? 'gram-ex-tipo-digitar' : 'gram-ex-tipo-escolha';
     html += '<div class="gram-ex-header">';
-    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Exercício ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
+    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Exercise ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
     html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
     html += '</div>';
 
@@ -356,13 +356,11 @@ const Grammatica = {
     }).join('');
 
     let html = '<div class="gram-revelar-area">';
-    const hint = I18n.idioma === 'it'
-      ? '👆 Clicca sulle parole per rivelare, o clicca su "Vedi risposta"'
-      : '👆 Clique nas palavras para revelar, ou clique em "Ver resposta"';
+    const hint = '👆 Click on the words to reveal, or click "Reveal answer"';
     html += `<div class="gram-revelar-hint">${hint}</div>`;
     html += `<div class="gram-risposta-container" id="gram-risposta">${spans}</div>`;
     html += '<div class="gram-revelar-actions">';
-    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Ver resposta</button>';
+    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Reveal answer</button>';
     html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Hide</button>';
     html += '</div>';
     html += '</div>';
@@ -545,7 +543,7 @@ const Grammatica = {
     else if (pct >= 60)   { emoji = '💪'; msg = 'Good! Keep it up!'; }
 
     // Próxima lição
-    const unids = this.moduloAtual.lezioni;
+    const unids = (this.moduloAtual.lezioni || []);
     const idx   = unids.findIndex(u => u.id === this.unidadeAtual.id);
     let proxBtn = '';
     if (idx >= 0 && idx < unids.length - 1) {
@@ -576,8 +574,17 @@ const Grammatica = {
   //   • pipe tables simples
   //   • HTML tables raw (protegidas contra reprocessamento)
   // ─────────────────────────────────────────────────────────
+
+  _sanitize(str) {
+    if (typeof str !== 'string') return '';
+    return str.replace(/<script[\s\S]*?<\/script>/gi, '')
+              .replace(/on\w+\s*=/gi, '')
+              .replace(/javascript:/gi, '');
+  },
+
   _formatarTeoria(texto) {
     if (!texto) return '';
+    texto = this._sanitize(texto);
 
     // 0. Proteger HTML tables existentes (rowspan/colspan/etc.)
     //    Substituímos por placeholders antes de qualquer processamento.
@@ -658,7 +665,8 @@ const Grammatica = {
   // ─────────────────────────────────────────────────────────
   _formatarPergunta(texto) {
     if (!texto) return '';
-    return String(texto)
+    texto = this._sanitize(String(texto));
+    return texto
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>')
       .replace(/\n/g, '<br>');
@@ -737,10 +745,10 @@ const Grammatica = {
               <div class="gfc-it">${c.italiano}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
-              <div class="gfc-click">${I18n.idioma === 'it' ? 'Clicca per rivelare 👆' : 'Clique para revelar 👆'}</div>
+              <div class="gfc-click">${'Click to reveal 👆'}</div>
             </div>
             <div class="gram-flip-card-back">
-              <div class="gfc-titulo-regra">O Padrão:</div>
+              <div class="gfc-titulo-regra">The Pattern:</div>
               <div class="gfc-regra-txt">${c.motivo}</div>
             </div>
           </div>
@@ -760,7 +768,7 @@ const Grammatica = {
     return `
       <div class="gram-camada-bloco">
         <div class="gram-camada-label">${I18n.t('gram_fase3_label')}</div>
-        <div class="gram-tabela-sem-details">${u.tabela_visual}</div>
+        <div class="gram-tabela-sem-details">${this._formatarTeoria(u.tabela_visual)}</div>
       </div>`;
   },
 
@@ -831,8 +839,8 @@ const Grammatica = {
   _htmlTabelaVisual(u) {
     if (!u.tabela_visual) return '';
     return `<details class="gram-tabela-visual">
-      <summary>📋 Ver tabela de consulta (use durante os exercícios)</summary>
-      <div class="gram-tabela-conteudo">${u.tabela_visual}</div>
+      <summary>📋 View reference table (use during exercises)</summary>
+      <div class="gram-tabela-conteudo">${this._formatarTeoria(u.tabela_visual)}</div>
     </details>`;
   },
 
