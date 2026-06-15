@@ -1,1536 +1,1536 @@
-﻿{
-    "dialogi":  [
-                    {
-                        "id":  "dial_001",
-                        "titulo":  "At the Coffee Shop",
-                        "icone":  "â˜•",
-                        "nivel":  "A1",
-                        "contexto":  "You walk into a coffee shop in New York to order a drink.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Barista",
-                                          "frase":  "Hi there! What can I get for you?",
-                                          "traducao":  "OlÃ¡! O que posso te servir?",
-                                          "audio_ipa":  "/haÉª Ã°É›r/"
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "You",
-                                          "frase":  "Hi! Can I have a large coffee, please?",
-                                          "traducao":  "OlÃ¡! Posso pedir um cafÃ© grande, por favor?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Hi! Can I have a large coffee, please?",
-                                                               "I want coffee. Give me one.",
-                                                               "One coffee. Now.",
-                                                               "Do you have tea from Japan?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Barista",
-                                          "frase":  "Of course! Would you like milk or sugar?",
-                                          "traducao":  "Claro! VocÃª gostaria de leite ou aÃ§Ãºcar?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "You",
-                                          "frase":  "Just a little milk, please. No sugar.",
-                                          "traducao":  "SÃ³ um pouquinho de leite, por favor. Sem aÃ§Ãºcar.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Just a little milk, please. No sugar.",
-                                                               "Everything. Put everything in.",
-                                                               "I don\u0027t like milk or coffee.",
-                                                               "What is sugar?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Barista",
-                                          "frase":  "That\u0027ll be three dollars fifty. Are you paying by card or cash?",
-                                          "traducao":  "SÃ£o trÃªs dÃ³lares e cinquenta. VocÃª vai pagar com cartÃ£o ou dinheiro?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "You",
-                                          "frase":  "By card, please.",
-                                          "traducao":  "Com cartÃ£o, por favor.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "By card, please.",
-                                                               "I have no money.",
-                                                               "Can you pay for me?",
-                                                               "I only have euros."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Barista",
-                                          "frase":  "Here you go! Have a great day!",
-                                          "traducao":  "Aqui estÃ¡! Tenha um Ã³timo dia!",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "You",
-                                          "frase":  "Thank you! You too!",
-                                          "traducao":  "Obrigado! VocÃª tambÃ©m!",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Thank you! You too!",
-                                                               "Finally! It took too long.",
-                                                               "Is this decaf?",
-                                                               "I wanted tea."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "coffee",
-                                                  "milk",
-                                                  "sugar",
-                                                  "card",
-                                                  "cash",
-                                                  "please",
-                                                  "thank you"
-                                              ],
-                        "xp_recompensa":  50
-                    },
-                    {
-                        "id":  "dial_002",
-                        "titulo":  "Asking for Directions",
-                        "icone":  "ðŸ—ºï¸",
-                        "nivel":  "A2",
-                        "contexto":  "You are lost in the city and need to find the nearest underground station.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "You",
-                                          "frase":  "Excuse me, could you help me? I\u0027m looking for the subway station.",
-                                          "traducao":  "Com licenÃ§a, vocÃª poderia me ajudar? Estou procurando a estaÃ§Ã£o de metrÃ´.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Excuse me, could you help me? I\u0027m looking for the subway station.",
-                                                               "Hey! Where is the train? Tell me now!",
-                                                               "Do you know me? I am lost.",
-                                                               "Can I borrow your phone?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Stranger",
-                                          "frase":  "Of course! It\u0027s not far. Go straight ahead for two blocks.",
-                                          "traducao":  "Claro! NÃ£o Ã© longe. Siga em frente por dois quarteirÃµes.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Stranger",
-                                          "frase":  "Then turn left at the traffic lights.",
-                                          "traducao":  "Depois vire Ã  esquerda no semÃ¡foro.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "You",
-                                          "frase":  "Turn left at the traffic lights â€” got it. And then?",
-                                          "traducao":  "Virar Ã  esquerda no semÃ¡foro â€” entendido. E depois?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Turn left at the traffic lights â€” got it. And then?",
-                                                               "I don\u0027t understand left or right.",
-                                                               "Is it very far? I am tired.",
-                                                               "Can you take me there?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Stranger",
-                                          "frase":  "The station will be on your right. You can\u0027t miss it!",
-                                          "traducao":  "A estaÃ§Ã£o estarÃ¡ Ã  sua direita. NÃ£o tem como errar!",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "You",
-                                          "frase":  "Perfect, thank you so much! That\u0027s very kind of you.",
-                                          "traducao":  "Perfeito, muito obrigado! Ã‰ muito gentil da sua parte.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Perfect, thank you so much! That\u0027s very kind of you.",
-                                                               "OK whatever.",
-                                                               "This city is confusing.",
-                                                               "I will use Google Maps instead."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Stranger",
-                                          "frase":  "No problem at all. Good luck!",
-                                          "traducao":  "Sem problema algum. Boa sorte!",
-                                          "audio_ipa":  ""
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "straight ahead",
-                                                  "turn left",
-                                                  "turn right",
-                                                  "traffic lights",
-                                                  "block",
-                                                  "subway station"
-                                              ],
-                        "xp_recompensa":  60
-                    },
-                    {
-                        "id":  "dial_003",
-                        "titulo":  "Job Interview",
-                        "icone":  "ðŸ’¼",
-                        "nivel":  "B1",
-                        "contexto":  "You are at a job interview for a marketing position in a company.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Interviewer",
-                                          "frase":  "Good morning! Please take a seat. Can you tell me a little about yourself?",
-                                          "traducao":  "Bom dia! Por favor, sente-se. VocÃª pode me contar um pouco sobre si mesmo?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "You",
-                                          "frase":  "Good morning! Of course. I have five years of experience in digital marketing.",
-                                          "traducao":  "Bom dia! Claro. Tenho cinco anos de experiÃªncia em marketing digital.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Good morning! Of course. I have five years of experience in digital marketing.",
-                                                               "I need this job. I am very poor.",
-                                                               "I don\u0027t know much about marketing but I learn fast.",
-                                                               "Can I ask the questions instead?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Interviewer",
-                                          "frase":  "Excellent! Why do you want to work for our company specifically?",
-                                          "traducao":  "Excelente! Por que vocÃª quer trabalhar especificamente na nossa empresa?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "You",
-                                          "frase":  "I admire your company\u0027s focus on innovation and its strong values. I believe I can contribute significantly.",
-                                          "traducao":  "Admiro o foco da sua empresa em inovaÃ§Ã£o e seus fortes valores. Acredito que posso contribuir significativamente.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I admire your company\u0027s focus on innovation and its strong values. I believe I can contribute significantly.",
-                                                               "Because it pays well and it\u0027s close to my house.",
-                                                               "I applied to many companies. This was one of them.",
-                                                               "I don\u0027t know much about your company."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Interviewer",
-                                          "frase":  "That\u0027s great to hear. Do you have any questions for us?",
-                                          "traducao":  "Ã“timo ouvir isso. VocÃª tem alguma pergunta para nÃ³s?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "You",
-                                          "frase":  "Yes. What does career progression look like in this role?",
-                                          "traducao":  "Sim. Como Ã© a progressÃ£o de carreira nessa funÃ§Ã£o?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes. What does career progression look like in this role?",
-                                                               "How many holidays do I get?",
-                                                               "When will I get promoted?",
-                                                               "No questions. Just give me the job."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "experience",
-                                                  "innovation",
-                                                  "values",
-                                                  "contribute",
-                                                  "career progression",
-                                                  "role"
-                                              ],
-                        "xp_recompensa":  70
-                    },
-                    {
-                        "id":  "dial_004",
-                        "titulo":  "Checking into a Hotel",
-                        "icone":  "ðŸ¨",
-                        "nivel":  "A1",
-                        "contexto":  "You arrive at a hotel in Miami to check in for your vacation.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Receptionist",
-                                          "frase":  "Good afternoon! Welcome to the Ocean Hotel. How can I help you?",
-                                          "traducao":  "Boa tarde! Bem-vindo ao Ocean Hotel. Como posso ajudar?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Hello. I have a reservation under the name John Smith.",
-                                          "traducao":  "OlÃ¡. Eu tenho uma reserva no nome de John Smith.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Hello. I have a reservation under the name John Smith.",
-                                                               "I want a room now.",
-                                                               "Where is the beach?",
-                                                               "Can I sleep here?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Receptionist",
-                                          "frase":  "Let me check. Yes, Mr. Smith. A double room for three nights. Can I see your passport, please?",
-                                          "traducao":  "Deixe-me verificar. Sim, Sr. Smith. Um quarto de casal por trÃªs noites. Posso ver seu passaporte, por favor?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Here is my passport. Is breakfast included?",
-                                          "traducao":  "Aqui estÃ¡ meu passaporte. O cafÃ© da manhÃ£ estÃ¡ incluÃ­do?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Here is my passport. Is breakfast included?",
-                                                               "No, I don\u0027t have it.",
-                                                               "I don\u0027t eat breakfast.",
-                                                               "Why do you need my passport?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Receptionist",
-                                          "frase":  "Yes, breakfast is served from 7 AM to 10 AM. Here is your room key.",
-                                          "traducao":  "Sim, o cafÃ© da manhÃ£ Ã© servido das 7h Ã s 10h. Aqui estÃ¡ a chave do seu quarto.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Thank you. What floor is my room on?",
-                                          "traducao":  "Obrigado. Em que andar fica meu quarto?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Thank you. What floor is my room on?",
-                                                               "I want a different room.",
-                                                               "Are there ghosts here?",
-                                                               "Goodbye."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Receptionist",
-                                          "frase":  "You are on the fifth floor. The elevators are to your right.",
-                                          "traducao":  "VocÃª estÃ¡ no quinto andar. Os elevadores ficam Ã  sua direita.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Great, thank you very much!",
-                                          "traducao":  "Ã“timo, muito obrigado!",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Great, thank you very much!",
-                                                               "I don\u0027t like elevators.",
-                                                               "Carry my bags for me.",
-                                                               "What is a floor?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "reservation",
-                                                  "room",
-                                                  "passport",
-                                                  "breakfast",
-                                                  "key",
-                                                  "floor",
-                                                  "elevator"
-                                              ],
-                        "xp_recompensa":  50
-                    },
-                    {
-                        "id":  "dial_005",
-                        "titulo":  "Grocery Shopping",
-                        "icone":  "ðŸ›’",
-                        "nivel":  "A1",
-                        "contexto":  "You are at a local grocery store trying to find some items and pay.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Excuse me, where can I find the fresh fruit?",
-                                          "traducao":  "Com licenÃ§a, onde posso encontrar as frutas frescas?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Excuse me, where can I find the fresh fruit?",
-                                                               "I want apples.",
-                                                               "Where is the food?",
-                                                               "Give me fruit."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Clerk",
-                                          "frase":  "The fresh fruit is in aisle three, next to the vegetables.",
-                                          "traducao":  "As frutas frescas estÃ£o no corredor trÃªs, ao lado dos vegetais.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Thank you. Do you also sell fresh bread here?",
-                                          "traducao":  "Obrigado. VocÃªs tambÃ©m vendem pÃ£o fresco aqui?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Thank you. Do you also sell fresh bread here?",
-                                                               "I don\u0027t like vegetables.",
-                                                               "What about water?",
-                                                               "Aisle three is too far."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Clerk",
-                                          "frase":  "Yes, our bakery is at the back of the store.",
-                                          "traducao":  "Sim, nossa padaria fica nos fundos da loja.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Perfect. I\u0027ll go there now.",
-                                          "traducao":  "Perfeito. Eu vou para lÃ¡ agora.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Perfect. I\u0027ll go there now.",
-                                                               "I\u0027m not going to the back.",
-                                                               "Is it free?",
-                                                               "Never mind."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Cashier",
-                                          "frase":  "Did you find everything you needed today?",
-                                          "traducao":  "VocÃª encontrou tudo o que precisava hoje?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Yes, I did. How much is the total?",
-                                          "traducao":  "Sim, encontrei. Quanto Ã© o total?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes, I did. How much is the total?",
-                                                               "No, your store is bad.",
-                                                               "I just want to leave.",
-                                                               "Are you the cashier?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Cashier",
-                                          "frase":  "That will be fourteen dollars and fifty cents. Cash or card?",
-                                          "traducao":  "Fica quatorze dÃ³lares e cinquenta centavos. Dinheiro ou cartÃ£o?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  9,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I\u0027ll pay with a card. Here you go.",
-                                          "traducao":  "Eu vou pagar com cartÃ£o. Aqui estÃ¡.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I\u0027ll pay with a card. Here you go.",
-                                                               "I have no money.",
-                                                               "Is it free?",
-                                                               "Take my cash."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "fruit",
-                                                  "aisle",
-                                                  "vegetables",
-                                                  "bread",
-                                                  "bakery",
-                                                  "cashier",
-                                                  "total"
-                                              ],
-                        "xp_recompensa":  50
-                    },
-                    {
-                        "id":  "dial_006",
-                        "titulo":  "Meeting a New Friend",
-                        "icone":  "ðŸ‘‹",
-                        "nivel":  "A1",
-                        "contexto":  "You are at a language class and introduce yourself to the person sitting next to you.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Hi! Is this seat taken?",
-                                          "traducao":  "Oi! Este lugar estÃ¡ ocupado?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Hi! Is this seat taken?",
-                                                               "Move, I want to sit here.",
-                                                               "What is your name?",
-                                                               "I hate this class."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Classmate",
-                                          "frase":  "No, it\u0027s free. You can sit here. My name is Alex.",
-                                          "traducao":  "NÃ£o, estÃ¡ livre. VocÃª pode sentar aqui. Meu nome Ã© Alex.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Nice to meet you, Alex. I\u0027m Carlos. Where are you from?",
-                                          "traducao":  "Prazer em conhecÃª-lo, Alex. Eu sou Carlos. De onde vocÃª Ã©?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Nice to meet you, Alex. I\u0027m Carlos. Where are you from?",
-                                                               "I don\u0027t care.",
-                                                               "Are you the teacher?",
-                                                               "I am from Mars."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Classmate",
-                                          "frase":  "I\u0027m from Canada. And you? You sound like you might be from Brazil.",
-                                          "traducao":  "Sou do CanadÃ¡. E vocÃª? Parece que vocÃª talvez seja do Brasil.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Yes, that\u0027s right! I\u0027m from SÃ£o Paulo. Have you ever been to Brazil?",
-                                          "traducao":  "Sim, isso mesmo! Sou de SÃ£o Paulo. VocÃª jÃ¡ esteve no Brasil?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes, that\u0027s right! I\u0027m from SÃ£o Paulo. Have you ever been to Brazil?",
-                                                               "No, I am from Canada too.",
-                                                               "Brazil is hot.",
-                                                               "Why are you asking?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Classmate",
-                                          "frase":  "No, but I really want to go! What do you like to do in your free time?",
-                                          "traducao":  "NÃ£o, mas eu quero muito ir! O que vocÃª gosta de fazer no seu tempo livre?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I love playing soccer and watching movies. How about you?",
-                                          "traducao":  "Eu adoro jogar futebol e assistir a filmes. E vocÃª?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I love playing soccer and watching movies. How about you?",
-                                                               "I sleep all day.",
-                                                               "Nothing.",
-                                                               "I am a student."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Classmate",
-                                          "frase":  "I enjoy reading and hiking. It\u0027s nice to meet you, Carlos!",
-                                          "traducao":  "Eu gosto de ler e fazer trilha. Prazer em conhecÃª-lo, Carlos!",
-                                          "audio_ipa":  ""
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "seat",
-                                                  "nice to meet you",
-                                                  "where are you from",
-                                                  "free time",
-                                                  "movies"
-                                              ],
-                        "xp_recompensa":  50
-                    },
-                    {
-                        "id":  "dial_007",
-                        "titulo":  "At the Doctor\u0027s Office",
-                        "icone":  "ðŸ©º",
-                        "nivel":  "A2",
-                        "contexto":  "You are feeling unwell and have an appointment to see a doctor.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Doctor",
-                                          "frase":  "Good morning. Please come in and have a seat. What seems to be the problem today?",
-                                          "traducao":  "Bom dia. Por favor, entre e sente-se. Qual parece ser o problema hoje?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Good morning, doctor. I\u0027ve been feeling terrible since yesterday. I have a headache and a fever.",
-                                          "traducao":  "Bom dia, doutor. Tenho me sentido pÃ©ssimo desde ontem. Estou com dor de cabeÃ§a e febre.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Good morning, doctor. I\u0027ve been feeling terrible since yesterday. I have a headache and a fever.",
-                                                               "I am fine, just visiting.",
-                                                               "I want some candy.",
-                                                               "Where is the hospital?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Doctor",
-                                          "frase":  "I see. Let me check your temperature. Yes, you have a slight fever. Do you have a sore throat or a cough?",
-                                          "traducao":  "Entendo. Deixe-me checar sua temperatura. Sim, vocÃª tem uma febre leve. VocÃª tem dor de garganta ou tosse?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Yes, my throat hurts a little bit when I swallow, but no cough.",
-                                          "traducao":  "Sim, minha garganta dÃ³i um pouco quando eu engulo, mas sem tosse.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes, my throat hurts a little bit when I swallow, but no cough.",
-                                                               "My leg is broken.",
-                                                               "I eat too much ice cream.",
-                                                               "What is a cough?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Doctor",
-                                          "frase":  "It looks like a mild viral infection. I\u0027m going to prescribe you some medicine to help with the fever and the pain.",
-                                          "traducao":  "Parece uma infecÃ§Ã£o viral leve. Vou lhe prescrever um remÃ©dio para ajudar com a febre e a dor.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Thank you. How often should I take the medicine?",
-                                          "traducao":  "Obrigado. Com que frequÃªncia devo tomar o remÃ©dio?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Thank you. How often should I take the medicine?",
-                                                               "I hate pills.",
-                                                               "Is it sweet?",
-                                                               "Can I just sleep?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Doctor",
-                                          "frase":  "Take one pill every eight hours, and make sure to drink plenty of water and get some rest.",
-                                          "traducao":  "Tome um comprimido a cada oito horas, e certifique-se de beber bastante Ã¡gua e descansar um pouco.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I will do that. Thank you for your help, doctor.",
-                                          "traducao":  "Eu farei isso. Obrigado pela sua ajuda, doutor.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I will do that. Thank you for your help, doctor.",
-                                                               "No, I will go to a party.",
-                                                               "I don\u0027t drink water.",
-                                                               "See you tomorrow."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "fever",
-                                                  "headache",
-                                                  "sore throat",
-                                                  "cough",
-                                                  "medicine",
-                                                  "pill",
-                                                  "rest"
-                                              ],
-                        "xp_recompensa":  60
-                    },
-                    {
-                        "id":  "dial_008",
-                        "titulo":  "Airport Check-in",
-                        "icone":  "âœˆï¸",
-                        "nivel":  "A2",
-                        "contexto":  "You are at the airport counter checking in for an international flight.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Good morning. Can I see your passport and ticket, please?",
-                                          "traducao":  "Bom dia. Posso ver seu passaporte e passagem, por favor?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Good morning. Here you go. I\u0027m flying to London.",
-                                          "traducao":  "Bom dia. Aqui estÃ£o. Estou voando para Londres.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Good morning. Here you go. I\u0027m flying to London.",
-                                                               "I want to fly.",
-                                                               "Where is the airplane?",
-                                                               "No, I don\u0027t have a passport."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Thank you. Are you checking any bags today?",
-                                          "traducao":  "Obrigado. VocÃª vai despachar alguma mala hoje?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Yes, just this one suitcase. I also have a carry-on bag.",
-                                          "traducao":  "Sim, apenas esta mala. Eu tambÃ©m tenho uma bagagem de mÃ£o.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes, just this one suitcase. I also have a carry-on bag.",
-                                                               "I have ten bags.",
-                                                               "What is a bag?",
-                                                               "No, I am taking everything with me."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Please place your suitcase on the scale. Hmm, it\u0027s slightly over the weight limit, but I\u0027ll let it pass this time.",
-                                          "traducao":  "Por favor, coloque sua mala na balanÃ§a. Hmm, estÃ¡ um pouco acima do limite de peso, mas vou deixar passar desta vez.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Oh, thank you so much! I appreciate it.",
-                                          "traducao":  "Ah, muito obrigado! Eu agradeÃ§o.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Oh, thank you so much! I appreciate it.",
-                                                               "It\u0027s not heavy.",
-                                                               "I don\u0027t care.",
-                                                               "You are wrong."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Would you prefer a window or an aisle seat?",
-                                          "traducao":  "VocÃª prefere um assento na janela ou no corredor?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "An aisle seat, please. It\u0027s a long flight.",
-                                          "traducao":  "Um assento no corredor, por favor. Ã‰ um voo longo.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "An aisle seat, please. It\u0027s a long flight.",
-                                                               "I want to sit outside.",
-                                                               "Is there a bed?",
-                                                               "I don\u0027t want a seat."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  9,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Here is your boarding pass. Your gate is B12, and boarding starts at 10:30. Have a nice flight!",
-                                          "traducao":  "Aqui estÃ¡ seu cartÃ£o de embarque. Seu portÃ£o Ã© o B12, e o embarque comeÃ§a Ã s 10:30. Tenha um bom voo!",
-                                          "audio_ipa":  ""
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "passport",
-                                                  "ticket",
-                                                  "check in",
-                                                  "suitcase",
-                                                  "carry-on",
-                                                  "boarding pass",
-                                                  "gate"
-                                              ],
-                        "xp_recompensa":  60
-                    },
-                    {
-                        "id":  "dial_009",
-                        "titulo":  "Ordering at a Restaurant",
-                        "icone":  "ðŸ",
-                        "nivel":  "A2",
-                        "contexto":  "You are having dinner at a nice Italian restaurant.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Waiter",
-                                          "frase":  "Good evening! Are you ready to order, or do you need a few more minutes?",
-                                          "traducao":  "Boa noite! VocÃªs estÃ£o prontos para pedir, ou precisam de mais alguns minutos?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I think we are ready. To start, we\u0027ll have the garlic bread, please.",
-                                          "traducao":  "Acho que estamos prontos. Para comeÃ§ar, vamos querer o pÃ£o de alho, por favor.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I think we are ready. To start, we\u0027ll have the garlic bread, please.",
-                                                               "Give me food now.",
-                                                               "What is food?",
-                                                               "No, we just want to look."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Waiter",
-                                          "frase":  "Excellent choice. And for your main course?",
-                                          "traducao":  "Excelente escolha. E como prato principal?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I\u0027ll have the spaghetti bolognese, but without cheese. I am allergic to dairy.",
-                                          "traducao":  "Eu vou querer o espaguete Ã  bolonhesa, mas sem queijo. Tenho alergia a laticÃ­nios.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I\u0027ll have the spaghetti bolognese, but without cheese. I am allergic to dairy.",
-                                                               "I want pizza with everything.",
-                                                               "Can I cook my own food?",
-                                                               "I am allergic to water."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Waiter",
-                                          "frase":  "Noted, no cheese on the spaghetti. And what would you like to drink?",
-                                          "traducao":  "Anotado, sem queijo no espaguete. E o que vocÃªs gostariam de beber?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Just sparkling water for me, please.",
-                                          "traducao":  "Apenas Ã¡gua com gÃ¡s para mim, por favor.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Just sparkling water for me, please.",
-                                                               "I want wine from 1950.",
-                                                               "Do you have sea water?",
-                                                               "I will drink later."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Waiter",
-                                          "frase":  "Alright. Your food will be ready shortly. Let me know if you need anything else.",
-                                          "traducao":  "Tudo bem. A comida de vocÃªs estarÃ¡ pronta em breve. Me avisem se precisarem de mais alguma coisa.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Actually, could we get the bill after the meal? We\u0027re in a bit of a hurry.",
-                                          "traducao":  "Na verdade, poderÃ­amos pedir a conta depois da refeiÃ§Ã£o? Estamos com um pouco de pressa.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Actually, could we get the bill after the meal? We\u0027re in a bit of a hurry.",
-                                                               "Can I pay tomorrow?",
-                                                               "I am not paying.",
-                                                               "Where is the exit?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "order",
-                                                  "main course",
-                                                  "allergic",
-                                                  "dairy",
-                                                  "sparkling water",
-                                                  "bill",
-                                                  "hurry"
-                                              ],
-                        "xp_recompensa":  60
-                    },
-                    {
-                        "id":  "dial_010",
-                        "titulo":  "Making Plans for the Weekend",
-                        "icone":  "ðŸ“…",
-                        "nivel":  "B1",
-                        "contexto":  "You are talking to a colleague about plans for the upcoming weekend.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Colleague",
-                                          "frase":  "Hey! Do you have any plans for this Saturday? A few of us are going hiking.",
-                                          "traducao":  "Ei! VocÃª tem algum plano para este sÃ¡bado? Alguns de nÃ³s vamos fazer trilha.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "That sounds like a lot of fun, but I already have plans. I\u0027m helping my brother move.",
-                                          "traducao":  "Parece muito divertido, mas eu jÃ¡ tenho planos. Vou ajudar meu irmÃ£o com a mudanÃ§a.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "That sounds like a lot of fun, but I already have plans. I\u0027m helping my brother move.",
-                                                               "No, I don\u0027t want to see you.",
-                                                               "Hiking is for crazy people.",
-                                                               "I work on Saturdays."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Colleague",
-                                          "frase":  "Oh, moving is always exhausting! How about Sunday? Are you free to grab dinner?",
-                                          "traducao":  "Ah, mudanÃ§a Ã© sempre cansativo! Que tal domingo? VocÃª estÃ¡ livre para jantar?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Sunday evening works perfectly for me. What kind of food were you thinking of?",
-                                          "traducao":  "Domingo Ã  noite Ã© perfeito para mim. Que tipo de comida vocÃª estava pensando?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Sunday evening works perfectly for me. What kind of food were you thinking of?",
-                                                               "I am busy for the next five years.",
-                                                               "I don\u0027t eat food.",
-                                                               "Sunday is bad. Let\u0027s do Monday at 3 AM."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Colleague",
-                                          "frase":  "I was thinking we could try that new Mexican place downtown. I heard the tacos are amazing.",
-                                          "traducao":  "Eu estava pensando em tentarmos aquele novo restaurante mexicano no centro. Ouvi dizer que os tacos sÃ£o incrÃ­veis.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I\u0027m definitely up for that! Should we meet there around 7 PM?",
-                                          "traducao":  "Eu super topo! Devemos nos encontrar lÃ¡ por volta das 19h?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I\u0027m definitely up for that! Should we meet there around 7 PM?",
-                                                               "Mexican food is terrible.",
-                                                               "Let\u0027s meet at midnight.",
-                                                               "I prefer staying home."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Colleague",
-                                          "frase":  "7 PM sounds great. I\u0027ll make a reservation just in case it\u0027s busy.",
-                                          "traducao":  "19h parece Ã³timo. Vou fazer uma reserva caso esteja cheio.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Awesome. Thanks for organizing it. See you on Sunday!",
-                                          "traducao":  "IncrÃ­vel. Obrigado por organizar. Te vejo no domingo!",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Awesome. Thanks for organizing it. See you on Sunday!",
-                                                               "Whatever. Bye.",
-                                                               "You are paying, right?",
-                                                               "I might not show up."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "plans",
-                                                  "hiking",
-                                                  "exhausting",
-                                                  "grab dinner",
-                                                  "downtown",
-                                                  "up for that",
-                                                  "reservation"
-                                              ],
-                        "xp_recompensa":  70
-                    },
-                    {
-                        "id":  "dial_011",
-                        "titulo":  "Calling Customer Service",
-                        "icone":  "ðŸ“ž",
-                        "nivel":  "B1",
-                        "contexto":  "You are calling an online store\u0027s customer service about a broken item you received.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Thank you for calling TechStore support. My name is Sarah. How can I assist you today?",
-                                          "traducao":  "Obrigada por ligar para o suporte da TechStore. Meu nome Ã© Sarah. Como posso ajudÃ¡-lo hoje?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Hi Sarah. I recently ordered a laptop from your website, but it arrived with a cracked screen.",
-                                          "traducao":  "Oi Sarah. Eu encomendei recentemente um notebook do seu site, mas ele chegou com a tela rachada.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Hi Sarah. I recently ordered a laptop from your website, but it arrived with a cracked screen.",
-                                                               "You broke my laptop! I am angry!",
-                                                               "I want to buy a TV.",
-                                                               "Can you fix my car?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Agent",
-                                          "frase":  "I\u0027m so sorry to hear that. We definitely want to make this right. Do you have your order number handy?",
-                                          "traducao":  "Sinto muito em ouvir isso. NÃ³s definitivamente queremos consertar isso. VocÃª tem o nÃºmero do seu pedido em mÃ£os?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Yes, it\u0027s TS-849302. I would like to request a replacement as soon as possible.",
-                                          "traducao":  "Sim, Ã© TS-849302. Gostaria de solicitar uma substituiÃ§Ã£o o mais rÃ¡pido possÃ­vel.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes, it\u0027s TS-849302. I would like to request a replacement as soon as possible.",
-                                                               "No, I lost it. Find it yourself.",
-                                                               "I want a million dollars instead.",
-                                                               "I don\u0027t know what an order number is."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Thank you. I\u0027ve pulled up your account. We can ship a replacement immediately, and email you a return label for the damaged one.",
-                                          "traducao":  "Obrigada. Abri sua conta. Podemos enviar uma substituiÃ§Ã£o imediatamente, e enviar por e-mail uma etiqueta de devoluÃ§Ã£o para o danificado.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "That sounds perfect. Will I have to pay for the return shipping?",
-                                          "traducao":  "Parece perfeito. Eu terei que pagar pelo frete de devoluÃ§Ã£o?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "That sounds perfect. Will I have to pay for the return shipping?",
-                                                               "Are you going to pay me?",
-                                                               "I want to keep both.",
-                                                               "I\u0027m not sending it back."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Agent",
-                                          "frase":  "Not at all. The return shipping is completely covered by us. You should receive the email shortly.",
-                                          "traducao":  "De forma alguma. O frete de devoluÃ§Ã£o Ã© totalmente coberto por nÃ³s. VocÃª deve receber o e-mail em breve.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I appreciate your quick help with this issue. Have a good day!",
-                                          "traducao":  "AgradeÃ§o sua ajuda rÃ¡pida com este problema. Tenha um bom dia!",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I appreciate your quick help with this issue. Have a good day!",
-                                                               "This is unacceptable.",
-                                                               "I am still angry.",
-                                                               "Whatever."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "customer service",
-                                                  "cracked screen",
-                                                  "order number",
-                                                  "replacement",
-                                                  "return label",
-                                                  "shipping",
-                                                  "covered"
-                                              ],
-                        "xp_recompensa":  70
-                    },
-                    {
-                        "id":  "dial_012",
-                        "titulo":  "Renting an Apartment",
-                        "icone":  "ðŸ ",
-                        "nivel":  "B1",
-                        "contexto":  "You are touring a one-bedroom apartment with a landlord and asking about the lease.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Landlord",
-                                          "frase":  "So, this is the main living area. As you can see, it gets plenty of natural light.",
-                                          "traducao":  "EntÃ£o, esta Ã© a Ã¡rea de estar principal. Como vocÃª pode ver, recebe bastante luz natural.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "It\u0027s very spacious. Are the utilities included in the monthly rent?",
-                                          "traducao":  "Ã‰ muito espaÃ§oso. As contas (Ã¡gua, luz, etc) estÃ£o incluÃ­das no aluguel mensal?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "It\u0027s very spacious. Are the utilities included in the monthly rent?",
-                                                               "I hate natural light.",
-                                                               "Where do I sleep?",
-                                                               "Can I break the walls?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Landlord",
-                                          "frase":  "Water and trash collection are included, but you\u0027ll have to pay for electricity and internet separately.",
-                                          "traducao":  "Ãgua e coleta de lixo estÃ£o incluÃ­das, mas vocÃª terÃ¡ que pagar pela eletricidade e internet separadamente.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "That\u0027s reasonable. And what about the security deposit? How much is it?",
-                                          "traducao":  "Isso Ã© razoÃ¡vel. E quanto ao depÃ³sito de seguranÃ§a (cauÃ§Ã£o)? Quanto Ã©?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "That\u0027s reasonable. And what about the security deposit? How much is it?",
-                                                               "I won\u0027t pay for electricity.",
-                                                               "I don\u0027t need internet.",
-                                                               "You should pay me to live here."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Landlord",
-                                          "frase":  "The security deposit is equal to one month\u0027s rent. It\u0027s fully refundable at the end of the lease, provided there\u0027s no damage.",
-                                          "traducao":  "O depÃ³sito de seguranÃ§a Ã© igual a um mÃªs de aluguel. Ã‰ totalmente reembolsÃ¡vel no final do contrato, desde que nÃ£o haja danos.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Understood. And what is the neighborhood like in terms of safety and noise?",
-                                          "traducao":  "Entendido. E como Ã© o bairro em termos de seguranÃ§a e barulho?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Understood. And what is the neighborhood like in terms of safety and noise?",
-                                                               "I am going to damage everything.",
-                                                               "Do you have a pet tiger?",
-                                                               "I love noisy places."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Landlord",
-                                          "frase":  "It\u0027s a very quiet residential area. There\u0027s a grocery store two blocks away, and crime rates are extremely low.",
-                                          "traducao":  "Ã‰ uma Ã¡rea residencial muito tranquila. Tem um supermercado a dois quarteirÃµes de distÃ¢ncia, e os Ã­ndices de criminalidade sÃ£o extremamente baixos.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "It sounds exactly like what I\u0027m looking for. I\u0027d like to fill out an application.",
-                                          "traducao":  "Parece exatamente com o que estou procurando. Eu gostaria de preencher uma ficha de inscriÃ§Ã£o.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "It sounds exactly like what I\u0027m looking for. I\u0027d like to fill out an application.",
-                                                               "I hate quiet places.",
-                                                               "I\u0027m not interested anymore.",
-                                                               "Can you fill it out for me?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "utilities",
-                                                  "rent",
-                                                  "security deposit",
-                                                  "refundable",
-                                                  "lease",
-                                                  "neighborhood",
-                                                  "application"
-                                              ],
-                        "xp_recompensa":  70
-                    },
-                    {
-                        "id":  "dial_013",
-                        "titulo":  "Team Brainstorming",
-                        "icone":  "ðŸ’¡",
-                        "nivel":  "B2",
-                        "contexto":  "You are in a corporate meeting discussing ways to improve the team\u0027s workflow.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Manager",
-                                          "frase":  "Alright team, we\u0027ve been missing some deadlines lately. We need to streamline our workflow. Any suggestions?",
-                                          "traducao":  "Certo equipe, temos perdido alguns prazos ultimamente. Precisamos otimizar nosso fluxo de trabalho. Alguma sugestÃ£o?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I believe part of the issue is poor communication between departments. Perhaps we could implement a unified project management tool.",
-                                          "traducao":  "Eu acredito que parte do problema Ã© a mÃ¡ comunicaÃ§Ã£o entre os departamentos. Talvez pudÃ©ssemos implementar uma ferramenta unificada de gerenciamento de projetos.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I believe part of the issue is poor communication between departments. Perhaps we could implement a unified project management tool.",
-                                                               "It\u0027s not my fault. Everyone else is slow.",
-                                                               "We should just work on weekends.",
-                                                               "I think we are doing fine."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Colleague",
-                                          "frase":  "I\u0027m not entirely convinced that a new tool will solve the root cause. It might just add to the learning curve.",
-                                          "traducao":  "NÃ£o estou totalmente convencido de que uma nova ferramenta resolverÃ¡ a causa raiz. Pode apenas aumentar a curva de aprendizado.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I understand your concern, but a standardized platform would eliminate the endless email threads and centralize our tasks.",
-                                          "traducao":  "Eu entendo sua preocupaÃ§Ã£o, mas uma plataforma padronizada eliminaria as interminÃ¡veis threads de e-mail e centralizaria nossas tarefas.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I understand your concern, but a standardized platform would eliminate the endless email threads and centralize our tasks.",
-                                                               "You are wrong and I am right.",
-                                                               "Nobody likes reading emails anyway.",
-                                                               "Then we should just quit."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Manager",
-                                          "frase":  "That\u0027s a fair point. However, rolling out a new software requires training. How do you propose we handle the transition?",
-                                          "traducao":  "Ã‰ um ponto vÃ¡lido. No entanto, lanÃ§ar um novo software requer treinamento. Como vocÃª propÃµe que lidemos com a transiÃ§Ã£o?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "We could run a pilot phase with a single team first to gauge its effectiveness before scaling it company-wide.",
-                                          "traducao":  "PoderÃ­amos executar uma fase piloto com uma Ãºnica equipe primeiro para avaliar sua eficÃ¡cia antes de dimensionÃ¡-la para toda a empresa.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "We could run a pilot phase with a single team first to gauge its effectiveness before scaling it company-wide.",
-                                                               "Just force everyone to use it immediately.",
-                                                               "Let the IT department figure it out.",
-                                                               "Training is a waste of time."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Manager",
-                                          "frase":  "A pilot phase sounds like a pragmatic approach. Can you draft a brief proposal by Friday so we can review the logistics?",
-                                          "traducao":  "Uma fase piloto parece uma abordagem pragmÃ¡tica. VocÃª pode redigir uma breve proposta atÃ© sexta-feira para que possamos revisar a logÃ­stica?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Absolutely. I\u0027ll outline the key metrics for success and have it on your desk by Thursday afternoon.",
-                                          "traducao":  "Com certeza. EsboÃ§arei as principais mÃ©tricas de sucesso e entregarei na sua mesa atÃ© quinta-feira Ã  tarde.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Absolutely. I\u0027ll outline the key metrics for success and have it on your desk by Thursday afternoon.",
-                                                               "I don\u0027t have time for that.",
-                                                               "Maybe someone else should do it.",
-                                                               "I\u0027m going on vacation on Friday."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "deadlines",
-                                                  "streamline",
-                                                  "workflow",
-                                                  "unified",
-                                                  "learning curve",
-                                                  "standardized",
-                                                  "pilot phase",
-                                                  "metrics"
-                                              ],
-                        "xp_recompensa":  80
-                    },
-                    {
-                        "id":  "dial_014",
-                        "titulo":  "Negotiating a Salary",
-                        "icone":  "ðŸ“ˆ",
-                        "nivel":  "B2",
-                        "contexto":  "You have received a job offer, but you are negotiating the base salary with HR.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "HR Representative",
-                                          "frase":  "We were very impressed with your interviews, and we\u0027d like to offer you the position with a starting salary of $65,000.",
-                                          "traducao":  "Ficamos muito impressionados com suas entrevistas e gostarÃ­amos de lhe oferecer a vaga com um salÃ¡rio inicial de US$ 65.000.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I\u0027m thrilled to receive the offer. However, based on my specialized skill set and market research, I was expecting something closer to $75,000.",
-                                          "traducao":  "Estou emocionado em receber a oferta. No entanto, com base no meu conjunto de habilidades especializadas e pesquisa de mercado, eu estava esperando algo mais prÃ³ximo de US$ 75.000.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I\u0027m thrilled to receive the offer. However, based on my specialized skill set and market research, I was expecting something closer to $75,000.",
-                                                               "Are you joking? That\u0027s too low.",
-                                                               "I accept! Thank you!",
-                                                               "I want a million dollars."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "HR Representative",
-                                          "frase":  "I understand where you\u0027re coming from. Unfortunately, $75,000 is slightly above the budget allocated for this specific role.",
-                                          "traducao":  "Eu entendo seu ponto de vista. Infelizmente, US$ 75.000 estÃ¡ ligeiramente acima do orÃ§amento alocado para esta funÃ§Ã£o especÃ­fica.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "I see. If the base salary is inflexible, would you be open to negotiating additional benefits, such as extra vacation days or a sign-on bonus?",
-                                          "traducao":  "Entendo. Se o salÃ¡rio-base Ã© inflexÃ­vel, vocÃªs estariam abertos a negociar benefÃ­cios adicionais, como dias extras de fÃ©rias ou um bÃ´nus de contrataÃ§Ã£o?",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "I see. If the base salary is inflexible, would you be open to negotiating additional benefits, such as extra vacation days or a sign-on bonus?",
-                                                               "Then I reject the offer immediately.",
-                                                               "Fine, I will just take the $65,000.",
-                                                               "Can I at least have free coffee?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "HR Representative",
-                                          "frase":  "We do have some leeway with the sign-on bonus. I could authorize a $5,000 bonus, bringing your first-year total compensation to $70,000.",
-                                          "traducao":  "NÃ³s temos alguma margem de manobra com o bÃ´nus de contrataÃ§Ã£o. Eu poderia autorizar um bÃ´nus de US$ 5.000, elevando sua remuneraÃ§Ã£o total no primeiro ano para US$ 70.000.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "That sounds like a fair compromise. I would be happy to accept the offer under those terms.",
-                                          "traducao":  "Parece um acordo justo. Eu ficaria feliz em aceitar a oferta sob esses termos.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "That sounds like a fair compromise. I would be happy to accept the offer under those terms.",
-                                                               "I still want $75,000.",
-                                                               "You are very stingy.",
-                                                               "I will think about it for a month."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "HR Representative",
-                                          "frase":  "Wonderful! I\u0027ll update the employment contract and send it over to you by the end of the day.",
-                                          "traducao":  "Maravilha! Vou atualizar o contrato de trabalho e enviÃ¡-lo para vocÃª atÃ© o final do dia.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Excellent. I look forward to reviewing the contract and joining the team.",
-                                          "traducao":  "Excelente. Estou ansioso para revisar o contrato e me juntar Ã  equipe.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Excellent. I look forward to reviewing the contract and joining the team.",
-                                                               "Don\u0027t forget the bonus.",
-                                                               "I might still look for other jobs.",
-                                                               "Goodbye."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "offer",
-                                                  "starting salary",
-                                                  "specialized skill set",
-                                                  "budget allocated",
-                                                  "inflexible",
-                                                  "sign-on bonus",
-                                                  "leeway",
-                                                  "compromise"
-                                              ],
-                        "xp_recompensa":  80
-                    },
-                    {
-                        "id":  "dial_015",
-                        "titulo":  "Discussing the News",
-                        "icone":  "ðŸ“°",
-                        "nivel":  "B2",
-                        "contexto":  "You are having a nuanced discussion with a friend about a controversial new city policy.",
-                        "turni":  [
-                                      {
-                                          "id":  1,
-                                          "personaggio":  "Friend",
-                                          "frase":  "Did you read the article about the city council\u0027s decision to ban cars from the downtown area?",
-                                          "traducao":  "VocÃª leu o artigo sobre a decisÃ£o da cÃ¢mara municipal de proibir carros no centro da cidade?",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  2,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Yes, I did. While I appreciate their efforts to reduce emissions, I feel the rollout might be premature.",
-                                          "traducao":  "Sim, eu li. Embora eu aprecie seus esforÃ§os para reduzir as emissÃµes, sinto que a implementaÃ§Ã£o pode ser prematura.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Yes, I did. While I appreciate their efforts to reduce emissions, I feel the rollout might be premature.",
-                                                               "Cars are evil, ban them all.",
-                                                               "I don\u0027t watch the news.",
-                                                               "Who cares about the city center?"
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  3,
-                                          "personaggio":  "Friend",
-                                          "frase":  "I see your point, but proponents argue that drastic measures are necessary to tackle climate change effectively.",
-                                          "traducao":  "Entendo seu ponto, mas os defensores argumentam que medidas drÃ¡sticas sÃ£o necessÃ¡rias para combater as mudanÃ§as climÃ¡ticas de forma eficaz.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  4,
-                                          "personaggio":  "Tu",
-                                          "frase":  "That\u0027s undeniable. However, without significantly improving public transit infrastructure first, it will severely impact local businesses.",
-                                          "traducao":  "Isso Ã© inegÃ¡vel. No entanto, sem melhorar significativamente a infraestrutura de transporte pÃºblico primeiro, isso impactarÃ¡ severamente o comÃ©rcio local.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "That\u0027s undeniable. However, without significantly improving public transit infrastructure first, it will severely impact local businesses.",
-                                                               "Climate change isn\u0027t real anyway.",
-                                                               "Local businesses should just move.",
-                                                               "I don\u0027t know what public transit is."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  5,
-                                          "personaggio":  "Friend",
-                                          "frase":  "You make a compelling argument regarding the economic fallout. The transition definitely seems like a logistical nightmare.",
-                                          "traducao":  "VocÃª apresenta um argumento convincente em relaÃ§Ã£o Ã s consequÃªncias econÃ´micas. A transiÃ§Ã£o definitivamente parece um pesadelo logÃ­stico.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  6,
-                                          "personaggio":  "Tu",
-                                          "frase":  "Exactly. A phased approach, perhaps starting with restricting traffic solely on weekends, would be much more manageable.",
-                                          "traducao":  "Exatamente. Uma abordagem em fases, talvez comeÃ§ando com a restriÃ§Ã£o do trÃ¡fego apenas nos fins de semana, seria muito mais gerenciÃ¡vel.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "Exactly. A phased approach, perhaps starting with restricting traffic solely on weekends, would be much more manageable.",
-                                                               "They should just ban pedestrians instead.",
-                                                               "I think we should protest in the streets.",
-                                                               "Logistics are boring."
-                                                           ],
-                                          "resposta_correta":  0
-                                      },
-                                      {
-                                          "id":  7,
-                                          "personaggio":  "Friend",
-                                          "frase":  "That\u0027s a very sensible middle ground. It\u0027s a shame policies are rarely crafted with such nuance.",
-                                          "traducao":  "Isso Ã© um meio-termo muito sensato. Ã‰ uma pena que as polÃ­ticas raramente sejam elaboradas com tanta nuance.",
-                                          "audio_ipa":  ""
-                                      },
-                                      {
-                                          "id":  8,
-                                          "personaggio":  "Tu",
-                                          "frase":  "It really is. Let\u0027s hope they amend the legislation before it officially takes effect next month.",
-                                          "traducao":  "Ã‰ mesmo. Esperemos que eles alterem a legislaÃ§Ã£o antes que ela entre oficialmente em vigor no prÃ³ximo mÃªs.",
-                                          "audio_ipa":  "",
-                                          "alternativas":  [
-                                                               "It really is. Let\u0027s hope they amend the legislation before it officially takes effect next month.",
-                                                               "They will never change it.",
-                                                               "Politicians are all the same.",
-                                                               "I\u0027m just going to buy a bike."
-                                                           ],
-                                          "resposta_correta":  0
-                                      }
-                                  ],
-                        "vocabulario_chave":  [
-                                                  "ban",
-                                                  "emissions",
-                                                  "rollout",
-                                                  "premature",
-                                                  "proponents",
-                                                  "drastic measures",
-                                                  "public transit",
-                                                  "fallout",
-                                                  "phased approach",
-                                                  "amend"
-                                              ],
-                        "xp_recompensa":  80
-                    }
-                ]
+{
+  "dialogi": [
+    {
+      "id": "dial_001",
+      "titulo": "At the Coffee Shop",
+      "icone": "☕",
+      "nivel": "A1",
+      "contexto": "You walk into a coffee shop in New York to order a drink.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Barista",
+          "frase": "Hi there! What can I get for you?",
+          "traducao": "Olá! O que posso te servir?",
+          "audio_ipa": "/haɪ ðɛr/"
+        },
+        {
+          "id": 2,
+          "personaggio": "You",
+          "frase": "Hi! Can I have a large coffee, please?",
+          "traducao": "Olá! Posso pedir um café grande, por favor?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Hi! Can I have a large coffee, please?",
+            "I want coffee. Give me one.",
+            "One coffee. Now.",
+            "Do you have tea from Japan?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Barista",
+          "frase": "Of course! Would you like milk or sugar?",
+          "traducao": "Claro! Você gostaria de leite ou açúcar?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "You",
+          "frase": "Just a little milk, please. No sugar.",
+          "traducao": "Só um pouquinho de leite, por favor. Sem açúcar.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Just a little milk, please. No sugar.",
+            "Everything. Put everything in.",
+            "I don't like milk or coffee.",
+            "What is sugar?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Barista",
+          "frase": "That'll be three dollars fifty. Are you paying by card or cash?",
+          "traducao": "São três dólares e cinquenta. Você vai pagar com cartão ou dinheiro?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "You",
+          "frase": "By card, please.",
+          "traducao": "Com cartão, por favor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "By card, please.",
+            "I have no money.",
+            "Can you pay for me?",
+            "I only have euros."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Barista",
+          "frase": "Here you go! Have a great day!",
+          "traducao": "Aqui está! Tenha um ótimo dia!",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "You",
+          "frase": "Thank you! You too!",
+          "traducao": "Obrigado! Você também!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Thank you! You too!",
+            "Finally! It took too long.",
+            "Is this decaf?",
+            "I wanted tea."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "coffee",
+        "milk",
+        "sugar",
+        "card",
+        "cash",
+        "please",
+        "thank you"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_002",
+      "titulo": "Asking for Directions",
+      "icone": "🗺️",
+      "nivel": "A2",
+      "contexto": "You are lost in the city and need to find the nearest underground station.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "You",
+          "frase": "Excuse me, could you help me? I'm looking for the subway station.",
+          "traducao": "Com licença, você poderia me ajudar? Estou procurando a estação de metrô.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Excuse me, could you help me? I'm looking for the subway station.",
+            "Hey! Where is the train? Tell me now!",
+            "Do you know me? I am lost.",
+            "Can I borrow your phone?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 2,
+          "personaggio": "Stranger",
+          "frase": "Of course! It's not far. Go straight ahead for two blocks.",
+          "traducao": "Claro! Não é longe. Siga em frente por dois quarteirões.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Stranger",
+          "frase": "Then turn left at the traffic lights.",
+          "traducao": "Depois vire à esquerda no semáforo.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "You",
+          "frase": "Turn left at the traffic lights — got it. And then?",
+          "traducao": "Virar à esquerda no semáforo — entendido. E depois?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Turn left at the traffic lights — got it. And then?",
+            "I don't understand left or right.",
+            "Is it very far? I am tired.",
+            "Can you take me there?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Stranger",
+          "frase": "The station will be on your right. You can't miss it!",
+          "traducao": "A estação estará à sua direita. Não tem como errar!",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "You",
+          "frase": "Perfect, thank you so much! That's very kind of you.",
+          "traducao": "Perfeito, muito obrigado! É muito gentil da sua parte.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Perfect, thank you so much! That's very kind of you.",
+            "OK whatever.",
+            "This city is confusing.",
+            "I will use Google Maps instead."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Stranger",
+          "frase": "No problem at all. Good luck!",
+          "traducao": "Sem problema algum. Boa sorte!",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "straight ahead",
+        "turn left",
+        "turn right",
+        "traffic lights",
+        "block",
+        "subway station"
+      ],
+      "xp_recompensa": 60
+    },
+    {
+      "id": "dial_003",
+      "titulo": "Job Interview",
+      "icone": "💼",
+      "nivel": "B1",
+      "contexto": "You are at a job interview for a marketing position in a company.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Interviewer",
+          "frase": "Good morning! Please take a seat. Can you tell me a little about yourself?",
+          "traducao": "Bom dia! Por favor, sente-se. Você pode me contar um pouco sobre si mesmo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "You",
+          "frase": "Good morning! Of course. I have five years of experience in digital marketing.",
+          "traducao": "Bom dia! Claro. Tenho cinco anos de experiência em marketing digital.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Good morning! Of course. I have five years of experience in digital marketing.",
+            "I need this job. I am very poor.",
+            "I don't know much about marketing but I learn fast.",
+            "Can I ask the questions instead?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Interviewer",
+          "frase": "Excellent! Why do you want to work for our company specifically?",
+          "traducao": "Excelente! Por que você quer trabalhar especificamente na nossa empresa?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "You",
+          "frase": "I admire your company's focus on innovation and its strong values. I believe I can contribute significantly.",
+          "traducao": "Admiro o foco da sua empresa em inovação e seus fortes valores. Acredito que posso contribuir significativamente.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I admire your company's focus on innovation and its strong values. I believe I can contribute significantly.",
+            "Because it pays well and it's close to my house.",
+            "I applied to many companies. This was one of them.",
+            "I don't know much about your company."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Interviewer",
+          "frase": "That's great to hear. Do you have any questions for us?",
+          "traducao": "Ótimo ouvir isso. Você tem alguma pergunta para nós?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "You",
+          "frase": "Yes. What does career progression look like in this role?",
+          "traducao": "Sim. Como é a progressão de carreira nessa função?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes. What does career progression look like in this role?",
+            "How many holidays do I get?",
+            "When will I get promoted?",
+            "No questions. Just give me the job."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "experience",
+        "innovation",
+        "values",
+        "contribute",
+        "career progression",
+        "role"
+      ],
+      "xp_recompensa": 70
+    },
+    {
+      "id": "dial_004",
+      "titulo": "Checking into a Hotel",
+      "icone": "🏨",
+      "nivel": "A1",
+      "contexto": "You arrive at a hotel in Miami to check in for your vacation.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Receptionist",
+          "frase": "Good afternoon! Welcome to the Ocean Hotel. How can I help you?",
+          "traducao": "Boa tarde! Bem-vindo ao Ocean Hotel. Como posso ajudar?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Hello. I have a reservation under the name John Smith.",
+          "traducao": "Olá. Eu tenho uma reserva no nome de John Smith.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Hello. I have a reservation under the name John Smith.",
+            "I want a room now.",
+            "Where is the beach?",
+            "Can I sleep here?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Receptionist",
+          "frase": "Let me check. Yes, Mr. Smith. A double room for three nights. Can I see your passport, please?",
+          "traducao": "Deixe-me verificar. Sim, Sr. Smith. Um quarto de casal por três noites. Posso ver seu passaporte, por favor?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Here is my passport. Is breakfast included?",
+          "traducao": "Aqui está meu passaporte. O café da manhã está incluído?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Here is my passport. Is breakfast included?",
+            "No, I don't have it.",
+            "I don't eat breakfast.",
+            "Why do you need my passport?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Receptionist",
+          "frase": "Yes, breakfast is served from 7 AM to 10 AM. Here is your room key.",
+          "traducao": "Sim, o café da manhã é servido das 7h às 10h. Aqui está a chave do seu quarto.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Thank you. What floor is my room on?",
+          "traducao": "Obrigado. Em que andar fica meu quarto?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Thank you. What floor is my room on?",
+            "I want a different room.",
+            "Are there ghosts here?",
+            "Goodbye."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Receptionist",
+          "frase": "You are on the fifth floor. The elevators are to your right.",
+          "traducao": "Você está no quinto andar. Os elevadores ficam à sua direita.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "Great, thank you very much!",
+          "traducao": "Ótimo, muito obrigado!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Great, thank you very much!",
+            "I don't like elevators.",
+            "Carry my bags for me.",
+            "What is a floor?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "reservation",
+        "room",
+        "passport",
+        "breakfast",
+        "key",
+        "floor",
+        "elevator"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_005",
+      "titulo": "Grocery Shopping",
+      "icone": "🛒",
+      "nivel": "A1",
+      "contexto": "You are at a local grocery store trying to find some items and pay.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Excuse me, where can I find the fresh fruit?",
+          "traducao": "Com licença, onde posso encontrar as frutas frescas?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Excuse me, where can I find the fresh fruit?",
+            "I want apples.",
+            "Where is the food?",
+            "Give me fruit."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 2,
+          "personaggio": "Clerk",
+          "frase": "The fresh fruit is in aisle three, next to the vegetables.",
+          "traducao": "As frutas frescas estão no corredor três, ao lado dos vegetais.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Thank you. Do you also sell fresh bread here?",
+          "traducao": "Obrigado. Vocês também vendem pão fresco aqui?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Thank you. Do you also sell fresh bread here?",
+            "I don't like vegetables.",
+            "What about water?",
+            "Aisle three is too far."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Clerk",
+          "frase": "Yes, our bakery is at the back of the store.",
+          "traducao": "Sim, nossa padaria fica nos fundos da loja.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 5,
+          "personaggio": "Tu",
+          "frase": "Perfect. I'll go there now.",
+          "traducao": "Perfeito. Eu vou para lá agora.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Perfect. I'll go there now.",
+            "I'm not going to the back.",
+            "Is it free?",
+            "Never mind."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 6,
+          "personaggio": "Cashier",
+          "frase": "Did you find everything you needed today?",
+          "traducao": "Você encontrou tudo o que precisava hoje?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 7,
+          "personaggio": "Tu",
+          "frase": "Yes, I did. How much is the total?",
+          "traducao": "Sim, encontrei. Quanto é o total?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes, I did. How much is the total?",
+            "No, your store is bad.",
+            "I just want to leave.",
+            "Are you the cashier?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 8,
+          "personaggio": "Cashier",
+          "frase": "That will be fourteen dollars and fifty cents. Cash or card?",
+          "traducao": "Fica quatorze dólares e cinquenta centavos. Dinheiro ou cartão?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 9,
+          "personaggio": "Tu",
+          "frase": "I'll pay with a card. Here you go.",
+          "traducao": "Eu vou pagar com cartão. Aqui está.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I'll pay with a card. Here you go.",
+            "I have no money.",
+            "Is it free?",
+            "Take my cash."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "fruit",
+        "aisle",
+        "vegetables",
+        "bread",
+        "bakery",
+        "cashier",
+        "total"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_006",
+      "titulo": "Meeting a New Friend",
+      "icone": "👋",
+      "nivel": "A1",
+      "contexto": "You are at a language class and introduce yourself to the person sitting next to you.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Hi! Is this seat taken?",
+          "traducao": "Oi! Este lugar está ocupado?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Hi! Is this seat taken?",
+            "Move, I want to sit here.",
+            "What is your name?",
+            "I hate this class."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 2,
+          "personaggio": "Classmate",
+          "frase": "No, it's free. You can sit here. My name is Alex.",
+          "traducao": "Não, está livre. Você pode sentar aqui. Meu nome é Alex.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Nice to meet you, Alex. I'm Carlos. Where are you from?",
+          "traducao": "Prazer em conhecê-lo, Alex. Eu sou Carlos. De onde você é?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Nice to meet you, Alex. I'm Carlos. Where are you from?",
+            "I don't care.",
+            "Are you the teacher?",
+            "I am from Mars."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Classmate",
+          "frase": "I'm from Canada. And you? You sound like you might be from Brazil.",
+          "traducao": "Sou do Canadá. E você? Parece que você talvez seja do Brasil.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 5,
+          "personaggio": "Tu",
+          "frase": "Yes, that's right! I'm from São Paulo. Have you ever been to Brazil?",
+          "traducao": "Sim, isso mesmo! Sou de São Paulo. Você já esteve no Brasil?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes, that's right! I'm from São Paulo. Have you ever been to Brazil?",
+            "No, I am from Canada too.",
+            "Brazil is hot.",
+            "Why are you asking?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 6,
+          "personaggio": "Classmate",
+          "frase": "No, but I really want to go! What do you like to do in your free time?",
+          "traducao": "Não, mas eu quero muito ir! O que você gosta de fazer no seu tempo livre?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 7,
+          "personaggio": "Tu",
+          "frase": "I love playing soccer and watching movies. How about you?",
+          "traducao": "Eu adoro jogar futebol e assistir a filmes. E você?",
+          "audio_ipa": "",
+          "alternativas": [
+            "I love playing soccer and watching movies. How about you?",
+            "I sleep all day.",
+            "Nothing.",
+            "I am a student."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 8,
+          "personaggio": "Classmate",
+          "frase": "I enjoy reading and hiking. It's nice to meet you, Carlos!",
+          "traducao": "Eu gosto de ler e fazer trilha. Prazer em conhecê-lo, Carlos!",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "seat",
+        "nice to meet you",
+        "where are you from",
+        "free time",
+        "movies"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_007",
+      "titulo": "At the Doctor's Office",
+      "icone": "🩺",
+      "nivel": "A2",
+      "contexto": "You are feeling unwell and have an appointment to see a doctor.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Doctor",
+          "frase": "Good morning. Please come in and have a seat. What seems to be the problem today?",
+          "traducao": "Bom dia. Por favor, entre e sente-se. Qual parece ser o problema hoje?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Good morning, doctor. I've been feeling terrible since yesterday. I have a headache and a fever.",
+          "traducao": "Bom dia, doutor. Tenho me sentido péssimo desde ontem. Estou com dor de cabeça e febre.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Good morning, doctor. I've been feeling terrible since yesterday. I have a headache and a fever.",
+            "I am fine, just visiting.",
+            "I want some candy.",
+            "Where is the hospital?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Doctor",
+          "frase": "I see. Let me check your temperature. Yes, you have a slight fever. Do you have a sore throat or a cough?",
+          "traducao": "Entendo. Deixe-me checar sua temperatura. Sim, você tem uma febre leve. Você tem dor de garganta ou tosse?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Yes, my throat hurts a little bit when I swallow, but no cough.",
+          "traducao": "Sim, minha garganta dói um pouco quando eu engulo, mas sem tosse.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes, my throat hurts a little bit when I swallow, but no cough.",
+            "My leg is broken.",
+            "I eat too much ice cream.",
+            "What is a cough?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Doctor",
+          "frase": "It looks like a mild viral infection. I'm going to prescribe you some medicine to help with the fever and the pain.",
+          "traducao": "Parece uma infecção viral leve. Vou lhe prescrever um remédio para ajudar com a febre e a dor.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Thank you. How often should I take the medicine?",
+          "traducao": "Obrigado. Com que frequência devo tomar o remédio?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Thank you. How often should I take the medicine?",
+            "I hate pills.",
+            "Is it sweet?",
+            "Can I just sleep?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Doctor",
+          "frase": "Take one pill every eight hours, and make sure to drink plenty of water and get some rest.",
+          "traducao": "Tome um comprimido a cada oito horas, e certifique-se de beber bastante água e descansar um pouco.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "I will do that. Thank you for your help, doctor.",
+          "traducao": "Eu farei isso. Obrigado pela sua ajuda, doutor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I will do that. Thank you for your help, doctor.",
+            "No, I will go to a party.",
+            "I don't drink water.",
+            "See you tomorrow."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "fever",
+        "headache",
+        "sore throat",
+        "cough",
+        "medicine",
+        "pill",
+        "rest"
+      ],
+      "xp_recompensa": 60
+    },
+    {
+      "id": "dial_008",
+      "titulo": "Airport Check-in",
+      "icone": "✈️",
+      "nivel": "A2",
+      "contexto": "You are at the airport counter checking in for an international flight.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Agent",
+          "frase": "Good morning. Can I see your passport and ticket, please?",
+          "traducao": "Bom dia. Posso ver seu passaporte e passagem, por favor?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Good morning. Here you go. I'm flying to London.",
+          "traducao": "Bom dia. Aqui estão. Estou voando para Londres.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Good morning. Here you go. I'm flying to London.",
+            "I want to fly.",
+            "Where is the airplane?",
+            "No, I don't have a passport."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Agent",
+          "frase": "Thank you. Are you checking any bags today?",
+          "traducao": "Obrigado. Você vai despachar alguma mala hoje?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Yes, just this one suitcase. I also have a carry-on bag.",
+          "traducao": "Sim, apenas esta mala. Eu também tenho uma bagagem de mão.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes, just this one suitcase. I also have a carry-on bag.",
+            "I have ten bags.",
+            "What is a bag?",
+            "No, I am taking everything with me."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Agent",
+          "frase": "Please place your suitcase on the scale. Hmm, it's slightly over the weight limit, but I'll let it pass this time.",
+          "traducao": "Por favor, coloque sua mala na balança. Hmm, está um pouco acima do limite de peso, mas vou deixar passar desta vez.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Oh, thank you so much! I appreciate it.",
+          "traducao": "Ah, muito obrigado! Eu agradeço.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Oh, thank you so much! I appreciate it.",
+            "It's not heavy.",
+            "I don't care.",
+            "You are wrong."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Agent",
+          "frase": "Would you prefer a window or an aisle seat?",
+          "traducao": "Você prefere um assento na janela ou no corredor?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "An aisle seat, please. It's a long flight.",
+          "traducao": "Um assento no corredor, por favor. É um voo longo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "An aisle seat, please. It's a long flight.",
+            "I want to sit outside.",
+            "Is there a bed?",
+            "I don't want a seat."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 9,
+          "personaggio": "Agent",
+          "frase": "Here is your boarding pass. Your gate is B12, and boarding starts at 10:30. Have a nice flight!",
+          "traducao": "Aqui está seu cartão de embarque. Seu portão é o B12, e o embarque começa às 10:30. Tenha um bom voo!",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "passport",
+        "ticket",
+        "check in",
+        "suitcase",
+        "carry-on",
+        "boarding pass",
+        "gate"
+      ],
+      "xp_recompensa": 60
+    },
+    {
+      "id": "dial_009",
+      "titulo": "Ordering at a Restaurant",
+      "icone": "🍝",
+      "nivel": "A2",
+      "contexto": "You are having dinner at a nice Italian restaurant.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Waiter",
+          "frase": "Good evening! Are you ready to order, or do you need a few more minutes?",
+          "traducao": "Boa noite! Vocês estão prontos para pedir, ou precisam de mais alguns minutos?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "I think we are ready. To start, we'll have the garlic bread, please.",
+          "traducao": "Acho que estamos prontos. Para começar, vamos querer o pão de alho, por favor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I think we are ready. To start, we'll have the garlic bread, please.",
+            "Give me food now.",
+            "What is food?",
+            "No, we just want to look."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Waiter",
+          "frase": "Excellent choice. And for your main course?",
+          "traducao": "Excelente escolha. E como prato principal?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "I'll have the spaghetti bolognese, but without cheese. I am allergic to dairy.",
+          "traducao": "Eu vou querer o espaguete à bolonhesa, mas sem queijo. Tenho alergia a laticínios.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I'll have the spaghetti bolognese, but without cheese. I am allergic to dairy.",
+            "I want pizza with everything.",
+            "Can I cook my own food?",
+            "I am allergic to water."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Waiter",
+          "frase": "Noted, no cheese on the spaghetti. And what would you like to drink?",
+          "traducao": "Anotado, sem queijo no espaguete. E o que vocês gostariam de beber?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Just sparkling water for me, please.",
+          "traducao": "Apenas água com gás para mim, por favor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Just sparkling water for me, please.",
+            "I want wine from 1950.",
+            "Do you have sea water?",
+            "I will drink later."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Waiter",
+          "frase": "Alright. Your food will be ready shortly. Let me know if you need anything else.",
+          "traducao": "Tudo bem. A comida de vocês estará pronta em breve. Me avisem se precisarem de mais alguma coisa.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "Actually, could we get the bill after the meal? We're in a bit of a hurry.",
+          "traducao": "Na verdade, poderíamos pedir a conta depois da refeição? Estamos com um pouco de pressa.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Actually, could we get the bill after the meal? We're in a bit of a hurry.",
+            "Can I pay tomorrow?",
+            "I am not paying.",
+            "Where is the exit?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "order",
+        "main course",
+        "allergic",
+        "dairy",
+        "sparkling water",
+        "bill",
+        "hurry"
+      ],
+      "xp_recompensa": 60
+    },
+    {
+      "id": "dial_010",
+      "titulo": "Making Plans for the Weekend",
+      "icone": "📅",
+      "nivel": "B1",
+      "contexto": "You are talking to a colleague about plans for the upcoming weekend.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Colleague",
+          "frase": "Hey! Do you have any plans for this Saturday? A few of us are going hiking.",
+          "traducao": "Ei! Você tem algum plano para este sábado? Alguns de nós vamos fazer trilha.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "That sounds like a lot of fun, but I already have plans. I'm helping my brother move.",
+          "traducao": "Parece muito divertido, mas eu já tenho planos. Vou ajudar meu irmão com a mudança.",
+          "audio_ipa": "",
+          "alternativas": [
+            "That sounds like a lot of fun, but I already have plans. I'm helping my brother move.",
+            "No, I don't want to see you.",
+            "Hiking is for crazy people.",
+            "I work on Saturdays."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Colleague",
+          "frase": "Oh, moving is always exhausting! How about Sunday? Are you free to grab dinner?",
+          "traducao": "Ah, mudança é sempre cansativo! Que tal domingo? Você está livre para jantar?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sunday evening works perfectly for me. What kind of food were you thinking of?",
+          "traducao": "Domingo à noite é perfeito para mim. Que tipo de comida você estava pensando?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sunday evening works perfectly for me. What kind of food were you thinking of?",
+            "I am busy for the next five years.",
+            "I don't eat food.",
+            "Sunday is bad. Let's do Monday at 3 AM."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Colleague",
+          "frase": "I was thinking we could try that new Mexican place downtown. I heard the tacos are amazing.",
+          "traducao": "Eu estava pensando em tentarmos aquele novo restaurante mexicano no centro. Ouvi dizer que os tacos são incríveis.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "I'm definitely up for that! Should we meet there around 7 PM?",
+          "traducao": "Eu super topo! Devemos nos encontrar lá por volta das 19h?",
+          "audio_ipa": "",
+          "alternativas": [
+            "I'm definitely up for that! Should we meet there around 7 PM?",
+            "Mexican food is terrible.",
+            "Let's meet at midnight.",
+            "I prefer staying home."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Colleague",
+          "frase": "7 PM sounds great. I'll make a reservation just in case it's busy.",
+          "traducao": "19h parece ótimo. Vou fazer uma reserva caso esteja cheio.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "Awesome. Thanks for organizing it. See you on Sunday!",
+          "traducao": "Incrível. Obrigado por organizar. Te vejo no domingo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Awesome. Thanks for organizing it. See you on Sunday!",
+            "Whatever. Bye.",
+            "You are paying, right?",
+            "I might not show up."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "plans",
+        "hiking",
+        "exhausting",
+        "grab dinner",
+        "downtown",
+        "up for that",
+        "reservation"
+      ],
+      "xp_recompensa": 70
+    },
+    {
+      "id": "dial_011",
+      "titulo": "Calling Customer Service",
+      "icone": "📞",
+      "nivel": "B1",
+      "contexto": "You are calling an online store's customer service about a broken item you received.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Agent",
+          "frase": "Thank you for calling TechStore support. My name is Sarah. How can I assist you today?",
+          "traducao": "Obrigada por ligar para o suporte da TechStore. Meu nome é Sarah. Como posso ajudá-lo hoje?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Hi Sarah. I recently ordered a laptop from your website, but it arrived with a cracked screen.",
+          "traducao": "Oi Sarah. Eu encomendei recentemente um notebook do seu site, mas ele chegou com a tela rachada.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Hi Sarah. I recently ordered a laptop from your website, but it arrived with a cracked screen.",
+            "You broke my laptop! I am angry!",
+            "I want to buy a TV.",
+            "Can you fix my car?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Agent",
+          "frase": "I'm so sorry to hear that. We definitely want to make this right. Do you have your order number handy?",
+          "traducao": "Sinto muito em ouvir isso. Nós definitivamente queremos consertar isso. Você tem o número do seu pedido em mãos?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Yes, it's TS-849302. I would like to request a replacement as soon as possible.",
+          "traducao": "Sim, é TS-849302. Gostaria de solicitar uma substituição o mais rápido possível.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes, it's TS-849302. I would like to request a replacement as soon as possible.",
+            "No, I lost it. Find it yourself.",
+            "I want a million dollars instead.",
+            "I don't know what an order number is."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Agent",
+          "frase": "Thank you. I've pulled up your account. We can ship a replacement immediately, and email you a return label for the damaged one.",
+          "traducao": "Obrigada. Abri sua conta. Podemos enviar uma substituição imediatamente, e enviar por e-mail uma etiqueta de devolução para o danificado.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "That sounds perfect. Will I have to pay for the return shipping?",
+          "traducao": "Parece perfeito. Eu terei que pagar pelo frete de devolução?",
+          "audio_ipa": "",
+          "alternativas": [
+            "That sounds perfect. Will I have to pay for the return shipping?",
+            "Are you going to pay me?",
+            "I want to keep both.",
+            "I'm not sending it back."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Agent",
+          "frase": "Not at all. The return shipping is completely covered by us. You should receive the email shortly.",
+          "traducao": "De forma alguma. O frete de devolução é totalmente coberto por nós. Você deve receber o e-mail em breve.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "I appreciate your quick help with this issue. Have a good day!",
+          "traducao": "Agradeço sua ajuda rápida com este problema. Tenha um bom dia!",
+          "audio_ipa": "",
+          "alternativas": [
+            "I appreciate your quick help with this issue. Have a good day!",
+            "This is unacceptable.",
+            "I am still angry.",
+            "Whatever."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "customer service",
+        "cracked screen",
+        "order number",
+        "replacement",
+        "return label",
+        "shipping",
+        "covered"
+      ],
+      "xp_recompensa": 70
+    },
+    {
+      "id": "dial_012",
+      "titulo": "Renting an Apartment",
+      "icone": "🏠",
+      "nivel": "B1",
+      "contexto": "You are touring a one-bedroom apartment with a landlord and asking about the lease.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Landlord",
+          "frase": "So, this is the main living area. As you can see, it gets plenty of natural light.",
+          "traducao": "Então, esta é a área de estar principal. Como você pode ver, recebe bastante luz natural.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "It's very spacious. Are the utilities included in the monthly rent?",
+          "traducao": "É muito espaçoso. As contas (água, luz, etc) estão incluídas no aluguel mensal?",
+          "audio_ipa": "",
+          "alternativas": [
+            "It's very spacious. Are the utilities included in the monthly rent?",
+            "I hate natural light.",
+            "Where do I sleep?",
+            "Can I break the walls?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Landlord",
+          "frase": "Water and trash collection are included, but you'll have to pay for electricity and internet separately.",
+          "traducao": "Água e coleta de lixo estão incluídas, mas você terá que pagar pela eletricidade e internet separadamente.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "That's reasonable. And what about the security deposit? How much is it?",
+          "traducao": "Isso é razoável. E quanto ao depósito de segurança (caução)? Quanto é?",
+          "audio_ipa": "",
+          "alternativas": [
+            "That's reasonable. And what about the security deposit? How much is it?",
+            "I won't pay for electricity.",
+            "I don't need internet.",
+            "You should pay me to live here."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Landlord",
+          "frase": "The security deposit is equal to one month's rent. It's fully refundable at the end of the lease, provided there's no damage.",
+          "traducao": "O depósito de segurança é igual a um mês de aluguel. É totalmente reembolsável no final do contrato, desde que não haja danos.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Understood. And what is the neighborhood like in terms of safety and noise?",
+          "traducao": "Entendido. E como é o bairro em termos de segurança e barulho?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Understood. And what is the neighborhood like in terms of safety and noise?",
+            "I am going to damage everything.",
+            "Do you have a pet tiger?",
+            "I love noisy places."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Landlord",
+          "frase": "It's a very quiet residential area. There's a grocery store two blocks away, and crime rates are extremely low.",
+          "traducao": "É uma área residencial muito tranquila. Tem um supermercado a dois quarteirões de distância, e os índices de criminalidade são extremamente baixos.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "It sounds exactly like what I'm looking for. I'd like to fill out an application.",
+          "traducao": "Parece exatamente com o que estou procurando. Eu gostaria de preencher uma ficha de inscrição.",
+          "audio_ipa": "",
+          "alternativas": [
+            "It sounds exactly like what I'm looking for. I'd like to fill out an application.",
+            "I hate quiet places.",
+            "I'm not interested anymore.",
+            "Can you fill it out for me?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "utilities",
+        "rent",
+        "security deposit",
+        "refundable",
+        "lease",
+        "neighborhood",
+        "application"
+      ],
+      "xp_recompensa": 70
+    },
+    {
+      "id": "dial_013",
+      "titulo": "Team Brainstorming",
+      "icone": "💡",
+      "nivel": "B2",
+      "contexto": "You are in a corporate meeting discussing ways to improve the team's workflow.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Manager",
+          "frase": "Alright team, we've been missing some deadlines lately. We need to streamline our workflow. Any suggestions?",
+          "traducao": "Certo equipe, temos perdido alguns prazos ultimamente. Precisamos otimizar nosso fluxo de trabalho. Alguma sugestão?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "I believe part of the issue is poor communication between departments. Perhaps we could implement a unified project management tool.",
+          "traducao": "Eu acredito que parte do problema é a má comunicação entre os departamentos. Talvez pudéssemos implementar uma ferramenta unificada de gerenciamento de projetos.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I believe part of the issue is poor communication between departments. Perhaps we could implement a unified project management tool.",
+            "It's not my fault. Everyone else is slow.",
+            "We should just work on weekends.",
+            "I think we are doing fine."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Colleague",
+          "frase": "I'm not entirely convinced that a new tool will solve the root cause. It might just add to the learning curve.",
+          "traducao": "Não estou totalmente convencido de que uma nova ferramenta resolverá a causa raiz. Pode apenas aumentar a curva de aprendizado.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "I understand your concern, but a standardized platform would eliminate the endless email threads and centralize our tasks.",
+          "traducao": "Eu entendo sua preocupação, mas uma plataforma padronizada eliminaria as intermináveis threads de e-mail e centralizaria nossas tarefas.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I understand your concern, but a standardized platform would eliminate the endless email threads and centralize our tasks.",
+            "You are wrong and I am right.",
+            "Nobody likes reading emails anyway.",
+            "Then we should just quit."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Manager",
+          "frase": "That's a fair point. However, rolling out a new software requires training. How do you propose we handle the transition?",
+          "traducao": "É um ponto válido. No entanto, lançar um novo software requer treinamento. Como você propõe que lidemos com a transição?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "We could run a pilot phase with a single team first to gauge its effectiveness before scaling it company-wide.",
+          "traducao": "Poderíamos executar uma fase piloto com uma única equipe primeiro para avaliar sua eficácia antes de dimensioná-la para toda a empresa.",
+          "audio_ipa": "",
+          "alternativas": [
+            "We could run a pilot phase with a single team first to gauge its effectiveness before scaling it company-wide.",
+            "Just force everyone to use it immediately.",
+            "Let the IT department figure it out.",
+            "Training is a waste of time."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Manager",
+          "frase": "A pilot phase sounds like a pragmatic approach. Can you draft a brief proposal by Friday so we can review the logistics?",
+          "traducao": "Uma fase piloto parece uma abordagem pragmática. Você pode redigir uma breve proposta até sexta-feira para que possamos revisar a logística?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "Absolutely. I'll outline the key metrics for success and have it on your desk by Thursday afternoon.",
+          "traducao": "Com certeza. Esboçarei as principais métricas de sucesso e entregarei na sua mesa até quinta-feira à tarde.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Absolutely. I'll outline the key metrics for success and have it on your desk by Thursday afternoon.",
+            "I don't have time for that.",
+            "Maybe someone else should do it.",
+            "I'm going on vacation on Friday."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "deadlines",
+        "streamline",
+        "workflow",
+        "unified",
+        "learning curve",
+        "standardized",
+        "pilot phase",
+        "metrics"
+      ],
+      "xp_recompensa": 80
+    },
+    {
+      "id": "dial_014",
+      "titulo": "Negotiating a Salary",
+      "icone": "📈",
+      "nivel": "B2",
+      "contexto": "You have received a job offer, but you are negotiating the base salary with HR.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "HR Representative",
+          "frase": "We were very impressed with your interviews, and we'd like to offer you the position with a starting salary of $65,000.",
+          "traducao": "Ficamos muito impressionados com suas entrevistas e gostaríamos de lhe oferecer a vaga com um salário inicial de US$ 65.000.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "I'm thrilled to receive the offer. However, based on my specialized skill set and market research, I was expecting something closer to $75,000.",
+          "traducao": "Estou emocionado em receber a oferta. No entanto, com base no meu conjunto de habilidades especializadas e pesquisa de mercado, eu estava esperando algo mais próximo de US$ 75.000.",
+          "audio_ipa": "",
+          "alternativas": [
+            "I'm thrilled to receive the offer. However, based on my specialized skill set and market research, I was expecting something closer to $75,000.",
+            "Are you joking? That's too low.",
+            "I accept! Thank you!",
+            "I want a million dollars."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "HR Representative",
+          "frase": "I understand where you're coming from. Unfortunately, $75,000 is slightly above the budget allocated for this specific role.",
+          "traducao": "Eu entendo seu ponto de vista. Infelizmente, US$ 75.000 está ligeiramente acima do orçamento alocado para esta função específica.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "I see. If the base salary is inflexible, would you be open to negotiating additional benefits, such as extra vacation days or a sign-on bonus?",
+          "traducao": "Entendo. Se o salário-base é inflexível, vocês estariam abertos a negociar benefícios adicionais, como dias extras de férias ou um bônus de contratação?",
+          "audio_ipa": "",
+          "alternativas": [
+            "I see. If the base salary is inflexible, would you be open to negotiating additional benefits, such as extra vacation days or a sign-on bonus?",
+            "Then I reject the offer immediately.",
+            "Fine, I will just take the $65,000.",
+            "Can I at least have free coffee?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "HR Representative",
+          "frase": "We do have some leeway with the sign-on bonus. I could authorize a $5,000 bonus, bringing your first-year total compensation to $70,000.",
+          "traducao": "Nós temos alguma margem de manobra com o bônus de contratação. Eu poderia autorizar um bônus de US$ 5.000, elevando sua remuneração total no primeiro ano para US$ 70.000.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "That sounds like a fair compromise. I would be happy to accept the offer under those terms.",
+          "traducao": "Parece um acordo justo. Eu ficaria feliz em aceitar a oferta sob esses termos.",
+          "audio_ipa": "",
+          "alternativas": [
+            "That sounds like a fair compromise. I would be happy to accept the offer under those terms.",
+            "I still want $75,000.",
+            "You are very stingy.",
+            "I will think about it for a month."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "HR Representative",
+          "frase": "Wonderful! I'll update the employment contract and send it over to you by the end of the day.",
+          "traducao": "Maravilha! Vou atualizar o contrato de trabalho e enviá-lo para você até o final do dia.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "Excellent. I look forward to reviewing the contract and joining the team.",
+          "traducao": "Excelente. Estou ansioso para revisar o contrato e me juntar à equipe.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Excellent. I look forward to reviewing the contract and joining the team.",
+            "Don't forget the bonus.",
+            "I might still look for other jobs.",
+            "Goodbye."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "offer",
+        "starting salary",
+        "specialized skill set",
+        "budget allocated",
+        "inflexible",
+        "sign-on bonus",
+        "leeway",
+        "compromise"
+      ],
+      "xp_recompensa": 80
+    },
+    {
+      "id": "dial_015",
+      "titulo": "Discussing the News",
+      "icone": "📰",
+      "nivel": "B2",
+      "contexto": "You are having a nuanced discussion with a friend about a controversial new city policy.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Friend",
+          "frase": "Did you read the article about the city council's decision to ban cars from the downtown area?",
+          "traducao": "Você leu o artigo sobre a decisão da câmara municipal de proibir carros no centro da cidade?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Yes, I did. While I appreciate their efforts to reduce emissions, I feel the rollout might be premature.",
+          "traducao": "Sim, eu li. Embora eu aprecie seus esforços para reduzir as emissões, sinto que a implementação pode ser prematura.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Yes, I did. While I appreciate their efforts to reduce emissions, I feel the rollout might be premature.",
+            "Cars are evil, ban them all.",
+            "I don't watch the news.",
+            "Who cares about the city center?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Friend",
+          "frase": "I see your point, but proponents argue that drastic measures are necessary to tackle climate change effectively.",
+          "traducao": "Entendo seu ponto, mas os defensores argumentam que medidas drásticas são necessárias para combater as mudanças climáticas de forma eficaz.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "That's undeniable. However, without significantly improving public transit infrastructure first, it will severely impact local businesses.",
+          "traducao": "Isso é inegável. No entanto, sem melhorar significativamente a infraestrutura de transporte público primeiro, isso impactará severamente o comércio local.",
+          "audio_ipa": "",
+          "alternativas": [
+            "That's undeniable. However, without significantly improving public transit infrastructure first, it will severely impact local businesses.",
+            "Climate change isn't real anyway.",
+            "Local businesses should just move.",
+            "I don't know what public transit is."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Friend",
+          "frase": "You make a compelling argument regarding the economic fallout. The transition definitely seems like a logistical nightmare.",
+          "traducao": "Você apresenta um argumento convincente em relação às consequências econômicas. A transição definitivamente parece um pesadelo logístico.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Exactly. A phased approach, perhaps starting with restricting traffic solely on weekends, would be much more manageable.",
+          "traducao": "Exatamente. Uma abordagem em fases, talvez começando com a restrição do tráfego apenas nos fins de semana, seria muito mais gerenciável.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Exactly. A phased approach, perhaps starting with restricting traffic solely on weekends, would be much more manageable.",
+            "They should just ban pedestrians instead.",
+            "I think we should protest in the streets.",
+            "Logistics are boring."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 7,
+          "personaggio": "Friend",
+          "frase": "That's a very sensible middle ground. It's a shame policies are rarely crafted with such nuance.",
+          "traducao": "Isso é um meio-termo muito sensato. É uma pena que as políticas raramente sejam elaboradas com tanta nuance.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 8,
+          "personaggio": "Tu",
+          "frase": "It really is. Let's hope they amend the legislation before it officially takes effect next month.",
+          "traducao": "É mesmo. Esperemos que eles alterem a legislação antes que ela entre oficialmente em vigor no próximo mês.",
+          "audio_ipa": "",
+          "alternativas": [
+            "It really is. Let's hope they amend the legislation before it officially takes effect next month.",
+            "They will never change it.",
+            "Politicians are all the same.",
+            "I'm just going to buy a bike."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "ban",
+        "emissions",
+        "rollout",
+        "premature",
+        "proponents",
+        "drastic measures",
+        "public transit",
+        "fallout",
+        "phased approach",
+        "amend"
+      ],
+      "xp_recompensa": 80
+    }
+  ]
 }
