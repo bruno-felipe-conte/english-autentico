@@ -24,7 +24,7 @@ master_json = {
             "nome": "A1 — Foundations",
             "nivel_minimo": 1,
             "cor": "linear-gradient(135deg, #27AE60, #145A32)",
-            "unidades": all_units
+            "lezioni": all_units
         }
     ]
 }

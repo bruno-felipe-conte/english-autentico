@@ -33,7 +33,7 @@ master_json["moduli"].append({
     "nome": "B1 — Intermediate",
     "nivel_minimo": 6,
     "cor": "linear-gradient(135deg, #F39C12, #D35400)",
-    "unidades": units_b1
+    "lezioni": units_b1
 })
 
 # Append B2
@@ -42,7 +42,7 @@ master_json["moduli"].append({
     "nome": "B2 — Upper Intermediate",
     "nivel_minimo": 10,
     "cor": "linear-gradient(135deg, #8E44AD, #4A235A)",
-    "unidades": units_b2
+    "lezioni": units_b2
 })
 
 # Append C1
@@ -51,7 +51,7 @@ master_json["moduli"].append({
     "nome": "C1/C2 — Advanced Mastery",
     "nivel_minimo": 15,
     "cor": "linear-gradient(135deg, #2C3E50, #17202A)",
-    "unidades": units_c1
+    "lezioni": units_c1
 })
 
 print(json.dumps(master_json, ensure_ascii=False, indent=2))

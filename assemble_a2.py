@@ -27,7 +27,7 @@ master_json["moduli"].append({
     "nome": "A2 — Expansion",
     "nivel_minimo": 3,
     "cor": "linear-gradient(135deg, #2980B9, #1A5276)",
-    "unidades": all_a2_units
+    "lezioni": all_a2_units
 })
 
 # Save it back

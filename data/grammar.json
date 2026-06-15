@@ -3,57 +3,57 @@
   "moduli": [
     {
       "id": "A1",
-      "nome": "A1 Ôö£Ôòú Foundations",
+      "nome": "A1 Ôö£├ÂÔö£├ºÔö£├é Foundations",
       "nivel_minimo": 1,
       "cor": "linear-gradient(135deg, #27AE60, #145A32)",
-      "unidades": [
+      "lezioni": [
         {
           "id": "a1-lez1",
           "num": "Lesson 1",
           "titulo": "Personal Pronouns & Verb To Be (Affirmative)",
           "subtitulo": "I am, You are, He is",
-          "alerta": "O verbo 'To Be' Ôö£├£ o coraÔö£┬ÑÔö£├åo do inglÔö£├©s! Ele significa 'ser' ou 'estar' e muda dependendo de quem estÔö£ãÆ falando.",
+          "alerta": "O verbo 'To Be' ├ö├Â┬úÔö¼┬½ o cora├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo do ingl├ö├Â┬úÔö¼┬╝s! Ele significa 'ser' ou 'estar' e muda dependendo de quem est├ö├Â┬úÔö£┬í falando.",
           "observacao_cards": [
             {
               "italiano": "I am",
               "traducao": "Eu sou / estou",
-              "genero": "1Ôö¼┬╝ Pessoa Singular",
+              "genero": "1├ö├Â┬╝Ôö¼┬╝ Pessoa Singular",
               "motivo": "Sempre usa 'am'"
             },
             {
               "italiano": "You are",
-              "traducao": "VocÔö£├© Ôö£├£ / estÔö£ãÆ",
-              "genero": "2Ôö¼┬╝ Pessoa",
+              "traducao": "Voc├ö├Â┬úÔö¼┬╝ ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í",
+              "genero": "2├ö├Â┬╝Ôö¼┬╝ Pessoa",
               "motivo": "Usa 'are' no singular e plural"
             },
             {
               "italiano": "He is",
-              "traducao": "Ele Ôö£├£ / estÔö£ãÆ",
-              "genero": "3Ôö¼┬╝ Pessoa Singular (Ele)",
+              "traducao": "Ele ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í",
+              "genero": "3├ö├Â┬╝Ôö¼┬╝ Pessoa Singular (Ele)",
               "motivo": "Sempre usa 'is'"
             },
             {
               "italiano": "She is",
-              "traducao": "Ela Ôö£├£ / estÔö£ãÆ",
-              "genero": "3Ôö¼┬╝ Pessoa Singular (Ela)",
+              "traducao": "Ela ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í",
+              "genero": "3├ö├Â┬╝Ôö¼┬╝ Pessoa Singular (Ela)",
               "motivo": "Sempre usa 'is'"
             },
             {
               "italiano": "It is",
-              "traducao": "Ele/Ela Ôö£├£ / estÔö£ãÆ (coisas/animais)",
-              "genero": "3Ôö¼┬╝ Pessoa Neutra",
+              "traducao": "Ele/Ela ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í (coisas/animais)",
+              "genero": "3├ö├Â┬╝Ôö¼┬╝ Pessoa Neutra",
               "motivo": "Sempre usa 'is'"
             },
             {
               "italiano": "We are",
-              "traducao": "NÔö¼┬Ñs somos / estamos",
-              "genero": "1Ôö¼┬╝ Pessoa Plural",
+              "traducao": "N├ö├Â┬ú├ö├Â├®s somos / estamos",
+              "genero": "1├ö├Â┬╝Ôö¼┬╝ Pessoa Plural",
               "motivo": "Plural usa 'are'"
             },
             {
               "italiano": "They are",
-              "traducao": "Eles/Elas sÔö£├åo / estÔö£├åo",
-              "genero": "3Ôö¼┬╝ Pessoa Plural",
+              "traducao": "Eles/Elas s├ö├Â┬úÔö£Ôòæo / est├ö├Â┬úÔö£Ôòæo",
+              "genero": "3├ö├Â┬╝Ôö¼┬╝ Pessoa Plural",
               "motivo": "Plural usa 'are'"
             }
           ],
@@ -62,29 +62,29 @@
             {
               "oracao": "She is a teacher.",
               "pergunta": "Por que usamos 'is'?",
-              "resposta": "Porque 'She' Ôö£├£ terceira pessoa do singular.",
-              "conclusao": "She is = Ela Ôö£├£"
+              "resposta": "Porque 'She' ├ö├Â┬úÔö¼┬½ terceira pessoa do singular.",
+              "conclusao": "She is = Ela ├ö├Â┬úÔö¼┬½"
             },
             {
               "oracao": "They are happy.",
               "pergunta": "O que significa 'are' aqui?",
-              "resposta": "Significa 'estÔö£├åo'. Eles estÔö£├åo felizes.",
-              "conclusao": "They are = Eles estÔö£├åo"
+              "resposta": "Significa 'est├ö├Â┬úÔö£Ôòæo'. Eles est├ö├Â┬úÔö£Ôòæo felizes.",
+              "conclusao": "They are = Eles est├ö├Â┬úÔö£Ôòæo"
             }
           ],
           "armadilhas": [
             {
               "errado": "She am beautiful.",
               "certo": "She is beautiful.",
-              "explicacao": "'She' Ôö£├£ 3Ôö¼┬╝ pessoa do singular e exige 'is'."
+              "explicacao": "'She' ├ö├Â┬úÔö¼┬½ 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular e exige 'is'."
             },
             {
               "errado": "It are a dog.",
               "certo": "It is a dog.",
-              "explicacao": "'It' Ôö£├£ singular e exige 'is'."
+              "explicacao": "'It' ├ö├Â┬úÔö¼┬½ singular e exige 'is'."
             }
           ],
-          "coda": "Lembre-se: I am, You are, He/She/It is. Dominar isso Ôö£├£ o primeiro passo para falar inglÔö£├©s com confianÔö£┬Ña!",
+          "coda": "Lembre-se: I am, You are, He/She/It is. Dominar isso ├ö├Â┬úÔö¼┬½ o primeiro passo para falar ingl├ö├Â┬úÔö¼┬╝s com confian├ö├Â┬úÔö¼Ôòæa!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -108,17 +108,17 @@
                 "are"
               ],
               "resposta": 3,
-              "explicacao": "'We' Ôö£├£ plural, entÔö£├åo usamos 'are'."
+              "explicacao": "'We' ├ö├Â┬úÔö¼┬½ plural, ent├ö├Â┬úÔö£Ôòæo usamos 'are'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: It ___ a beautiful day.",
               "resposta": "is",
-              "explicacao": "'It' Ôö£├£ terceira pessoa do singular, usa 'is'."
+              "explicacao": "'It' ├ö├Â┬úÔö¼┬½ terceira pessoa do singular, usa 'is'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual a contraÔö£┬ÑÔö£├åo correta para 'You are'?",
+              "pergunta": "Qual a contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo correta para 'You are'?",
               "opcoes": [
                 "You'is",
                 "You're",
@@ -126,13 +126,13 @@
                 "You'm"
               ],
               "resposta": 1,
-              "explicacao": "A contraÔö£┬ÑÔö£├åo junta 'You' com 'are' e retira o 'a', virando 'You're'."
+              "explicacao": "A contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo junta 'You' com 'are' e retira o 'a', virando 'You're'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete: ___ are good friends. (Eles sÔö£├åo bons amigos).",
+              "pergunta": "Complete: ___ are good friends. (Eles s├ö├Â┬úÔö£Ôòæo bons amigos).",
               "resposta": "They",
-              "explicacao": "O pronome para 'Eles' Ôö£├£ 'They'."
+              "explicacao": "O pronome para 'Eles' ├ö├Â┬úÔö¼┬½ 'They'."
             },
             {
               "tipo": "escolha",
@@ -144,7 +144,7 @@
                 "be"
               ],
               "resposta": 0,
-              "explicacao": "'He' Ôö£├£ 3Ôö¼┬╝ pessoa do singular e exige 'is'."
+              "explicacao": "'He' ├ö├Â┬úÔö¼┬½ 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular e exige 'is'."
             }
           ]
         },
@@ -153,29 +153,29 @@
           "num": "Lesson 2",
           "titulo": "Verb To Be (Negative & Questions)",
           "subtitulo": "I am not, Are you?",
-          "alerta": "Fazer perguntas e negar com o verbo 'To Be' Ôö£├£ simples: basta adicionar o 'not' ou inverter a ordem das palavras!",
+          "alerta": "Fazer perguntas e negar com o verbo 'To Be' ├ö├Â┬úÔö¼┬½ simples: basta adicionar o 'not' ou inverter a ordem das palavras!",
           "observacao_cards": [
             {
               "italiano": "I am not",
-              "traducao": "Eu nÔö£├åo sou / estou",
+              "traducao": "Eu n├ö├Â┬úÔö£Ôòæo sou / estou",
               "genero": "Negativa",
               "motivo": "Adiciona 'not' depois do verbo"
             },
             {
               "italiano": "He is not (isn't)",
-              "traducao": "Ele nÔö£├åo Ôö£├£ / estÔö£ãÆ",
+              "traducao": "Ele n├ö├Â┬úÔö£Ôòæo ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í",
               "genero": "Negativa",
-              "motivo": "Pode ser contraÔö£├ÿdo para isn't"
+              "motivo": "Pode ser contra├ö├Â┬úÔö¼├¡do para isn't"
             },
             {
               "italiano": "Are you?",
-              "traducao": "VocÔö£├© Ôö£├£ / estÔö£ãÆ?",
+              "traducao": "Voc├ö├Â┬úÔö¼┬╝ ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í?",
               "genero": "Interrogativa",
               "motivo": "Inverte o verbo e o sujeito"
             },
             {
               "italiano": "Is she?",
-              "traducao": "Ela Ôö£├£ / estÔö£ãÆ?",
+              "traducao": "Ela ├ö├Â┬úÔö¼┬½ / est├ö├Â┬úÔö£┬í?",
               "genero": "Interrogativa",
               "motivo": "Inverte o verbo e o sujeito"
             }
@@ -184,14 +184,14 @@
           "exemplos_prc": [
             {
               "oracao": "Are they from Spain?",
-              "pergunta": "Como sabemos que Ôö£├£ uma pergunta?",
-              "resposta": "O verbo 'Are' estÔö£ãÆ antes do sujeito 'they'.",
+              "pergunta": "Como sabemos que ├ö├Â┬úÔö¼┬½ uma pergunta?",
+              "resposta": "O verbo 'Are' est├ö├Â┬úÔö£┬í antes do sujeito 'they'.",
               "conclusao": "Inverta a ordem para perguntar."
             },
             {
               "oracao": "We aren't ready.",
-              "pergunta": "O que Ôö£├£ 'aren't'?",
-              "resposta": "├ö├▓├Â a contraÔö£┬ÑÔö£├åo de 'are not'.",
+              "pergunta": "O que ├ö├Â┬úÔö¼┬½ 'aren't'?",
+              "resposta": "├ö├Â┬úÔö£┬¢ a contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de 'are not'.",
               "conclusao": "Are not = Aren't"
             }
           ],
@@ -204,14 +204,14 @@
             {
               "errado": "I amn't sad.",
               "certo": "I am not sad. (ou I'm not sad.)",
-              "explicacao": "NÔö£├åo existe a contraÔö£┬ÑÔö£├åo 'amn't'."
+              "explicacao": "N├ö├Â┬úÔö£Ôòæo existe a contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo 'amn't'."
             }
           ],
           "coda": "Perguntas? Verbo na frente! Negativas? 'Not' depois do verbo! Pratique e isso vai ficar natural.",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Como perguntar 'Ela Ôö£├£ brasileira?'?",
+              "pergunta": "Como perguntar 'Ela ├ö├Â┬úÔö¼┬½ brasileira?'?",
               "opcoes": [
                 "She is Brazilian?",
                 "Is she Brazilian?",
@@ -225,11 +225,11 @@
               "tipo": "revelar",
               "pergunta": "Complete a frase negativa: He ___ not my brother.",
               "resposta": "is",
-              "explicacao": "Usamos 'is' junto com 'not' para a 3Ôö¼┬╝ pessoa."
+              "explicacao": "Usamos 'is' junto com 'not' para a 3├ö├Â┬╝Ôö¼┬╝ pessoa."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ a forma contraÔö£├ÿda de 'are not'?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ a forma contra├ö├Â┬úÔö¼├¡da de 'are not'?",
               "opcoes": [
                 "am not",
                 "isn't",
@@ -253,9 +253,9 @@
             },
             {
               "tipo": "revelar",
-              "pergunta": "Traduza para o inglÔö£├©s: Eu nÔö£├åo sou. (Sem contraÔö£┬ÑÔö£├åo)",
+              "pergunta": "Traduza para o ingl├ö├Â┬úÔö¼┬╝s: Eu n├ö├Â┬úÔö£Ôòæo sou. (Sem contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo)",
               "resposta": "I am not",
-              "explicacao": "Apenas adicione 'not' apÔö¼┬Ñs 'I am'."
+              "explicacao": "Apenas adicione 'not' ap├ö├Â┬ú├ö├Â├®s 'I am'."
             },
             {
               "tipo": "escolha",
@@ -267,7 +267,7 @@
                 "Yes, I do."
               ],
               "resposta": 0,
-              "explicacao": "Respostas curtas afirmativas com 'To Be' nÔö£├åo levam contraÔö£┬ÑÔö£├åo."
+              "explicacao": "Respostas curtas afirmativas com 'To Be' n├ö├Â┬úÔö£Ôòæo levam contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo."
             }
           ]
         },
@@ -276,13 +276,13 @@
           "num": "Lesson 3",
           "titulo": "Demonstrative Pronouns",
           "subtitulo": "This, That, These, Those",
-          "alerta": "Use os pronomes demonstrativos para apontar coisas. A escolha depende da distÔö£├Ância (perto/longe) e da quantidade (singular/plural).",
+          "alerta": "Use os pronomes demonstrativos para apontar coisas. A escolha depende da dist├ö├Â┬úÔö£Ôöéncia (perto/longe) e da quantidade (singular/plural).",
           "observacao_cards": [
             {
               "italiano": "This",
               "traducao": "Este, esta, isto",
               "genero": "Singular (Perto)",
-              "motivo": "Para uma coisa prÔö¼┬Ñxima"
+              "motivo": "Para uma coisa pr├ö├Â┬ú├ö├Â├®xima"
             },
             {
               "italiano": "That",
@@ -294,27 +294,27 @@
               "italiano": "These",
               "traducao": "Estes, estas",
               "genero": "Plural (Perto)",
-              "motivo": "Para vÔö£ãÆrias coisas prÔö¼┬Ñximas"
+              "motivo": "Para v├ö├Â┬úÔö£┬írias coisas pr├ö├Â┬ú├ö├Â├®ximas"
             },
             {
               "italiano": "Those",
               "traducao": "Aqueles, aquelas",
               "genero": "Plural (Longe)",
-              "motivo": "Para vÔö£ãÆrias coisas distantes"
+              "motivo": "Para v├ö├Â┬úÔö£┬írias coisas distantes"
             }
           ],
-          "tabela_visual": "| Quantidade | Perto (Aqui) | Longe (LÔö£ãÆ) |\n|---|---|---|\n| **Singular** | This | That |\n| **Plural** | These | Those |",
+          "tabela_visual": "| Quantidade | Perto (Aqui) | Longe (L├ö├Â┬úÔö£┬í) |\n|---|---|---|\n| **Singular** | This | That |\n| **Plural** | These | Those |",
           "exemplos_prc": [
             {
               "oracao": "This is my car.",
-              "pergunta": "O carro estÔö£ãÆ perto ou longe?",
-              "resposta": "EstÔö£ãÆ perto, pois usamos 'This'.",
+              "pergunta": "O carro est├ö├Â┬úÔö£┬í perto ou longe?",
+              "resposta": "Est├ö├Â┬úÔö£┬í perto, pois usamos 'This'.",
               "conclusao": "This = singular perto"
             },
             {
               "oracao": "Look at those birds!",
-              "pergunta": "Os pÔö£ãÆssaros estÔö£├åo perto ou longe?",
-              "resposta": "EstÔö£├åo longe, pois usamos 'those'.",
+              "pergunta": "Os p├ö├Â┬úÔö£┬íssaros est├ö├Â┬úÔö£Ôòæo perto ou longe?",
+              "resposta": "Est├ö├Â┬úÔö£Ôòæo longe, pois usamos 'those'.",
               "conclusao": "Those = plural longe"
             }
           ],
@@ -322,19 +322,19 @@
             {
               "errado": "These is my shoes.",
               "certo": "These are my shoes.",
-              "explicacao": "'These' Ôö£├£ plural, entÔö£├åo precisa do verbo no plural 'are'."
+              "explicacao": "'These' ├ö├Â┬úÔö¼┬½ plural, ent├ö├Â┬úÔö£Ôòæo precisa do verbo no plural 'are'."
             },
             {
               "errado": "This are my pen.",
               "certo": "This is my pen.",
-              "explicacao": "'This' Ôö£├£ singular, use com 'is'."
+              "explicacao": "'This' ├ö├Â┬úÔö¼┬½ singular, use com 'is'."
             }
           ],
-          "coda": "This (um perto), These (vÔö£ãÆrios perto). That (um longe), Those (vÔö£ãÆrios longe).",
+          "coda": "This (um perto), These (v├ö├Â┬úÔö£┬írios perto). That (um longe), Those (v├ö├Â┬úÔö£┬írios longe).",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual pronome usar para apontar para UMA maÔö£┬ÑÔö£├å perto de vocÔö£├©?",
+              "pergunta": "Qual pronome usar para apontar para UMA ma├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæ perto de voc├ö├Â┬úÔö¼┬╝?",
               "opcoes": [
                 "That",
                 "Those",
@@ -346,7 +346,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual pronome usar para apontar para V├ö├ÂÔöñRIOS carros longe de vocÔö£├©?",
+              "pergunta": "Qual pronome usar para apontar para V├ö├Â┬úÔö£ÔòØRIOS carros longe de voc├ö├Â┬úÔö¼┬╝?",
               "opcoes": [
                 "This",
                 "That",
@@ -358,13 +358,13 @@
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete: ___ is my friend, John. (Apresentando alguÔö£├£m ao seu lado).",
+              "pergunta": "Complete: ___ is my friend, John. (Apresentando algu├ö├Â┬úÔö¼┬½m ao seu lado).",
               "resposta": "This",
-              "explicacao": "Para apresentar alguÔö£├£m perto, usamos 'This'."
+              "explicacao": "Para apresentar algu├ö├Â┬úÔö¼┬½m perto, usamos 'This'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Complete a frase: ___ are my books. (Livros na sua mÔö£├åo).",
+              "pergunta": "Complete a frase: ___ are my books. (Livros na sua m├ö├Â┬úÔö£Ôòæo).",
               "opcoes": [
                 "This",
                 "That",
@@ -372,7 +372,7 @@
                 "Those"
               ],
               "resposta": 2,
-              "explicacao": "Os livros estÔö£├åo no plural e perto da pessoa, logo 'These'."
+              "explicacao": "Os livros est├ö├Â┬úÔö£Ôòæo no plural e perto da pessoa, logo 'These'."
             },
             {
               "tipo": "revelar",
@@ -382,14 +382,14 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "A frase 'That are my dog' estÔö£ãÆ:",
+              "pergunta": "A frase 'That are my dog' est├ö├Â┬úÔö£┬í:",
               "opcoes": [
                 "Correta",
                 "Incorreta, deveria ser 'That is my dog'",
                 "Incorreta, deveria ser 'Those is my dog'"
               ],
               "resposta": 1,
-              "explicacao": "'That' Ôö£├£ singular, por isso deve ser acompanhado de 'is'."
+              "explicacao": "'That' ├ö├Â┬úÔö¼┬½ singular, por isso deve ser acompanhado de 'is'."
             }
           ]
         },
@@ -398,7 +398,7 @@
           "num": "Lesson 4",
           "titulo": "Articles",
           "subtitulo": "A vs An vs The",
-          "alerta": "Em inglÔö£├©s, 'A' e 'An' significam 'um/uma'. A regra nÔö£├åo depende da letra, mas sim do SOM (consoante ou vogal). 'The' Ôö£├£ o artigo definido 'o/a/os/as'.",
+          "alerta": "Em ingl├ö├Â┬úÔö¼┬╝s, 'A' e 'An' significam 'um/uma'. A regra n├ö├Â┬úÔö£Ôòæo depende da letra, mas sim do SOM (consoante ou vogal). 'The' ├ö├Â┬úÔö¼┬½ o artigo definido 'o/a/os/as'.",
           "observacao_cards": [
             {
               "italiano": "A",
@@ -416,29 +416,29 @@
               "italiano": "The",
               "traducao": "O, a, os, as",
               "genero": "Artigo Definido",
-              "motivo": "Usado para coisas especÔö£├ÿficas"
+              "motivo": "Usado para coisas espec├ö├Â┬úÔö¼├¡ficas"
             }
           ],
           "tabela_visual": "| Article | Rule | Example |\n|---|---|---|\n| **A** | Before consonant sound | A car, a dog, a university |\n| **An** | Before vowel sound | An apple, an egg, an hour |\n| **The** | Specific things | The sun, the boy, the cars |",
           "exemplos_prc": [
             {
               "oracao": "I have an apple.",
-              "pergunta": "Por que 'an' e nÔö£├åo 'a'?",
-              "resposta": "Porque 'apple' comeÔö£┬Ña com som de vogal.",
+              "pergunta": "Por que 'an' e n├ö├Â┬úÔö£Ôòæo 'a'?",
+              "resposta": "Porque 'apple' come├ö├Â┬úÔö¼Ôòæa com som de vogal.",
               "conclusao": "An + som de vogal"
             },
             {
               "oracao": "The car is blue.",
-              "pergunta": "Qualquer carro Ôö£├£ azul?",
-              "resposta": "NÔö£├åo, um carro especÔö£├ÿfico do qual estamos falando.",
-              "conclusao": "The = O/A especÔö£├ÿfico"
+              "pergunta": "Qualquer carro ├ö├Â┬úÔö¼┬½ azul?",
+              "resposta": "N├ö├Â┬úÔö£Ôòæo, um carro espec├ö├Â┬úÔö¼├¡fico do qual estamos falando.",
+              "conclusao": "The = O/A espec├ö├Â┬úÔö¼├¡fico"
             }
           ],
           "armadilhas": [
             {
               "errado": "A hour.",
               "certo": "An hour.",
-              "explicacao": "A letra 'h' em 'hour' Ôö£├£ muda, o som inicial Ôö£├£ de vogal."
+              "explicacao": "A letra 'h' em 'hour' ├ö├Â┬úÔö¼┬½ muda, o som inicial ├ö├Â┬úÔö¼┬½ de vogal."
             },
             {
               "errado": "An university.",
@@ -446,7 +446,7 @@
               "explicacao": "A letra 'u' em 'university' tem som de consoante (yu)."
             }
           ],
-          "coda": "Lembre-se da regra do som: 'A' para som de consoante, 'An' para som de vogal. Isso farÔö£ãÆ seu inglÔö£├©s fluir melhor!",
+          "coda": "Lembre-se da regra do som: 'A' para som de consoante, 'An' para som de vogal. Isso far├ö├Â┬úÔö£┬í seu ingl├ö├Â┬úÔö¼┬╝s fluir melhor!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -458,7 +458,7 @@
                 "Nenhum"
               ],
               "resposta": 1,
-              "explicacao": "'elephant' comeÔö£┬Ña com som de vogal."
+              "explicacao": "'elephant' come├ö├Â┬úÔö¼Ôòæa com som de vogal."
             },
             {
               "tipo": "escolha",
@@ -470,13 +470,13 @@
                 "As"
               ],
               "resposta": 0,
-              "explicacao": "'car' comeÔö£┬Ña com som de consoante."
+              "explicacao": "'car' come├ö├Â┬úÔö¼Ôòæa com som de consoante."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: She is reading ___ book. (um livro qualquer).",
               "resposta": "a",
-              "explicacao": "'book' comeÔö£┬Ña com som de consoante e Ôö£├£ singular indefinido."
+              "explicacao": "'book' come├ö├Â┬úÔö¼Ôòæa com som de consoante e ├ö├Â┬úÔö¼┬½ singular indefinido."
             },
             {
               "tipo": "escolha",
@@ -488,13 +488,13 @@
                 "two"
               ],
               "resposta": 1,
-              "explicacao": "'hour' tem 'h' mudo, logo o som Ôö£├£ de vogal."
+              "explicacao": "'hour' tem 'h' mudo, logo o som ├ö├Â┬úÔö¼┬½ de vogal."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: Look at ___ moon! (Olhe para a lua!).",
               "resposta": "the",
-              "explicacao": "A lua ('moon') Ôö£├£ especÔö£├ÿfica e Ôö¼├Çnica, usamos 'the'."
+              "explicacao": "A lua ('moon') ├ö├Â┬úÔö¼┬½ espec├ö├Â┬úÔö¼├¡fica e ├ö├Â┬ú├ö├▓├ªnica, usamos 'the'."
             },
             {
               "tipo": "escolha",
@@ -506,7 +506,7 @@
                 "I have idea."
               ],
               "resposta": 1,
-              "explicacao": "'idea' comeÔö£┬Ña com som de vogal, usa-se 'an'."
+              "explicacao": "'idea' come├ö├Â┬úÔö¼Ôòæa com som de vogal, usa-se 'an'."
             }
           ]
         },
@@ -515,13 +515,13 @@
           "num": "Lesson 5",
           "titulo": "Plural of Nouns",
           "subtitulo": "Regulares (-s) e Irregulares (men, women, children)",
-          "alerta": "O plural em inglÔö£├©s Ôö£├£ frequentemente fÔö£ãÆcil: basta colocar um '-s'. Mas cuidado com os irregulares teimosos que mudam a palavra toda!",
+          "alerta": "O plural em ingl├ö├Â┬úÔö¼┬╝s ├ö├Â┬úÔö¼┬½ frequentemente f├ö├Â┬úÔö£┬ícil: basta colocar um '-s'. Mas cuidado com os irregulares teimosos que mudam a palavra toda!",
           "observacao_cards": [
             {
               "italiano": "-s (Regular)",
               "traducao": "-s",
               "genero": "Regra Geral",
-              "motivo": "Adiciona-se -s Ôö£├┤ maioria das palavras"
+              "motivo": "Adiciona-se -s ├ö├Â┬úÔö£├¡ maioria das palavras"
             },
             {
               "italiano": "Men",
@@ -537,7 +537,7 @@
             },
             {
               "italiano": "Children",
-              "traducao": "CrianÔö£┬Ñas",
+              "traducao": "Crian├ö├Â┬úÔö¼Ôòæas",
               "genero": "Irregular",
               "motivo": "Plural de 'child'"
             },
@@ -549,7 +549,7 @@
             },
             {
               "italiano": "Feet",
-              "traducao": "PÔö£├£s",
+              "traducao": "P├ö├Â┬úÔö¼┬½s",
               "genero": "Irregular",
               "motivo": "Plural de 'foot'"
             }
@@ -558,8 +558,8 @@
           "exemplos_prc": [
             {
               "oracao": "The children are playing.",
-              "pergunta": "'Children' estÔö£ãÆ no singular ou plural?",
-              "resposta": "Plural. O singular Ôö£├£ 'child'.",
+              "pergunta": "'Children' est├ö├Â┬úÔö£┬í no singular ou plural?",
+              "resposta": "Plural. O singular ├ö├Â┬úÔö¼┬½ 'child'.",
               "conclusao": "Child -> Children"
             },
             {
@@ -573,19 +573,19 @@
             {
               "errado": "Two childrens.",
               "certo": "Two children.",
-              "explicacao": "'Children' jÔö£ãÆ Ôö£├£ plural, nÔö£├åo se adiciona '-s'."
+              "explicacao": "'Children' j├ö├Â┬úÔö£┬í ├ö├Â┬úÔö¼┬½ plural, n├ö├Â┬úÔö£Ôòæo se adiciona '-s'."
             },
             {
               "errado": "Five mans.",
               "certo": "Five men.",
-              "explicacao": "O plural de 'man' Ôö£├£ 'men'."
+              "explicacao": "O plural de 'man' ├ö├Â┬úÔö¼┬½ 'men'."
             }
           ],
-          "coda": "Conhecer os plurais irregulares salva vocÔö£├© de erros super comuns. Pratique-os bastante!",
+          "coda": "Conhecer os plurais irregulares salva voc├ö├Â┬úÔö¼┬╝ de erros super comuns. Pratique-os bastante!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ o plural de 'cat'?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ o plural de 'cat'?",
               "opcoes": [
                 "cates",
                 "cats",
@@ -593,11 +593,11 @@
                 "caties"
               ],
               "resposta": 1,
-              "explicacao": "├ö├▓├Â uma palavra regular, apenas adicionamos '-s'."
+              "explicacao": "├ö├Â┬úÔö£┬¢ uma palavra regular, apenas adicionamos '-s'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ o plural correto de 'woman'?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ o plural correto de 'woman'?",
               "opcoes": [
                 "womans",
                 "womens",
@@ -605,17 +605,17 @@
                 "womanes"
               ],
               "resposta": 2,
-              "explicacao": "'woman' Ôö£├£ irregular, o plural Ôö£├£ 'women'."
+              "explicacao": "'woman' ├ö├Â┬úÔö¼┬½ irregular, o plural ├ö├Â┬úÔö¼┬½ 'women'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Escreva o plural de 'man':",
               "resposta": "men",
-              "explicacao": "'man' Ôö£├£ irregular, o plural Ôö£├£ 'men'."
+              "explicacao": "'man' ├ö├Â┬úÔö¼┬½ irregular, o plural ├ö├Â┬úÔö¼┬½ 'men'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Complete: Those are my ___. (aquelas sÔö£├åo minhas crianÔö£┬Ñas).",
+              "pergunta": "Complete: Those are my ___. (aquelas s├ö├Â┬úÔö£Ôòæo minhas crian├ö├Â┬úÔö¼Ôòæas).",
               "opcoes": [
                 "childs",
                 "childrens",
@@ -623,17 +623,17 @@
                 "children"
               ],
               "resposta": 3,
-              "explicacao": "O plural de 'child' Ôö£├£ 'children' e nÔö£├åo leva '-s'."
+              "explicacao": "O plural de 'child' ├ö├Â┬úÔö¼┬½ 'children' e n├ö├Â┬úÔö£Ôòæo leva '-s'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Escreva o plural de 'foot' (pÔö£├£):",
+              "pergunta": "Escreva o plural de 'foot' (p├ö├Â┬úÔö¼┬½):",
               "resposta": "feet",
-              "explicacao": "O plural de 'foot' Ôö£├£ 'feet'."
+              "explicacao": "O plural de 'foot' ├ö├Â┬úÔö¼┬½ 'feet'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ o plural de 'tooth'?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ o plural de 'tooth'?",
               "opcoes": [
                 "tooths",
                 "teeths",
@@ -641,7 +641,7 @@
                 "teeth"
               ],
               "resposta": 3,
-              "explicacao": "O plural de 'tooth' Ôö£├£ 'teeth'."
+              "explicacao": "O plural de 'tooth' ├ö├Â┬úÔö¼┬½ 'teeth'."
             }
           ]
         },
@@ -650,7 +650,7 @@
           "num": "Lesson 6",
           "titulo": "Possessive Adjectives",
           "subtitulo": "My, Your, His, Her",
-          "alerta": "Os adjetivos possessivos sempre vÔö£├©m ANTES de um substantivo para mostrar a quem algo pertence.",
+          "alerta": "Os adjetivos possessivos sempre v├ö├Â┬úÔö¼┬╝m ANTES de um substantivo para mostrar a quem algo pertence.",
           "observacao_cards": [
             {
               "italiano": "My",
@@ -662,7 +662,7 @@
               "italiano": "Your",
               "traducao": "Seu(s), Sua(s)",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'You' (VocÔö£├©/VocÔö£├©s)"
+              "motivo": "Refere-se a 'You' (Voc├ö├Â┬úÔö¼┬╝/Voc├ö├Â┬úÔö¼┬╝s)"
             },
             {
               "italiano": "His",
@@ -686,7 +686,7 @@
               "italiano": "Our",
               "traducao": "Nosso(s), Nossa(s)",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'We' (NÔö¼┬Ñs)"
+              "motivo": "Refere-se a 'We' (N├ö├Â┬ú├ö├Â├®s)"
             },
             {
               "italiano": "Their",
@@ -699,14 +699,14 @@
           "exemplos_prc": [
             {
               "oracao": "Her name is Maria.",
-              "pergunta": "De quem Ôö£├£ o nome?",
+              "pergunta": "De quem ├ö├Â┬úÔö¼┬½ o nome?",
               "resposta": "Dela.",
               "conclusao": "Her = Dela."
             },
             {
               "oracao": "Our house is big.",
               "pergunta": "O que indica 'Our'?",
-              "resposta": "Indica 'nosso' (de nÔö¼┬Ñs).",
+              "resposta": "Indica 'nosso' (de n├ö├Â┬ú├ö├Â├®s).",
               "conclusao": "Our = Nosso."
             }
           ],
@@ -714,15 +714,15 @@
             {
               "errado": "The dog plays with it's toy.",
               "certo": "The dog plays with its toy.",
-              "explicacao": "'Its' (sem apÔö¼┬Ñstrofo) Ôö£├£ o possessivo. 'It's' (com apÔö¼┬Ñstrofo) significa 'It is' ou 'It has'."
+              "explicacao": "'Its' (sem ap├ö├Â┬ú├ö├Â├®strofo) ├ö├Â┬úÔö¼┬½ o possessivo. 'It's' (com ap├ö├Â┬ú├ö├Â├®strofo) significa 'It is' ou 'It has'."
             },
             {
               "errado": "This is he car.",
               "certo": "This is his car.",
-              "explicacao": "Usamos o adjetivo possessivo (his) e nÔö£├åo o pronome pessoal (he) antes do substantivo."
+              "explicacao": "Usamos o adjetivo possessivo (his) e n├ö├Â┬úÔö£Ôòæo o pronome pessoal (he) antes do substantivo."
             }
           ],
-          "coda": "Lembre-se: em inglÔö£├©s, o possessivo nÔö£├åo muda se a coisa possuÔö£├ÿda Ôö£├£ plural ou singular (ex: 'my car' / 'my cars'). E sempre coloque o possessivo antes do substantivo!",
+          "coda": "Lembre-se: em ingl├ö├Â┬úÔö¼┬╝s, o possessivo n├ö├Â┬úÔö£Ôòæo muda se a coisa possu├ö├Â┬úÔö¼├¡da ├ö├Â┬úÔö¼┬½ plural ou singular (ex: 'my car' / 'my cars'). E sempre coloque o possessivo antes do substantivo!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -734,17 +734,17 @@
                 "Yours"
               ],
               "resposta": 1,
-              "explicacao": "'Our' Ôö£├£ o possessivo correspondente a 'We' (nÔö¼┬Ñs)."
+              "explicacao": "'Our' ├ö├Â┬úÔö¼┬½ o possessivo correspondente a 'We' (n├ö├Â┬ú├ö├Â├®s)."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: I have a brother. ___ name is Tom.",
               "resposta": "His",
-              "explicacao": "'His' refere-se ao irmÔö£├åo (He)."
+              "explicacao": "'His' refere-se ao irm├ö├Â┬úÔö£Ôòæo (He)."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Selecione a opÔö£┬ÑÔö£├åo correta: 'The cat is eating ___ food.'",
+              "pergunta": "Selecione a op├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo correta: 'The cat is eating ___ food.'",
               "opcoes": [
                 "it's",
                 "its",
@@ -752,17 +752,17 @@
                 "her"
               ],
               "resposta": 1,
-              "explicacao": "'Its' (sem apÔö¼┬Ñstrofo) Ôö£├£ o possessivo para animais/coisas."
+              "explicacao": "'Its' (sem ap├ö├Â┬ú├ö├Â├®strofo) ├ö├Â┬úÔö¼┬½ o possessivo para animais/coisas."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: They live in London. ___ house is very old.",
               "resposta": "Their",
-              "explicacao": "'Their' Ôö£├£ o possessivo correspondente a 'They' (eles/elas)."
+              "explicacao": "'Their' ├ö├Â┬úÔö¼┬½ o possessivo correspondente a 'They' (eles/elas)."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual das frases estÔö£ãÆ correta?",
+              "pergunta": "Qual das frases est├ö├Â┬úÔö£┬í correta?",
               "opcoes": [
                 "She likes she job.",
                 "She likes her job.",
@@ -776,7 +776,7 @@
               "tipo": "revelar",
               "pergunta": "Complete: You need to clean ___ room.",
               "resposta": "your",
-              "explicacao": "'Your' Ôö£├£ o possessivo de 'You'."
+              "explicacao": "'Your' ├ö├Â┬úÔö¼┬½ o possessivo de 'You'."
             }
           ]
         },
@@ -785,7 +785,7 @@
           "num": "Lesson 7",
           "titulo": "Possessive Pronouns & Genitive Case",
           "subtitulo": "Mine, Yours, John's car",
-          "alerta": "Pronomes possessivos substituem o substantivo, e o caso genitivo ('s) mostra posse de forma direta conectando o dono e a coisa possuÔö£├ÿda.",
+          "alerta": "Pronomes possessivos substituem o substantivo, e o caso genitivo ('s) mostra posse de forma direta conectando o dono e a coisa possu├ö├Â┬úÔö¼├¡da.",
           "observacao_cards": [
             {
               "italiano": "Mine",
@@ -812,11 +812,11 @@
               "oracao": "This car is mine.",
               "pergunta": "O que 'mine' substitui?",
               "resposta": "Substitui 'my car'.",
-              "conclusao": "Mine Ôö£├£ um pronome, nÔö£├åo precisa do substantivo depois."
+              "conclusao": "Mine ├ö├Â┬úÔö¼┬½ um pronome, n├ö├Â┬úÔö£Ôòæo precisa do substantivo depois."
             },
             {
               "oracao": "It is Sarah's phone.",
-              "pergunta": "De quem Ôö£├£ o telefone?",
+              "pergunta": "De quem ├ö├Â┬úÔö¼┬½ o telefone?",
               "resposta": "Da Sarah.",
               "conclusao": "Sarah + 's = De Sarah."
             }
@@ -825,19 +825,19 @@
             {
               "errado": "This is the car of John.",
               "certo": "This is John's car.",
-              "explicacao": "Em inglÔö£├©s, para pessoas, usamos preferencialmente o caso genitivo ('s)."
+              "explicacao": "Em ingl├ö├Â┬úÔö¼┬╝s, para pessoas, usamos preferencialmente o caso genitivo ('s)."
             },
             {
               "errado": "The book is my.",
               "certo": "The book is mine.",
-              "explicacao": "NÔö£├åo se usa adjetivos possessivos (my, your) sem um substantivo depois. No final da frase, usamos os pronomes (mine, yours)."
+              "explicacao": "N├ö├Â┬úÔö£Ôòæo se usa adjetivos possessivos (my, your) sem um substantivo depois. No final da frase, usamos os pronomes (mine, yours)."
             }
           ],
-          "coda": "Lembre-se da diferenÔö£┬Ña: 'My book' (adjetivo + substantivo) vs. 'The book is mine' (pronome, sem substantivo depois). E para dizer que algo Ôö£├£ de alguÔö£├£m, apenas adicione 's ao nome do dono!",
+          "coda": "Lembre-se da diferen├ö├Â┬úÔö¼Ôòæa: 'My book' (adjetivo + substantivo) vs. 'The book is mine' (pronome, sem substantivo depois). E para dizer que algo ├ö├Â┬úÔö¼┬½ de algu├ö├Â┬úÔö¼┬½m, apenas adicione 's ao nome do dono!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Como dizemos 'o computador do meu irmÔö£├åo'?",
+              "pergunta": "Como dizemos 'o computador do meu irm├ö├Â┬úÔö£Ôòæo'?",
               "opcoes": [
                 "The computer of my brother",
                 "My brother's computer",
@@ -855,7 +855,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Selecione a opÔö£┬ÑÔö£├åo correta para substantivos plurais que terminam em 's' (ex: parents):",
+              "pergunta": "Selecione a op├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo correta para substantivos plurais que terminam em 's' (ex: parents):",
               "opcoes": [
                 "My parent's car",
                 "My parents's car",
@@ -863,29 +863,29 @@
                 "The car of my parents"
               ],
               "resposta": 2,
-              "explicacao": "Para plurais terminados em 's', adicionamos apenas o apÔö¼┬Ñstrofo: parents'."
+              "explicacao": "Para plurais terminados em 's', adicionamos apenas o ap├ö├Â┬ú├ö├Â├®strofo: parents'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: That bag belongs to her. It is ___.",
               "resposta": "hers",
-              "explicacao": "O pronome possessivo de 'her' Ôö£├£ 'hers'."
+              "explicacao": "O pronome possessivo de 'her' ├ö├Â┬úÔö¼┬½ 'hers'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "A frase 'These shoes are your' estÔö£ãÆ correta?",
+              "pergunta": "A frase 'These shoes are your' est├ö├Â┬úÔö£┬í correta?",
               "opcoes": [
                 "Sim, totalmente correta.",
-                "NÔö£├åo, o correto Ôö£├£ 'These shoes are yours'."
+                "N├ö├Â┬úÔö£Ôòæo, o correto ├ö├Â┬úÔö¼┬½ 'These shoes are yours'."
               ],
               "resposta": 1,
-              "explicacao": "Como nÔö£├åo hÔö£ãÆ substantivo apÔö¼┬Ñs 'your', devemos usar o pronome 'yours'."
+              "explicacao": "Como n├ö├Â┬úÔö£Ôòæo h├ö├Â┬úÔö£┬í substantivo ap├ö├Â┬ú├ö├Â├®s 'your', devemos usar o pronome 'yours'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Reescreva usando o caso genitivo ('s): The house of Peter.",
               "resposta": "Peter's house",
-              "explicacao": "O possuidor (Peter) recebe o 's seguido do objeto possuÔö£├ÿdo (house)."
+              "explicacao": "O possuidor (Peter) recebe o 's seguido do objeto possu├ö├Â┬úÔö¼├¡do (house)."
             }
           ]
         },
@@ -894,13 +894,13 @@
           "num": "Lesson 8",
           "titulo": "Question Words 1",
           "subtitulo": "What, Who, Where",
-          "alerta": "Em inglÔö£├©s, as palavras de pergunta (Wh- words) vÔö£├©m sempre no inÔö£├ÿcio da frase para buscar informaÔö£┬ÑÔö¼┬║es especÔö£├ÿficas.",
+          "alerta": "Em ingl├ö├Â┬úÔö¼┬╝s, as palavras de pergunta (Wh- words) v├ö├Â┬úÔö¼┬╝m sempre no in├ö├Â┬úÔö¼├¡cio da frase para buscar informa├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es espec├ö├Â┬úÔö¼├¡ficas.",
           "observacao_cards": [
             {
               "italiano": "What",
               "traducao": "O que / Qual",
               "genero": "Question Word",
-              "motivo": "Para perguntar sobre coisas ou aÔö£┬ÑÔö¼┬║es"
+              "motivo": "Para perguntar sobre coisas ou a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es"
             },
             {
               "italiano": "Who",
@@ -915,7 +915,7 @@
               "motivo": "Para perguntar sobre lugares"
             }
           ],
-          "tabela_visual": "| Question Word | Meaning | Example |\n|---|---|---|\n| What | Coisas/AÔö£┬ÑÔö¼┬║es | What is this? |\n| Who | Pessoas | Who is she? |\n| Where | Lugares | Where are you? |",
+          "tabela_visual": "| Question Word | Meaning | Example |\n|---|---|---|\n| What | Coisas/A├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es | What is this? |\n| Who | Pessoas | Who is she? |\n| Where | Lugares | Where are you? |",
           "exemplos_prc": [
             {
               "oracao": "What is your name?",
@@ -934,7 +934,7 @@
             {
               "errado": "Who is your phone?",
               "certo": "What is your phone?",
-              "explicacao": "NÔö£├åo se usa 'Who' (quem) para coisas. Use 'What' ou 'Which'."
+              "explicacao": "N├ö├Â┬úÔö£Ôòæo se usa 'Who' (quem) para coisas. Use 'What' ou 'Which'."
             },
             {
               "errado": "Is where the hospital?",
@@ -946,7 +946,7 @@
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual palavra usamos para perguntar o nome de alguÔö£├£m?",
+              "pergunta": "Qual palavra usamos para perguntar o nome de algu├ö├Â┬úÔö¼┬½m?",
               "opcoes": [
                 "Who",
                 "What",
@@ -954,7 +954,7 @@
                 "How"
               ],
               "resposta": 1,
-              "explicacao": "Perguntamos 'What is your name?' (Qual Ôö£├£ o seu nome?)."
+              "explicacao": "Perguntamos 'What is your name?' (Qual ├ö├Â┬úÔö¼┬½ o seu nome?)."
             },
             {
               "tipo": "revelar",
@@ -964,7 +964,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Como vocÔö£├© pergunta 'Onde vocÔö£├© mora?'",
+              "pergunta": "Como voc├ö├Â┬úÔö¼┬╝ pergunta 'Onde voc├ö├Â┬úÔö¼┬╝ mora?'",
               "opcoes": [
                 "What do you live?",
                 "Who do you live?",
@@ -972,7 +972,7 @@
                 "When do you live?"
               ],
               "resposta": 2,
-              "explicacao": "'Where' Ôö£├£ usado para lugares."
+              "explicacao": "'Where' ├ö├Â┬úÔö¼┬½ usado para lugares."
             },
             {
               "tipo": "revelar",
@@ -982,7 +982,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Se a resposta Ôö£├£ 'He is my brother', qual foi a pergunta?",
+              "pergunta": "Se a resposta ├ö├Â┬úÔö¼┬½ 'He is my brother', qual foi a pergunta?",
               "opcoes": [
                 "What is he?",
                 "Where is he?",
@@ -990,13 +990,13 @@
                 "How is he?"
               ],
               "resposta": 2,
-              "explicacao": "A resposta identifica uma pessoa, entÔö£├åo a pergunta foi 'Who is he?' (Quem Ôö£├£ ele?)."
+              "explicacao": "A resposta identifica uma pessoa, ent├ö├Â┬úÔö£Ôòæo a pergunta foi 'Who is he?' (Quem ├ö├Â┬úÔö¼┬½ ele?)."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete a pergunta: ___ are my keys?",
               "resposta": "Where",
-              "explicacao": "Para perguntar a localizaÔö£┬ÑÔö£├åo de algo, usamos 'Where' (Onde estÔö£├åo minhas chaves?)."
+              "explicacao": "Para perguntar a localiza├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de algo, usamos 'Where' (Onde est├ö├Â┬úÔö£Ôòæo minhas chaves?)."
             }
           ]
         },
@@ -1005,13 +1005,13 @@
           "num": "Lesson 9",
           "titulo": "Present Simple (Affirmative)",
           "subtitulo": "I, You, We, They",
-          "alerta": "O Present Simple Ôö£├£ usado para rotinas, hÔö£ãÆbitos e fatos permanentes. Para I, You, We e They, o verbo permanece igual ao infinitivo (sem o 'to').",
+          "alerta": "O Present Simple ├ö├Â┬úÔö¼┬½ usado para rotinas, h├ö├Â┬úÔö£┬íbitos e fatos permanentes. Para I, You, We e They, o verbo permanece igual ao infinitivo (sem o 'to').",
           "observacao_cards": [
             {
               "italiano": "Work",
               "traducao": "Trabalhar",
               "genero": "Verb",
-              "motivo": "MantÔö£├£m-se igual para I, You, We, They"
+              "motivo": "Mant├ö├Â┬úÔö¼┬½m-se igual para I, You, We, They"
             },
             {
               "italiano": "Like",
@@ -1025,33 +1025,33 @@
             {
               "oracao": "They live in New York.",
               "pergunta": "O verbo 'live' muda?",
-              "resposta": "NÔö£├åo.",
-              "conclusao": "Com 'They', o verbo nÔö£├åo sofre alteraÔö£┬ÑÔö£├åo."
+              "resposta": "N├ö├Â┬úÔö£Ôòæo.",
+              "conclusao": "Com 'They', o verbo n├ö├Â┬úÔö£Ôòæo sofre altera├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo."
             },
             {
               "oracao": "We study English every day.",
               "pergunta": "O que esta frase expressa?",
-              "resposta": "Uma rotina ou hÔö£ãÆbito.",
-              "conclusao": "Present Simple Ôö£├£ usado para hÔö£ãÆbitos e rotinas."
+              "resposta": "Uma rotina ou h├ö├Â┬úÔö£┬íbito.",
+              "conclusao": "Present Simple ├ö├Â┬úÔö¼┬½ usado para h├ö├Â┬úÔö£┬íbitos e rotinas."
             }
           ],
           "armadilhas": [
             {
               "errado": "I am play soccer.",
               "certo": "I play soccer.",
-              "explicacao": "NÔö£├åo use o verbo 'to be' (am/is/are) junto com outro verbo principal no Present Simple."
+              "explicacao": "N├ö├Â┬úÔö£Ôòæo use o verbo 'to be' (am/is/are) junto com outro verbo principal no Present Simple."
             },
             {
               "errado": "They plays tennis.",
               "certo": "They play tennis.",
-              "explicacao": "Para 'They', o verbo nÔö£├åo ganha 's'. O 's' Ôö£├£ apenas para He/She/It."
+              "explicacao": "Para 'They', o verbo n├ö├Â┬úÔö£Ôòæo ganha 's'. O 's' ├ö├Â┬úÔö¼┬½ apenas para He/She/It."
             }
           ],
-          "coda": "Dizer o que vocÔö£├© faz todo dia Ôö£├£ muito simples! Basta usar o pronome (I, You, We, They) e o verbo na sua forma bÔö£ãÆsica. Nada de 'am', 'is' ou 'are' pelo meio!",
+          "coda": "Dizer o que voc├ö├Â┬úÔö¼┬╝ faz todo dia ├ö├Â┬úÔö¼┬½ muito simples! Basta usar o pronome (I, You, We, They) e o verbo na sua forma b├ö├Â┬úÔö£┬ísica. Nada de 'am', 'is' ou 'are' pelo meio!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Como se diz 'NÔö¼┬Ñs comemos maÔö£┬ÑÔö£├ås'?",
+              "pergunta": "Como se diz 'N├ö├Â┬ú├ö├Â├®s comemos ma├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæs'?",
               "opcoes": [
                 "We are eat apples",
                 "We eats apples",
@@ -1065,11 +1065,11 @@
               "tipo": "revelar",
               "pergunta": "Complete com o verbo 'work': You ___ in an office.",
               "resposta": "work",
-              "explicacao": "Com 'You', o verbo permanece na forma bÔö£ãÆsica."
+              "explicacao": "Com 'You', o verbo permanece na forma b├ö├Â┬úÔö£┬ísica."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase indica um hÔö£ãÆbito?",
+              "pergunta": "Qual frase indica um h├ö├Â┬úÔö£┬íbito?",
               "opcoes": [
                 "I am watch TV.",
                 "I watch TV every night.",
@@ -1077,13 +1077,13 @@
                 "I watches TV."
               ],
               "resposta": 1,
-              "explicacao": "'I watch TV every night' indica um hÔö£ãÆbito e estÔö£ãÆ conjugado corretamente para 'I'."
+              "explicacao": "'I watch TV every night' indica um h├ö├Â┬úÔö£┬íbito e est├ö├Â┬úÔö£┬í conjugado corretamente para 'I'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete com 'like': They ___ pizza.",
               "resposta": "like",
-              "explicacao": "Com 'They', nÔö£├åo se adiciona 's' ao verbo."
+              "explicacao": "Com 'They', n├ö├Â┬úÔö£Ôòæo se adiciona 's' ao verbo."
             },
             {
               "tipo": "escolha",
@@ -1095,7 +1095,7 @@
                 "They speak Spanish."
               ],
               "resposta": 2,
-              "explicacao": "'We are study math' estÔö£ãÆ errado. O correto Ôö£├£ 'We study math'."
+              "explicacao": "'We are study math' est├ö├Â┬úÔö£┬í errado. O correto ├ö├Â┬úÔö¼┬½ 'We study math'."
             },
             {
               "tipo": "revelar",
@@ -1110,7 +1110,7 @@
           "num": "Lesson 10",
           "titulo": "Present Simple (He/She/It)",
           "subtitulo": "Regras do -s, -es, -ies",
-          "alerta": "Quando falamos sobre Ele (He), Ela (She) ou um animal/coisa (It) no presente, o verbo principal sofre uma pequena mudanÔö£┬Ña no final!",
+          "alerta": "Quando falamos sobre Ele (He), Ela (She) ou um animal/coisa (It) no presente, o verbo principal sofre uma pequena mudan├ö├Â┬úÔö¼Ôòæa no final!",
           "observacao_cards": [
             {
               "italiano": "-s",
@@ -1135,7 +1135,7 @@
           "exemplos_prc": [
             {
               "oracao": "She goes to school.",
-              "pergunta": "Por que o verbo Ôö£├£ 'goes' e nÔö£├åo 'go'?",
+              "pergunta": "Por que o verbo ├ö├Â┬úÔö¼┬½ 'goes' e n├ö├Â┬úÔö£Ôòæo 'go'?",
               "resposta": "Porque com 'She' adicionamos '-es' a verbos terminados em 'o'.",
               "conclusao": "go -> goes para He/She/It."
             },
@@ -1143,14 +1143,14 @@
               "oracao": "He studies English.",
               "pergunta": "Qual era a forma original do verbo?",
               "resposta": "Study.",
-              "conclusao": "Study termina em consoante + y, entÔö£├åo vira studies."
+              "conclusao": "Study termina em consoante + y, ent├ö├Â┬úÔö£Ôòæo vira studies."
             }
           ],
           "armadilhas": [
             {
               "errado": "He play soccer.",
               "certo": "He plays soccer.",
-              "explicacao": "├ö├▓├Â obrigatÔö¼┬Ñrio adicionar o 's' para a 3Ôö¼┬╝ pessoa do singular no presente afirmativo."
+              "explicacao": "├ö├Â┬úÔö£┬¢ obrigat├ö├Â┬ú├ö├Â├®rio adicionar o 's' para a 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular no presente afirmativo."
             },
             {
               "errado": "She flys a plane.",
@@ -1198,7 +1198,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase estÔö£ãÆ correta?",
+              "pergunta": "Qual frase est├ö├Â┬úÔö£┬í correta?",
               "opcoes": [
                 "John go to work at 8 AM.",
                 "John goes to work at 8 AM.",
@@ -1221,27 +1221,27 @@
           "num": "Lesson 11",
           "titulo": "Present Simple (Negative)",
           "subtitulo": "Don't vs Doesn't",
-          "alerta": "Para dizer 'nÔö£├åo' no Present Simple, precisamos da ajuda de 'don't' e 'doesn't'.",
+          "alerta": "Para dizer 'n├ö├Â┬úÔö£Ôòæo' no Present Simple, precisamos da ajuda de 'don't' e 'doesn't'.",
           "observacao_cards": [
             {
               "italiano": "don't",
-              "traducao": "nÔö£├åo (I, You, We, They)",
+              "traducao": "n├ö├Â┬úÔö£Ôòæo (I, You, We, They)",
               "genero": "Verbo Auxiliar",
               "motivo": "Negativa para a maioria das pessoas"
             },
             {
               "italiano": "doesn't",
-              "traducao": "nÔö£├åo (He, She, It)",
+              "traducao": "n├ö├Â┬úÔö£Ôòæo (He, She, It)",
               "genero": "Verbo Auxiliar",
-              "motivo": "Negativa para a 3Ôö¼┬╝ pessoa do singular"
+              "motivo": "Negativa para a 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular"
             }
           ],
           "tabela_visual": "| Subject | Auxiliary Negative | Verb |\n|---|---|---|\n| I / You / We / They | don't | play |\n| He / She / It | doesn't | play |",
           "exemplos_prc": [
             {
               "oracao": "She doesn't like pizza.",
-              "pergunta": "Por que o verbo 'like' nÔö£├åo tem 's' no final?",
-              "resposta": "Porque o 'doesn't' jÔö£ãÆ indica que a frase estÔö£ãÆ na 3Ôö¼┬╝ pessoa do singular. O verbo principal volta Ôö£├┤ sua forma base.",
+              "pergunta": "Por que o verbo 'like' n├ö├Â┬úÔö£Ôòæo tem 's' no final?",
+              "resposta": "Porque o 'doesn't' j├ö├Â┬úÔö£┬í indica que a frase est├ö├Â┬úÔö£┬í na 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular. O verbo principal volta ├ö├Â┬úÔö£├¡ sua forma base.",
               "conclusao": "Com 'doesn't', o verbo principal perde o 's'."
             }
           ],
@@ -1249,7 +1249,7 @@
             {
               "errado": "He doesn't plays soccer.",
               "certo": "He doesn't play soccer.",
-              "explicacao": "Nunca adicione 's' ao verbo principal em frases negativas. O auxiliar 'doesn't' jÔö£ãÆ faz esse trabalho."
+              "explicacao": "Nunca adicione 's' ao verbo principal em frases negativas. O auxiliar 'doesn't' j├ö├Â┬úÔö£┬í faz esse trabalho."
             }
           ],
           "coda": "Lembre-se: 'don't' para a maioria, e 'doesn't' para He, She, It (e sempre use o verbo normal depois deles)!",
@@ -1270,11 +1270,11 @@
               "tipo": "revelar",
               "pergunta": "Complete: He _______ like apples.",
               "resposta": "doesn't",
-              "explicacao": "Para 'He' (3Ôö¼┬╝ pessoa do singular), usamos 'doesn't'."
+              "explicacao": "Para 'He' (3├ö├Â┬╝Ôö¼┬╝ pessoa do singular), usamos 'doesn't'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase estÔö£ãÆ correta?",
+              "pergunta": "Qual frase est├ö├Â┬úÔö£┬í correta?",
               "opcoes": [
                 "She don't eat meat.",
                 "She doesn't eats meat.",
@@ -1300,7 +1300,7 @@
                 "aren't"
               ],
               "resposta": 1,
-              "explicacao": "'The cat' equivale a 'It' (3Ôö¼┬╝ pessoa do singular), logo usamos 'doesn't'."
+              "explicacao": "'The cat' equivale a 'It' (3├ö├Â┬╝Ôö¼┬╝ pessoa do singular), logo usamos 'doesn't'."
             },
             {
               "tipo": "revelar",
@@ -1315,7 +1315,7 @@
           "num": "Lesson 12",
           "titulo": "Present Simple (Questions)",
           "subtitulo": "Do vs Does",
-          "alerta": "No inglÔö£├©s, nÔö£├åo basta apenas mudar a entonaÔö£┬ÑÔö£├åo da voz. Precisamos colocar 'Do' ou 'Does' no comeÔö£┬Ño da frase para fazer uma pergunta no presente!",
+          "alerta": "No ingl├ö├Â┬úÔö¼┬╝s, n├ö├Â┬úÔö£Ôòæo basta apenas mudar a entona├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo da voz. Precisamos colocar 'Do' ou 'Does' no come├ö├Â┬úÔö¼Ôòæo da frase para fazer uma pergunta no presente!",
           "observacao_cards": [
             {
               "italiano": "Do",
@@ -1334,8 +1334,8 @@
           "exemplos_prc": [
             {
               "oracao": "Does he live here?",
-              "pergunta": "Por que usamos 'Does' e nÔö£├åo 'Do'?",
-              "resposta": "Porque o sujeito Ôö£├£ 'he' (ele), que Ôö£├£ 3Ôö¼┬╝ pessoa do singular.",
+              "pergunta": "Por que usamos 'Does' e n├ö├Â┬úÔö£Ôòæo 'Do'?",
+              "resposta": "Porque o sujeito ├ö├Â┬úÔö¼┬½ 'he' (ele), que ├ö├Â┬úÔö¼┬½ 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular.",
               "conclusao": "Coloque 'Does' antes de He, She, It."
             }
           ],
@@ -1343,15 +1343,15 @@
             {
               "errado": "You like coffee?",
               "certo": "Do you like coffee?",
-              "explicacao": "Em inglÔö£├©s nÔö£├åo podemos fazer perguntas no Present Simple apenas com entonaÔö£┬ÑÔö£├åo de voz. O auxiliar 'Do' Ôö£├£ obrigatÔö¼┬Ñrio no inÔö£├ÿcio."
+              "explicacao": "Em ingl├ö├Â┬úÔö¼┬╝s n├ö├Â┬úÔö£Ôòæo podemos fazer perguntas no Present Simple apenas com entona├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de voz. O auxiliar 'Do' ├ö├Â┬úÔö¼┬½ obrigat├ö├Â┬ú├ö├Â├®rio no in├ö├Â┬úÔö¼├¡cio."
             },
             {
               "errado": "Does she likes coffee?",
               "certo": "Does she like coffee?",
-              "explicacao": "Assim como na negativa, nas perguntas com 'Does' o verbo principal N├ö├Â┬úO ganha o 's'."
+              "explicacao": "Assim como na negativa, nas perguntas com 'Does' o verbo principal N├ö├Â┬úÔö£├│O ganha o 's'."
             }
           ],
-          "coda": "Sempre inicie as perguntas no presente com 'Do' ou 'Does'. O seu inglÔö£├©s vai soar muito mais natural!",
+          "coda": "Sempre inicie as perguntas no presente com 'Do' ou 'Does'. O seu ingl├ö├Â┬úÔö¼┬╝s vai soar muito mais natural!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1373,7 +1373,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase estÔö£ãÆ correta?",
+              "pergunta": "Qual frase est├ö├Â┬úÔö£┬í correta?",
               "opcoes": [
                 "Does he plays tennis?",
                 "Do he play tennis?",
@@ -1381,13 +1381,13 @@
                 "He plays tennis?"
               ],
               "resposta": 2,
-              "explicacao": "Iniciamos com 'Does' porque Ôö£├£ 'he', e o verbo principal fica na sua forma base (play)."
+              "explicacao": "Iniciamos com 'Does' porque ├ö├Â┬úÔö¼┬½ 'he', e o verbo principal fica na sua forma base (play)."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: _______ they have a car?",
               "resposta": "Do",
-              "explicacao": "Para o pronome 'they', o auxiliar correto Ôö£├£ 'Do'."
+              "explicacao": "Para o pronome 'they', o auxiliar correto ├ö├Â┬úÔö¼┬½ 'Do'."
             },
             {
               "tipo": "escolha",
@@ -1399,7 +1399,7 @@
                 "Are"
               ],
               "resposta": 1,
-              "explicacao": "John equivale a 'he' (ele), entÔö£├åo usamos 'Does'."
+              "explicacao": "John equivale a 'he' (ele), ent├ö├Â┬úÔö£Ôòæo usamos 'Does'."
             },
             {
               "tipo": "revelar",
@@ -1414,61 +1414,61 @@
           "num": "Lesson 13",
           "titulo": "Adverbs of Frequency",
           "subtitulo": "Always, Usually, Sometimes, Never",
-          "alerta": "Usamos esses advÔö£├£rbios para dizer COM QUE FREQU├ö├▓┬«NCIA fazemos algo (Sempre? ├ö├Â├Âs vezes? Nunca?).",
+          "alerta": "Usamos esses adv├ö├Â┬úÔö¼┬½rbios para dizer COM QUE FREQU├ö├Â┬úÔö£┬┐NCIA fazemos algo (Sempre? ├ö├Â┬úÔö£├ºs vezes? Nunca?).",
           "observacao_cards": [
             {
               "italiano": "always",
               "traducao": "sempre (100%)",
-              "genero": "AdvÔö£├£rbio",
-              "motivo": "Uma aÔö£┬ÑÔö£├åo constante"
+              "genero": "Adv├ö├Â┬úÔö¼┬½rbio",
+              "motivo": "Uma a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo constante"
             },
             {
               "italiano": "usually",
               "traducao": "normalmente (80%)",
-              "genero": "AdvÔö£├£rbio",
+              "genero": "Adv├ö├Â┬úÔö¼┬½rbio",
               "motivo": "Maior parte do tempo"
             },
             {
               "italiano": "sometimes",
-              "traducao": "Ôö£├┤s vezes (50%)",
-              "genero": "AdvÔö£├£rbio",
+              "traducao": "├ö├Â┬úÔö£├¡s vezes (50%)",
+              "genero": "Adv├ö├Â┬úÔö¼┬½rbio",
               "motivo": "Metade das vezes"
             },
             {
               "italiano": "never",
               "traducao": "nunca (0%)",
-              "genero": "AdvÔö£├£rbio",
-              "motivo": "AÔö£┬ÑÔö£├åo inexistente"
+              "genero": "Adv├ö├Â┬úÔö¼┬½rbio",
+              "motivo": "A├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo inexistente"
             }
           ],
-          "tabela_visual": "| Adverb | Meaning | Position |\n|---|---|---|\n| Always | Sempre | Antes do verbo principal |\n| Usually | Geralmente | Antes do verbo principal |\n| Sometimes | ├ö├Â├Âs vezes | Antes do verbo principal |\n| Never | Nunca | Antes do verbo principal |",
+          "tabela_visual": "| Adverb | Meaning | Position |\n|---|---|---|\n| Always | Sempre | Antes do verbo principal |\n| Usually | Geralmente | Antes do verbo principal |\n| Sometimes | ├ö├Â┬úÔö£├ºs vezes | Antes do verbo principal |\n| Never | Nunca | Antes do verbo principal |",
           "exemplos_prc": [
             {
               "oracao": "I always wake up early.",
-              "pergunta": "Onde fica o advÔö£├£rbio de frequÔö£├©ncia na frase?",
+              "pergunta": "Onde fica o adv├ö├Â┬úÔö¼┬½rbio de frequ├ö├Â┬úÔö¼┬╝ncia na frase?",
               "resposta": "Fica entre o sujeito (I) e o verbo principal (wake up).",
-              "conclusao": "A ordem Ôö£├£: Sujeito + AdvÔö£├£rbio + Verbo Principal."
+              "conclusao": "A ordem ├ö├Â┬úÔö¼┬½: Sujeito + Adv├ö├Â┬úÔö¼┬½rbio + Verbo Principal."
             },
             {
               "oracao": "I am never late.",
               "pergunta": "E se o verbo for o verbo 'To Be' (am/is/are)?",
-              "resposta": "Com o verbo 'to be', o advÔö£├£rbio vem DEPOIS do verbo (I am never).",
-              "conclusao": "A ordem Ôö£├£: Sujeito + To Be + AdvÔö£├£rbio."
+              "resposta": "Com o verbo 'to be', o adv├ö├Â┬úÔö¼┬½rbio vem DEPOIS do verbo (I am never).",
+              "conclusao": "A ordem ├ö├Â┬úÔö¼┬½: Sujeito + To Be + Adv├ö├Â┬úÔö¼┬½rbio."
             }
           ],
           "armadilhas": [
             {
               "errado": "I play usually soccer.",
               "certo": "I usually play soccer.",
-              "explicacao": "Com verbos comuns, o advÔö£├£rbio de frequÔö£├©ncia deve vir ANTES do verbo."
+              "explicacao": "Com verbos comuns, o adv├ö├Â┬úÔö¼┬½rbio de frequ├ö├Â┬úÔö¼┬╝ncia deve vir ANTES do verbo."
             },
             {
               "errado": "I don't never eat meat.",
               "certo": "I never eat meat.",
-              "explicacao": "A palavra 'never' jÔö£ãÆ torna a frase negativa. NÔö£├åo use 'don't' com 'never'."
+              "explicacao": "A palavra 'never' j├ö├Â┬úÔö£┬í torna a frase negativa. N├ö├Â┬úÔö£Ôòæo use 'don't' com 'never'."
             }
           ],
-          "coda": "A regra de ouro: AdvÔö£├£rbio de frequÔö£├©ncia vai ANTES da maioria dos verbos, mas DEPOIS do verbo 'To Be'!",
+          "coda": "A regra de ouro: Adv├ö├Â┬úÔö¼┬½rbio de frequ├ö├Â┬úÔö¼┬╝ncia vai ANTES da maioria dos verbos, mas DEPOIS do verbo 'To Be'!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1480,17 +1480,17 @@
                 "I go to bed always at 10 PM."
               ],
               "resposta": 1,
-              "explicacao": "O advÔö£├£rbio 'always' vem entre o sujeito (I) e o verbo principal (go)."
+              "explicacao": "O adv├ö├Â┬úÔö¼┬½rbio 'always' vem entre o sujeito (I) e o verbo principal (go)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Traduza a palavra entre parÔö£├©nteses: We _________ (Ôö£├┤s vezes) go to the park.",
+              "pergunta": "Traduza a palavra entre par├ö├Â┬úÔö¼┬╝nteses: We _________ (├ö├Â┬úÔö£├¡s vezes) go to the park.",
               "resposta": "sometimes",
-              "explicacao": "'Sometimes' significa Ôö£├┤s vezes."
+              "explicacao": "'Sometimes' significa ├ö├Â┬úÔö£├¡s vezes."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Como dizemos 'Ela nunca estÔö£ãÆ triste'?",
+              "pergunta": "Como dizemos 'Ela nunca est├ö├Â┬úÔö£┬í triste'?",
               "opcoes": [
                 "She never is sad.",
                 "She doesn't never be sad.",
@@ -1498,11 +1498,11 @@
                 "Never she is sad."
               ],
               "resposta": 2,
-              "explicacao": "Com o verbo 'to be' (is), o advÔö£├£rbio 'never' vem DEPOIS do verbo."
+              "explicacao": "Com o verbo 'to be' (is), o adv├ö├Â┬úÔö¼┬½rbio 'never' vem DEPOIS do verbo."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Traduza a palavra entre parÔö£├©nteses: He _________ (geralmente) plays video games on weekends.",
+              "pergunta": "Traduza a palavra entre par├ö├Â┬úÔö¼┬╝nteses: He _________ (geralmente) plays video games on weekends.",
               "resposta": "usually",
               "explicacao": "'Usually' significa geralmente/normalmente."
             },
@@ -1511,18 +1511,18 @@
               "pergunta": "O que significa 'never'?",
               "opcoes": [
                 "Sempre",
-                "├ö├Â├Âs vezes",
+                "├ö├Â┬úÔö£├ºs vezes",
                 "Geralmente",
                 "Nunca"
               ],
               "resposta": 3,
-              "explicacao": "'Never' indica que a aÔö£┬ÑÔö£├åo acontece com 0% de frequÔö£├©ncia, ou seja, nunca."
+              "explicacao": "'Never' indica que a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo acontece com 0% de frequ├ö├Â┬úÔö¼┬╝ncia, ou seja, nunca."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete com o advÔö£├£rbio correto de 100%: I ________ brush my teeth.",
+              "pergunta": "Complete com o adv├ö├Â┬úÔö¼┬½rbio correto de 100%: I ________ brush my teeth.",
               "resposta": "always",
-              "explicacao": "O advÔö£├£rbio para 100% de frequÔö£├©ncia Ôö£├£ 'always' (sempre)."
+              "explicacao": "O adv├ö├Â┬úÔö¼┬½rbio para 100% de frequ├ö├Â┬úÔö¼┬╝ncia ├ö├Â┬úÔö¼┬½ 'always' (sempre)."
             }
           ]
         },
@@ -1531,7 +1531,7 @@
           "num": "Lesson 14",
           "titulo": "Question Words 2",
           "subtitulo": "When, Why, How, How often",
-          "alerta": "Quer obter mais do que apenas um 'Sim' ou 'NÔö£├åo'? Use as Question Words! Elas lideram a pergunta.",
+          "alerta": "Quer obter mais do que apenas um 'Sim' ou 'N├ö├Â┬úÔö£Ôòæo'? Use as Question Words! Elas lideram a pergunta.",
           "observacao_cards": [
             {
               "italiano": "when",
@@ -1543,7 +1543,7 @@
               "italiano": "why",
               "traducao": "por que",
               "genero": "Question Word",
-              "motivo": "Pergunta sobre motivo/razÔö£├åo"
+              "motivo": "Pergunta sobre motivo/raz├ö├Â┬úÔö£Ôòæo"
             },
             {
               "italiano": "how",
@@ -1553,9 +1553,9 @@
             },
             {
               "italiano": "how often",
-              "traducao": "com que frequÔö£├©ncia",
+              "traducao": "com que frequ├ö├Â┬úÔö¼┬╝ncia",
               "genero": "Question Word",
-              "motivo": "Pergunta sobre rotina/frequÔö£├©ncia"
+              "motivo": "Pergunta sobre rotina/frequ├ö├Â┬úÔö¼┬╝ncia"
             }
           ],
           "tabela_visual": "| Question Word | Auxiliary | Subject | Verb | ? |\n|---|---|---|---|---|\n| When | do | you | study | ? |\n| Why | does | she | cry | ? |",
@@ -1563,7 +1563,7 @@
             {
               "oracao": "Why do you study English? - Because I want to travel.",
               "pergunta": "Por que usamos 'Why' e 'Because'?",
-              "resposta": "Em inglÔö£├©s, usamos 'Why' para PERGUNTAR o porquÔö£├©, e 'Because' para RESPONDER o porquÔö£├©.",
+              "resposta": "Em ingl├ö├Â┬úÔö¼┬╝s, usamos 'Why' para PERGUNTAR o porqu├ö├Â┬úÔö¼┬╝, e 'Because' para RESPONDER o porqu├ö├Â┬úÔö¼┬╝.",
               "conclusao": "Why = pergunta / Because = resposta"
             }
           ],
@@ -1571,10 +1571,10 @@
             {
               "errado": "Why you study English?",
               "certo": "Why do you study English?",
-              "explicacao": "As Question Words nÔö£├åo substituem o auxiliar (Do/Does). Elas devem vir ANTES do auxiliar."
+              "explicacao": "As Question Words n├ö├Â┬úÔö£Ôòæo substituem o auxiliar (Do/Does). Elas devem vir ANTES do auxiliar."
             }
           ],
-          "coda": "Use a fÔö¼┬Ñrmula mÔö£ãÆgica: Question Word + Do/Does + Sujeito + Verbo!",
+          "coda": "Use a f├ö├Â┬ú├ö├Â├®rmula m├ö├Â┬úÔö£┬ígica: Question Word + Do/Does + Sujeito + Verbo!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1586,11 +1586,11 @@
                 "Who"
               ],
               "resposta": 1,
-              "explicacao": "Se a resposta Ôö£├£ um motivo (Because...), a pergunta deve ser feita com 'Why'."
+              "explicacao": "Se a resposta ├ö├Â┬úÔö¼┬½ um motivo (Because...), a pergunta deve ser feita com 'Why'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Qual Question Word usamos para perguntar 'Como vai vocÔö£├©?': _______ are you?",
+              "pergunta": "Qual Question Word usamos para perguntar 'Como vai voc├ö├Â┬úÔö¼┬╝?': _______ are you?",
               "resposta": "How",
               "explicacao": "'How' significa como."
             },
@@ -1604,13 +1604,13 @@
                 "What"
               ],
               "resposta": 2,
-              "explicacao": "A resposta Ôö£├£ um horÔö£ãÆrio, entÔö£├åo estamos perguntando 'Quando', que em inglÔö£├©s Ôö£├£ 'When'."
+              "explicacao": "A resposta ├ö├Â┬úÔö¼┬½ um hor├ö├Â┬úÔö£┬írio, ent├ö├Â┬úÔö£Ôòæo estamos perguntando 'Quando', que em ingl├ö├Â┬úÔö¼┬╝s ├ö├Â┬úÔö¼┬½ 'When'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete a pergunta sobre frequÔö£├©ncia: _______ often do you play sports?",
+              "pergunta": "Complete a pergunta sobre frequ├ö├Â┬úÔö¼┬╝ncia: _______ often do you play sports?",
               "resposta": "How",
-              "explicacao": "A expressÔö£├åo completa para 'Com que frequÔö£├©ncia' Ôö£├£ 'How often'."
+              "explicacao": "A express├ö├Â┬úÔö£Ôòæo completa para 'Com que frequ├ö├Â┬úÔö¼┬╝ncia' ├ö├Â┬úÔö¼┬½ 'How often'."
             },
             {
               "tipo": "escolha",
@@ -1622,13 +1622,13 @@
                 "How you goes"
               ],
               "resposta": 2,
-              "explicacao": "A estrutura correta Ôö£├£: Question Word (How) + Auxiliar (do) + Sujeito (you) + Verbo (go)."
+              "explicacao": "A estrutura correta ├ö├Â┬úÔö¼┬½: Question Word (How) + Auxiliar (do) + Sujeito (you) + Verbo (go)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "A resposta usa 'Because'. A pergunta comeÔö£┬Ñou com ______.",
+              "pergunta": "A resposta usa 'Because'. A pergunta come├ö├Â┬úÔö¼Ôòæou com ______.",
               "resposta": "Why",
-              "explicacao": "Perguntas que pedem um motivo e sÔö£├åo respondidas com 'because' comeÔö£┬Ñam com 'Why'."
+              "explicacao": "Perguntas que pedem um motivo e s├ö├Â┬úÔö£Ôòæo respondidas com 'because' come├ö├Â┬úÔö¼Ôòæam com 'Why'."
             }
           ]
         },
@@ -1637,11 +1637,11 @@
           "num": "Lesson 15",
           "titulo": "Object Pronouns",
           "subtitulo": "Me, You, Him, Her, Us, Them",
-          "alerta": "Pronomes pessoais regulares (I, He, She) FAZEM a aÔö£┬ÑÔö£├åo. Mas e quem RECEBE a aÔö£┬ÑÔö£├åo? Apresentando os Object Pronouns!",
+          "alerta": "Pronomes pessoais regulares (I, He, She) FAZEM a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo. Mas e quem RECEBE a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo? Apresentando os Object Pronouns!",
           "observacao_cards": [
             {
               "italiano": "me",
-              "traducao": "me / mim (recebe a aÔö£┬ÑÔö£├åo de 'I')",
+              "traducao": "me / mim (recebe a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de 'I')",
               "genero": "Object Pronoun",
               "motivo": "Objeto da frase"
             },
@@ -1662,24 +1662,24 @@
           "exemplos_prc": [
             {
               "oracao": "I call him every day.",
-              "pergunta": "Por que nÔö£├åo podemos dizer 'I call he'?",
-              "resposta": "'He' sÔö¼┬Ñ Ôö£├£ usado quando ele pratica a aÔö£┬ÑÔö£├åo. Como ele estÔö£ãÆ recebendo a aÔö£┬ÑÔö£├åo de ser chamado, devemos usar 'him'.",
-              "conclusao": "Use o Object Pronoun DEPOIS de verbos ou preposiÔö£┬ÑÔö¼┬║es."
+              "pergunta": "Por que n├ö├Â┬úÔö£Ôòæo podemos dizer 'I call he'?",
+              "resposta": "'He' s├ö├Â┬ú├ö├Â├® ├ö├Â┬úÔö¼┬½ usado quando ele pratica a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo. Como ele est├ö├Â┬úÔö£┬í recebendo a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de ser chamado, devemos usar 'him'.",
+              "conclusao": "Use o Object Pronoun DEPOIS de verbos ou preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es."
             }
           ],
           "armadilhas": [
             {
               "errado": "She loves he.",
               "certo": "She loves him.",
-              "explicacao": "'He' Ôö£├£ o pronome sujeito (faz a aÔö£┬ÑÔö£├åo). O objeto da aÔö£┬ÑÔö£├åo de amar aqui deve ser o pronome objeto 'him'."
+              "explicacao": "'He' ├ö├Â┬úÔö¼┬½ o pronome sujeito (faz a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo). O objeto da a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de amar aqui deve ser o pronome objeto 'him'."
             },
             {
               "errado": "Talk to I.",
               "certo": "Talk to me.",
-              "explicacao": "ApÔö¼┬Ñs preposiÔö£┬ÑÔö¼┬║es (como 'to', 'for', 'with'), sempre usamos os pronomes objeto."
+              "explicacao": "Ap├ö├Â┬ú├ö├Â├®s preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es (como 'to', 'for', 'with'), sempre usamos os pronomes objeto."
             }
           ],
-          "coda": "Sujeito (no inÔö£├ÿcio) age; Objeto (depois do verbo) sofre a aÔö£┬ÑÔö£├åo. Decore essa tabelinha que ela salva vidas!",
+          "coda": "Sujeito (no in├ö├Â┬úÔö¼├¡cio) age; Objeto (depois do verbo) sofre a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo. Decore essa tabelinha que ela salva vidas!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1691,13 +1691,13 @@
                 "me"
               ],
               "resposta": 1,
-              "explicacao": "Estamos nos referindo a 'that man' (ele) recebendo a aÔö£┬ÑÔö£├åo de ser conhecido, entÔö£├åo usamos o pronome objeto 'him'."
+              "explicacao": "Estamos nos referindo a 'that man' (ele) recebendo a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de ser conhecido, ent├ö├Â┬úÔö£Ôòæo usamos o pronome objeto 'him'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: This present is for you and me. This present is for _______.",
               "resposta": "us",
-              "explicacao": "'You and me' formam o pronome 'nÔö¼┬Ñs'. O pronome objeto equivalente a 'We' Ôö£├£ 'us'."
+              "explicacao": "'You and me' formam o pronome 'n├ö├Â┬ú├ö├Â├®s'. O pronome objeto equivalente a 'We' ├ö├Â┬úÔö¼┬½ 'us'."
             },
             {
               "tipo": "escolha",
@@ -1709,13 +1709,13 @@
                 "us"
               ],
               "resposta": 2,
-              "explicacao": "'My parents' equivale a 'They' (eles). O pronome objeto correspondente Ôö£├£ 'them'."
+              "explicacao": "'My parents' equivale a 'They' (eles). O pronome objeto correspondente ├ö├Â┬úÔö¼┬½ 'them'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: Can you help _______? Eu preciso de ajuda.",
               "resposta": "me",
-              "explicacao": "A pessoa que precisa de ajuda Ôö£├£ 'I' (eu), logo o pronome que recebe a aÔö£┬ÑÔö£├åo Ôö£├£ 'me'."
+              "explicacao": "A pessoa que precisa de ajuda ├ö├Â┬úÔö¼┬½ 'I' (eu), logo o pronome que recebe a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo ├ö├Â┬úÔö¼┬½ 'me'."
             },
             {
               "tipo": "escolha",
@@ -1727,22 +1727,22 @@
                 "him"
               ],
               "resposta": 1,
-              "explicacao": "Referindo-se a 'that girl' (she) como objeto, o correto Ôö£├£ 'her'."
+              "explicacao": "Referindo-se a 'that girl' (she) como objeto, o correto ├ö├Â┬úÔö¼┬½ 'her'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete com o pronome objeto correto para 'it': I have a dog. I play with _______.",
               "resposta": "it",
-              "explicacao": "Para 'It', o pronome objeto Ôö£├£ o mesmo: 'it'."
+              "explicacao": "Para 'It', o pronome objeto ├ö├Â┬úÔö¼┬½ o mesmo: 'it'."
             }
           ]
         },
         {
           "id": "a1-lez16",
           "num": "Lesson 16",
-          "titulo": "\"Have got / Has got:\" Posse e \"have\" para aÔö£┬ÑÔö¼┬║es",
+          "titulo": "\"Have got / Has got:\" Posse e \"have\" para a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es",
           "subtitulo": "Possession and Actions",
-          "alerta": "Em inglÔö£├©s, 'have got' Ôö£├£ muito comum para falar de posse e caracterÔö£├ÿsticas, enquanto 'have' sozinho tambÔö£├£m Ôö£├£ usado para posse, mas especialmente para indicar aÔö£┬ÑÔö¼┬║es como comer ou tomar banho.",
+          "alerta": "Em ingl├ö├Â┬úÔö¼┬╝s, 'have got' ├ö├Â┬úÔö¼┬½ muito comum para falar de posse e caracter├ö├Â┬úÔö¼├¡sticas, enquanto 'have' sozinho tamb├ö├Â┬úÔö¼┬½m ├ö├Â┬úÔö¼┬½ usado para posse, mas especialmente para indicar a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es como comer ou tomar banho.",
           "observacao_cards": [
             {
               "italiano": "I have got",
@@ -1754,42 +1754,42 @@
               "italiano": "He has got",
               "traducao": "Ele tem",
               "genero": "Posse",
-              "motivo": "Forma para a 3Ôö¼┬╝ pessoa do singular (He, She, It)."
+              "motivo": "Forma para a 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular (He, She, It)."
             },
             {
               "italiano": "I have breakfast",
-              "traducao": "Eu tomo cafÔö£├£ da manhÔö£├å",
-              "genero": "AÔö£┬ÑÔö£├åo",
-              "motivo": "NÔö£├åo usamos 'got' quando 'have' significa uma aÔö£┬ÑÔö£├åo (comer, beber)."
+              "traducao": "Eu tomo caf├ö├Â┬úÔö¼┬½ da manh├ö├Â┬úÔö£Ôòæ",
+              "genero": "A├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo",
+              "motivo": "N├ö├Â┬úÔö£Ôòæo usamos 'got' quando 'have' significa uma a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo (comer, beber)."
             }
           ],
-          "tabela_visual": "| Sujeito | Posse (Have/Has got) | AÔö£┬ÑÔö£├åo (Have/Has) |\n|---|---|---|\n| I / You / We / They | have got ('ve got) | have |\n| He / She / It | has got ('s got) | has |",
+          "tabela_visual": "| Sujeito | Posse (Have/Has got) | A├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo (Have/Has) |\n|---|---|---|\n| I / You / We / They | have got ('ve got) | have |\n| He / She / It | has got ('s got) | has |",
           "exemplos_prc": [
             {
               "oracao": "She has got a new car.",
               "pergunta": "O que indica 'has got'?",
-              "resposta": "Indica posse, que ela Ôö£├£ dona do carro.",
+              "resposta": "Indica posse, que ela ├ö├Â┬úÔö¼┬½ dona do carro.",
               "conclusao": "has got = ter/possuir"
             },
             {
               "oracao": "They have lunch at noon.",
-              "pergunta": "Por que nÔö£├åo usamos 'got' aqui?",
-              "resposta": "Porque 'have lunch' Ôö£├£ uma aÔö£┬ÑÔö£├åo (almoÔö£┬Ñar), nÔö£├åo posse.",
-              "conclusao": "have = aÔö£┬ÑÔö£├åo"
+              "pergunta": "Por que n├ö├Â┬úÔö£Ôòæo usamos 'got' aqui?",
+              "resposta": "Porque 'have lunch' ├ö├Â┬úÔö¼┬½ uma a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo (almo├ö├Â┬úÔö¼Ôòæar), n├ö├Â┬úÔö£Ôòæo posse.",
+              "conclusao": "have = a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo"
             }
           ],
           "armadilhas": [
             {
               "errado": "I have got breakfast at 8 am.",
               "certo": "I have breakfast at 8 am.",
-              "explicacao": "NÔö£├åo usamos 'got' quando 'have' significa comer/beber/tomar banho (aÔö£┬ÑÔö¼┬║es)."
+              "explicacao": "N├ö├Â┬úÔö£Ôòæo usamos 'got' quando 'have' significa comer/beber/tomar banho (a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es)."
             }
           ],
-          "coda": "Lembre-se: 'have got' Ôö£├£ para o que vocÔö£├© possui ou para descrever a si mesmo, enquanto 'have' puro muitas vezes representa aÔö£┬ÑÔö¼┬║es da rotina!",
+          "coda": "Lembre-se: 'have got' ├ö├Â┬úÔö¼┬½ para o que voc├ö├Â┬úÔö¼┬╝ possui ou para descrever a si mesmo, enquanto 'have' puro muitas vezes representa a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es da rotina!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ a forma correta de posse para 'She'?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ a forma correta de posse para 'She'?",
               "opcoes": [
                 "have got",
                 "has got",
@@ -1797,7 +1797,7 @@
                 "having got"
               ],
               "resposta": 1,
-              "explicacao": "Na 3Ôö¼┬╝ pessoa do singular, usamos 'has got'."
+              "explicacao": "Na 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular, usamos 'has got'."
             },
             {
               "tipo": "revelar",
@@ -1815,17 +1815,17 @@
                 "I am a shower"
               ],
               "resposta": 0,
-              "explicacao": "Tomar banho Ôö£├£ uma aÔö£┬ÑÔö£├åo, entÔö£├åo usamos 'have' sem o 'got'."
+              "explicacao": "Tomar banho ├ö├Â┬úÔö¼┬½ uma a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo, ent├ö├Â┬úÔö£Ôòæo usamos 'have' sem o 'got'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete indicando aÔö£┬ÑÔö£├åo: He ___ coffee every morning.",
+              "pergunta": "Complete indicando a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo: He ___ coffee every morning.",
               "resposta": "has",
-              "explicacao": "Beber cafÔö£├£ Ôö£├£ uma aÔö£┬ÑÔö£├åo. Para 'He', usamos 'has'."
+              "explicacao": "Beber caf├ö├Â┬úÔö¼┬½ ├ö├Â┬úÔö¼┬½ uma a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo. Para 'He', usamos 'has'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Na negativa, como dizemos 'Eles nÔö£├åo tÔö£├©m carro' usando 'got'?",
+              "pergunta": "Na negativa, como dizemos 'Eles n├ö├Â┬úÔö£Ôòæo t├ö├Â┬úÔö¼┬╝m carro' usando 'got'?",
               "opcoes": [
                 "They don't have got a car",
                 "They haven't got a car",
@@ -1833,33 +1833,33 @@
                 "They isn't got a car"
               ],
               "resposta": 1,
-              "explicacao": "A negativa de 'have got' Ôö£├£ 'haven't got'."
+              "explicacao": "A negativa de 'have got' ├ö├Â┬úÔö¼┬½ 'haven't got'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete indicando posse: ___ you got any money?",
               "resposta": "Have",
-              "explicacao": "Em perguntas com 'got', comeÔö£┬Ñamos a frase com 'Have' ou 'Has'."
+              "explicacao": "Em perguntas com 'got', come├ö├Â┬úÔö¼Ôòæamos a frase com 'Have' ou 'Has'."
             }
           ]
         },
         {
           "id": "a1-lez17",
           "num": "Lesson 17",
-          "titulo": "\"There is / There are:\" ExistÔö£├©ncia no presente",
+          "titulo": "\"There is / There are:\" Exist├ö├Â┬úÔö¼┬╝ncia no presente",
           "subtitulo": "There is a cat... There are dogs...",
-          "alerta": "Em inglÔö£├©s, usamos 'There is' e 'There are' para dizer que algo existe em um lugar. ├ö├▓├Â o equivalente ao verbo 'haver' ou 'ter' no sentido de existÔö£├©ncia.",
+          "alerta": "Em ingl├ö├Â┬úÔö¼┬╝s, usamos 'There is' e 'There are' para dizer que algo existe em um lugar. ├ö├Â┬úÔö£┬¢ o equivalente ao verbo 'haver' ou 'ter' no sentido de exist├ö├Â┬úÔö¼┬╝ncia.",
           "observacao_cards": [
             {
               "italiano": "There is",
-              "traducao": "HÔö£ãÆ / Tem (Singular)",
-              "genero": "ExistÔö£├©ncia",
-              "motivo": "Usado para um Ôö¼├Çnico objeto, pessoa ou animal."
+              "traducao": "H├ö├Â┬úÔö£┬í / Tem (Singular)",
+              "genero": "Exist├ö├Â┬úÔö¼┬╝ncia",
+              "motivo": "Usado para um ├ö├Â┬ú├ö├▓├ªnico objeto, pessoa ou animal."
             },
             {
               "italiano": "There are",
-              "traducao": "HÔö£ãÆ / TÔö£├©m (Plural)",
-              "genero": "ExistÔö£├©ncia",
+              "traducao": "H├ö├Â┬úÔö£┬í / T├ö├Â┬úÔö¼┬╝m (Plural)",
+              "genero": "Exist├ö├Â┬úÔö¼┬╝ncia",
               "motivo": "Usado para dois ou mais objetos, pessoas ou animais."
             }
           ],
@@ -1868,13 +1868,13 @@
             {
               "oracao": "There is a dog in the park.",
               "pergunta": "Por que usamos 'There is'?",
-              "resposta": "Porque 'a dog' (um cachorro) Ôö£├£ singular.",
+              "resposta": "Porque 'a dog' (um cachorro) ├ö├Â┬úÔö¼┬½ singular.",
               "conclusao": "There is = Singular"
             },
             {
               "oracao": "There are three apples on the table.",
               "pergunta": "Por que usamos 'There are'?",
-              "resposta": "Porque 'three apples' Ôö£├£ plural.",
+              "resposta": "Porque 'three apples' ├ö├Â┬úÔö¼┬½ plural.",
               "conclusao": "There are = Plural"
             }
           ],
@@ -1882,7 +1882,7 @@
             {
               "errado": "Have a dog in the park.",
               "certo": "There is a dog in the park.",
-              "explicacao": "Nunca traduza o 'tem' (existir) do portuguÔö£├©s por 'have' nesse contexto."
+              "explicacao": "Nunca traduza o 'tem' (existir) do portugu├ö├Â┬úÔö¼┬╝s por 'have' nesse contexto."
             }
           ],
           "coda": "Dica de ouro: Nunca traduza o nosso 'tem um carro na rua' com 'have'. Sempre use 'There is / There are' para dizer o que existe ao seu redor!",
@@ -1897,17 +1897,17 @@
                 "Has"
               ],
               "resposta": 1,
-              "explicacao": "'A problem' Ôö£├£ singular, logo usamos 'There is'."
+              "explicacao": "'A problem' ├ö├Â┬úÔö¼┬½ singular, logo usamos 'There is'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: ___ ___ many people here.",
               "resposta": "There are",
-              "explicacao": "'Many people' (muitas pessoas) Ôö£├£ plural."
+              "explicacao": "'Many people' (muitas pessoas) ├ö├Â┬úÔö¼┬½ plural."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Como perguntamos: 'HÔö£ãÆ um mÔö£├£dico no aviÔö£├åo?'",
+              "pergunta": "Como perguntamos: 'H├ö├Â┬úÔö£┬í um m├ö├Â┬úÔö¼┬½dico no avi├ö├Â┬úÔö£Ôòæo?'",
               "opcoes": [
                 "Is there a doctor on the plane?",
                 "Are there a doctor on the plane?",
@@ -1919,21 +1919,21 @@
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete na negativa (forma contraÔö£├ÿda): There ___ any milk in the fridge.",
+              "pergunta": "Complete na negativa (forma contra├ö├Â┬úÔö¼├¡da): There ___ any milk in the fridge.",
               "resposta": "isn't",
-              "explicacao": "Milk Ôö£├£ incontÔö£ãÆvel (considerado singular), e na negativa fica 'isn't'."
+              "explicacao": "Milk ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível (considerado singular), e na negativa fica 'isn't'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual a traduÔö£┬ÑÔö£├åo mais exata para: 'There are two cars in the garage.'?",
+              "pergunta": "Qual a tradu├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo mais exata para: 'There are two cars in the garage.'?",
               "opcoes": [
-                "Eles sÔö£├åo dois carros na garagem.",
-                "Eles tÔö£├©m dois carros na garagem.",
-                "HÔö£ãÆ / Tem dois carros na garagem.",
-                "SÔö£├åo dois carros na garagem."
+                "Eles s├ö├Â┬úÔö£Ôòæo dois carros na garagem.",
+                "Eles t├ö├Â┬úÔö¼┬╝m dois carros na garagem.",
+                "H├ö├Â┬úÔö£┬í / Tem dois carros na garagem.",
+                "S├ö├Â┬úÔö£Ôòæo dois carros na garagem."
               ],
               "resposta": 2,
-              "explicacao": "'There are' indica a existÔö£├©ncia no plural (HÔö£ãÆ / Tem)."
+              "explicacao": "'There are' indica a exist├ö├Â┬úÔö¼┬╝ncia no plural (H├ö├Â┬úÔö£┬í / Tem)."
             },
             {
               "tipo": "revelar",
@@ -1946,52 +1946,52 @@
         {
           "id": "a1-lez18",
           "num": "Lesson 18",
-          "titulo": "\"Prepositions of Place:\" In, On, At (fÔö£├ÿsico/localizaÔö£┬ÑÔö£├åo)",
+          "titulo": "\"Prepositions of Place:\" In, On, At (f├ö├Â┬úÔö¼├¡sico/localiza├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo)",
           "subtitulo": "Where are you?",
-          "alerta": "In, On, e At sÔö£├åo preposiÔö£┬ÑÔö¼┬║es de lugar que funcionam como uma pirÔö£├Âmide invertida: do mais amplo e geral (In) para o ponto mais especÔö£├ÿfico (At).",
+          "alerta": "In, On, e At s├ö├Â┬úÔö£Ôòæo preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es de lugar que funcionam como uma pir├ö├Â┬úÔö£Ôöémide invertida: do mais amplo e geral (In) para o ponto mais espec├ö├Â┬úÔö¼├¡fico (At).",
           "observacao_cards": [
             {
               "italiano": "In",
               "traducao": "Dentro de / Em",
               "genero": "Amplo",
-              "motivo": "Para continentes, paÔö£├ÿses, cidades ou espaÔö£┬Ños fechados (uma caixa)."
+              "motivo": "Para continentes, pa├ö├Â┬úÔö¼├¡ses, cidades ou espa├ö├Â┬úÔö¼Ôòæos fechados (uma caixa)."
             },
             {
               "italiano": "On",
               "traducao": "Sobre / Na",
-              "genero": "SuperfÔö£├ÿcie",
-              "motivo": "Para ruas, avenidas, ou algo que estÔö£ãÆ encostado em uma superfÔö£├ÿcie."
+              "genero": "Superf├ö├Â┬úÔö¼├¡cie",
+              "motivo": "Para ruas, avenidas, ou algo que est├ö├Â┬úÔö£┬í encostado em uma superf├ö├Â┬úÔö¼├¡cie."
             },
             {
               "italiano": "At",
               "traducao": "No / Na",
-              "genero": "Ponto EspecÔö£├ÿfico",
-              "motivo": "EndereÔö£┬Ños completos com nÔö¼├Çmero ou pontos exatos num mapa."
+              "genero": "Ponto Espec├ö├Â┬úÔö¼├¡fico",
+              "motivo": "Endere├ö├Â┬úÔö¼Ôòæos completos com n├ö├Â┬ú├ö├▓├ªmero ou pontos exatos num mapa."
             }
           ],
-          "tabela_visual": "| PreposiÔö£┬ÑÔö£├åo | Uso de Lugar | Exemplo |\n|---|---|---|\n| IN | PaÔö£├ÿses, cidades, cÔö¼├émodos | in Brazil, in the living room |\n| ON | SuperfÔö£├ÿcies, ruas | on the table, on Main Street |\n| AT | EndereÔö£┬Ños completos, locais exatos | at 123 Main St, at the bus stop |",
+          "tabela_visual": "| Preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo | Uso de Lugar | Exemplo |\n|---|---|---|\n| IN | Pa├ö├Â┬úÔö¼├¡ses, cidades, c├ö├Â┬ú├ö├Â├▒modos | in Brazil, in the living room |\n| ON | Superf├ö├Â┬úÔö¼├¡cies, ruas | on the table, on Main Street |\n| AT | Endere├ö├Â┬úÔö¼Ôòæos completos, locais exatos | at 123 Main St, at the bus stop |",
           "exemplos_prc": [
             {
               "oracao": "The book is on the table.",
               "pergunta": "Por que usamos 'on'?",
-              "resposta": "Porque o livro estÔö£ãÆ tocando a superfÔö£├ÿcie da mesa.",
-              "conclusao": "On = Contato/SuperfÔö£├ÿcie"
+              "resposta": "Porque o livro est├ö├Â┬úÔö£┬í tocando a superf├ö├Â┬úÔö¼├¡cie da mesa.",
+              "conclusao": "On = Contato/Superf├ö├Â┬úÔö¼├¡cie"
             },
             {
               "oracao": "I live in Paris.",
               "pergunta": "Por que usamos 'in'?",
-              "resposta": "Paris Ôö£├£ uma cidade. Cidades levam 'in'.",
-              "conclusao": "In = Cidades/PaÔö£├ÿses"
+              "resposta": "Paris ├ö├Â┬úÔö¼┬½ uma cidade. Cidades levam 'in'.",
+              "conclusao": "In = Cidades/Pa├ö├Â┬úÔö¼├¡ses"
             }
           ],
           "armadilhas": [
             {
               "errado": "I am at Brazil.",
               "certo": "I am in Brazil.",
-              "explicacao": "Para paÔö£├ÿses, sendo lugares amplos, sempre usamos 'in'."
+              "explicacao": "Para pa├ö├Â┬úÔö¼├¡ses, sendo lugares amplos, sempre usamos 'in'."
             }
           ],
-          "coda": "Pense no IN como uma fronteira ao seu redor, o ON como o chÔö£├åo/parede onde vocÔö£├© toca e o AT como o X no mapa do GPS.",
+          "coda": "Pense no IN como uma fronteira ao seu redor, o ON como o ch├ö├Â┬úÔö£Ôòæo/parede onde voc├ö├Â┬úÔö¼┬╝ toca e o AT como o X no mapa do GPS.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2003,17 +2003,17 @@
                 "to"
               ],
               "resposta": 1,
-              "explicacao": "Tokyo Ôö£├£ uma cidade, e para cidades usamos 'in'."
+              "explicacao": "Tokyo ├ö├Â┬úÔö¼┬½ uma cidade, e para cidades usamos 'in'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete com a preposiÔö£┬ÑÔö£├åo correta: The picture is ___ the wall. (na parede)",
+              "pergunta": "Complete com a preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo correta: The picture is ___ the wall. (na parede)",
               "resposta": "on",
-              "explicacao": "A parede Ôö£├£ uma superfÔö£├ÿcie, portanto usamos 'on'."
+              "explicacao": "A parede ├ö├Â┬úÔö¼┬½ uma superf├ö├Â┬úÔö¼├¡cie, portanto usamos 'on'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual preposiÔö£┬ÑÔö£├åo usar com um endereÔö£┬Ño exato: I live ___ 45 Oxford Street.",
+              "pergunta": "Qual preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo usar com um endere├ö├Â┬úÔö¼Ôòæo exato: I live ___ 45 Oxford Street.",
               "opcoes": [
                 "at",
                 "in",
@@ -2021,17 +2021,17 @@
                 "by"
               ],
               "resposta": 0,
-              "explicacao": "EndereÔö£┬Ños com nÔö¼├Çmero sÔö£├åo muito especÔö£├ÿficos, entÔö£├åo exigem 'at'."
+              "explicacao": "Endere├ö├Â┬úÔö¼Ôòæos com n├ö├Â┬ú├ö├▓├ªmero s├ö├Â┬úÔö£Ôòæo muito espec├ö├Â┬úÔö¼├¡ficos, ent├ö├Â┬úÔö£Ôòæo exigem 'at'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete: I am waiting ___ the bus stop. (no ponto de Ôö¼├énibus)",
+              "pergunta": "Complete: I am waiting ___ the bus stop. (no ponto de ├ö├Â┬ú├ö├Â├▒nibus)",
               "resposta": "at",
-              "explicacao": "O ponto de Ôö¼├énibus Ôö£├£ uma localizaÔö£┬ÑÔö£├åo exata num mapa ('at')."
+              "explicacao": "O ponto de ├ö├Â┬ú├ö├Â├▒nibus ├ö├Â┬úÔö¼┬½ uma localiza├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo exata num mapa ('at')."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Se uma caneta estÔö£ãÆ dentro do estojo, dizemos:",
+              "pergunta": "Se uma caneta est├ö├Â┬úÔö£┬í dentro do estojo, dizemos:",
               "opcoes": [
                 "The pen is on the case.",
                 "The pen is at the case.",
@@ -2039,13 +2039,13 @@
                 "The pen is by the case."
               ],
               "resposta": 2,
-              "explicacao": "Para o interior de objetos ou cÔö¼├émodos (volume), usamos 'in'."
+              "explicacao": "Para o interior de objetos ou c├ö├Â┬ú├ö├Â├▒modos (volume), usamos 'in'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete: The cat is sleeping ___ the sofa. (em cima do sofÔö£ãÆ)",
+              "pergunta": "Complete: The cat is sleeping ___ the sofa. (em cima do sof├ö├Â┬úÔö£┬í)",
               "resposta": "on",
-              "explicacao": "O gato estÔö£ãÆ repousando na superfÔö£├ÿcie do sofÔö£ãÆ ('on')."
+              "explicacao": "O gato est├ö├Â┬úÔö£┬í repousando na superf├ö├Â┬úÔö¼├¡cie do sof├ö├Â┬úÔö£┬í ('on')."
             }
           ]
         },
@@ -2054,39 +2054,39 @@
           "num": "Lesson 19",
           "titulo": "\"Prepositions of Time:\" In, On, At (temporal)",
           "subtitulo": "When is it?",
-          "alerta": "As preposiÔö£┬ÑÔö¼┬║es in, on e at tambÔö£├£m funcionam para tempo! A regra da pirÔö£├Âmide invertida (do longo/geral para o curto/exato) se mantÔö£├£m perfeitamente.",
+          "alerta": "As preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es in, on e at tamb├ö├Â┬úÔö¼┬½m funcionam para tempo! A regra da pir├ö├Â┬úÔö£Ôöémide invertida (do longo/geral para o curto/exato) se mant├ö├Â┬úÔö¼┬½m perfeitamente.",
           "observacao_cards": [
             {
               "italiano": "In",
               "traducao": "Em",
-              "genero": "PerÔö£├ÿodos Longos",
-              "motivo": "Anos, meses, estaÔö£┬ÑÔö¼┬║es do ano, sÔö£├£culos e partes do dia (manhÔö£├å, tarde)."
+              "genero": "Per├ö├Â┬úÔö¼├¡odos Longos",
+              "motivo": "Anos, meses, esta├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es do ano, s├ö├Â┬úÔö¼┬½culos e partes do dia (manh├ö├Â┬úÔö£Ôòæ, tarde)."
             },
             {
               "italiano": "On",
               "traducao": "Em (No/Na)",
               "genero": "Dias e Datas",
-              "motivo": "Dias da semana e datas especÔö£├ÿficas com dia e mÔö£├©s."
+              "motivo": "Dias da semana e datas espec├ö├Â┬úÔö¼├¡ficas com dia e m├ö├Â┬úÔö¼┬╝s."
             },
             {
               "italiano": "At",
-              "traducao": "├ö├Â├Âs",
+              "traducao": "├ö├Â┬úÔö£├ºs",
               "genero": "Horas e Momentos",
-              "motivo": "HorÔö£ãÆrios de relÔö¼┬Ñgio, feriados especÔö£├ÿficos e a exceÔö£┬ÑÔö£├åo 'at night'."
+              "motivo": "Hor├ö├Â┬úÔö£┬írios de rel├ö├Â┬ú├ö├Â├®gio, feriados espec├ö├Â┬úÔö¼├¡ficos e a exce├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo 'at night'."
             }
           ],
-          "tabela_visual": "| PreposiÔö£┬ÑÔö£├åo | Uso de Tempo | Exemplo |\n|---|---|---|\n| IN | Meses, anos, partes do dia | in May, in 1999, in the morning |\n| ON | Dias da semana e datas | on Monday, on May 5th |\n| AT | HorÔö£ãÆrios exatos | at 8:00, at night, at noon |",
+          "tabela_visual": "| Preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo | Uso de Tempo | Exemplo |\n|---|---|---|\n| IN | Meses, anos, partes do dia | in May, in 1999, in the morning |\n| ON | Dias da semana e datas | on Monday, on May 5th |\n| AT | Hor├ö├Â┬úÔö£┬írios exatos | at 8:00, at night, at noon |",
           "exemplos_prc": [
             {
               "oracao": "My birthday is in June.",
-              "pergunta": "Por que 'in' e nÔö£├åo 'on'?",
-              "resposta": "Porque mencionamos apenas o mÔö£├©s. O mÔö£├©s Ôö£├£ um perÔö£├ÿodo longo.",
-              "conclusao": "In = MÔö£├©s sozinho"
+              "pergunta": "Por que 'in' e n├ö├Â┬úÔö£Ôòæo 'on'?",
+              "resposta": "Porque mencionamos apenas o m├ö├Â┬úÔö¼┬╝s. O m├ö├Â┬úÔö¼┬╝s ├ö├Â┬úÔö¼┬½ um per├ö├Â┬úÔö¼├¡odo longo.",
+              "conclusao": "In = M├ö├Â┬úÔö¼┬╝s sozinho"
             },
             {
               "oracao": "The meeting is on Friday.",
               "pergunta": "Por que 'on'?",
-              "resposta": "Para dias da semana, a preposiÔö£┬ÑÔö£├åo obrigatÔö¼┬Ñria Ôö£├£ 'on'.",
+              "resposta": "Para dias da semana, a preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo obrigat├ö├Â┬ú├ö├Â├®ria ├ö├Â┬úÔö¼┬½ 'on'.",
               "conclusao": "On = Dia da semana"
             }
           ],
@@ -2097,7 +2097,7 @@
               "explicacao": "Apesar de dizermos 'in the morning' e 'in the afternoon', a palavra 'night' sempre exige 'at'."
             }
           ],
-          "coda": "Se for longo (anos, meses), use IN. Se for dia da semana ou data redonda, use ON. Se vocÔö£├© vai olhar para o relÔö¼┬Ñgio, use AT.",
+          "coda": "Se for longo (anos, meses), use IN. Se for dia da semana ou data redonda, use ON. Se voc├ö├Â┬úÔö¼┬╝ vai olhar para o rel├ö├Â┬ú├ö├Â├®gio, use AT.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2109,17 +2109,17 @@
                 "to"
               ],
               "resposta": 1,
-              "explicacao": "HorÔö£ãÆrios no relÔö¼┬Ñgio exigem 'at'."
+              "explicacao": "Hor├ö├Â┬úÔö£┬írios no rel├ö├Â┬ú├ö├Â├®gio exigem 'at'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete com a preposiÔö£┬ÑÔö£├åo correta: We don't work ___ Sundays.",
+              "pergunta": "Complete com a preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo correta: We don't work ___ Sundays.",
               "resposta": "on",
-              "explicacao": "Sundays sÔö£├åo dias da semana, logo exigem 'on'."
+              "explicacao": "Sundays s├ö├Â┬úÔö£Ôòæo dias da semana, logo exigem 'on'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase estÔö£ãÆ correta?",
+              "pergunta": "Qual frase est├ö├Â┬úÔö£┬í correta?",
               "opcoes": [
                 "I was born on 1990.",
                 "I was born at 1990.",
@@ -2131,9 +2131,9 @@
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete a exceÔö£┬ÑÔö£├åo: I like to watch movies ___ night.",
+              "pergunta": "Complete a exce├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo: I like to watch movies ___ night.",
               "resposta": "at",
-              "explicacao": "A palavra 'night' (noite) sempre pede a preposiÔö£┬ÑÔö£├åo 'at'."
+              "explicacao": "A palavra 'night' (noite) sempre pede a preposi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo 'at'."
             },
             {
               "tipo": "escolha",
@@ -2145,7 +2145,7 @@
                 "from"
               ],
               "resposta": 2,
-              "explicacao": "Datas com o dia especÔö£├ÿfico exigem 'on', mesmo que o mÔö£├©s esteja presente."
+              "explicacao": "Datas com o dia espec├ö├Â┬úÔö¼├¡fico exigem 'on', mesmo que o m├ö├Â┬úÔö¼┬╝s esteja presente."
             },
             {
               "tipo": "revelar",
@@ -2158,21 +2158,21 @@
         {
           "id": "a1-lez20",
           "num": "Lesson 20",
-          "titulo": "\"Countable vs Uncountable Nouns:\" A lÔö¼┬Ñgica do que pode ser contado",
+          "titulo": "\"Countable vs Uncountable Nouns:\" A l├ö├Â┬ú├ö├Â├®gica do que pode ser contado",
           "subtitulo": "Apples and Water",
-          "alerta": "No inglÔö£├©s, coisas se dividem fortemente entre o que dÔö£ãÆ para contar (1, 2, 3 maÔö£┬ÑÔö£├ås) e o que se precisa medir ou agrupar (como Ôö£ãÆgua, nÔö£├åo existe '2 Ôö£ãÆguas', mas sim '2 copos de Ôö£ãÆgua').",
+          "alerta": "No ingl├ö├Â┬úÔö¼┬╝s, coisas se dividem fortemente entre o que d├ö├Â┬úÔö£┬í para contar (1, 2, 3 ma├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæs) e o que se precisa medir ou agrupar (como ├ö├Â┬úÔö£┬ígua, n├ö├Â┬úÔö£Ôòæo existe '2 ├ö├Â┬úÔö£┬íguas', mas sim '2 copos de ├ö├Â┬úÔö£┬ígua').",
           "observacao_cards": [
             {
               "italiano": "Countable",
-              "traducao": "ContÔö£ãÆvel",
+              "traducao": "Cont├ö├Â┬úÔö£┬ível",
               "genero": "Contagem",
-              "motivo": "Pode ir para o plural (com 's') e aceita os artigos 'a'/'an' e nÔö¼├Çmeros."
+              "motivo": "Pode ir para o plural (com 's') e aceita os artigos 'a'/'an' e n├ö├Â┬ú├ö├▓├ªmeros."
             },
             {
               "italiano": "Uncountable",
-              "traducao": "IncontÔö£ãÆvel",
+              "traducao": "Incont├ö├Â┬úÔö£┬ível",
               "genero": "Sem plural",
-              "motivo": "Sempre no singular, nÔö£├åo aceita 'a'/'an' diretamente ou nÔö¼├Çmeros puros."
+              "motivo": "Sempre no singular, n├ö├Â┬úÔö£Ôòæo aceita 'a'/'an' diretamente ou n├ö├Â┬ú├ö├▓├ªmeros puros."
             }
           ],
           "tabela_visual": "| Categoria | Regra | Exemplos |\n|---|---|---|\n| Countable | Aceita plural (a/an/numbers) | an apple, two cars, five dogs |\n| Uncountable | Singular apenas (use some/much) | water, money, information, bread |",
@@ -2180,28 +2180,28 @@
             {
               "oracao": "I need some information.",
               "pergunta": "Podemos dizer 'an information' ou 'two informations'?",
-              "resposta": "NÔö£├åo, 'information' Ôö£├£ um conceito abstrato e incontÔö£ãÆvel no inglÔö£├©s.",
-              "conclusao": "Information = IncontÔö£ãÆvel"
+              "resposta": "N├ö├Â┬úÔö£Ôòæo, 'information' ├ö├Â┬úÔö¼┬½ um conceito abstrato e incont├ö├Â┬úÔö£┬ível no ingl├ö├Â┬úÔö¼┬╝s.",
+              "conclusao": "Information = Incont├ö├Â┬úÔö£┬ível"
             },
             {
               "oracao": "I have two dogs.",
-              "pergunta": "Por que 'dogs' Ôö£├£ contÔö£ãÆvel?",
-              "resposta": "Porque vocÔö£├© pode contÔö£ãÆ-los com nÔö¼├Çmeros inteiros (1 cachorro, 2 cachorros).",
-              "conclusao": "Dogs = ContÔö£ãÆvel"
+              "pergunta": "Por que 'dogs' ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível?",
+              "resposta": "Porque voc├ö├Â┬úÔö¼┬╝ pode cont├ö├Â┬úÔö£┬í-los com n├ö├Â┬ú├ö├▓├ªmeros inteiros (1 cachorro, 2 cachorros).",
+              "conclusao": "Dogs = Cont├ö├Â┬úÔö£┬ível"
             }
           ],
           "armadilhas": [
             {
               "errado": "I have two baggages.",
               "certo": "I have two bags. (ou 'some baggage')",
-              "explicacao": "A palavra 'baggage' (bagagem) Ôö£├£ incontÔö£ãÆvel em inglÔö£├©s. Para contar as malas, contamos as bolsas ('bags')."
+              "explicacao": "A palavra 'baggage' (bagagem) ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível em ingl├ö├Â┬úÔö¼┬╝s. Para contar as malas, contamos as bolsas ('bags')."
             }
           ],
-          "coda": "Pense na forma da coisa: se for lÔö£├ÿquido, pÔö¼┬Ñ, grÔö£├åos, blocos sem formato ou uma ideia abstrata (como informaÔö£┬ÑÔö¼┬║es ou conselhos), quase sempre Ôö£├£ incontÔö£ãÆvel!",
+          "coda": "Pense na forma da coisa: se for l├ö├Â┬úÔö¼├¡quido, p├ö├Â┬ú├ö├Â├®, gr├ö├Â┬úÔö£Ôòæos, blocos sem formato ou uma ideia abstrata (como informa├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es ou conselhos), quase sempre ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual destas palavras Ôö£├£ INCONT├ö├ÂÔöñVEL (uncountable)?",
+              "pergunta": "Qual destas palavras ├ö├Â┬úÔö¼┬½ INCONT├ö├Â┬úÔö£ÔòØVEL (uncountable)?",
               "opcoes": [
                 "Book",
                 "Water",
@@ -2209,17 +2209,17 @@
                 "Student"
               ],
               "resposta": 1,
-              "explicacao": "'Water' Ôö£├£ um lÔö£├ÿquido, portanto nÔö£├åo pode ser contado sem uma unidade de medida (copos, garrafas)."
+              "explicacao": "'Water' ├ö├Â┬úÔö¼┬½ um l├ö├Â┬úÔö¼├¡quido, portanto n├ö├Â┬úÔö£Ôòæo pode ser contado sem uma unidade de medida (copos, garrafas)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete com o plural se necessÔö£ãÆrio: I bought three ___ (apple).",
+              "pergunta": "Complete com o plural se necess├ö├Â┬úÔö£┬írio: I bought three ___ (apple).",
               "resposta": "apples",
-              "explicacao": "MaÔö£┬ÑÔö£├å (apple) Ôö£├£ contÔö£ãÆvel, entÔö£├åo adicionamos o 's' para formar o plural."
+              "explicacao": "Ma├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæ (apple) ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível, ent├ö├Â┬úÔö£Ôòæo adicionamos o 's' para formar o plural."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual destas frases estÔö£ãÆ ERRADA?",
+              "pergunta": "Qual destas frases est├ö├Â┬úÔö£┬í ERRADA?",
               "opcoes": [
                 "I need some milk.",
                 "She has a lot of money.",
@@ -2227,17 +2227,17 @@
                 "We have two cars."
               ],
               "resposta": 2,
-              "explicacao": "'Bread' (pÔö£├åo) Ôö£├£ considerado incontÔö£ãÆvel (como a massa do pÔö£├åo). NÔö£├åo usamos 'a' ou nÔö¼├Çmero diretamente, dizemos 'some bread' ou 'a slice of bread'."
+              "explicacao": "'Bread' (p├ö├Â┬úÔö£Ôòæo) ├ö├Â┬úÔö¼┬½ considerado incont├ö├Â┬úÔö£┬ível (como a massa do p├ö├Â┬úÔö£Ôòæo). N├ö├Â┬úÔö£Ôòæo usamos 'a' ou n├ö├Â┬ú├ö├▓├ªmero diretamente, dizemos 'some bread' ou 'a slice of bread'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete com a palavra correta: He needs some ___ (advice/advices).",
               "resposta": "advice",
-              "explicacao": "'Advice' (conselho) Ôö£├£ incontÔö£ãÆvel, portanto nunca vai para o plural com 's'."
+              "explicacao": "'Advice' (conselho) ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível, portanto nunca vai para o plural com 's'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Para perguntar a quantidade de uma coisa CONT├ö├ÂÔöñVEL, usamos:",
+              "pergunta": "Para perguntar a quantidade de uma coisa CONT├ö├Â┬úÔö£ÔòØVEL, usamos:",
               "opcoes": [
                 "How much",
                 "How many",
@@ -2245,13 +2245,13 @@
                 "How big"
               ],
               "resposta": 1,
-              "explicacao": "'How many' (Quantos/Quantas) Ôö£├£ usado para o que pode ser contado e tem plural."
+              "explicacao": "'How many' (Quantos/Quantas) ├ö├Â┬úÔö¼┬½ usado para o que pode ser contado e tem plural."
             },
             {
               "tipo": "revelar",
               "pergunta": "Responda indicando a palavra: I don't have much ___ (time/times).",
               "resposta": "time",
-              "explicacao": "Tempo (time) com a ideia de horas disponÔö£├ÿveis Ôö£├£ incontÔö£ãÆvel, usa-se 'much time'."
+              "explicacao": "Tempo (time) com a ideia de horas dispon├ö├Â┬úÔö¼├¡veis ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível, usa-se 'much time'."
             }
           ]
         },
@@ -2280,13 +2280,13 @@
             {
               "oracao": "I have some money.",
               "pergunta": "Por que usamos 'some'?",
-              "resposta": "Porque a frase Ôö£├£ afirmativa.",
+              "resposta": "Porque a frase ├ö├Â┬úÔö¼┬½ afirmativa.",
               "conclusao": "Some = afirmativa."
             },
             {
               "oracao": "Do you have any questions?",
               "pergunta": "Por que usamos 'any'?",
-              "resposta": "Porque a frase Ôö£├£ uma pergunta.",
+              "resposta": "Porque a frase ├ö├Â┬úÔö¼┬½ uma pergunta.",
               "conclusao": "Any = pergunta comum."
             }
           ],
@@ -2302,7 +2302,7 @@
               "explicacao": "Ao oferecer ou pedir algo polidamente (Would you like...? / Can I have...?), usamos 'some'."
             }
           ],
-          "coda": "Lembre-se: 'Some' Ôö£├£ positivo e prestativo (oferecimentos), enquanto 'Any' Ôö£├£ para negativas e dÔö¼├Çvidas!",
+          "coda": "Lembre-se: 'Some' ├ö├Â┬úÔö¼┬½ positivo e prestativo (oferecimentos), enquanto 'Any' ├ö├Â┬úÔö¼┬½ para negativas e d├ö├Â┬ú├ö├▓├ªvidas!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2350,7 +2350,7 @@
                 "many"
               ],
               "resposta": 1,
-              "explicacao": "Frase afirmativa, entÔö£├åo usamos 'some'."
+              "explicacao": "Frase afirmativa, ent├ö├Â┬úÔö£Ôòæo usamos 'some'."
             },
             {
               "tipo": "revelar",
@@ -2365,25 +2365,25 @@
           "num": "Lesson 22",
           "titulo": "Quantifiers 2: Much, Many, A lot of",
           "subtitulo": "Much, Many, A lot of",
-          "alerta": "Quando a quantidade Ôö£├£ grande, precisamos saber se o substantivo Ôö£├£ contÔö£ãÆvel (pode ir para o plural) ou incontÔö£ãÆvel (sempre singular).",
+          "alerta": "Quando a quantidade ├ö├Â┬úÔö¼┬½ grande, precisamos saber se o substantivo ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível (pode ir para o plural) ou incont├ö├Â┬úÔö£┬ível (sempre singular).",
           "observacao_cards": [
             {
               "italiano": "Many",
               "traducao": "Muitos, muitas",
-              "genero": "ContÔö£ãÆveis",
+              "genero": "Cont├ö├Â┬úÔö£┬íveis",
               "motivo": "Usado com coisas que podemos contar (ex: apples, cars, people)."
             },
             {
               "italiano": "Much",
               "traducao": "Muito, muita",
-              "genero": "IncontÔö£ãÆveis",
-              "motivo": "Usado com coisas incontÔö£ãÆveis, geralmente lÔö£├ÿquidos, sentimentos, conceitos (ex: water, time, money)."
+              "genero": "Incont├ö├Â┬úÔö£┬íveis",
+              "motivo": "Usado com coisas incont├ö├Â┬úÔö£┬íveis, geralmente l├ö├Â┬úÔö¼├¡quidos, sentimentos, conceitos (ex: water, time, money)."
             },
             {
               "italiano": "A lot of",
               "traducao": "Muito(s), um monte de",
               "genero": "Ambos",
-              "motivo": "Usado tanto para contÔö£ãÆveis quanto incontÔö£ãÆveis, geralmente em frases afirmativas."
+              "motivo": "Usado tanto para cont├ö├Â┬úÔö£┬íveis quanto incont├ö├Â┬úÔö£┬íveis, geralmente em frases afirmativas."
             }
           ],
           "tabela_visual": "| Quantifier | Used with | Example |\n|---|---|---|\n| Many | Countable Plural | I don't have many books. |\n| Much | Uncountable | I don't have much time. |\n| A lot of | Both | She has a lot of friends. / He has a lot of money. |",
@@ -2391,29 +2391,29 @@
             {
               "oracao": "She has a lot of friends.",
               "pergunta": "Por que usamos 'a lot of'?",
-              "resposta": "Porque Ôö£├£ comum usar 'a lot of' em frases afirmativas em vez de 'many'.",
-              "conclusao": "A lot of Ôö£├£ versÔö£ãÆtil em afirmativas."
+              "resposta": "Porque ├ö├Â┬úÔö¼┬½ comum usar 'a lot of' em frases afirmativas em vez de 'many'.",
+              "conclusao": "A lot of ├ö├Â┬úÔö¼┬½ vers├ö├Â┬úÔö£┬ítil em afirmativas."
             },
             {
               "oracao": "We don't have much water.",
               "pergunta": "Por que 'much'?",
-              "resposta": "Porque 'water' Ôö£├£ incontÔö£ãÆvel e a frase Ôö£├£ negativa.",
-              "conclusao": "Much para incontÔö£ãÆveis em negativas."
+              "resposta": "Porque 'water' ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível e a frase ├ö├Â┬úÔö¼┬½ negativa.",
+              "conclusao": "Much para incont├ö├Â┬úÔö£┬íveis em negativas."
             }
           ],
           "armadilhas": [
             {
               "errado": "I have much friends.",
               "certo": "I have a lot of friends.",
-              "explicacao": "Friends Ôö£├£ contÔö£ãÆvel (plural), entÔö£├åo usamos 'many' ou 'a lot of', nunca 'much'."
+              "explicacao": "Friends ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível (plural), ent├ö├Â┬úÔö£Ôòæo usamos 'many' ou 'a lot of', nunca 'much'."
             },
             {
               "errado": "He has many money.",
               "certo": "He has a lot of money.",
-              "explicacao": "Money Ôö£├£ incontÔö£ãÆvel, entÔö£├åo usamos 'much' (em negativas/perguntas) ou 'a lot of' (em afirmativas)."
+              "explicacao": "Money ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível, ent├ö├Â┬úÔö£Ôòæo usamos 'much' (em negativas/perguntas) ou 'a lot of' (em afirmativas)."
             }
           ],
-          "coda": "Na dÔö¼├Çvida em uma frase afirmativa, 'a lot of' Ôö£├£ o seu melhor amigo e serve para quase tudo!",
+          "coda": "Na d├ö├Â┬ú├ö├▓├ªvida em uma frase afirmativa, 'a lot of' ├ö├Â┬úÔö¼┬½ o seu melhor amigo e serve para quase tudo!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2425,7 +2425,7 @@
                 "some"
               ],
               "resposta": 1,
-              "explicacao": "Time Ôö£├£ incontÔö£ãÆvel e a frase Ôö£├£ negativa, entÔö£├åo usamos 'much'."
+              "explicacao": "Time ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível e a frase ├ö├Â┬úÔö¼┬½ negativa, ent├ö├Â┬úÔö£Ôòæo usamos 'much'."
             },
             {
               "tipo": "escolha",
@@ -2437,19 +2437,19 @@
                 "a lot"
               ],
               "resposta": 1,
-              "explicacao": "Frase afirmativa, 'people' Ôö£├£ contÔö£ãÆvel. 'A lot of' Ôö£├£ a melhor opÔö£┬ÑÔö£├åo."
+              "explicacao": "Frase afirmativa, 'people' ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível. 'A lot of' ├ö├Â┬úÔö¼┬½ a melhor op├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: She doesn't read ____ books.",
               "resposta": "many",
-              "explicacao": "Books Ôö£├£ contÔö£ãÆvel e plural, entÔö£├åo em frase negativa usamos 'many'."
+              "explicacao": "Books ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível e plural, ent├ö├Â┬úÔö£Ôòæo em frase negativa usamos 'many'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: We have a ____ of work to do.",
               "resposta": "lot",
-              "explicacao": "A expressÔö£├åo completa Ôö£├£ 'a lot of'."
+              "explicacao": "A express├ö├Â┬úÔö£Ôòæo completa ├ö├Â┬úÔö¼┬½ 'a lot of'."
             },
             {
               "tipo": "escolha",
@@ -2461,13 +2461,13 @@
                 "a little"
               ],
               "resposta": 1,
-              "explicacao": "Emails Ôö£├£ contÔö£ãÆvel (plural), entÔö£├åo usamos 'many' em perguntas."
+              "explicacao": "Emails ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível (plural), ent├ö├Â┬úÔö£Ôòæo usamos 'many' em perguntas."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: I don't eat ____ meat.",
               "resposta": "much",
-              "explicacao": "Meat (carne) Ôö£├£ incontÔö£ãÆvel, portanto usamos 'much' em negativas."
+              "explicacao": "Meat (carne) ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível, portanto usamos 'much' em negativas."
             }
           ]
         },
@@ -2476,19 +2476,19 @@
           "num": "Lesson 23",
           "titulo": "How much vs How many",
           "subtitulo": "Perguntando sobre quantidades",
-          "alerta": "Para perguntar 'quanto' ou 'quantos', usamos 'How much' e 'How many'. O segredo estÔö£ãÆ em saber se podemos contar o item (com 's' no plural) ou nÔö£├åo!",
+          "alerta": "Para perguntar 'quanto' ou 'quantos', usamos 'How much' e 'How many'. O segredo est├ö├Â┬úÔö£┬í em saber se podemos contar o item (com 's' no plural) ou n├ö├Â┬úÔö£Ôòæo!",
           "observacao_cards": [
             {
               "italiano": "How many",
               "traducao": "Quantos / Quantas",
-              "genero": "ContÔö£ãÆveis",
-              "motivo": "Usado para perguntar a quantidade de coisas contÔö£ãÆveis (frequentemente no plural)."
+              "genero": "Cont├ö├Â┬úÔö£┬íveis",
+              "motivo": "Usado para perguntar a quantidade de coisas cont├ö├Â┬úÔö£┬íveis (frequentemente no plural)."
             },
             {
               "italiano": "How much",
               "traducao": "Quanto / Quanta",
-              "genero": "IncontÔö£ãÆveis e PreÔö£┬Ño",
-              "motivo": "Usado para perguntar a quantidade de coisas incontÔö£ãÆveis, ou para perguntar o preÔö£┬Ño de algo."
+              "genero": "Incont├ö├Â┬úÔö£┬íveis e Pre├ö├Â┬úÔö¼Ôòæo",
+              "motivo": "Usado para perguntar a quantidade de coisas incont├ö├Â┬úÔö£┬íveis, ou para perguntar o pre├ö├Â┬úÔö¼Ôòæo de algo."
             }
           ],
           "tabela_visual": "| Question Word | Used with | Example |\n|---|---|---|\n| How many | Countable (Plural) | How many apples do you want? |\n| How much | Uncountable | How much water do you drink? |\n| How much | Price | How much is this shirt? |",
@@ -2496,29 +2496,29 @@
             {
               "oracao": "How many cars does he have?",
               "pergunta": "Por que 'How many'?",
-              "resposta": "Porque 'cars' Ôö£├£ contÔö£ãÆvel e estÔö£ãÆ no plural.",
+              "resposta": "Porque 'cars' ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível e est├ö├Â┬úÔö£┬í no plural.",
               "conclusao": "How many + substantivo plural."
             },
             {
               "oracao": "How much is the coffee?",
               "pergunta": "Por que 'How much'?",
-              "resposta": "Porque estamos perguntando o preÔö£┬Ño.",
-              "conclusao": "How much = preÔö£┬Ño."
+              "resposta": "Porque estamos perguntando o pre├ö├Â┬úÔö¼Ôòæo.",
+              "conclusao": "How much = pre├ö├Â┬úÔö¼Ôòæo."
             }
           ],
           "armadilhas": [
             {
               "errado": "How much people are there?",
               "certo": "How many people are there?",
-              "explicacao": "'People' Ôö£├£ o plural de person, ou seja, Ôö£├£ contÔö£ãÆvel. Usamos 'How many'."
+              "explicacao": "'People' ├ö├Â┬úÔö¼┬½ o plural de person, ou seja, ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível. Usamos 'How many'."
             },
             {
               "errado": "How many money do you have?",
               "certo": "How much money do you have?",
-              "explicacao": "A palavra 'money' Ôö£├£ incontÔö£ãÆvel (vocÔö£├© nÔö£├åo diz 'dois dinheiros'). Usamos 'How much'."
+              "explicacao": "A palavra 'money' ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível (voc├ö├Â┬úÔö¼┬╝ n├ö├Â┬úÔö£Ôòæo diz 'dois dinheiros'). Usamos 'How much'."
             }
           ],
-          "coda": "Lembre-se: se termina com 's' (plural) ou se refere a pessoas no plural, geralmente Ôö£├£ 'How many'. Se nÔö£├åo tem 's' ou estÔö£ãÆ perguntando o preÔö£┬Ño, Ôö£├£ 'How much'!",
+          "coda": "Lembre-se: se termina com 's' (plural) ou se refere a pessoas no plural, geralmente ├ö├Â┬úÔö¼┬½ 'How many'. Se n├ö├Â┬úÔö£Ôòæo tem 's' ou est├ö├Â┬úÔö£┬í perguntando o pre├ö├Â┬úÔö¼Ôòæo, ├ö├Â┬úÔö¼┬½ 'How much'!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2530,7 +2530,7 @@
                 "Much"
               ],
               "resposta": 1,
-              "explicacao": "Sugar (aÔö£┬ÑÔö¼├Çcar) Ôö£├£ incontÔö£ãÆvel, portanto 'How much'."
+              "explicacao": "Sugar (a├ö├Â┬úÔö¼Ôòæ├ö├Â┬ú├ö├▓├ªcar) ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível, portanto 'How much'."
             },
             {
               "tipo": "escolha",
@@ -2542,19 +2542,19 @@
                 "How"
               ],
               "resposta": 1,
-              "explicacao": "Days (dias) Ôö£├£ contÔö£ãÆvel e estÔö£ãÆ no plural."
+              "explicacao": "Days (dias) ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível e est├ö├Â┬úÔö£┬í no plural."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: ____ much is this jacket?",
               "resposta": "How",
-              "explicacao": "Para perguntar o preÔö£┬Ño, usamos a expressÔö£├åo 'How much'."
+              "explicacao": "Para perguntar o pre├ö├Â┬úÔö¼Ôòæo, usamos a express├ö├Â┬úÔö£Ôòæo 'How much'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: How ____ languages do you speak?",
               "resposta": "many",
-              "explicacao": "Languages (idiomas) Ôö£├£ contÔö£ãÆvel e estÔö£ãÆ no plural."
+              "explicacao": "Languages (idiomas) ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível e est├ö├Â┬úÔö£┬í no plural."
             },
             {
               "tipo": "escolha",
@@ -2566,13 +2566,13 @@
                 "Which"
               ],
               "resposta": 1,
-              "explicacao": "Time (tempo) Ôö£├£ incontÔö£ãÆvel. Usamos 'How much'."
+              "explicacao": "Time (tempo) ├ö├Â┬úÔö¼┬½ incont├ö├Â┬úÔö£┬ível. Usamos 'How much'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: How ____ brothers do you have?",
               "resposta": "many",
-              "explicacao": "'Brothers' Ôö£├£ contÔö£ãÆvel e estÔö£ãÆ no plural."
+              "explicacao": "'Brothers' ├ö├Â┬úÔö¼┬½ cont├ö├Â┬úÔö£┬ível e est├ö├Â┬úÔö£┬í no plural."
             }
           ]
         },
@@ -2580,34 +2580,34 @@
           "id": "a1-lez24",
           "num": "Lesson 24",
           "titulo": "Present Continuous (Affirmative)",
-          "subtitulo": "AÔö£┬ÑÔö¼┬║es acontecendo agora",
-          "alerta": "O Present Continuous (ou Present Progressive) Ôö£├£ usado para falar sobre aÔö£┬ÑÔö¼┬║es que estÔö£├åo acontecendo neste exato momento.",
+          "subtitulo": "A├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es acontecendo agora",
+          "alerta": "O Present Continuous (ou Present Progressive) ├ö├Â┬úÔö¼┬½ usado para falar sobre a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es que est├ö├Â┬úÔö£Ôòæo acontecendo neste exato momento.",
           "observacao_cards": [
             {
               "italiano": "Verb To Be + verb-ing",
-              "traducao": "Ser/Estar + verbo com -ing (gerÔö¼├Çndio)",
+              "traducao": "Ser/Estar + verbo com -ing (ger├ö├Â┬ú├ö├▓├ªndio)",
               "genero": "Estrutura",
-              "motivo": "A fÔö¼┬Ñrmula mÔö£ãÆgica para dizer que estÔö£ãÆ fazendo algo."
+              "motivo": "A f├ö├Â┬ú├ö├Â├®rmula m├ö├Â┬úÔö£┬ígica para dizer que est├ö├Â┬úÔö£┬í fazendo algo."
             },
             {
               "italiano": "Playing, Eating, Working",
               "traducao": "Jogando, comendo, trabalhando",
               "genero": "Sufixo -ing",
-              "motivo": "Equivale ao nosso '-ndo' do portuguÔö£├©s."
+              "motivo": "Equivale ao nosso '-ndo' do portugu├ö├Â┬úÔö¼┬╝s."
             }
           ],
           "tabela_visual": "| Subject | Verb to Be | Verb + ing |\n|---|---|---|\n| I | am | working. |\n| You / We / They | are | reading. |\n| He / She / It | is | sleeping. |",
           "exemplos_prc": [
             {
               "oracao": "She is eating an apple.",
-              "pergunta": "Como sabemos que a aÔö£┬ÑÔö£├åo estÔö£ãÆ acontecendo agora?",
+              "pergunta": "Como sabemos que a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo est├ö├Â┬úÔö£┬í acontecendo agora?",
               "resposta": "Pelo uso do verbo 'is' e do verbo principal com '-ing'.",
               "conclusao": "is + -ing = acontecendo agora."
             },
             {
               "oracao": "They are playing football.",
               "pergunta": "Por que usamos 'are'?",
-              "resposta": "Porque o sujeito Ôö£├£ 'They' (plural).",
+              "resposta": "Porque o sujeito ├ö├Â┬úÔö¼┬½ 'They' (plural).",
               "conclusao": "Ajuste o verbo To Be ao sujeito."
             }
           ],
@@ -2615,7 +2615,7 @@
             {
               "errado": "I playing tennis.",
               "certo": "I am playing tennis.",
-              "explicacao": "Nunca esqueÔö£┬Ña o verbo 'To Be' (am, is, are) antes do verbo com -ing."
+              "explicacao": "Nunca esque├ö├Â┬úÔö¼Ôòæa o verbo 'To Be' (am, is, are) antes do verbo com -ing."
             },
             {
               "errado": "He is makeing dinner.",
@@ -2623,7 +2623,7 @@
               "explicacao": "Verbos terminados na letra 'e' perdem o 'e' antes de adicionar o '-ing' (make -> making)."
             }
           ],
-          "coda": "O Present Continuous precisa de duas peÔö£┬Ñas essenciais: o verbo 'To Be' ajudando e o '-ing' no final da aÔö£┬ÑÔö£├åo. NÔö£├åo se esqueÔö£┬Ña de nenhum!",
+          "coda": "O Present Continuous precisa de duas pe├ö├Â┬úÔö¼Ôòæas essenciais: o verbo 'To Be' ajudando e o '-ing' no final da a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo. N├ö├Â┬úÔö£Ôòæo se esque├ö├Â┬úÔö¼Ôòæa de nenhum!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2635,7 +2635,7 @@
                 "are running"
               ],
               "resposta": 2,
-              "explicacao": "O cÔö£├åo (It) exige 'is' + verbo com -ing. AtenÔö£┬ÑÔö£├åo ao duplo 'n' em 'running'."
+              "explicacao": "O c├ö├Â┬úÔö£Ôòæo (It) exige 'is' + verbo com -ing. Aten├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo ao duplo 'n' em 'running'."
             },
             {
               "tipo": "escolha",
@@ -2671,13 +2671,13 @@
                 "sings"
               ],
               "resposta": 2,
-              "explicacao": "'The birds' Ôö£├£ plural (They), portanto usamos 'are' + -ing."
+              "explicacao": "'The birds' ├ö├Â┬úÔö¼┬½ plural (They), portanto usamos 'are' + -ing."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: She ____ playing the piano.",
               "resposta": "is",
-              "explicacao": "Falta o verbo 'To Be' para 'She', que Ôö£├£ 'is'."
+              "explicacao": "Falta o verbo 'To Be' para 'She', que ├ö├Â┬úÔö¼┬½ 'is'."
             }
           ]
         },
@@ -2686,27 +2686,27 @@
           "num": "Lesson 25",
           "titulo": "Present Continuous (Negative & Questions)",
           "subtitulo": "Estrutura completa",
-          "alerta": "Agora que vocÔö£├© sabe afirmar o que estÔö£ãÆ acontecendo, vamos aprender a negar e a fazer perguntas usando o Present Continuous.",
+          "alerta": "Agora que voc├ö├Â┬úÔö¼┬╝ sabe afirmar o que est├ö├Â┬úÔö£┬í acontecendo, vamos aprender a negar e a fazer perguntas usando o Present Continuous.",
           "observacao_cards": [
             {
               "italiano": "Not",
-              "traducao": "NÔö£├åo",
+              "traducao": "N├ö├Â┬úÔö£Ôòæo",
               "genero": "Negativa",
               "motivo": "Coloque o 'not' logo depois do verbo To Be (am not, isn't, aren't)."
             },
             {
               "italiano": "Am / Is / Are + Subject",
-              "traducao": "InversÔö£├åo na Pergunta",
+              "traducao": "Invers├ö├Â┬úÔö£Ôòæo na Pergunta",
               "genero": "Interrogativa",
-              "motivo": "Para perguntar, o verbo To Be vai para o inÔö£├ÿcio da frase, antes do sujeito."
+              "motivo": "Para perguntar, o verbo To Be vai para o in├ö├Â┬úÔö¼├¡cio da frase, antes do sujeito."
             }
           ],
           "tabela_visual": "| Form | Structure | Example |\n|---|---|---|\n| Negative | Subj + To Be + NOT + V-ing | I am not working. / She isn't sleeping. |\n| Question | To Be + Subj + V-ing? | Are you working? / Is she sleeping? |\n| Short Answer | Yes/No, Subj + To Be | Yes, I am. / No, she isn't. |",
           "exemplos_prc": [
             {
               "oracao": "Are they coming to the party?",
-              "pergunta": "Por que 'Are' estÔö£ãÆ no comeÔö£┬Ño?",
-              "resposta": "Porque em perguntas de sim ou nÔö£├åo, invertemos a ordem do sujeito e do verbo To Be.",
+              "pergunta": "Por que 'Are' est├ö├Â┬úÔö£┬í no come├ö├Â┬úÔö¼Ôòæo?",
+              "resposta": "Porque em perguntas de sim ou n├ö├Â┬úÔö£Ôòæo, invertemos a ordem do sujeito e do verbo To Be.",
               "conclusao": "To Be antes do sujeito na pergunta."
             },
             {
@@ -2720,7 +2720,7 @@
             {
               "errado": "You are working?",
               "certo": "Are you working?",
-              "explicacao": "Em perguntas com o verbo To Be, vocÔö£├© nÔö£├åo usa apenas a entonaÔö£┬ÑÔö£├åo, precisa inverter a ordem (Are you...)."
+              "explicacao": "Em perguntas com o verbo To Be, voc├ö├Â┬úÔö¼┬╝ n├ö├Â┬úÔö£Ôòæo usa apenas a entona├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo, precisa inverter a ordem (Are you...)."
             },
             {
               "errado": "I no am studying.",
@@ -2728,7 +2728,7 @@
               "explicacao": "O 'not' entra sempre DEPOIS do verbo 'To Be'."
             }
           ],
-          "coda": "Negar ou perguntar no Present Continuous Ôö£├£ como danÔö£┬Ñar com o verbo To Be: coloque o 'not' depois dele, ou coloque-o na frente de tudo na pergunta!",
+          "coda": "Negar ou perguntar no Present Continuous ├ö├Â┬úÔö¼┬½ como dan├ö├Â┬úÔö¼Ôòæar com o verbo To Be: coloque o 'not' depois dele, ou coloque-o na frente de tudo na pergunta!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2740,7 +2740,7 @@
                 "Do"
               ],
               "resposta": 1,
-              "explicacao": "Para perguntar no Present Continuous com 'She', usamos 'Is' no inÔö£├ÿcio."
+              "explicacao": "Para perguntar no Present Continuous com 'She', usamos 'Is' no in├ö├Â┬úÔö¼├¡cio."
             },
             {
               "tipo": "escolha",
@@ -2752,19 +2752,19 @@
                 "don't"
               ],
               "resposta": 1,
-              "explicacao": "A forma negativa para 'They' Ôö£├£ 'are not' (aren't)."
+              "explicacao": "A forma negativa para 'They' ├ö├Â┬úÔö¼┬½ 'are not' (aren't)."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: ____ you coming with us?",
               "resposta": "Are",
-              "explicacao": "Para o pronome 'you', a pergunta comeÔö£┬Ña com 'Are'."
+              "explicacao": "Para o pronome 'you', a pergunta come├ö├Â┬úÔö¼Ôòæa com 'Are'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: I am ____ feeling well today.",
               "resposta": "not",
-              "explicacao": "A negativa com 'I am' Ôö£├£ 'I am not'."
+              "explicacao": "A negativa com 'I am' ├ö├Â┬úÔö¼┬½ 'I am not'."
             },
             {
               "tipo": "escolha",
@@ -2776,13 +2776,13 @@
                 "am"
               ],
               "resposta": 2,
-              "explicacao": "Mesmo com 'What', a inversÔö£├åo do verbo To Be com 'you' exige 'are'."
+              "explicacao": "Mesmo com 'What', a invers├ö├Â┬úÔö£Ôòæo do verbo To Be com 'you' exige 'are'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Complete: He ____ working today. (Use a contraÔö£┬ÑÔö£├åo de is not)",
+              "pergunta": "Complete: He ____ working today. (Use a contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de is not)",
               "resposta": "isn't",
-              "explicacao": "A contraÔö£┬ÑÔö£├åo de 'is not' Ôö£├£ 'isn't'."
+              "explicacao": "A contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de 'is not' ├ö├Â┬úÔö¼┬½ 'isn't'."
             }
           ]
         },
@@ -2791,19 +2791,19 @@
           "num": "Lesson 26",
           "titulo": "Present Simple vs Present Continuous",
           "subtitulo": "Rotina vs Momento atual",
-          "alerta": "VocÔö£├© sabe diferenciar o que vocÔö£├© faz todo dia do que estÔö£ãÆ fazendo agora? Usamos tempos verbais diferentes para isso!",
+          "alerta": "Voc├ö├Â┬úÔö¼┬╝ sabe diferenciar o que voc├ö├Â┬úÔö¼┬╝ faz todo dia do que est├ö├Â┬úÔö£┬í fazendo agora? Usamos tempos verbais diferentes para isso!",
           "observacao_cards": [
             {
               "italiano": "I study English every day.",
-              "traducao": "Eu estudo inglÔö£├©s todo dia.",
+              "traducao": "Eu estudo ingl├ö├Â┬úÔö¼┬╝s todo dia.",
               "genero": "Present Simple",
-              "motivo": "Rotina ou hÔö£ãÆbito"
+              "motivo": "Rotina ou h├ö├Â┬úÔö£┬íbito"
             },
             {
               "italiano": "I am studying English now.",
-              "traducao": "Eu estou estudando inglÔö£├©s agora.",
+              "traducao": "Eu estou estudando ingl├ö├Â┬úÔö¼┬╝s agora.",
               "genero": "Present Continuous",
-              "motivo": "AÔö£┬ÑÔö£├åo acontecendo no momento"
+              "motivo": "A├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo acontecendo no momento"
             }
           ],
           "tabela_visual": "| Tense | Usage | Example |\n|---|---|---|\n| Present Simple | Routines, habits, facts | I play tennis on Sundays. |\n| Present Continuous | Actions happening right now | I am playing tennis right now. |",
@@ -2811,7 +2811,7 @@
             {
               "oracao": "She usually works in an office, but today she is working from home.",
               "pergunta": "Por que usamos dois tempos verbais diferentes aqui?",
-              "resposta": "Porque o primeiro indica a rotina habitual e o segundo indica algo temporÔö£ãÆrio/acontecendo hoje.",
+              "resposta": "Porque o primeiro indica a rotina habitual e o segundo indica algo tempor├ö├Â┬úÔö£┬írio/acontecendo hoje.",
               "conclusao": "Rotina = Simple; Momento atual = Continuous"
             }
           ],
@@ -2819,19 +2819,19 @@
             {
               "errado": "I am playing soccer every day.",
               "certo": "I play soccer every day.",
-              "explicacao": "Para rotinas diÔö£ãÆrias, use o Present Simple, nÔö£├åo o Continuous."
+              "explicacao": "Para rotinas di├ö├Â┬úÔö£┬írias, use o Present Simple, n├ö├Â┬úÔö£Ôòæo o Continuous."
             },
             {
               "errado": "Look! The baby sleeps.",
               "certo": "Look! The baby is sleeping.",
-              "explicacao": "Para aÔö£┬ÑÔö¼┬║es acontecendo no momento da fala ('Look!'), use o Present Continuous."
+              "explicacao": "Para a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es acontecendo no momento da fala ('Look!'), use o Present Continuous."
             }
           ],
-          "coda": "Agora vocÔö£├© jÔö£ãÆ sabe como separar suas rotinas diÔö£ãÆrias das coisas que estÔö£├åo acontecendo bem agora!",
+          "coda": "Agora voc├ö├Â┬úÔö¼┬╝ j├ö├Â┬úÔö£┬í sabe como separar suas rotinas di├ö├Â┬úÔö£┬írias das coisas que est├ö├Â┬úÔö£Ôòæo acontecendo bem agora!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase indica um hÔö£ãÆbito?",
+              "pergunta": "Qual frase indica um h├ö├Â┬úÔö£┬íbito?",
               "opcoes": [
                 "I am eating an apple.",
                 "I eat an apple every morning.",
@@ -2845,7 +2845,7 @@
               "tipo": "revelar",
               "pergunta": "Complete com o Present Continuous: 'Shh! The baby _____ (sleep).'",
               "resposta": "is sleeping",
-              "explicacao": "O bebÔö£├© estÔö£ãÆ dormindo neste momento."
+              "explicacao": "O beb├ö├Â┬úÔö¼┬╝ est├ö├Â┬úÔö£┬í dormindo neste momento."
             },
             {
               "tipo": "escolha",
@@ -2857,17 +2857,17 @@
                 "watching"
               ],
               "resposta": 2,
-              "explicacao": "Rotina (every evening) na 3Ôö¼┬╝ pessoa do singular usa 'watches'."
+              "explicacao": "Rotina (every evening) na 3├ö├Â┬╝Ôö¼┬╝ pessoa do singular usa 'watches'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete com a forma correta: 'I usually drink coffee, mas hoje I _____ (drink) tea.'",
               "resposta": "am drinking",
-              "explicacao": "Hoje, no momento, o Present Continuous Ôö£├£ usado."
+              "explicacao": "Hoje, no momento, o Present Continuous ├ö├Â┬úÔö¼┬½ usado."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ a forma correta para algo acontecendo agora?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ a forma correta para algo acontecendo agora?",
               "opcoes": [
                 "I work.",
                 "He plays.",
@@ -2875,13 +2875,13 @@
                 "They go."
               ],
               "resposta": 2,
-              "explicacao": "'We are studying' (Present Continuous) mostra aÔö£┬ÑÔö£├åo em andamento."
+              "explicacao": "'We are studying' (Present Continuous) mostra a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo em andamento."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: 'Listen! The birds _____ (sing).'",
               "resposta": "are singing",
-              "explicacao": "O verbo 'listen' (ouÔö£┬Ña) indica que a aÔö£┬ÑÔö£├åo estÔö£ãÆ acontecendo agora."
+              "explicacao": "O verbo 'listen' (ou├ö├Â┬úÔö¼Ôòæa) indica que a a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo est├ö├Â┬úÔö£┬í acontecendo agora."
             }
           ]
         },
@@ -2889,8 +2889,8 @@
           "id": "a1-lez27",
           "num": "Lesson 27",
           "titulo": "Modal Verb 'Can'",
-          "subtitulo": "Habilidades e permissÔö¼┬║es",
-          "alerta": "Como dizer o que vocÔö£├© consegue fazer ou pedir permissÔö£├åo? O verbo 'can' Ôö£├£ um super-herÔö¼┬Ñi: nÔö£├åo muda com as pessoas!",
+          "subtitulo": "Habilidades e permiss├ö├Â┬úÔö£├╝es",
+          "alerta": "Como dizer o que voc├ö├Â┬úÔö¼┬╝ consegue fazer ou pedir permiss├ö├Â┬úÔö£Ôòæo? O verbo 'can' ├ö├Â┬úÔö¼┬½ um super-her├ö├Â┬ú├ö├Â├®i: n├ö├Â┬úÔö£Ôòæo muda com as pessoas!",
           "observacao_cards": [
             {
               "italiano": "I can swim",
@@ -2902,11 +2902,11 @@
               "italiano": "Can I go to the bathroom?",
               "traducao": "Posso ir ao banheiro?",
               "genero": "Permission",
-              "motivo": "Pedido de permissÔö£├åo"
+              "motivo": "Pedido de permiss├ö├Â┬úÔö£Ôòæo"
             },
             {
               "italiano": "He cannot / can't sing",
-              "traducao": "Ele nÔö£├åo sabe / nÔö£├åo consegue cantar",
+              "traducao": "Ele n├ö├Â┬úÔö£Ôòæo sabe / n├ö├Â┬úÔö£Ôòæo consegue cantar",
               "genero": "Inability",
               "motivo": "Falta de habilidade"
             }
@@ -2915,7 +2915,7 @@
           "exemplos_prc": [
             {
               "oracao": "Can you help me?",
-              "pergunta": "Para que usamos 'Can' no inÔö£├ÿcio da frase?",
+              "pergunta": "Para que usamos 'Can' no in├ö├Â┬úÔö¼├¡cio da frase?",
               "resposta": "Para fazer uma pergunta, como um pedido.",
               "conclusao": "Inverta 'Can' com o sujeito para perguntas."
             }
@@ -2924,19 +2924,19 @@
             {
               "errado": "He can speaks English.",
               "certo": "He can speak English.",
-              "explicacao": "O verbo 'can' nÔö£├åo leva 's' na 3Ôö¼┬╝ pessoa, e o verbo principal fica na forma base sem 'to'."
+              "explicacao": "O verbo 'can' n├ö├Â┬úÔö£Ôòæo leva 's' na 3├ö├Â┬╝Ôö¼┬╝ pessoa, e o verbo principal fica na forma base sem 'to'."
             },
             {
               "errado": "Do you can swim?",
               "certo": "Can you swim?",
-              "explicacao": "O verbo 'can' nÔö£├åo usa os auxiliares 'do' ou 'does'."
+              "explicacao": "O verbo 'can' n├ö├Â┬úÔö£Ôòæo usa os auxiliares 'do' ou 'does'."
             }
           ],
-          "coda": "'Can' Ôö£├£ prÔö£ãÆtico e fÔö£ãÆcil, vocÔö£├© jÔö£ãÆ pode falar sobre todos os seus talentos!",
+          "coda": "'Can' ├ö├Â┬úÔö¼┬½ pr├ö├Â┬úÔö£┬ítico e f├ö├Â┬úÔö£┬ícil, voc├ö├Â┬úÔö¼┬╝ j├ö├Â┬úÔö£┬í pode falar sobre todos os seus talentos!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Como dizer 'Ela sabe cozinhar' em inglÔö£├©s?",
+              "pergunta": "Como dizer 'Ela sabe cozinhar' em ingl├ö├Â┬úÔö¼┬╝s?",
               "opcoes": [
                 "She cans cook.",
                 "She can cooks.",
@@ -2944,13 +2944,13 @@
                 "She do can cook."
               ],
               "resposta": 2,
-              "explicacao": "'Can' nÔö£├åo muda na 3Ôö¼┬╝ pessoa e o verbo seguinte tambÔö£├£m nÔö£├åo leva 's'."
+              "explicacao": "'Can' n├ö├Â┬úÔö£Ôòæo muda na 3├ö├Â┬╝Ôö¼┬╝ pessoa e o verbo seguinte tamb├ö├Â┬úÔö¼┬½m n├ö├Â┬úÔö£Ôòæo leva 's'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete a pergunta: '___ you ride a bike?'",
               "resposta": "Can",
-              "explicacao": "Usamos 'Can' no inÔö£├ÿcio para perguntar sobre habilidade."
+              "explicacao": "Usamos 'Can' no in├ö├Â┬úÔö¼├¡cio para perguntar sobre habilidade."
             },
             {
               "tipo": "escolha",
@@ -2962,17 +2962,17 @@
                 "not can"
               ],
               "resposta": 1,
-              "explicacao": "A contraÔö£┬ÑÔö£├åo de 'cannot' Ôö£├£ 'can't'."
+              "explicacao": "A contra├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo de 'cannot' ├ö├Â┬úÔö¼┬½ 'can't'."
             },
             {
               "tipo": "revelar",
-              "pergunta": "Traduza 'Eu nÔö£├åo sei nadar': 'I ___ swim.'",
+              "pergunta": "Traduza 'Eu n├ö├Â┬úÔö£Ôòæo sei nadar': 'I ___ swim.'",
               "resposta": "can't",
               "explicacao": "Usa-se a negativa 'can't' para falta de habilidade."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase Ôö£├£ um pedido de permissÔö£├åo?",
+              "pergunta": "Qual frase ├ö├Â┬úÔö¼┬½ um pedido de permiss├ö├Â┬úÔö£Ôòæo?",
               "opcoes": [
                 "I can swim.",
                 "She can't dance.",
@@ -2980,13 +2980,13 @@
                 "They can play tennis."
               ],
               "resposta": 2,
-              "explicacao": "'Can I...' Ôö£├£ usado para pedir permissÔö£├åo."
+              "explicacao": "'Can I...' ├ö├Â┬úÔö¼┬½ usado para pedir permiss├ö├Â┬úÔö£Ôòæo."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: 'They ___ play the guitar very well.' (afirmativa)",
               "resposta": "can",
-              "explicacao": "O verbo modal 'can' indica que eles tÔö£├©m a habilidade."
+              "explicacao": "O verbo modal 'can' indica que eles t├ö├Â┬úÔö¼┬╝m a habilidade."
             }
           ]
         },
@@ -2994,8 +2994,8 @@
           "id": "a1-lez28",
           "num": "Lesson 28",
           "titulo": "Imperatives",
-          "subtitulo": "Comandos e instruÔö£┬ÑÔö¼┬║es (Do this / Don't do that)",
-          "alerta": "Precisa dar uma ordem, conselho ou instruÔö£┬ÑÔö£├åo? Use o modo Imperativo, indo direto ao ponto sem colocar o sujeito!",
+          "subtitulo": "Comandos e instru├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es (Do this / Don't do that)",
+          "alerta": "Precisa dar uma ordem, conselho ou instru├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo? Use o modo Imperativo, indo direto ao ponto sem colocar o sujeito!",
           "observacao_cards": [
             {
               "italiano": "Open the door.",
@@ -3005,9 +3005,9 @@
             },
             {
               "italiano": "Don't touch that!",
-              "traducao": "NÔö£├åo toque nisso!",
+              "traducao": "N├ö├Â┬úÔö£Ôòæo toque nisso!",
               "genero": "Negative",
-              "motivo": "ProibiÔö£┬ÑÔö£├åo ou aviso"
+              "motivo": "Proibi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo ou aviso"
             },
             {
               "italiano": "Let's go!",
@@ -3016,13 +3016,13 @@
               "motivo": "Convite (incluindo o falante)"
             }
           ],
-          "tabela_visual": "| Type | Example | Translation |\n|---|---|---|\n| Affirmative | Close the window. | Feche a janela. |\n| Negative | Don't talk. | NÔö£├åo converse. |\n| Suggestion (We) | Let's eat. | Vamos comer. |",
+          "tabela_visual": "| Type | Example | Translation |\n|---|---|---|\n| Affirmative | Close the window. | Feche a janela. |\n| Negative | Don't talk. | N├ö├Â┬úÔö£Ôòæo converse. |\n| Suggestion (We) | Let's eat. | Vamos comer. |",
           "exemplos_prc": [
             {
               "oracao": "Please, sit down.",
-              "pergunta": "Qual a diferenÔö£┬Ña de colocar 'Please'?",
-              "resposta": "Torna a instruÔö£┬ÑÔö£├åo ou comando mais educado.",
-              "conclusao": "Use 'please' para ser cortÔö£├©s."
+              "pergunta": "Qual a diferen├ö├Â┬úÔö¼Ôòæa de colocar 'Please'?",
+              "resposta": "Torna a instru├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo ou comando mais educado.",
+              "conclusao": "Use 'please' para ser cort├ö├Â┬úÔö¼┬╝s."
             }
           ],
           "armadilhas": [
@@ -3049,17 +3049,17 @@
                 "Doesn't run!"
               ],
               "resposta": 1,
-              "explicacao": "O imperativo negativo Ôö£├£ formado com 'Don't'."
+              "explicacao": "O imperativo negativo ├ö├Â┬úÔö¼┬½ formado com 'Don't'."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete o comando afirmativo: '___ careful!' (seja cuidadoso)",
               "resposta": "Be",
-              "explicacao": "Usa-se o verbo na sua forma base; para ser/estar Ôö£├£ 'Be'."
+              "explicacao": "Usa-se o verbo na sua forma base; para ser/estar ├ö├Â┬úÔö¼┬½ 'Be'."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase Ôö£├£ um imperativo correto?",
+              "pergunta": "Qual frase ├ö├Â┬úÔö¼┬½ um imperativo correto?",
               "opcoes": [
                 "You stand up.",
                 "Stand up.",
@@ -3073,7 +3073,7 @@
               "tipo": "revelar",
               "pergunta": "Complete com a negativa: '___ forget your umbrella!'",
               "resposta": "Don't",
-              "explicacao": "'Don't' Ôö£├£ a maneira de expressar proibiÔö£┬ÑÔö¼┬║es ou ordens negativas."
+              "explicacao": "'Don't' ├ö├Â┬úÔö¼┬½ a maneira de expressar proibi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es ou ordens negativas."
             },
             {
               "tipo": "escolha",
@@ -3085,7 +3085,7 @@
                 "Don't study."
               ],
               "resposta": 1,
-              "explicacao": "'Let's' Ôö£├£ usado para dar sugestÔö¼┬║es e fazer convites ('Let us')."
+              "explicacao": "'Let's' ├ö├Â┬úÔö¼┬½ usado para dar sugest├ö├Â┬úÔö£├╝es e fazer convites ('Let us')."
             },
             {
               "tipo": "revelar",
@@ -3100,13 +3100,13 @@
           "num": "Lesson 29",
           "titulo": "Basic Conjunctions",
           "subtitulo": "And, But, Or, Because, So",
-          "alerta": "Pare de falar sÔö¼┬Ñ frases curtas! As conjunÔö£┬ÑÔö¼┬║es sÔö£├åo a cola que vai juntar suas ideias e dar fluidez ao seu inglÔö£├©s.",
+          "alerta": "Pare de falar s├ö├Â┬ú├ö├Â├® frases curtas! As conjun├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es s├ö├Â┬úÔö£Ôòæo a cola que vai juntar suas ideias e dar fluidez ao seu ingl├ö├Â┬úÔö¼┬╝s.",
           "observacao_cards": [
             {
               "italiano": "and",
               "traducao": "e",
               "genero": "Addition",
-              "motivo": "Junta ideias similares ou informaÔö£┬ÑÔö¼┬║es adicionais"
+              "motivo": "Junta ideias similares ou informa├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es adicionais"
             },
             {
               "italiano": "but",
@@ -3122,28 +3122,28 @@
             },
             {
               "italiano": "so",
-              "traducao": "entÔö£├åo / por isso",
+              "traducao": "ent├ö├Â┬úÔö£Ôòæo / por isso",
               "genero": "Result",
-              "motivo": "Mostra a consequÔö£├©ncia de uma aÔö£┬ÑÔö£├åo"
+              "motivo": "Mostra a consequ├ö├Â┬úÔö¼┬╝ncia de uma a├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo"
             }
           ],
-          "tabela_visual": "| Conjunction | Meaning | Example |\n|---|---|---|\n| And | e | I like apples and bananas. |\n| But | mas | I like apples, but not bananas. |\n| Or | ou | Tea or coffee? |\n| Because | porque | I'm happy because it's Friday. |\n| So | entÔö£├åo | It was raining, so I stayed home. |",
+          "tabela_visual": "| Conjunction | Meaning | Example |\n|---|---|---|\n| And | e | I like apples and bananas. |\n| But | mas | I like apples, but not bananas. |\n| Or | ou | Tea or coffee? |\n| Because | porque | I'm happy because it's Friday. |\n| So | ent├ö├Â┬úÔö£Ôòæo | It was raining, so I stayed home. |",
           "exemplos_prc": [
             {
               "oracao": "I was tired, so I went to bed early.",
-              "pergunta": "Qual a relaÔö£┬ÑÔö£├åo entre as duas partes da frase?",
-              "resposta": "A primeira Ôö£├£ a causa e a segunda (apÔö¼┬Ñs o 'so') Ôö£├£ a consequÔö£├©ncia.",
-              "conclusao": "So = Resultado/ConsequÔö£├©ncia."
+              "pergunta": "Qual a rela├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo entre as duas partes da frase?",
+              "resposta": "A primeira ├ö├Â┬úÔö¼┬½ a causa e a segunda (ap├ö├Â┬ú├ö├Â├®s o 'so') ├ö├Â┬úÔö¼┬½ a consequ├ö├Â┬úÔö¼┬╝ncia.",
+              "conclusao": "So = Resultado/Consequ├ö├Â┬úÔö¼┬╝ncia."
             }
           ],
           "armadilhas": [
             {
               "errado": "I like dogs, because I don't like cats.",
               "certo": "I like dogs, but I don't like cats.",
-              "explicacao": "'Because' Ôö£├£ usado para dar a razÔö£├åo de algo. Para mostrar o contraste (gostar de um e nÔö£├åo de outro), use 'but'."
+              "explicacao": "'Because' ├ö├Â┬úÔö¼┬½ usado para dar a raz├ö├Â┬úÔö£Ôòæo de algo. Para mostrar o contraste (gostar de um e n├ö├Â┬úÔö£Ôòæo de outro), use 'but'."
             }
           ],
-          "coda": "Essas palavrinhas sÔö£├åo mÔö£ãÆgicas! Elas transformarÔö£├åo seu inglÔö£├©s de frases fragmentadas para uma comunicaÔö£┬ÑÔö£├åo contÔö£├ÿnua.",
+          "coda": "Essas palavrinhas s├ö├Â┬úÔö£Ôòæo m├ö├Â┬úÔö£┬ígicas! Elas transformar├ö├Â┬úÔö£Ôòæo seu ingl├ö├Â┬úÔö¼┬╝s de frases fragmentadas para uma comunica├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo cont├ö├Â┬úÔö¼├¡nua.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -3173,17 +3173,17 @@
                 "because"
               ],
               "resposta": 3,
-              "explicacao": "'Because' introduz a razÔö£├åo por estar estudando muito."
+              "explicacao": "'Because' introduz a raz├ö├Â┬úÔö£Ôòæo por estar estudando muito."
             },
             {
               "tipo": "revelar",
               "pergunta": "Complete: 'He was sick, ___ he didn't go to work.'",
               "resposta": "so",
-              "explicacao": "Ficar doente causou o resultado: por isso ('so') ele nÔö£├åo foi."
+              "explicacao": "Ficar doente causou o resultado: por isso ('so') ele n├ö├Â┬úÔö£Ôòæo foi."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual conjunÔö£┬ÑÔö£├åo usamos para adicionar informaÔö£┬ÑÔö¼┬║es semelhantes?",
+              "pergunta": "Qual conjun├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo usamos para adicionar informa├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£├╝es semelhantes?",
               "opcoes": [
                 "but",
                 "because",
@@ -3205,8 +3205,8 @@
           "id": "a1-lez30",
           "num": "Lesson 30",
           "titulo": "Adjectives & Word Order",
-          "subtitulo": "PosiÔö£┬ÑÔö£├åo do adjetivo antes do substantivo",
-          "alerta": "No inglÔö£├©s, as caracterÔö£├ÿsticas (adjetivos) vÔö£├©m ANTES da coisa que descrevem. ├ö├▓├Â como dizer 'o vermelho carro' em vez de 'o carro vermelho'!",
+          "subtitulo": "Posi├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo do adjetivo antes do substantivo",
+          "alerta": "No ingl├ö├Â┬úÔö¼┬╝s, as caracter├ö├Â┬úÔö¼├¡sticas (adjetivos) v├ö├Â┬úÔö¼┬╝m ANTES da coisa que descrevem. ├ö├Â┬úÔö£┬¢ como dizer 'o vermelho carro' em vez de 'o carro vermelho'!",
           "observacao_cards": [
             {
               "italiano": "a red car",
@@ -3221,7 +3221,7 @@
               "motivo": "Adjetivos nunca ganham 's' no plural"
             }
           ],
-          "tabela_visual": "| Adjective | Noun | Translation |\n|---|---|---|\n| tall | boy | menino alto |\n| old | house | casa velha |\n| fast | cars | carros rÔö£ãÆpidos |",
+          "tabela_visual": "| Adjective | Noun | Translation |\n|---|---|---|\n| tall | boy | menino alto |\n| old | house | casa velha |\n| fast | cars | carros r├ö├Â┬úÔö£┬ípidos |",
           "exemplos_prc": [
             {
               "oracao": "She is a smart student.",
@@ -3234,19 +3234,19 @@
             {
               "errado": "The car red is fast.",
               "certo": "The red car is fast.",
-              "explicacao": "A ordem correta Ôö£├£ Adjetivo + Substantivo."
+              "explicacao": "A ordem correta ├ö├Â┬úÔö¼┬½ Adjetivo + Substantivo."
             },
             {
               "errado": "I have two blues shirts.",
               "certo": "I have two blue shirts.",
-              "explicacao": "Adjetivos em inglÔö£├©s NUNCA vÔö£├åo para o plural, apenas o substantivo (shirts)."
+              "explicacao": "Adjetivos em ingl├ö├Â┬úÔö¼┬╝s NUNCA v├ö├Â┬úÔö£Ôòæo para o plural, apenas o substantivo (shirts)."
             }
           ],
-          "coda": "Lembre-se: no inglÔö£├©s a qualidade chega primeiro e nunca vai pro plural!",
+          "coda": "Lembre-se: no ingl├ö├Â┬úÔö¼┬╝s a qualidade chega primeiro e nunca vai pro plural!",
           "exercicios": [
             {
               "tipo": "escolha",
-              "pergunta": "Qual Ôö£├£ a traduÔö£┬ÑÔö£├åo correta para 'um cachorro grande'?",
+              "pergunta": "Qual ├ö├Â┬úÔö¼┬½ a tradu├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo correta para 'um cachorro grande'?",
               "opcoes": [
                 "a dog big",
                 "a big dog",
@@ -3264,7 +3264,7 @@
             },
             {
               "tipo": "escolha",
-              "pergunta": "Qual frase estÔö£ãÆ correta em relaÔö£┬ÑÔö£├åo ao plural?",
+              "pergunta": "Qual frase est├ö├Â┬úÔö£┬í correta em rela├ö├Â┬úÔö¼Ôòæ├ö├Â┬úÔö£Ôòæo ao plural?",
               "opcoes": [
                 "beautifuls girls",
                 "beautiful girls",
@@ -3272,7 +3272,7 @@
                 "girls beautiful"
               ],
               "resposta": 1,
-              "explicacao": "Adjetivos ('beautiful') nÔö£├åo levam 's', sÔö¼┬Ñ os substantivos ('girls')."
+              "explicacao": "Adjetivos ('beautiful') n├ö├Â┬úÔö£Ôòæo levam 's', s├ö├Â┬ú├ö├Â├® os substantivos ('girls')."
             },
             {
               "tipo": "revelar",
@@ -3307,7 +3307,7 @@
       "nome": "A2 ├ö├ç├Â Expansion",
       "nivel_minimo": 3,
       "cor": "linear-gradient(135deg, #2980B9, #1A5276)",
-      "unidades": [
+      "lezioni": [
         {
           "id": "a2-lez1",
           "num": "Lesson 1",
@@ -5387,7 +5387,7 @@
       "nome": "B1 ÔÇö Intermediate",
       "nivel_minimo": 6,
       "cor": "linear-gradient(135deg, #F39C12, #D35400)",
-      "unidades": [
+      "lezioni": [
         {
           "id": "b1-lez1",
           "num": "Lesson 1",
@@ -6829,7 +6829,7 @@
       "nome": "B2 ÔÇö Upper Intermediate",
       "nivel_minimo": 10,
       "cor": "linear-gradient(135deg, #8E44AD, #4A235A)",
-      "unidades": [
+      "lezioni": [
         {
           "id": "b2-lez1",
           "num": "Lesson 1",
@@ -8322,7 +8322,7 @@
       "nome": "C1/C2 ÔÇö Advanced Mastery",
       "nivel_minimo": 15,
       "cor": "linear-gradient(135deg, #2C3E50, #17202A)",
-      "unidades": [
+      "lezioni": [
         {
           "id": "c1-lez1",
           "num": "Lesson 1",
