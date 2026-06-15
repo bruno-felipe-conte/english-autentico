@@ -613,7 +613,7 @@ const Grammatica = {
 
     // 3. Agrupa <tr> consecutivos em <table class="gram-table">
     texto = texto.replace(/((<tr>[\s\S]*?<\/tr>\n*)+)/g,
-      '<table class="gram-table">$1</table>');
+      '<div class="gram-table-wrap"><table class="gram-table">$1</table></div>');
 
     // 4. Remove \n dentro de <table> simples (geradas por pipe)
     texto = texto.replace(/(<table[^>]*>)([\s\S]*?)(<\/table>)/g,
@@ -630,10 +630,10 @@ const Grammatica = {
 
     // 7. Limpeza de artefatos ao redor de tabelas
     texto = texto.replace(/<p>\s*<\/p>/g, '');
-    texto = texto.replace(/(<br>)+(<table)/g, '$2');
-    texto = texto.replace(/(<\/table>)(<br>)+/g, '$1');
-    texto = texto.replace(/<p>(<table)/g, '$1');
-    texto = texto.replace(/(<\/table>)<\/p>/g, '$1');
+    texto = texto.replace(/(<br>)+(<div class="gram-table-wrap">)/g, '$2');
+    texto = texto.replace(/(<\/div>)(<br>)+/g, '$1');
+    texto = texto.replace(/<p>(<div class="gram-table-wrap">)/g, '$1');
+    texto = texto.replace(/(<\/div>)<\/p>/g, '$1');
 
     // 8. Restaurar HTML tables protegidas (com suas classes e rowspan/colspan)
     htmlTables.forEach((t, i) => {
