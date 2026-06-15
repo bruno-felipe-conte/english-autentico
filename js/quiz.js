@@ -116,17 +116,18 @@ const Quiz = {
       const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.portugues);
       const alternativas = this._embaralhar([p.portugues, ...erradas]);
 
+      const termoStr = p.ingles || p.italiano;
       perguntas.push({
         id: `gen_${p.id}`,
         templo: temploNum,
         tipo: 'vocabulario',
         nivel: data.nivel || 'A1',
-        pergunta: I18n.idioma === 'it' ? `Cosa significa "${p.italiano}"?` : `O que significa "${p.italiano}"?`,
+        pergunta: I18n.idioma === 'it' ? `Cosa significa "${termoStr}"?` : `O que significa "${termoStr}"?`,
         resposta_correta: p.portugues,
         alternativas: alternativas,
         explicacao: p.exemplo
-          ? (I18n.idioma === 'it' ? `"${p.italiano}" significa "${p.portugues}". Esempio: ${p.exemplo}` : `"${p.italiano}" significa "${p.portugues}". Exemplo: ${p.exemplo}`)
-          : `"${p.italiano}" significa "${p.portugues}".`,
+          ? (I18n.idioma === 'it' ? `"${termoStr}" significa "${p.portugues}". Esempio: ${p.exemplo}` : `"${termoStr}" significa "${p.portugues}". Exemplo: ${p.exemplo}`)
+          : `"${termoStr}" significa "${p.portugues}".`,
         xp_recompensa: 20
       });
     });
@@ -161,7 +162,8 @@ const Quiz = {
     const perguntaEl = document.getElementById('quiz-pergunta');
     if (perguntaEl) {
       perguntaEl.textContent = p.pergunta;
-      if (p.italiano) perguntaEl.dataset.italiano = p.italiano;
+      const tLang = p.ingles || p.italiano;
+      if (tLang) perguntaEl.dataset.italiano = tLang;
       else delete perguntaEl.dataset.italiano;
     }
 
@@ -170,7 +172,8 @@ const Quiz = {
       if (p.tipo === 'listening') {
         btnOuvir.style.display = 'flex';
         // Auto play audio when question appears
-        if (p.italiano) setTimeout(() => { if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(p.italiano); }, 400);
+        const tLang = p.ingles || p.italiano;
+        if (tLang) setTimeout(() => { if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(tLang); }, 400);
       } else {
         btnOuvir.style.display = 'none';
       }
@@ -509,32 +512,34 @@ const Quiz = {
     // Gender questions
     const comGenero = palavras.filter(p => p.genero === 'm' || p.genero === 'f');
     comGenero.forEach(p => {
+      const termoStr = p.ingles || p.italiano;
       const corretoPT = p.genero === 'm' ? 'masculino' : 'feminino';
       const corretoIT = p.genero === 'm' ? I18n.t('quiz_morf_genero_masc') : I18n.t('quiz_morf_genero_fem');
       perguntas.push({
         id: `morf_g_${p.id}`, templo: temploNum, tipo: 'morfologia',
         nivel: data.nivel || 'A1',
-        pergunta: I18n.t('quiz_morf_genero_pergunta').replace('{w}', p.italiano),
+        pergunta: I18n.t('quiz_morf_genero_pergunta').replace('{w}', termoStr),
         resposta_correta: corretoIT,
         alternativas: [I18n.t('quiz_morf_genero_masc'), I18n.t('quiz_morf_genero_fem')],
-        explicacao: I18n.t('quiz_morf_genero_exp').replace('{w}', p.italiano).replace('{g}', corretoIT) + (p.plural ? ` (${I18n.idioma === 'it' ? 'plurale' : 'plural'}: ${p.plural})` : '') + '.',
+        explicacao: I18n.t('quiz_morf_genero_exp').replace('{w}', termoStr).replace('{g}', corretoIT) + (p.plural ? ` (${I18n.idioma === 'it' ? 'plurale' : 'plural'}: ${p.plural})` : '') + '.',
         xp_recompensa: 20
       });
     });
 
     // Plural questions — need at least 4 words with plural for wrong options
-    const comPlural = palavras.filter(p => p.plural && p.plural !== p.italiano);
+    const comPlural = palavras.filter(p => p.plural && p.plural !== (p.ingles || p.italiano));
     const todoPlurais = comPlural.map(p => p.plural);
     if (todoPlurais.length >= 4) {
       comPlural.forEach(p => {
+        const termoStr = p.ingles || p.italiano;
         const erradas = this._embaralhar(todoPlurais.filter(pl => pl !== p.plural)).slice(0, 3);
         perguntas.push({
           id: `morf_p_${p.id}`, templo: temploNum, tipo: 'morfologia',
           nivel: data.nivel || 'A1',
-          pergunta: I18n.t('quiz_morf_plural_pergunta').replace('{w}', p.italiano),
+          pergunta: I18n.t('quiz_morf_plural_pergunta').replace('{w}', termoStr),
           resposta_correta: p.plural,
           alternativas: this._embaralhar([p.plural, ...erradas]),
-          explicacao: I18n.t('quiz_morf_plural_exp').replace('{w}', p.italiano).replace('{p}', p.plural),
+          explicacao: I18n.t('quiz_morf_plural_exp').replace('{w}', termoStr).replace('{p}', p.plural),
           xp_recompensa: 20
         });
       });
@@ -643,18 +648,19 @@ const Quiz = {
     const perguntas = [];
 
     palavras.forEach(p => {
+      const termoStr = p.ingles || p.italiano;
       const outras = palavras.filter(o => o.id !== p.id);
-      const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.italiano);
-      const alternativas = this._embaralhar([p.italiano, ...erradas]);
+      const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.ingles || o.italiano);
+      const alternativas = this._embaralhar([termoStr, ...erradas]);
 
       perguntas.push({
         id: `list_${p.id}`, templo: temploNum, tipo: 'listening',
         nivel: data.nivel || 'A1',
-        italiano: p.italiano,
+        ingles: termoStr,
         pergunta: `Qual foi a palavra dita? (${p.portugues})`,
-        resposta_correta: p.italiano,
+        resposta_correta: termoStr,
         alternativas: alternativas,
-        explicacao: `A palavra dita foi "${p.italiano}".`,
+        explicacao: `A palavra dita foi "${termoStr}".`,
         xp_recompensa: 25
       });
     });

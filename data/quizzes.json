@@ -1,103 +1,499 @@
 {
-  "quizzes": [
+  "perguntas": [
     {
-      "id": "quiz_001",
-      "titulo": "To be — Present Simple",
+      "id": "q_custom_01_01",
+      "templo": 1,
+      "tipo": "Gramática",
       "nivel": "A1",
-      "templo_id": "templo_001",
-      "perguntas": [
-        {
-          "texto": "I ___ from Brazil.",
-          "alternativas": ["am", "is", "are", "be"],
-          "resposta_correta": 0,
-          "explicacao": "'I' sempre usa o verbo 'to be' na forma 'am'. Por exemplo: I am happy."
-        },
-        {
-          "texto": "She ___ my best friend.",
-          "alternativas": ["am", "is", "are", "be"],
-          "resposta_correta": 1,
-          "explicacao": "'She' usa o verbo 'to be' na forma 'is'. Por exemplo: She is a teacher."
-        },
-        {
-          "texto": "They ___ in New York.",
-          "alternativas": ["am", "is", "are", "be"],
-          "resposta_correta": 2,
-          "explicacao": "'They' usa o verbo 'to be' na forma 'are'. Por exemplo: They are friends."
-        },
-        {
-          "texto": "We ___ students at university.",
-          "alternativas": ["am", "is", "are", "be"],
-          "resposta_correta": 2,
-          "explicacao": "'We' usa o verbo 'to be' na forma 'are'. Por exemplo: We are happy."
-        },
-        {
-          "texto": "He ___ a doctor.",
-          "alternativas": ["am", "is", "are", "be"],
-          "resposta_correta": 1,
-          "explicacao": "'He' usa o verbo 'to be' na forma 'is'. Por exemplo: He is clever."
-        }
-      ],
-      "xp_recompensa": 20,
-      "feedback_correto": "Excellent! You've got it right.",
-      "feedback_incorreto": "Don't worry! Remember the pattern: I = am, You/We/They = are, He/She/It = is."
+      "pergunta": "I ___ from Brazil.",
+      "resposta_correta": "am",
+      "alternativas": ["am", "is", "are", "be"],
+      "explicacao": "'I' sempre usa o verbo 'to be' na forma 'am'. Por exemplo: I am happy.",
+      "xp_recompensa": 20
     },
     {
-      "id": "quiz_002",
-      "titulo": "Articles — a / an / the",
+      "id": "q_custom_01_02",
+      "templo": 1,
+      "tipo": "Gramática",
       "nivel": "A1",
-      "templo_id": "templo_006",
-      "perguntas": [
-        {
-          "texto": "I want ___ apple for lunch.",
-          "alternativas": ["a", "an", "the", "no article"],
-          "resposta_correta": 1,
-          "explicacao": "'An' é usado antes de vogais (ou sons de vogal). Por exemplo: an apple, an egg."
-        },
-        {
-          "texto": "___ sun is very hot today.",
-          "alternativas": ["a", "an", "the", "no article"],
-          "resposta_correta": 2,
-          "explicacao": "'The' é usado com coisas únicas e conhecidas. O sol só existe um!"
-        },
-        {
-          "texto": "I need ___ umbrella. It's raining.",
-          "alternativas": ["a", "an", "the", "no article"],
-          "resposta_correta": 0,
-          "explicacao": "'A' é usado antes de consoantes. Por exemplo: a book, a car."
-        }
-      ],
-      "xp_recompensa": 15,
-      "feedback_correto": "Perfect! You understand articles well.",
-      "feedback_incorreto": "Good try! Remember: 'a' before consoants, 'an' before vowels, 'the' for specific/unique things."
+      "pergunta": "She ___ my best friend.",
+      "resposta_correta": "is",
+      "alternativas": ["am", "is", "are", "be"],
+      "explicacao": "'She' usa o verbo 'to be' na forma 'is'. Por exemplo: She is a teacher.",
+      "xp_recompensa": 20
     },
     {
-      "id": "quiz_003",
-      "titulo": "Present Simple — Questions",
+      "id": "q_custom_01_03",
+      "templo": 1,
+      "tipo": "Gramática",
       "nivel": "A1",
-      "templo_id": "templo_006",
-      "perguntas": [
-        {
-          "texto": "___ you like coffee?",
-          "alternativas": ["Do", "Does", "Is", "Are"],
-          "resposta_correta": 0,
-          "explicacao": "'Do' é usado com 'I/You/We/They' no presente simples. Por exemplo: Do you play football?"
-        },
-        {
-          "texto": "___ she live in London?",
-          "alternativas": ["Do", "Does", "Is", "Are"],
-          "resposta_correta": 1,
-          "explicacao": "'Does' é usado com 'He/She/It' no presente simples. Por exemplo: Does she work here?"
-        },
-        {
-          "texto": "___ they enjoy music?",
-          "alternativas": ["Do", "Does", "Is", "Are"],
-          "resposta_correta": 0,
-          "explicacao": "'Do' é usado com plural 'they'. Por exemplo: Do they like pizza?"
-        }
-      ],
-      "xp_recompensa": 15,
-      "feedback_correto": "Brilliant! You've mastered present simple questions.",
-      "feedback_incorreto": "Keep practicing! Remember to use 'Do' for I/You/We/They e 'Does' para He/She/It."
+      "pergunta": "They ___ in New York.",
+      "resposta_correta": "are",
+      "alternativas": ["am", "is", "are", "be"],
+      "explicacao": "'They' usa o verbo 'to be' na forma 'are'. Por exemplo: They are friends.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_02_01",
+      "templo": 2,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "I want ___ apple for lunch.",
+      "resposta_correta": "an",
+      "alternativas": ["a", "an", "the", "no article"],
+      "explicacao": "'An' é usado antes de vogais (ou sons de vogal). Por exemplo: an apple, an egg.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_02_02",
+      "templo": 2,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "___ sun is very hot today.",
+      "resposta_correta": "The",
+      "alternativas": ["A", "An", "The", "No article"],
+      "explicacao": "'The' é usado com coisas únicas e específicas. O sol só existe um!",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_02_03",
+      "templo": 2,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "I need ___ new umbrella.",
+      "resposta_correta": "a",
+      "alternativas": ["a", "an", "the", "no article"],
+      "explicacao": "'A' é usado antes de consoantes. Por exemplo: a new umbrella, a book.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_03_01",
+      "templo": 3,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "This is ___ book.",
+      "resposta_correta": "my",
+      "alternativas": ["I", "me", "my", "mine"],
+      "explicacao": "'My' é um adjetivo possessivo que significa 'meu' ou 'minha'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_03_02",
+      "templo": 3,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "Where is ___ car? (They)",
+      "resposta_correta": "their",
+      "alternativas": ["they", "them", "their", "theirs"],
+      "explicacao": "'Their' é o adjetivo possessivo correspondente a 'They' (deles/delas).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_03_03",
+      "templo": 3,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "___ name is Sarah.",
+      "resposta_correta": "Her",
+      "alternativas": ["She", "Her", "Hers", "Him"],
+      "explicacao": "'Her' é o adjetivo possessivo para 'She' (dela).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_04_01",
+      "templo": 4,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "I ___ a dog.",
+      "resposta_correta": "have",
+      "alternativas": ["have", "has", "had", "having"],
+      "explicacao": "Com 'I', 'You', 'We' e 'They', usamos 'have'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_04_02",
+      "templo": 4,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "He ___ a new car.",
+      "resposta_correta": "has",
+      "alternativas": ["have", "has", "had", "having"],
+      "explicacao": "Com 'He', 'She' e 'It', usamos 'has' no presente.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_04_03",
+      "templo": 4,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "We ___ lunch at 1 PM.",
+      "resposta_correta": "have",
+      "alternativas": ["have", "has", "are", "do"],
+      "explicacao": "'Have lunch' significa 'almoçar'. Usamos 'have' com 'We'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_05_01",
+      "templo": 5,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "___ are you from?",
+      "resposta_correta": "Where",
+      "alternativas": ["Where", "What", "Who", "When"],
+      "explicacao": "'Where' é usado para perguntar sobre lugares (De onde você é?).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_05_02",
+      "templo": 5,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "___ is your name?",
+      "resposta_correta": "What",
+      "alternativas": ["Where", "What", "Who", "How"],
+      "explicacao": "'What' é usado para perguntar sobre coisas ou informações.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_05_03",
+      "templo": 5,
+      "tipo": "Gramática",
+      "nivel": "A1",
+      "pergunta": "___ old are you?",
+      "resposta_correta": "How",
+      "alternativas": ["What", "Who", "When", "How"],
+      "explicacao": "A expressão 'How old' é usada para perguntar a idade.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_06_01",
+      "templo": 6,
+      "tipo": "Gramática",
+      "nivel": "B1",
+      "pergunta": "___ you like coffee?",
+      "resposta_correta": "Do",
+      "alternativas": ["Do", "Does", "Is", "Are"],
+      "explicacao": "'Do' é usado com 'I/You/We/They' para fazer perguntas no Present Simple.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_06_02",
+      "templo": 6,
+      "tipo": "Gramática",
+      "nivel": "B1",
+      "pergunta": "___ she live in London?",
+      "resposta_correta": "Does",
+      "alternativas": ["Do", "Does", "Is", "Are"],
+      "explicacao": "'Does' é usado com 'He/She/It' para fazer perguntas no Present Simple.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_06_03",
+      "templo": 6,
+      "tipo": "Gramática",
+      "nivel": "B1",
+      "pergunta": "No, I ___ not like tea.",
+      "resposta_correta": "do",
+      "alternativas": ["do", "does", "am", "are"],
+      "explicacao": "Para negar com 'I', usamos 'do not' ou 'don't'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_07_01",
+      "templo": 7,
+      "tipo": "Gramática",
+      "nivel": "B2",
+      "pergunta": "I work ___ Monday.",
+      "resposta_correta": "on",
+      "alternativas": ["in", "on", "at", "to"],
+      "explicacao": "Usamos a preposição 'on' antes de dias da semana.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_07_02",
+      "templo": 7,
+      "tipo": "Gramática",
+      "nivel": "B2",
+      "pergunta": "My birthday is ___ August.",
+      "resposta_correta": "in",
+      "alternativas": ["in", "on", "at", "to"],
+      "explicacao": "Usamos a preposição 'in' antes de meses do ano.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_07_03",
+      "templo": 7,
+      "tipo": "Gramática",
+      "nivel": "B2",
+      "pergunta": "The meeting is ___ 8 PM.",
+      "resposta_correta": "at",
+      "alternativas": ["in", "on", "at", "to"],
+      "explicacao": "Usamos a preposição 'at' para horas específicas.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_08_01",
+      "templo": 8,
+      "tipo": "Gramática",
+      "nivel": "B2",
+      "pergunta": "There is ___ milk in the fridge.",
+      "resposta_correta": "some",
+      "alternativas": ["some", "any", "many", "a"],
+      "explicacao": "'Some' é usado em frases afirmativas com substantivos incontáveis.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_08_02",
+      "templo": 8,
+      "tipo": "Gramática",
+      "nivel": "B2",
+      "pergunta": "I don't have ___ money.",
+      "resposta_correta": "any",
+      "alternativas": ["some", "any", "many", "a"],
+      "explicacao": "'Any' é usado em frases negativas e interrogativas.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_08_03",
+      "templo": 8,
+      "tipo": "Gramática",
+      "nivel": "B2",
+      "pergunta": "How ___ apples do you want?",
+      "resposta_correta": "many",
+      "alternativas": ["much", "many", "some", "any"],
+      "explicacao": "'Many' é usado com substantivos contáveis no plural (apples).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_09_01",
+      "templo": 9,
+      "tipo": "Gramática",
+      "nivel": "B1",
+      "pergunta": "He ___ to school yesterday.",
+      "resposta_correta": "went",
+      "alternativas": ["go", "goes", "went", "going"],
+      "explicacao": "'Went' é o passado simples do verbo irregular 'go'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_09_02",
+      "templo": 9,
+      "tipo": "Gramática",
+      "nivel": "B1",
+      "pergunta": "We ___ a good time at the party.",
+      "resposta_correta": "had",
+      "alternativas": ["have", "has", "had", "having"],
+      "explicacao": "'Had' é o passado simples do verbo 'have'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_09_03",
+      "templo": 9,
+      "tipo": "Gramática",
+      "nivel": "B1",
+      "pergunta": "I ___ a new movie last night.",
+      "resposta_correta": "saw",
+      "alternativas": ["see", "sees", "saw", "seeing"],
+      "explicacao": "'Saw' é o passado simples do verbo irregular 'see'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_10_01",
+      "templo": 10,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "___ you watch TV yesterday?",
+      "resposta_correta": "Did",
+      "alternativas": ["Do", "Does", "Did", "Are"],
+      "explicacao": "Para fazer perguntas no Past Simple, usamos o auxiliar 'Did'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_10_02",
+      "templo": 10,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "She didn't ___ to the park.",
+      "resposta_correta": "go",
+      "alternativas": ["go", "went", "goes", "going"],
+      "explicacao": "Após o auxiliar 'didn't', o verbo volta para a forma básica (go).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_10_03",
+      "templo": 10,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "They ___ arrive on time.",
+      "resposta_correta": "didn't",
+      "alternativas": ["don't", "doesn't", "didn't", "aren't"],
+      "explicacao": "'Didn't' é o auxiliar negativo para o passado simples.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_11_01",
+      "templo": 11,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "She is ___ than her sister.",
+      "resposta_correta": "taller",
+      "alternativas": ["tall", "taller", "tallest", "more tall"],
+      "explicacao": "Adicionamos '-er' em adjetivos curtos para formar o comparativo (taller).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_11_02",
+      "templo": 11,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "This book is ___ interesting than that one.",
+      "resposta_correta": "more",
+      "alternativas": ["much", "most", "more", "very"],
+      "explicacao": "Para adjetivos longos, usamos 'more' antes do adjetivo no comparativo.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_11_03",
+      "templo": 11,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "He is the ___ student in the class.",
+      "resposta_correta": "best",
+      "alternativas": ["good", "better", "best", "most good"],
+      "explicacao": "'Best' é a forma superlativa irregular do adjetivo 'good'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_12_01",
+      "templo": 12,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "I ___ go to the supermarket later.",
+      "resposta_correta": "will",
+      "alternativas": ["will", "am", "do", "have"],
+      "explicacao": "'Will' é usado para expressar ações no futuro simples.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_12_02",
+      "templo": 12,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "___ you help me with this?",
+      "resposta_correta": "Will",
+      "alternativas": ["Do", "Will", "Are", "Have"],
+      "explicacao": "'Will' também é usado para fazer pedidos de ajuda (Will you help me?).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_12_03",
+      "templo": 12,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "She ___ be at home tonight.",
+      "resposta_correta": "won't",
+      "alternativas": ["won't", "will not", "doesn't", "isn't"],
+      "explicacao": "'Won't' é a forma contraída de 'will not' (embora 'will not' também seja correto, 'won't' é mais comum e é a opção aqui).",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_13_01",
+      "templo": 13,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "I have ___ visited Paris.",
+      "resposta_correta": "never",
+      "alternativas": ["ever", "never", "always", "yet"],
+      "explicacao": "'Never' (nunca) é usado no Present Perfect para falar de experiências não vividas.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_13_02",
+      "templo": 13,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "Have you ___ eaten sushi?",
+      "resposta_correta": "ever",
+      "alternativas": ["ever", "never", "always", "yet"],
+      "explicacao": "'Ever' (alguma vez) é usado em perguntas no Present Perfect.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_13_03",
+      "templo": 13,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "She has ___ finished her homework.",
+      "resposta_correta": "already",
+      "alternativas": ["already", "yet", "ever", "never"],
+      "explicacao": "'Already' (já) é usado no Present Perfect para ações que já aconteceram.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_14_01",
+      "templo": 14,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "If it rains, I ___ stay home.",
+      "resposta_correta": "will",
+      "alternativas": ["will", "would", "do", "am"],
+      "explicacao": "Na First Conditional, a oração principal usa 'will'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_14_02",
+      "templo": 14,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "If you ___ ice, it melts.",
+      "resposta_correta": "heat",
+      "alternativas": ["heat", "will heat", "heats", "heated"],
+      "explicacao": "Na Zero Conditional, ambas as orações usam Present Simple.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_14_03",
+      "templo": 14,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "I will call you if I ___ time.",
+      "resposta_correta": "have",
+      "alternativas": ["have", "will have", "had", "has"],
+      "explicacao": "Na condicional com 'if', usamos Present Simple ('have'), e não 'will have'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_15_01",
+      "templo": 15,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "You ___ wear a seatbelt.",
+      "resposta_correta": "must",
+      "alternativas": ["must", "can", "might", "could"],
+      "explicacao": "'Must' indica obrigação ou regra forte.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_15_02",
+      "templo": 15,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "___ I borrow your pen?",
+      "resposta_correta": "May",
+      "alternativas": ["Must", "May", "Should", "Would"],
+      "explicacao": "'May' (ou 'Can') é usado para pedir permissão educadamente.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_15_03",
+      "templo": 15,
+      "tipo": "Gramática",
+      "nivel": "A2",
+      "pergunta": "You ___ eat more vegetables.",
+      "resposta_correta": "should",
+      "alternativas": ["should", "might", "would", "can"],
+      "explicacao": "'Should' é usado para dar conselhos ou recomendações.",
+      "xp_recompensa": 20
     }
   ]
 }
