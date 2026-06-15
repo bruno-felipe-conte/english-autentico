@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#003E8A">
   <meta name="description" content="Learn American English with authenticity — Flashcards, Stories & Songs">
   <title>English Autentico</title>
@@ -3031,7 +3031,7 @@
     // Registra o Service Worker para suporte offline (PWA)
     if ('serviceWorker' in navigator) {
       // Caminho relativo — funciona tanto na raiz quanto em subdiretório
-      navigator.serviceWorker.register('sw.js?v=16').then(reg => {
+      navigator.serviceWorker.register('sw.js?v=17').then(reg => {
         // Verifica atualizações a cada vez que a aba fica em foco
         reg.update();
       }).catch(err => console.warn('[SW] Registro falhou:', err));

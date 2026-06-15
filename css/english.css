@@ -67,7 +67,7 @@
 
 /* 3. RESET + BASE */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; font-size:18px; -webkit-text-size-adjust:100%; }
+html, body { scroll-behavior:smooth; font-size:18px; -webkit-text-size-adjust:100%; touch-action: manipulation; }
 
 body {
   background-color: var(--cor-pergaminho);
@@ -594,3 +594,10 @@ body.dark-mode .badge-a3 { background: rgba(26,54,93,.35); }
    Oxford Blue (#1A365D) • Navy Blue (#15273A) • Cornflower Blue (#457B9D)
    Teal Accent (#6FB9B3) • Light Navy (#E8F4F8)
    ============================================================================= */
+
+/* Mobile: hide top nav, show bottom nav */
+@media (max-width: 768px) {
+  .nav-tabs {
+    display: none;
+  }
+}

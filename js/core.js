@@ -788,12 +788,16 @@ const App = {
     if (!input) return;
     if (input.value.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
-      p.templos_desbloqueados = Array.from({length: 51}, (_, i) => i + 1);
+      if (!p.templos_desbloqueados.includes(temploNum)) {
+        p.templos_desbloqueados.push(temploNum);
+        p.templos_desbloqueados.sort((a, b) => a - b);
+      }
       this.salvarProgresso();
       this.fecharModalTemplo();
       this.renderizarTemplos();
       this.atualizarStats();
-      this.notificar('notif_tutti_sbloccati', 'sucesso');
+      if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
+      this.notificar(I18n.t('notif_templo_sbloccato').replace('{n}', temploNum), 'sucesso');
     } else {
       input.style.borderColor = '#003E8A';
       input.value = '';
@@ -849,7 +853,9 @@ const App = {
           if (!f || f.state === 'new' || (f.nextReview || 0) <= agora) vencidas++;
         });
       });
-      btnRgCount.textContent = vencidas > 0 ? `${vencidas} carta${vencidas !== 1 ? 's' : ''}` : '';
+      btnRgCount.textContent = vencidas > 0 ? `${vencidas} card${vencidas !== 1 ? 's' : ''}` : '';
+      const helper = document.getElementById('selector-helper');
+      if (helper && !Flashcards.cartaAtual) helper.style.display = vencidas > 0 ? 'none' : '';
     }
 
     // Daily goal bar — reset xp_hoje when the date rolls over
@@ -1072,4 +1078,11 @@ const App = {
 };
 
 // ── Bootstrap ─────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => App.init());
+document.addEventListener('DOMContentLoaded', () => {
+  App.init();
+
+  // Prevenir zoom indesejado em dispositivos iOS (Safari ignora user-scalable=no)
+  document.addEventListener('gesturestart', function(e) {
+    e.preventDefault();
+  });
+});
