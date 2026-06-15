@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#003E8A">
   <meta name="description" content="Learn American English with authenticity — Flashcards, Stories & Songs">
   <title>English Autentico</title>
-  <link rel="stylesheet" href="css/english.css?v=1">
+  <link rel="stylesheet" href="css/english.css?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -153,6 +153,94 @@
     }
 
     /* ── Nav ── */
+    /* ── Bottom Navigation Bar (mobile only) ── */
+    .bottom-nav { display: none; }
+
+    @media (max-width: 640px) {
+      .nav-tabs { display: none !important; }
+
+      .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 2000;
+        background: var(--cor-marmore, #003E8A);
+        border-top: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+        padding: 0.3rem max(env(safe-area-inset-right), 2px) calc(0.4rem + env(safe-area-inset-bottom)) max(env(safe-area-inset-left), 2px);
+        justify-content: stretch;
+        align-items: stretch;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .bottom-nav::-webkit-scrollbar { display: none; }
+
+      .bottom-nav button {
+        flex: 1 1 0;
+        min-width: 0;
+        background: transparent;
+        border: none;
+        color: var(--cor-pietra, #555);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        font-size: 1.15rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0.3rem 0.1rem 0.25rem;
+        border-radius: 8px;
+        opacity: 0.5;
+        filter: grayscale(0.5);
+        transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), opacity 0.15s, filter 0.15s, background 0.15s;
+      }
+
+      .bottom-nav button span {
+        display: block;
+        font-size: 0.48rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: inherit;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .bottom-nav button:active { transform: scale(0.85); }
+
+      .bottom-nav button.ativa {
+        color: #003E8A;
+        opacity: 1;
+        filter: grayscale(0);
+        background: rgba(0,62,138,0.1);
+        transform: translateY(-2px);
+        font-size: 1.25rem;
+      }
+      .bottom-nav button.ativa span { color: #003E8A; font-weight: 800; }
+
+      body.dark-mode .bottom-nav {
+        background: #1C1816;
+        border-top-color: #2D2723;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.35);
+      }
+      body.dark-mode .bottom-nav button { color: #A09088; }
+      body.dark-mode .bottom-nav button.ativa {
+        color: #D4A843;
+        background: rgba(212,168,67,0.12);
+      }
+      body.dark-mode .bottom-nav button.ativa span { color: #D4A843; }
+
+      .app-container {
+        padding-bottom: calc(56px + env(safe-area-inset-bottom) + 0.75rem) !important;
+      }
+    }
+
+
 
 
     /* ── Main container ── */
@@ -230,7 +318,7 @@
       overflow: visible;        /* never clip the label */
     }
     .card-selecao-templo label { font-family: 'Cinzel', serif; font-size: 0.78rem; font-weight: 600; color: var(--cor-veneziano-escuro); letter-spacing: 0.03em; white-space: nowrap; }
-    .selector-helper { font-size: 0.73rem; color: #b0a090; text-align: center; margin: -0.4rem 0 0.7rem; }
+    .selector-helper { font-size: 0.73rem; color: #b0a090; text-align: center; margin: 0.5rem 0 0.7rem; }
     body.dark-mode .selector-helper { color: #5a5048; }
     .card-selecao-templo select { flex: 1; padding: 0.48rem 2.2rem 0.48rem 0.8rem; border: 1.5px solid rgba(155,35,53,0.45); border-radius: 8px; font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem; font-weight: 600; color: #2a1a1a; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%239B2335' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.7rem center; -webkit-appearance: none; appearance: none; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; }
     .card-selecao-templo select:focus { outline: none; border-color: var(--cor-veneziano-escuro); box-shadow: 0 0 0 3px rgba(155,35,53,0.12); }
@@ -1702,29 +1790,36 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      padding: 0.75rem;
+      overflow-y: auto;
     }
     .onb-card {
       background: linear-gradient(135deg, #003E8A 0%, #002460 100%);
       color: #F5EDD8;
-      border-radius: 24px;
+      border-radius: 20px;
       width: 100%;
       max-width: 480px;
-      padding: 2.2rem;
+      padding: clamp(1.1rem, 4vw, 2.2rem);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
       border: 1px solid rgba(212, 168, 67, 0.28);
       display: flex;
       flex-direction: column;
-      min-height: 440px;
+      max-height: calc(100dvh - 1.5rem);
       justify-content: space-between;
       position: relative;
+      my-overflow: hidden;
     }
     .onb-slides {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
+    .onb-slides::-webkit-scrollbar { display: none; }
     .onb-slide {
       display: none;
       animation: fadeIn 0.3s ease;
@@ -1733,35 +1828,35 @@
       display: block;
     }
     .onb-emoji {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      margin-bottom: clamp(0.4rem, 1.5vw, 1rem);
       text-align: center;
       filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
     }
     .onb-card h3 {
       font-family: 'Cinzel', serif;
-      font-size: 1.6rem;
+      font-size: clamp(1.15rem, 4vw, 1.6rem);
       text-align: center;
       color: var(--cor-toscano);
-      margin-bottom: 1rem;
+      margin-bottom: clamp(0.5rem, 2vw, 1rem);
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
     .onb-card p {
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: clamp(0.82rem, 2.5vw, 0.95rem);
+      line-height: 1.55;
       text-align: center;
       color: #E6DFD3;
     }
     .onb-features-list, .onb-steps-list {
       text-align: left;
-      margin: 1rem 0;
-      padding-left: 1.2rem;
+      margin: clamp(0.4rem, 2vw, 1rem) 0;
+      padding-left: 1rem;
       color: #E6DFD3;
-      font-size: 0.88rem;
+      font-size: clamp(0.76rem, 2.2vw, 0.88rem);
     }
     .onb-features-list li, .onb-steps-list li {
-      margin-bottom: 0.6rem;
-      line-height: 1.5;
+      margin-bottom: clamp(0.25rem, 1vw, 0.6rem);
+      line-height: 1.45;
     }
     .onb-features-list li strong {
       color: var(--cor-toscano);
@@ -1770,9 +1865,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 2rem;
+      margin-top: clamp(0.6rem, 2vw, 2rem);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 1.2rem;
+      padding-top: clamp(0.6rem, 2vw, 1.2rem);
+      flex-shrink: 0;
     }
     .onb-dots {
       display: flex;
@@ -1796,12 +1892,13 @@
     }
     .onb-btn {
       border: none;
-      padding: 0.55rem 1.2rem;
+      padding: 0.5rem 1.1rem;
       border-radius: 10px;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s;
-      font-size: 0.88rem;
+      font-size: clamp(0.78rem, 2.2vw, 0.88rem);
+      white-space: nowrap;
     }
     .onb-btn.btn-primary {
       background: #D4A843;
@@ -1817,6 +1914,11 @@
     }
     .onb-btn.btn-secondary:hover {
       background: rgba(255, 255, 255, 0.2);
+    }
+    @media (max-height: 600px) {
+      .onb-emoji { display: none; }
+      .onb-card h3 { font-size: 1rem; margin-bottom: 0.35rem; }
+      .onb-features-list li, .onb-steps-list li { margin-bottom: 0.2rem; }
     }
 
     /* ── Card Continuar ── */
@@ -2632,9 +2734,9 @@
     <section id="sec-flashcard" class="section">
       <div class="flashcard-arena">
         <div class="card-selecao-templo">
-          <label for="flashcard-templo-select">Studiando:</label>
+          <label for="flashcard-templo-select">Studying:</label>
           <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
-            <option value="">-- Seleziona tempio --</option>
+            <option value="">-- Select a temple --</option>
           </select>
           <div id="btn-modos-wrapper" style="display:flex;gap:0.3rem;align-items:center">
             <button id="btn-reverso"  class="btn-modo-toggle" onclick="Flashcards.toggleReverso()"  title="Reverso: PT→IT"          data-i18n-title="title_reverso">🔄</button>
@@ -2642,10 +2744,10 @@
             <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">🎧</button>
           </div>
         </div>
-        <button id="btn-revisao-geral" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados" style="width:100%;margin-top:0.4rem;padding:0.5rem 1rem;background:linear-gradient(135deg,#003E8A,#D4A843);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
-          🌍 <span id="btn-rg-label">Revisão Geral</span> <span id="btn-rg-count" style="background:rgba(255,255,255,0.25);border-radius:999px;padding:0.1rem 0.5rem;font-size:0.78rem;"></span>
+        <button id="btn-revisao-geral" onclick="Flashcards.initRevisaoGeral()" title="Review all due cards from all unlocked temples" style="width:100%;margin-top:0.4rem;padding:0.5rem 1rem;background:linear-gradient(135deg,#003E8A,#D4A843);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+          🌍 <span id="btn-rg-label">General Review</span> <span id="btn-rg-count" style="background:rgba(255,255,255,0.25);border-radius:999px;padding:0.1rem 0.5rem;font-size:0.78rem;"></span>
         </button>
-        <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
+        <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Choose a vocabulary set to study</p>
         <div class="card-info" id="card-info"></div>
         <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
           <div id="swipe-hint-left"  class="swipe-hint"></div>
@@ -2690,8 +2792,8 @@
         </div>
         <div class="empty-state" id="flashcard-vazio" style="display:none">
           <p class="ornamento-ingles">Excellent!</p>
-          <p data-i18n="fc_todas_estudadas">Todas as cartas estudadas hoje.</p>
-          <p class="em-revisao" data-i18n="fc_volte_amanha">Volte amanhã para as próximas revisões.</p>
+          <p data-i18n="fc_todas_estudadas">All cards studied for today!</p>
+          <p class="em-revisao" data-i18n="fc_volte_amanha">Come back tomorrow for more reviews.</p>
           <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
             <button class="btn-primario" onclick="Flashcards.praticaTodas()" data-i18n="fc_btn_praticar_todas">🔁 Praticar todas</button>
             <button class="btn-secondario" onclick="Flashcards.estudarFavoritos()" data-i18n="fc_btn_favoritos">❤️ Favoritos</button>
@@ -2885,19 +2987,19 @@
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js" charset="UTF-8"></script>
-  <script src="js/audio.js?v=66" charset="UTF-8"></script>
-  <script src="js/conquistas.js?v=66" charset="UTF-8"></script>
-  <script src="js/onboarding.js?v=66" charset="UTF-8"></script>
-  <script src="js/i18n.js?v=66" charset="UTF-8"></script>
-  <script src="js/core.js?v=66" charset="UTF-8"></script>
-  <script src="js/progression.js?v=66" charset="UTF-8"></script>
-  <script src="js/flashcards.js?v=66" charset="UTF-8"></script>
-  <script src="js/quiz.js?v=66" charset="UTF-8"></script>
-  <script src="js/vocab.js?v=66" charset="UTF-8"></script>
-  <script src="js/heatmap.js?v=66" charset="UTF-8"></script>
-  <script src="js/grammar.js?v=66" charset="UTF-8"></script>
-  <script src="js/profilo.js?v=66" charset="UTF-8"></script>
-  <script src="js/dialoghi.js?v=66" charset="UTF-8"></script>
+  <script src="js/audio.js?v=71" charset="UTF-8"></script>
+  <script src="js/conquistas.js?v=71" charset="UTF-8"></script>
+  <script src="js/onboarding.js?v=71" charset="UTF-8"></script>
+  <script src="js/i18n.js?v=71" charset="UTF-8"></script>
+  <script src="js/core.js?v=72" charset="UTF-8"></script>
+  <script src="js/progression.js?v=71" charset="UTF-8"></script>
+  <script src="js/flashcards.js?v=71" charset="UTF-8"></script>
+  <script src="js/quiz.js?v=71" charset="UTF-8"></script>
+  <script src="js/vocab.js?v=71" charset="UTF-8"></script>
+  <script src="js/heatmap.js?v=71" charset="UTF-8"></script>
+  <script src="js/grammar.js?v=72" charset="UTF-8"></script>
+  <script src="js/profilo.js?v=72" charset="UTF-8"></script>
+  <script src="js/dialoghi.js?v=71" charset="UTF-8"></script>
   <script src="js/canzoni.js?v=62" charset="UTF-8"></script>
   <script src="js/imitazione.js?v=62" charset="UTF-8"></script>
   <script src="js/storie.js?v=62" charset="UTF-8"></script>
@@ -2929,7 +3031,7 @@
     // Registra o Service Worker para suporte offline (PWA)
     if ('serviceWorker' in navigator) {
       // Caminho relativo — funciona tanto na raiz quanto em subdiretório
-      navigator.serviceWorker.register('sw.js?v=15').then(reg => {
+      navigator.serviceWorker.register('sw.js?v=16').then(reg => {
         // Verifica atualizações a cada vez que a aba fica em foco
         reg.update();
       }).catch(err => console.warn('[SW] Registro falhou:', err));
@@ -2991,8 +3093,23 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
-  <script src="js/tour.js?v=66" charset="UTF-8"></script>
+  <script src="js/tour.js?v=71" charset="UTF-8"></script>
   <script src="js/ia-import.js" charset="UTF-8"></script>
+
+  <!-- Bottom Navigation Bar (mobile only) -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="nav-tab-btn ativa" data-section="templi" onclick="App.navegar('templi')">&#127963;<span>Temples</span></button>
+    <button class="nav-tab-btn" data-section="dialoghi" onclick="App.navegar('dialoghi')">&#128172;<span>Dialogues</span></button>
+    <button class="nav-tab-btn" data-section="flashcard" onclick="App.navegar('flashcard')">&#127183;<span>Flashcards</span></button>
+    <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')">&#10067;<span>Quiz</span></button>
+    <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')">&#128214;<span>Vocab</span></button>
+    <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')">&#128218;<span>Grammar</span></button>
+    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')">&#128220;<span>Reading</span></button>
+    <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')">&#127925;<span>Songs</span></button>
+    <button class="nav-tab-btn" data-section="imitazione" onclick="App.navegar('imitazione')">&#128483;<span>Listen</span></button>
+    <button class="nav-tab-btn" data-section="profilo" onclick="App.navegar('profilo')">&#128100;<span>Profile</span></button>
+  </nav>
+
 </body>
 </html>
 

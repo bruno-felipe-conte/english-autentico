@@ -240,12 +240,44 @@ VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "res
   },
 
   // ── Abrir modal ──────────────────────────────────────────
+  _obterPalavrasDificeis() {
+    if (typeof App === 'undefined' || !App.estado?.flashcardData || !App.estado?.vocabCache) return [];
+    
+    // Procura cards difíceis (erros > 0 ou recém-aprendidos)
+    const hardIds = [];
+    for (const [id, f] of Object.entries(App.estado.flashcardData)) {
+      if ((f.erros > 0) || (f.stability && f.stability < 15) || (f.state === 'learning') || (f.state === 'new')) {
+        hardIds.push(id);
+      }
+    }
+    
+    // Busca a palavra real no cache
+    const words = hardIds.map(id => {
+      const v = App.estado.vocabCache.find(w => w.id === id);
+      return v ? (v.italiano || v.word) : null;
+    }).filter(w => w);
+
+    // Embaralha e pega até 7 palavras
+    return words.sort(() => 0.5 - Math.random()).slice(0, 7);
+  },
+
   abrir(tipo) {
     this.tipoAtual = tipo;
     const modal = document.getElementById('ia-import-modal');
     if (!modal) return;
     document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Adicionar via IA';
-    document.getElementById('ia-prompt-text').textContent = this.prompts[tipo] || '';
+    
+    let basePrompt = this.prompts[tipo] || '';
+    
+    // Injetar palavras difíceis dinamicamente
+    if (tipo === 'dialogo' || tipo === 'storia' || tipo === 'imitazione') {
+      const dificeis = this._obterPalavrasDificeis();
+      if (dificeis.length > 0) {
+        basePrompt += `\n\n🎯 MANDATORY VOCABULARY CHALLENGE:\nYou MUST organically include the following words in the English text (they are words the student is currently struggling with):\n[ ${dificeis.join(', ')} ]`;
+      }
+    }
+
+    document.getElementById('ia-prompt-text').textContent = basePrompt;
     document.getElementById('ia-paste-area').value = '';
     const fb = document.getElementById('ia-feedback');
     if (fb) { fb.textContent = ''; fb.className = 'ia-feedback'; }
