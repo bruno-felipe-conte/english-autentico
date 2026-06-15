@@ -137,6 +137,34 @@ const Notificacoes = {
   init() {
     if (this.habilitado()) {
       this.agendarHoje();
+      this._agendarTimerLocal();
     }
   },
+
+  // Page-side fallback: fire Notification directly if the app is open at reminder time.
+  // SW setTimeout is killed by browser for long delays; this handles the case where
+  // the user has the app open/backgrounded when the reminder time arrives.
+  _agendarTimerLocal() {
+    if (!this.habilitado()) return;
+    const horaStr = this.getHora();
+    const [h, m]  = horaStr.split(':').map(Number);
+    const agora   = new Date();
+    const alvo    = new Date();
+    alvo.setHours(h, m, 0, 0);
+    if (alvo <= agora) alvo.setDate(alvo.getDate() + 1);
+    const delay = alvo.getTime() - agora.getTime();
+    if (this._timer) clearTimeout(this._timer);
+    this._timer = setTimeout(() => {
+      const { devidas, novas } = this._contarCartas();
+      const total = devidas + novas;
+      const body = total === 0
+        ? '✅ No cards due today — great work!'
+        : `📚 ${devidas} card${devidas !== 1 ? 's' : ''} to review + ${novas} new waiting.`;
+      new Notification('🇺🇸 English Autentico', { body, icon: './icons/icon.svg', tag: 'english-review' });
+      // Reschedule for next day
+      setTimeout(() => this._agendarTimerLocal(), 60000);
+    }, delay);
+  },
+
+  _timer: null,
 };

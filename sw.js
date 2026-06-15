@@ -34,7 +34,7 @@ const STATIC = [
   './js/notificacoes.js?v=76',
   './js/tour.js?v=76',
   './js/storie.js?v=76',
-  './js/ia-import.js',
+  './js/ia-import.js?v=76',
   // Dados
   './data/conjugacoes.json',
   './data/grammar.json',

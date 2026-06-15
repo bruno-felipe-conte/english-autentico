@@ -232,11 +232,11 @@ VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "res
 
   // ── Títulos do modal por tipo ────────────────────────────
   titulos: {
-    dialogo:    '🤖 Adicionar Diálogo via IA',
-    canzone:    '🤖 Adicionar Canção via IA',
-    storia:     '🤖 Adicionar História via IA',
-    imitazione: '🤖 Adicionar Imitação via IA',
-    vocab:      '🤖 Adicionar Vocabulário via IA',
+    dialogo:    '🤖 Add Dialogue via AI',
+    canzone:    '🤖 Add Song via AI',
+    storia:     '🤖 Add Story via AI',
+    imitazione: '🤖 Add Listen Phrase via AI',
+    vocab:      '🤖 Add Vocabulary via AI',
   },
 
   // ── Abrir modal ──────────────────────────────────────────
@@ -265,7 +265,7 @@ VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "res
     this.tipoAtual = tipo;
     const modal = document.getElementById('ia-import-modal');
     if (!modal) return;
-    document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Adicionar via IA';
+    document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Add via AI';
     
     let basePrompt = this.prompts[tipo] || '';
     
@@ -325,7 +325,7 @@ VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "res
     try {
       // Extrai JSON mesmo que o LLM adicione texto introdutório antes/depois
       const match = raw.match(/(\[[\s\S]*\]|\{[\s\S]*\})/);
-      if (!match) throw new Error('Nenhum JSON encontrado na resposta.');
+      if (!match) throw new Error('No JSON found in the response.');
       data = JSON.parse(match[1]);
     } catch (e) {
       this._setFeedback('❌ JSON inválido. Verifique se a IA gerou o formato correto e tente novamente.', 'error');
