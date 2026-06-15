@@ -1,0 +1,514 @@
+[
+  {
+    "id": "a2-lez1",
+    "num": "Lesson 1",
+    "titulo": "Past Simple (Verb To Be)",
+    "subtitulo": "Was / Were",
+    "alerta": "O verbo 'To Be' no passado é a base para falar sobre o que você foi ou onde esteve.",
+    "observacao_cards": [
+      {
+        "italiano": "was",
+        "traducao": "fui / era / estava",
+        "genero": "Singular",
+        "motivo": "Usado para I, He, She, It"
+      },
+      {
+        "italiano": "were",
+        "traducao": "fomos / éramos / estávamos",
+        "genero": "Plural / You",
+        "motivo": "Usado para You, We, They"
+      }
+    ],
+    "tabela_visual": "| Pronoun | Past To Be |\n|---|---|\n| I / He / She / It | was |\n| You / We / They | were |",
+    "exemplos_prc": [
+      {
+        "oracao": "I was at home yesterday.",
+        "pergunta": "Por que usamos 'was'?",
+        "resposta": "Porque 'I' é a 1ª pessoa do singular.",
+        "conclusao": "I was = Eu estava."
+      },
+      {
+        "oracao": "They were very happy.",
+        "pergunta": "Por que usamos 'were'?",
+        "resposta": "Porque 'They' é plural.",
+        "conclusao": "They were = Eles estavam/eram."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You was late.",
+        "certo": "You were late.",
+        "explicacao": "O pronome 'You' sempre leva 'were', mesmo quando se refere a apenas uma pessoa."
+      }
+    ],
+    "coda": "Lembre-se: Singular = was (exceto 'you'). Plural e 'you' = were. Continue praticando!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma correta do verbo 'To Be' no passado para 'She'?",
+        "opcoes": [
+          "were",
+          "was",
+          "is",
+          "are"
+        ],
+        "resposta": 1,
+        "explicacao": "'She' é a 3ª pessoa do singular, então usamos 'was'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase: We ___ friends in school.",
+        "resposta": "were",
+        "explicacao": "'We' é plural, então usamos 'were'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "I were happy.",
+          "You was sad.",
+          "They were tired.",
+          "He were tall."
+        ],
+        "resposta": 2,
+        "explicacao": "'They' exige 'were'. As outras opções usam a forma errada do verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I ___ in London last year.",
+        "resposta": "was",
+        "explicacao": "'I' leva 'was' no passado."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como se diz 'Eles estavam em casa' em inglês?",
+        "opcoes": [
+          "They was at home",
+          "They were at home",
+          "They are at home",
+          "They at home were"
+        ],
+        "resposta": 1,
+        "explicacao": "'They were' é a forma correta no passado para 'Eles estavam'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase: It ___ a rainy day.",
+        "resposta": "was",
+        "explicacao": "'It' é 3ª pessoa do singular, usando 'was'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez2",
+    "num": "Lesson 2",
+    "titulo": "Past Simple (Regular Verbs)",
+    "subtitulo": "Regras do -ed e pronúncia",
+    "alerta": "Verbos regulares no passado recebem '-ed', mas preste atenção na pronúncia, que pode variar!",
+    "observacao_cards": [
+      {
+        "italiano": "play -> played",
+        "traducao": "jogar -> jogou",
+        "genero": "Regra Geral",
+        "motivo": "Adiciona-se -ed ao final do verbo"
+      },
+      {
+        "italiano": "dance -> danced",
+        "traducao": "dançar -> dançou",
+        "genero": "Terminados em 'e'",
+        "motivo": "Adiciona-se apenas -d"
+      },
+      {
+        "italiano": "study -> studied",
+        "traducao": "estudar -> estudou",
+        "genero": "Consoante + 'y'",
+        "motivo": "Troca o 'y' por 'ied'"
+      }
+    ],
+    "tabela_visual": "| Verb | Past Simple | Rule |\n|---|---|---|\n| work | worked | + ed |\n| like | liked | + d |\n| try | tried | y -> ied |\n| stop | stopped | CVC -> + p + ed |",
+    "exemplos_prc": [
+      {
+        "oracao": "I worked all day.",
+        "pergunta": "Qual o passado de 'work'?",
+        "resposta": "Worked.",
+        "conclusao": "Adicionamos '-ed' para formar o passado."
+      },
+      {
+        "oracao": "She tried to call you.",
+        "pergunta": "Por que 'try' virou 'tried'?",
+        "resposta": "Porque termina em consoante + y.",
+        "conclusao": "Removemos o 'y' e adicionamos 'ied'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I stoped the car.",
+        "certo": "I stopped the car.",
+        "explicacao": "Verbos com uma sílaba terminados em Consoante-Vogal-Consoante (CVC) dobram a última consoante antes do '-ed'."
+      }
+    ],
+    "coda": "A regra do '-ed' é simples, mas tem pequenas variações de escrita e pronúncia. Continue lendo os verbos em voz alta para se acostumar com os sons!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é o passado correto do verbo 'want'?",
+        "opcoes": [
+          "wanted",
+          "want",
+          "wantted",
+          "wants"
+        ],
+        "resposta": 0,
+        "explicacao": "A regra geral é adicionar '-ed', formando 'wanted'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o passado de 'cry': The baby ___ all night.",
+        "resposta": "cried",
+        "explicacao": "Consoante + 'y' vira 'ied'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma no passado do verbo 'love'?",
+        "opcoes": [
+          "loveed",
+          "loves",
+          "loved",
+          "loving"
+        ],
+        "resposta": 2,
+        "explicacao": "Como 'love' já termina em 'e', adicionamos apenas o 'd'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o passado de 'plan': They ___ a trip.",
+        "resposta": "planned",
+        "explicacao": "Sílaba tônica CVC (plan) exige que dobre a última consoante."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase usa um verbo regular no passado corretamente?",
+        "opcoes": [
+          "She workked late.",
+          "We playied football.",
+          "He listened to music.",
+          "They enjoied the party."
+        ],
+        "resposta": 2,
+        "explicacao": "'Listened' segue a regra geral, enquanto as outras palavras estão com a ortografia incorreta."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Escreva o passado de 'arrive': I ___ early.",
+        "resposta": "arrived",
+        "explicacao": "Adicione apenas 'd' para verbos terminados em 'e'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez3",
+    "num": "Lesson 3",
+    "titulo": "Past Simple (Irregular Verbs)",
+    "subtitulo": "Os verbos mais críticos (went, had, did)",
+    "alerta": "Alguns dos verbos mais usados em inglês não seguem a regra do '-ed'. Eles têm formas próprias!",
+    "observacao_cards": [
+      {
+        "italiano": "go -> went",
+        "traducao": "ir -> foi",
+        "genero": "Irregular",
+        "motivo": "Forma totalmente diferente"
+      },
+      {
+        "italiano": "have -> had",
+        "traducao": "ter -> tinha / teve",
+        "genero": "Irregular",
+        "motivo": "Muda a terminação"
+      },
+      {
+        "italiano": "do -> did",
+        "traducao": "fazer -> fez",
+        "genero": "Irregular",
+        "motivo": "Muda a vogal"
+      }
+    ],
+    "tabela_visual": "| Verb | Past Simple |\n|---|---|\n| go | went |\n| have | had |\n| do | did |\n| make | made |\n| say | said |",
+    "exemplos_prc": [
+      {
+        "oracao": "I went to the store.",
+        "pergunta": "Qual é o infinitivo de 'went'?",
+        "resposta": "Go.",
+        "conclusao": "Went = Fui/Foi."
+      },
+      {
+        "oracao": "She had a dog.",
+        "pergunta": "O que significa 'had'?",
+        "resposta": "Significa 'tinha' ou 'teve' (passado de have).",
+        "conclusao": "Had = Tinha/Teve."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I goed to school.",
+        "certo": "I went to school.",
+        "explicacao": "O verbo 'go' é irregular. Não recebe '-ed'."
+      }
+    ],
+    "coda": "A melhor forma de memorizar os verbos irregulares é pela prática constante e leitura. Não tente decorar listas inteiras de uma vez!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é o passado de 'make'?",
+        "opcoes": [
+          "maked",
+          "make",
+          "made",
+          "mad"
+        ],
+        "resposta": 2,
+        "explicacao": "'Make' é irregular e seu passado é 'made'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o passado de 'do': He ___ his homework.",
+        "resposta": "did",
+        "explicacao": "O passado irregular de 'do' é 'did'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está no passado de 'I have a car'?",
+        "opcoes": [
+          "I haved a car.",
+          "I had a car.",
+          "I has a car.",
+          "I did have car."
+        ],
+        "resposta": 1,
+        "explicacao": "O passado de 'have' é 'had'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o passado de 'go': They ___ to the beach.",
+        "resposta": "went",
+        "explicacao": "O passado de 'go' é 'went'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é o passado do verbo 'say'?",
+        "opcoes": [
+          "sayed",
+          "said",
+          "says",
+          "sied"
+        ],
+        "resposta": 1,
+        "explicacao": "'Say' é irregular e se transforma em 'said'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase com o passado de 'see': I ___ a great movie yesterday.",
+        "resposta": "saw",
+        "explicacao": "O passado irregular de 'see' é 'saw'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez4",
+    "num": "Lesson 4",
+    "titulo": "Past Simple (Negative & Questions)",
+    "subtitulo": "Uso do 'Did'",
+    "alerta": "Para perguntar ou negar algo no passado (exceto com verbo To Be), o 'did' é o seu maior aliado!",
+    "observacao_cards": [
+      {
+        "italiano": "did not / didn't",
+        "traducao": "não (no passado)",
+        "genero": "Auxiliar Negativo",
+        "motivo": "Tira o verbo principal do passado"
+      },
+      {
+        "italiano": "Did you...?",
+        "traducao": "Você...? (no passado)",
+        "genero": "Auxiliar Interrogativo",
+        "motivo": "Inicia perguntas de sim/não no passado"
+      }
+    ],
+    "tabela_visual": "| Affirmative | Negative | Question |\n|---|---|---|\n| I played | I didn't play | Did I play? |\n| She went | She didn't go | Did she go? |\n| They had | They didn't have | Did they have? |",
+    "exemplos_prc": [
+      {
+        "oracao": "I didn't go to the party.",
+        "pergunta": "Por que usamos 'go' e não 'went'?",
+        "resposta": "Porque o 'didn't' já indica o passado.",
+        "conclusao": "Auxiliar no passado = Verbo na forma base."
+      },
+      {
+        "oracao": "Did you like the movie?",
+        "pergunta": "Qual palavra indica que é uma pergunta no passado?",
+        "resposta": "O 'Did' no início da frase.",
+        "conclusao": "Did + Sujeito + Verbo base."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Did you went to the park?",
+        "certo": "Did you go to the park?",
+        "explicacao": "Nunca use o verbo no passado se houver 'did' ou 'didn't' na frase."
+      }
+    ],
+    "coda": "Sempre que usar 'did' ou 'didn't', deixe o verbo principal quietinho na sua forma original. Você vai dominar isso rapidinho!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como perguntamos 'Você estudou ontem?'",
+        "opcoes": [
+          "Did you studied yesterday?",
+          "Do you study yesterday?",
+          "Did you study yesterday?",
+          "Are you study yesterday?"
+        ],
+        "resposta": 2,
+        "explicacao": "Usamos 'Did' e o verbo volta ao infinitivo ('study')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase negativa: I ___ watch TV last night.",
+        "resposta": "didn't",
+        "explicacao": "Para negar no passado usamos 'didn't' (ou did not)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma negativa de 'She ate an apple'?",
+        "opcoes": [
+          "She didn't ate an apple.",
+          "She didn't eat an apple.",
+          "She don't eat an apple.",
+          "She wasn't eat an apple."
+        ],
+        "resposta": 1,
+        "explicacao": "Usamos 'didn't' + verbo no infinitivo ('eat')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: ___ they like the food?",
+        "resposta": "Did",
+        "explicacao": "O auxiliar para perguntas no passado simples é 'Did'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "O que há de errado na frase 'He didn't liked the book'?",
+        "opcoes": [
+          "Nada, a frase está correta.",
+          "'didn't' deveria ser 'don't'.",
+          "Falta o verbo 'To Be'.",
+          "O verbo 'liked' deveria ser 'like'."
+        ],
+        "resposta": 3,
+        "explicacao": "Quando usamos 'didn't', o verbo principal deve voltar para sua forma base ('like')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Reescreva a parte da ação na negativa: We went home -> We didn't ___ home.",
+        "resposta": "go",
+        "explicacao": "O 'didn't' atrai o tempo verbal; 'went' volta a ser 'go'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez5",
+    "num": "Lesson 5",
+    "titulo": "Past Continuous",
+    "subtitulo": "Ações longas interrompidas no passado",
+    "alerta": "O Past Continuous descreve uma ação que estava acontecendo quando, de repente, outra coisa ocorreu.",
+    "observacao_cards": [
+      {
+        "italiano": "was / were + -ing",
+        "traducao": "estava ... -ndo",
+        "genero": "Estrutura",
+        "motivo": "Forma o passado contínuo"
+      },
+      {
+        "italiano": "when",
+        "traducao": "quando",
+        "genero": "Conexão",
+        "motivo": "Geralmente introduz a ação curta que interrompeu a longa"
+      }
+    ],
+    "tabela_visual": "| Past Continuous (Ação longa) | Past Simple (Ação curta) |\n|---|---|\n| I was sleeping | when the phone rang. |\n| They were eating | when it started to rain. |",
+    "exemplos_prc": [
+      {
+        "oracao": "She was watching TV when I called.",
+        "pergunta": "Qual ação estava em progresso?",
+        "resposta": "Ela estava assistindo TV.",
+        "conclusao": "Ação em progresso = Past Continuous."
+      },
+      {
+        "oracao": "We were studying when the power went out.",
+        "pergunta": "Qual ação foi a interrupção?",
+        "resposta": "A energia acabou (went out).",
+        "conclusao": "Interrupção = Past Simple."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I sleeping when you called.",
+        "certo": "I was sleeping when you called.",
+        "explicacao": "Não se esqueça do verbo 'To Be' no passado (was/were) antes do verbo com '-ing'."
+      }
+    ],
+    "coda": "Use o Past Continuous para preparar o cenário da sua história ('Eu estava andando...'), e o Past Simple para a surpresa ('quando vi um cachorro!').",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a estrutura correta para o Past Continuous de 'He plays'?",
+        "opcoes": [
+          "He is playing",
+          "He was playing",
+          "He played",
+          "He were playing"
+        ],
+        "resposta": 1,
+        "explicacao": "Usa-se 'was' para 'He' acompanhado do verbo com '-ing'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo To Be: They ___ playing football when it rained.",
+        "resposta": "were",
+        "explicacao": "'They' requer o uso de 'were' no passado."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual ação abaixo interrompeu a outra na frase: 'I was reading a book when the phone rang'?",
+        "opcoes": [
+          "was reading",
+          "the phone rang",
+          "I was a book",
+          "Nenhuma das anteriores"
+        ],
+        "resposta": 1,
+        "explicacao": "'The phone rang' está no Past Simple e indica o evento que cortou o contínuo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete o verbo principal com -ing: I was ___ (cook) when you arrived.",
+        "resposta": "cooking",
+        "explicacao": "O passado contínuo exige o verbo principal com a terminação -ing."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "You was driving fast.",
+          "We were eat lunch.",
+          "She was running in the park.",
+          "I were talking to him."
+        ],
+        "resposta": 2,
+        "explicacao": "'She was running' combina perfeitamente o 'was' com o verbo no '-ing'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He was taking a shower ___ the phone rang.",
+        "resposta": "when",
+        "explicacao": "'When' (quando) é usado para conectar o evento de interrupção (telefone tocou)."
+      }
+    ]
+  }
+]

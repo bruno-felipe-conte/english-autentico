@@ -1,0 +1,537 @@
+[
+  {
+    "id": "a2-lez16",
+    "num": "Lesson 16",
+    "titulo": "Indefinite Pronouns",
+    "subtitulo": "Something, anything, nothing, everywhere",
+    "alerta": "Quando não sabemos exatamente QUEM ou O QUÊ estamos mencionando, usamos os pronomes indefinidos.",
+    "observacao_cards": [
+      {
+        "italiano": "some- (someone, something, somewhere)",
+        "traducao": "alguém, algo, algum lugar",
+        "genero": "Afirmativas",
+        "motivo": "Usado em frases afirmativas ou ofertas."
+      },
+      {
+        "italiano": "any- (anyone, anything, anywhere)",
+        "traducao": "qualquer um, qualquer coisa, qualquer lugar",
+        "genero": "Negativas/Interrogativas",
+        "motivo": "Comum em perguntas e com verbos na negativa."
+      },
+      {
+        "italiano": "no- (no one, nothing, nowhere)",
+        "traducao": "ninguém, nada, lugar nenhum",
+        "genero": "Afirmativas negativas",
+        "motivo": "Usado quando o verbo já está na forma afirmativa."
+      },
+      {
+        "italiano": "every- (everyone, everything, everywhere)",
+        "traducao": "todo mundo, tudo, todos os lugares",
+        "genero": "Totalidade",
+        "motivo": "Refere-se a todos os itens, pessoas ou lugares."
+      }
+    ],
+    "tabela_visual": "| Prefixo | Pessoas | Coisas | Lugares |\n|---|---|---|---|\n| Some- | someone / somebody | something | somewhere |\n| Any- | anyone / anybody | anything | anywhere |\n| No- | no one / nobody | nothing | nowhere |\n| Every- | everyone / everybody | everything | everywhere |",
+    "exemplos_prc": [
+      {
+        "oracao": "I need something to drink.",
+        "pergunta": "Por que usamos 'something' aqui?",
+        "resposta": "Porque é uma frase afirmativa.",
+        "conclusao": "Afirmativa = something."
+      },
+      {
+        "oracao": "She didn't buy anything.",
+        "pergunta": "Por que não usar 'nothing'?",
+        "resposta": "O verbo 'didn't' já é negativo. Com verbo negativo, usamos 'anything'.",
+        "conclusao": "Verbo negativo = anything."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I don't have nothing to do.",
+        "certo": "I don't have anything to do. (ou I have nothing to do.)",
+        "explicacao": "Em inglês, evitamos a dupla negativa. Use 'anything' com verbo negativo ou 'nothing' com verbo positivo."
+      }
+    ],
+    "coda": "Lembre-se: 'some' para focar no positivo, 'any' na dúvida ou negação, e 'no' para negação forte!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I am hungry, but there is ___ in the fridge.",
+        "opcoes": [
+          "anything",
+          "nothing",
+          "everything",
+          "something"
+        ],
+        "resposta": 1,
+        "explicacao": "'Nothing' com verbo positivo 'is' significa 'nada'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Is there ___ at home?",
+        "resposta": "anyone",
+        "explicacao": "Em perguntas, usamos comumente palavras com 'any-'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I want to go ___ warm for my vacation.",
+        "opcoes": [
+          "somewhere",
+          "anywhere",
+          "nowhere",
+          "everywhere"
+        ],
+        "resposta": 0,
+        "explicacao": "Frase afirmativa sobre um lugar não especificado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ___ is happy. (Todo mundo está feliz)",
+        "resposta": "Everyone",
+        "explicacao": "Everyone ou Everybody significa todo mundo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I can't find my keys ___!",
+        "opcoes": [
+          "somewhere",
+          "anywhere",
+          "nowhere",
+          "everywhere"
+        ],
+        "resposta": 1,
+        "explicacao": "A frase é negativa (can't), por isso usamos 'anywhere' para lugares."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: She has ___ to say. (Ela não tem nada a dizer - o verbo está na afirmativa)",
+        "resposta": "nothing",
+        "explicacao": "Como o verbo 'has' está na afirmativa, usamos 'nothing' para dar sentido negativo."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez17",
+    "num": "Lesson 17",
+    "titulo": "Gerunds (-ing) vs Infinitives",
+    "subtitulo": "Like doing, want to do",
+    "alerta": "Certos verbos exigem que o próximo verbo venha com '-ing' (gerúndio), enquanto outros exigem o 'to' (infinitivo).",
+    "observacao_cards": [
+      {
+        "italiano": "enjoy / finish / mind + -ing",
+        "traducao": "curtir / terminar / importar-se",
+        "genero": "Verbos de Gerúndio",
+        "motivo": "Esses verbos pedem o próximo verbo na forma -ing."
+      },
+      {
+        "italiano": "want / hope / decide + to",
+        "traducao": "querer / esperar / decidir",
+        "genero": "Verbos de Infinitivo",
+        "motivo": "Esses verbos pedem 'to + verbo base'."
+      },
+      {
+        "italiano": "like / love / hate",
+        "traducao": "gostar / amar / odiar",
+        "genero": "Flexíveis",
+        "motivo": "Podem ser seguidos por ambas as formas em muitas situações."
+      }
+    ],
+    "tabela_visual": "| + Gerund (-ing) | + Infinitive (to) |\n|---|---|\n| enjoy (reading) | want (to read) |\n| finish (eating) | need (to eat) |\n| mind (waiting) | decide (to wait) |\n| suggest (going) | hope (to go) |",
+    "exemplos_prc": [
+      {
+        "oracao": "I enjoy reading books.",
+        "pergunta": "Qual a forma do verbo após 'enjoy'?",
+        "resposta": "Forma com -ing (reading).",
+        "conclusao": "Enjoy + verbo-ing."
+      },
+      {
+        "oracao": "She wants to learn French.",
+        "pergunta": "Por que usamos 'to learn'?",
+        "resposta": "Porque 'want' pede infinitivo.",
+        "conclusao": "Want + to + verbo."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I want going home.",
+        "certo": "I want to go home.",
+        "explicacao": "O verbo 'want' sempre é seguido por 'to' + verbo."
+      },
+      {
+        "errado": "She finished to work.",
+        "certo": "She finished working.",
+        "explicacao": "O verbo 'finish' exige o verbo seguinte com -ing."
+      }
+    ],
+    "coda": "Aos poucos, as combinações mais comuns vão soar naturais para você. Não se preocupe em decorar tudo de uma vez!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I don't mind ___ early.",
+        "opcoes": [
+          "waking up",
+          "to wake up",
+          "wake up",
+          "waked up"
+        ],
+        "resposta": 0,
+        "explicacao": "O verbo 'mind' (importar-se) pede o próximo verbo em -ing."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He decided ___ (buy) a new car.",
+        "resposta": "to buy",
+        "explicacao": "Decide é seguido por 'to' + infinitivo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "They need ___ to the doctor.",
+        "opcoes": [
+          "going",
+          "go",
+          "to go",
+          "goes"
+        ],
+        "resposta": 2,
+        "explicacao": "'Need' exige 'to' + infinitivo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I enjoy ___ (listen) to music.",
+        "resposta": "listening",
+        "explicacao": "Enjoy é seguido por verbo com -ing."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She hopes ___ a good job soon.",
+        "opcoes": [
+          "finding",
+          "to find",
+          "find",
+          "finds"
+        ],
+        "resposta": 1,
+        "explicacao": "Hope pede o uso de 'to' + verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Have you finished ___ (eat)?",
+        "resposta": "eating",
+        "explicacao": "Finish sempre é seguido pelo gerúndio (-ing)."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez18",
+    "num": "Lesson 18",
+    "titulo": "Too and Enough",
+    "subtitulo": "Demais vs Suficiente",
+    "alerta": "Quando queremos falar sobre a intensidade de algo, usamos 'too' (em excesso) ou 'enough' (na medida certa).",
+    "observacao_cards": [
+      {
+        "italiano": "Too + Adjective",
+        "traducao": "Demais / Muito",
+        "genero": "Excesso",
+        "motivo": "Indica mais do que o necessário, geralmente com sentido negativo."
+      },
+      {
+        "italiano": "Adjective + Enough",
+        "traducao": "Suficientemente (adjetivo)",
+        "genero": "Suficiência",
+        "motivo": "Na quantidade certa. Note que vem DEPOIS do adjetivo."
+      },
+      {
+        "italiano": "Enough + Noun",
+        "traducao": "Suficiente (com substantivos)",
+        "genero": "Suficiência",
+        "motivo": "Vem ANTES de substantivos."
+      }
+    ],
+    "tabela_visual": "| Estrutura | Exemplo | Tradução |\n|---|---|---|\n| Too + Adjetivo | Too hot | Quente demais |\n| Adjetivo + Enough | Warm enough | Quente o suficiente |\n| Enough + Substantivo | Enough time | Tempo suficiente |",
+    "exemplos_prc": [
+      {
+        "oracao": "This shirt is too small for me.",
+        "pergunta": "A camisa serve bem?",
+        "resposta": "Não, ela é pequena em excesso.",
+        "conclusao": "Too = além do ideal."
+      },
+      {
+        "oracao": "He isn't tall enough to play basketball.",
+        "pergunta": "Ele tem a altura necessária?",
+        "resposta": "Não, falta altura.",
+        "conclusao": "Not enough = menos do que o ideal."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "This coffee is enough hot.",
+        "certo": "This coffee is hot enough.",
+        "explicacao": "A palavra 'enough' sempre deve vir APÓS o adjetivo, e não antes."
+      }
+    ],
+    "coda": "Lembre-se: 'Too' vem antes do adjetivo (too big) e 'Enough' vem depois (big enough).",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "The music is ___ loud. I can't study.",
+        "opcoes": [
+          "enough",
+          "too",
+          "much",
+          "many"
+        ],
+        "resposta": 1,
+        "explicacao": "'Too' antes de 'loud' indica que o volume está alto demais (em excesso)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Are you warm ___ in that jacket?",
+        "resposta": "enough",
+        "explicacao": "Enough vem após o adjetivo 'warm'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I don't have ___ money to buy this car.",
+        "opcoes": [
+          "enough",
+          "too",
+          "very",
+          "so"
+        ],
+        "resposta": 0,
+        "explicacao": "'Enough' vem antes de substantivos como 'money'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The box is ___ heavy for me to lift. (pesada demais)",
+        "resposta": "too",
+        "explicacao": "Usamos 'too' antes do adjetivo para mostrar excesso."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She is old ___ to drive.",
+        "opcoes": [
+          "too",
+          "enough",
+          "very",
+          "much"
+        ],
+        "resposta": 1,
+        "explicacao": "'Enough' sempre acompanha o adjetivo após ele (old enough)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: We don't have ___ eggs to make a cake. (ovos suficientes)",
+        "resposta": "enough",
+        "explicacao": "Como 'eggs' é substantivo, 'enough' vem antes."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez19",
+    "num": "Lesson 19",
+    "titulo": "So and Neither",
+    "subtitulo": "'Eu também' e 'Nem eu'",
+    "alerta": "Ao invés de repetir uma frase inteira para concordar com alguém, podemos ser mais diretos!",
+    "observacao_cards": [
+      {
+        "italiano": "So + Auxiliar + Sujeito",
+        "traducao": "Eu também / fulano também",
+        "genero": "Concordância Afirmativa",
+        "motivo": "Para concordar com frases afirmativas."
+      },
+      {
+        "italiano": "Neither + Auxiliar + Sujeito",
+        "traducao": "Nem eu / nem fulano",
+        "genero": "Concordância Negativa",
+        "motivo": "Para concordar com frases negativas."
+      },
+      {
+        "italiano": "Auxiliar (am/do/can/did)",
+        "traducao": "Auxiliar de tempo verbal",
+        "genero": "Gramática",
+        "motivo": "Deve combinar com o tempo verbal da frase original."
+      }
+    ],
+    "tabela_visual": "| Frase Original | Concordância Curta | Tradução |\n|---|---|---|\n| I like pizza. | So do I. | Eu também. |\n| She is tired. | So am I. | Eu também (estou). |\n| I don't smoke. | Neither do I. | Nem eu. |\n| I can't swim. | Neither can I. | Nem eu (consigo). |",
+    "exemplos_prc": [
+      {
+        "oracao": "- I am happy. - So am I.",
+        "pergunta": "Qual verbo usamos na resposta?",
+        "resposta": "O verbo 'to be' (am), pois estava na frase original.",
+        "conclusao": "A resposta espelha o auxiliar."
+      },
+      {
+        "oracao": "- I don't eat meat. - Neither do I.",
+        "pergunta": "Por que 'Neither'?",
+        "resposta": "Porque a frase original é negativa (don't).",
+        "conclusao": "Negativa = Neither."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Neither don't I.",
+        "certo": "Neither do I.",
+        "explicacao": "A palavra 'neither' já tem sentido negativo, então o auxiliar (do, can, am) fica na forma afirmativa."
+      }
+    ],
+    "coda": "Para soar muito mais natural em inglês, aprender a rebater usando 'So do I' e 'Neither do I' é sensacional!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "- I love movies. - ___ do I.",
+        "opcoes": [
+          "So",
+          "Neither",
+          "Too",
+          "Also"
+        ],
+        "resposta": 0,
+        "explicacao": "Concordando com frase afirmativa, usamos 'So'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: - I can't speak Japanese. - ___ can I.",
+        "resposta": "Neither",
+        "explicacao": "Para concordar com a negativa (can't), usamos 'Neither'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "- They are students. - So ___ we.",
+        "opcoes": [
+          "do",
+          "are",
+          "have",
+          "can"
+        ],
+        "resposta": 1,
+        "explicacao": "A frase usou o verbo 'to be' (are), então a concordância acompanha."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: - I didn't go to the party. - Neither ___ I.",
+        "resposta": "did",
+        "explicacao": "O verbo da frase original está no passado simples (didn't), então o auxiliar correto é 'did'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "- I play tennis. - ___ does my sister.",
+        "opcoes": [
+          "So",
+          "Neither",
+          "Too",
+          "Either"
+        ],
+        "resposta": 0,
+        "explicacao": "Como a frase é afirmativa, usamos 'So'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: - I am not hungry. - Neither ___ I.",
+        "resposta": "am",
+        "explicacao": "A frase usa 'am not' (to be negativo). A concordância com Neither é 'am'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez20",
+    "num": "Lesson 20",
+    "titulo": "First Conditional",
+    "subtitulo": "Realidade no futuro (If + Present, Will + Verb)",
+    "alerta": "Quando falamos de possibilidades reais no futuro, combinamos o 'If' (se) com o verbo 'Will'.",
+    "observacao_cards": [
+      {
+        "italiano": "If + Simple Present",
+        "traducao": "Se + Presente Simples",
+        "genero": "A Condição",
+        "motivo": "Descreve a situação que precisa acontecer."
+      },
+      {
+        "italiano": "Will + Verbo",
+        "traducao": "Acontecerá",
+        "genero": "O Resultado",
+        "motivo": "O que acontecerá no futuro se a condição for cumprida."
+      }
+    ],
+    "tabela_visual": "| Condição (If + Present) | Resultado (Will) |\n|---|---|\n| If it rains, | I will stay at home. |\n| If you study, | you will pass the exam. |\n| If she calls me, | I will answer. |",
+    "exemplos_prc": [
+      {
+        "oracao": "If I have money, I will buy a car.",
+        "pergunta": "Quando vou comprar o carro?",
+        "resposta": "No futuro, mas apenas SE eu tiver dinheiro agora.",
+        "conclusao": "Condição = Presente, Resultado = Futuro (Will)."
+      },
+      {
+        "oracao": "We won't go out if it rains.",
+        "pergunta": "A ordem das frases altera o sentido?",
+        "resposta": "Não. Podemos colocar o resultado primeiro. A vírgula só é usada quando 'If' vem no início.",
+        "conclusao": "Resultado primeiro = sem vírgula."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "If it will rain, I will stay home.",
+        "certo": "If it rains, I will stay home.",
+        "explicacao": "Nunca use 'will' junto com a frase do 'if' (na parte da condição)."
+      }
+    ],
+    "coda": "A primeira condicional é a ponte perfeita entre suas ações do presente e seus resultados no futuro!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "If you ___, you will be late.",
+        "opcoes": [
+          "will wait",
+          "wait",
+          "waits",
+          "waiting"
+        ],
+        "resposta": 1,
+        "explicacao": "A parte da condição com 'If' deve estar no presente simples."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If she studies hard, she ___ (pass) the test.",
+        "resposta": "will pass",
+        "explicacao": "O resultado (a segunda parte da frase) exige o uso do futuro com 'will'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I ___ go to the park if it rains.",
+        "opcoes": [
+          "won't",
+          "don't",
+          "didn't",
+          "am not"
+        ],
+        "resposta": 0,
+        "explicacao": "A negativa do futuro (resultado) é won't (will not)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If we leave now, we ___ (catch) the bus.",
+        "resposta": "will catch",
+        "explicacao": "Se cumprirmos a condição agora, o resultado futuro é certo, por isso usamos 'will catch'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "What will you do if you ___ your keys?",
+        "opcoes": [
+          "lose",
+          "will lose",
+          "loses",
+          "lost"
+        ],
+        "resposta": 0,
+        "explicacao": "Na frase com 'if', usamos o presente simples (lose com o sujeito you)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: If he ___ (not come), I will be very sad.",
+        "resposta": "doesn't come",
+        "explicacao": "Presente simples negativo para 'he' é 'doesn't' seguido do verbo."
+      }
+    ]
+  }
+]

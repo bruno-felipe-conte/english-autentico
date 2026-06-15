@@ -1,0 +1,437 @@
+[
+  {
+    "id": "a2-lez6",
+    "num": "Lesson 6",
+    "titulo": "Past Simple vs Past Continuous",
+    "subtitulo": "Quando usar cada um",
+    "alerta": "Usamos o Past Continuous para uma ação que estava em andamento no passado, e o Past Simple para uma ação pontual, geralmente que a interrompeu.",
+    "observacao_cards": [
+      {
+        "italiano": "I was studying",
+        "traducao": "Eu estava estudando",
+        "genero": "Ação longa",
+        "motivo": "Past Continuous: sujeito + was/were + verbo com -ing"
+      },
+      {
+        "italiano": "when he arrived",
+        "traducao": "quando ele chegou",
+        "genero": "Ação curta",
+        "motivo": "Past Simple: verbo no passado simples"
+      }
+    ],
+    "tabela_visual": "| Conector | Seguido normalmente por | Exemplo |\n|---|---|---|\n| When (Quando) | Past Simple | ... when the phone rang. |\n| While (Enquanto) | Past Continuous | While I was sleeping... |",
+    "exemplos_prc": [
+      {
+        "oracao": "She was cooking dinner when we arrived.",
+        "pergunta": "Qual ação começou primeiro?",
+        "resposta": "Fazer o jantar (She was cooking).",
+        "conclusao": "A ação mais longa é o Past Continuous; a ação que cruza ou interrompe é o Past Simple."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I walked home when it started to rain.",
+        "certo": "I was walking home when it started to rain.",
+        "explicacao": "A caminhada já estava acontecendo quando a chuva começou, então exige o Past Continuous."
+      }
+    ],
+    "coda": "Sempre imagine a linha do tempo: a ação demorada fica com o 'ing', e a rápida ou surpresa fica no passado simples!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a frase: I ___ a book when my brother called.",
+        "opcoes": ["read", "was reading", "am reading", "reads"],
+        "resposta": 1,
+        "explicacao": "A leitura estava em andamento quando houve a interrupção."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: They were playing tennis when it ___ (start) to rain.",
+        "resposta": "started",
+        "explicacao": "A chuva é a ação rápida que interrompe a partida, então usamos Past Simple."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual alternativa está correta?",
+        "opcoes": [
+          "While I was watching TV, the lights went out.",
+          "While I watched TV, the lights were going out.",
+          "When I was watching TV, the lights were going out.",
+          "While I watch TV, the lights go out."
+        ],
+        "resposta": 0,
+        "explicacao": "'While' é seguido de Past Continuous e a interrupção vem no Past Simple."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual o conector correto para esta frase: ___ we were having lunch, someone knocked on the door.",
+        "resposta": "While",
+        "explicacao": "Usamos 'While' (Enquanto) para acompanhar a ação contínua (were having)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: What ___ doing when the earthquake happened?",
+        "opcoes": ["did you", "was you", "were you", "are you"],
+        "resposta": 2,
+        "explicacao": "A pergunta no Past Continuous com 'you' exige o auxiliar 'were'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He was driving fast when he ___ (see) the police.",
+        "resposta": "saw",
+        "explicacao": "O avistamento foi pontual, portanto usamos 'saw' (passado de see)."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez7",
+    "num": "Lesson 7",
+    "titulo": "Future with 'Going to'",
+    "subtitulo": "Planos e intenções fixas",
+    "alerta": "Utilizamos 'going to' para expressar algo que já planejamos fazer ou quando temos certeza de que vai acontecer baseados em evidências do presente.",
+    "observacao_cards": [
+      {
+        "italiano": "I am going to travel",
+        "traducao": "Eu vou viajar",
+        "genero": "Plano",
+        "motivo": "Ação já decidida antes do momento da fala"
+      },
+      {
+        "italiano": "It is going to rain",
+        "traducao": "Vai chover",
+        "genero": "Evidência",
+        "motivo": "Previsão baseada em sinais visíveis agora"
+      }
+    ],
+    "tabela_visual": "| Sujeito | Verb To Be | Going to | Verbo Base |\n|---|---|---|---|\n| I | am | going to | work |\n| He/She/It | is | going to | play |\n| You/We/They | are | going to | travel |",
+    "exemplos_prc": [
+      {
+        "oracao": "We are going to buy a new car next year.",
+        "pergunta": "Foi uma decisão espontânea?",
+        "resposta": "Não, é um plano pré-determinado.",
+        "conclusao": "Para intenções organizadas previamente, use sempre 'going to'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I going to study tonight.",
+        "certo": "I am going to study tonight.",
+        "explicacao": "Nunca esqueça o verbo 'to be' (am/is/are) antes de 'going to'."
+      }
+    ],
+    "coda": "Se tem intenção ou evidência clara no ar, o 'going to' é a escolha certa para o futuro!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizer 'Ela vai visitar a avó amanhã'?",
+        "opcoes": [
+          "She going to visit her grandma tomorrow.",
+          "She is going to visit her grandma tomorrow.",
+          "She are going to visit her grandma tomorrow.",
+          "She is going visit her grandma tomorrow."
+        ],
+        "resposta": 1,
+        "explicacao": "A estrutura exige sujeito + is + going to + verbo base."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a forma correta do verbo To Be: They ___ going to start a business.",
+        "resposta": "are",
+        "explicacao": "Para o pronome 'They' no presente, usamos 'are'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: Look at the dark sky! It ___ rain.",
+        "opcoes": ["goes to", "going to", "is going to", "are going to"],
+        "resposta": 2,
+        "explicacao": "Trata-se de uma evidência no presente para 'It', logo 'is going to'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual a forma contraída de 'going to' muito comum em contextos informais? (5 letras)",
+        "resposta": "gonna",
+        "explicacao": "'Gonna' é amplamente usado na linguagem falada para substituir 'going to'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como formar uma pergunta com 'going to' para 'You'?",
+        "opcoes": [
+          "Do you are going to eat?",
+          "Are you going to eat?",
+          "You are going to eat?",
+          "Going to you eat?"
+        ],
+        "resposta": 1,
+        "explicacao": "Em perguntas, o verbo 'to be' passa para antes do sujeito: Are + you + going to..."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I bought the tickets. I am ___ to fly to London next week.",
+        "resposta": "going",
+        "explicacao": "Como as passagens já foram compradas, indica plano confirmado (am going to)."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez8",
+    "num": "Lesson 8",
+    "titulo": "Future with 'Will'",
+    "subtitulo": "Decisões instantâneas, previsões e promessas",
+    "alerta": "Enquanto 'going to' lida com planos, 'will' é o futuro improvisado! Use para decisões na hora da fala, promessas ou previsões genéricas.",
+    "observacao_cards": [
+      {
+        "italiano": "I will help you",
+        "traducao": "Eu vou te ajudar",
+        "genero": "Decisão instantânea",
+        "motivo": "Decidido no momento ou ofertando ajuda"
+      },
+      {
+        "italiano": "I think it will rain",
+        "traducao": "Eu acho que vai chover",
+        "genero": "Previsão",
+        "motivo": "Opinião pessoal sem forte evidência"
+      }
+    ],
+    "tabela_visual": "| Uso | Estrutura | Exemplo |\n|---|---|---|\n| Afirmativa | Sujeito + will + verbo | He will win. |\n| Negativa | Sujeito + will not (won't) | He won't win. |\n| Interrogativa | Will + sujeito + verbo | Will he win? |",
+    "exemplos_prc": [
+      {
+        "oracao": "I'm thirsty. I will get a glass of water.",
+        "pergunta": "Por que usar 'will' e não 'going to'?",
+        "resposta": "Porque a decisão de beber água foi feita naquele instante.",
+        "conclusao": "Ações decididas impulsivamente pedem o uso do 'will'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I will to go home.",
+        "certo": "I will go home.",
+        "explicacao": "O verbo principal após 'will' nunca leva o 'to'. É sempre a forma base direta."
+      }
+    ],
+    "coda": "As palavras mágicas como 'I think', 'maybe', e 'I promise' costumam ser grandes amigas do 'will'.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Você vê alguém com caixas pesadas e decide ajudar na hora. O que você diz?",
+        "opcoes": [
+          "I am going to help you.",
+          "I will help you.",
+          "I helping you.",
+          "I will to help you."
+        ],
+        "resposta": 1,
+        "explicacao": "É uma oferta de ajuda (decisão) tomada no instante da fala."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual é a contração negativa de 'will not'?",
+        "resposta": "won't",
+        "explicacao": "A forma curta 'won't' é muito comum na fala e na escrita do dia a dia."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a promessa: I promise I ___ tell anyone your secret.",
+        "opcoes": ["don't will", "not will", "won't", "am not going to"],
+        "resposta": 2,
+        "explicacao": "Para promessas negativas usamos 'won't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual a palavra auxiliar nesta pergunta: ___ you marry me?",
+        "resposta": "Will",
+        "explicacao": "Pedidos, ofertas ou propostas para o futuro usam 'Will'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Em qual destas frases se usa 'will' baseado numa previsão com 'eu acho'?",
+        "opcoes": [
+          "I think cars will fly in the future.",
+          "I am going to fly a car tomorrow.",
+          "I will flying a car.",
+          "Cars are going to fly yesterday."
+        ],
+        "resposta": 0,
+        "explicacao": "A frase mostra uma crença pessoal (I think), característico do 'will'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: A: 'The phone is ringing!' B: 'I ___ answer it!'",
+        "resposta": "will",
+        "explicacao": "Decisão instantânea perante a situação do telefone tocando."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez9",
+    "num": "Lesson 9",
+    "titulo": "Comparatives",
+    "subtitulo": "Adjetivos curtos e longos",
+    "alerta": "Para comparar duas coisas usamos a forma comparativa. O segredo é contar as sílabas do adjetivo: curtos ganham '-er' no final, e os longos recebem 'more' na frente.",
+    "observacao_cards": [
+      {
+        "italiano": "taller than",
+        "traducao": "mais alto que",
+        "genero": "Adjetivo curto",
+        "motivo": "tall + er"
+      },
+      {
+        "italiano": "more beautiful than",
+        "traducao": "mais bonito(a) que",
+        "genero": "Adjetivo longo",
+        "motivo": "more + beautiful"
+      }
+    ],
+    "tabela_visual": "| Tipo | Regra | Exemplo |\n|---|---|---|\n| Curto (1 sílaba) | Adjetivo + -er | fast -> faster |\n| Terminado em -y | Tira o 'y' e põe -ier | happy -> happier |\n| Longo (2+ sílabas)| more + Adjetivo | modern -> more modern |",
+    "exemplos_prc": [
+      {
+        "oracao": "A car is faster than a bicycle.",
+        "pergunta": "Qual é a palavra usada para dizer 'do que' nas comparações?",
+        "resposta": "Than.",
+        "conclusao": "Sempre conectamos os dois elementos comparados usando 'than'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He is more tall than me.",
+        "certo": "He is taller than me.",
+        "explicacao": "Adjetivos curtos não podem ser acompanhados de 'more', eles mudam sua própria terminação."
+      }
+    ],
+    "coda": "Atenção às exceções clássicas: 'good' vira 'better' (melhor) e 'bad' vira 'worse' (pior)!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma comparativa correta de 'big'?",
+        "opcoes": ["more big", "biger", "bigger", "biggest"],
+        "resposta": 2,
+        "explicacao": "Para curtos terminados em consoante-vogal-consoante, dobramos a última letra: big -> bigger."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o comparativo de 'easy': English is ___ than Math.",
+        "resposta": "easier",
+        "explicacao": "Adjetivos terminados em '-y' mudam para '-ier'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizer 'Este filme é mais interessante do que o livro'?",
+        "opcoes": [
+          "This movie is interestinger than the book.",
+          "This movie is more interesting than the book.",
+          "This movie is more interesting that the book.",
+          "This movie is most interesting than the book."
+        ],
+        "resposta": 1,
+        "explicacao": "'Interesting' é longo, então leva 'more'. A conexão é feita com 'than'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual é o comparativo irregular de 'good'?",
+        "resposta": "better",
+        "explicacao": "Não dizemos 'gooder', a forma correta e irregular é 'better'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual alternativa está gramaticalmente correta?",
+        "opcoes": [
+          "My brother is older than me.",
+          "My brother is more old than me.",
+          "My brother is older then me.",
+          "My brother is old than me."
+        ],
+        "resposta": 0,
+        "explicacao": "'Old' é curto (older), e a conjunção de comparação é 'than'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a palavra faltante: Your house is larger ___ my house.",
+        "resposta": "than",
+        "explicacao": "A palavra 'than' é obrigatória após o comparativo."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez10",
+    "num": "Lesson 10",
+    "titulo": "Superlatives",
+    "subtitulo": "The tallest, the most beautiful",
+    "alerta": "Com o superlativo não comparamos dois, mas exaltamos um como o maior de todos! Adicionamos '-est' aos adjetivos curtos e 'the most' aos longos.",
+    "observacao_cards": [
+      {
+        "italiano": "the tallest",
+        "traducao": "o mais alto",
+        "genero": "Adjetivo curto",
+        "motivo": "the + tall + est"
+      },
+      {
+        "italiano": "the most expensive",
+        "traducao": "o mais caro",
+        "genero": "Adjetivo longo",
+        "motivo": "the most + expensive"
+      }
+    ],
+    "tabela_visual": "| Tipo | Regra | Exemplo |\n|---|---|---|\n| Curto | the + Adjetivo + -est | the fastest |\n| Em -y | the + tira 'y' põe -iest | the happiest |\n| Longo | the most + Adjetivo | the most modern |",
+    "exemplos_prc": [
+      {
+        "oracao": "Mount Everest is the highest mountain in the world.",
+        "pergunta": "Tem comparação com outra montanha específica?",
+        "resposta": "Não, ele está no topo de todas.",
+        "conclusao": "O superlativo isola o objeto do resto do grupo como o extremo."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He is the most fast runner.",
+        "certo": "He is the fastest runner.",
+        "explicacao": "Não use 'most' para adjetivos curtos. Adicione '-est'."
+      }
+    ],
+    "coda": "Não se esqueça do 'the' antes dos superlativos. É ele quem dá o destaque definitivo (O melhor, A maior)!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma superlativa correta de 'small'?",
+        "opcoes": ["the most small", "the smaller", "the smallest", "smallest"],
+        "resposta": 2,
+        "explicacao": "'Small' é curto, então aplicamos 'the + -est'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o superlativo irregular de 'good': This is ___ pizza in town!",
+        "resposta": "the best",
+        "explicacao": "Para 'good', a forma de superlativo é 'the best'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizer 'Este é o livro mais chato'?",
+        "opcoes": [
+          "This is the boringest book.",
+          "This is the most boring book.",
+          "This is most boring book.",
+          "This is the more boring book."
+        ],
+        "resposta": 1,
+        "explicacao": "'Boring' é adjetivo longo, portanto pede 'the most'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual o superlativo irregular de 'bad'? (O pior)",
+        "resposta": "the worst",
+        "explicacao": "'Bad' transforma-se em 'the worst' como seu extremo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: Russia is ___ country in the world.",
+        "opcoes": ["the larger", "the largest", "largest", "most large"],
+        "resposta": 1,
+        "explicacao": "Para o adjetivo curto 'large', adicionamos apenas '-st' já que termina em 'e'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual a terminação para 'heavy' no superlativo? (Apenas a palavra completa, sem 'the')",
+        "resposta": "heaviest",
+        "explicacao": "Terminados em 'y' mudam para 'iest' (the heaviest)."
+      }
+    ]
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "a2-lez11",
+    "num": "Lesson 11",
+    "titulo": "Modal Verbs (Advice & Obligation)",
+    "subtitulo": "Should, Must, Have to",
+    "alerta": "Use 'should' para conselhos, 'must' para obrigações fortes (ou regras) e 'have to' para necessidades externas.",
+    "observacao_cards": [
+      {
+        "italiano": "Should",
+        "traducao": "Deveria",
+        "genero": "Advice",
+        "motivo": "Para dar um conselho ou sugerir o que é certo."
+      },
+      {
+        "italiano": "Must",
+        "traducao": "Deve / Tem que",
+        "genero": "Strong Obligation",
+        "motivo": "Para regras, avisos fortes ou obrigações impostas por quem fala."
+      },
+      {
+        "italiano": "Have to",
+        "traducao": "Ter que",
+        "genero": "External Obligation",
+        "motivo": "Para obrigações vindas de fora (leis, chefes, horários)."
+      }
+    ],
+    "tabela_visual": "| Modal | Uso principal | Exemplo |\n|---|---|---|\n| Should | Conselho | You should rest. |\n| Must | Obrigação forte | I must go now. |\n| Have to | Necessidade / Rotina | I have to work. |",
+    "exemplos_prc": [
+      {
+        "oracao": "You should drink more water.",
+        "pergunta": "Isso é uma ordem?",
+        "resposta": "Não, é apenas um conselho.",
+        "conclusao": "Should = conselho amigável."
+      },
+      {
+        "oracao": "We have to wear a uniform at school.",
+        "pergunta": "De onde vem essa obrigação?",
+        "resposta": "Da escola (regra externa).",
+        "conclusao": "Have to = regra externa."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You must to go.",
+        "certo": "You must go.",
+        "explicacao": "Modais como 'must' e 'should' nunca são seguidos por 'to'."
+      },
+      {
+        "errado": "He have to leave.",
+        "certo": "He has to leave.",
+        "explicacao": "'Have to' muda para 'has to' na 3ª pessoa do singular (he, she, it)."
+      }
+    ],
+    "coda": "Lembre-se: não use 'to' depois de 'should' ou 'must'!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual verbo expressa um conselho?",
+        "opcoes": ["must", "have to", "should", "has to"],
+        "resposta": 2,
+        "explicacao": "'Should' é o verbo modal mais comum para dar conselhos."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I am sick. The doctor said I ___ stay in bed.",
+        "resposta": "should",
+        "explicacao": "O médico deu um conselho, então usamos 'should'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma correta?",
+        "opcoes": ["You should to study.", "You should studying.", "You should study.", "You to should study."],
+        "resposta": 2,
+        "explicacao": "Depois de 'should', usamos o verbo na forma base sem 'to'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo correto: She ___ to wear glasses for reading.",
+        "resposta": "has",
+        "explicacao": "Como é 'She' e temos o 'to' depois, usamos 'has' formando 'has to'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: You ___ wear a seatbelt in the car. It's the law.",
+        "opcoes": ["must", "should", "has to", "have"],
+        "resposta": 0,
+        "explicacao": "'Must' indica uma obrigação forte ou lei. ('Have to' também estaria certo, mas 'must' é a opção disponível adequada)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: We don't ___ to work on Sundays.",
+        "resposta": "have",
+        "explicacao": "A negativa de 'have to' é 'don't have to'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez12",
+    "num": "Lesson 12",
+    "titulo": "Infinitive of Purpose",
+    "subtitulo": "Respondendo 'Why?' com 'To do something'",
+    "alerta": "Para explicar o propósito ou o motivo de uma ação, usamos frequentemente o infinitivo com 'to'.",
+    "observacao_cards": [
+      {
+        "italiano": "To + Verb",
+        "traducao": "Para + Verbo",
+        "genero": "Grammar Structure",
+        "motivo": "Substitui expressões mais longas como 'in order to' na fala diária."
+      },
+      {
+        "italiano": "Why...?",
+        "traducao": "Por que...?",
+        "genero": "Question",
+        "motivo": "Pergunta comum que é respondida com o infinitivo de propósito."
+      }
+    ],
+    "tabela_visual": "| Ação (Action) | Propósito (Purpose) |\n|---|---|\n| I went to the store | **to buy** milk. |\n| She is studying | **to pass** the exam. |\n| He called me | **to ask** a question. |",
+    "exemplos_prc": [
+      {
+        "oracao": "I went online to check my emails.",
+        "pergunta": "Por que a pessoa entrou online?",
+        "resposta": "Para checar os e-mails.",
+        "conclusao": "Ação + to + verbo."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I went to the supermarket for buy food.",
+        "certo": "I went to the supermarket to buy food.",
+        "explicacao": "Não use 'for + verbo' para propósito geral. Use 'to + verbo'."
+      },
+      {
+        "errado": "I called him for to say hello.",
+        "certo": "I called him to say hello.",
+        "explicacao": "Nunca junte 'for' e 'to'. O correto é apenas 'to'."
+      }
+    ],
+    "coda": "Para responder 'para quê?', lembre-se: apenas 'to' e o verbo. Simples assim!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a frase correta?",
+        "opcoes": ["I study English for get a job.", "I study English to getting a job.", "I study English to get a job.", "I study English for to get a job."],
+        "resposta": 2,
+        "explicacao": "Usamos 'to + verbo base' para expressar propósito."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I am saving money ___ buy a new car.",
+        "resposta": "to",
+        "explicacao": "A preposição 'to' indica o objetivo de guardar dinheiro."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "I need some flour ___ a cake.",
+        "opcoes": ["to make", "for make", "to making", "for making"],
+        "resposta": 0,
+        "explicacao": "'to make' é a forma correta do infinitivo de propósito."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a resposta: Why did you call? I called ___ talk to you.",
+        "resposta": "to",
+        "explicacao": "A pergunta 'Why' é respondida com o infinitivo 'to'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She went to the bakery ___ some bread.",
+        "opcoes": ["to buy", "for buy", "buying", "buy"],
+        "resposta": 0,
+        "explicacao": "'To buy' indica o motivo da ida à padaria."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He turned on the TV ___ watch the news.",
+        "resposta": "to",
+        "explicacao": "O motivo de ligar a TV foi 'para assistir' (to watch)."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez13",
+    "num": "Lesson 13",
+    "titulo": "Present Perfect (Intro)",
+    "subtitulo": "Experiências de vida (Have you ever...?)",
+    "alerta": "O Present Perfect (have/has + Particípio) conecta passado e presente. Ótimo para falar de experiências sem dizer *quando* aconteceram.",
+    "observacao_cards": [
+      {
+        "italiano": "Have / Has",
+        "traducao": "Ter (como auxiliar)",
+        "genero": "Auxiliary Verb",
+        "motivo": "Essencial para formar o Present Perfect. Não se traduz literalmente na maioria das vezes."
+      },
+      {
+        "italiano": "Past Participle",
+        "traducao": "Particípio Passado",
+        "genero": "Verb Form",
+        "motivo": "Regular: termina em -ed (played). Irregular: forma própria (seen, gone, eaten)."
+      },
+      {
+        "italiano": "Ever",
+        "traducao": "Já / Alguma vez",
+        "genero": "Adverb",
+        "motivo": "Usado em perguntas para saber se uma experiência já ocorreu em toda a vida."
+      }
+    ],
+    "tabela_visual": "| Sujeito | Auxiliar | Particípio | Complemento |\n|---|---|---|---|\n| I / You / We / They | **have** | **visited** | Paris. |\n| He / She / It | **has** | **eaten** | sushi. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Have you ever seen a ghost?",
+        "pergunta": "A pessoa quer saber quando isso aconteceu?",
+        "resposta": "Não, quer saber se isso já aconteceu na vida.",
+        "conclusao": "Usa-se o Present Perfect para experiências de vida."
+      },
+      {
+        "oracao": "She has been to London.",
+        "pergunta": "A experiência importa mais que a data?",
+        "resposta": "Sim, o importante é que ela já esteve lá.",
+        "conclusao": "Sem data específica = Present Perfect."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I have visited Rome in 2019.",
+        "certo": "I visited Rome in 2019.",
+        "explicacao": "Se você menciona o ano exato ou momento passado, use Past Simple, não Present Perfect."
+      },
+      {
+        "errado": "He have seen that movie.",
+        "certo": "He has seen that movie.",
+        "explicacao": "Para 'He', 'She', 'It', use o auxiliar 'has'."
+      }
+    ],
+    "coda": "Não se apegue à tradução! Entenda o conceito: aconteceu no passado, mas afeta ou é relevante no seu presente.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta para falar de uma experiência de vida?",
+        "opcoes": ["I have went to Japan.", "I has been to Japan.", "I have been to Japan.", "I been to Japan."],
+        "resposta": 2,
+        "explicacao": "O particípio de 'be' (ir e voltar) é 'been', e o auxiliar para 'I' é 'have'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: ___ you ever eaten sushi?",
+        "resposta": "Have",
+        "explicacao": "Em perguntas no Present Perfect, o auxiliar 'Have' vem antes do sujeito."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual o particípio passado do verbo 'see'?",
+        "opcoes": ["seed", "saw", "seeing", "seen"],
+        "resposta": 3,
+        "explicacao": "'See' é irregular: see -> saw -> seen."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: She ___ never flown in a helicopter.",
+        "resposta": "has",
+        "explicacao": "Como o sujeito é 'She', o auxiliar deve ser 'has'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "My parents ___ visited New York.",
+        "opcoes": ["has", "have", "are", "is"],
+        "resposta": 1,
+        "explicacao": "'My parents' equivale a 'They' (plural), então usamos 'have'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o particípio de 'read' (escreve-se igual, lê-se 'red'): I have ___ that book.",
+        "resposta": "read",
+        "explicacao": "O particípio passado de 'read' é 'read'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez14",
+    "num": "Lesson 14",
+    "titulo": "Present Perfect (Just, Already, Yet)",
+    "subtitulo": "Ações muito recentes e expectativas",
+    "alerta": "Estas palavras são amigas inseparáveis do Present Perfect. Elas adicionam um sentido extra de tempo à ação.",
+    "observacao_cards": [
+      {
+        "italiano": "Just",
+        "traducao": "Acabar de",
+        "genero": "Adverb",
+        "motivo": "Usado para ações que terminaram num passado muito recente. Fica entre o auxiliar e o verbo principal."
+      },
+      {
+        "italiano": "Already",
+        "traducao": "Já",
+        "genero": "Adverb",
+        "motivo": "Mostra que a ação aconteceu mais cedo do que o esperado. Geralmente afirmativo."
+      },
+      {
+        "italiano": "Yet",
+        "traducao": "Ainda / Já",
+        "genero": "Adverb",
+        "motivo": "Usado em negativas (ainda não) ou perguntas (já?). Vai sempre no final da frase."
+      }
+    ],
+    "tabela_visual": "| Palavra | Posição na frase | Tipo de frase |\n|---|---|---|\n| Just | Entre *have/has* e particípio | Afirmativa |\n| Already| Entre *have/has* e particípio | Afirmativa |\n| Yet | No final da frase | Negativa / Pergunta |",
+    "exemplos_prc": [
+      {
+        "oracao": "I have just finished my homework.",
+        "pergunta": "Quando o dever de casa foi terminado?",
+        "resposta": "Faz muito pouco tempo, agora mesmo.",
+        "conclusao": "Just = ação recém-concluída."
+      },
+      {
+        "oracao": "Have you done the dishes yet?",
+        "pergunta": "A pessoa espera que a louça seja lavada?",
+        "resposta": "Sim, a expectativa é que já devesse estar lavada.",
+        "conclusao": "Yet = expectativa numa pergunta."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I yet have not finished.",
+        "certo": "I have not finished yet.",
+        "explicacao": "'Yet' deve ficar no final da frase na imensa maioria dos casos."
+      },
+      {
+        "errado": "I just have arrived.",
+        "certo": "I have just arrived.",
+        "explicacao": "'Just' fica no meio: entre o verbo auxiliar (have) e o verbo principal (arrived)."
+      }
+    ],
+    "coda": "Guarde as posições: Just e Already no recheio do sanduíche (have __ verb). Yet na ponta do pão (no final)!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Onde o 'yet' costuma aparecer na frase?",
+        "opcoes": ["No começo", "Antes do verbo auxiliar", "No final", "Entre o verbo auxiliar e o principal"],
+        "resposta": 2,
+        "explicacao": "Em perguntas e negativas, o 'yet' vai no final da frase."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com uma palavra indicando que aconteceu agora mesmo: I have ___ seen him.",
+        "resposta": "just",
+        "explicacao": "'Just' indica uma ação que acabou de ocorrer."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": ["I have already eaten.", "I already have eaten.", "I have eaten already.", "Todas podem estar certas, mas a primeira é a mais padrão e comum."],
+        "resposta": 0,
+        "explicacao": "A posição mais padrão de 'already' é no meio, 'I have already eaten'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: They haven't arrived ___. (ainda)",
+        "resposta": "yet",
+        "explicacao": "'Yet' é usado em frases negativas no final para dizer 'ainda não'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "He has ___ finished his test! It was so fast!",
+        "opcoes": ["yet", "already", "just", "ever"],
+        "resposta": 1,
+        "explicacao": "'Already' mostra que aconteceu antes do esperado."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Have you sent the email ___? (já)",
+        "resposta": "yet",
+        "explicacao": "Em perguntas no final da frase, usamos 'yet' com o sentido de 'já'."
+      }
+    ]
+  },
+  {
+    "id": "a2-lez15",
+    "num": "Lesson 15",
+    "titulo": "Prepositions of Movement",
+    "subtitulo": "Into, onto, through, across, towards",
+    "alerta": "Elas mostram a trajetória ou movimento para algum lugar, geralmente acompanhando verbos como go, walk, run e drive.",
+    "observacao_cards": [
+      {
+        "italiano": "Into",
+        "traducao": "Para dentro de",
+        "genero": "Preposition",
+        "motivo": "Movimento de fora para o interior de algo fechado."
+      },
+      {
+        "italiano": "Through",
+        "traducao": "Através de",
+        "genero": "Preposition",
+        "motivo": "Movimento entrando por um lado e saindo pelo outro (ex: um túnel ou floresta)."
+      },
+      {
+        "italiano": "Across",
+        "traducao": "Através de / Cruzando",
+        "genero": "Preposition",
+        "motivo": "Movimento de um lado a outro de uma superfície ou área (ex: uma rua, uma ponte)."
+      },
+      {
+        "italiano": "Towards",
+        "traducao": "Em direção a",
+        "genero": "Preposition",
+        "motivo": "Indica a direção para onde se vai, sem necessariamente chegar lá."
+      },
+      {
+        "italiano": "Onto",
+        "traducao": "Para cima de",
+        "genero": "Preposition",
+        "motivo": "Movimento de um nível mais baixo para cima de uma superfície."
+      }
+    ],
+    "tabela_visual": "| Preposição | Ideia principal | Exemplo |\n|---|---|---|\n| Into | Fora → Dentro | He walked **into** the room. |\n| Onto | Baixo → Superfície | The cat jumped **onto** the table. |\n| Across | Lado A → Lado B | We swam **across** the river. |",
+    "exemplos_prc": [
+      {
+        "oracao": "They walked through the forest.",
+        "pergunta": "Como foi o trajeto deles?",
+        "resposta": "Eles entraram na floresta, andaram por dentro dela e saíram.",
+        "conclusao": "Through = por dentro / através de um volume 3D."
+      },
+      {
+        "oracao": "Run towards the light!",
+        "pergunta": "Eles vão chegar à luz?",
+        "resposta": "A direção é a luz, chegar é outra história.",
+        "conclusao": "Towards = foco na direção do movimento."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He went in the room.",
+        "certo": "He went into the room.",
+        "explicacao": "Embora 'in' seja compreendido, 'into' expressa perfeitamente o MOVIMENTO para dentro."
+      },
+      {
+        "errado": "Walk cross the street.",
+        "certo": "Walk across the street.",
+        "explicacao": "'Cross' é verbo (atravessar), 'across' é a preposição (cruzando/através de)."
+      }
+    ],
+    "coda": "Visualize o movimento: 'Into' é entrar, 'Across' é cruzar o plano e 'Through' é passar por dentro. Mova-se com o inglês!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "The train went ___ the tunnel.",
+        "opcoes": ["across", "through", "into", "onto"],
+        "resposta": 1,
+        "explicacao": "Um túnel é um volume fechado; você passa 'por dentro' dele (through)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Be careful when you walk ___ the street.",
+        "resposta": "across",
+        "explicacao": "A rua é uma superfície plana, cruzamos de um lado a outro."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She put the keys ___ her bag.",
+        "opcoes": ["onto", "into", "towards", "across"],
+        "resposta": 1,
+        "explicacao": "Movimento de fora para o interior de um recipiente (a bolsa)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The dog jumped ___ the sofa.",
+        "resposta": "onto",
+        "explicacao": "Movimento para cima, ficando sobre uma superfície."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "He started running ___ the bus stop.",
+        "opcoes": ["towards", "into", "through", "across"],
+        "resposta": 0,
+        "explicacao": "'Towards' indica movimento na direção do ponto de ônibus."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a preposição correta: We drove ___ the bridge.",
+        "resposta": "across",
+        "explicacao": "Passar de um lado para outro de uma ponte (bridge) requer 'across'."
+      }
+    ]
+  }
+]
