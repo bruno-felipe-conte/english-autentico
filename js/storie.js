@@ -122,7 +122,7 @@ const Storie = {
         })()}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Storie._filtroNivel=this.value;Storie.renderizarSeletor()">
-          <option value="">🎯 Nível</option>
+          <option value="">🎯 Level</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
       </div>
@@ -144,7 +144,7 @@ const Storie = {
           <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
             ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
-          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">🗑️ Remover</button>`:''}
+          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">🗑️ Remove</button>`:''}
           <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${s.autor||''}</div>
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>

@@ -236,10 +236,10 @@ const Conquistas = {
         <span class="ach-progresso-label">${ganhas} / ${total}</span>
       </div>
       ${ganhas > 0 ? `
-        <div class="ach-secao-titulo">✅ Conquistados</div>
+        <div class="ach-secao-titulo">✅ Unlocked</div>
         <div class="ach-lista">${desbloqueadas.map(c => renderBadge(c, true)).join('')}</div>
       ` : ''}
-      <div class="ach-secao-titulo" style="margin-top:${ganhas > 0 ? '1rem' : '0'}">🔒 Em progresso</div>
+      <div class="ach-secao-titulo" style="margin-top:${ganhas > 0 ? '1rem' : '0'}">🔒 In progress</div>
       <div class="ach-lista">${bloqueadas.map(c => renderBadge(c, false)).join('')}</div>
     `;
   }

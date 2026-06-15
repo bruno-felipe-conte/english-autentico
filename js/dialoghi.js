@@ -64,16 +64,16 @@ const Dialoghi = {
 
     let html = `
       <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
-        <input type="search" placeholder="🔍 Cerca..." value="${this._filtroTexto}"
+        <input type="search" placeholder="🔍 Search..." value="${this._filtroTexto}"
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
         <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">🤖 via IA</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
-        ${_origemPill('','Todos',todos.length)}
+        ${_origemPill('','All',todos.length)}
         ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
-        ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo) : ''}
+        ${nNativo  ? _origemPill('nativo','📚 Built-in',nNativo) : ''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
           <option value="">🎯 Level</option>
@@ -200,15 +200,15 @@ const Dialoghi = {
               placeholder="IPA (opcional)" style="padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem">
           </div>
           <input type="text" data-campo="frase" data-idx="${i}" value="${turno.frase || ''}"
-            placeholder="Frase em inglês *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
+            placeholder="English phrase *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
           <input type="text" data-campo="traducao" data-idx="${i}" value="${turno.traducao || ''}"
-            placeholder="Tradução em português" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem">
+            placeholder="Portuguese translation" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem">
         ` : `
           <input type="text" data-campo="frase" data-idx="${i}" value="${turno.frase || ''}"
-            placeholder="Frase correta em inglês *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
+            placeholder="Correct English phrase *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
           <input type="text" data-campo="traducao" data-idx="${i}" value="${turno.traducao || ''}"
-            placeholder="Tradução em português" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem;margin-bottom:0.6rem">
-          <div style="font-size:0.78rem;font-weight:700;color:#003E8A;margin-bottom:0.4rem">4 Alternativas (marque a correta):</div>
+            placeholder="Portuguese translation" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem;margin-bottom:0.6rem">
+          <div style="font-size:0.78rem;font-weight:700;color:#003E8A;margin-bottom:0.4rem">4 Alternatives (mark the correct one):</div>
           ${alts.map((a, ai) => `
             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem">
               <input type="radio" name="correct-${i}" value="${ai}" ${correto===ai?'checked':''} onchange="Dialoghi._marcarCorreta(${i},${ai})">
@@ -362,7 +362,7 @@ const Dialoghi = {
       }
       html += `
         <div style="text-align:center;margin-top:1.5rem">
-          <button class="btn-primario" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()">Praticar Diálogo ✍️</button>
+          <button class="btn-primario" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()">Practise Dialogue ✍️</button>
         </div>
       `;
     } else {

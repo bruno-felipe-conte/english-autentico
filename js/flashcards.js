@@ -149,11 +149,11 @@ const FSRS = {
 
   // Format interval as human-readable string
   formatInterval(days) {
-    if (days <= 0) return 'hoje';
-    if (days === 1) return '1 dia';
-    if (days < 31) return `${days} dias`;
+    if (days <= 0) return 'today';
+    if (days === 1) return '1 day';
+    if (days < 31) return `${days} days`;
     const months = Math.round(days / 30);
-    return months === 1 ? '1 mês' : `${months} meses`;
+    return months === 1 ? '1 month' : `${months} months`;
   },
 };
 
@@ -261,7 +261,7 @@ const Flashcards = {
 
     // Reset dica button appearance
     const btnDica = document.getElementById('btn-dica');
-    if (btnDica) { btnDica.classList.remove('ativo'); btnDica.title = 'Ver dica (nível 1)'; }
+    if (btnDica) { btnDica.classList.remove('ativo'); btnDica.title = 'Show hint (level 1)'; }
 
     const cardEl = document.getElementById('flashcard');
     if (cardEl) { cardEl.classList.remove('virado'); cardEl.style.display = ''; }
@@ -400,18 +400,18 @@ const Flashcards = {
       // Level 1: first letter + blanks
       const hint = alvo.charAt(0).toUpperCase() + '_'.repeat(Math.max(1, alvo.length - 1));
       if (elDica) elDica.textContent = `💡 ${hint}`;
-      if (btnDica) btnDica.title = 'Ver dica (nível 2)';
+      if (btnDica) btnDica.title = 'Show hint (level 2)';
     } else if (this.nivelDica === 2) {
       // Level 2: first third of letters revealed
       const revealed = Math.max(2, Math.ceil(alvo.length / 3));
       const hint = alvo.substring(0, revealed) + '_'.repeat(Math.max(1, alvo.length - revealed));
       if (elDica) elDica.textContent = `💡💡 ${hint}`;
-      if (btnDica) btnDica.title = 'Ver dica (revelar)';
+      if (btnDica) btnDica.title = 'Show hint (reveal)';
     } else {
       // Level 3: just flip the card.
       // virar() will call _aplicarPenalidadeDica() because dicaUsada===true,
       // so we must NOT call it again here to avoid double application.
-      if (elDica) elDica.textContent = `💡💡💡 Revelado`;
+      if (elDica) elDica.textContent = `💡💡💡 Revealed`;
       this.virar();
     }
   },
@@ -910,7 +910,7 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     const total_devidas = devidas.length;
-    App.notificar(`🌍 ${total_devidas} carta${total_devidas !== 1 ? 's' : ''} em revisão + ${novasLimitadas.length} novas`, 'alerta');
+    App.notificar(`🌍 ${total_devidas} card${total_devidas !== 1 ? 's' : ''} due + ${novasLimitadas.length} new`, 'alerta');
     this.mostrarCarta();
   },
 
@@ -946,7 +946,7 @@ const Flashcards = {
     const sel = document.getElementById('flashcard-templo-select');
     if (!sel) return;
     const anterior = sel.value;
-    sel.innerHTML  = '<option value="">-- Seleziona tempio --</option>';
+    sel.innerHTML  = '<option value="">-- Select a temple --</option>';
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
     desbloqueados.forEach(num => {
       const data = App.estado.templosData[num];

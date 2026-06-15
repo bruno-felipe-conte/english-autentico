@@ -44,10 +44,11 @@ const Canzoni = {
   ocultarNativa(id) {
     const can = (this.dados?.canzoni || []).find(c => c.id === id);
     if (!can) return;
-    if (!confirm(`Ocultar "${can.titulo}"?\nEla desaparece da lista mas pode ser restaurada depois.`)) return;
+    if (!confirm(`Hide "${can.titulo}"?
+It disappears from the list but can be restored later.`)) return;
     if (!this._ocultas.includes(id)) this._ocultas.push(id);
     localStorage.setItem('en_canzoni_ocultas', JSON.stringify(this._ocultas));
-    App.notificar('Música ocultada. Use "Restaurar" para trazer de volta.', 'alerta');
+    App.notificar('Song hidden. Use "Restore" to bring it back.', 'alerta');
     this.renderizarSeletor();
   },
 
@@ -56,7 +57,7 @@ const Canzoni = {
     if (!this._ocultas.length) return;
     this._ocultas = [];
     localStorage.removeItem('en_canzoni_ocultas');
-    App.notificar('Músicas nativas restauradas!', 'sucesso');
+    App.notificar('Built-in songs restored!', 'sucesso');
     this.renderizarSeletor();
   },
 
@@ -112,7 +113,7 @@ const Canzoni = {
         ${nN?_oPill('nativo','📚 Nativas',nN):''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Canzoni._filtroNivel=this.value;Canzoni.renderizarSeletor()">
-          <option value="">🎯 Nível</option>
+          <option value="">🎯 Level</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
         ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">↩ Restaurar (${nOcultas})</button>` : ''}
@@ -131,7 +132,7 @@ const Canzoni = {
           ${ehCustom ? `
           ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
           <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
-          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Ocultar esta música">🗑️</button>`}
+          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Hide this song">🗑️</button>`}
         </div>
       </div>`;
     }
@@ -165,7 +166,7 @@ const Canzoni = {
     c.innerHTML = `
       <div class="gram-lesson-nav">
         <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Cancelar</button>
-        <span style="font-size:0.9rem;font-weight:700">${idEditar ? 'Editar Música' : 'Nova Música'}</span>
+        <span style="font-size:0.9rem;font-weight:700">${idEditar ? 'Edit Song' : 'New Song'}</span>
       </div>
 
       <div class="gram-card" style="margin-top:1rem;padding:1.2rem">
@@ -203,13 +204,13 @@ const Canzoni = {
         <div id="can-estrofes">${estrofesHtml}</div>
 
         <button onclick="Canzoni._adicionarEstrofe()" class="btn-secondario" style="width:100%;margin:0.8rem 0">
-          ➕ Adicionar verso
+          ➕ Add verse
         </button>
 
         <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.8rem;margin-bottom:1rem;font-size:0.82rem;color:#6B4C1A">
-          💡 <strong>Como criar a lacuna:</strong> Escreva o texto completo no campo "Texto completo".
-          No "Texto com lacuna", substitua a palavra que quer ocultar por <code>___</code> (três underscores).
-          Informe a palavra oculta no campo "Palavra oculta".
+          💡 <strong>How to create a gap:</strong> Write the full text in the "Full text" field.
+          In "Text with gap", replace the word you want to hide with <code>___</code> (three underscores).
+          Enter the hidden word in the "Hidden word" field.
         </div>
 
         <div style="display:flex;gap:0.5rem">
@@ -225,25 +226,25 @@ const Canzoni = {
     return `
       <div class="can-estrofe-form" id="can-est-${i}" style="background:#f9f6f0;border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;border:1px solid #ede5d5">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem">
-          <span style="font-weight:700;font-size:0.82rem;color:#9B2335">Verso ${i + 1}</span>
-          <button onclick="Canzoni._removerEstrofe(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️ Remover</button>
+          <span style="font-weight:700;font-size:0.82rem;color:#9B2335">Verse ${i + 1}</span>
+          <button onclick="Canzoni._removerEstrofe(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️ Remove</button>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.5rem">
-          <input type="text" placeholder="Texto completo (ex: Cerco l'estate tutto l'anno)" data-campo="texto_completo" data-idx="${i}"
+          <input type="text" placeholder="Full text (e.g.: Yesterday, all my troubles seemed so far away)" data-campo="texto_completo" data-idx="${i}"
             value="${est.texto_completo || ''}"
             style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
-          <input type="text" placeholder="Texto com lacuna (ex: Cerco l'___ tutto l'anno)" data-campo="texto_lacuna" data-idx="${i}"
+          <input type="text" placeholder="Text with gap (e.g.: Yesterday, all my ___ seemed so far away)" data-campo="texto_lacuna" data-idx="${i}"
             value="${est.texto_lacuna || ''}"
             style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
-            <input type="text" placeholder="Palavra oculta (ex: estate)" data-campo="palavra_oculta" data-idx="${i}"
+            <input type="text" placeholder="Hidden word (e.g.: troubles)" data-campo="palavra_oculta" data-idx="${i}"
               value="${est.palavra_oculta || ''}"
               style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
-            <input type="text" placeholder="Dica (ex: stagione calda)" data-campo="dica" data-idx="${i}"
+            <input type="text" placeholder="Hint (e.g.: problems)" data-campo="dica" data-idx="${i}"
               value="${est.dica || ''}"
               style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
           </div>
-          <input type="text" placeholder="Tradução em português" data-campo="traducao" data-idx="${i}"
+          <input type="text" placeholder="Portuguese translation" data-campo="traducao" data-idx="${i}"
             value="${est.traducao || ''}"
             style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
         </div>
@@ -265,7 +266,7 @@ const Canzoni = {
     // Re-numerar
     document.querySelectorAll('.can-estrofe-form').forEach((el, idx) => {
       el.id = `can-est-${idx}`;
-      el.querySelector('span').textContent = `Verso ${idx + 1}`;
+      el.querySelector('span').textContent = `Verse ${idx + 1}`;
       el.querySelectorAll('[data-idx]').forEach(inp => inp.dataset.idx = idx);
       el.querySelector('button[onclick]').setAttribute('onclick', `Canzoni._removerEstrofe(${idx})`);
     });
@@ -437,7 +438,7 @@ const Canzoni = {
         const safeW = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
         return '<button class="can-choice-btn" onclick="Canzoni._escolher(\'' + safeW + '\')"><i>' + this._esc(w) + '</i></button>';
       }).join('');
-      choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">Escolha a palavra</div><div class="can-choices-grid">' + btns + '</div></div>';
+      choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">Choose the word</div><div class="can-choices-grid">' + btns + '</div></div>';
     }
 
     c.innerHTML =

@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'english-v17';
+const CACHE = 'english-v74';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -14,26 +14,26 @@ const STATIC = [
   './index.html',
   './css/english.css',
   './css/styles.css',
-  // JS — módulos da aplicação (URLs com ?v=61 para forçar atualização de cache)
-  './js/audio.js?v=61',
-  './js/conquistas.js?v=61',
-  './js/core.js?v=61',
-  './js/dialoghi.js?v=61',
-  './js/canzoni.js?v=61',
-  './js/imitazione.js?v=61',
-  './js/flashcards.js?v=61',
-  './js/grammar.js?v=61',
-  './js/heatmap.js?v=61',
-  './js/onboarding.js?v=61',
-  './js/profilo.js?v=61',
-  './js/progression.js?v=61',
-  './js/quiz.js?v=61',
+  // JS — módulos da aplicação (URLs com ?v=74 para forçar atualização de cache)
+  './js/audio.js?v=74',
+  './js/conquistas.js?v=74',
+  './js/core.js?v=74',
+  './js/dialoghi.js?v=74',
+  './js/canzoni.js?v=74',
+  './js/imitazione.js?v=74',
+  './js/flashcards.js?v=74',
+  './js/grammar.js?v=74',
+  './js/heatmap.js?v=74',
+  './js/onboarding.js?v=74',
+  './js/profilo.js?v=74',
+  './js/progression.js?v=74',
+  './js/quiz.js?v=74',
   './js/quiz_data.js',
-  './js/vocab.js?v=61',
-  './js/i18n.js?v=61',
-  './js/notificacoes.js?v=61',
-  './js/tour.js?v=61',
-  './js/storie.js?v=61',
+  './js/vocab.js?v=74',
+  './js/i18n.js?v=74',
+  './js/notificacoes.js?v=74',
+  './js/tour.js?v=74',
+  './js/storie.js?v=74',
   './js/ia-import.js',
   // Dados
   './data/conjugacoes.json',
@@ -133,18 +133,23 @@ self.addEventListener('message', event => {
 
   if (event.data.type === 'AGENDAR_LEMBRETE') {
     const { delayMs, titulo, corpo, tag } = event.data;
-    // Agenda a notificação via setTimeout dentro do SW
-    // (funciona enquanto o SW estiver ativo; ao acordar o SW dispara)
-    setTimeout(() => {
-      self.registration.showNotification(titulo, {
-        body:    corpo,
-        icon:    './icons/icon.svg',
-        badge:   './icons/icon.svg',
-        tag:     tag || 'english-reminder',
-        renotify: true,
-        data:    { url: './' },
-      });
-    }, delayMs);
+    // NOTE: setTimeout inside a SW is unreliable — Chrome/Firefox kill idle SWs
+    // in ~30s. For delays > 30s this will silently fail. A proper fix requires
+    // the Background Sync API or server-side Web Push. For now we only fire
+    // if the delay is short enough to be safe (< 25 seconds).
+    if (delayMs < 25000) {
+      setTimeout(() => {
+        self.registration.showNotification(titulo, {
+          body:    corpo,
+          icon:    './icons/icon.svg',
+          badge:   './icons/icon.svg',
+          tag:     tag || 'english-reminder',
+          renotify: true,
+          data:    { url: './' },
+        });
+      }, delayMs);
+    }
+    // Long-delay reminders are a no-op until Background Sync is implemented.
   }
 });
 

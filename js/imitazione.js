@@ -68,7 +68,7 @@ const Imitazione = {
       ${oP('','Todas',todasRaw.length)}${nC?oP('custom','🤖 Adicionadas',nC):''}${nN?oP('nativo','📚 Nativas',nN):''}
       <select class="nivel-select${this._filtroNivel?' ativo':''}"
         onchange="Imitazione._filtroNivel=this.value;Imitazione._aplicarFiltro()">
-        <option value="">🎯 Nível</option>
+        <option value="">🎯 Level</option>
         ${niveis.map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]||0})</option>`).join('')}
       </select>
     </div>`;
@@ -198,9 +198,9 @@ const Imitazione = {
     c.innerHTML = `
       <div style="text-align:center;margin-bottom:1.5rem">
         <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap">
-          <span>${it ? 'Frase' : 'Frase'} ${this.itemAtual + 1} ${it ? 'di' : 'de'} ${lista.length}</span>
+          <span>Phrase ${this.itemAtual + 1} of ${lista.length}</span>
           <span style="background:rgba(155,35,53,0.1);border-radius:4px;padding:0.1rem 0.4rem">${item.nivel}</span>
-          ${item._custom ? `<button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:1.5px solid #c0392b;color:#c0392b;border-radius:6px;padding:0.1rem 0.45rem;font-size:0.72rem;cursor:pointer;font-weight:700;" title="Remover esta frase">🗑️ Remover</button>` : ''}
+          ${item._custom ? `<button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:1.5px solid #c0392b;color:#c0392b;border-radius:6px;padding:0.1rem 0.45rem;font-size:0.72rem;cursor:pointer;font-weight:700;" title="Remove this phrase">🗑️ Remove</button>` : ''}
         </div>
         <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase}"</h3>
         <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.traducao}</i></p>
