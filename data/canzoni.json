@@ -165,6 +165,678 @@
         "journey"
       ],
       "xp_recompensa": 50
+    },
+    {
+      "id": "can_004",
+      "titulo": "Stand By Me",
+      "artista": "Ben E. King",
+      "nivel": "A1",
+      "icone": "🌙",
+      "tema": "classic",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "When the night has come, and the land is dark.",
+          "texto_lacuna": "When the night has come, and the _____ is dark.",
+          "palavra_oculta": "land",
+          "traducao": "Quando a noite chegar, e a terra estiver escura.",
+          "dica": "noun — the part of the earth's surface that is not covered by water"
+        },
+        {
+          "id": 2,
+          "texto_completo": "And the moon is the only light we'll see.",
+          "texto_lacuna": "And the moon is the only _____ we'll see.",
+          "palavra_oculta": "light",
+          "traducao": "E a lua for a única luz que veremos.",
+          "dica": "noun — brightness that lets you see things"
+        },
+        {
+          "id": 3,
+          "texto_completo": "No, I won't be afraid. Oh, I won't be afraid.",
+          "texto_lacuna": "No, I won't be _____. Oh, I won't be afraid.",
+          "palavra_oculta": "afraid",
+          "traducao": "Não, eu não terei medo. Oh, eu não terei medo.",
+          "dica": "adjective — feeling fear or worry"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Just as long as you stand, stand by me.",
+          "texto_lacuna": "Just as long as you _____, stand by me.",
+          "palavra_oculta": "stand",
+          "traducao": "Contanto que você fique, fique comigo.",
+          "dica": "verb — to be in a vertical position on your feet"
+        }
+      ],
+      "vocabulario_chave": [
+        "land",
+        "light",
+        "afraid",
+        "stand",
+        "moon"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "can_005",
+      "titulo": "Three Little Birds",
+      "artista": "Bob Marley",
+      "nivel": "A1",
+      "icone": "🐦",
+      "tema": "reggae",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Don't worry about a thing.",
+          "texto_lacuna": "Don't _____ about a thing.",
+          "palavra_oculta": "worry",
+          "traducao": "Não se preocupe com nada.",
+          "dica": "verb — to feel anxious or troubled"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Cause every little thing gonna be alright.",
+          "texto_lacuna": "Cause every little thing gonna be _____.",
+          "palavra_oculta": "alright",
+          "traducao": "Porque cada pequena coisa vai ficar bem.",
+          "dica": "adjective — acceptable, good, or OK"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Rise up this morning, smiled with the rising sun.",
+          "texto_lacuna": "Rise up this morning, smiled with the rising _____.",
+          "palavra_oculta": "sun",
+          "traducao": "Levantei esta manhã, sorri com o sol nascente.",
+          "dica": "noun — the star that provides light and heat to Earth"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Three little birds pitch by my doorstep.",
+          "texto_lacuna": "Three little birds pitch by my _____.",
+          "palavra_oculta": "doorstep",
+          "traducao": "Três passarinhos pousaram na minha porta.",
+          "dica": "noun — a step leading up to the outer door of a house"
+        }
+      ],
+      "vocabulario_chave": [
+        "worry",
+        "alright",
+        "morning",
+        "sun",
+        "doorstep"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "can_006",
+      "titulo": "Yellow Submarine",
+      "artista": "The Beatles",
+      "nivel": "A1",
+      "icone": "🚢",
+      "tema": "pop",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "In the town where I was born.",
+          "texto_lacuna": "In the _____ where I was born.",
+          "palavra_oculta": "town",
+          "traducao": "Na cidade onde eu nasci.",
+          "dica": "noun — a place where people live, smaller than a city"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Lived a man who sailed to sea.",
+          "texto_lacuna": "Lived a man who sailed to _____.",
+          "palavra_oculta": "sea",
+          "traducao": "Viveu um homem que navegou para o mar.",
+          "dica": "noun — the salt water that covers most of the Earth"
+        },
+        {
+          "id": 3,
+          "texto_completo": "And he told us of his life.",
+          "texto_lacuna": "And he told us of his _____.",
+          "palavra_oculta": "life",
+          "traducao": "E ele nos contou sobre sua vida.",
+          "dica": "noun — the existence of a human being or animal"
+        },
+        {
+          "id": 4,
+          "texto_completo": "In the land of submarines.",
+          "texto_lacuna": "In the land of _____.",
+          "palavra_oculta": "submarines",
+          "traducao": "Na terra dos submarinos.",
+          "dica": "noun — ships that can travel underwater"
+        },
+        {
+          "id": 5,
+          "texto_completo": "We all live in a yellow submarine.",
+          "texto_lacuna": "We all live in a _____ submarine.",
+          "palavra_oculta": "yellow",
+          "traducao": "Todos nós vivemos em um submarino amarelo.",
+          "dica": "adjective — a color like that of a lemon or the sun"
+        }
+      ],
+      "vocabulario_chave": [
+        "town",
+        "sea",
+        "life",
+        "submarines",
+        "yellow"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "can_007",
+      "titulo": "Imagine",
+      "artista": "John Lennon",
+      "nivel": "A2",
+      "icone": "🕊️",
+      "tema": "classic",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Imagine there's no heaven.",
+          "texto_lacuna": "Imagine there's no _____.",
+          "palavra_oculta": "heaven",
+          "traducao": "Imagine que não há paraíso.",
+          "dica": "noun — a place believed to be the home of God"
+        },
+        {
+          "id": 2,
+          "texto_completo": "It's easy if you try.",
+          "texto_lacuna": "It's _____ if you try.",
+          "palavra_oculta": "easy",
+          "traducao": "É fácil se você tentar.",
+          "dica": "adjective — not difficult to do"
+        },
+        {
+          "id": 3,
+          "texto_completo": "No hell below us.",
+          "texto_lacuna": "No hell _____ us.",
+          "palavra_oculta": "below",
+          "traducao": "Nenhum inferno abaixo de nós.",
+          "dica": "preposition — at a lower level or layer"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Above us, only sky.",
+          "texto_lacuna": "Above us, only _____.",
+          "palavra_oculta": "sky",
+          "traducao": "Acima de nós, apenas céu.",
+          "dica": "noun — the space over the Earth where the clouds are"
+        },
+        {
+          "id": 5,
+          "texto_completo": "Imagine all the people living for today.",
+          "texto_lacuna": "Imagine all the people _____ for today.",
+          "palavra_oculta": "living",
+          "traducao": "Imagine todas as pessoas vivendo para o hoje.",
+          "dica": "verb — to be alive or to experience life"
+        }
+      ],
+      "vocabulario_chave": [
+        "heaven",
+        "easy",
+        "below",
+        "sky",
+        "living"
+      ],
+      "xp_recompensa": 45
+    },
+    {
+      "id": "can_008",
+      "titulo": "Can't Help Falling in Love",
+      "artista": "Elvis Presley",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "romantic",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Wise men say only fools rush in.",
+          "texto_lacuna": "Wise men say only _____ rush in.",
+          "palavra_oculta": "fools",
+          "traducao": "Homens sábios dizem que apenas tolos se apressam.",
+          "dica": "noun — people who act unwisely or without thinking"
+        },
+        {
+          "id": 2,
+          "texto_completo": "But I can't help falling in love with you.",
+          "texto_lacuna": "But I can't help _____ in love with you.",
+          "palavra_oculta": "falling",
+          "traducao": "Mas não consigo evitar me apaixonar por você.",
+          "dica": "verb — dropping or descending; part of the idiom for starting to love someone"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Shall I stay? Would it be a sin?",
+          "texto_lacuna": "Shall I stay? Would it be a _____?",
+          "palavra_oculta": "sin",
+          "traducao": "Devo ficar? Seria um pecado?",
+          "dica": "noun — an immoral act against religious laws"
+        },
+        {
+          "id": 4,
+          "texto_completo": "If I can't help falling in love with you.",
+          "texto_lacuna": "If I can't _____ falling in love with you.",
+          "palavra_oculta": "help",
+          "traducao": "Se eu não consigo evitar me apaixonar por você.",
+          "dica": "verb — to assist; also used in 'can't help' meaning unable to stop doing something"
+        }
+      ],
+      "vocabulario_chave": [
+        "wise",
+        "fools",
+        "rush",
+        "falling",
+        "sin"
+      ],
+      "xp_recompensa": 45
+    },
+    {
+      "id": "can_009",
+      "titulo": "Just The Way You Are",
+      "artista": "Bruno Mars",
+      "nivel": "A2",
+      "icone": "✨",
+      "tema": "pop",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Oh, her eyes, her eyes make the stars look like they're not shinin'.",
+          "texto_lacuna": "Oh, her eyes, her eyes make the _____ look like they're not shinin'.",
+          "palavra_oculta": "stars",
+          "traducao": "Oh, os olhos dela, os olhos dela fazem as estrelas parecerem que não estão brilhando.",
+          "dica": "noun — glowing points in the night sky"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Her hair, her hair falls perfectly without her tryin'.",
+          "texto_lacuna": "Her hair, her hair falls _____ without her tryin'.",
+          "palavra_oculta": "perfectly",
+          "traducao": "O cabelo dela, o cabelo dela cai perfeitamente sem ela tentar.",
+          "dica": "adverb — in a way that could not be better"
+        },
+        {
+          "id": 3,
+          "texto_completo": "She's so beautiful and I tell her everyday.",
+          "texto_lacuna": "She's so _____ and I tell her everyday.",
+          "palavra_oculta": "beautiful",
+          "traducao": "Ela é tão linda e eu digo isso a ela todos os dias.",
+          "dica": "adjective — pleasing the senses or mind aesthetically"
+        },
+        {
+          "id": 4,
+          "texto_completo": "When I see your face, there's not a thing that I would change.",
+          "texto_lacuna": "When I see your _____, there's not a thing that I would change.",
+          "palavra_oculta": "face",
+          "traducao": "Quando vejo o seu rosto, não há nada que eu mudaria.",
+          "dica": "noun — the front part of a person's head"
+        },
+        {
+          "id": 5,
+          "texto_completo": "'Cause you're amazing just the way you are.",
+          "texto_lacuna": "'Cause you're _____ just the way you are.",
+          "palavra_oculta": "amazing",
+          "traducao": "Porque você é incrível do jeito que você é.",
+          "dica": "adjective — causing great surprise or wonder"
+        }
+      ],
+      "vocabulario_chave": [
+        "stars",
+        "perfectly",
+        "beautiful",
+        "change",
+        "amazing"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "can_010",
+      "titulo": "Someone Like You",
+      "artista": "Adele",
+      "nivel": "B1",
+      "icone": "💔",
+      "tema": "pop",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "I heard that you're settled down.",
+          "texto_lacuna": "I heard that you're _____ down.",
+          "palavra_oculta": "settled",
+          "traducao": "Eu ouvi dizer que você se estabeleceu.",
+          "dica": "verb — to adopt a more steady or secure style of life"
+        },
+        {
+          "id": 2,
+          "texto_completo": "That you found a girl and you're married now.",
+          "texto_lacuna": "That you found a girl and you're _____ now.",
+          "palavra_oculta": "married",
+          "traducao": "Que você encontrou uma garota e está casado agora.",
+          "dica": "adjective — united with a spouse in a legal relationship"
+        },
+        {
+          "id": 3,
+          "texto_completo": "I heard that your dreams came true.",
+          "texto_lacuna": "I heard that your _____ came true.",
+          "palavra_oculta": "dreams",
+          "traducao": "Eu ouvi dizer que seus sonhos se realizaram.",
+          "dica": "noun — a cherished aspiration or ambition"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Never mind, I'll find someone like you.",
+          "texto_lacuna": "Never mind, I'll _____ someone like you.",
+          "palavra_oculta": "find",
+          "traducao": "Deixa para lá, eu vou encontrar alguém como você.",
+          "dica": "verb — to discover or perceive by chance or unexpectedly"
+        },
+        {
+          "id": 5,
+          "texto_completo": "I wish nothing but the best for you, too.",
+          "texto_lacuna": "I wish nothing but the _____ for you, too.",
+          "palavra_oculta": "best",
+          "traducao": "Eu desejo nada além do melhor para você, também.",
+          "dica": "adjective — of the most excellent, effective, or desirable type"
+        }
+      ],
+      "vocabulario_chave": [
+        "settled",
+        "married",
+        "dreams",
+        "find",
+        "best"
+      ],
+      "xp_recompensa": 60
+    },
+    {
+      "id": "can_011",
+      "titulo": "Billie Jean",
+      "artista": "Michael Jackson",
+      "nivel": "B1",
+      "icone": "🕺",
+      "tema": "pop",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "She was more like a beauty queen from a movie scene.",
+          "texto_lacuna": "She was more like a beauty _____ from a movie scene.",
+          "palavra_oculta": "queen",
+          "traducao": "Ela era mais como uma rainha da beleza de uma cena de filme.",
+          "dica": "noun — the female ruler of an independent state"
+        },
+        {
+          "id": 2,
+          "texto_completo": "I said don't mind, but what do you mean, I am the one?",
+          "texto_lacuna": "I said don't mind, but what do you _____, I am the one?",
+          "palavra_oculta": "mean",
+          "traducao": "Eu disse não me importo, mas o que você quer dizer com eu sou o único?",
+          "dica": "verb — to intend to convey, indicate, or refer to"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Who will dance on the floor in the round?",
+          "texto_lacuna": "Who will _____ on the floor in the round?",
+          "palavra_oculta": "dance",
+          "traducao": "Que vai dançar na pista de dança?",
+          "dica": "verb — to move rhythmically to music"
+        },
+        {
+          "id": 4,
+          "texto_completo": "She told me her name was Billie Jean, as she caused a scene.",
+          "texto_lacuna": "She told me her name was Billie Jean, as she caused a _____.",
+          "palavra_oculta": "scene",
+          "traducao": "Ela me disse que seu nome era Billie Jean, enquanto causava uma cena.",
+          "dica": "noun — an incident or event; a public display of emotion or anger"
+        },
+        {
+          "id": 5,
+          "texto_completo": "Billie Jean is not my lover.",
+          "texto_lacuna": "Billie Jean is not my _____.",
+          "palavra_oculta": "lover",
+          "traducao": "Billie Jean não é minha amante.",
+          "dica": "noun — a partner in a romantic or sexual relationship"
+        }
+      ],
+      "vocabulario_chave": [
+        "beauty",
+        "mean",
+        "dance",
+        "scene",
+        "lover"
+      ],
+      "xp_recompensa": 60
+    },
+    {
+      "id": "can_012",
+      "titulo": "Viva La Vida",
+      "artista": "Coldplay",
+      "nivel": "B1",
+      "icone": "👑",
+      "tema": "alternative",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "I used to rule the world.",
+          "texto_lacuna": "I used to _____ the world.",
+          "palavra_oculta": "rule",
+          "traducao": "Eu costumava governar o mundo.",
+          "dica": "verb — to exercise ultimate power or authority over an area"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Seas would rise when I gave the word.",
+          "texto_lacuna": "Seas would _____ when I gave the word.",
+          "palavra_oculta": "rise",
+          "traducao": "Os mares subiriam quando eu desse a palavra.",
+          "dica": "verb — to move upwards or stand up"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Now in the morning I sleep alone.",
+          "texto_lacuna": "Now in the morning I _____ alone.",
+          "palavra_oculta": "sleep",
+          "traducao": "Agora, de manhã, eu durmo sozinho.",
+          "dica": "verb — to rest with eyes closed in a state of natural unconsciousness"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Sweep the streets I used to own.",
+          "texto_lacuna": "_____ the streets I used to own.",
+          "palavra_oculta": "Sweep",
+          "traducao": "Varro as ruas que costumava ser dono.",
+          "dica": "verb — to clean an area by brushing away dirt or litter"
+        },
+        {
+          "id": 5,
+          "texto_completo": "I hear Jerusalem bells a-ringing.",
+          "texto_lacuna": "I hear Jerusalem _____ a-ringing.",
+          "palavra_oculta": "bells",
+          "traducao": "Eu ouço os sinos de Jerusalém tocando.",
+          "dica": "noun — hollow metal objects that sound a clear musical note when struck"
+        }
+      ],
+      "vocabulario_chave": [
+        "rule",
+        "rise",
+        "alone",
+        "sweep",
+        "bells"
+      ],
+      "xp_recompensa": 65
+    },
+    {
+      "id": "can_013",
+      "titulo": "Bohemian Rhapsody",
+      "artista": "Queen",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "rock",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Is this the real life? Is this just fantasy?",
+          "texto_lacuna": "Is this the real life? Is this just _____?",
+          "palavra_oculta": "fantasy",
+          "traducao": "Esta é a vida real? É apenas fantasia?",
+          "dica": "noun — the faculty or activity of imagining impossible or improbable things"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Caught in a landslide, no escape from reality.",
+          "texto_lacuna": "Caught in a landslide, no _____ from reality.",
+          "palavra_oculta": "escape",
+          "traducao": "Pego em um deslizamento de terra, sem fuga da realidade.",
+          "dica": "noun — an act of breaking free from confinement or control"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Open your eyes, look up to the skies and see.",
+          "texto_lacuna": "Open your eyes, look up to the _____ and see.",
+          "palavra_oculta": "skies",
+          "traducao": "Abra seus olhos, olhe para os céus e veja.",
+          "dica": "noun — the region of the atmosphere and outer space seen from the earth"
+        },
+        {
+          "id": 4,
+          "texto_completo": "I'm just a poor boy, I need no sympathy.",
+          "texto_lacuna": "I'm just a poor boy, I need no _____.",
+          "palavra_oculta": "sympathy",
+          "traducao": "Sou apenas um garoto pobre, não preciso de simpatia.",
+          "dica": "noun — feelings of pity and sorrow for someone else's misfortune"
+        },
+        {
+          "id": 5,
+          "texto_completo": "Because I'm easy come, easy go, little high, little low.",
+          "texto_lacuna": "Because I'm easy come, easy go, little high, little _____.",
+          "palavra_oculta": "low",
+          "traducao": "Porque eu venho fácil, vou fácil, um pouco alto, um pouco baixo.",
+          "dica": "adjective — of less than average height from top to bottom"
+        }
+      ],
+      "vocabulario_chave": [
+        "fantasy",
+        "landslide",
+        "escape",
+        "sympathy",
+        "reality"
+      ],
+      "xp_recompensa": 80
+    },
+    {
+      "id": "can_014",
+      "titulo": "Shape of You",
+      "artista": "Ed Sheeran",
+      "nivel": "B2",
+      "icone": "🥊",
+      "tema": "pop",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "The club isn't the best place to find a lover.",
+          "texto_lacuna": "The club isn't the best place to find a _____.",
+          "palavra_oculta": "lover",
+          "traducao": "A balada não é o melhor lugar para encontrar um amor.",
+          "dica": "noun — a person having a romantic or sexual relationship"
+        },
+        {
+          "id": 2,
+          "texto_completo": "So the bar is where I go.",
+          "texto_lacuna": "So the _____ is where I go.",
+          "palavra_oculta": "bar",
+          "traducao": "Então o bar é aonde eu vou.",
+          "dica": "noun — an establishment that sells alcoholic drinks"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Me and my friends at the table doing shots.",
+          "texto_lacuna": "Me and my friends at the _____ doing shots.",
+          "palavra_oculta": "table",
+          "traducao": "Eu e meus amigos na mesa tomando shots.",
+          "dica": "noun — a piece of furniture with a flat top and one or more legs"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Drinking fast and then we talk slow.",
+          "texto_lacuna": "Drinking _____ and then we talk slow.",
+          "palavra_oculta": "fast",
+          "traducao": "Bebendo rápido e então conversamos devagar.",
+          "dica": "adverb — at high speed"
+        },
+        {
+          "id": 5,
+          "texto_completo": "I'm in love with the shape of you.",
+          "texto_lacuna": "I'm in love with the _____ of you.",
+          "palavra_oculta": "shape",
+          "traducao": "Estou apaixonado pela sua forma.",
+          "dica": "noun — the external form, contours, or outline of someone or something"
+        }
+      ],
+      "vocabulario_chave": [
+        "lover",
+        "bar",
+        "table",
+        "fast",
+        "shape"
+      ],
+      "xp_recompensa": 75
+    },
+    {
+      "id": "can_015",
+      "titulo": "Rolling in the Deep",
+      "artista": "Adele",
+      "nivel": "B2",
+      "icone": "🔥",
+      "tema": "pop",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "There's a fire starting in my heart.",
+          "texto_lacuna": "There's a _____ starting in my heart.",
+          "palavra_oculta": "fire",
+          "traducao": "Há um fogo começando no meu coração.",
+          "dica": "noun — combustion or burning, in which substances combine chemically with oxygen"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Reaching a fever pitch, it's bringing me out the dark.",
+          "texto_lacuna": "Reaching a fever pitch, it's bringing me out the _____.",
+          "palavra_oculta": "dark",
+          "traducao": "Chegando ao ápice da febre, está me tirando da escuridão.",
+          "dica": "noun — the absence of light in a place"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Finally, I can see you crystal clear.",
+          "texto_lacuna": "Finally, I can see you _____ clear.",
+          "palavra_oculta": "crystal",
+          "traducao": "Finalmente, eu posso te ver de forma cristalina.",
+          "dica": "noun — a clear, transparent mineral or glass; used metaphorically for high clarity"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Go ahead and sell me out and I'll lay your ship bare.",
+          "texto_lacuna": "Go ahead and sell me out and I'll lay your _____ bare.",
+          "palavra_oculta": "ship",
+          "traducao": "Vá em frente e me venda e eu deixarei seu navio nu.",
+          "dica": "noun — a large boat for transporting people or goods by sea"
+        },
+        {
+          "id": 5,
+          "texto_completo": "We could have had it all.",
+          "texto_lacuna": "We could have _____ it all.",
+          "palavra_oculta": "had",
+          "traducao": "Nós poderíamos ter tido tudo.",
+          "dica": "verb — past participle of 'have'; to possess or experience"
+        }
+      ],
+      "vocabulario_chave": [
+        "fire",
+        "fever",
+        "crystal",
+        "ship",
+        "bare"
+      ],
+      "xp_recompensa": 80
     }
   ]
 }
