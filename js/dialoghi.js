@@ -1,4 +1,4 @@
-﻿const Dialoghi = {
+const Dialoghi = {
   dados: null,
   custom: [],
   dialogoAtual: null,
@@ -40,7 +40,7 @@
     const todos = this.todosDialoghi();
     const niveis = ['A1','A2','B1','B2','C1'];
 
-    // Conta por nÃ­vel
+    // Conta por nível
     const counts = {};
     todos.forEach(d => { counts[d.nivel] = (counts[d.nivel]||0)+1; });
 
@@ -64,19 +64,19 @@
 
     let html = `
       <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
-        <input type="search" placeholder="ðŸ” Cerca..." value="${this._filtroTexto}"
+        <input type="search" placeholder="🔍 Cerca..." value="${this._filtroTexto}"
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
         <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
-        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">ðŸ¤– via IA</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">🤖 via IA</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${_origemPill('','Todos',todos.length)}
-        ${nCustom ? _origemPill('custom','ðŸ¤– Adicionados',nCustom) : ''}
-        ${nNativo  ? _origemPill('nativo','ðŸ“š Nativos',nNativo) : ''}
+        ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
+        ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo) : ''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
-          <option value="">ðŸŽ¯ Level</option>
+          <option value="">🎯 Level</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
       </div>
@@ -90,9 +90,9 @@
         <div class="dialogo-titulo">${dial.titulo}${badge}</div>
         <div class="dialogo-nivel">${dial.nivel}</div>
         ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
-          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">âœï¸</button>` : ''}
-          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">ðŸ—‘ï¸</button>
-        </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">ðŸŽ ${dial.xp_recompensa} XP</div>`}
+          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
+          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
+        </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa} XP</div>`}
       </div>`;
     }
 
@@ -104,14 +104,14 @@
     c.innerHTML = html;
   },
   
-  // â”€â”€ FormulÃ¡rio para criar/editar diÃ¡logo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Formulário para criar/editar diálogo ──────────────────
   abrirFormularioCriar(idEditar = null) {
     const c = document.getElementById('dialoghi-container');
     if (!c) return;
     const existente = idEditar ? this.custom.find(x => x.id === idEditar) : null;
 
     const titulo = existente?.titulo || '';
-    const icone = existente?.icone || 'ðŸ’¬';
+    const icone = existente?.icone || '💬';
     const nivel = existente?.nivel || 'A1';
     const contexto = existente?.contexto || '';
     const turni = existente?.turni || [
@@ -124,7 +124,7 @@
 
     c.innerHTML = `
       <div class="gram-lesson-nav">
-        <button class="gram-btn-back" onclick="Dialoghi.renderizarSeletor()">â€¹ Cancelar</button>
+        <button class="gram-btn-back" onclick="Dialoghi.renderizarSeletor()">‹ Cancelar</button>
         <span style="font-size:0.9rem;font-weight:700">${idEditar ? 'Edit Dialogue' : 'New Dialogue'}</span>
       </div>
 
@@ -150,29 +150,29 @@
 
         <div style="margin-bottom:1rem">
           <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Context (situation description)</label>
-          <textarea id="dial-contexto" rows="2" placeholder="Ex: VocÃª entra em um bar para pedir um cafÃ©."
+          <textarea id="dial-contexto" rows="2" placeholder="Ex: Você entra em um bar para pedir um café."
             style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.88rem;resize:vertical">${contexto}</textarea>
         </div>
 
         <div style="font-size:0.85rem;font-weight:700;color:#003E8A;margin-bottom:0.8rem;border-top:1px solid #f0e8d8;padding-top:1rem">
-          ðŸ’¬ Dialogue Turns
+          💬 Dialogue Turns
         </div>
 
         <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.7rem;margin-bottom:1rem;font-size:0.8rem;color:#6B4C1A">
-          ðŸ’¡ <strong>Type "Character Line":</strong> the character speaks (the user just reads/listens).<br>
-          ðŸ’¡ <strong>Type "User Response":</strong> the user chooses from 4 options â€” fill in all 4 alternatives and mark the correct one.
+          💡 <strong>Type "Character Line":</strong> the character speaks (the user just reads/listens).<br>
+          💡 <strong>Type "User Response":</strong> the user chooses from 4 options — fill in all 4 alternatives and mark the correct one.
         </div>
 
         <div id="dial-turni">${turniHtml}</div>
 
         <div style="display:flex;gap:0.5rem;margin:0.8rem 0">
-          <button onclick="Dialoghi._adicionarTurnoFala()" class="btn-secondario" style="flex:1">âž• Add Character Line</button>
-          <button onclick="Dialoghi._adicionarTurnoResposta()" class="btn-secondario" style="flex:1">âž• Add User Response</button>
+          <button onclick="Dialoghi._adicionarTurnoFala()" class="btn-secondario" style="flex:1">➕ Add Character Line</button>
+          <button onclick="Dialoghi._adicionarTurnoResposta()" class="btn-secondario" style="flex:1">➕ Add User Response</button>
         </div>
 
         <div style="display:flex;gap:0.5rem">
           <button class="btn-primario" style="flex:1" onclick="Dialoghi._salvarFormulario('${idEditar || ''}')">
-            ðŸ’¾ Save Dialogue
+            💾 Save Dialogue
           </button>
           <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()">Cancelar</button>
         </div>
@@ -187,9 +187,9 @@
       <div class="dial-turno-form" id="dial-turno-${i}" style="background:#f9f6f0;border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;border:1px solid ${ehResposta ? '#003E8A' : '#ede5d5'}">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem">
           <span style="font-weight:700;font-size:0.82rem;color:${ehResposta ? '#003E8A' : '#2C2C2C'}">
-            ${ehResposta ? 'ðŸ‘¤ User Response' : 'ðŸ—£ï¸ Character Line'}
+            ${ehResposta ? '👤 User Response' : '🗣️ Character Line'}
           </span>
-          <button onclick="Dialoghi._removerTurno(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">ðŸ—‘ï¸</button>
+          <button onclick="Dialoghi._removerTurno(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️</button>
         </div>
 
         ${!ehResposta ? `
@@ -202,12 +202,12 @@
           <input type="text" data-campo="frase" data-idx="${i}" value="${turno.frase || ''}"
             placeholder="Frase em inglês *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
           <input type="text" data-campo="traducao" data-idx="${i}" value="${turno.traducao || ''}"
-            placeholder="TraduÃ§Ã£o em portuguÃªs" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem">
+            placeholder="Tradução em português" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem">
         ` : `
           <input type="text" data-campo="frase" data-idx="${i}" value="${turno.frase || ''}"
             placeholder="Frase correta em inglês *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
           <input type="text" data-campo="traducao" data-idx="${i}" value="${turno.traducao || ''}"
-            placeholder="TraduÃ§Ã£o em portuguÃªs" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem;margin-bottom:0.6rem">
+            placeholder="Tradução em português" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem;margin-bottom:0.6rem">
           <div style="font-size:0.78rem;font-weight:700;color:#003E8A;margin-bottom:0.4rem">4 Alternativas (marque a correta):</div>
           ${alts.map((a, ai) => `
             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem">
@@ -281,7 +281,7 @@
     const novo = {
       id: idEditar || `custom_dial_${Date.now()}`,
       titulo,
-      icone: document.getElementById('dial-icone')?.value.trim() || 'ðŸ’¬',
+      icone: document.getElementById('dial-icone')?.value.trim() || '💬',
       nivel: document.getElementById('dial-nivel')?.value || 'A1',
       contexto: document.getElementById('dial-contexto')?.value.trim() || '',
       criado_em: Date.now(),
@@ -313,7 +313,7 @@
     this.renderizarSeletor();
   },
 
-  // â”€â”€ MÃ‰TODOS DE JOGO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── MÉTODOS DE JOGO ──────────────────────────────────────────
   abrirDialogo(id, modo) {
     this.dialogoAtual = this.todosDialoghi().find(d => d.id === id);
     if (!this.dialogoAtual) return;
@@ -329,10 +329,10 @@
     
     let html = `
       <div style="margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between">
-        <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()" style="padding:0.4rem 0.8rem">â€¹ Voltar</button>
+        <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()" style="padding:0.4rem 0.8rem">‹ Voltar</button>
         <div style="display:flex;gap:0.5rem">
-          <button class="btn-modo-toggle ${this.modo === 'leitura' ? 'ativo' : ''}" onclick="Dialoghi.modo='leitura';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()" title="Modo Leitura">ðŸ“–</button>
-          <button class="btn-modo-toggle ${this.modo === 'pratica' ? 'ativo' : ''}" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()" title="Modo PrÃ¡tica">âœï¸</button>
+          <button class="btn-modo-toggle ${this.modo === 'leitura' ? 'ativo' : ''}" onclick="Dialoghi.modo='leitura';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()" title="Modo Leitura">📖</button>
+          <button class="btn-modo-toggle ${this.modo === 'pratica' ? 'ativo' : ''}" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()" title="Modo Prática">✍️</button>
         </div>
       </div>
       <div style="text-align:center;margin-bottom:1rem">
@@ -347,14 +347,14 @@
       for (const t of d.turni) {
         const isUtente = t.personaggio === 'Tu';
         const cssClass = isUtente ? 'utente' : 'personaggio';
-        // Fallback: se frase estiver vazia mas hÃ¡ alternativas, usa a resposta correta
+        // Fallback: se frase estiver vazia mas há alternativas, usa a resposta correta
         const fraseExibir = t.frase || (t.alternativas ? t.alternativas[t.resposta_correta || 0] : '');
         const traducaoExibir = t.traducao || '';
         html += `
           <div class="dialogo-turno ${cssClass}">
             <div class="dialogo-bubble">
               <div class="dialogo-nome">${t.personaggio}</div>
-              <div>${fraseExibir} <button class="dialogo-audio-btn" onclick="App.pronunciar('${fraseExibir.replace(/'/g, "\\'")}')">ðŸ”Š</button></div>
+              <div>${fraseExibir} <button class="dialogo-audio-btn" onclick="App.pronunciar('${fraseExibir.replace(/'/g, "\\'")}')">🔊</button></div>
               ${traducaoExibir ? `<div class="dialogo-traducao">${traducaoExibir}</div>` : ''}
             </div>
           </div>
@@ -362,18 +362,18 @@
       }
       html += `
         <div style="text-align:center;margin-top:1.5rem">
-          <button class="btn-primario" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()">Praticar DiÃ¡logo âœï¸</button>
+          <button class="btn-primario" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()">Praticar Diálogo ✍️</button>
         </div>
       `;
     } else {
-      // Modo prÃ¡tica: renderiza apenas o turno atual e os anteriores
+      // Modo prática: renderiza apenas o turno atual e os anteriores
       for (let i = 0; i <= this.turnoAtual; i++) {
         const t = d.turni[i];
         const isUtente = t.personaggio === 'Tu';
         const cssClass = isUtente ? 'utente' : 'personaggio';
         
         if (i < this.turnoAtual) {
-          // HistÃ³rico (jÃ¡ respondido)
+          // Histórico (já respondido)
           html += `
             <div class="dialogo-turno ${cssClass}">
               <div class="dialogo-bubble">
@@ -390,7 +390,7 @@
               <div class="dialogo-turno ${cssClass}" style="animation:fadeIn 0.3s ease">
                 <div class="dialogo-bubble">
                   <div class="dialogo-nome">${t.personaggio}</div>
-                  <div>${t.frase} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/'/g, "\\'")}')">ðŸ”Š</button></div>
+                  <div>${t.frase} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/'/g, "\\'")}')">🔊</button></div>
                   <div class="dialogo-traducao">${t.traducao}</div>
                 </div>
               </div>
@@ -399,7 +399,7 @@
               </div>
             `;
           } else {
-            // Escolha do usuÃ¡rio
+            // Escolha do usuário
             html += `
               <div style="margin-top:1rem;animation:fadeIn 0.3s ease">
                 <div class="dialogo-pratica-frase">Sua vez de falar. Escolha a melhor resposta:</div>
@@ -434,7 +434,7 @@
     const turno = this.dialogoAtual.turni[this.turnoAtual];
     const correto = indice === turno.resposta_correta;
     
-    // Desabilita botÃµes
+    // Desabilita botões
     const container = btn.parentElement;
     container.querySelectorAll('button').forEach(b => {
       b.disabled = true;
@@ -462,7 +462,7 @@
     const totalTu = d.turni.filter(t => t.personaggio === 'Tu').length;
     const pct = Math.round((this.acertos / totalTu) * 100);
     
-    // Apenas ganha XP se acertar a maioria e estiver no modo prÃ¡tica
+    // Apenas ganha XP se acertar a maioria e estiver no modo prática
     let ganhouXp = false;
     if (this.modo === 'pratica' && pct >= 60) {
       Progressao.ganhar(d.xp_recompensa);
@@ -472,7 +472,7 @@
     const c = document.getElementById('dialoghi-container');
     c.innerHTML = `
       <div style="text-align:center;padding:2rem 1rem">
-        <div style="font-size:3rem">${pct >= 80 ? 'ðŸŒŸ' : (pct >= 50 ? 'ðŸ‘' : 'ðŸ”„')}</div>
+        <div style="font-size:3rem">${pct >= 80 ? '🌟' : (pct >= 50 ? '👍' : '🔄')}</div>
         <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);font-size:1.5rem;margin:1rem 0">${I18n.t('dial_concluido')}</h3>
         <div style="font-size:1.1rem;margin-bottom:1rem">${I18n.t('dial_acertos').replace('{a}', this.acertos).replace('{b}', totalTu)}</div>
         ${ganhouXp ? `<div style="color:var(--cor-toscano);font-weight:700;font-size:1.2rem;margin-bottom:1.5rem">+${d.xp_recompensa} XP</div>` : ''}
