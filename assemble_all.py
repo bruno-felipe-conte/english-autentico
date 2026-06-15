@@ -54,4 +54,5 @@ master_json["moduli"].append({
     "lezioni": units_c1
 })
 
-print(json.dumps(master_json, ensure_ascii=False, indent=2))
+with open("data/grammar_new.json", "wb") as f:
+    f.write(json.dumps(master_json, ensure_ascii=False, indent=2).encode('utf-8'))
