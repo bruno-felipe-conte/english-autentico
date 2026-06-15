@@ -4,14 +4,14 @@
 
 // ── Level names by milestone ───────────────────────────────
 const _LEVEL_NOMES = {
-  1:'Principiante', 2:'Curioso', 3:'Esploratore', 5:'Studioso',
-  7:'Intermedio', 10:'Avanzato', 13:'Esperto', 16:'Avanzato Plus',
-  19:'Maestro', 20:'Gran Maestro'
+  1:'Beginner', 2:'Explorer', 3:'Adventurer', 5:'Student',
+  7:'Intermediate', 10:'Advanced', 13:'Expert', 16:'Advanced Plus',
+  19:'Master', 20:'Grand Master'
 };
 function _nomePorNivel(n) {
   const keys = Object.keys(_LEVEL_NOMES).map(Number).sort((a,b)=>b-a);
   for (const k of keys) { if (n >= k) return _LEVEL_NOMES[k]; }
-  return 'Principiante';
+  return 'Beginner';
 }
 
 // ── Level-Up modal ─────────────────────────────────────────
@@ -159,7 +159,7 @@ const Progressao = {
       if (typeof LevelUp !== 'undefined') {
         LevelUp.mostrar(p.nivel);
       } else {
-        App.notificar(`🎉 Livello ${p.nivel}! Avanzamento!`, 'successo');
+        App.notificar(`🎉 Level ${p.nivel}! Keep it up!`, 'successo');
       }
       if (typeof SomFeedback !== 'undefined') SomFeedback.nivelUp();
       if (typeof Conquistas !== 'undefined') Conquistas.verificar();

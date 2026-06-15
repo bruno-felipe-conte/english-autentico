@@ -43,7 +43,7 @@ const Grammatica = {
   voltarSeletor() {
     const total = this.unidadeAtual?.exercicios?.length || 0;
     if (this.unidadeAtual && this.exIndex > 0 && this.exIndex < total) {
-      if (!confirm('Vuoi tornare? Il progresso di questa lezione andrà perso.')) return;
+      if (!confirm('Are you sure? Progress on this lesson will be lost.')) return;
     }
     this.renderizarSeletor();
   },
@@ -77,7 +77,7 @@ const Grammatica = {
       html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;
       html += `</div>`;
       html += `<div class="gram-nivel-nome">${mod.nome}</div>`;
-      html += `<div class="gram-nivel-info">${completas}/${totalUnid} completi &middot; ${totalEx} esercizi</div>`;
+      html += `<div class="gram-nivel-info">${completas}/${totalUnid} complete &middot; ${totalEx} exercises</div>`;
       html += `<div class="gram-nivel-barra"><div style="width:${pct}%"></div></div>`;
       html += '</div>';
 
@@ -91,7 +91,7 @@ const Grammatica = {
         html += `<span class="gram-lez-info">`;
         html += `<span class="gram-lez-num-label">${u.num}</span>`;
         html += `<span class="gram-lez-titulo">${u.titulo}</span>`;
-        html += `<span class="gram-lez-meta">${nEx} esercizi</span>`;
+        html += `<span class="gram-lez-meta">${nEx} exercises</span>`;
         html += `</span>`;
         html += `<span class="gram-lez-arrow">›</span>`;
         html += '</button>';
@@ -109,7 +109,7 @@ const Grammatica = {
         html += `<span class="gram-locked-pill-info">`;
         html += `<span class="gram-locked-pill-id">${mod.id}</span>`;
         html += `<span class="gram-locked-pill-nome">${mod.nome}</span>`;
-        html += `<span class="gram-locked-pill-req">Richiede Livello ${mod.nivel_minimo}</span>`;
+        html += `<span class="gram-locked-pill-req">Requires Level ${mod.nivel_minimo}</span>`;
         html += `</span>`;
         html += `<span class="gram-locked-pill-arrow">›</span>`;
         html += `</button>`;
@@ -138,13 +138,13 @@ const Grammatica = {
     overlay.innerHTML = `
       <div class="gram-admin-box" role="dialog" aria-modal="true">
         <div class="gram-admin-icon">🔐</div>
-        <div class="gram-admin-titulo">Accesso Amministratore</div>
+        <div class="gram-admin-titulo">Administrator Access</div>
         <div class="gram-admin-subtit">${nome}</div>
         <input
           id="gram-admin-input"
           class="gram-admin-input"
           type="password"
-          placeholder="Inserisci la password"
+          placeholder="Enter password"
           maxlength="20"
           autocomplete="off"
           onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
@@ -234,7 +234,7 @@ const Grammatica = {
 
     // Nav
     html += '<div class="gram-lesson-nav">';
-    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">‹ Tutti i moduli</button>`;
+    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">‹ All modules</button>`;
     html += `<div class="gram-lesson-breadcrumb"><span>${mod.id}</span> › <span>${u.num}</span></div>`;
     html += '</div>';
 
@@ -363,7 +363,7 @@ const Grammatica = {
     html += `<div class="gram-risposta-container" id="gram-risposta">${spans}</div>`;
     html += '<div class="gram-revelar-actions">';
     html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Ver resposta</button>';
-    html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Ocultar</button>';
+    html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Hide</button>';
     html += '</div>';
     html += '</div>';
     return html;
@@ -539,10 +539,10 @@ const Grammatica = {
 
     if (typeof Calor !== 'undefined') Calor.registrar(total);
 
-    let emoji = '📚', msg = 'Continua a studiare — ci riesci!';
-    if      (pct === 100) { emoji = '🌟'; msg = 'Perfetto! Nessun errore!'; }
-    else if (pct >= 80)   { emoji = '🎉'; msg = 'Ottimo lavoro! Quasi perfetto!'; }
-    else if (pct >= 60)   { emoji = '💪'; msg = 'Bene! Continua così!'; }
+    let emoji = '📚', msg = 'Keep studying — you can do it!';
+    if      (pct === 100) { emoji = '🌟'; msg = 'Perfect! No mistakes!'; }
+    else if (pct >= 80)   { emoji = '🎉'; msg = 'Great work! Almost perfect!'; }
+    else if (pct >= 60)   { emoji = '💪'; msg = 'Good! Keep it up!'; }
 
     // Próxima lição
     const unids = this.moduloAtual.lezioni;
@@ -550,21 +550,21 @@ const Grammatica = {
     let proxBtn = '';
     if (idx >= 0 && idx < unids.length - 1) {
       const prox = unids[idx + 1];
-      proxBtn = `<button class="gram-btn-next" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${prox.id}')">Prossimo capitolo →</button>`;
+      proxBtn = `<button class="gram-btn-next" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${prox.id}')">Next chapter →</button>`;
     }
 
     return `
       <div class="gram-card gram-resultado">
         <div class="gram-res-emoji">${emoji}</div>
-        <div class="gram-res-title">Capitolo Completato!</div>
+        <div class="gram-res-title">Chapter Complete!</div>
         <div class="gram-res-score">${acertos}<span>/${total}</span></div>
-        <div class="gram-res-pct">${pct}% corretto</div>
-        ${!jaFeita ? `<div class="gram-res-xp">+${bonus} XP bônus 🏆</div>` : ''}
+        <div class="gram-res-pct">${pct}% correct</div>
+        ${!jaFeita ? `<div class="gram-res-xp">+${bonus} XP bonus 🏆</div>` : ''}
         <div class="gram-res-msg">${msg}</div>
         <div class="gram-res-actions">
-          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Ripeti</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Retry</button>
           ${proxBtn}
-          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">‹ Tutti i moduli</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">‹ All modules</button>
         </div>
       </div>`;
   },

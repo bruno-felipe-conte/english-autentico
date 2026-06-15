@@ -884,7 +884,7 @@ const Flashcards = {
     const total = [...devidas, ...novasLimitadas];
 
     if (total.length === 0) {
-      App.notificar('🎉 Nessuna carta in scadenza oggi!', 'sucesso');
+      App.notificar('🎉 No cards due today!', 'sucesso');
       return;
     }
 
@@ -967,7 +967,7 @@ const Flashcards = {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return null;
     const r = new SR();
-    r.lang = 'it-IT';
+    r.lang = 'en-US';
     r.continuous = false;
     r.interimResults = false;
     return r;
@@ -1013,11 +1013,11 @@ const Flashcards = {
     const fb = document.getElementById('imitacao-feedback');
     if (!fb) return;
     if (reconheceu) {
-      fb.innerHTML = `<span style="color:#27AE60">✅ Perfetto! Ouvimos: "${texto}"</span>`;
+      fb.innerHTML = `<span style="color:#27AE60">✅ Perfect! We heard: "${texto}"</span>`;
       if (typeof Progressao !== 'undefined') Progressao.ganhar(3);
       else if (typeof App !== 'undefined') App.ganharXP(3);
     } else {
-      fb.innerHTML = `<span style="color:#E67E22">🔄 Ouvimos: "${texto}" — tente de novo!</span>`;
+      fb.innerHTML = `<span style="color:#E67E22">🔄 We heard: "${texto}" — try again!</span>`;
     }
     fb.style.display = 'block';
     setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);

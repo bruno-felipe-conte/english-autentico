@@ -291,10 +291,10 @@ const Quiz = {
 
     // Choose message based on score
     let msg = '';
-    if (pct >= 90) msg = '🏆 Perfetto! Sei un maestro dell\'italiano!';
-    else if (pct >= 70) msg = '👏 Molto bene! Continua così!';
-    else if (pct >= 50) msg = '📚 Bene! Ma puoi fare di meglio!';
-    else msg = '💪 Non mollare! Continua a studiare!';
+    if (pct >= 90) msg = '🏆 Perfect! You are a master of English!';
+    else if (pct >= 70) msg = '👏 Very good! Keep it up!';
+    else if (pct >= 50) msg = '📚 Good! But you can do better!';
+    else msg = '💪 Don\'t give up! Keep studying!';
 
     const scoreEl = document.getElementById('resultado-score');
     const xpEl = document.getElementById('resultado-xp');
@@ -356,7 +356,7 @@ const Quiz = {
     if (Progressao.temploDesbloqueado(1)) {
       const btnMisto = document.createElement('button');
       btnMisto.className = 'quiz-templo-btn';
-      btnMisto.innerHTML = '🌍 Quiz Generale<br><small>Tutti i templi misti</small>';
+      btnMisto.innerHTML = '🌍 Mixed Quiz<br><small>All temples combined</small>';
       btnMisto.style.gridColumn = '1 / -1'; // span full width
       btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
       btnMisto.style.color = 'white';
@@ -378,7 +378,7 @@ const Quiz = {
       btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
       btn.innerHTML = desbloqueado
         ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
-        : `🔒 ${i}. ${nome}<br><small>Livello ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+        : `🔒 ${i}. ${nome}<br><small>Level ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
 
       if (desbloqueado) btn.onclick = () => this.iniciar(i);
       else btn.disabled = true;

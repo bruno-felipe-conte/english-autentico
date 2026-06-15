@@ -1,0 +1,99 @@
+{
+  "versao": "3.0",
+  "moduli": [
+    {
+      "nivel_minimo": 1,
+      "nome": "A1 — Beginner Basics",
+      "cor": "#22c55e",
+      "liacoes": ["a1-lez0"]
+    },
+    {
+      "nivel_minimo": 1,
+      "nome": "A1 — Article System",
+      "cor": "#22c55e", 
+      "liacoes": ["a1-lez1"]
+    },
+    {
+      "nivel_minimo": 1,
+      "nome": "A1 — Present Simple",
+      "cor": "#22c55e",
+      "liacoes": ["a1-lez2"]
+    },
+    {
+      "nivel_minimo": 4,
+      "nome": "A3 — Pronouns & Possession",
+      "cor": "#6a0dad",
+      "liacoes": ["a3-lez0"]
+    },
+    {
+      "nivel_minimo": 4, 
+      "nome": "A3 — Existence & Prepositions",
+      "cor": "#8b00cc",
+      "liacoes": ["a3-lez1", "a3-lez2"]
+    }
+  ],
+  "liacoes_completas": [
+    {
+      "id": "a1-lez0",
+      "num": "Lesson I",
+      "titulo": "To Be — Am, Is, Are",
+      "subtitulo": "The foundation of all English sentences",
+      "alerta": "To be is irregular and essential. Master it before moving on.",
+      "observacao_cards": [
+        {"italiano": "I am / You are / He is / She is / It is / We are / They are", "traducao": "Forms of 'to be' for each subject", "genero": "pattern", "motivo": "Each subject has its own form"},
+        {"italiano": "Negative: I'm not / You aren't / He isn't", "traducao": "Negative forms", "genero": "tag", "motivo": "Add 'not' after verb"},
+        {"italiano": "Question: Are you? Is she?", "traducao": "Question formation", "genero": "tag", "motivo": "Invert subject and verb"}
+      ],
+      "tabela_visual": "<table><tr><th>Subject</th><th>To Be</th><th>Negative</th><th>Question</th></tr><tr><td>I</td><td>am</td><td>I'm not</td><td>Am I?</td></tr><tr><td>You</td><td>are</td><td>aren't/you're not</td><td>Are you?</td></tr><tr><td>He/She/It</td><td>is</td><td>isn't/he/she/it's not</td><td>Is he/she/it?</td></tr><tr><td>We</td><td>are</td><td>aren't/we're not</td><td>Are we?</td></tr><tr><td>They</td><td>are</td><td>aren't/they're not</td><td>Are they?</td></tr></table>",
+      "exemplos_prc": [
+        {"oracao": "I am a student. She is happy.", "pergunta": "Identify subjects and verbs", "resposta": "I=am, She=is", "conclusao": "Match subject to correct form"},
+        {"oracao": "We are friends. They are here.", "pergua": "Plural forms", "resposta": "We/They = are", "conclusao": "First person plural and third person plural use 'are'"},
+        {"oracao": "It is raining. He is busy.", "pergunta": "Singular forms", "resposta": "It=it's, He=is", "conclusao": "Third person singular uses 'is'"}
+      ],
+      "armadilhas": [
+        {"errado": "I isn't happy", "certo": "I am not/I'm not", "motivo": "I always uses 'am'"},
+        {"errado": "They is students", "certo": "They are students", "motivo": "Plural subject = plural verb"}
+      ],
+      "coda": "To be: I=am, You/We/They=are, He/She/It=is. Memorize this!",
+      "exercicios": [
+        {"tipo": "escolha", "pergunta": "I ___ a teacher.", "opcoes": ["am", "is", "are"], "resposta": 0, "explicacao": "I = am"},
+        {"tipo": "digitar", "pergunta": "They ____ my friends.", "resposta": "are", "dica": "Plural subject", "explicacao": "They = are"},
+        {"tipo": "escolha", "pergunta": "She _____ happy today.", "opcoes": ["am", "is", "are"], "resposta": 1, "explicacao": "She = is"},
+        {"tipo": "revelar", "pergunta": "We ____ students at school.", "resposta": "are", "explicacao": "We = are"},
+        {"tipo": "escolha", "pergunta": "_____ you ready?", "opcoes": ["Am", "Is", "Are"], "resposta": 2, "explicacao": "You = are"},
+        {"tipo": "digitar", "pergunta": "He ____ not here.", "resposta": "isn't/is not", "dica": "Negative of 'is'", "explicacao": "Is + not = isn't"}
+      ]
+    },
+    {
+      "id": "a1-lez1",
+      "num": "Lesson II", 
+      "titulo": "Articles — A, An, The",
+      "subtitulo": "Indefinite vs definite articles explained",
+      "alerta": "Articles are small but essential. Using them correctly is key to natural English.",
+      "observacao_cards": [
+        {"italiano": "Use 'a' before consonant sounds (a book, a university)", "traducao": "A before consonant sounds", "genero": "pattern", "motivo": "Sound matters, not spelling"},
+        {"italiano": "Use 'an' before vowel sounds (an apple, an hour)", "traducao": "An before vowel sounds", "genero": "pattern", "motivo": "Hour has silent h = vowel sound"},
+        {"italiano": "Use 'the' for specific things everyone knows", "traducao": "The for specific/definite", "genero": "tag", "motivo": "Both speaker and listener know which"},
+        {"italiano": "Zero article for general concepts", "traducao": "No article for general", "genero": "tag", "motivo": "English allows bare nouns"}
+      ],
+      "tabela_visual": "<table><tr><th>Article</th><th>When to Use</th><th>Example</th></tr><tr><td>A</td><td>Singular, first mention, consonant sound</td><td>a dog, a friend</td></tr><tr><td>An</td><td>Singular, first mention, vowel sound</td><td>an apple, an umbrella</td></tr><tr><td>The</td><td>Specific, previously mentioned, superlatives</td><td>the book on the table</td></tr><tr><td>(no article)</td><td>General statements, abstract nouns</td><td>I like music</td></tr></table>",
+      "exemplos_prc": [
+        {"oracao": "I saw a cat. Then I saw the cat.", "pergunta": "Indefinite vs definite", "resposta": "First=a, second=the", "conclusao": "Use 'a' for first mention"},
+        {"oracao": "She wants an orange. He wants the orange.", "pergunta": "Compare articles", "resposta": "An=first, The=specific one", "conclusao": "The = specific one already known"}
+      ],
+      "armadilhas": [
+        {"errado": "a university", "certo": "a university", "motivo": "'U' sound = consonant, use 'a'"},
+        {"errado": "an European car", "certo": "a European car", "motivo": "'E' pronounced = consonant sound"}
+      ],
+      "coda": "Think in sounds: A/consonant-sound, An/vowel-sound, The/specific.",
+      "exercicios": [
+        {"tipo": "escolha", "pergunta": "I need ___ umbrella today.", "opcoes": ["a", "an", "the"], "resposta": 1, "explicacao": "Umbrella starts with vowel sound"},
+        {"tipo": "digitar", "pergunta": "She wants to visit ___ Europe.", "resposta": "(no article)", "dica": "General place name", "explicacao": "Countries/continents = no article"},
+        {"tipo": "escolha", "pergunta": "____ dog is sleeping.", "opcoes": ["A", "An", "The", "-"], "resposta": 2, "explicacao": "Specific dog mentioned before"},
+        {"tipo": "revelar", "pergunta": "He wants to buy ___ car.", "resposta": "a", "explicacao": "First mention = indefinite article"}
+      ]
+    }
+  ],
+  "total_exercicios": 20,
+  "ultima_atualizacao": "2026-06-14T18:30:00Z"
+}

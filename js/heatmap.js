@@ -45,7 +45,7 @@ const Calor = {
       App.estado.progresso.streak = streak;
       App.salvarProgresso();
       const el = document.getElementById('stat-streak');
-      if (el) el.textContent = `🔥 ${streak} dia${streak !== 1 ? 's' : ''}`;
+      if (el) el.textContent = `🔥 ${streak} day${streak !== 1 ? 's' : ''}`;
     }
   },
 
@@ -86,7 +86,7 @@ const Calor = {
     ].join('-');
 
     // Center month = current - offset; show 5 months: [center-2, center-1, center, center+1, center+2]
-    const MESES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const MESES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const centerDate = new Date(today.getFullYear(), today.getMonth() - this.offset, 1);
     const months = [];
     for (let i = -2; i <= 2; i++) {
@@ -128,7 +128,7 @@ const Calor = {
     // ── Render month blocks ────────────────────────────────
     const canGoRight = this.offset > 0;
     let html = `<div class="hm-nav-row">`;
-    html += `<button class="hm-nav-btn" onclick="Calor.navegar(-1)" title="${I18n.idioma === 'it' ? 'Mese precedente' : 'Mês anterior'}">&lt;</button>`;
+    html += `<button class="hm-nav-btn" onclick="Calor.navegar(-1)" title="Previous month">&lt;</button>`;
     html += `<div class="hm-months-row">`;
 
     for (const { year, month } of months) {
@@ -157,10 +157,10 @@ const Calor = {
         }
         const isToday = k === todayStr;
         const xpDia = this._lerEntrada(diario[k]).xp;
-        const dataFmt = new Date(k + 'T12:00:00').toLocaleDateString('pt-BR', { day:'2-digit', month:'short', year:'numeric' });
+        const dataFmt = new Date(k + 'T12:00:00').toLocaleDateString('en-US', { day:'2-digit', month:'short', year:'numeric' });
         const tooltipTxt = value > 0
-          ? `${dataFmt}: ${value} carta${value !== 1 ? 's' : ''}${xpDia > 0 ? ` · +${xpDia} XP` : ''}`
-          : `${dataFmt}: sem estudo`;
+          ? `${dataFmt}: ${value} card${value !== 1 ? 's' : ''}${xpDia > 0 ? ` · +${xpDia} XP` : ''}`
+          : `${dataFmt}: no study`;
         const toastMsg = tooltipTxt.replace(/'/g, "\\'");
         html += `<div class="hm-cell l${level}${isToday ? ' today' : ''}" title="${tooltipTxt}" onclick="App.notificar('${toastMsg}','alerta')"></div>`;
       }
@@ -171,7 +171,7 @@ const Calor = {
     }
 
     html += '</div>'; // hm-months-row
-    html += `<button class="hm-nav-btn" onclick="Calor.navegar(1)" ${canGoRight ? '' : 'disabled'} title="${I18n.idioma === 'it' ? 'Mese successivo' : 'Próximo mês'}">&gt;</button>`;
+    html += `<button class="hm-nav-btn" onclick="Calor.navegar(1)" ${canGoRight ? '' : 'disabled'} title="Next month">&gt;</button>`;
     html += '</div>'; // hm-nav-row
     container.innerHTML = html;
 

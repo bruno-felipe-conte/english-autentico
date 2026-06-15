@@ -66,12 +66,12 @@ const Profilo = {
 
         <!-- General stats -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📊 Statistiche Generali</div>
-          ${this._row('Livello attuale', `${p.nivel || 1}`)}
-          ${this._row('XP totale', `${(p.xp || 0).toLocaleString()} XP`)}
-          ${this._row('Streak attuale', `${p.streak || 0} 🔥 giorni`)}
-          ${this._row('Flashcard revisionate', `${totalRevisoes.toLocaleString()}`)}
-          ${this._row('Parole dominate', `${totalDominadas}`)}
+          <div class="profilo-card-titulo">📊 General Stats</div>
+          ${this._row('Current Level', `${p.nivel || 1}`)}
+          ${this._row('Total XP', `${(p.xp || 0).toLocaleString()} XP`)}
+          ${this._row('Current Streak', `${p.streak || 0} 🔥 days`)}
+          ${this._row('Flashcards Reviewed', `${totalRevisoes.toLocaleString()}`)}
+          ${this._row('Words Mastered', `${totalDominadas}`)}
           ${this._row('Parole difficili', totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
           ${this._row('Tempo stimato', `${tempoEstimadoMin} min`)}
           ${this._row('Templi sbloccati', `${(p.templos_desbloqueados||[]).length} / 50`)}

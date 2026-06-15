@@ -243,7 +243,7 @@ const Vocab = {
     if (!sel) return;
 
     // Keep "Tutti i templi" option
-    sel.innerHTML = '<option value="">Tutti i templi</option>';
+    sel.innerHTML = '<option value="">All temples</option>';
 
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
     desbloqueados.forEach(num => {
@@ -261,7 +261,7 @@ const Vocab = {
     const sel = document.getElementById('vocab-categoria-filtro');
     if (!sel) return;
 
-    sel.innerHTML = '<option value="">Tutte le categorie</option>';
+    sel.innerHTML = '<option value="">All categories</option>';
 
     // Collect unique categories from vocab cache
     const categorias = new Set();

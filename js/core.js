@@ -17,16 +17,16 @@ const App = {
   // Temple gradient palettes (index = temple number, 1-based)
   TEMPLO_CORES: [
     null,
-    'linear-gradient(135deg, #9B2335, #6B1525)',   // 1  Roma
-    'linear-gradient(135deg, #1A5276, #154360)',   // 2  Venezia
-    'linear-gradient(135deg, #1E8449, #145A32)',   // 3  Firenze
-    'linear-gradient(135deg, #7D3C98, #5B2C6F)',   // 4  Napoli
-    'linear-gradient(135deg, #CA6F1E, #9C4A1A)',   // 5  Milano
-    'linear-gradient(135deg, #2E86C1, #1A5276)',   // 6  Bologna
-    'linear-gradient(135deg, #C0392B, #922B21)',   // 7  Torino
-    'linear-gradient(135deg, #117A65, #0E6655)',   // 8  Palermo
-    'linear-gradient(135deg, #6E2F8F, #512E6D)',   // 9  Bari
-    'linear-gradient(135deg, #B7950B, #9A7D0A)',   // 10 Siena
+    'linear-gradient(135deg, #003E8A, #002D65)',   // 1  New York      — Royal Navy Blue
+    'linear-gradient(135deg, #E65100, #BF360C)',   // 2  Los Angeles   — Sunset Orange
+    'linear-gradient(135deg, #37474F, #263238)',   // 3  Chicago        — Steel Blue-Grey
+    'linear-gradient(135deg, #1B5E20, #2E7D32)',   // 4  Nashville      — Tennessee Green
+    'linear-gradient(135deg, #0277BD, #01579B)',   // 5  San Francisco  — Bay Blue
+    'linear-gradient(135deg, #4A148C, #6A1B9A)',   // 6  Boston         — Harvard Crimson-Purple
+    'linear-gradient(135deg, #880E4F, #AD1457)',   // 7  New Orleans    — Jazz Magenta
+    'linear-gradient(135deg, #004D40, #00695C)',   // 8  Atlanta        — Southern Teal
+    'linear-gradient(135deg, #BF360C, #E64A19)',   // 9  Austin         — Texas Burnt Orange
+    'linear-gradient(135deg, #1A237E, #283593)',   // 10 Washington DC  — Capitol Blue
     'linear-gradient(135deg, #2C3E50, #1A252F)',   // 11
     'linear-gradient(135deg, #1ABC9C, #148F77)',   // 12
     'linear-gradient(135deg, #E74C3C, #CB4335)',   // 13
@@ -69,19 +69,114 @@ const App = {
     'linear-gradient(135deg, #9B2335, #4A0A15)',   // 50
   ],
 
-  // Temple names (index = templo number)
+  // Temple names (index = templo number, 1-50 — thematic English titles)
   TEMPLO_NOMES: [
     null,
-    'The Foundations',     // 1 New York
-    'The Everyday',        // 2 Los Angeles
-    'The Journey',         // 3 Chicago
-    'The Flavors',         // 4 Nashville
-    'The Time',            // 5 San Francisco
-    'The Grammar',         // 6 Boston
-    'The Conversation',    // 7 New Orleans
-    'The Culture',         // 8 Atlanta
-    'The Workplace',       // 9 Austin
-    'The Literature',      // 10 Washington DC
+    'The Foundations',          // 1
+    'The Everyday Journey',     // 2
+    'The Road Ahead',           // 3
+    'Taste & Tradition',        // 4
+    'Clockwork',                // 5
+    'Structure & Syntax',       // 6
+    'Conversation Flow',        // 7
+    'Cultural Depths',          // 8
+    'Professional Edge',        // 9
+    'Literary Arts',            // 10
+    'History Unveiled',         // 11
+    'Life\'s Rhythm',           // 12
+    'Everyday Moments',         // 13
+    'The City Life',            // 14
+    'Family & Home',            // 15
+    'Creative Expression',      // 16
+    'Business World',           // 17
+    'Health & Wellness',        // 18
+    'Workplace Success',        // 19
+    'Travel Essentials',        // 20
+    'Academic Focus',           // 21
+    'Personal Growth',          // 22
+    'Social Connections',       // 23
+    'Technology Talk',          // 24
+    'Dining Culture',           // 25
+    'Sports & Recreation',      // 26
+    'Arts & Music',             // 27
+    'Environmental Awareness',  // 28
+    'Financial Literacy',       // 29
+    'Legal Basics',             // 30
+    'Political Discourse',      // 31
+    'Cultural Heritage',        // 32
+    'Media & News',             // 33
+    'Philosophy & Ethics',      // 34
+    'Scientific Thinking',      // 35
+    'Historical Events',        // 36
+    'Geography Fundamentals',   // 37
+    'Mythology & Legends',     // 38
+    'Religious Studies',        // 39
+    'Language Learning',        // 40
+    'Memory Techniques',        // 41
+    'Public Speaking',          // 42
+    'Interview Skills',         // 43
+    'Networking Mastery',       // 44
+    'Leadership Principles',    // 45
+    'Teamwork Dynamics',        // 46
+    'Conflict Resolution',      // 47
+    'Cross-Cultural Communication', // 48
+    'Advanced Grammar',         // 49
+    'English Mastery',          // 50
+  ],
+
+  // English city overrides — British/American cities for all 50 temples (cyclical distribution)
+  TEMPLO_CIDADES: [
+    null,
+      'London',            // 1
+    'Manchester',         // 2
+    'Edinburgh',          // 3
+    'Cardiff',            // 4
+    'Belfast',            // 5
+    'Dublin',             // 6
+    'Glasgow',            // 7
+    'Bristol',            // 8
+    'Newcastle',          // 9
+    'Leeds',              // 10
+    'Birmingham',         // 11
+    'Liverpool',          // 12
+    'Coventry',           // 13
+    'Leicester',          // 14
+    'Sheffield',          // 15
+    'Norwich',            // 16
+    'Reading',            // 17
+    'Oxford',             // 18
+    'Cambridge',          // 19
+    'Southampton',        // 20
+    'London',             // 21 (cycle continues)
+    'Manchester',         // 22
+    'Edinburgh',          // 23
+    'Cardiff',            // 24
+    'Belfast',            // 25
+    'Dublin',             // 26
+    'Glasgow',            // 27
+    'Bristol',            // 28
+    'Newcastle',          // 29
+    'Leeds',              // 30
+    'Birmingham',         // 31
+    'Liverpool',          // 32
+    'Coventry',           // 33
+    'Leicester',          // 34
+    'Sheffield',          // 35
+    'Norwich',            // 36
+    'Reading',            // 37
+    'Oxford',             // 38
+    'Cambridge',          // 39
+    'Southampton',        // 40
+    'London',             // 41
+    'Manchester',         // 42
+    'Edinburgh',          // 43
+    'Cardiff',            // 44
+    'Belfast',            // 45
+    'Dublin',             // 46
+    'Glasgow',            // 47
+    'Bristol',            // 48
+    'Newcastle',          // 49
+    'Leeds',              // 50
   ],
 
   // Minimum level to unlock each temple (matches Progressao.TEMPLO_NIVEL)
@@ -392,7 +487,7 @@ const App = {
     const ipa = palavra.audio_ipa
       ? (palavra.audio_ipa.startsWith('/') ? palavra.audio_ipa : `/${palavra.audio_ipa}/`)
       : '';
-    const data = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
+    const data = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
     const isFav = this.estado.progresso && this.estado.progresso.favoritos && this.estado.progresso.favoritos.includes(palavra.id);
     const favEmoji = isFav ? '❤️' : '🤍';
@@ -461,7 +556,7 @@ const App = {
     const cor = dados.atingeNoPrazo ? '#27AE60' : '#E74C3C';
     const emoji = dados.atingeNoPrazo ? '✅' : '⚠️';
     return `<div class="card-meta-prazo" onclick="App.abrirModalMetaPrazo()">
-      <div class="meta-prazo-titulo">${emoji} ${I18n.idioma === 'it' ? 'Obiettivo' : 'Meta'}: ${I18n.idioma === 'it' ? 'Livello' : 'Nível'} ${dados.nivel_alvo} ${I18n.idioma === 'it' ? 'entro il' : 'até'} ${new Date(dados.data_alvo).toLocaleDateString(I18n.idioma === 'it' ? 'it-IT' : 'pt-BR', {timeZone: 'UTC'})}</div>
+      <div class="meta-prazo-titulo">${emoji} ${I18n.idioma === 'en' ? 'Goal' : 'Meta'}: ${I18n.idioma === 'en' ? 'Level' : 'Nível'} ${dados.nivel_alvo} ${I18n.idioma === 'en' ? 'by' : 'até'} ${new Date(dados.data_alvo).toLocaleDateString(I18n.idioma === 'en' ? 'en-US' : 'pt-BR', {timeZone: 'UTC'})}</div>
       <div class="meta-prazo-info">
         <span style="color:${cor}">${dados.xpPorDia} ${I18n.t('meta_xp_necessarios')}</span>
         <span>·</span>
@@ -498,7 +593,7 @@ const App = {
 
       // If data not loaded but temple is unlocked, show placeholder
       const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
-      const cidade = data ? data.cidade : '—';
+      const cidade = this.TEMPLO_CIDADES[i] || (data ? data.cidade : '—');
       const nivel = data ? data.nivel : '—';
       const totalPalavras = data && data.palavras ? data.palavras.length : 0;
 
@@ -605,7 +700,7 @@ const App = {
     const concluido    = this.estado.progresso.templos_concluidos.includes(i);
     const cor          = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
     const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
-    const cidade       = data ? data.cidade : '—';
+    const cidade       = this.TEMPLO_CIDADES[i] || (data ? data.cidade : '—');
     const nivel        = data ? data.nivel : '—';
     const desc         = this.TEMPLO_DESC[i] || '';
     const nivelMinimo  = this.TEMPLO_NIVEL_MINIMO[i] || i;

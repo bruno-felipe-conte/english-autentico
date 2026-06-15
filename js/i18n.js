@@ -1,5 +1,5 @@
 // ============================================================
-// i18n.js — Sistema de Localização (Imersão Total em Italiano)
+// i18n.js — Localization System (Total Immersion in English)
 // ============================================================
 
 const I18n = {
@@ -7,29 +7,29 @@ const I18n = {
   
   dict: {
     // ── Abas de Navegação (Bottom / Mobile) ──
-    'nav_inicio': { pt: 'Início', en: 'Home' },
-    'nav_dialogos': { pt: 'Diálogos', en: 'Dialogues' },
-    'nav_canzoni': { pt: 'Canzoni', en: 'Songs' },
-    'nav_imitacao': { pt: 'Imitação', en: 'Imitation' },
-    'nav_flashcard': { pt: 'Flashcard', en: 'Flashcard' },
+    'nav_inicio': { pt: 'Temples', en: 'Temples' },
+    'nav_dialogos': { pt: 'Dialogues', en: 'Dialogues' },
+    'nav_canzoni': { pt: 'Songs', en: 'Songs' },
+    'nav_imitacao': { pt: 'Listen', en: 'Listen' },
+    'nav_flashcard': { pt: 'Flashcards', en: 'Flashcards' },
     'nav_quiz': { pt: 'Quiz', en: 'Quiz' },
-    'nav_vocab': { pt: 'Vocab', en: 'Vocabulary' },
-    'nav_gramatica': { pt: 'Gramática', en: 'Grammar' },
-    'nav_storie':    { pt: 'Storie', en: 'Storie' },
-    
+    'nav_vocab': { pt: 'Vocab', en: 'Vocab' },
+    'nav_gramatica': { pt: 'Grammar', en: 'Grammar' },
+    'nav_storie':    { pt: 'Reading', en: 'Reading' },
+
     // ── Abas de Navegação (Top / Desktop) ──
-    'top_nav_templi': { pt: 'Templi', en: 'Templi' },
-    'top_nav_dialoghi': { pt: 'Dialoghi', en: 'Dialogues' },
-    'top_nav_canzoni': { pt: 'Canzoni', en: 'Songs' },
-    'top_nav_imitazione': { pt: 'Imitazione', en: 'Imitation' },
-    'top_nav_flashcard': { pt: 'Flashcard', en: 'Flashcard' },
+    'top_nav_templi': { pt: 'Temples', en: 'Temples' },
+    'top_nav_dialoghi': { pt: 'Dialogues', en: 'Dialogues' },
+    'top_nav_canzoni': { pt: 'Songs', en: 'Songs' },
+    'top_nav_imitazione': { pt: 'Listen & Repeat', en: 'Listen & Repeat' },
+    'top_nav_flashcard': { pt: 'Flashcards', en: 'Flashcards' },
     'top_nav_quiz': { pt: 'Quiz', en: 'Quiz' },
-    'top_nav_vocabolario': { pt: 'Vocabolario', en: 'Vocabulary' },
-    'top_nav_grammatica': { pt: 'Gramática', en: 'Grammar' },
-    'top_nav_storie':     { pt: 'Storie',     en: 'Stories' },
+    'top_nav_vocabolario': { pt: 'Vocabulary', en: 'Vocabulary' },
+    'top_nav_grammatica': { pt: 'Grammar', en: 'Grammar' },
+    'top_nav_storie':     { pt: 'Reading',  en: 'Reading' },
 
     // ── Elementos Globais ──
-    'meta_do_dia': { pt: 'Meta do dia', en: 'Goal of the day' },
+    'meta_do_dia': { pt: 'Daily Goal', en: 'Daily Goal' },
     'config_perfil': { pt: 'Configurações & Perfil', en: 'Settings & Profile' },
     'btn_fechar': { pt: 'Fechar', en: 'Close' },
     'btn_cancelar': { pt: 'Cancelar', en: 'Cancel' },
@@ -39,7 +39,7 @@ const I18n = {
     'cfg_titulo': { pt: 'Configurações', en: 'Settings' },
     'cfg_idioma_app': { pt: 'Idioma do App', en: 'Lingua dell\'App' },
     'cfg_idioma_pt': { pt: 'Português (PT)', en: 'Portuguese (PT)' },
-    'cfg_idioma_it': { pt: 'Italiano (IT) - Imersão', en: 'English (EN) - Immersion' },
+    'cfg_idioma_it': { pt: 'English (EN) - Immersion', en: 'English (EN) - Immersion' },
     'cfg_tema_claro': { pt: 'Modo Claro', en: 'Light Mode' },
     'cfg_tema_escuro': { pt: 'Modo Escuro', en: 'Dark Mode' },
     'cfg_sons_ligados': { pt: 'Sons: Ligados', en: 'Sounds: On' },
@@ -50,25 +50,25 @@ const I18n = {
     'quantos_xp': { pt: 'Quantos XP quer ganhar por dia?', en: 'How many XP do you want to earn per day?' },
 
     // ── Modal Meta com Prazo ──
-    'meta_minha': { pt: '🎯 Minha Meta', en: '🎯 Il Mio Obiettivo' },
+    'meta_minha': { pt: '🎯 Minha Meta', en: '🎯 My Goal' },
     'meta_nivel': { pt: 'Quero atingir o nível:', en: 'I want to reach level:' },
     'meta_data': { pt: 'Até a data:', en: 'By date:' },
     'meta_definir': { pt: 'Definir Meta', en: 'Set Goal' },
     'meta_remover': { pt: 'Remover meta atual', en: 'Remove current goal' },
-    'nivel_5': { pt: 'Nível 5 — Principiante (A1)', en: 'Livello 5 — Principiante (A1)' },
-    'nivel_10': { pt: 'Nível 10 — Intermediário (A2)', en: 'Livello 10 — Intermedio (A2)' },
-    'nivel_15': { pt: 'Nível 15 — Avançado (B1)', en: 'Livello 15 — Avanzato (B1)' },
-    'nivel_20': { pt: 'Nível 20 — Maestro (B2)', en: 'Livello 20 — Maestro (B2)' },
+    'nivel_5': { pt: 'Nível 5 — Principiante (A1)', en: 'Level 5 — Beginner (A1)' },
+    'nivel_10': { pt: 'Nível 10 — Intermediário (A2)', en: 'Level 10 — Elementary (A2)' },
+    'nivel_15': { pt: 'Nível 15 — Avançado (B1)', en: 'Level 15 — Intermediate (B1)' },
+    'nivel_20': { pt: 'Nível 20 — Maestro (B2)', en: 'Level 20 — Advanced (B2)' },
     
     // ── Perfil e Gestão de Dados ──
-    'prof_gestao_dati': { pt: '⚙️ Gestão de Dados', en: '⚙️ Gestione Dati' },
+    'prof_gestao_dati': { pt: '⚙️ Gestão de Dados', en: '⚙️ Data Management' },
     'prof_backup_desc': { pt: 'O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.', en: 'English Autentico saves your progress locally on your device. Back up regularly to avoid losing data if you clear your browser history.' },
-    'prof_exp_backup': { pt: '⬇️ Exportar Backup', en: '⬇️ Esporta Backup' },
-    'prof_imp_backup': { pt: '⬆️ Importar Backup', en: '⬆️ Importa Backup' },
-    'prof_azzera': { pt: '⚠️ Apagar Tudo', en: '⚠️ Azzera Tutto' },
+    'prof_exp_backup': { pt: '⬇️ Exportar Backup', en: '⬇️ Export Backup' },
+    'prof_imp_backup': { pt: '⬆️ Importar Backup', en: '⬆️ Import Backup' },
+    'prof_azzera': { pt: '⚠️ Apagar Tudo', en: '⚠️ Delete All' },
     'prof_conteudo_criado': { pt: 'Conteúdo Criado por Mim', en: 'My Custom Content' },
-    'prof_exp_conteudo': { pt: '⬇️ Exportar Músicas e Diálogos', en: '⬇️ Esporta Canzoni e Dialoghi' },
-    'prof_imp_conteudo': { pt: '⬆️ Importar Conteúdo', en: '⬆️ Importa Contenuto' },
+    'prof_exp_conteudo': { pt: '⬇️ Exportar Músicas e Diálogos', en: '⬇️ Export Content' },
+    'prof_imp_conteudo': { pt: '⬆️ Importar Conteúdo', en: '⬆️ Import Content' },
     
     // ── Seção Templos ──
     'templi_titulo': { pt: 'Sua Jornada', en: 'Your Journey' },
@@ -77,52 +77,52 @@ const I18n = {
 
     // ── Feedback e Notificações (Usados no JS) ──
     'notif_salvo': { pt: 'Salvo com sucesso!', en: 'Saved successfully!' },
-    'notif_erro': { pt: 'Ocorreu um erro.', en: 'Si è verificato un errore.' },
-    'notif_bloqueado': { pt: 'Templo não desbloqueado.', en: 'Temple not unlocked.' },
+    'notif_erro': { pt: 'An error occurred.', en: 'An error occurred.' },
+    'notif_bloqueado': { pt: 'Temple not unlocked.', en: 'Temple not unlocked.' },
 
-    // ── Core / Templos ──
-    'notif_templo_sbloccato': { pt: '🏛️ Templo {n} desbloqueado!', en: '🏛️ Tempio {n} sbloccato!' },
-    'notif_templo_completato': { pt: '🏆 Templo {n} completado!', en: '🏆 Tempio {n} completato!' },
-    'notif_codice_errato': { pt: 'Código incorreto.', en: 'Incorrect code.' },
-    'notif_tutti_sbloccati': { pt: 'Todos os templos desbloqueados! 🎉', en: 'Tutti i templi sbloccati! 🎉' },
-    'notif_data_futura': { pt: 'A data limite deve ser no futuro.', en: 'The deadline must be in the future.' },
-    'notif_meta_definida': { pt: 'Meta: {val} XP/dia', en: 'Goal: {val} XP/day' },
-    'meta_do_dia_label': { pt: '🎯 Meta do dia', en: '🎯 Obiettivo del giorno' },
+    // ── Core / Temples ──
+    'notif_templo_sbloccato': { pt: '🏛️ Temple {n} unlocked!', en: '🏛️ Temple {n} unlocked!' },
+    'notif_templo_completato': { pt: '🏆 Temple {n} completed!', en: '🏆 Temple {n} completed!' },
+    'notif_codice_errato': { pt: 'Incorrect code.', en: 'Incorrect code.' },
+    'notif_tutti_sbloccati': { pt: 'All temples unlocked! 🎉', en: 'All temples unlocked! 🎉' },
+    'notif_data_futura': { pt: 'The deadline must be in the future.', en: 'The deadline must be in the future.' },
+    'notif_meta_definida': { pt: 'Goal: {val} XP/day', en: 'Goal: {val} XP/day' },
+    'meta_do_dia_label': { pt: '🎯 Daily Goal', en: '🎯 Daily Goal' },
 
     // ── Áudio ──
-    'notif_sons_ativados': { pt: '🔔 Sons ativados', en: '🔔 Suoni attivati' },
-    'notif_sons_desativados': { pt: '🔕 Sons desativados', en: '🔕 Suoni disattivati' },
+    'notif_sons_ativados': { pt: '🔔 Sound on', en: '🔔 Sound on' },
+    'notif_sons_desativados': { pt: '🔕 Sound off', en: '🔕 Sound off' },
 
     // ── Flashcards ──
     'notif_fc_bloqueado': { pt: 'Templo não desbloqueado ainda!', en: 'Temple not unlocked yet!' },
     'notif_fc_vocab_nao_carregado': { pt: 'Vocabulário deste templo não carregado.', en: 'Vocabulary for this temple not loaded.' },
-    'notif_fc_erro_resposta': { pt: 'Erro ao registrar resposta. Tente novamente.', en: 'Errore nel registrare la risposta. Riprova.' },
-    'notif_fc_favorito_add': { pt: '❤️ Adicionado aos favoritos', en: '❤️ Aggiunto ai preferiti' },
-    'notif_fc_favorito_rem': { pt: '🤍 Removido dos favoritos', en: '🤍 Rimosso dai preferiti' },
-    'notif_fc_sem_favoritos': { pt: 'Nenhum favorito ainda. Adicione com o ❤️!', en: 'Nessun preferito ancora. Aggiungi con il ❤️!' },
-    'notif_fc_favoritos_nao_enc': { pt: 'Palavras favoritas não encontradas nos dados.', en: 'Favorite words not found in data.' },
-    'notif_fc_favoritos_revisar': { pt: '❤️ {n} favoritos para revisar', en: '❤️ {n} preferiti da ripassare' },
-    'notif_fc_sem_dificeis': { pt: 'Nenhuma palavra difícil encontrada! 🎉', en: 'Nessuna parola difficile trovata! 🎉' },
-    'notif_fc_dificeis_revisar': { pt: '📚 {n} palavras difíceis para revisar', en: '📚 {n} parole difficili da ripassare' },
+    'notif_fc_erro_resposta': { pt: 'Error saving response. Try again.', en: 'Error saving response. Try again.' },
+    'notif_fc_favorito_add': { pt: '❤️ Added to favorites', en: '❤️ Added to favorites' },
+    'notif_fc_favorito_rem': { pt: '🤍 Removed from favorites', en: '🤍 Removed from favorites' },
+    'notif_fc_sem_favoritos': { pt: 'No favorites yet. Add with ❤️!', en: 'No favorites yet. Add with ❤️!' },
+    'notif_fc_favoritos_nao_enc': { pt: 'Favorite words not found in data.', en: 'Favorite words not found in data.' },
+    'notif_fc_favoritos_revisar': { pt: '❤️ {n} favorites to review', en: '❤️ {n} favorites to review' },
+    'notif_fc_sem_dificeis': { pt: 'No difficult words found! 🎉', en: 'No difficult words found! 🎉' },
+    'notif_fc_dificeis_revisar': { pt: '📚 {n} difficult words to review', en: '📚 {n} difficult words to review' },
     'notif_fc_sem_voz': { pt: 'Seu browser não suporta reconhecimento de voz.', en: 'Your browser does not support voice recognition.' },
     'notif_fc_nao_ouviu': { pt: 'Não consegui ouvir. Tente novamente.', en: 'I could not hear you. Try again.' },
 
     // ── Gramática ──
-    'notif_gram_capitolo': { pt: '🏆 Capítulo completado! +{xp} XP', en: '🏆 Capitolo completato! +{xp} XP' },
+    'notif_gram_capitolo': { pt: '🏆 Chapter completed! +{xp} XP', en: '🏆 Chapter completed! +{xp} XP' },
 
-    // ── Canzoni (custom) ──
-    'notif_can_titulo_obr': { pt: 'O título é obrigatório.', en: 'Il titolo è obbligatorio.' },
-    'notif_can_sem_verso': { pt: 'Adicione pelo menos um verso com lacuna.', en: 'Add at least one verse with a blank.' },
-    'notif_can_excluida': { pt: 'Música excluída.', en: 'Song deleted.' },
+    // ── Songs (custom) ──
+    'notif_can_titulo_obr': { pt: 'Title is required.', en: 'Title is required.' },
+    'notif_can_sem_verso': { pt: 'Add at least one verse with a blank.', en: 'Add at least one verse with a blank.' },
+    'notif_can_excluida': { pt: 'Song deleted.', en: 'Song deleted.' },
 
-    // ── Dialoghi (custom) ──
-    'notif_dial_titulo_obr': { pt: 'O título é obrigatório.', en: 'Il titolo è obbligatorio.' },
-    'notif_dial_sem_turnos': { pt: 'Adicione pelo menos 2 turnos.', en: 'Add at least 2 turns.' },
-    'notif_dial_excluido': { pt: 'Diálogo excluído.', en: 'Dialogue deleted.' },
+    // ── Dialogues (custom) ──
+    'notif_dial_titulo_obr': { pt: 'Title is required.', en: 'Title is required.' },
+    'notif_dial_sem_turnos': { pt: 'Add at least 2 turns.', en: 'Add at least 2 turns.' },
+    'notif_dial_excluido': { pt: 'Dialogue deleted.', en: 'Dialogue deleted.' },
 
     // ── Core — templates renderizados ──
     'cc_continuar_label': { pt: 'Continuar de onde parou', en: 'Continue where you left off' },
-    'cc_retomar': { pt: '→ Retomar', en: '→ Riprendi' },
+    'cc_retomar': { pt: '→ Resume', en: '→ Resume' },
     'cc_ultima_sessao': { pt: 'Última sessão:', en: 'Last session:' },
     'cc_agora_mesmo': { pt: 'agora mesmo', en: 'just now' },
     'cc_ha_minutos': { pt: 'há poucos minutos', en: 'a few minutes ago' },
@@ -136,277 +136,277 @@ const I18n = {
     'meta_dias_restantes': { pt: '{n} dias restantes', en: '{n} days remaining' },
     'meta_no_ritmo': { pt: 'No ritmo atual:', en: 'At current pace:' },
     'meta_xp_necessarios': { pt: 'XP/dia necessários', en: 'XP/day needed' },
-    'templo_requer': { pt: 'Requer Livello {n} · Toque para inserir código', en: 'Richiede Livello {n} · Tocca per inserire il codice' },
+    'templo_requer': { pt: 'Requires Level {n} · Tap to enter code', en: 'Requires Level {n} · Tap to enter code' },
 
     // ── Heatmap ──
-    'hm_atividades': { pt: 'atividades em', en: 'attività in' },
-    'hm_dias': { pt: 'dias', en: 'days' },
-    'hm_sequencia': { pt: 'Sequência:', en: 'Streak:' },
-    'hm_atividades_tooltip': { pt: 'atividades', en: 'attività' },
+    'hm_atividades': { pt: 'activities in', en: 'activities in' },
+    'hm_dias': { pt: 'days', en: 'days' },
+    'hm_sequencia': { pt: 'Streak:', en: 'Streak:' },
+    'hm_atividades_tooltip': { pt: 'activities', en: 'activities' },
 
     // ── Progression ──
-    'notif_meta_atingida': { pt: '🎯 Meta diária atingida! Ottimo!', en: '🎯 Obiettivo giornaliero raggiunto! Ottimo!' },
-    'notif_meta_def_ok': { pt: '🎯 Meta definida! Boa sorte!', en: '🎯 Obiettivo impostato! Buona fortuna!' },
+    'notif_meta_atingida': { pt: '🎯 Daily goal reached! Well done!', en: '🎯 Daily goal reached! Well done!' },
+    'notif_meta_def_ok': { pt: '🎯 Goal set! Good luck!', en: '🎯 Goal set! Good luck!' },
 
     // ── Quiz ──
-    'notif_quiz_bloqueado': { pt: 'Tempio não desbloqueado!', en: 'Tempio non sbloccato!' },
-    'notif_quiz_sem_perguntas': { pt: 'Nenhuma pergunta disponível para este tempio.', en: 'Nessuna domanda disponibile per questo tempio.' },
-    'notif_quiz_sem_perguntas_todos': { pt: 'Nenhuma pergunta disponível para os templos desbloqueados.', en: 'Nessuna domanda disponibile per i templi sbloccati.' },
-    'notif_quiz_morf_insuf': { pt: 'Dados de morfologia insuficientes para este tempio.', en: 'Dati morfologici insufficienti per questo tempio.' },
-    'notif_quiz_conj_insuf': { pt: 'Dados de conjugação insuficientes.', en: 'Dati di coniugazione insufficienti.' },
-    'notif_quiz_listen_insuf': { pt: 'Dados insuficientes para listening.', en: 'Dati insufficienti per il listening.' },
-    'notif_quiz_gram_insuf': { pt: 'Dados insuficientes de gramática para este nível.', en: 'Dati grammaticali insufficienti per questo livello.' },
+    'notif_quiz_bloqueado': { pt: 'Temple not unlocked!', en: 'Temple not unlocked!' },
+    'notif_quiz_sem_perguntas': { pt: 'No questions available for this temple.', en: 'No questions available for this temple.' },
+    'notif_quiz_sem_perguntas_todos': { pt: 'No questions available for the unlocked temples.', en: 'No questions available for the unlocked temples.' },
+    'notif_quiz_morf_insuf': { pt: 'Insufficient morphology data for this temple.', en: 'Insufficient morphology data for this temple.' },
+    'notif_quiz_conj_insuf': { pt: 'Insufficient conjugation data.', en: 'Insufficient conjugation data.' },
+    'notif_quiz_listen_insuf': { pt: 'Insufficient listening data.', en: 'Insufficient listening data.' },
+    'notif_quiz_gram_insuf': { pt: 'Insufficient grammar data for this level.', en: 'Insufficient grammar data for this level.' },
 
     // ── Profilo ──
-    'notif_backup_exp': { pt: '✅ Backup exportado com sucesso!', en: '✅ Backup esportato con successo!' },
-    'notif_backup_imp': { pt: '✅ Backup importado! Recarregando...', en: '✅ Backup importato! Ricaricamento...' },
-    'notif_arquivo_inv': { pt: '❌ Arquivo inválido: ', en: '❌ File non valido: ' },
-    'notif_prog_reset': { pt: 'Progresso resetado. Recarregando...', en: 'Progresso azzerato. Ricaricamento...' },
-    'notif_conteudo_exp': { pt: '✅ Conteúdo exportado!', en: '✅ Contenuto esportato!' },
+    'notif_backup_exp': { pt: '✅ Backup exported successfully!', en: '✅ Backup exported successfully!' },
+    'notif_backup_imp': { pt: '✅ Backup imported! Reloading...', en: '✅ Backup imported! Reloading...' },
+    'notif_arquivo_inv': { pt: '❌ Invalid file: ', en: '❌ Invalid file: ' },
+    'notif_prog_reset': { pt: 'Progress reset. Reloading...', en: 'Progress reset. Reloading...' },
+    'notif_conteudo_exp': { pt: '✅ Content exported!', en: '✅ Content exported!' },
 
-    // ── Conquistas — descrições ──
-    'ach_primeiro_passo': { pt: 'Complete seu primeiro flashcard', en: 'Completa il tuo primo flashcard' },
-    'ach_uma_semana': { pt: '7 dias consecutivos de estudo', en: '7 giorni consecutivi di studio' },
-    'ach_studioso': { pt: 'Revisar 100 cartas nos flashcards', en: 'Ripassa 100 carte nei flashcard' },
-    'ach_quiz_perfetto': { pt: '10/10 acertos em um quiz', en: '10/10 risposte corrette in un quiz' },
-    'ach_primo_tempio': { pt: 'Completar o Tempio 1 nos flashcards', en: 'Completa il Tempio 1 nei flashcard' },
-    'ach_vocabulario': { pt: 'Dominar 50 palavras (3+ revisões)', en: 'Padroneggia 50 parole (3+ revisioni)' },
-    'ach_duro': { pt: 'Marcar "Esqueci" 50 vezes — a perseverança tem recompensa', en: 'Segna "Non ricordo" 50 volte — la perseveranza ha la sua ricompensa' },
-    'ach_italiano_autentico': { pt: 'Atingir o Livello 10', en: 'Raggiungere il Livello 10' },
-    'ach_um_mes': { pt: '30 dias consecutivos de estudo', en: '30 giorni consecutivi di studio' },
-    'ach_maestro': { pt: 'Revisar 500 cartas nos flashcards', en: 'Ripassa 500 carte nei flashcard' },
-    'ach_esploratore': { pt: 'Desbloquear 5 templos', en: 'Sblocca 5 templi' },
-    'ach_grammatico': { pt: 'Completar 10 lições de gramática', en: 'Completa 10 lezioni di grammatica' },
-    'ach_precisione': { pt: '5 quizzes seguidos com mais de 80% de acerto', en: '5 quiz consecutivi con più dell\'80% di risposte corrette' },
-    'ach_notturno': { pt: 'Estudar após as 22h', en: 'Studiare dopo le 22:00' },
-    'ach_mattiniero': { pt: 'Estudar antes das 7h da manhã', en: 'Studiare prima delle 7:00 del mattino' },
+    // ── Achievements ──
+    'ach_primeiro_passo': { pt: 'Complete your first flashcard', en: 'Complete your first flashcard' },
+    'ach_uma_semana': { pt: '7 consecutive days of study', en: '7 consecutive days of study' },
+    'ach_studioso': { pt: 'Review 100 flashcards', en: 'Review 100 flashcards' },
+    'ach_quiz_perfetto': { pt: '10/10 correct answers in a quiz', en: '10/10 correct answers in a quiz' },
+    'ach_primo_tempio': { pt: 'Complete Temple 1 flashcards', en: 'Complete Temple 1 flashcards' },
+    'ach_vocabulario': { pt: 'Master 50 words (3+ reviews)', en: 'Master 50 words (3+ reviews)' },
+    'ach_duro': { pt: 'Mark "Again" 50 times — persistence pays off', en: 'Mark "Again" 50 times — persistence pays off' },
+    'ach_english_autentico': { pt: 'Reach Level 10', en: 'Reach Level 10' },
+    'ach_um_mes': { pt: '30 consecutive days of study', en: '30 consecutive days of study' },
+    'ach_maestro': { pt: 'Review 500 flashcards', en: 'Review 500 flashcards' },
+    'ach_esploratore': { pt: 'Unlock 5 temples', en: 'Unlock 5 temples' },
+    'ach_grammatico': { pt: 'Complete 10 grammar lessons', en: 'Complete 10 grammar lessons' },
+    'ach_precisione': { pt: '5 quizzes in a row with over 80% correct', en: '5 quizzes in a row with over 80% correct' },
+    'ach_notturno': { pt: 'Study after 10 PM', en: 'Study after 10 PM' },
+    'ach_mattiniero': { pt: 'Study before 7 AM', en: 'Study before 7 AM' },
 
-    // ── Flashcard — estado vazio ──
-    'fc_todas_estudadas': { pt: 'Todas as cartas estudadas hoje.', en: 'Tutte le carte studiate oggi.' },
+    // ── Flashcard — empty state ──
+    'fc_todas_estudadas': { pt: 'All cards studied today.', en: 'All cards studied today.' },
 
-    // ── Flashcard — dicas no card ──
-    'fc_dica_ouvir': { pt: 'Toque no card para ouvir novamente 🔊', en: 'Tocca la carta per ascoltare di nuovo 🔊' },
-    'fc_dica_palavra_falta': { pt: 'Que palavra falta?', en: 'Quale parola manca?' },
-    'fc_dica_revelar': { pt: 'Clique para revelar', en: 'Clicca per rivelare' },
+    // ── Flashcard — card hints ──
+    'fc_dica_ouvir': { pt: 'Tap the card to listen again 🔊', en: 'Tap the card to listen again 🔊' },
+    'fc_dica_palavra_falta': { pt: 'Which word is missing?', en: 'Which word is missing?' },
+    'fc_dica_revelar': { pt: 'Click to reveal', en: 'Click to reveal' },
 
-    // ── Flashcard — resumo da sessão ──
-    'fc_resumo_muito_bom': { pt: 'Muito bom!', en: 'Molto bene!' },
-    'fc_resumo_continua': { pt: 'Continua a praticare!', en: 'Continua a praticare!' },
-    'fc_resumo_sem_agendamento': { pt: 'Sem agendamento', en: 'Nessuna programmazione' },
-    'fc_resumo_em_dias': { pt: 'em {n} dia', en: 'tra {n} giorno' },
-    'fc_resumo_em_dias_plural': { pt: 'em {n} dias', en: 'tra {n} giorni' },
-    'fc_resumo_em_horas': { pt: 'em {n}h', en: 'tra {n}h' },
-    'fc_resumo_cartas': { pt: 'cartas', en: 'carte' },
-    'fc_resumo_acertos': { pt: 'acertos', en: 'risposte corrette' },
-    'fc_resumo_proxima': { pt: '⏰ Próxima revisão:', en: '⏰ Prossima revisione:' },
-    'fc_resumo_novas': { pt: '🌱 {n} palavra nova aprendida!', en: '🌱 {n} parola nuova appresa!' },
-    'fc_resumo_novas_plural': { pt: '🌱 {n} palavras novas aprendidas!', en: '🌱 {n} parole nuove apprese!' },
-    'fc_resumo_praticar': { pt: '🔁 Praticar todas', en: '🔁 Pratica tutte' },
-    'fc_gravar_parar': { pt: '⏹ Parar', en: '⏹ Ferma' },
-    'fc_gravar_imitar': { pt: '🎤 Imitar', en: '🎤 Imita' },
+    // ── Flashcard — session summary ──
+    'fc_resumo_muito_bom': { pt: 'Great job!', en: 'Great job!' },
+    'fc_resumo_continua': { pt: 'Keep practising!', en: 'Keep practising!' },
+    'fc_resumo_sem_agendamento': { pt: 'No schedule', en: 'No schedule' },
+    'fc_resumo_em_dias': { pt: 'in {n} day', en: 'in {n} day' },
+    'fc_resumo_em_dias_plural': { pt: 'in {n} days', en: 'in {n} days' },
+    'fc_resumo_em_horas': { pt: 'in {n}h', en: 'in {n}h' },
+    'fc_resumo_cartas': { pt: 'cards', en: 'cards' },
+    'fc_resumo_acertos': { pt: 'correct', en: 'correct' },
+    'fc_resumo_proxima': { pt: '⏰ Next review:', en: '⏰ Next review:' },
+    'fc_resumo_novas': { pt: '🌱 {n} new word learned!', en: '🌱 {n} new word learned!' },
+    'fc_resumo_novas_plural': { pt: '🌱 {n} new words learned!', en: '🌱 {n} new words learned!' },
+    'fc_resumo_praticar': { pt: '🔁 Practice all', en: '🔁 Practice all' },
+    'fc_gravar_parar': { pt: '⏹ Stop', en: '⏹ Stop' },
+    'fc_gravar_imitar': { pt: '🎤 Imitate', en: '🎤 Imitate' },
 
-    // ── Quiz — feedback e resultado ──
-    'quiz_correto': { pt: '✅ Correto!', en: '✅ Corretto!' },
-    'quiz_resposta_correta_era': { pt: '❌ A resposta correta era:', en: '❌ La risposta corretta era:' },
-    'quiz_xp_ganhos': { pt: '+{n} XP ganhos', en: '+{n} XP guadagnati' },
+    // ── Quiz — feedback and results ──
+    'quiz_correto': { pt: '✅ Correct!', en: '✅ Correct!' },
+    'quiz_resposta_correta_era': { pt: '❌ The correct answer was:', en: '❌ The correct answer was:' },
+    'quiz_xp_ganhos': { pt: '+{n} XP earned', en: '+{n} XP earned' },
 
-    // ── Quiz — morfologia (gerado dinamicamente) ──
-    'quiz_morf_genero_pergunta': { pt: 'Qual o gênero de "{w}"?', en: 'Qual è il genere di "{w}"?' },
-    'quiz_morf_genero_masc': { pt: 'masculino', en: 'maschile' },
-    'quiz_morf_genero_fem': { pt: 'feminino', en: 'femminile' },
-    'quiz_morf_genero_exp': { pt: '"{w}" é {g}', en: '"{w}" è {g}' },
-    'quiz_morf_plural_pergunta': { pt: 'Qual o plural de "{w}"?', en: 'Qual è il plurale di "{w}"?' },
-    'quiz_morf_plural_exp': { pt: 'O plural de "{w}" é "{p}".', en: 'Il plurale di "{w}" è "{p}".' },
+    // ── Quiz — morphology ──
+    'quiz_morf_genero_pergunta': { pt: 'What is the gender of "{w}"?', en: 'What is the gender of "{w}"?' },
+    'quiz_morf_genero_masc': { pt: 'masculine', en: 'masculine' },
+    'quiz_morf_genero_fem': { pt: 'feminine', en: 'feminine' },
+    'quiz_morf_genero_exp': { pt: '"{w}" is {g}', en: '"{w}" is {g}' },
+    'quiz_morf_plural_pergunta': { pt: 'What is the plural of "{w}"?', en: 'What is the plural of "{w}"?' },
+    'quiz_morf_plural_exp': { pt: 'The plural of "{w}" is "{p}".', en: 'The plural of "{w}" is "{p}".' },
 
-    // ── Imitazione ──
-    'imit_erro_ouvir': { pt: 'Erro ao ouvir. Tente novamente.', en: 'Errore nell\'ascolto. Riprova.' },
+    // ── Listen & Repeat ──
+    'imit_erro_ouvir': { pt: 'Error listening. Try again.', en: 'Error listening. Try again.' },
 
-    // ── Storie — leitura interativa ──
-    'storie_titulo_secao':   { pt: 'Storie Italiane', en: 'Storie Italiane' },
-    'storie_escolha':        { pt: 'Escolha uma história para começar a leitura', en: 'Scegli una storia per iniziare la lettura' },
-    'storie_btn_traduzir':   { pt: '👁️ Ocultar tradução', en: '👁️ Nascondi traduzione' },
-    'storie_btn_mostrar':    { pt: '👁️ Mostrar tradução', en: '👁️ Mostra traduzione' },
-    'storie_btn_ouvir_tudo': { pt: '🔊 Ouvir tudo', en: '🔊 Ascolta tutto' },
-    'storie_btn_concluir':   { pt: '✓ Concluí (+{xp} XP)', en: '✓ Ho finito (+{xp} XP)' },
-    'storie_btn_relida':     { pt: '✓ Relida', en: '✓ Riletta' },
-    'storie_btn_todas':      { pt: '‹ Todas as histórias', en: '‹ Tutte le storie' },
-    'storie_notif_lida':     { pt: '📖 +{xp} XP por terminar a história!', en: '📖 +{xp} XP per aver finito la storia!' },
-    'storie_notif_ja_lida':  { pt: 'Você já leu esta história.', en: 'Hai già letto questa storia.' },
-    'storie_vocab_titulo':   { pt: '📚 Vocabulário ({n})', en: '📚 Vocabolario ({n})' },
+    // ── Reading — interactive reading ──
+    'storie_titulo_secao':   { pt: 'English Reading', en: 'English Reading' },
+    'storie_escolha':        { pt: 'Choose a story to start reading', en: 'Choose a story to start reading' },
+    'storie_btn_traduzir':   { pt: '👁️ Hide translation', en: '👁️ Hide translation' },
+    'storie_btn_mostrar':    { pt: '👁️ Show translation', en: '👁️ Show translation' },
+    'storie_btn_ouvir_tudo': { pt: '🔊 Listen to all', en: '🔊 Listen to all' },
+    'storie_btn_concluir':   { pt: '✓ Finished (+{xp} XP)', en: '✓ Finished (+{xp} XP)' },
+    'storie_btn_relida':     { pt: '✓ Re-read', en: '✓ Re-read' },
+    'storie_btn_todas':      { pt: '‹ All stories', en: '‹ All stories' },
+    'storie_notif_lida':     { pt: '📖 +{xp} XP for finishing the story!', en: '📖 +{xp} XP for finishing the story!' },
+    'storie_notif_ja_lida':  { pt: 'You have already read this story.', en: 'You have already read this story.' },
+    'storie_vocab_titulo':   { pt: '📚 Vocabulary ({n})', en: '📚 Vocabulary ({n})' },
 
-    // ── index.html — onboarding e strings estáticas ──
-    'ob_descricao': { pt: 'Este app foi desenhado para te levar do zero ao italiano falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.', en: 'Questa app è stata progettata per portarti da zero all\'italiano parlato in modo semplice, naturale e altamente efficace. Ogni sessione dura circa 10 minuti.' },
-    'ob_como_comecar': { pt: 'É muito fácil começar sua jornada:', en: 'È molto facile iniziare il tuo viaggio:' },
+    // ── Onboarding ──
+    'ob_descricao': { pt: 'This app is designed to take you from zero to spoken English in a simple, natural and highly effective way. Each session lasts about 10 minutes.', en: 'This app is designed to take you from zero to spoken English in a simple, natural and highly effective way. Each session lasts about 10 minutes.' },
+    'ob_como_comecar': { pt: 'It is very easy to start your journey:', en: 'It is very easy to start your journey:' },
 
-    // ── Flashcard — labels inline ──
-    'fc_novas': { pt: 'novas', en: 'nuove' },
-    'fc_revisao': { pt: 'revisão', en: 'da ripassare' },
-    'fc_escolha_vocab': { pt: 'Escolha um conjunto de vocabulário para estudar', en: 'Scegli un insieme di vocabolario da studiare' },
-    'fc_selecione_tempio': { pt: 'Selecione um Tempio', en: 'Seleziona un Tempio' },
-    'fc_use_seletor': { pt: '↑ use o seletor acima', en: '↑ usa il selettore sopra' },
-    'fc_volte_amanha': { pt: 'Volte amanhã para as próximas revisões.', en: 'Torna domani per le prossime revisioni.' },
-    'fc_btn_pronunciar': { pt: '🔊 Pronunciar', en: '🔊 Pronuncia' },
-    'fc_btn_imitar': { pt: '🎤 Imitar', en: '🎤 Imita' },
-    'fc_btn_esqueci': { pt: '❌ Esqueci', en: '❌ Non ricordo' },
-    'fc_btn_dificil': { pt: '⚡ Difícil', en: '⚡ Difficile' },
-    'fc_btn_bom': { pt: '✅ Bom', en: '✅ Bene' },
-    'fc_btn_facil': { pt: '⭐ Fácil', en: '⭐ Facile' },
-    'fc_btn_favoritos': { pt: '❤️ Favoritos', en: '❤️ Preferiti' },
-    'fc_btn_dificeis': { pt: '⚠️ Difíceis', en: '⚠️ Difficili' },
-    'fc_btn_praticar_todas': { pt: '🔁 Praticar todas', en: '🔁 Pratica tutte' },
+    // ── Flashcard — inline labels ──
+    'fc_novas': { pt: 'new', en: 'new' },
+    'fc_revisao': { pt: 'to review', en: 'to review' },
+    'fc_escolha_vocab': { pt: 'Choose a vocabulary set to study', en: 'Choose a vocabulary set to study' },
+    'fc_selecione_tempio': { pt: 'Select a Temple', en: 'Select a Temple' },
+    'fc_use_seletor': { pt: '↑ use the selector above', en: '↑ use the selector above' },
+    'fc_volte_amanha': { pt: 'Come back tomorrow for your next reviews.', en: 'Come back tomorrow for your next reviews.' },
+    'fc_btn_pronunciar': { pt: '🔊 Pronounce', en: '🔊 Pronounce' },
+    'fc_btn_imitar': { pt: '🎤 Imitate', en: '🎤 Imitate' },
+    'fc_btn_esqueci': { pt: '❌ Again', en: '❌ Again' },
+    'fc_btn_dificil': { pt: '⚡ Hard', en: '⚡ Hard' },
+    'fc_btn_bom': { pt: '✅ Good', en: '✅ Good' },
+    'fc_btn_facil': { pt: '⭐ Easy', en: '⭐ Easy' },
+    'fc_btn_favoritos': { pt: '❤️ Favorites', en: '❤️ Favorites' },
+    'fc_btn_dificeis': { pt: '⚠️ Difficult', en: '⚠️ Difficult' },
+    'fc_btn_praticar_todas': { pt: '🔁 Practice all', en: '🔁 Practice all' },
 
     // ── Quiz ──
-    'quiz_morf_titulo': { pt: '🔤 Quiz de Morfologia (Gênero & Plural)', en: '🔤 Quiz di Morfologia (Genere & Plurale)' },
-    'quiz_list_titulo': { pt: '🎧 Quiz de Listening (Ascolto)', en: '🎧 Quiz di Listening (Ascolto)' },
-    'quiz_gram_titulo': { pt: '📚 Quiz de Gramática (Grammatica)', en: '📚 Quiz di Grammatica' },
-    'quiz_gram_nao_carregado': { pt: 'Dados de gramática não carregados.', en: 'Grammar data not loaded.' },
-    'quiz_verbi_titulo': { pt: '🇮🇹 Quiz de Conjugação Verbal', en: '🇮🇹 Quiz di Coniugazione Verbale' },
-    'quiz_verbi_nao_carregado': { pt: 'Dados de conjugação não carregados.', en: 'Conjugation data not loaded.' },
-    'quiz_pergunta_de': { pt: 'Pergunta {a} de {b}', en: 'Question {a} of {b}' },
-    'quiz_ouvir': { pt: '🔊 Ouvir', en: '🔊 Ascolta' },
-    'quiz_continuar': { pt: 'Continuar →', en: 'Continua →' },
-    'quiz_voltar': { pt: '← Voltar aos Templi', en: '← Torna ai Templi' },
+    'quiz_morf_titulo': { pt: '🔤 Morphology Quiz (Gender & Plural)', en: '🔤 Morphology Quiz (Gender & Plural)' },
+    'quiz_list_titulo': { pt: '🎧 Listening Quiz', en: '🎧 Listening Quiz' },
+    'quiz_gram_titulo': { pt: '📚 Grammar Quiz', en: '📚 Grammar Quiz' },
+    'quiz_gram_nao_carregado': { pt: 'Grammar data not loaded.', en: 'Grammar data not loaded.' },
+    'quiz_verbi_titulo': { pt: '🇺🇸 Verb Conjugation Quiz', en: '🇺🇸 Verb Conjugation Quiz' },
+    'quiz_verbi_nao_carregado': { pt: 'Conjugation data not loaded.', en: 'Conjugation data not loaded.' },
+    'quiz_pergunta_de': { pt: 'Question {a} of {b}', en: 'Question {a} of {b}' },
+    'quiz_ouvir': { pt: '🔊 Listen', en: '🔊 Listen' },
+    'quiz_continuar': { pt: 'Continue →', en: 'Continue →' },
+    'quiz_voltar': { pt: '← Back to Temples', en: '← Back to Temples' },
 
-    // ── Vocab ──
-    'vocab_dificeis': { pt: '⚠️ Difíceis', en: '⚠️ Difficili' },
-    'vocab_favoritos': { pt: '❤️ Favoritos', en: '❤️ Preferiti' },
-    'vocab_palavras_total': { pt: '{n} palavras no total', en: '{n} parole in totale' },
-    'vocab_palavra_dificil': { pt: '{n} palavra difícil (3+ erros)', en: '{n} parola difficile (3+ errori)' },
-    'vocab_palavras_dificeis': { pt: '{n} palavras difíceis (3+ erros)', en: '{n} parole difficili (3+ errori)' },
-    'vocab_resultados': { pt: '{m} de {f} resultado(s) — {t} palavras totais', en: '{m} di {f} risultati — {t} parole totali' },
-    'vocab_nenhuma': { pt: 'Nenhuma palavra encontrada.', en: 'Nessuna parola trovata.' },
-    'vocab_ocultar_pt': { pt: '👁 Ocultar PT', en: '👁 Nascondi PT' },
-    'vocab_ocultar_it': { pt: '👁 Ocultar IT', en: '👁 Nascondi IT' },
+    // ── Vocabulary ──
+    'vocab_dificeis': { pt: '⚠️ Difficult', en: '⚠️ Difficult' },
+    'vocab_favoritos': { pt: '❤️ Favorites', en: '❤️ Favorites' },
+    'vocab_palavras_total': { pt: '{n} words total', en: '{n} words total' },
+    'vocab_palavra_dificil': { pt: '{n} difficult word (3+ errors)', en: '{n} difficult word (3+ errors)' },
+    'vocab_palavras_dificeis': { pt: '{n} difficult words (3+ errors)', en: '{n} difficult words (3+ errors)' },
+    'vocab_resultados': { pt: '{m} of {f} result(s) — {t} words total', en: '{m} of {f} result(s) — {t} words total' },
+    'vocab_nenhuma': { pt: 'No words found.', en: 'No words found.' },
+    'vocab_ocultar_pt': { pt: '👁 Hide PT', en: '👁 Hide PT' },
+    'vocab_ocultar_it': { pt: '👁 Hide EN', en: '👁 Hide EN' },
 
     // ── Core — streak ──
-    'streak_dia': { pt: '🔥 {n} dia', en: '🔥 {n} giorno' },
-    'streak_dias': { pt: '🔥 {n} dias', en: '🔥 {n} giorni' },
+    'streak_dia': { pt: '🔥 {n} day', en: '🔥 {n} day' },
+    'streak_dias': { pt: '🔥 {n} days', en: '🔥 {n} days' },
 
     // ── Grammar — feedback ──
     'gram_conteudo_indisponivel': { pt: 'Conteúdo não disponível.', en: 'Contenuto non disponibile.' },
     'gram_placeholder_resposta': { pt: 'Digite sua resposta...', en: 'Scrivi la tua risposta...' },
     'gram_por_que': { pt: 'Por que?', en: 'Perché?' },
-    'gram_correto': { pt: 'Correto!', en: 'Corretto!' },
-    'gram_errado': { pt: 'Errado.', en: 'Sbagliato.' },
+    'gram_correto': { pt: 'Correct!', en: 'Correct!' },
+    'gram_errado': { pt: 'Wrong.', en: 'Wrong.' },
     'gram_resposta_era': { pt: 'A resposta era:', en: 'La risposta era:' },
     'gram_por_que_importa': { pt: 'Por que isso importa?', en: 'Perché è importante?' },
-    'gram_arm_errado': { pt: 'Errado', en: 'Sbagliato' },
-    'gram_arm_certo': { pt: 'Certo', en: 'Corretto' },
+    'gram_arm_errado': { pt: 'Wrong', en: 'Wrong' },
+    'gram_arm_certo': { pt: 'Correct', en: 'Correct' },
 
     // ── Quiz — gramática ──
-    'quiz_gram_nivel': { pt: '📚 Nível {n}', en: '📚 Livello {n}' },
+    'quiz_gram_nivel': { pt: '📚 Level {n}', en: '📚 Level {n}' },
 
     // ── Vocab — overflow ──
-    'vocab_e_mais': { pt: '... e mais {n} palavras. Use os filtros para refinar.', en: '... e altre {n} parole. Usa i filtri per affinare.' },
+    'vocab_e_mais': { pt: '... and {n} more words. Use the filters to narrow down.', en: '... and {n} more words. Use the filters to narrow down.' },
 
-    // ── Imitazione — resultados ──
-    'imit_voce_disse': { pt: 'Você disse:', en: 'Hai detto:' },
-    'imit_ouvimos': { pt: 'Ouvimos:', en: 'Abbiamo sentito:' },
-    'imit_proxima_frase': { pt: 'Próxima Frase', en: 'Frase Successiva' },
-    'imit_tentar_novamente': { pt: 'Tentar Novamente', en: 'Riprova' },
-    'imit_pronunciar_melhor': { pt: 'Tente pronunciar mais claramente.', en: 'Prova a pronunciare più chiaramente.' },
-    'imit_ouvir_exemplo': { pt: 'Ouça o exemplo e tente de novo.', en: 'Ascolta l\'esempio e riprova.' },
+    // ── Listen & Repeat — results ──
+    'imit_voce_disse': { pt: 'You said:', en: 'You said:' },
+    'imit_ouvimos': { pt: 'We heard:', en: 'We heard:' },
+    'imit_proxima_frase': { pt: 'Next Phrase', en: 'Next Phrase' },
+    'imit_tentar_novamente': { pt: 'Try Again', en: 'Try Again' },
+    'imit_pronunciar_melhor': { pt: 'Try to pronounce more clearly.', en: 'Try to pronounce more clearly.' },
+    'imit_ouvir_exemplo': { pt: 'Listen to the example and try again.', en: 'Listen to the example and try again.' },
 
-    // ── Canzoni — resultado ──
-    'can_corretas': { pt: '{a}/{b} corretas', en: '{a}/{b} corrette' },
-    'can_repetir': { pt: '🔄 Repetir', en: '🔄 Ripeti' },
-    'can_outras_musicas': { pt: '‹ Outras músicas', en: '‹ Altre canzoni' },
-    'can_salva': { pt: '🎵 "{t}" salva!', en: '🎵 "{t}" salvata!' },
+    // ── Songs — result ──
+    'can_corretas': { pt: '{a}/{b} correct', en: '{a}/{b} correct' },
+    'can_repetir': { pt: '🔄 Repeat', en: '🔄 Repeat' },
+    'can_outras_musicas': { pt: '‹ Other songs', en: '‹ Other songs' },
+    'can_salva': { pt: '🎵 "{t}" saved!', en: '🎵 "{t}" saved!' },
 
-    // ── Dialoghi — resultado ──
-    'dial_concluido': { pt: 'Diálogo Concluído', en: 'Dialogo Completato' },
-    'dial_acertos': { pt: 'Acertos: {a} / {b}', en: 'Risposte corrette: {a} / {b}' },
-    'dial_vocab_chave': { pt: 'Vocabulário Chave:', en: 'Vocabolario Chiave:' },
-    'dial_voltar': { pt: '‹ Voltar', en: '‹ Torna' },
-    'dial_salvo': { pt: '💬 "{t}" salvo!', en: '💬 "{t}" salvato!' },
+    // ── Dialogues — result ──
+    'dial_concluido': { pt: 'Dialogue Completed', en: 'Dialogue Completed' },
+    'dial_acertos': { pt: 'Correct: {a} / {b}', en: 'Correct: {a} / {b}' },
+    'dial_vocab_chave': { pt: 'Key Vocabulary:', en: 'Key Vocabulary:' },
+    'dial_voltar': { pt: '‹ Back', en: '‹ Back' },
+    'dial_salvo': { pt: '💬 "{t}" saved!', en: '💬 "{t}" saved!' },
 
     // ── Onboarding slide 2 ──
-    'ob_vocabulario': { pt: 'Vocabulário:', en: 'Vocabolario:' },
-    'ob_gramatica': { pt: 'Gramática:', en: 'Grammatica:' },
+    'ob_vocabulario': { pt: 'Vocabulary:', en: 'Vocabulary:' },
+    'ob_gramatica': { pt: 'Grammar:', en: 'Grammar:' },
 
-    // ── Dialoghi ──
-    'dial_praticar_novamente': { pt: 'Praticar Novamente 🔄', en: 'Pratica di nuovo 🔄' },
-    'dial_excluir_confirm': { pt: 'Excluir "{t}"?', en: 'Eliminare "{t}"?' },
+    // ── Dialogues ──
+    'dial_praticar_novamente': { pt: 'Practice Again 🔄', en: 'Practice Again 🔄' },
+    'dial_excluir_confirm': { pt: 'Delete "{t}"?', en: 'Delete "{t}"?' },
 
-    // ── Canzoni ──
-    'can_excluir_confirm': { pt: 'Excluir "{t}"?', en: 'Eliminare "{t}"?' },
+    // ── Songs ──
+    'can_excluir_confirm': { pt: 'Delete "{t}"?', en: 'Delete "{t}"?' },
 
-    // ── Perfil — confirms destrutivos ──
-    'prof_confirm_importar': { pt: 'Isso vai substituir todo o seu progresso atual. Confirmar?', en: 'Questo sostituirà tutti i tuoi progressi attuali. Confermi?' },
-    'prof_confirm_apagar1': { pt: '⚠️ Isso apagará TODO o seu progresso — XP, flashcards, conquistas e streak. Tem certeza?', en: '⚠️ Questo cancellerà TUTTI i tuoi progressi — XP, flashcard, traguardi e sequenza. Sei sicuro?' },
-    'prof_confirm_apagar2': { pt: 'Esta ação é IRREVERSÍVEL. Deseja mesmo começar do zero?', en: 'Questa azione è IRREVERSIBILE. Vuoi davvero ricominciare da zero?' },
-    'prof_confirm_import_content': { pt: 'Importar {c} músicas e {d} diálogos? O conteúdo existente será mantido e mesclado.', en: 'Importare {c} canzoni e {d} dialoghi? Il contenuto esistente sarà mantenuto e unito.' },
-    'prof_erro_formato': { pt: 'Formato inválido', en: 'Formato non valido' },
+    // ── Profile — destructive confirms ──
+    'prof_confirm_importar': { pt: 'This will replace all your current progress. Confirm?', en: 'This will replace all your current progress. Confirm?' },
+    'prof_confirm_apagar1': { pt: '⚠️ This will erase ALL your progress — XP, flashcards, achievements and streak. Are you sure?', en: '⚠️ This will erase ALL your progress — XP, flashcards, achievements and streak. Are you sure?' },
+    'prof_confirm_apagar2': { pt: 'This action is IRREVERSIBLE. Do you really want to start from scratch?', en: 'This action is IRREVERSIBLE. Do you really want to start from scratch?' },
+    'prof_confirm_import_content': { pt: 'Import {c} songs and {d} dialogues? Existing content will be kept and merged.', en: 'Import {c} songs and {d} dialogues? Existing content will be kept and merged.' },
+    'prof_erro_formato': { pt: 'Invalid format', en: 'Invalid format' },
 
     // ── Quiz — initial label ──
-    'quiz_pergunta_inicial': { pt: 'Pergunta 1 de 10', en: 'Domanda 1 di 10' },
+    'quiz_pergunta_inicial': { pt: 'Question 1 of 10', en: 'Question 1 of 10' },
 
     // ── index.html — section titles ──
-    'sec_dialoghi': { pt: 'Modo Diálogo', en: 'Modo Dialogo' },
+    'sec_dialoghi': { pt: 'Dialogue Mode', en: 'Dialogue Mode' },
 
     // ── Grammar — NMA layer labels ──
-    'gram_fase2_label': { pt: '🔎 Fase 2: Observe e Descubra', en: '🔎 Fase 2: Osserva e Scopri' },
-    'gram_fase2_sub':   { pt: 'Clique nos cards abaixo para descobrir as regras e padrões de forma prática!', en: 'Click the cards to discover rules and patterns in a practical way!' },
-    'gram_fase3_label': { pt: '📋 Fase 3: Tabela de Referência Rápida', en: '📋 Fase 3: Tabella di Riferimento Rapido' },
-    'gram_fase4_label': { pt: '🗣️ Fase 4: Analise os Exemplos', en: '🗣️ Fase 4: Analizza gli Esempi' },
-    'gram_fase4_sub':   { pt: 'Clique nos exemplos abaixo para exercitar seu raciocínio antes de ver a resposta!', en: 'Click the examples to practice reasoning before seeing the answer!' },
-    'gram_fase4_prc_pergunta': { pt: 'Pergunta', en: 'Question' },
-    'gram_fase4_prc_resposta': { pt: 'Resposta', en: 'Answer' },
-    'gram_fase4_prc_conclusao': { pt: 'Conclusão', en: 'Conclusion' },
-    'gram_fase4_ver_detalhes': { pt: 'Ver detalhes ▾', en: 'Vedi dettagli ▾' },
-    'gram_fase5_label': { pt: '⚠️ Fase 5: Evite Armadilhas Comuns', en: '⚠️ Fase 5: Evita le Trappole Comuni' },
-    'gram_fase5_sub':   { pt: 'Erros comuns cometidos por estudantes de português e como evitá-los:', en: 'Common mistakes made by students and how to avoid them:' },
-    'gram_fase5_porque': { pt: 'Porquê?', en: 'Perché?' },
-    'gram_inventario_label': { pt: '✅ O que você vai aprender', en: '✅ Cosa imparerai' },
-    'gram_definicao_label': { pt: '🔍 Observe e entenda', en: '🔍 Osserva e capisci' },
-    'gram_def_veja':    { pt: 'Veja', en: 'See' },
-    'gram_def_pense':   { pt: 'Pense', en: 'Think' },
-    'gram_def_entenda': { pt: 'Entenda', en: 'Understand' },
-    'gram_tecnica_label': { pt: '📌 Como usar na prática', en: '📌 Come usarlo in pratica' },
-    'gram_exemplos_prc_label': { pt: '🗣️ Veja os exemplos (clique 🔊 para ouvir)', en: '🗣️ Vedi gli esempi (clicca 🔊 per ascoltare)' },
-    'gram_ponte_label': { pt: '🇧🇷 Em português é assim… em italiano é assim:', en: '🇧🇷 In portoghese è così… in italiano è così:' },
+    'gram_fase2_label': { pt: '🔎 Phase 2: Observe and Discover', en: '🔎 Phase 2: Observe and Discover' },
+    'gram_fase2_sub':   { pt: 'Click the cards below to discover rules and patterns in a practical way!', en: 'Click the cards below to discover rules and patterns in a practical way!' },
+    'gram_fase3_label': { pt: '📋 Phase 3: Quick Reference Table', en: '📋 Phase 3: Quick Reference Table' },
+    'gram_fase4_label': { pt: '🗣️ Phase 4: Analyse the Examples', en: '🗣️ Phase 4: Analyse the Examples' },
+    'gram_fase4_sub':   { pt: 'Click the examples below to practise your reasoning before seeing the answer!', en: 'Click the examples below to practise your reasoning before seeing the answer!' },
+    'gram_fase4_prc_pergunta': { pt: 'Question', en: 'Question' },
+    'gram_fase4_prc_resposta': { pt: 'Answer', en: 'Answer' },
+    'gram_fase4_prc_conclusao': { pt: 'Conclusion', en: 'Conclusion' },
+    'gram_fase4_ver_detalhes': { pt: 'See details ▾', en: 'See details ▾' },
+    'gram_fase5_label': { pt: '⚠️ Phase 5: Avoid Common Pitfalls', en: '⚠️ Phase 5: Avoid Common Pitfalls' },
+    'gram_fase5_sub':   { pt: 'Common mistakes made by learners and how to avoid them:', en: 'Common mistakes made by learners and how to avoid them:' },
+    'gram_fase5_porque': { pt: 'Why?', en: 'Why?' },
+    'gram_inventario_label': { pt: '✅ What you will learn', en: '✅ What you will learn' },
+    'gram_definicao_label': { pt: '🔍 Observe and understand', en: '🔍 Observe and understand' },
+    'gram_def_veja':    { pt: 'See', en: 'See' },
+    'gram_def_pense':   { pt: 'Think', en: 'Think' },
+    'gram_def_entenda': { pt: 'Understand', en: 'Understand' },
+    'gram_tecnica_label': { pt: '📌 How to use it in practice', en: '📌 How to use it in practice' },
+    'gram_exemplos_prc_label': { pt: '🗣️ See the examples (click 🔊 to listen)', en: '🗣️ See the examples (click 🔊 to listen)' },
+    'gram_ponte_label': { pt: '🇵🇹 In Portuguese it is like this… in English it is like this:', en: '🇵🇹 In Portuguese it is like this… in English it is like this:' },
 
     // ── Tooltips — flashcard buttons ──
-    'title_reverso':   { pt: 'Reverso: PT→IT', en: 'Inverso: PT→IT' },
-    'title_contexto':  { pt: 'Contexto: frase com lacuna', en: 'Context: sentence with blank' },
-    'title_escuta':    { pt: 'Escuta: adivinhe pelo áudio', en: 'Ascolto: indovina dall\'audio' },
-    'title_dica':      { pt: 'Ver dica (nível 1)', en: 'Show hint (level 1)' },
-    'title_favorito':  { pt: 'Adicionar/remover favorito', en: 'Add/remove from favorites' },
-    'title_blur_pt':   { pt: 'Oculta a coluna em português para testar sua memória', en: 'Hides the Portuguese column to test your memory' },
-    'title_blur_it':   { pt: 'Oculta a coluna em italiano para testar sua memória', en: 'Hides the English column to test your memory' },
+    'title_reverso':   { pt: 'Reverse: PT→EN', en: 'Reverse: PT→EN' },
+    'title_contexto':  { pt: 'Context: sentence with blank', en: 'Context: sentence with blank' },
+    'title_escuta':    { pt: 'Listening: guess from audio', en: 'Listening: guess from audio' },
+    'title_dica':      { pt: 'Show hint (level 1)', en: 'Show hint (level 1)' },
+    'title_favorito':  { pt: 'Add/remove from favorites', en: 'Add/remove from favorites' },
+    'title_blur_pt':   { pt: 'Hides the Portuguese column to test your memory', en: 'Hides the Portuguese column to test your memory' },
+    'title_blur_it':   { pt: 'Hides the English column to test your memory', en: 'Hides the English column to test your memory' },
 
     // ── Onboarding slide 3 ──
-    'ob_slide3_li1': { pt: 'Acesse a aba <strong>TEMPLOS</strong>', en: 'Go to the <strong>TEMPLES</strong> tab' },
-    'ob_slide3_li2': { pt: 'Escolha o <strong>1º Templo (Roma - Le Fondamenta)</strong>', en: 'Scegli il <strong>1° Tempio (Roma - Le Fondamenta)</strong>' },
-    'ob_slide3_li3': { pt: 'Estude usando os <strong>FLASHCARDS</strong>', en: 'Study with <strong>FLASHCARDS</strong>' },
-    'ob_slide3_li4': { pt: 'Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!', en: 'Test yourself with <strong>QUIZZES</strong>!' },
+    'ob_slide3_li1': { pt: 'Go to the <strong>TEMPLES</strong> tab', en: 'Go to the <strong>TEMPLES</strong> tab' },
+    'ob_slide3_li2': { pt: 'Choose the <strong>1st Temple (New York - The Foundations)</strong>', en: 'Choose the <strong>1st Temple (New York - The Foundations)</strong>' },
+    'ob_slide3_li3': { pt: 'Study using the <strong>FLASHCARDS</strong>', en: 'Study using the <strong>FLASHCARDS</strong>' },
+    'ob_slide3_li4': { pt: 'Practise what you learned by answering the <strong>QUIZZES</strong>!', en: 'Practise what you learned by answering the <strong>QUIZZES</strong>!' },
 
-    // ── Dialoghi / Canzoni — botões de criação ──
-    'dial_btn_adicionar': { pt: '➕ Adicionar Diálogo', en: '➕ Aggiungi Dialogo' },
-    'can_btn_adicionar':  { pt: '➕ Adicionar Música',  it: '➕ Aggiungi Canzone' },
+    // ── Dialogues / Songs — create buttons ──
+    'dial_btn_adicionar': { pt: '➕ Add Dialogue', en: '➕ Add Dialogue' },
+    'can_btn_adicionar':  { pt: '➕ Add Song',  en: '➕ Add Song' },
 
-    // ── Imitazione — botão ouvir ──
-    'imit_btn_ouvir_exemplo': { pt: '🔊 Ouvir Exemplo', en: '🔊 Ascolta l\'Esempio' },
+    // ── Listen & Repeat — listen button ──
+    'imit_btn_ouvir_exemplo': { pt: '🔊 Listen to Example', en: '🔊 Listen to Example' },
 
     // ── Tour ──
-    'tour_templi_title': { pt: '🏛️ Templi (Sua Jornada)', en: '🏛️ Templi (Il Tuo Viaggio)' },
-    'tour_templi_desc': { pt: 'Aqui é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.', en: 'Questo è il cuore del tuo apprendimento. Sblocca nuovi templi e raggiungi il tuo obiettivo quotidiano di esperienza.' },
-    'tour_dialoghi_title': { pt: '💬 Dialoghi', en: '💬 Dialoghi' },
-    'tour_dialoghi_desc': { pt: 'Leia e escute diálogos reais para pegar o ritmo, contexto e melhorar sua compreensão auditiva.', en: 'Read and listen to real dialogues to get the rhythm, context and improve your listening comprehension.' },
-    'tour_canzoni_title': { pt: '🎵 Canzoni', en: '🎵 Canzoni' },
-    'tour_canzoni_desc': { pt: 'Aprenda vocabulário se divertindo com os clássicos da música italiana.', en: 'Learn vocabulary while enjoying popular American songs.' },
-    'tour_imitazione_title': { pt: '🎙️ Imitazione', en: '🎙️ Imitazione' },
-    'tour_imitazione_desc': { pt: 'Escute um nativo falando e grave sua própria voz. O segredo para uma dicção autêntica.', en: 'Listen to a native speaker and record your own voice. The secret to authentic pronunciation.' },
-    'tour_flashcard_title': { pt: '🧠 Flashcard', en: '🧠 Flashcard' },
-    'tour_flashcard_desc': { pt: 'Revise o vocabulário no momento exato em que estiver prestes a esquecer, usando nosso algoritmo espaçado.', en: 'Review vocabulary at the exact moment you are about to forget, using our spaced repetition algorithm.' },
+    'tour_templi_title': { pt: '🏛️ Temples (Your Journey)', en: '🏛️ Temples (Your Journey)' },
+    'tour_templi_desc': { pt: 'This is the heart of your learning. Unlock new temples and reach your daily experience goal.', en: 'This is the heart of your learning. Unlock new temples and reach your daily experience goal.' },
+    'tour_dialoghi_title': { pt: '💬 Dialogues', en: '💬 Dialogues' },
+    'tour_dialoghi_desc': { pt: 'Read and listen to real dialogues to get the rhythm, context and improve your listening comprehension.', en: 'Read and listen to real dialogues to get the rhythm, context and improve your listening comprehension.' },
+    'tour_canzoni_title': { pt: '🎵 Songs', en: '🎵 Songs' },
+    'tour_canzoni_desc': { pt: 'Learn vocabulary while enjoying popular English songs.', en: 'Learn vocabulary while enjoying popular English songs.' },
+    'tour_imitazione_title': { pt: '🎙️ Listen & Repeat', en: '🎙️ Listen & Repeat' },
+    'tour_imitazione_desc': { pt: 'Listen to a native speaker and record your own voice. The secret to authentic pronunciation.', en: 'Listen to a native speaker and record your own voice. The secret to authentic pronunciation.' },
+    'tour_flashcard_title': { pt: '🧠 Flashcards', en: '🧠 Flashcards' },
+    'tour_flashcard_desc': { pt: 'Review vocabulary at the exact moment you are about to forget, using our spaced repetition algorithm.', en: 'Review vocabulary at the exact moment you are about to forget, using our spaced repetition algorithm.' },
     'tour_quiz_title': { pt: '📝 Quiz', en: '📝 Quiz' },
-    'tour_quiz_desc': { pt: 'Teste seus conhecimentos em baterias de exercícios rápidos e conquiste moedas.', en: 'Test your knowledge with batches of quick exercises and earn XP.' },
-    'tour_grammatica_title': { pt: '📚 Grammatica', en: '📚 Grammatica' },
-    'tour_grammatica_desc': { pt: 'Dúvidas estruturais? Consulte rapidamente todas as regras de gramática aqui.', en: 'Structural doubts? Quickly consult all grammar rules here.' },
-    'tour_vocabolario_title': { pt: '📖 Vocabolario', en: '📖 Vocabolario' },
-    'tour_vocabolario_desc': { pt: 'Seu glossário mestre. Pesquise por qualquer palavra aprendida até o momento.', en: 'Your master glossary. Search for any word learned so far.' },
-    'tour_config_title': { pt: '⚙️ Configurações & Perfil', en: '⚙️ Impostazioni & Profilo' },
-    'tour_config_desc': { pt: 'Mude para o modo escuro, silencie os sons e acesse as opções de Perfil no topo da tela.', en: 'Passa alla modalità scura, silenzia i suoni e accedi alle opzioni del Profilo in cima allo schermo.' }
+    'tour_quiz_desc': { pt: 'Test your knowledge with quick exercise batches and earn XP.', en: 'Test your knowledge with quick exercise batches and earn XP.' },
+    'tour_grammatica_title': { pt: '📚 Grammar', en: '📚 Grammar' },
+    'tour_grammatica_desc': { pt: 'Structural questions? Quickly look up all grammar rules here.', en: 'Structural questions? Quickly look up all grammar rules here.' },
+    'tour_vocabolario_title': { pt: '📖 Vocabulary', en: '📖 Vocabulary' },
+    'tour_vocabolario_desc': { pt: 'Your master glossary. Search for any word learned so far.', en: 'Your master glossary. Search for any word learned so far.' },
+    'tour_config_title': { pt: '⚙️ Settings & Profile', en: '⚙️ Settings & Profile' },
+    'tour_config_desc': { pt: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.', en: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.' }
   },
 
   inicializar() {

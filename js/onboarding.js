@@ -77,9 +77,9 @@ const Onboarding = {
     
     if (btnNext) {
       if (this.slideAtual === slides.length - 1) {
-        btnNext.textContent = 'Iniziare! 🚀';
+        btnNext.textContent = 'Get Started! 🚀';
       } else {
-        btnNext.textContent = 'Avanti →';
+        btnNext.textContent = 'Next →';
       }
     }
   }

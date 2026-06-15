@@ -100,8 +100,8 @@ const Storie = {
     }
 
     const labels = I18n.idioma === 'it'
-      ? { tut: 'Tutte', cerca: '🔍 Titolo o autore...', nenhuma: 'Nessuna storia ancora.', risultato: 'Nessun risultato.' }
-      : { tut: 'Todas', cerca: '🔍 Título ou autor...', nenhuma: 'Nenhuma história ainda.', risultato: 'Nenhum resultado.' };
+      ? { tut: 'All', cerca: '🔍 Title or author...', nenhuma: 'No stories yet.', risultato: 'No results.' }
+      : { tut: 'All', cerca: '🔍 Title or author...', nenhuma: 'No stories yet.', risultato: 'No results.' };
 
     // Cores para cada nível CEFR
     const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
@@ -244,7 +244,7 @@ const Storie = {
 
       <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
         <button class="btn-secondario" onclick="Storie._fecharModal();Storie.renderizarSeletor()">
-          ${il ? '‹ Tutte le storie' : '‹ Todas as histórias'}
+          ‹ All stories
         </button>
         <button class="btn-primario" onclick="Storie._marcarLida()">
           ${this.completate.includes(s.id)
@@ -396,9 +396,7 @@ const Storie = {
         ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
         <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
           onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})">
-          ${jaSalva
-            ? `✅ ${il ? 'Già salvata' : 'Já salva'}`
-            : `⭐ ${il ? 'Salva per revisione' : 'Salvar para revisão'}`}
+          ${jaSalva ? '✅ Already saved' : '⭐ Save for review'}
         </button>`;
     };
 
@@ -562,7 +560,7 @@ const Storie = {
     const btn = document.getElementById('storie-btn-salvar');
     if (btn) {
       const il = I18n.idioma === 'it';
-      btn.textContent = `✅ ${il ? 'Già salvata' : 'Já salva'}`;
+      btn.textContent = '✅ Already saved';
       btn.classList.add('salvo');
     }
 

@@ -76,7 +76,7 @@ const Dialoghi = {
         ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo) : ''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
-          <option value="">🎯 Nível</option>
+          <option value="">🎯 Level</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
       </div>
@@ -97,7 +97,7 @@ const Dialoghi = {
     }
 
     if (filtrados.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${filtrados.length === 0 && this._filtroTexto ? 'Nenhum resultado.' : 'Nenhum diálogo ainda.'}</p>`;
+      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${filtrados.length === 0 && this._filtroTexto ? 'No results.' : 'No dialogues yet.'}</p>`;
     }
 
     html += '</div>';
@@ -115,7 +115,7 @@ const Dialoghi = {
     const nivel = existente?.nivel || 'A1';
     const contexto = existente?.contexto || '';
     const turni = existente?.turni || [
-      { id:1, personaggio:'Personaggio', frase:'', traducao:'', audio_ipa:'', tipo:'fala' },
+      { id:1, personaggio:'Character', frase:'', traducao:'', audio_ipa:'', tipo:'fala' },
       { id:2, personaggio:'Tu', frase:'', traducao:'', audio_ipa:'', tipo:'resposta', alternativas:['','','',''], resposta_correta:0 }
     ];
 
@@ -125,54 +125,54 @@ const Dialoghi = {
     c.innerHTML = `
       <div class="gram-lesson-nav">
         <button class="gram-btn-back" onclick="Dialoghi.renderizarSeletor()">‹ Cancelar</button>
-        <span style="font-size:0.9rem;font-weight:700">${idEditar ? 'Editar Diálogo' : 'Novo Diálogo'}</span>
+        <span style="font-size:0.9rem;font-weight:700">${idEditar ? 'Edit Dialogue' : 'New Dialogue'}</span>
       </div>
 
       <div class="gram-card" style="margin-top:1rem;padding:1.2rem">
         <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:0.7rem;margin-bottom:1rem">
           <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Título *</label>
+            <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Title *</label>
             <input id="dial-titulo" type="text" value="${titulo}" placeholder="Ex: Al Bar"
               style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem">
           </div>
           <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Nível</label>
+            <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Level</label>
             <select id="dial-nivel" style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem">
               ${['A1','A2','B1','B2','C1'].map(n=>`<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
             </select>
           </div>
           <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Ícone</label>
+            <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Icon</label>
             <input id="dial-icone" type="text" value="${icone}" maxlength="4"
               style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;text-align:center;font-size:1.2rem">
           </div>
         </div>
 
         <div style="margin-bottom:1rem">
-          <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Contexto (descrição da situação)</label>
+          <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Context (situation description)</label>
           <textarea id="dial-contexto" rows="2" placeholder="Ex: Você entra em um bar para pedir um café."
             style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.88rem;resize:vertical">${contexto}</textarea>
         </div>
 
-        <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.8rem;border-top:1px solid #f0e8d8;padding-top:1rem">
-          💬 Turnos do Diálogo
+        <div style="font-size:0.85rem;font-weight:700;color:#003E8A;margin-bottom:0.8rem;border-top:1px solid #f0e8d8;padding-top:1rem">
+          💬 Dialogue Turns
         </div>
 
         <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.7rem;margin-bottom:1rem;font-size:0.8rem;color:#6B4C1A">
-          💡 <strong>Tipo "Fala":</strong> o personagem fala (o usuário só lê/ouve).<br>
-          💡 <strong>Tipo "Resposta do Tu":</strong> o usuário escolhe entre 4 opções — preencha as 4 alternativas e marque qual é a correta.
+          💡 <strong>Type "Character Line":</strong> the character speaks (the user just reads/listens).<br>
+          💡 <strong>Type "User Response":</strong> the user chooses from 4 options — fill in all 4 alternatives and mark the correct one.
         </div>
 
         <div id="dial-turni">${turniHtml}</div>
 
         <div style="display:flex;gap:0.5rem;margin:0.8rem 0">
-          <button onclick="Dialoghi._adicionarTurnoFala()" class="btn-secondario" style="flex:1">➕ Adicionar Fala</button>
-          <button onclick="Dialoghi._adicionarTurnoResposta()" class="btn-secondario" style="flex:1">➕ Resposta do Tu</button>
+          <button onclick="Dialoghi._adicionarTurnoFala()" class="btn-secondario" style="flex:1">➕ Add Character Line</button>
+          <button onclick="Dialoghi._adicionarTurnoResposta()" class="btn-secondario" style="flex:1">➕ Add User Response</button>
         </div>
 
         <div style="display:flex;gap:0.5rem">
           <button class="btn-primario" style="flex:1" onclick="Dialoghi._salvarFormulario('${idEditar || ''}')">
-            💾 Salvar Diálogo
+            💾 Save Dialogue
           </button>
           <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()">Cancelar</button>
         </div>
@@ -184,10 +184,10 @@ const Dialoghi = {
     const alts = turno.alternativas || ['','','',''];
     const correto = turno.resposta_correta || 0;
     return `
-      <div class="dial-turno-form" id="dial-turno-${i}" style="background:#f9f6f0;border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;border:1px solid ${ehResposta ? '#9B2335' : '#ede5d5'}">
+      <div class="dial-turno-form" id="dial-turno-${i}" style="background:#f9f6f0;border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;border:1px solid ${ehResposta ? '#003E8A' : '#ede5d5'}">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem">
-          <span style="font-weight:700;font-size:0.82rem;color:${ehResposta ? '#9B2335' : '#2C2C2C'}">
-            ${ehResposta ? '👤 Resposta do Tu' : '🗣️ Fala do Personagem'}
+          <span style="font-weight:700;font-size:0.82rem;color:${ehResposta ? '#003E8A' : '#2C2C2C'}">
+            ${ehResposta ? '👤 User Response' : '🗣️ Character Line'}
           </span>
           <button onclick="Dialoghi._removerTurno(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️</button>
         </div>
@@ -195,7 +195,7 @@ const Dialoghi = {
         ${!ehResposta ? `
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.5rem">
             <input type="text" data-campo="personaggio" data-idx="${i}" value="${turno.personaggio || ''}"
-              placeholder="Nome do personagem" style="padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+              placeholder="Character name" style="padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
             <input type="text" data-campo="audio_ipa" data-idx="${i}" value="${turno.audio_ipa || ''}"
               placeholder="IPA (opcional)" style="padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem">
           </div>
@@ -208,7 +208,7 @@ const Dialoghi = {
             placeholder="Frase correta em italiano *" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;margin-bottom:0.4rem">
           <input type="text" data-campo="traducao" data-idx="${i}" value="${turno.traducao || ''}"
             placeholder="Tradução em português" style="width:100%;padding:0.4rem;border:2px solid #ddd;border-radius:7px;font-size:0.85rem;margin-bottom:0.6rem">
-          <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.4rem">4 Alternativas (marque a correta):</div>
+          <div style="font-size:0.78rem;font-weight:700;color:#003E8A;margin-bottom:0.4rem">4 Alternativas (marque a correta):</div>
           ${alts.map((a, ai) => `
             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem">
               <input type="radio" name="correct-${i}" value="${ai}" ${correto===ai?'checked':''} onchange="Dialoghi._marcarCorreta(${i},${ai})">
@@ -226,7 +226,7 @@ const Dialoghi = {
     if (!container) return;
     const i = container.querySelectorAll('.dial-turno-form').length;
     const div = document.createElement('div');
-    div.innerHTML = this._htmlTurnoForm({ personaggio:'Personaggio', frase:'', traducao:'', audio_ipa:'' }, i);
+    div.innerHTML = this._htmlTurnoForm({ personaggio:'Character', frase:'', traducao:'', audio_ipa:'' }, i);
     container.appendChild(div.firstElementChild);
   },
 

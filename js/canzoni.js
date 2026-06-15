@@ -99,7 +99,7 @@ const Canzoni = {
     let html = `
       <!-- Linha 1: busca + ações -->
       <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
-        <input type="search" placeholder="🔍 Titolo o artista..." value="${this._filtroTexto}"
+        <input type="search" placeholder="🔍 Title or artist..." value="${this._filtroTexto}"
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
         <button class="btn-pill-add" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
@@ -137,7 +137,7 @@ const Canzoni = {
     }
 
     if (filtradas.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? 'Nessun risultato.' : 'Nessuna canzone ancora.'}</p>`;
+      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? 'No results.' : 'No songs yet.'}</p>`;
     }
 
     html += '</div>';
@@ -184,7 +184,7 @@ const Canzoni = {
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1.2rem">
           <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">${I18n.idioma === 'it' ? 'Livello' : 'Nível'}</label>
+            <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Level</label>
             <select id="can-nivel" style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
               ${['A1','A2','B1','B2','C1'].map(n => `<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
             </select>
@@ -214,7 +214,7 @@ const Canzoni = {
 
         <div style="display:flex;gap:0.5rem">
           <button class="btn-primario" style="flex:1" onclick="Canzoni._salvarFormulario('${idEditar || ''}')">
-            💾 Salvar Música
+            💾 Save Song
           </button>
           <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">Cancelar</button>
         </div>
