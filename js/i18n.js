@@ -62,7 +62,7 @@ const I18n = {
     
     // ── Perfil e Gestão de Dados ──
     'prof_gestao_dati': { pt: '⚙️ Gestão de Dados', en: '⚙️ Data Management' },
-    'prof_backup_desc': { pt: 'O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.', en: 'English Autentico saves your progress locally on your device. Back up regularly to avoid losing data if you clear your browser history.' },
+    'prof_backup_desc': { pt: 'O English Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.', en: 'English Autentico saves your progress locally on your device. Back up regularly to avoid losing data if you clear your browser history.' },
     'prof_exp_backup': { pt: '⬇️ Exportar Backup', en: '⬇️ Export Backup' },
     'prof_imp_backup': { pt: '⬆️ Importar Backup', en: '⬆️ Import Backup' },
     'prof_azzera': { pt: '⚠️ Apagar Tudo', en: '⚠️ Delete All' },
