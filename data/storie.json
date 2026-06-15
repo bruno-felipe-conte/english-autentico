@@ -286,6 +286,1770 @@
           ]
         }
       ]
+    },
+    {
+      "id": "stor_003",
+      "titulo": "At the Supermarket",
+      "titulo_pt": "No Supermercado",
+      "nivel": "A1",
+      "icone": "🛒",
+      "autor": "English Autentico",
+      "tema": "shopping",
+      "descricao": "A simple story about buying groceries for dinner.",
+      "descricao_pt": "Uma história simples sobre comprar comida para o jantar.",
+      "xp_recompensa": 80,
+      "testo": [
+        {
+          "id": "stor_003_p1",
+          "ingles": "Today is Saturday. I need to buy food for dinner.",
+          "portugues": "Hoje é sábado. Eu preciso comprar comida para o jantar.",
+          "vocabulario": [
+            {
+              "parola": "Today",
+              "traducao_portugues": "hoje",
+              "ipa": "/təˈdeɪ/",
+              "categoria": "adverb"
+            },
+            {
+              "parola": "dinner",
+              "traducao_portugues": "jantar",
+              "ipa": "/ˈdɪnər/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_003_p2",
+          "ingles": "I walk to the local supermarket. It is very big and bright.",
+          "portugues": "Eu ando até o supermercado local. É muito grande e claro.",
+          "vocabulario": [
+            {
+              "parola": "walk",
+              "traducao_portugues": "ando / caminhar",
+              "ipa": "/wɔːk/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "supermarket",
+              "traducao_portugues": "supermercado",
+              "ipa": "/ˈsuːpərmɑːrkɪt/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_003_p3",
+          "ingles": "First, I go to the fruit section. I pick three red apples and some yellow bananas.",
+          "portugues": "Primeiro, eu vou para a seção de frutas. Eu pego três maçãs vermelhas e algumas bananas amarelas.",
+          "vocabulario": [
+            {
+              "parola": "fruit",
+              "traducao_portugues": "fruta",
+              "ipa": "/fruːt/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "apples",
+              "traducao_portugues": "maçãs",
+              "ipa": "/ˈæpəlz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_003_p4",
+          "ingles": "Next, I need some milk and bread. I find them in aisle four.",
+          "portugues": "Em seguida, eu preciso de leite e pão. Eu os encontro no corredor quatro.",
+          "vocabulario": [
+            {
+              "parola": "milk",
+              "traducao_portugues": "leite",
+              "ipa": "/mɪlk/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "bread",
+              "traducao_portugues": "pão",
+              "ipa": "/brɛd/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_003_p5",
+          "ingles": "Finally, I buy a small cake for dessert. I love chocolate cake.",
+          "portugues": "Finalmente, eu compro um bolo pequeno para a sobremesa. Eu amo bolo de chocolate.",
+          "vocabulario": [
+            {
+              "parola": "cake",
+              "traducao_portugues": "bolo",
+              "ipa": "/keɪk/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "dessert",
+              "traducao_portugues": "sobremesa",
+              "ipa": "/dɪˈzɜːrt/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_003_p6",
+          "ingles": "I go to the cashier and pay with my credit card.",
+          "portugues": "Eu vou ao caixa e pago com meu cartão de crédito.",
+          "vocabulario": [
+            {
+              "parola": "cashier",
+              "traducao_portugues": "caixa (funcionário)",
+              "ipa": "/kæˈʃɪər/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "pay",
+              "traducao_portugues": "pago / pagar",
+              "ipa": "/peɪ/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_003_p7",
+          "ingles": "I walk back home. Now, I am ready to cook a delicious meal.",
+          "portugues": "Eu volto a pé para casa. Agora, estou pronto para cozinhar uma refeição deliciosa.",
+          "vocabulario": [
+            {
+              "parola": "cook",
+              "traducao_portugues": "cozinhar",
+              "ipa": "/kʊk/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "meal",
+              "traducao_portugues": "refeição",
+              "ipa": "/miːl/",
+              "categoria": "noun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_004",
+      "titulo": "A Day at the Park",
+      "titulo_pt": "Um Dia no Parque",
+      "nivel": "A1",
+      "icone": "🌳",
+      "autor": "English Autentico",
+      "tema": "leisure",
+      "descricao": "Spending a sunny afternoon at the local park.",
+      "descricao_pt": "Passando uma tarde ensolarada no parque local.",
+      "xp_recompensa": 80,
+      "testo": [
+        {
+          "id": "stor_004_p1",
+          "ingles": "The weather is very beautiful today. The sky is blue and the sun is hot.",
+          "portugues": "O tempo está muito bonito hoje. O céu está azul e o sol está quente.",
+          "vocabulario": [
+            {
+              "parola": "weather",
+              "traducao_portugues": "tempo / clima",
+              "ipa": "/ˈwɛðər/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "beautiful",
+              "traducao_portugues": "bonito",
+              "ipa": "/ˈbjuːtɪfəl/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_004_p2",
+          "ingles": "I decide to go to the park with my dog, Max.",
+          "portugues": "Eu decido ir ao parque com meu cachorro, Max.",
+          "vocabulario": [
+            {
+              "parola": "decide",
+              "traducao_portugues": "decido / decidir",
+              "ipa": "/dɪˈsaɪd/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "dog",
+              "traducao_portugues": "cachorro",
+              "ipa": "/dɔːɡ/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_004_p3",
+          "ingles": "Many people are at the park. Children are playing on the grass.",
+          "portugues": "Muitas pessoas estão no parque. As crianças estão brincando na grama.",
+          "vocabulario": [
+            {
+              "parola": "people",
+              "traducao_portugues": "pessoas",
+              "ipa": "/ˈpiːpəl/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "playing",
+              "traducao_portugues": "brincando",
+              "ipa": "/ˈpleɪɪŋ/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_004_p4",
+          "ingles": "I sit on a green bench and read a book.",
+          "portugues": "Eu me sento em um banco verde e leio um livro.",
+          "vocabulario": [
+            {
+              "parola": "sit",
+              "traducao_portugues": "sento / sentar",
+              "ipa": "/sɪt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "bench",
+              "traducao_portugues": "banco",
+              "ipa": "/bɛntʃ/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_004_p5",
+          "ingles": "Max runs around and chases a small bird.",
+          "portugues": "Max corre em volta e persegue um passarinho pequeno.",
+          "vocabulario": [
+            {
+              "parola": "runs",
+              "traducao_portugues": "corre",
+              "ipa": "/rʌnz/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "bird",
+              "traducao_portugues": "pássaro",
+              "ipa": "/bɜːrd/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_004_p6",
+          "ingles": "We stay at the park for two hours. We feel happy and relaxed.",
+          "portugues": "Nós ficamos no parque por duas horas. Nós nos sentimos felizes e relaxados.",
+          "vocabulario": [
+            {
+              "parola": "stay",
+              "traducao_portugues": "ficamos / ficar",
+              "ipa": "/steɪ/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "happy",
+              "traducao_portugues": "felizes",
+              "ipa": "/ˈhæpi/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_004_p7",
+          "ingles": "When the sun goes down, we slowly walk back home.",
+          "portugues": "Quando o sol se põe, nós caminhamos lentamente de volta para casa.",
+          "vocabulario": [
+            {
+              "parola": "goes down",
+              "traducao_portugues": "se põe",
+              "ipa": "/ɡoʊz daʊn/",
+              "categoria": "verb phrase"
+            },
+            {
+              "parola": "slowly",
+              "traducao_portugues": "lentamente",
+              "ipa": "/ˈsloʊli/",
+              "categoria": "adverb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_005",
+      "titulo": "My Morning Routine",
+      "titulo_pt": "Minha Rotina Matinal",
+      "nivel": "A1",
+      "icone": "☕",
+      "autor": "English Autentico",
+      "tema": "daily life",
+      "descricao": "How a normal person starts their day.",
+      "descricao_pt": "Como uma pessoa normal começa o seu dia.",
+      "xp_recompensa": 80,
+      "testo": [
+        {
+          "id": "stor_005_p1",
+          "ingles": "I wake up at seven o'clock every morning from Monday to Friday.",
+          "portugues": "Eu acordo às sete horas todas as manhãs, de segunda a sexta-feira.",
+          "vocabulario": [
+            {
+              "parola": "wake up",
+              "traducao_portugues": "acordo / acordar",
+              "ipa": "/weɪk ʌp/",
+              "categoria": "verb phrase"
+            },
+            {
+              "parola": "morning",
+              "traducao_portugues": "manhã",
+              "ipa": "/ˈmɔːrnɪŋ/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_005_p2",
+          "ingles": "I get out of bed and go to the bathroom. I brush my teeth.",
+          "portugues": "Eu saio da cama e vou ao banheiro. Eu escovo meus dentes.",
+          "vocabulario": [
+            {
+              "parola": "bed",
+              "traducao_portugues": "cama",
+              "ipa": "/bɛd/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "teeth",
+              "traducao_portugues": "dentes",
+              "ipa": "/tiːθ/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_005_p3",
+          "ingles": "Then, I take a quick shower and put on my clothes for work.",
+          "portugues": "Então, eu tomo um banho rápido e visto minhas roupas para o trabalho.",
+          "vocabulario": [
+            {
+              "parola": "shower",
+              "traducao_portugues": "banho",
+              "ipa": "/ˈʃaʊər/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "clothes",
+              "traducao_portugues": "roupas",
+              "ipa": "/kloʊðz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_005_p4",
+          "ingles": "I walk into the kitchen to make breakfast. I am always hungry.",
+          "portugues": "Eu entro na cozinha para fazer o café da manhã. Eu estou sempre com fome.",
+          "vocabulario": [
+            {
+              "parola": "kitchen",
+              "traducao_portugues": "cozinha",
+              "ipa": "/ˈkɪtʃən/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "breakfast",
+              "traducao_portugues": "café da manhã",
+              "ipa": "/ˈbrɛkfəst/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_005_p5",
+          "ingles": "I usually eat eggs and toast, and I drink a large cup of coffee.",
+          "portugues": "Eu geralmente como ovos e torradas, e bebo uma xícara grande de café.",
+          "vocabulario": [
+            {
+              "parola": "eggs",
+              "traducao_portugues": "ovos",
+              "ipa": "/ɛɡz/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "drink",
+              "traducao_portugues": "bebo",
+              "ipa": "/drɪŋk/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_005_p6",
+          "ingles": "After breakfast, I check my phone and read the news online.",
+          "portugues": "Após o café da manhã, eu checo meu celular e leio as notícias online.",
+          "vocabulario": [
+            {
+              "parola": "phone",
+              "traducao_portugues": "celular / telefone",
+              "ipa": "/foʊn/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "news",
+              "traducao_portugues": "notícias",
+              "ipa": "/nuːz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_005_p7",
+          "ingles": "At eight o'clock, I take my keys, open the door, and leave the house.",
+          "portugues": "Às oito horas, eu pego minhas chaves, abro a porta e saio de casa.",
+          "vocabulario": [
+            {
+              "parola": "keys",
+              "traducao_portugues": "chaves",
+              "ipa": "/kiːz/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "leave",
+              "traducao_portugues": "saio",
+              "ipa": "/liːv/",
+              "categoria": "verb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_006",
+      "titulo": "The Job Interview",
+      "titulo_pt": "A Entrevista de Emprego",
+      "nivel": "A2",
+      "icone": "💼",
+      "autor": "English Autentico",
+      "tema": "work",
+      "descricao": "Sarah has a job interview for a new position.",
+      "descricao_pt": "Sarah tem uma entrevista de emprego para uma nova posição.",
+      "xp_recompensa": 90,
+      "testo": [
+        {
+          "id": "stor_006_p1",
+          "ingles": "Sarah wakes up early on Thursday. She feels a little nervous but also excited.",
+          "portugues": "Sarah acorda cedo na quinta-feira. Ela se sente um pouco nervosa, mas também animada.",
+          "vocabulario": [
+            {
+              "parola": "early",
+              "traducao_portugues": "cedo",
+              "ipa": "/ˈɜːrli/",
+              "categoria": "adverb"
+            },
+            {
+              "parola": "nervous",
+              "traducao_portugues": "nervosa",
+              "ipa": "/ˈnɜːrvəs/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_006_p2",
+          "ingles": "Today, she has a very important job interview at a big marketing company.",
+          "portugues": "Hoje, ela tem uma entrevista de emprego muito importante em uma grande empresa de marketing.",
+          "vocabulario": [
+            {
+              "parola": "interview",
+              "traducao_portugues": "entrevista",
+              "ipa": "/ˈɪntərvjuː/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "company",
+              "traducao_portugues": "empresa",
+              "ipa": "/ˈkʌmpəni/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_006_p3",
+          "ingles": "She wears a professional black suit and takes a copy of her resume.",
+          "portugues": "Ela veste um terno preto profissional e leva uma cópia do seu currículo.",
+          "vocabulario": [
+            {
+              "parola": "suit",
+              "traducao_portugues": "terno",
+              "ipa": "/suːt/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "resume",
+              "traducao_portugues": "currículo",
+              "ipa": "/ˈrɛzʊmeɪ/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_006_p4",
+          "ingles": "When she arrives at the office, the receptionist tells her to wait in the hall.",
+          "portugues": "Quando ela chega no escritório, o recepcionista diz a ela para esperar no saguão.",
+          "vocabulario": [
+            {
+              "parola": "arrives",
+              "traducao_portugues": "chega",
+              "ipa": "/əˈraɪvz/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "wait",
+              "traducao_portugues": "esperar",
+              "ipa": "/weɪt/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_006_p5",
+          "ingles": "Ten minutes later, the manager, Mr. Davis, invites her into his office.",
+          "portugues": "Dez minutos depois, o gerente, Sr. Davis, a convida para o seu escritório.",
+          "vocabulario": [
+            {
+              "parola": "manager",
+              "traducao_portugues": "gerente",
+              "ipa": "/ˈmænɪdʒər/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "invites",
+              "traducao_portugues": "convida",
+              "ipa": "/ɪnˈvaɪts/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_006_p6",
+          "ingles": "He asks about her previous experience and why she wants this job.",
+          "portugues": "Ele pergunta sobre a experiência anterior dela e por que ela quer este emprego.",
+          "vocabulario": [
+            {
+              "parola": "previous",
+              "traducao_portugues": "anterior",
+              "ipa": "/ˈpriːviəs/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "experience",
+              "traducao_portugues": "experiência",
+              "ipa": "/ɪkˈspɪəriəns/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_006_p7",
+          "ingles": "Sarah answers confidently. At the end, he says, \"Welcome to the team!\"",
+          "portugues": "Sarah responde com confiança. No final, ele diz: 'Bem-vinda à equipe!'",
+          "vocabulario": [
+            {
+              "parola": "answers",
+              "traducao_portugues": "responde",
+              "ipa": "/ˈænsərz/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "team",
+              "traducao_portugues": "equipe",
+              "ipa": "/tiːm/",
+              "categoria": "noun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_007",
+      "titulo": "A Weekend Getaway",
+      "titulo_pt": "Uma Fuga no Fim de Semana",
+      "nivel": "A2",
+      "icone": "🎒",
+      "autor": "English Autentico",
+      "tema": "travel",
+      "descricao": "Mark and Leo plan a short trip to the mountains.",
+      "descricao_pt": "Mark e Leo planejam uma viagem curta para as montanhas.",
+      "xp_recompensa": 90,
+      "testo": [
+        {
+          "id": "stor_007_p1",
+          "ingles": "Mark and his best friend, Leo, want to escape the busy city for the weekend.",
+          "portugues": "Mark e seu melhor amigo, Leo, querem escapar da cidade movimentada no fim de semana.",
+          "vocabulario": [
+            {
+              "parola": "escape",
+              "traducao_portugues": "escapar",
+              "ipa": "/ɪˈskeɪp/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "busy",
+              "traducao_portugues": "movimentada",
+              "ipa": "/ˈbɪzi/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_007_p2",
+          "ingles": "They decide to rent a cabin in the mountains. It has a beautiful view.",
+          "portugues": "Eles decidem alugar uma cabana nas montanhas. Ela tem uma vista bonita.",
+          "vocabulario": [
+            {
+              "parola": "rent",
+              "traducao_portugues": "alugar",
+              "ipa": "/rɛnt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "cabin",
+              "traducao_portugues": "cabana",
+              "ipa": "/ˈkæbɪn/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_007_p3",
+          "ingles": "They pack their bags on Friday evening. They bring warm clothes and a camera.",
+          "portugues": "Eles arrumam as malas na sexta à noite. Eles levam roupas quentes e uma câmera.",
+          "vocabulario": [
+            {
+              "parola": "pack",
+              "traducao_portugues": "arrumam",
+              "ipa": "/pæk/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "warm",
+              "traducao_portugues": "quentes",
+              "ipa": "/wɔːrm/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_007_p4",
+          "ingles": "On Saturday morning, they drive for three hours. The road is very quiet.",
+          "portugues": "No sábado de manhã, eles dirigem por três horas. A estrada está muito silenciosa.",
+          "vocabulario": [
+            {
+              "parola": "drive",
+              "traducao_portugues": "dirigem",
+              "ipa": "/draɪv/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "quiet",
+              "traducao_portugues": "silenciosa",
+              "ipa": "/ˈkwaɪət/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_007_p5",
+          "ingles": "When they arrive, the air is fresh. They hike near a beautiful lake.",
+          "portugues": "Quando chegam, o ar é fresco. Eles fazem uma trilha perto de um lindo lago.",
+          "vocabulario": [
+            {
+              "parola": "fresh",
+              "traducao_portugues": "fresco",
+              "ipa": "/frɛʃ/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "hike",
+              "traducao_portugues": "fazem trilha",
+              "ipa": "/haɪk/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_007_p6",
+          "ingles": "In the evening, they build a fire and cook sausages outside.",
+          "portugues": "À noite, eles acendem uma fogueira e cozinham salsichas do lado de fora.",
+          "vocabulario": [
+            {
+              "parola": "build",
+              "traducao_portugues": "constroem / acendem",
+              "ipa": "/bɪld/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "outside",
+              "traducao_portugues": "lá fora",
+              "ipa": "/ˌaʊtˈsaɪd/",
+              "categoria": "adverb"
+            }
+          ]
+        },
+        {
+          "id": "stor_007_p7",
+          "ingles": "It is a perfect getaway. They sleep well, far away from their daily stress.",
+          "portugues": "É uma fuga perfeita. Eles dormem bem, bem longe do estresse diário.",
+          "vocabulario": [
+            {
+              "parola": "perfect",
+              "traducao_portugues": "perfeita",
+              "ipa": "/ˈpɜːrfɪkt/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "far",
+              "traducao_portugues": "longe",
+              "ipa": "/fɑːr/",
+              "categoria": "adverb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_008",
+      "titulo": "The Lost Wallet",
+      "titulo_pt": "A Carteira Perdida",
+      "nivel": "A2",
+      "icone": "💳",
+      "autor": "English Autentico",
+      "tema": "everyday problems",
+      "descricao": "James loses his wallet at a restaurant and panics.",
+      "descricao_pt": "James perde sua carteira em um restaurante e entra em pânico.",
+      "xp_recompensa": 90,
+      "testo": [
+        {
+          "id": "stor_008_p1",
+          "ingles": "James is having lunch at his favorite Italian restaurant downtown.",
+          "portugues": "James está almoçando em seu restaurante italiano favorito no centro da cidade.",
+          "vocabulario": [
+            {
+              "parola": "lunch",
+              "traducao_portugues": "almoçando / almoço",
+              "ipa": "/lʌntʃ/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "downtown",
+              "traducao_portugues": "centro da cidade",
+              "ipa": "/ˌdaʊnˈtaʊn/",
+              "categoria": "adverb/noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_008_p2",
+          "ingles": "When he finishes his pizza, he asks the waiter for the bill.",
+          "portugues": "Quando ele termina sua pizza, ele pede a conta ao garçom.",
+          "vocabulario": [
+            {
+              "parola": "finishes",
+              "traducao_portugues": "termina",
+              "ipa": "/ˈfɪnɪʃɪz/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "bill",
+              "traducao_portugues": "conta",
+              "ipa": "/bɪl/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_008_p3",
+          "ingles": "He reaches into his jacket pocket, but his wallet is not there.",
+          "portugues": "Ele coloca a mão no bolso da jaqueta, mas sua carteira não está lá.",
+          "vocabulario": [
+            {
+              "parola": "reaches",
+              "traducao_portugues": "alcança / coloca a mão",
+              "ipa": "/ˈriːtʃɪz/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "wallet",
+              "traducao_portugues": "carteira",
+              "ipa": "/ˈwɒlɪt/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_008_p4",
+          "ingles": "He starts to panic. His credit cards and his driver's license are inside.",
+          "portugues": "Ele começa a entrar em pânico. Seus cartões de crédito e sua carteira de motorista estão dentro.",
+          "vocabulario": [
+            {
+              "parola": "panic",
+              "traducao_portugues": "pânico",
+              "ipa": "/ˈpænɪk/",
+              "categoria": "noun/verb"
+            },
+            {
+              "parola": "license",
+              "traducao_portugues": "licença / carteira",
+              "ipa": "/ˈlaɪsəns/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_008_p5",
+          "ingles": "He looks under the table and checks his pants, but finds nothing.",
+          "portugues": "Ele olha debaixo da mesa e checa suas calças, mas não encontra nada.",
+          "vocabulario": [
+            {
+              "parola": "under",
+              "traducao_portugues": "debaixo",
+              "ipa": "/ˈʌndər/",
+              "categoria": "preposition"
+            },
+            {
+              "parola": "nothing",
+              "traducao_portugues": "nada",
+              "ipa": "/ˈnʌθɪŋ/",
+              "categoria": "pronoun"
+            }
+          ]
+        },
+        {
+          "id": "stor_008_p6",
+          "ingles": "Suddenly, a kind woman walks up to him. \"Is this yours?\" she asks.",
+          "portugues": "De repente, uma mulher gentil se aproxima dele. 'Isso é seu?' ela pergunta.",
+          "vocabulario": [
+            {
+              "parola": "Suddenly",
+              "traducao_portugues": "de repente",
+              "ipa": "/ˈsʌdənli/",
+              "categoria": "adverb"
+            },
+            {
+              "parola": "yours",
+              "traducao_portugues": "seu",
+              "ipa": "/jʊərz/",
+              "categoria": "pronoun"
+            }
+          ]
+        },
+        {
+          "id": "stor_008_p7",
+          "ingles": "It is his wallet! He dropped it near the entrance. He feels very relieved.",
+          "portugues": "É a carteira dele! Ele a deixou cair perto da entrada. Ele se sente muito aliviado.",
+          "vocabulario": [
+            {
+              "parola": "dropped",
+              "traducao_portugues": "deixou cair",
+              "ipa": "/drɒpt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "relieved",
+              "traducao_portugues": "aliviado",
+              "ipa": "/rɪˈliːvd/",
+              "categoria": "adjective"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_009",
+      "titulo": "A Culture Shock in Japan",
+      "titulo_pt": "Um Choque Cultural no Japão",
+      "nivel": "B1",
+      "icone": "🎎",
+      "autor": "English Autentico",
+      "tema": "culture",
+      "descricao": "Emily experiences the unique customs and traditions of Tokyo.",
+      "descricao_pt": "Emily vivencia os costumes e tradições únicos de Tóquio.",
+      "xp_recompensa": 100,
+      "testo": [
+        {
+          "id": "stor_009_p1",
+          "ingles": "When Emily first arrived in Tokyo, she immediately noticed how incredibly polite everyone was.",
+          "portugues": "Quando Emily chegou a Tóquio, ela notou imediatamente o quão incrivelmente educados todos eram.",
+          "vocabulario": [
+            {
+              "parola": "immediately",
+              "traducao_portugues": "imediatamente",
+              "ipa": "/ɪˈmiːdiətli/",
+              "categoria": "adverb"
+            },
+            {
+              "parola": "polite",
+              "traducao_portugues": "educados",
+              "ipa": "/pəˈlaɪt/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_009_p2",
+          "ingles": "The streets were spotless, and despite the large crowds, there was a profound sense of order.",
+          "portugues": "As ruas eram impecáveis e, apesar das grandes multidões, havia um profundo senso de ordem.",
+          "vocabulario": [
+            {
+              "parola": "spotless",
+              "traducao_portugues": "impecáveis / sem manchas",
+              "ipa": "/ˈspɒtləs/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "crowds",
+              "traducao_portugues": "multidões",
+              "ipa": "/kraʊdz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_009_p3",
+          "ingles": "However, navigating the complex subway system during rush hour was quite overwhelming for her.",
+          "portugues": "No entanto, navegar pelo complexo sistema de metrô na hora do rush foi bastante avassalador para ela.",
+          "vocabulario": [
+            {
+              "parola": "navigating",
+              "traducao_portugues": "navegar",
+              "ipa": "/ˈnævɪɡeɪtɪŋ/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "overwhelming",
+              "traducao_portugues": "avassalador",
+              "ipa": "/ˌoʊvərˈwɛlmɪŋ/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_009_p4",
+          "ingles": "She also had to learn the etiquette of bowing, which depends on the person's social status.",
+          "portugues": "Ela também teve que aprender a etiqueta de se curvar, que depende do status social da pessoa.",
+          "vocabulario": [
+            {
+              "parola": "etiquette",
+              "traducao_portugues": "etiqueta",
+              "ipa": "/ˈɛtɪkɛt/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "bowing",
+              "traducao_portugues": "se curvar",
+              "ipa": "/ˈbaʊɪŋ/",
+              "categoria": "noun/verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_009_p5",
+          "ingles": "Dining out presented another challenge; using chopsticks requires patience and a lot of practice.",
+          "portugues": "Sair para jantar apresentou outro desafio; usar hashis requer paciência e muita prática.",
+          "vocabulario": [
+            {
+              "parola": "Dining out",
+              "traducao_portugues": "sair para jantar",
+              "ipa": "/ˈdaɪnɪŋ aʊt/",
+              "categoria": "verb phrase"
+            },
+            {
+              "parola": "chopsticks",
+              "traducao_portugues": "hashis",
+              "ipa": "/ˈtʃɒpstɪks/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_009_p6",
+          "ingles": "Despite the initial culture shock, Emily embraced the differences and quickly fell in love with the country.",
+          "portugues": "Apesar do choque cultural inicial, Emily abraçou as diferenças e rapidamente se apaixonou pelo país.",
+          "vocabulario": [
+            {
+              "parola": "embraced",
+              "traducao_portugues": "abraçou / aceitou",
+              "ipa": "/ɪmˈbreɪst/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "differences",
+              "traducao_portugues": "diferenças",
+              "ipa": "/ˈdɪfərənsɪz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_009_p7",
+          "ingles": "She realized that stepping out of her comfort zone was the best way to grow as a person.",
+          "portugues": "Ela percebeu que sair da sua zona de conforto era a melhor maneira de crescer como pessoa.",
+          "vocabulario": [
+            {
+              "parola": "stepping out",
+              "traducao_portugues": "sair (da zona)",
+              "ipa": "/ˈstɛpɪŋ aʊt/",
+              "categoria": "phrasal verb"
+            },
+            {
+              "parola": "comfort zone",
+              "traducao_portugues": "zona de conforto",
+              "ipa": "/ˈkʌmfərt zoʊn/",
+              "categoria": "noun phrase"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_010",
+      "titulo": "The Startup Dream",
+      "titulo_pt": "O Sonho da Startup",
+      "nivel": "B1",
+      "icone": "🚀",
+      "autor": "English Autentico",
+      "tema": "business",
+      "descricao": "Two college dropouts try to launch a revolutionary app.",
+      "descricao_pt": "Dois universitários que largaram a faculdade tentam lançar um aplicativo revolucionário.",
+      "xp_recompensa": 100,
+      "testo": [
+        {
+          "id": "stor_010_p1",
+          "ingles": "Kevin and Alex had a brilliant idea for a productivity app, so they quit college to build it.",
+          "portugues": "Kevin e Alex tiveram uma ideia brilhante para um aplicativo de produtividade, então largaram a faculdade para construí-lo.",
+          "vocabulario": [
+            {
+              "parola": "brilliant",
+              "traducao_portugues": "brilhante",
+              "ipa": "/ˈbrɪljənt/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "quit",
+              "traducao_portugues": "largaram / desistiram",
+              "ipa": "/kwɪt/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_010_p2",
+          "ingles": "They spent countless nights coding in a cramped garage, surviving on coffee and cheap noodles.",
+          "portugues": "Eles passaram incontáveis noites programando em uma garagem apertada, sobrevivendo de café e macarrão barato.",
+          "vocabulario": [
+            {
+              "parola": "countless",
+              "traducao_portugues": "incontáveis",
+              "ipa": "/ˈkaʊntləs/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "cramped",
+              "traducao_portugues": "apertada",
+              "ipa": "/kræmpt/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_010_p3",
+          "ingles": "However, funding their project was extremely difficult without any reliable source of income.",
+          "portugues": "No entanto, financiar o projeto deles foi extremamente difícil sem nenhuma fonte confiável de renda.",
+          "vocabulario": [
+            {
+              "parola": "funding",
+              "traducao_portugues": "financiar",
+              "ipa": "/ˈfʌndɪŋ/",
+              "categoria": "noun/verb"
+            },
+            {
+              "parola": "reliable",
+              "traducao_portugues": "confiável",
+              "ipa": "/rɪˈlaɪəbəl/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_010_p4",
+          "ingles": "They decided to pitch their software to angel investors during a major tech conference.",
+          "portugues": "Eles decidiram apresentar seu software para investidores-anjo durante uma grande conferência de tecnologia.",
+          "vocabulario": [
+            {
+              "parola": "pitch",
+              "traducao_portugues": "apresentar (vender a ideia)",
+              "ipa": "/pɪtʃ/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "investors",
+              "traducao_portugues": "investidores",
+              "ipa": "/ɪnˈvɛstərz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_010_p5",
+          "ingles": "During the presentation, the app crashed unexpectedly due to a server overload.",
+          "portugues": "Durante a apresentação, o aplicativo travou inesperadamente devido a uma sobrecarga no servidor.",
+          "vocabulario": [
+            {
+              "parola": "crashed",
+              "traducao_portugues": "travou / caiu",
+              "ipa": "/kræʃt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "unexpectedly",
+              "traducao_portugues": "inesperadamente",
+              "ipa": "/ˌʌnɪkˈspɛktɪdli/",
+              "categoria": "adverb"
+            }
+          ]
+        },
+        {
+          "id": "stor_010_p6",
+          "ingles": "Instead of giving up, they calmly explained the bug and how they planned to solve it.",
+          "portugues": "Em vez de desistir, eles explicaram calmamente o bug e como planejavam resolvê-lo.",
+          "vocabulario": [
+            {
+              "parola": "giving up",
+              "traducao_portugues": "desistir",
+              "ipa": "/ˈɡɪvɪŋ ʌp/",
+              "categoria": "phrasal verb"
+            },
+            {
+              "parola": "calmly",
+              "traducao_portugues": "calmamente",
+              "ipa": "/ˈkɑːmli/",
+              "categoria": "adverb"
+            }
+          ]
+        },
+        {
+          "id": "stor_010_p7",
+          "ingles": "Impressed by their resilience and honesty, one investor agreed to give them the capital they needed.",
+          "portugues": "Impressionado com a resiliência e honestidade deles, um investidor concordou em dar-lhes o capital de que precisavam.",
+          "vocabulario": [
+            {
+              "parola": "resilience",
+              "traducao_portugues": "resiliência",
+              "ipa": "/rɪˈzɪliəns/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "capital",
+              "traducao_portugues": "capital (dinheiro)",
+              "ipa": "/ˈkæpɪtəl/",
+              "categoria": "noun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_011",
+      "titulo": "Surviving a Storm",
+      "titulo_pt": "Sobrevivendo a uma Tempestade",
+      "nivel": "B1",
+      "icone": "⛈️",
+      "autor": "English Autentico",
+      "tema": "nature",
+      "descricao": "A family must take shelter when a severe storm hits their town.",
+      "descricao_pt": "Uma família deve buscar abrigo quando uma tempestade severa atinge sua cidade.",
+      "xp_recompensa": 100,
+      "testo": [
+        {
+          "id": "stor_011_p1",
+          "ingles": "The local news broadcast issued a severe weather warning for the entire county.",
+          "portugues": "O noticiário local emitiu um aviso de tempo severo para todo o condado.",
+          "vocabulario": [
+            {
+              "parola": "warning",
+              "traducao_portugues": "aviso",
+              "ipa": "/ˈwɔːrnɪŋ/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "county",
+              "traducao_portugues": "condado / região",
+              "ipa": "/ˈkaʊnti/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_011_p2",
+          "ingles": "Dark, heavy clouds gathered on the horizon, and the wind began to howl ominously.",
+          "portugues": "Nuvens escuras e pesadas se acumularam no horizonte, e o vento começou a uivar de forma sinistra.",
+          "vocabulario": [
+            {
+              "parola": "gathered",
+              "traducao_portugues": "se acumularam",
+              "ipa": "/ˈɡæðərd/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "ominously",
+              "traducao_portugues": "de forma sinistra",
+              "ipa": "/ˈɒmɪnəsli/",
+              "categoria": "adverb"
+            }
+          ]
+        },
+        {
+          "id": "stor_011_p3",
+          "ingles": "The Miller family quickly gathered flashlights, batteries, and canned food from the pantry.",
+          "portugues": "A família Miller rapidamente reuniu lanternas, baterias e comida enlatada da despensa.",
+          "vocabulario": [
+            {
+              "parola": "flashlights",
+              "traducao_portugues": "lanternas",
+              "ipa": "/ˈflæʃˌlaɪts/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "pantry",
+              "traducao_portugues": "despensa",
+              "ipa": "/ˈpæntri/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_011_p4",
+          "ingles": "They rushed to the basement just as the first massive drops of rain hit the roof.",
+          "portugues": "Eles correram para o porão logo que as primeiras gotas massivas de chuva atingiram o telhado.",
+          "vocabulario": [
+            {
+              "parola": "basement",
+              "traducao_portugues": "porão",
+              "ipa": "/ˈbeɪsmənt/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "roof",
+              "traducao_portugues": "telhado",
+              "ipa": "/ruːf/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_011_p5",
+          "ingles": "Suddenly, a loud crash echoed through the house, followed by a total blackout.",
+          "portugues": "De repente, um estrondo alto ecoou pela casa, seguido por um apagão total.",
+          "vocabulario": [
+            {
+              "parola": "crash",
+              "traducao_portugues": "estrondo",
+              "ipa": "/kræʃ/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "blackout",
+              "traducao_portugues": "apagão",
+              "ipa": "/ˈblækˌaʊt/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_011_p6",
+          "ingles": "They huddled together in the dark, listening to the thunder shake the foundation of their home.",
+          "portugues": "Eles se amontoaram juntos no escuro, ouvindo o trovão sacudir as fundações de sua casa.",
+          "vocabulario": [
+            {
+              "parola": "huddled",
+              "traducao_portugues": "se amontoaram",
+              "ipa": "/ˈhʌdəld/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "thunder",
+              "traducao_portugues": "trovão",
+              "ipa": "/ˈθʌndər/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_011_p7",
+          "ingles": "By morning, the storm had passed. A large oak tree had fallen, but they were all safe.",
+          "portugues": "Pela manhã, a tempestade havia passado. Uma grande árvore de carvalho havia caído, mas todos estavam seguros.",
+          "vocabulario": [
+            {
+              "parola": "passed",
+              "traducao_portugues": "passado",
+              "ipa": "/pæst/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "safe",
+              "traducao_portugues": "seguros",
+              "ipa": "/seɪf/",
+              "categoria": "adjective"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_012",
+      "titulo": "The Artificial Intelligence Revolution",
+      "titulo_pt": "A Revolução da Inteligência Artificial",
+      "nivel": "B2",
+      "icone": "🤖",
+      "autor": "English Autentico",
+      "tema": "technology",
+      "descricao": "A philosophical reflection on how AI is transforming society and human interaction.",
+      "descricao_pt": "Uma reflexão filosófica sobre como a IA está transformando a sociedade e a interação humana.",
+      "xp_recompensa": 110,
+      "testo": [
+        {
+          "id": "stor_012_p1",
+          "ingles": "The rapid advancement of artificial intelligence has sparked an unprecedented paradigm shift in modern society.",
+          "portugues": "O rápido avanço da inteligência artificial desencadeou uma mudança de paradigma sem precedentes na sociedade moderna.",
+          "vocabulario": [
+            {
+              "parola": "advancement",
+              "traducao_portugues": "avanço",
+              "ipa": "/ədˈvænsmənt/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "unprecedented",
+              "traducao_portugues": "sem precedentes",
+              "ipa": "/ʌnˈprɛsɪdɛntɪd/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_012_p2",
+          "ingles": "Algorithms are no longer merely executing predefined tasks; they are continuously learning and adapting.",
+          "portugues": "Os algoritmos não estão mais apenas executando tarefas predefinidas; eles estão continuamente aprendendo e se adaptando.",
+          "vocabulario": [
+            {
+              "parola": "merely",
+              "traducao_portugues": "apenas / meramente",
+              "ipa": "/ˈmɪərli/",
+              "categoria": "adverb"
+            },
+            {
+              "parola": "predefined",
+              "traducao_portugues": "predefinidas",
+              "ipa": "/ˌpriːdɪˈfaɪnd/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_012_p3",
+          "ingles": "This technological leap presents an intricate dilemma regarding the automation of intellectual labor.",
+          "portugues": "Esse salto tecnológico apresenta um dilema intrincado em relação à automação do trabalho intelectual.",
+          "vocabulario": [
+            {
+              "parola": "leap",
+              "traducao_portugues": "salto",
+              "ipa": "/liːp/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "intricate",
+              "traducao_portugues": "intrincado / complexo",
+              "ipa": "/ˈɪntrɪkət/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_012_p4",
+          "ingles": "Optimists envision a utopian future where machines alleviate humans from mundane chores, boosting overall productivity.",
+          "portugues": "Os otimistas vislumbram um futuro utópico onde as máquinas aliviam os humanos das tarefas mundanas, aumentando a produtividade geral.",
+          "vocabulario": [
+            {
+              "parola": "alleviate",
+              "traducao_portugues": "aliviam",
+              "ipa": "/əˈliːvieɪt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "mundane",
+              "traducao_portugues": "mundanas / banais",
+              "ipa": "/mʌnˈdeɪn/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_012_p5",
+          "ingles": "Conversely, skeptics warn of severe socio-economic repercussions, particularly widespread unemployment and data privacy breaches.",
+          "portugues": "Por outro lado, os céticos alertam sobre severas repercussões socioeconômicas, particularmente o desemprego generalizado e as violações de privacidade de dados.",
+          "vocabulario": [
+            {
+              "parola": "widespread",
+              "traducao_portugues": "generalizado",
+              "ipa": "/ˈwaɪdsprɛd/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "breaches",
+              "traducao_portugues": "violações",
+              "ipa": "/briːtʃɪz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_012_p6",
+          "ingles": "Furthermore, there is a profound ethical debate concerning the biases inadvertently embedded in machine learning models.",
+          "portugues": "Além disso, há um profundo debate ético sobre os preconceitos inadvertidamente embutidos nos modelos de aprendizado de máquina.",
+          "vocabulario": [
+            {
+              "parola": "biases",
+              "traducao_portugues": "preconceitos / vieses",
+              "ipa": "/ˈbaɪəsɪz/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "embedded",
+              "traducao_portugues": "embutidos",
+              "ipa": "/ɪmˈbɛdɪd/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_012_p7",
+          "ingles": "Ultimately, humanity must proactively establish robust ethical frameworks to harness this power responsibly.",
+          "portugues": "Em última análise, a humanidade deve estabelecer proativamente estruturas éticas robustas para aproveitar esse poder de forma responsável.",
+          "vocabulario": [
+            {
+              "parola": "Ultimately",
+              "traducao_portugues": "em última análise",
+              "ipa": "/ˈʌltɪmətli/",
+              "categoria": "adverb"
+            },
+            {
+              "parola": "harness",
+              "traducao_portugues": "aproveitar / dominar",
+              "ipa": "/ˈhɑːrnɪs/",
+              "categoria": "verb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_013",
+      "titulo": "A Debate on Climate Change",
+      "titulo_pt": "Um Debate sobre a Mudança Climática",
+      "nivel": "B2",
+      "icone": "🌍",
+      "autor": "English Autentico",
+      "tema": "environment",
+      "descricao": "Two scientists discuss the urgent need for sustainable policies.",
+      "descricao_pt": "Dois cientistas discutem a necessidade urgente de políticas sustentáveis.",
+      "xp_recompensa": 110,
+      "testo": [
+        {
+          "id": "stor_013_p1",
+          "ingles": "The symposium began with a compelling keynote address on the devastating impacts of global warming.",
+          "portugues": "O simpósio começou com um discurso de abertura convincente sobre os impactos devastadores do aquecimento global.",
+          "vocabulario": [
+            {
+              "parola": "symposium",
+              "traducao_portugues": "simpósio",
+              "ipa": "/sɪmˈpoʊziəm/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "compelling",
+              "traducao_portugues": "convincente",
+              "ipa": "/kəmˈpɛlɪŋ/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_013_p2",
+          "ingles": "Dr. Evans emphasized that the unprecedented melting of glaciers is an unequivocal sign of an impending ecological crisis.",
+          "portugues": "A Dra. Evans enfatizou que o derretimento sem precedentes das geleiras é um sinal inequívoco de uma crise ecológica iminente.",
+          "vocabulario": [
+            {
+              "parola": "unequivocal",
+              "traducao_portugues": "inequívoco",
+              "ipa": "/ˌʌnɪˈkwɪvəkəl/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "impending",
+              "traducao_portugues": "iminente",
+              "ipa": "/ɪmˈpɛndɪŋ/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_013_p3",
+          "ingles": "Her colleague, Dr. Patel, argued that mitigating carbon emissions requires a drastic overhaul of the industrial sector.",
+          "portugues": "Seu colega, Dr. Patel, argumentou que mitigar as emissões de carbono exige uma reformulação drástica do setor industrial.",
+          "vocabulario": [
+            {
+              "parola": "mitigating",
+              "traducao_portugues": "mitigar / atenuar",
+              "ipa": "/ˈmɪtɪɡeɪtɪŋ/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "overhaul",
+              "traducao_portugues": "reformulação",
+              "ipa": "/ˈoʊvərhɔːl/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_013_p4",
+          "ingles": "They debated the feasibility of implementing stringent environmental regulations without hindering economic growth.",
+          "portugues": "Eles debateram a viabilidade de implementar regulamentações ambientais rigorosas sem prejudicar o crescimento econômico.",
+          "vocabulario": [
+            {
+              "parola": "feasibility",
+              "traducao_portugues": "viabilidade",
+              "ipa": "/ˌfiːzəˈbɪlɪti/",
+              "categoria": "noun"
+            },
+            {
+              "parola": "hindering",
+              "traducao_portugues": "prejudicar / atrapalhar",
+              "ipa": "/ˈhɪndərɪŋ/",
+              "categoria": "verb"
+            }
+          ]
+        },
+        {
+          "id": "stor_013_p5",
+          "ingles": "While some policymakers advocate for incremental changes, scientists urge immediate and radical intervention.",
+          "portugues": "Enquanto alguns formuladores de políticas defendem mudanças incrementais, os cientistas pedem uma intervenção imediata e radical.",
+          "vocabulario": [
+            {
+              "parola": "advocate",
+              "traducao_portugues": "defendem / advogam",
+              "ipa": "/ˈædvəkeɪt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "incremental",
+              "traducao_portugues": "incrementais",
+              "ipa": "/ˌɪnkrəˈmɛntəl/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_013_p6",
+          "ingles": "The transition to renewable energy sources, such as wind and solar, is deemed absolutely paramount.",
+          "portugues": "A transição para fontes de energia renováveis, como eólica e solar, é considerada absolutamente fundamental.",
+          "vocabulario": [
+            {
+              "parola": "deemed",
+              "traducao_portugues": "considerada",
+              "ipa": "/diːmd/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "paramount",
+              "traducao_portugues": "fundamental / suprema",
+              "ipa": "/ˈpærəmaʊnt/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_013_p7",
+          "ingles": "Ultimately, preserving biodiversity is not just a moral obligation, but a strict prerequisite for our own survival.",
+          "portugues": "Em última análise, preservar a biodiversidade não é apenas uma obrigação moral, mas um pré-requisito rigoroso para nossa própria sobrevivência.",
+          "vocabulario": [
+            {
+              "parola": "preserving",
+              "traducao_portugues": "preservar",
+              "ipa": "/prɪˈzɜːrvɪŋ/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "prerequisite",
+              "traducao_portugues": "pré-requisito",
+              "ipa": "/priːˈrɛkwɪzɪt/",
+              "categoria": "noun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_014",
+      "titulo": "The Mystery of the Old Manor",
+      "titulo_pt": "O Mistério da Velha Mansão",
+      "nivel": "B2",
+      "icone": "🕵️",
+      "autor": "English Autentico",
+      "tema": "mystery",
+      "descricao": "A detective investigates strange occurrences in an abandoned estate.",
+      "descricao_pt": "Um detetive investiga ocorrências estranhas em uma propriedade abandonada.",
+      "xp_recompensa": 110,
+      "testo": [
+        {
+          "id": "stor_014_p1",
+          "ingles": "Detective Marlowe approached the desolate, decaying manor situated on the outskirts of the foggy town.",
+          "portugues": "O detetive Marlowe se aproximou da mansão desolada e decadente situada nos arredores da cidade nebulosa.",
+          "vocabulario": [
+            {
+              "parola": "decaying",
+              "traducao_portugues": "decadente",
+              "ipa": "/dɪˈkeɪɪŋ/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "outskirts",
+              "traducao_portugues": "arredores",
+              "ipa": "/ˈaʊtskɜːrts/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_014_p2",
+          "ingles": "Rumors had been circulating for decades regarding peculiar phenomena occurring within its crumbling walls.",
+          "portugues": "Rumores circulavam há décadas a respeito de fenômenos peculiares ocorrendo dentro de suas paredes em ruínas.",
+          "vocabulario": [
+            {
+              "parola": "peculiar",
+              "traducao_portugues": "peculiares / estranhos",
+              "ipa": "/pɪˈkjuːliər/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "crumbling",
+              "traducao_portugues": "em ruínas",
+              "ipa": "/ˈkrʌmblɪŋ/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_014_p3",
+          "ingles": "He pushed open the heavy mahogany doors, which creaked ominously in the chilling evening breeze.",
+          "portugues": "Ele empurrou as pesadas portas de mogno, que rangeram de forma sinistra na brisa fria do anoitecer.",
+          "vocabulario": [
+            {
+              "parola": "creaked",
+              "traducao_portugues": "rangeram",
+              "ipa": "/kriːkt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "chilling",
+              "traducao_portugues": "fria / arrepiante",
+              "ipa": "/ˈtʃɪlɪŋ/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_014_p4",
+          "ingles": "Inside, the grand foyer was draped in thick cobwebs, and a thick layer of dust coated the antique furniture.",
+          "portugues": "Lá dentro, o grande saguão estava coberto por grossas teias de aranha, e uma espessa camada de poeira cobria os móveis antigos.",
+          "vocabulario": [
+            {
+              "parola": "draped",
+              "traducao_portugues": "coberto",
+              "ipa": "/dreɪpt/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "cobwebs",
+              "traducao_portugues": "teias de aranha",
+              "ipa": "/ˈkɒbwɛbz/",
+              "categoria": "noun"
+            }
+          ]
+        },
+        {
+          "id": "stor_014_p5",
+          "ingles": "Suddenly, a faint, melancholic melody echoed from the dilapidated grand piano in the adjacent parlor.",
+          "portugues": "De repente, uma melodia fraca e melancólica ecoou do piano de cauda dilapidado na sala adjacente.",
+          "vocabulario": [
+            {
+              "parola": "faint",
+              "traducao_portugues": "fraca",
+              "ipa": "/feɪnt/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "dilapidated",
+              "traducao_portugues": "dilapidado / em ruínas",
+              "ipa": "/dɪˈlæpɪdeɪtɪd/",
+              "categoria": "adjective"
+            }
+          ]
+        },
+        {
+          "id": "stor_014_p6",
+          "ingles": "Marlowe cautiously drew his flashlight, illuminating a cryptic cipher hastily scribbled on the peeling wallpaper.",
+          "portugues": "Marlowe sacou cuidadosamente sua lanterna, iluminando uma cifra enigmática rabiscada apressadamente no papel de parede descascado.",
+          "vocabulario": [
+            {
+              "parola": "cryptic",
+              "traducao_portugues": "enigmática",
+              "ipa": "/ˈkrɪptɪk/",
+              "categoria": "adjective"
+            },
+            {
+              "parola": "hastily",
+              "traducao_portugues": "apressadamente",
+              "ipa": "/ˈheɪstɪli/",
+              "categoria": "adverb"
+            }
+          ]
+        },
+        {
+          "id": "stor_014_p7",
+          "ingles": "He realized this estate held secrets far more complex than mere local superstitions.",
+          "portugues": "Ele percebeu que esta propriedade guardava segredos muito mais complexos do que meras superstições locais.",
+          "vocabulario": [
+            {
+              "parola": "held",
+              "traducao_portugues": "guardava",
+              "ipa": "/hɛld/",
+              "categoria": "verb"
+            },
+            {
+              "parola": "superstitions",
+              "traducao_portugues": "superstições",
+              "ipa": "/ˌsuːpərˈstɪʃənz/",
+              "categoria": "noun"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

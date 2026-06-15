@@ -185,7 +185,9 @@ const Storie = {
     // Constrói HTML de um grupo de parágrafos
     const buildParas = (paras, startIdx) => paras.map((p, i) => {
       const idx = startIdx + i;
-      const textoMarcado = this._marcarPalavras(p.italiano, p.parole || [], idx);
+      const textoIngles = p.ingles || p.italiano || '';
+      const vocabs = p.vocabulario || p.parole || [];
+      const textoMarcado = this._marcarPalavras(textoIngles, vocabs, idx);
       const ptText = (p.portugues || '').replace(/</g, '&lt;');
       return `<div class="storie-bloco"><p class="storie-p">${textoMarcado}</p>${this.traduzirVisivel && ptText ? `<span class="storie-trad-p">${ptText}</span>` : ''}</div>`;
     }).join('');
@@ -312,9 +314,10 @@ const Storie = {
         `data-par="${parIdx}"`,
         `data-widx="${wIdx}"`,
       ];
+      const tradData = vocabDado ? (vocabDado.traducao_portugues || vocabDado.tradicao_portugues || vocabDado.traduzione) : '';
       if (vocabDado) {
         if (vocabDado.ipa)        attrs.push(`data-ipa="${this._escAttr(vocabDado.ipa)}"`);
-        if (vocabDado.traduzione) attrs.push(`data-trad="${this._escAttr(vocabDado.traduzione)}"`);
+        if (tradData)             attrs.push(`data-trad="${this._escAttr(tradData)}"`);
         if (vocabDado.categoria)  attrs.push(`data-cat="${this._escAttr(vocabDado.categoria)}"`);
       }
 
@@ -359,12 +362,13 @@ const Storie = {
     // Busca global em todos os parágrafos da história
     if (!trad && this.storAttuale) {
       for (const p of this.storAttuale.testo) {
-        const found = (p.parole || []).find(pw =>
+        const vocabs = p.vocabulario || p.parole || [];
+        const found = vocabs.find(pw =>
           this._normWord(pw.parola) === this._normWord(palavra)
         );
         if (found) {
           ipa  = ipa  || found.ipa        || '';
-          trad = trad || found.traduzione || '';
+          trad = trad || found.traducao_portugues || found.tradicao_portugues || found.traduzione || '';
           cat  = cat  || found.categoria  || '';
           break;
         }
@@ -591,7 +595,7 @@ const Storie = {
 
   _ouvirTudo() {
     if (!this.storAttuale) return;
-    const texto = this.storAttuale.testo.map(p => p.italiano).join(' ');
+    const texto = this.storAttuale.testo.map(p => p.ingles || p.italiano || '').join(' ');
     if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(texto);
   },
 
