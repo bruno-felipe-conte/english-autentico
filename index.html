@@ -2929,7 +2929,7 @@
     // Registra o Service Worker para suporte offline (PWA)
     if ('serviceWorker' in navigator) {
       // Caminho relativo — funciona tanto na raiz quanto em subdiretório
-      navigator.serviceWorker.register('sw.js?v=6').then(reg => {
+      navigator.serviceWorker.register('sw.js?v=7').then(reg => {
         // Verifica atualizações a cada vez que a aba fica em foco
         reg.update();
       }).catch(err => console.warn('[SW] Registro falhou:', err));

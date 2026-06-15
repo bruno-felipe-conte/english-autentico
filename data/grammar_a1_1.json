@@ -1,0 +1,640 @@
+[
+  {
+    "id": "a1-lez1",
+    "num": "Lesson 1",
+    "titulo": "Personal Pronouns & Verb To Be (Affirmative)",
+    "subtitulo": "I am, You are, He is",
+    "alerta": "O verbo 'To Be' é o coração do inglês! Ele significa 'ser' ou 'estar' e muda dependendo de quem está falando.",
+    "observacao_cards": [
+      {
+        "italiano": "I am",
+        "traducao": "Eu sou / estou",
+        "genero": "1ª Pessoa Singular",
+        "motivo": "Sempre usa 'am'"
+      },
+      {
+        "italiano": "You are",
+        "traducao": "Você é / está",
+        "genero": "2ª Pessoa",
+        "motivo": "Usa 'are' no singular e plural"
+      },
+      {
+        "italiano": "He is",
+        "traducao": "Ele é / está",
+        "genero": "3ª Pessoa Singular (Ele)",
+        "motivo": "Sempre usa 'is'"
+      },
+      {
+        "italiano": "She is",
+        "traducao": "Ela é / está",
+        "genero": "3ª Pessoa Singular (Ela)",
+        "motivo": "Sempre usa 'is'"
+      },
+      {
+        "italiano": "It is",
+        "traducao": "Ele/Ela é / está (coisas/animais)",
+        "genero": "3ª Pessoa Neutra",
+        "motivo": "Sempre usa 'is'"
+      },
+      {
+        "italiano": "We are",
+        "traducao": "Nós somos / estamos",
+        "genero": "1ª Pessoa Plural",
+        "motivo": "Plural usa 'are'"
+      },
+      {
+        "italiano": "They are",
+        "traducao": "Eles/Elas são / estão",
+        "genero": "3ª Pessoa Plural",
+        "motivo": "Plural usa 'are'"
+      }
+    ],
+    "tabela_visual": "| Pronoun | Verb To Be | Contraction |\n|---|---|---|\n| I | am | I'm |\n| You | are | You're |\n| He/She/It | is | He's/She's/It's |\n| We/They | are | We're/They're |",
+    "exemplos_prc": [
+      {
+        "oracao": "She is a teacher.",
+        "pergunta": "Por que usamos 'is'?",
+        "resposta": "Porque 'She' é terceira pessoa do singular.",
+        "conclusao": "She is = Ela é"
+      },
+      {
+        "oracao": "They are happy.",
+        "pergunta": "O que significa 'are' aqui?",
+        "resposta": "Significa 'estão'. Eles estão felizes.",
+        "conclusao": "They are = Eles estão"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "She am beautiful.",
+        "certo": "She is beautiful.",
+        "explicacao": "'She' é 3ª pessoa do singular e exige 'is'."
+      },
+      {
+        "errado": "It are a dog.",
+        "certo": "It is a dog.",
+        "explicacao": "'It' é singular e exige 'is'."
+      }
+    ],
+    "coda": "Lembre-se: I am, You are, He/She/It is. Dominar isso é o primeiro passo para falar inglês com confiança!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I ___ a student.",
+        "opcoes": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "resposta": 2,
+        "explicacao": "A primeira pessoa 'I' sempre usa 'am'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: We ___ from Brazil.",
+        "opcoes": [
+          "am",
+          "is",
+          "be",
+          "are"
+        ],
+        "resposta": 3,
+        "explicacao": "'We' é plural, então usamos 'are'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: It ___ a beautiful day.",
+        "resposta": "is",
+        "explicacao": "'It' é terceira pessoa do singular, usa 'is'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a contração correta para 'You are'?",
+        "opcoes": [
+          "You'is",
+          "You're",
+          "Your",
+          "You'm"
+        ],
+        "resposta": 1,
+        "explicacao": "A contração junta 'You' com 'are' e retira o 'a', virando 'You're'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ___ are good friends. (Eles são bons amigos).",
+        "resposta": "They",
+        "explicacao": "O pronome para 'Eles' é 'They'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: He ___ tired.",
+        "opcoes": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "resposta": 0,
+        "explicacao": "'He' é 3ª pessoa do singular e exige 'is'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez2",
+    "num": "Lesson 2",
+    "titulo": "Verb To Be (Negative & Questions)",
+    "subtitulo": "I am not, Are you?",
+    "alerta": "Fazer perguntas e negar com o verbo 'To Be' é simples: basta adicionar o 'not' ou inverter a ordem das palavras!",
+    "observacao_cards": [
+      {
+        "italiano": "I am not",
+        "traducao": "Eu não sou / estou",
+        "genero": "Negativa",
+        "motivo": "Adiciona 'not' depois do verbo"
+      },
+      {
+        "italiano": "He is not (isn't)",
+        "traducao": "Ele não é / está",
+        "genero": "Negativa",
+        "motivo": "Pode ser contraído para isn't"
+      },
+      {
+        "italiano": "Are you?",
+        "traducao": "Você é / está?",
+        "genero": "Interrogativa",
+        "motivo": "Inverte o verbo e o sujeito"
+      },
+      {
+        "italiano": "Is she?",
+        "traducao": "Ela é / está?",
+        "genero": "Interrogativa",
+        "motivo": "Inverte o verbo e o sujeito"
+      }
+    ],
+    "tabela_visual": "| Affirmative | Negative | Question |\n|---|---|---|\n| I am | I am not (I'm not) | Am I? |\n| You are | You are not (aren't) | Are you? |\n| He is | He is not (isn't) | Is he? |",
+    "exemplos_prc": [
+      {
+        "oracao": "Are they from Spain?",
+        "pergunta": "Como sabemos que é uma pergunta?",
+        "resposta": "O verbo 'Are' está antes do sujeito 'they'.",
+        "conclusao": "Inverta a ordem para perguntar."
+      },
+      {
+        "oracao": "We aren't ready.",
+        "pergunta": "O que é 'aren't'?",
+        "resposta": "É a contração de 'are not'.",
+        "conclusao": "Are not = Aren't"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You are doctor?",
+        "certo": "Are you a doctor?",
+        "explicacao": "Em perguntas com 'To Be', o verbo DEVE vir antes do sujeito."
+      },
+      {
+        "errado": "I amn't sad.",
+        "certo": "I am not sad. (ou I'm not sad.)",
+        "explicacao": "Não existe a contração 'amn't'."
+      }
+    ],
+    "coda": "Perguntas? Verbo na frente! Negativas? 'Not' depois do verbo! Pratique e isso vai ficar natural.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como perguntar 'Ela é brasileira?'?",
+        "opcoes": [
+          "She is Brazilian?",
+          "Is she Brazilian?",
+          "Are she Brazilian?",
+          "Does she Brazilian?"
+        ],
+        "resposta": 1,
+        "explicacao": "Para perguntas, invertemos: 'Is she...'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase negativa: He ___ not my brother.",
+        "resposta": "is",
+        "explicacao": "Usamos 'is' junto com 'not' para a 3ª pessoa."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma contraída de 'are not'?",
+        "opcoes": [
+          "am not",
+          "isn't",
+          "aren't",
+          "are't"
+        ],
+        "resposta": 2,
+        "explicacao": "'are' + 'not' vira 'aren't'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a pergunta: ___ you tired?",
+        "opcoes": [
+          "Is",
+          "Am",
+          "Are",
+          "Do"
+        ],
+        "resposta": 2,
+        "explicacao": "O pronome 'you' usa 'are'. Na pergunta, ele vem antes do sujeito."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Traduza para o inglês: Eu não sou. (Sem contração)",
+        "resposta": "I am not",
+        "explicacao": "Apenas adicione 'not' após 'I am'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como responder 'Sim, eu sou' a uma pergunta 'Are you...'?",
+        "opcoes": [
+          "Yes, I am.",
+          "Yes, I'm.",
+          "Yes, I are.",
+          "Yes, I do."
+        ],
+        "resposta": 0,
+        "explicacao": "Respostas curtas afirmativas com 'To Be' não levam contração."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez3",
+    "num": "Lesson 3",
+    "titulo": "Demonstrative Pronouns",
+    "subtitulo": "This, That, These, Those",
+    "alerta": "Use os pronomes demonstrativos para apontar coisas. A escolha depende da distância (perto/longe) e da quantidade (singular/plural).",
+    "observacao_cards": [
+      {
+        "italiano": "This",
+        "traducao": "Este, esta, isto",
+        "genero": "Singular (Perto)",
+        "motivo": "Para uma coisa próxima"
+      },
+      {
+        "italiano": "That",
+        "traducao": "Aquele, aquela, aquilo, esse, essa",
+        "genero": "Singular (Longe)",
+        "motivo": "Para uma coisa distante"
+      },
+      {
+        "italiano": "These",
+        "traducao": "Estes, estas",
+        "genero": "Plural (Perto)",
+        "motivo": "Para várias coisas próximas"
+      },
+      {
+        "italiano": "Those",
+        "traducao": "Aqueles, aquelas",
+        "genero": "Plural (Longe)",
+        "motivo": "Para várias coisas distantes"
+      }
+    ],
+    "tabela_visual": "| Quantidade | Perto (Aqui) | Longe (Lá) |\n|---|---|---|\n| **Singular** | This | That |\n| **Plural** | These | Those |",
+    "exemplos_prc": [
+      {
+        "oracao": "This is my car.",
+        "pergunta": "O carro está perto ou longe?",
+        "resposta": "Está perto, pois usamos 'This'.",
+        "conclusao": "This = singular perto"
+      },
+      {
+        "oracao": "Look at those birds!",
+        "pergunta": "Os pássaros estão perto ou longe?",
+        "resposta": "Estão longe, pois usamos 'those'.",
+        "conclusao": "Those = plural longe"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "These is my shoes.",
+        "certo": "These are my shoes.",
+        "explicacao": "'These' é plural, então precisa do verbo no plural 'are'."
+      },
+      {
+        "errado": "This are my pen.",
+        "certo": "This is my pen.",
+        "explicacao": "'This' é singular, use com 'is'."
+      }
+    ],
+    "coda": "This (um perto), These (vários perto). That (um longe), Those (vários longe).",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual pronome usar para apontar para UMA maçã perto de você?",
+        "opcoes": [
+          "That",
+          "Those",
+          "This",
+          "These"
+        ],
+        "resposta": 2,
+        "explicacao": "Singular e perto usa 'This'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual pronome usar para apontar para VÁRIOS carros longe de você?",
+        "opcoes": [
+          "This",
+          "That",
+          "These",
+          "Those"
+        ],
+        "resposta": 3,
+        "explicacao": "Plural e longe usa 'Those'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ___ is my friend, John. (Apresentando alguém ao seu lado).",
+        "resposta": "This",
+        "explicacao": "Para apresentar alguém perto, usamos 'This'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a frase: ___ are my books. (Livros na sua mão).",
+        "opcoes": [
+          "This",
+          "That",
+          "These",
+          "Those"
+        ],
+        "resposta": 2,
+        "explicacao": "Os livros estão no plural e perto da pessoa, logo 'These'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: What is ___? (Apontando para algo longe).",
+        "resposta": "that",
+        "explicacao": "Algo no singular e longe usa 'that'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "A frase 'That are my dog' está:",
+        "opcoes": [
+          "Correta",
+          "Incorreta, deveria ser 'That is my dog'",
+          "Incorreta, deveria ser 'Those is my dog'"
+        ],
+        "resposta": 1,
+        "explicacao": "'That' é singular, por isso deve ser acompanhado de 'is'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez4",
+    "num": "Lesson 4",
+    "titulo": "Articles",
+    "subtitulo": "A vs An vs The",
+    "alerta": "Em inglês, 'A' e 'An' significam 'um/uma'. A regra não depende da letra, mas sim do SOM (consoante ou vogal). 'The' é o artigo definido 'o/a/os/as'.",
+    "observacao_cards": [
+      {
+        "italiano": "A",
+        "traducao": "Um, uma",
+        "genero": "Artigo Indefinido",
+        "motivo": "Usado antes de som de consoante"
+      },
+      {
+        "italiano": "An",
+        "traducao": "Um, uma",
+        "genero": "Artigo Indefinido",
+        "motivo": "Usado antes de som de vogal"
+      },
+      {
+        "italiano": "The",
+        "traducao": "O, a, os, as",
+        "genero": "Artigo Definido",
+        "motivo": "Usado para coisas específicas"
+      }
+    ],
+    "tabela_visual": "| Article | Rule | Example |\n|---|---|---|\n| **A** | Before consonant sound | A car, a dog, a university |\n| **An** | Before vowel sound | An apple, an egg, an hour |\n| **The** | Specific things | The sun, the boy, the cars |",
+    "exemplos_prc": [
+      {
+        "oracao": "I have an apple.",
+        "pergunta": "Por que 'an' e não 'a'?",
+        "resposta": "Porque 'apple' começa com som de vogal.",
+        "conclusao": "An + som de vogal"
+      },
+      {
+        "oracao": "The car is blue.",
+        "pergunta": "Qualquer carro é azul?",
+        "resposta": "Não, um carro específico do qual estamos falando.",
+        "conclusao": "The = O/A específico"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "A hour.",
+        "certo": "An hour.",
+        "explicacao": "A letra 'h' em 'hour' é muda, o som inicial é de vogal."
+      },
+      {
+        "errado": "An university.",
+        "certo": "A university.",
+        "explicacao": "A letra 'u' em 'university' tem som de consoante (yu)."
+      }
+    ],
+    "coda": "Lembre-se da regra do som: 'A' para som de consoante, 'An' para som de vogal. Isso fará seu inglês fluir melhor!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Escolha o artigo correto: ___ elephant",
+        "opcoes": [
+          "A",
+          "An",
+          "The",
+          "Nenhum"
+        ],
+        "resposta": 1,
+        "explicacao": "'elephant' começa com som de vogal."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Escolha o artigo correto: ___ car",
+        "opcoes": [
+          "A",
+          "An",
+          "Nenhum",
+          "As"
+        ],
+        "resposta": 0,
+        "explicacao": "'car' começa com som de consoante."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: She is reading ___ book. (um livro qualquer).",
+        "resposta": "a",
+        "explicacao": "'book' começa com som de consoante e é singular indefinido."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I waited for ___ hour.",
+        "opcoes": [
+          "a",
+          "an",
+          "the",
+          "two"
+        ],
+        "resposta": 1,
+        "explicacao": "'hour' tem 'h' mudo, logo o som é de vogal."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Look at ___ moon! (Olhe para a lua!).",
+        "resposta": "the",
+        "explicacao": "A lua ('moon') é específica e única, usamos 'the'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a frase correta?",
+        "opcoes": [
+          "I have a idea.",
+          "I have an idea.",
+          "I have the idea.",
+          "I have idea."
+        ],
+        "resposta": 1,
+        "explicacao": "'idea' começa com som de vogal, usa-se 'an'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez5",
+    "num": "Lesson 5",
+    "titulo": "Plural of Nouns",
+    "subtitulo": "Regulares (-s) e Irregulares (men, women, children)",
+    "alerta": "O plural em inglês é frequentemente fácil: basta colocar um '-s'. Mas cuidado com os irregulares teimosos que mudam a palavra toda!",
+    "observacao_cards": [
+      {
+        "italiano": "-s (Regular)",
+        "traducao": "-s",
+        "genero": "Regra Geral",
+        "motivo": "Adiciona-se -s à maioria das palavras"
+      },
+      {
+        "italiano": "Men",
+        "traducao": "Homens",
+        "genero": "Irregular",
+        "motivo": "Plural de 'man'"
+      },
+      {
+        "italiano": "Women",
+        "traducao": "Mulheres",
+        "genero": "Irregular",
+        "motivo": "Plural de 'woman'"
+      },
+      {
+        "italiano": "Children",
+        "traducao": "Crianças",
+        "genero": "Irregular",
+        "motivo": "Plural de 'child'"
+      },
+      {
+        "italiano": "Teeth",
+        "traducao": "Dentes",
+        "genero": "Irregular",
+        "motivo": "Plural de 'tooth'"
+      },
+      {
+        "italiano": "Feet",
+        "traducao": "Pés",
+        "genero": "Irregular",
+        "motivo": "Plural de 'foot'"
+      }
+    ],
+    "tabela_visual": "| Singular | Plural (Regular) | Singular | Plural (Irregular) |\n|---|---|---|---|\n| car | cars | man | men |\n| dog | dogs | woman | women |\n| book | books | child | children |",
+    "exemplos_prc": [
+      {
+        "oracao": "The children are playing.",
+        "pergunta": "'Children' está no singular ou plural?",
+        "resposta": "Plural. O singular é 'child'.",
+        "conclusao": "Child -> Children"
+      },
+      {
+        "oracao": "I have two dogs.",
+        "pergunta": "Como formamos o plural de dog?",
+        "resposta": "Apenas adicionando -s.",
+        "conclusao": "Dog -> Dogs"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Two childrens.",
+        "certo": "Two children.",
+        "explicacao": "'Children' já é plural, não se adiciona '-s'."
+      },
+      {
+        "errado": "Five mans.",
+        "certo": "Five men.",
+        "explicacao": "O plural de 'man' é 'men'."
+      }
+    ],
+    "coda": "Conhecer os plurais irregulares salva você de erros super comuns. Pratique-os bastante!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é o plural de 'cat'?",
+        "opcoes": [
+          "cates",
+          "cats",
+          "cat",
+          "caties"
+        ],
+        "resposta": 1,
+        "explicacao": "É uma palavra regular, apenas adicionamos '-s'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é o plural correto de 'woman'?",
+        "opcoes": [
+          "womans",
+          "womens",
+          "women",
+          "womanes"
+        ],
+        "resposta": 2,
+        "explicacao": "'woman' é irregular, o plural é 'women'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Escreva o plural de 'man':",
+        "resposta": "men",
+        "explicacao": "'man' é irregular, o plural é 'men'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: Those are my ___. (aquelas são minhas crianças).",
+        "opcoes": [
+          "childs",
+          "childrens",
+          "child",
+          "children"
+        ],
+        "resposta": 3,
+        "explicacao": "O plural de 'child' é 'children' e não leva '-s'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Escreva o plural de 'foot' (pé):",
+        "resposta": "feet",
+        "explicacao": "O plural de 'foot' é 'feet'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é o plural de 'tooth'?",
+        "opcoes": [
+          "tooths",
+          "teeths",
+          "teethes",
+          "teeth"
+        ],
+        "resposta": 3,
+        "explicacao": "O plural de 'tooth' é 'teeth'."
+      }
+    ]
+  }
+]

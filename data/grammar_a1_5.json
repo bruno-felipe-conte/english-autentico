@@ -1,0 +1,533 @@
+[
+  {
+    "id": "a1-lez21",
+    "num": "Lesson 21",
+    "titulo": "Quantifiers 1: Some vs Any",
+    "subtitulo": "Some vs Any",
+    "alerta": "Para falarmos sobre quantidades indefinidas, usamos 'some' e 'any'. A escolha entre eles depende do tipo de frase que estamos construindo.",
+    "observacao_cards": [
+      {
+        "italiano": "Some",
+        "traducao": "Algum, alguns, um pouco de",
+        "genero": "Afirmativas",
+        "motivo": "Usado em frases afirmativas (e em pedidos ou oferecimentos)."
+      },
+      {
+        "italiano": "Any",
+        "traducao": "Nenhum, qualquer, algum",
+        "genero": "Negativas e Interrogativas",
+        "motivo": "Usado em frases negativas e na maioria das perguntas."
+      }
+    ],
+    "tabela_visual": "| Quantifier | Sentence Type | Example |\n|---|---|---|\n| Some | Affirmative | I have some apples. |\n| Any | Negative | I don't have any apples. |\n| Any | Interrogative | Do you have any apples? |\n| Some | Offer / Request | Would you like some tea? |",
+    "exemplos_prc": [
+      {
+        "oracao": "I have some money.",
+        "pergunta": "Por que usamos 'some'?",
+        "resposta": "Porque a frase é afirmativa.",
+        "conclusao": "Some = afirmativa."
+      },
+      {
+        "oracao": "Do you have any questions?",
+        "pergunta": "Por que usamos 'any'?",
+        "resposta": "Porque a frase é uma pergunta.",
+        "conclusao": "Any = pergunta comum."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I don't have some money.",
+        "certo": "I don't have any money.",
+        "explicacao": "Em frases negativas, usamos 'any' no lugar de 'some'."
+      },
+      {
+        "errado": "Would you like any coffee?",
+        "certo": "Would you like some coffee?",
+        "explicacao": "Ao oferecer ou pedir algo polidamente (Would you like...? / Can I have...?), usamos 'some'."
+      }
+    ],
+    "coda": "Lembre-se: 'Some' é positivo e prestativo (oferecimentos), enquanto 'Any' é para negativas e dúvidas!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "I need ____ time to finish this.",
+        "opcoes": [
+          "any",
+          "some",
+          "a",
+          "an"
+        ],
+        "resposta": 1,
+        "explicacao": "Frase afirmativa, usamos 'some'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "She doesn't have ____ friends here.",
+        "opcoes": [
+          "some",
+          "any",
+          "no",
+          "a"
+        ],
+        "resposta": 1,
+        "explicacao": "Frase negativa, usamos 'any'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Do you have ____ brothers or sisters?",
+        "resposta": "any",
+        "explicacao": "Em perguntas gerais, usamos 'any'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete the offer: Would you like ____ water?",
+        "resposta": "some",
+        "explicacao": "Oferecimentos com 'Would you like' usam 'some'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "We bought ____ flowers for her.",
+        "opcoes": [
+          "any",
+          "some",
+          "much",
+          "many"
+        ],
+        "resposta": 1,
+        "explicacao": "Frase afirmativa, então usamos 'some'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Can I have ____ sugar, please?",
+        "resposta": "some",
+        "explicacao": "Pedidos polidos com 'Can I have' usam 'some'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez22",
+    "num": "Lesson 22",
+    "titulo": "Quantifiers 2: Much, Many, A lot of",
+    "subtitulo": "Much, Many, A lot of",
+    "alerta": "Quando a quantidade é grande, precisamos saber se o substantivo é contável (pode ir para o plural) ou incontável (sempre singular).",
+    "observacao_cards": [
+      {
+        "italiano": "Many",
+        "traducao": "Muitos, muitas",
+        "genero": "Contáveis",
+        "motivo": "Usado com coisas que podemos contar (ex: apples, cars, people)."
+      },
+      {
+        "italiano": "Much",
+        "traducao": "Muito, muita",
+        "genero": "Incontáveis",
+        "motivo": "Usado com coisas incontáveis, geralmente líquidos, sentimentos, conceitos (ex: water, time, money)."
+      },
+      {
+        "italiano": "A lot of",
+        "traducao": "Muito(s), um monte de",
+        "genero": "Ambos",
+        "motivo": "Usado tanto para contáveis quanto incontáveis, geralmente em frases afirmativas."
+      }
+    ],
+    "tabela_visual": "| Quantifier | Used with | Example |\n|---|---|---|\n| Many | Countable Plural | I don't have many books. |\n| Much | Uncountable | I don't have much time. |\n| A lot of | Both | She has a lot of friends. / He has a lot of money. |",
+    "exemplos_prc": [
+      {
+        "oracao": "She has a lot of friends.",
+        "pergunta": "Por que usamos 'a lot of'?",
+        "resposta": "Porque é comum usar 'a lot of' em frases afirmativas em vez de 'many'.",
+        "conclusao": "A lot of é versátil em afirmativas."
+      },
+      {
+        "oracao": "We don't have much water.",
+        "pergunta": "Por que 'much'?",
+        "resposta": "Porque 'water' é incontável e a frase é negativa.",
+        "conclusao": "Much para incontáveis em negativas."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I have much friends.",
+        "certo": "I have a lot of friends.",
+        "explicacao": "Friends é contável (plural), então usamos 'many' ou 'a lot of', nunca 'much'."
+      },
+      {
+        "errado": "He has many money.",
+        "certo": "He has a lot of money.",
+        "explicacao": "Money é incontável, então usamos 'much' (em negativas/perguntas) ou 'a lot of' (em afirmativas)."
+      }
+    ],
+    "coda": "Na dúvida em uma frase afirmativa, 'a lot of' é o seu melhor amigo e serve para quase tudo!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "I don't have ____ free time today.",
+        "opcoes": [
+          "many",
+          "much",
+          "a lot",
+          "some"
+        ],
+        "resposta": 1,
+        "explicacao": "Time é incontável e a frase é negativa, então usamos 'much'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "There are ____ people in the room.",
+        "opcoes": [
+          "much",
+          "a lot of",
+          "any",
+          "a lot"
+        ],
+        "resposta": 1,
+        "explicacao": "Frase afirmativa, 'people' é contável. 'A lot of' é a melhor opção."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: She doesn't read ____ books.",
+        "resposta": "many",
+        "explicacao": "Books é contável e plural, então em frase negativa usamos 'many'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: We have a ____ of work to do.",
+        "resposta": "lot",
+        "explicacao": "A expressão completa é 'a lot of'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Do you get ____ emails every day?",
+        "opcoes": [
+          "much",
+          "many",
+          "a lot",
+          "a little"
+        ],
+        "resposta": 1,
+        "explicacao": "Emails é contável (plural), então usamos 'many' em perguntas."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I don't eat ____ meat.",
+        "resposta": "much",
+        "explicacao": "Meat (carne) é incontável, portanto usamos 'much' em negativas."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez23",
+    "num": "Lesson 23",
+    "titulo": "How much vs How many",
+    "subtitulo": "Perguntando sobre quantidades",
+    "alerta": "Para perguntar 'quanto' ou 'quantos', usamos 'How much' e 'How many'. O segredo está em saber se podemos contar o item (com 's' no plural) ou não!",
+    "observacao_cards": [
+      {
+        "italiano": "How many",
+        "traducao": "Quantos / Quantas",
+        "genero": "Contáveis",
+        "motivo": "Usado para perguntar a quantidade de coisas contáveis (frequentemente no plural)."
+      },
+      {
+        "italiano": "How much",
+        "traducao": "Quanto / Quanta",
+        "genero": "Incontáveis e Preço",
+        "motivo": "Usado para perguntar a quantidade de coisas incontáveis, ou para perguntar o preço de algo."
+      }
+    ],
+    "tabela_visual": "| Question Word | Used with | Example |\n|---|---|---|\n| How many | Countable (Plural) | How many apples do you want? |\n| How much | Uncountable | How much water do you drink? |\n| How much | Price | How much is this shirt? |",
+    "exemplos_prc": [
+      {
+        "oracao": "How many cars does he have?",
+        "pergunta": "Por que 'How many'?",
+        "resposta": "Porque 'cars' é contável e está no plural.",
+        "conclusao": "How many + substantivo plural."
+      },
+      {
+        "oracao": "How much is the coffee?",
+        "pergunta": "Por que 'How much'?",
+        "resposta": "Porque estamos perguntando o preço.",
+        "conclusao": "How much = preço."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "How much people are there?",
+        "certo": "How many people are there?",
+        "explicacao": "'People' é o plural de person, ou seja, é contável. Usamos 'How many'."
+      },
+      {
+        "errado": "How many money do you have?",
+        "certo": "How much money do you have?",
+        "explicacao": "A palavra 'money' é incontável (você não diz 'dois dinheiros'). Usamos 'How much'."
+      }
+    ],
+    "coda": "Lembre-se: se termina com 's' (plural) ou se refere a pessoas no plural, geralmente é 'How many'. Se não tem 's' ou está perguntando o preço, é 'How much'!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "____ sugar do you take in your coffee?",
+        "opcoes": [
+          "How many",
+          "How much",
+          "How",
+          "Much"
+        ],
+        "resposta": 1,
+        "explicacao": "Sugar (açúcar) é incontável, portanto 'How much'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "____ days are there in a week?",
+        "opcoes": [
+          "How much",
+          "How many",
+          "Many",
+          "How"
+        ],
+        "resposta": 1,
+        "explicacao": "Days (dias) é contável e está no plural."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ____ much is this jacket?",
+        "resposta": "How",
+        "explicacao": "Para perguntar o preço, usamos a expressão 'How much'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: How ____ languages do you speak?",
+        "resposta": "many",
+        "explicacao": "Languages (idiomas) é contável e está no plural."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "____ time do we have left?",
+        "opcoes": [
+          "How many",
+          "How much",
+          "What",
+          "Which"
+        ],
+        "resposta": 1,
+        "explicacao": "Time (tempo) é incontável. Usamos 'How much'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: How ____ brothers do you have?",
+        "resposta": "many",
+        "explicacao": "'Brothers' é contável e está no plural."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez24",
+    "num": "Lesson 24",
+    "titulo": "Present Continuous (Affirmative)",
+    "subtitulo": "Ações acontecendo agora",
+    "alerta": "O Present Continuous (ou Present Progressive) é usado para falar sobre ações que estão acontecendo neste exato momento.",
+    "observacao_cards": [
+      {
+        "italiano": "Verb To Be + verb-ing",
+        "traducao": "Ser/Estar + verbo com -ing (gerúndio)",
+        "genero": "Estrutura",
+        "motivo": "A fórmula mágica para dizer que está fazendo algo."
+      },
+      {
+        "italiano": "Playing, Eating, Working",
+        "traducao": "Jogando, comendo, trabalhando",
+        "genero": "Sufixo -ing",
+        "motivo": "Equivale ao nosso '-ndo' do português."
+      }
+    ],
+    "tabela_visual": "| Subject | Verb to Be | Verb + ing |\n|---|---|---|\n| I | am | working. |\n| You / We / They | are | reading. |\n| He / She / It | is | sleeping. |",
+    "exemplos_prc": [
+      {
+        "oracao": "She is eating an apple.",
+        "pergunta": "Como sabemos que a ação está acontecendo agora?",
+        "resposta": "Pelo uso do verbo 'is' e do verbo principal com '-ing'.",
+        "conclusao": "is + -ing = acontecendo agora."
+      },
+      {
+        "oracao": "They are playing football.",
+        "pergunta": "Por que usamos 'are'?",
+        "resposta": "Porque o sujeito é 'They' (plural).",
+        "conclusao": "Ajuste o verbo To Be ao sujeito."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I playing tennis.",
+        "certo": "I am playing tennis.",
+        "explicacao": "Nunca esqueça o verbo 'To Be' (am, is, are) antes do verbo com -ing."
+      },
+      {
+        "errado": "He is makeing dinner.",
+        "certo": "He is making dinner.",
+        "explicacao": "Verbos terminados na letra 'e' perdem o 'e' antes de adicionar o '-ing' (make -> making)."
+      }
+    ],
+    "coda": "O Present Continuous precisa de duas peças essenciais: o verbo 'To Be' ajudando e o '-ing' no final da ação. Não se esqueça de nenhum!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Look! The dog ____ in the garden.",
+        "opcoes": [
+          "run",
+          "running",
+          "is running",
+          "are running"
+        ],
+        "resposta": 2,
+        "explicacao": "O cão (It) exige 'is' + verbo com -ing. Atenção ao duplo 'n' em 'running'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "We ____ a movie right now.",
+        "opcoes": [
+          "are watching",
+          "is watching",
+          "am watching",
+          "watch"
+        ],
+        "resposta": 0,
+        "explicacao": "Com 'We', usamos 'are' + verbo com -ing."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I am ____ (study) English.",
+        "resposta": "studying",
+        "explicacao": "Basta adicionar -ing ao verbo 'study'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He is ____ (write) an email.",
+        "resposta": "writing",
+        "explicacao": "O verbo 'write' perde a letra 'e' ao receber '-ing'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Listen! The birds ____.",
+        "opcoes": [
+          "is singing",
+          "singing",
+          "are singing",
+          "sings"
+        ],
+        "resposta": 2,
+        "explicacao": "'The birds' é plural (They), portanto usamos 'are' + -ing."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: She ____ playing the piano.",
+        "resposta": "is",
+        "explicacao": "Falta o verbo 'To Be' para 'She', que é 'is'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez25",
+    "num": "Lesson 25",
+    "titulo": "Present Continuous (Negative & Questions)",
+    "subtitulo": "Estrutura completa",
+    "alerta": "Agora que você sabe afirmar o que está acontecendo, vamos aprender a negar e a fazer perguntas usando o Present Continuous.",
+    "observacao_cards": [
+      {
+        "italiano": "Not",
+        "traducao": "Não",
+        "genero": "Negativa",
+        "motivo": "Coloque o 'not' logo depois do verbo To Be (am not, isn't, aren't)."
+      },
+      {
+        "italiano": "Am / Is / Are + Subject",
+        "traducao": "Inversão na Pergunta",
+        "genero": "Interrogativa",
+        "motivo": "Para perguntar, o verbo To Be vai para o início da frase, antes do sujeito."
+      }
+    ],
+    "tabela_visual": "| Form | Structure | Example |\n|---|---|---|\n| Negative | Subj + To Be + NOT + V-ing | I am not working. / She isn't sleeping. |\n| Question | To Be + Subj + V-ing? | Are you working? / Is she sleeping? |\n| Short Answer | Yes/No, Subj + To Be | Yes, I am. / No, she isn't. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Are they coming to the party?",
+        "pergunta": "Por que 'Are' está no começo?",
+        "resposta": "Porque em perguntas de sim ou não, invertemos a ordem do sujeito e do verbo To Be.",
+        "conclusao": "To Be antes do sujeito na pergunta."
+      },
+      {
+        "oracao": "He isn't watching TV.",
+        "pergunta": "Como formamos a negativa?",
+        "resposta": "Adicionamos 'not' ao verbo To Be (is + not = isn't).",
+        "conclusao": "To Be + not."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You are working?",
+        "certo": "Are you working?",
+        "explicacao": "Em perguntas com o verbo To Be, você não usa apenas a entonação, precisa inverter a ordem (Are you...)."
+      },
+      {
+        "errado": "I no am studying.",
+        "certo": "I am not studying.",
+        "explicacao": "O 'not' entra sempre DEPOIS do verbo 'To Be'."
+      }
+    ],
+    "coda": "Negar ou perguntar no Present Continuous é como dançar com o verbo To Be: coloque o 'not' depois dele, ou coloque-o na frente de tudo na pergunta!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "____ she sleeping right now?",
+        "opcoes": [
+          "Does",
+          "Is",
+          "Are",
+          "Do"
+        ],
+        "resposta": 1,
+        "explicacao": "Para perguntar no Present Continuous com 'She', usamos 'Is' no início."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "They ____ listening to me.",
+        "opcoes": [
+          "isn't",
+          "aren't",
+          "not are",
+          "don't"
+        ],
+        "resposta": 1,
+        "explicacao": "A forma negativa para 'They' é 'are not' (aren't)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ____ you coming with us?",
+        "resposta": "Are",
+        "explicacao": "Para o pronome 'you', a pergunta começa com 'Are'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I am ____ feeling well today.",
+        "resposta": "not",
+        "explicacao": "A negativa com 'I am' é 'I am not'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "What ____ you doing?",
+        "opcoes": [
+          "is",
+          "do",
+          "are",
+          "am"
+        ],
+        "resposta": 2,
+        "explicacao": "Mesmo com 'What', a inversão do verbo To Be com 'you' exige 'are'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He ____ working today. (Use a contração de is not)",
+        "resposta": "isn't",
+        "explicacao": "A contração de 'is not' é 'isn't'."
+      }
+    ]
+  }
+]

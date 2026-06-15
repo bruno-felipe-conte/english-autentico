@@ -1,0 +1,573 @@
+[
+  {
+    "id": "a1-lez6",
+    "num": "Lesson 6",
+    "titulo": "Possessive Adjectives",
+    "subtitulo": "My, Your, His, Her",
+    "alerta": "Os adjetivos possessivos sempre vêm ANTES de um substantivo para mostrar a quem algo pertence.",
+    "observacao_cards": [
+      {
+        "italiano": "My",
+        "traducao": "Meu(s), Minha(s)",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'I' (Eu)"
+      },
+      {
+        "italiano": "Your",
+        "traducao": "Seu(s), Sua(s)",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'You' (Você/Vocês)"
+      },
+      {
+        "italiano": "His",
+        "traducao": "Dele",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'He' (Ele)"
+      },
+      {
+        "italiano": "Her",
+        "traducao": "Dela",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'She' (Ela)"
+      },
+      {
+        "italiano": "Its",
+        "traducao": "Dele/Dela (coisas/animais)",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'It' (Ele/Ela neutro)"
+      },
+      {
+        "italiano": "Our",
+        "traducao": "Nosso(s), Nossa(s)",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'We' (Nós)"
+      },
+      {
+        "italiano": "Their",
+        "traducao": "Deles, Delas",
+        "genero": "Possessive",
+        "motivo": "Refere-se a 'They' (Eles/Elas)"
+      }
+    ],
+    "tabela_visual": "| Pronoun | Possessive Adjective | Example |\n|---|---|---|\n| I | My | my car |\n| You | Your | your book |\n| He | His | his dog |\n| She | Her | her cat |\n| It | Its | its tail |\n| We | Our | our house |\n| They | Their | their friends |",
+    "exemplos_prc": [
+      {
+        "oracao": "Her name is Maria.",
+        "pergunta": "De quem é o nome?",
+        "resposta": "Dela.",
+        "conclusao": "Her = Dela."
+      },
+      {
+        "oracao": "Our house is big.",
+        "pergunta": "O que indica 'Our'?",
+        "resposta": "Indica 'nosso' (de nós).",
+        "conclusao": "Our = Nosso."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "The dog plays with it's toy.",
+        "certo": "The dog plays with its toy.",
+        "explicacao": "'Its' (sem apóstrofo) é o possessivo. 'It's' (com apóstrofo) significa 'It is' ou 'It has'."
+      },
+      {
+        "errado": "This is he car.",
+        "certo": "This is his car.",
+        "explicacao": "Usamos o adjetivo possessivo (his) e não o pronome pessoal (he) antes do substantivo."
+      }
+    ],
+    "coda": "Lembre-se: em inglês, o possessivo não muda se a coisa possuída é plural ou singular (ex: 'my car' / 'my cars'). E sempre coloque o possessivo antes do substantivo!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual adjetivo possessivo usamos para 'We'?",
+        "opcoes": [
+          "Us",
+          "Our",
+          "Their",
+          "Yours"
+        ],
+        "resposta": 1,
+        "explicacao": "'Our' é o possessivo correspondente a 'We' (nós)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I have a brother. ___ name is Tom.",
+        "resposta": "His",
+        "explicacao": "'His' refere-se ao irmão (He)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Selecione a opção correta: 'The cat is eating ___ food.'",
+        "opcoes": [
+          "it's",
+          "its",
+          "his",
+          "her"
+        ],
+        "resposta": 1,
+        "explicacao": "'Its' (sem apóstrofo) é o possessivo para animais/coisas."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: They live in London. ___ house is very old.",
+        "resposta": "Their",
+        "explicacao": "'Their' é o possessivo correspondente a 'They' (eles/elas)."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual das frases está correta?",
+        "opcoes": [
+          "She likes she job.",
+          "She likes her job.",
+          "She likes hers job.",
+          "She likes his job."
+        ],
+        "resposta": 1,
+        "explicacao": "Usamos o adjetivo possessivo 'her' antes de 'job'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: You need to clean ___ room.",
+        "resposta": "your",
+        "explicacao": "'Your' é o possessivo de 'You'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez7",
+    "num": "Lesson 7",
+    "titulo": "Possessive Pronouns & Genitive Case",
+    "subtitulo": "Mine, Yours, John's car",
+    "alerta": "Pronomes possessivos substituem o substantivo, e o caso genitivo ('s) mostra posse de forma direta conectando o dono e a coisa possuída.",
+    "observacao_cards": [
+      {
+        "italiano": "Mine",
+        "traducao": "Meu(s), Minha(s)",
+        "genero": "Pronoun",
+        "motivo": "Substitui 'my + substantivo'"
+      },
+      {
+        "italiano": "Yours",
+        "traducao": "Seu(s), Sua(s)",
+        "genero": "Pronoun",
+        "motivo": "Substitui 'your + substantivo'"
+      },
+      {
+        "italiano": "'s",
+        "traducao": "De (Posse)",
+        "genero": "Genitive Case",
+        "motivo": "Adicionado ao possuidor (ex: Maria's book)"
+      }
+    ],
+    "tabela_visual": "| Possessive Adjective | Possessive Pronoun | Genitive Case |\n|---|---|---|\n| My book | Mine | John's book |\n| Your book | Yours | The teacher's desk |\n| Her book | Hers | Mary's house |\n| Our book | Ours | My parents' car |",
+    "exemplos_prc": [
+      {
+        "oracao": "This car is mine.",
+        "pergunta": "O que 'mine' substitui?",
+        "resposta": "Substitui 'my car'.",
+        "conclusao": "Mine é um pronome, não precisa do substantivo depois."
+      },
+      {
+        "oracao": "It is Sarah's phone.",
+        "pergunta": "De quem é o telefone?",
+        "resposta": "Da Sarah.",
+        "conclusao": "Sarah + 's = De Sarah."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "This is the car of John.",
+        "certo": "This is John's car.",
+        "explicacao": "Em inglês, para pessoas, usamos preferencialmente o caso genitivo ('s)."
+      },
+      {
+        "errado": "The book is my.",
+        "certo": "The book is mine.",
+        "explicacao": "Não se usa adjetivos possessivos (my, your) sem um substantivo depois. No final da frase, usamos os pronomes (mine, yours)."
+      }
+    ],
+    "coda": "Lembre-se da diferença: 'My book' (adjetivo + substantivo) vs. 'The book is mine' (pronome, sem substantivo depois). E para dizer que algo é de alguém, apenas adicione 's ao nome do dono!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizemos 'o computador do meu irmão'?",
+        "opcoes": [
+          "The computer of my brother",
+          "My brother's computer",
+          "My brothers computer",
+          "My brother computer's"
+        ],
+        "resposta": 1,
+        "explicacao": "Adicionamos 's ao possuidor: My brother's computer."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: This isn't your jacket. It is ___ (my).",
+        "resposta": "mine",
+        "explicacao": "No final da frase, substituindo 'my jacket', usamos 'mine'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Selecione a opção correta para substantivos plurais que terminam em 's' (ex: parents):",
+        "opcoes": [
+          "My parent's car",
+          "My parents's car",
+          "My parents' car",
+          "The car of my parents"
+        ],
+        "resposta": 2,
+        "explicacao": "Para plurais terminados em 's', adicionamos apenas o apóstrofo: parents'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: That bag belongs to her. It is ___.",
+        "resposta": "hers",
+        "explicacao": "O pronome possessivo de 'her' é 'hers'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "A frase 'These shoes are your' está correta?",
+        "opcoes": [
+          "Sim, totalmente correta.",
+          "Não, o correto é 'These shoes are yours'."
+        ],
+        "resposta": 1,
+        "explicacao": "Como não há substantivo após 'your', devemos usar o pronome 'yours'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Reescreva usando o caso genitivo ('s): The house of Peter.",
+        "resposta": "Peter's house",
+        "explicacao": "O possuidor (Peter) recebe o 's seguido do objeto possuído (house)."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez8",
+    "num": "Lesson 8",
+    "titulo": "Question Words 1",
+    "subtitulo": "What, Who, Where",
+    "alerta": "Em inglês, as palavras de pergunta (Wh- words) vêm sempre no início da frase para buscar informações específicas.",
+    "observacao_cards": [
+      {
+        "italiano": "What",
+        "traducao": "O que / Qual",
+        "genero": "Question Word",
+        "motivo": "Para perguntar sobre coisas ou ações"
+      },
+      {
+        "italiano": "Who",
+        "traducao": "Quem",
+        "genero": "Question Word",
+        "motivo": "Para perguntar sobre pessoas"
+      },
+      {
+        "italiano": "Where",
+        "traducao": "Onde",
+        "genero": "Question Word",
+        "motivo": "Para perguntar sobre lugares"
+      }
+    ],
+    "tabela_visual": "| Question Word | Meaning | Example |\n|---|---|---|\n| What | Coisas/Ações | What is this? |\n| Who | Pessoas | Who is she? |\n| Where | Lugares | Where are you? |",
+    "exemplos_prc": [
+      {
+        "oracao": "What is your name?",
+        "pergunta": "O que 'What' significa aqui?",
+        "resposta": "Qual.",
+        "conclusao": "What = O que ou Qual."
+      },
+      {
+        "oracao": "Where is the station?",
+        "pergunta": "Sobre o que estamos perguntando?",
+        "resposta": "Sobre um lugar.",
+        "conclusao": "Where = Onde."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Who is your phone?",
+        "certo": "What is your phone?",
+        "explicacao": "Não se usa 'Who' (quem) para coisas. Use 'What' ou 'Which'."
+      },
+      {
+        "errado": "Is where the hospital?",
+        "certo": "Where is the hospital?",
+        "explicacao": "A Question Word vem ANTES do verbo auxiliar (Where is...)."
+      }
+    ],
+    "coda": "What (coisas), Who (pessoas) e Where (lugares). Coloque essas palavras sempre no comecinho da sua pergunta!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual palavra usamos para perguntar o nome de alguém?",
+        "opcoes": [
+          "Who",
+          "What",
+          "Where",
+          "How"
+        ],
+        "resposta": 1,
+        "explicacao": "Perguntamos 'What is your name?' (Qual é o seu nome?)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: ___ is that tall man?",
+        "resposta": "Who",
+        "explicacao": "Como estamos perguntando sobre uma pessoa (man), usamos 'Who'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como você pergunta 'Onde você mora?'",
+        "opcoes": [
+          "What do you live?",
+          "Who do you live?",
+          "Where do you live?",
+          "When do you live?"
+        ],
+        "resposta": 2,
+        "explicacao": "'Where' é usado para lugares."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: ___ time is it?",
+        "resposta": "What",
+        "explicacao": "Para perguntar as horas, dizemos 'What time is it?'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Se a resposta é 'He is my brother', qual foi a pergunta?",
+        "opcoes": [
+          "What is he?",
+          "Where is he?",
+          "Who is he?",
+          "How is he?"
+        ],
+        "resposta": 2,
+        "explicacao": "A resposta identifica uma pessoa, então a pergunta foi 'Who is he?' (Quem é ele?)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: ___ are my keys?",
+        "resposta": "Where",
+        "explicacao": "Para perguntar a localização de algo, usamos 'Where' (Onde estão minhas chaves?)."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez9",
+    "num": "Lesson 9",
+    "titulo": "Present Simple (Affirmative)",
+    "subtitulo": "I, You, We, They",
+    "alerta": "O Present Simple é usado para rotinas, hábitos e fatos permanentes. Para I, You, We e They, o verbo permanece igual ao infinitivo (sem o 'to').",
+    "observacao_cards": [
+      {
+        "italiano": "Work",
+        "traducao": "Trabalhar",
+        "genero": "Verb",
+        "motivo": "Mantém-se igual para I, You, We, They"
+      },
+      {
+        "italiano": "Like",
+        "traducao": "Gostar",
+        "genero": "Verb",
+        "motivo": "I like, You like, We like, They like"
+      }
+    ],
+    "tabela_visual": "| Pronoun | Verb (Play) | Example |\n|---|---|---|\n| I | play | I play tennis |\n| You | play | You play well |\n| We | play | We play together |\n| They | play | They play games |",
+    "exemplos_prc": [
+      {
+        "oracao": "They live in New York.",
+        "pergunta": "O verbo 'live' muda?",
+        "resposta": "Não.",
+        "conclusao": "Com 'They', o verbo não sofre alteração."
+      },
+      {
+        "oracao": "We study English every day.",
+        "pergunta": "O que esta frase expressa?",
+        "resposta": "Uma rotina ou hábito.",
+        "conclusao": "Present Simple é usado para hábitos e rotinas."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am play soccer.",
+        "certo": "I play soccer.",
+        "explicacao": "Não use o verbo 'to be' (am/is/are) junto com outro verbo principal no Present Simple."
+      },
+      {
+        "errado": "They plays tennis.",
+        "certo": "They play tennis.",
+        "explicacao": "Para 'They', o verbo não ganha 's'. O 's' é apenas para He/She/It."
+      }
+    ],
+    "coda": "Dizer o que você faz todo dia é muito simples! Basta usar o pronome (I, You, We, They) e o verbo na sua forma básica. Nada de 'am', 'is' ou 'are' pelo meio!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como se diz 'Nós comemos maçãs'?",
+        "opcoes": [
+          "We are eat apples",
+          "We eats apples",
+          "We eat apples",
+          "We eating apples"
+        ],
+        "resposta": 2,
+        "explicacao": "No Present Simple com 'We', usamos o verbo na base: We eat."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo 'work': You ___ in an office.",
+        "resposta": "work",
+        "explicacao": "Com 'You', o verbo permanece na forma básica."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase indica um hábito?",
+        "opcoes": [
+          "I am watch TV.",
+          "I watch TV every night.",
+          "I watching TV.",
+          "I watches TV."
+        ],
+        "resposta": 1,
+        "explicacao": "'I watch TV every night' indica um hábito e está conjugado corretamente para 'I'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com 'like': They ___ pizza.",
+        "resposta": "like",
+        "explicacao": "Com 'They', não se adiciona 's' ao verbo."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Identifique a frase incorreta:",
+        "opcoes": [
+          "I like music.",
+          "You live here.",
+          "We are study math.",
+          "They speak Spanish."
+        ],
+        "resposta": 2,
+        "explicacao": "'We are study math' está errado. O correto é 'We study math'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com 'go': I ___ to the gym on Mondays.",
+        "resposta": "go",
+        "explicacao": "Com a primeira pessoa 'I', usamos o verbo na forma base: go."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez10",
+    "num": "Lesson 10",
+    "titulo": "Present Simple (He/She/It)",
+    "subtitulo": "Regras do -s, -es, -ies",
+    "alerta": "Quando falamos sobre Ele (He), Ela (She) ou um animal/coisa (It) no presente, o verbo principal sofre uma pequena mudança no final!",
+    "observacao_cards": [
+      {
+        "italiano": "-s",
+        "traducao": "Regra geral",
+        "genero": "Spelling Rule",
+        "motivo": "Adicionar 's' na maioria dos verbos (work -> works)"
+      },
+      {
+        "italiano": "-es",
+        "traducao": "ch, sh, s, x, z, o",
+        "genero": "Spelling Rule",
+        "motivo": "Adicionar 'es' (watch -> watches, go -> goes)"
+      },
+      {
+        "italiano": "-ies",
+        "traducao": "Consoante + y",
+        "genero": "Spelling Rule",
+        "motivo": "Tirar o 'y' e colocar 'ies' (study -> studies)"
+      }
+    ],
+    "tabela_visual": "| Verb | He / She / It |\n|---|---|\n| play | plays |\n| go | goes |\n| watch | watches |\n| study | studies |",
+    "exemplos_prc": [
+      {
+        "oracao": "She goes to school.",
+        "pergunta": "Por que o verbo é 'goes' e não 'go'?",
+        "resposta": "Porque com 'She' adicionamos '-es' a verbos terminados em 'o'.",
+        "conclusao": "go -> goes para He/She/It."
+      },
+      {
+        "oracao": "He studies English.",
+        "pergunta": "Qual era a forma original do verbo?",
+        "resposta": "Study.",
+        "conclusao": "Study termina em consoante + y, então vira studies."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He play soccer.",
+        "certo": "He plays soccer.",
+        "explicacao": "É obrigatório adicionar o 's' para a 3ª pessoa do singular no presente afirmativo."
+      },
+      {
+        "errado": "She flys a plane.",
+        "certo": "She flies a plane.",
+        "explicacao": "O verbo 'fly' termina em consoante (l) + y. Devemos tirar o y e colocar 'ies'."
+      }
+    ],
+    "coda": "Lembre-se da regra do Super-S! Com He, She ou It, o verbo sempre leva um 's', 'es' ou 'ies' no final nas frases afirmativas do presente.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma correta do verbo 'watch' para 'She'?",
+        "opcoes": [
+          "watchs",
+          "watches",
+          "watching",
+          "watchies"
+        ],
+        "resposta": 1,
+        "explicacao": "Verbos terminados em 'ch' recebem '-es'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo 'work': He ___ in a hospital.",
+        "resposta": "works",
+        "explicacao": "Regra geral: adiciona-se apenas '-s'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como escrevemos o verbo 'play' para 'It'?",
+        "opcoes": [
+          "plaies",
+          "playes",
+          "plays",
+          "playing"
+        ],
+        "resposta": 2,
+        "explicacao": "'Play' termina em vogal + y. Adiciona-se apenas o 's'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo 'study': Maria ___ every night.",
+        "resposta": "studies",
+        "explicacao": "'Study' termina em consoante + y. Troca-se o 'y' por '-ies'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "John go to work at 8 AM.",
+          "John goes to work at 8 AM.",
+          "John is goes to work at 8 AM.",
+          "John going to work at 8 AM."
+        ],
+        "resposta": 1,
+        "explicacao": "'John' corresponde a 'He'. O verbo 'go' recebe '-es' (goes)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o verbo 'fix': The mechanic ___ the car.",
+        "resposta": "fixes",
+        "explicacao": "Verbos terminados em 'x' recebem '-es'."
+      }
+    ]
+  }
+]

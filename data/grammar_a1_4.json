@@ -1,0 +1,520 @@
+[
+  {
+    "id": "a1-lez16",
+    "num": "Lesson 16",
+    "titulo": "\"Have got / Has got:\" Posse e \"have\" para ações",
+    "subtitulo": "Possession and Actions",
+    "alerta": "Em inglês, 'have got' é muito comum para falar de posse e características, enquanto 'have' sozinho também é usado para posse, mas especialmente para indicar ações como comer ou tomar banho.",
+    "observacao_cards": [
+      {
+        "italiano": "I have got",
+        "traducao": "Eu tenho",
+        "genero": "Posse",
+        "motivo": "Usado para indicar que possuo algo (mais comum no Reino Unido)."
+      },
+      {
+        "italiano": "He has got",
+        "traducao": "Ele tem",
+        "genero": "Posse",
+        "motivo": "Forma para a 3ª pessoa do singular (He, She, It)."
+      },
+      {
+        "italiano": "I have breakfast",
+        "traducao": "Eu tomo café da manhã",
+        "genero": "Ação",
+        "motivo": "Não usamos 'got' quando 'have' significa uma ação (comer, beber)."
+      }
+    ],
+    "tabela_visual": "| Sujeito | Posse (Have/Has got) | Ação (Have/Has) |\n|---|---|---|\n| I / You / We / They | have got ('ve got) | have |\n| He / She / It | has got ('s got) | has |",
+    "exemplos_prc": [
+      {
+        "oracao": "She has got a new car.",
+        "pergunta": "O que indica 'has got'?",
+        "resposta": "Indica posse, que ela é dona do carro.",
+        "conclusao": "has got = ter/possuir"
+      },
+      {
+        "oracao": "They have lunch at noon.",
+        "pergunta": "Por que não usamos 'got' aqui?",
+        "resposta": "Porque 'have lunch' é uma ação (almoçar), não posse.",
+        "conclusao": "have = ação"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I have got breakfast at 8 am.",
+        "certo": "I have breakfast at 8 am.",
+        "explicacao": "Não usamos 'got' quando 'have' significa comer/beber/tomar banho (ações)."
+      }
+    ],
+    "coda": "Lembre-se: 'have got' é para o que você possui ou para descrever a si mesmo, enquanto 'have' puro muitas vezes representa ações da rotina!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma correta de posse para 'She'?",
+        "opcoes": [
+          "have got",
+          "has got",
+          "is got",
+          "having got"
+        ],
+        "resposta": 1,
+        "explicacao": "Na 3ª pessoa do singular, usamos 'has got'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase indicando posse: I ___ a brother.",
+        "resposta": "have got",
+        "explicacao": "Usamos 'have got' (ou apenas 'have') para relacionamentos familiares."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizemos 'Eu tomo banho'?",
+        "opcoes": [
+          "I have a shower",
+          "I have got a shower",
+          "I has a shower",
+          "I am a shower"
+        ],
+        "resposta": 0,
+        "explicacao": "Tomar banho é uma ação, então usamos 'have' sem o 'got'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete indicando ação: He ___ coffee every morning.",
+        "resposta": "has",
+        "explicacao": "Beber café é uma ação. Para 'He', usamos 'has'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Na negativa, como dizemos 'Eles não têm carro' usando 'got'?",
+        "opcoes": [
+          "They don't have got a car",
+          "They haven't got a car",
+          "They haven't a car",
+          "They isn't got a car"
+        ],
+        "resposta": 1,
+        "explicacao": "A negativa de 'have got' é 'haven't got'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete indicando posse: ___ you got any money?",
+        "resposta": "Have",
+        "explicacao": "Em perguntas com 'got', começamos a frase com 'Have' ou 'Has'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez17",
+    "num": "Lesson 17",
+    "titulo": "\"There is / There are:\" Existência no presente",
+    "subtitulo": "There is a cat... There are dogs...",
+    "alerta": "Em inglês, usamos 'There is' e 'There are' para dizer que algo existe em um lugar. É o equivalente ao verbo 'haver' ou 'ter' no sentido de existência.",
+    "observacao_cards": [
+      {
+        "italiano": "There is",
+        "traducao": "Há / Tem (Singular)",
+        "genero": "Existência",
+        "motivo": "Usado para um único objeto, pessoa ou animal."
+      },
+      {
+        "italiano": "There are",
+        "traducao": "Há / Têm (Plural)",
+        "genero": "Existência",
+        "motivo": "Usado para dois ou mais objetos, pessoas ou animais."
+      }
+    ],
+    "tabela_visual": "| Forma | Singular | Plural |\n|---|---|---|\n| Afirmativa | There is a book | There are books |\n| Negativa | There isn't a book | There aren't any books |\n| Interrogativa | Is there a book? | Are there any books? |",
+    "exemplos_prc": [
+      {
+        "oracao": "There is a dog in the park.",
+        "pergunta": "Por que usamos 'There is'?",
+        "resposta": "Porque 'a dog' (um cachorro) é singular.",
+        "conclusao": "There is = Singular"
+      },
+      {
+        "oracao": "There are three apples on the table.",
+        "pergunta": "Por que usamos 'There are'?",
+        "resposta": "Porque 'three apples' é plural.",
+        "conclusao": "There are = Plural"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Have a dog in the park.",
+        "certo": "There is a dog in the park.",
+        "explicacao": "Nunca traduza o 'tem' (existir) do português por 'have' nesse contexto."
+      }
+    ],
+    "coda": "Dica de ouro: Nunca traduza o nosso 'tem um carro na rua' com 'have'. Sempre use 'There is / There are' para dizer o que existe ao seu redor!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma correta para: '___ a problem.'?",
+        "opcoes": [
+          "There are",
+          "There is",
+          "Have",
+          "Has"
+        ],
+        "resposta": 1,
+        "explicacao": "'A problem' é singular, logo usamos 'There is'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: ___ ___ many people here.",
+        "resposta": "There are",
+        "explicacao": "'Many people' (muitas pessoas) é plural."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como perguntamos: 'Há um médico no avião?'",
+        "opcoes": [
+          "Is there a doctor on the plane?",
+          "Are there a doctor on the plane?",
+          "Have a doctor on the plane?",
+          "There is a doctor on the plane?"
+        ],
+        "resposta": 0,
+        "explicacao": "Em perguntas no singular, invertemos e usamos 'Is there'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete na negativa (forma contraída): There ___ any milk in the fridge.",
+        "resposta": "isn't",
+        "explicacao": "Milk é incontável (considerado singular), e na negativa fica 'isn't'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a tradução mais exata para: 'There are two cars in the garage.'?",
+        "opcoes": [
+          "Eles são dois carros na garagem.",
+          "Eles têm dois carros na garagem.",
+          "Há / Tem dois carros na garagem.",
+          "São dois carros na garagem."
+        ],
+        "resposta": 2,
+        "explicacao": "'There are' indica a existência no plural (Há / Tem)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete para fazer uma pergunta no plural: ___ ___ any questions?",
+        "resposta": "Are there",
+        "explicacao": "Em perguntas com substantivos plurais ('questions'), usamos 'Are there'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez18",
+    "num": "Lesson 18",
+    "titulo": "\"Prepositions of Place:\" In, On, At (físico/localização)",
+    "subtitulo": "Where are you?",
+    "alerta": "In, On, e At são preposições de lugar que funcionam como uma pirâmide invertida: do mais amplo e geral (In) para o ponto mais específico (At).",
+    "observacao_cards": [
+      {
+        "italiano": "In",
+        "traducao": "Dentro de / Em",
+        "genero": "Amplo",
+        "motivo": "Para continentes, países, cidades ou espaços fechados (uma caixa)."
+      },
+      {
+        "italiano": "On",
+        "traducao": "Sobre / Na",
+        "genero": "Superfície",
+        "motivo": "Para ruas, avenidas, ou algo que está encostado em uma superfície."
+      },
+      {
+        "italiano": "At",
+        "traducao": "No / Na",
+        "genero": "Ponto Específico",
+        "motivo": "Endereços completos com número ou pontos exatos num mapa."
+      }
+    ],
+    "tabela_visual": "| Preposição | Uso de Lugar | Exemplo |\n|---|---|---|\n| IN | Países, cidades, cômodos | in Brazil, in the living room |\n| ON | Superfícies, ruas | on the table, on Main Street |\n| AT | Endereços completos, locais exatos | at 123 Main St, at the bus stop |",
+    "exemplos_prc": [
+      {
+        "oracao": "The book is on the table.",
+        "pergunta": "Por que usamos 'on'?",
+        "resposta": "Porque o livro está tocando a superfície da mesa.",
+        "conclusao": "On = Contato/Superfície"
+      },
+      {
+        "oracao": "I live in Paris.",
+        "pergunta": "Por que usamos 'in'?",
+        "resposta": "Paris é uma cidade. Cidades levam 'in'.",
+        "conclusao": "In = Cidades/Países"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am at Brazil.",
+        "certo": "I am in Brazil.",
+        "explicacao": "Para países, sendo lugares amplos, sempre usamos 'in'."
+      }
+    ],
+    "coda": "Pense no IN como uma fronteira ao seu redor, o ON como o chão/parede onde você toca e o AT como o X no mapa do GPS.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como completamos: He lives ___ Tokyo.",
+        "opcoes": [
+          "on",
+          "in",
+          "at",
+          "to"
+        ],
+        "resposta": 1,
+        "explicacao": "Tokyo é uma cidade, e para cidades usamos 'in'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a preposição correta: The picture is ___ the wall. (na parede)",
+        "resposta": "on",
+        "explicacao": "A parede é uma superfície, portanto usamos 'on'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual preposição usar com um endereço exato: I live ___ 45 Oxford Street.",
+        "opcoes": [
+          "at",
+          "in",
+          "on",
+          "by"
+        ],
+        "resposta": 0,
+        "explicacao": "Endereços com número são muito específicos, então exigem 'at'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: I am waiting ___ the bus stop. (no ponto de ônibus)",
+        "resposta": "at",
+        "explicacao": "O ponto de ônibus é uma localização exata num mapa ('at')."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Se uma caneta está dentro do estojo, dizemos:",
+        "opcoes": [
+          "The pen is on the case.",
+          "The pen is at the case.",
+          "The pen is in the case.",
+          "The pen is by the case."
+        ],
+        "resposta": 2,
+        "explicacao": "Para o interior de objetos ou cômodos (volume), usamos 'in'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: The cat is sleeping ___ the sofa. (em cima do sofá)",
+        "resposta": "on",
+        "explicacao": "O gato está repousando na superfície do sofá ('on')."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez19",
+    "num": "Lesson 19",
+    "titulo": "\"Prepositions of Time:\" In, On, At (temporal)",
+    "subtitulo": "When is it?",
+    "alerta": "As preposições in, on e at também funcionam para tempo! A regra da pirâmide invertida (do longo/geral para o curto/exato) se mantém perfeitamente.",
+    "observacao_cards": [
+      {
+        "italiano": "In",
+        "traducao": "Em",
+        "genero": "Períodos Longos",
+        "motivo": "Anos, meses, estações do ano, séculos e partes do dia (manhã, tarde)."
+      },
+      {
+        "italiano": "On",
+        "traducao": "Em (No/Na)",
+        "genero": "Dias e Datas",
+        "motivo": "Dias da semana e datas específicas com dia e mês."
+      },
+      {
+        "italiano": "At",
+        "traducao": "Às",
+        "genero": "Horas e Momentos",
+        "motivo": "Horários de relógio, feriados específicos e a exceção 'at night'."
+      }
+    ],
+    "tabela_visual": "| Preposição | Uso de Tempo | Exemplo |\n|---|---|---|\n| IN | Meses, anos, partes do dia | in May, in 1999, in the morning |\n| ON | Dias da semana e datas | on Monday, on May 5th |\n| AT | Horários exatos | at 8:00, at night, at noon |",
+    "exemplos_prc": [
+      {
+        "oracao": "My birthday is in June.",
+        "pergunta": "Por que 'in' e não 'on'?",
+        "resposta": "Porque mencionamos apenas o mês. O mês é um período longo.",
+        "conclusao": "In = Mês sozinho"
+      },
+      {
+        "oracao": "The meeting is on Friday.",
+        "pergunta": "Por que 'on'?",
+        "resposta": "Para dias da semana, a preposição obrigatória é 'on'.",
+        "conclusao": "On = Dia da semana"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I study in night.",
+        "certo": "I study at night.",
+        "explicacao": "Apesar de dizermos 'in the morning' e 'in the afternoon', a palavra 'night' sempre exige 'at'."
+      }
+    ],
+    "coda": "Se for longo (anos, meses), use IN. Se for dia da semana ou data redonda, use ON. Se você vai olhar para o relógio, use AT.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I wake up ___ 7 o'clock.",
+        "opcoes": [
+          "in",
+          "at",
+          "on",
+          "to"
+        ],
+        "resposta": 1,
+        "explicacao": "Horários no relógio exigem 'at'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a preposição correta: We don't work ___ Sundays.",
+        "resposta": "on",
+        "explicacao": "Sundays são dias da semana, logo exigem 'on'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "I was born on 1990.",
+          "I was born at 1990.",
+          "I was born in 1990.",
+          "I was born for 1990."
+        ],
+        "resposta": 2,
+        "explicacao": "Para indicar o ano de algo, usamos 'in'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a exceção: I like to watch movies ___ night.",
+        "resposta": "at",
+        "explicacao": "A palavra 'night' (noite) sempre pede a preposição 'at'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a data completa: Christmas is ___ December 25th.",
+        "opcoes": [
+          "in",
+          "at",
+          "on",
+          "from"
+        ],
+        "resposta": 2,
+        "explicacao": "Datas com o dia específico exigem 'on', mesmo que o mês esteja presente."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a parte do dia: Let's go to the gym ___ the morning.",
+        "resposta": "in",
+        "explicacao": "Partes do dia que levam 'the' (the morning, the afternoon, the evening) exigem 'in'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez20",
+    "num": "Lesson 20",
+    "titulo": "\"Countable vs Uncountable Nouns:\" A lógica do que pode ser contado",
+    "subtitulo": "Apples and Water",
+    "alerta": "No inglês, coisas se dividem fortemente entre o que dá para contar (1, 2, 3 maçãs) e o que se precisa medir ou agrupar (como água, não existe '2 águas', mas sim '2 copos de água').",
+    "observacao_cards": [
+      {
+        "italiano": "Countable",
+        "traducao": "Contável",
+        "genero": "Contagem",
+        "motivo": "Pode ir para o plural (com 's') e aceita os artigos 'a'/'an' e números."
+      },
+      {
+        "italiano": "Uncountable",
+        "traducao": "Incontável",
+        "genero": "Sem plural",
+        "motivo": "Sempre no singular, não aceita 'a'/'an' diretamente ou números puros."
+      }
+    ],
+    "tabela_visual": "| Categoria | Regra | Exemplos |\n|---|---|---|\n| Countable | Aceita plural (a/an/numbers) | an apple, two cars, five dogs |\n| Uncountable | Singular apenas (use some/much) | water, money, information, bread |",
+    "exemplos_prc": [
+      {
+        "oracao": "I need some information.",
+        "pergunta": "Podemos dizer 'an information' ou 'two informations'?",
+        "resposta": "Não, 'information' é um conceito abstrato e incontável no inglês.",
+        "conclusao": "Information = Incontável"
+      },
+      {
+        "oracao": "I have two dogs.",
+        "pergunta": "Por que 'dogs' é contável?",
+        "resposta": "Porque você pode contá-los com números inteiros (1 cachorro, 2 cachorros).",
+        "conclusao": "Dogs = Contável"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I have two baggages.",
+        "certo": "I have two bags. (ou 'some baggage')",
+        "explicacao": "A palavra 'baggage' (bagagem) é incontável em inglês. Para contar as malas, contamos as bolsas ('bags')."
+      }
+    ],
+    "coda": "Pense na forma da coisa: se for líquido, pó, grãos, blocos sem formato ou uma ideia abstrata (como informações ou conselhos), quase sempre é incontável!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual destas palavras é INCONTÁVEL (uncountable)?",
+        "opcoes": [
+          "Book",
+          "Water",
+          "Pen",
+          "Student"
+        ],
+        "resposta": 1,
+        "explicacao": "'Water' é um líquido, portanto não pode ser contado sem uma unidade de medida (copos, garrafas)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o plural se necessário: I bought three ___ (apple).",
+        "resposta": "apples",
+        "explicacao": "Maçã (apple) é contável, então adicionamos o 's' para formar o plural."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual destas frases está ERRADA?",
+        "opcoes": [
+          "I need some milk.",
+          "She has a lot of money.",
+          "I want a bread.",
+          "We have two cars."
+        ],
+        "resposta": 2,
+        "explicacao": "'Bread' (pão) é considerado incontável (como a massa do pão). Não usamos 'a' ou número diretamente, dizemos 'some bread' ou 'a slice of bread'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a palavra correta: He needs some ___ (advice/advices).",
+        "resposta": "advice",
+        "explicacao": "'Advice' (conselho) é incontável, portanto nunca vai para o plural com 's'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Para perguntar a quantidade de uma coisa CONTÁVEL, usamos:",
+        "opcoes": [
+          "How much",
+          "How many",
+          "How long",
+          "How big"
+        ],
+        "resposta": 1,
+        "explicacao": "'How many' (Quantos/Quantas) é usado para o que pode ser contado e tem plural."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Responda indicando a palavra: I don't have much ___ (time/times).",
+        "resposta": "time",
+        "explicacao": "Tempo (time) com a ideia de horas disponíveis é incontável, usa-se 'much time'."
+      }
+    ]
+  }
+]

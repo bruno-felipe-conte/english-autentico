@@ -1,0 +1,523 @@
+[
+  {
+    "id": "a1-lez11",
+    "num": "Lesson 11",
+    "titulo": "Present Simple (Negative)",
+    "subtitulo": "Don't vs Doesn't",
+    "alerta": "Para dizer 'não' no Present Simple, precisamos da ajuda de 'don't' e 'doesn't'.",
+    "observacao_cards": [
+      {
+        "italiano": "don't",
+        "traducao": "não (I, You, We, They)",
+        "genero": "Verbo Auxiliar",
+        "motivo": "Negativa para a maioria das pessoas"
+      },
+      {
+        "italiano": "doesn't",
+        "traducao": "não (He, She, It)",
+        "genero": "Verbo Auxiliar",
+        "motivo": "Negativa para a 3ª pessoa do singular"
+      }
+    ],
+    "tabela_visual": "| Subject | Auxiliary Negative | Verb |\n|---|---|---|\n| I / You / We / They | don't | play |\n| He / She / It | doesn't | play |",
+    "exemplos_prc": [
+      {
+        "oracao": "She doesn't like pizza.",
+        "pergunta": "Por que o verbo 'like' não tem 's' no final?",
+        "resposta": "Porque o 'doesn't' já indica que a frase está na 3ª pessoa do singular. O verbo principal volta à sua forma base.",
+        "conclusao": "Com 'doesn't', o verbo principal perde o 's'."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He doesn't plays soccer.",
+        "certo": "He doesn't play soccer.",
+        "explicacao": "Nunca adicione 's' ao verbo principal em frases negativas. O auxiliar 'doesn't' já faz esse trabalho."
+      }
+    ],
+    "coda": "Lembre-se: 'don't' para a maioria, e 'doesn't' para He, She, It (e sempre use o verbo normal depois deles)!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I ___ speak French.",
+        "opcoes": [
+          "don't",
+          "doesn't",
+          "not",
+          "am not"
+        ],
+        "resposta": 0,
+        "explicacao": "Para 'I', usamos o auxiliar negativo 'don't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: He _______ like apples.",
+        "resposta": "doesn't",
+        "explicacao": "Para 'He' (3ª pessoa do singular), usamos 'doesn't'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "She don't eat meat.",
+          "She doesn't eats meat.",
+          "She doesn't eat meat.",
+          "She not eat meat."
+        ],
+        "resposta": 2,
+        "explicacao": "'She' exige 'doesn't', e o verbo 'eat' deve ficar na forma base (sem o 's')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: We _______ work on Sundays.",
+        "resposta": "don't",
+        "explicacao": "Para 'We', usamos o auxiliar negativo 'don't'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: The cat ___ drink milk.",
+        "opcoes": [
+          "don't",
+          "doesn't",
+          "isn't",
+          "aren't"
+        ],
+        "resposta": 1,
+        "explicacao": "'The cat' equivale a 'It' (3ª pessoa do singular), logo usamos 'doesn't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: They _______ want to go home.",
+        "resposta": "don't",
+        "explicacao": "Para 'They', usamos 'don't'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez12",
+    "num": "Lesson 12",
+    "titulo": "Present Simple (Questions)",
+    "subtitulo": "Do vs Does",
+    "alerta": "No inglês, não basta apenas mudar a entonação da voz. Precisamos colocar 'Do' ou 'Does' no começo da frase para fazer uma pergunta no presente!",
+    "observacao_cards": [
+      {
+        "italiano": "Do",
+        "traducao": "(Indicador de pergunta)",
+        "genero": "Verbo Auxiliar",
+        "motivo": "Usado antes de I, You, We, They"
+      },
+      {
+        "italiano": "Does",
+        "traducao": "(Indicador de pergunta)",
+        "genero": "Verbo Auxiliar",
+        "motivo": "Usado antes de He, She, It"
+      }
+    ],
+    "tabela_visual": "| Auxiliary | Subject | Verb | ? |\n|---|---|---|---|\n| Do | you | work | ? |\n| Does | she | work | ? |",
+    "exemplos_prc": [
+      {
+        "oracao": "Does he live here?",
+        "pergunta": "Por que usamos 'Does' e não 'Do'?",
+        "resposta": "Porque o sujeito é 'he' (ele), que é 3ª pessoa do singular.",
+        "conclusao": "Coloque 'Does' antes de He, She, It."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You like coffee?",
+        "certo": "Do you like coffee?",
+        "explicacao": "Em inglês não podemos fazer perguntas no Present Simple apenas com entonação de voz. O auxiliar 'Do' é obrigatório no início."
+      },
+      {
+        "errado": "Does she likes coffee?",
+        "certo": "Does she like coffee?",
+        "explicacao": "Assim como na negativa, nas perguntas com 'Does' o verbo principal NÃO ganha o 's'."
+      }
+    ],
+    "coda": "Sempre inicie as perguntas no presente com 'Do' ou 'Does'. O seu inglês vai soar muito mais natural!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a pergunta: ___ you speak English?",
+        "opcoes": [
+          "Are",
+          "Is",
+          "Do",
+          "Does"
+        ],
+        "resposta": 2,
+        "explicacao": "Para o pronome 'you' em perguntas no Present Simple, usamos 'Do'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: _______ she live in Brazil?",
+        "resposta": "Does",
+        "explicacao": "Usamos 'Does' para 'she'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta?",
+        "opcoes": [
+          "Does he plays tennis?",
+          "Do he play tennis?",
+          "Does he play tennis?",
+          "He plays tennis?"
+        ],
+        "resposta": 2,
+        "explicacao": "Iniciamos com 'Does' porque é 'he', e o verbo principal fica na sua forma base (play)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: _______ they have a car?",
+        "resposta": "Do",
+        "explicacao": "Para o pronome 'they', o auxiliar correto é 'Do'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: ___ John work here?",
+        "opcoes": [
+          "Do",
+          "Does",
+          "Is",
+          "Are"
+        ],
+        "resposta": 1,
+        "explicacao": "John equivale a 'he' (ele), então usamos 'Does'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: _______ we need to study?",
+        "resposta": "Do",
+        "explicacao": "Para o pronome 'we', usamos 'Do'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez13",
+    "num": "Lesson 13",
+    "titulo": "Adverbs of Frequency",
+    "subtitulo": "Always, Usually, Sometimes, Never",
+    "alerta": "Usamos esses advérbios para dizer COM QUE FREQUÊNCIA fazemos algo (Sempre? Às vezes? Nunca?).",
+    "observacao_cards": [
+      {
+        "italiano": "always",
+        "traducao": "sempre (100%)",
+        "genero": "Advérbio",
+        "motivo": "Uma ação constante"
+      },
+      {
+        "italiano": "usually",
+        "traducao": "normalmente (80%)",
+        "genero": "Advérbio",
+        "motivo": "Maior parte do tempo"
+      },
+      {
+        "italiano": "sometimes",
+        "traducao": "às vezes (50%)",
+        "genero": "Advérbio",
+        "motivo": "Metade das vezes"
+      },
+      {
+        "italiano": "never",
+        "traducao": "nunca (0%)",
+        "genero": "Advérbio",
+        "motivo": "Ação inexistente"
+      }
+    ],
+    "tabela_visual": "| Adverb | Meaning | Position |\n|---|---|---|\n| Always | Sempre | Antes do verbo principal |\n| Usually | Geralmente | Antes do verbo principal |\n| Sometimes | Às vezes | Antes do verbo principal |\n| Never | Nunca | Antes do verbo principal |",
+    "exemplos_prc": [
+      {
+        "oracao": "I always wake up early.",
+        "pergunta": "Onde fica o advérbio de frequência na frase?",
+        "resposta": "Fica entre o sujeito (I) e o verbo principal (wake up).",
+        "conclusao": "A ordem é: Sujeito + Advérbio + Verbo Principal."
+      },
+      {
+        "oracao": "I am never late.",
+        "pergunta": "E se o verbo for o verbo 'To Be' (am/is/are)?",
+        "resposta": "Com o verbo 'to be', o advérbio vem DEPOIS do verbo (I am never).",
+        "conclusao": "A ordem é: Sujeito + To Be + Advérbio."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I play usually soccer.",
+        "certo": "I usually play soccer.",
+        "explicacao": "Com verbos comuns, o advérbio de frequência deve vir ANTES do verbo."
+      },
+      {
+        "errado": "I don't never eat meat.",
+        "certo": "I never eat meat.",
+        "explicacao": "A palavra 'never' já torna a frase negativa. Não use 'don't' com 'never'."
+      }
+    ],
+    "coda": "A regra de ouro: Advérbio de frequência vai ANTES da maioria dos verbos, mas DEPOIS do verbo 'To Be'!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a ordem correta das palavras?",
+        "opcoes": [
+          "I go always to bed at 10 PM.",
+          "I always go to bed at 10 PM.",
+          "Always I go to bed at 10 PM.",
+          "I go to bed always at 10 PM."
+        ],
+        "resposta": 1,
+        "explicacao": "O advérbio 'always' vem entre o sujeito (I) e o verbo principal (go)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Traduza a palavra entre parênteses: We _________ (às vezes) go to the park.",
+        "resposta": "sometimes",
+        "explicacao": "'Sometimes' significa às vezes."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizemos 'Ela nunca está triste'?",
+        "opcoes": [
+          "She never is sad.",
+          "She doesn't never be sad.",
+          "She is never sad.",
+          "Never she is sad."
+        ],
+        "resposta": 2,
+        "explicacao": "Com o verbo 'to be' (is), o advérbio 'never' vem DEPOIS do verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Traduza a palavra entre parênteses: He _________ (geralmente) plays video games on weekends.",
+        "resposta": "usually",
+        "explicacao": "'Usually' significa geralmente/normalmente."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "O que significa 'never'?",
+        "opcoes": [
+          "Sempre",
+          "Às vezes",
+          "Geralmente",
+          "Nunca"
+        ],
+        "resposta": 3,
+        "explicacao": "'Never' indica que a ação acontece com 0% de frequência, ou seja, nunca."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o advérbio correto de 100%: I ________ brush my teeth.",
+        "resposta": "always",
+        "explicacao": "O advérbio para 100% de frequência é 'always' (sempre)."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez14",
+    "num": "Lesson 14",
+    "titulo": "Question Words 2",
+    "subtitulo": "When, Why, How, How often",
+    "alerta": "Quer obter mais do que apenas um 'Sim' ou 'Não'? Use as Question Words! Elas lideram a pergunta.",
+    "observacao_cards": [
+      {
+        "italiano": "when",
+        "traducao": "quando",
+        "genero": "Question Word",
+        "motivo": "Pergunta sobre tempo/data"
+      },
+      {
+        "italiano": "why",
+        "traducao": "por que",
+        "genero": "Question Word",
+        "motivo": "Pergunta sobre motivo/razão"
+      },
+      {
+        "italiano": "how",
+        "traducao": "como",
+        "genero": "Question Word",
+        "motivo": "Pergunta sobre maneira/estado"
+      },
+      {
+        "italiano": "how often",
+        "traducao": "com que frequência",
+        "genero": "Question Word",
+        "motivo": "Pergunta sobre rotina/frequência"
+      }
+    ],
+    "tabela_visual": "| Question Word | Auxiliary | Subject | Verb | ? |\n|---|---|---|---|---|\n| When | do | you | study | ? |\n| Why | does | she | cry | ? |",
+    "exemplos_prc": [
+      {
+        "oracao": "Why do you study English? - Because I want to travel.",
+        "pergunta": "Por que usamos 'Why' e 'Because'?",
+        "resposta": "Em inglês, usamos 'Why' para PERGUNTAR o porquê, e 'Because' para RESPONDER o porquê.",
+        "conclusao": "Why = pergunta / Because = resposta"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "Why you study English?",
+        "certo": "Why do you study English?",
+        "explicacao": "As Question Words não substituem o auxiliar (Do/Does). Elas devem vir ANTES do auxiliar."
+      }
+    ],
+    "coda": "Use a fórmula mágica: Question Word + Do/Does + Sujeito + Verbo!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "___ do you live in London? - Because I love the weather.",
+        "opcoes": [
+          "When",
+          "Why",
+          "How",
+          "Who"
+        ],
+        "resposta": 1,
+        "explicacao": "Se a resposta é um motivo (Because...), a pergunta deve ser feita com 'Why'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Qual Question Word usamos para perguntar 'Como vai você?': _______ are you?",
+        "resposta": "How",
+        "explicacao": "'How' significa como."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: ___ does the movie start? - At 8 PM.",
+        "opcoes": [
+          "Why",
+          "How often",
+          "When",
+          "What"
+        ],
+        "resposta": 2,
+        "explicacao": "A resposta é um horário, então estamos perguntando 'Quando', que em inglês é 'When'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta sobre frequência: _______ often do you play sports?",
+        "resposta": "How",
+        "explicacao": "A expressão completa para 'Com que frequência' é 'How often'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete a pergunta: ___ do you go to school?",
+        "opcoes": [
+          "How do you goes",
+          "How you go",
+          "How do you go",
+          "How you goes"
+        ],
+        "resposta": 2,
+        "explicacao": "A estrutura correta é: Question Word (How) + Auxiliar (do) + Sujeito (you) + Verbo (go)."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "A resposta usa 'Because'. A pergunta começou com ______.",
+        "resposta": "Why",
+        "explicacao": "Perguntas que pedem um motivo e são respondidas com 'because' começam com 'Why'."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez15",
+    "num": "Lesson 15",
+    "titulo": "Object Pronouns",
+    "subtitulo": "Me, You, Him, Her, Us, Them",
+    "alerta": "Pronomes pessoais regulares (I, He, She) FAZEM a ação. Mas e quem RECEBE a ação? Apresentando os Object Pronouns!",
+    "observacao_cards": [
+      {
+        "italiano": "me",
+        "traducao": "me / mim (recebe a ação de 'I')",
+        "genero": "Object Pronoun",
+        "motivo": "Objeto da frase"
+      },
+      {
+        "italiano": "him / her",
+        "traducao": "o, lhe, a ele / a, lhe, a ela",
+        "genero": "Object Pronoun",
+        "motivo": "Objetos equivalentes a He e She"
+      },
+      {
+        "italiano": "us / them",
+        "traducao": "nos / os, as, lhes, a eles",
+        "genero": "Object Pronoun",
+        "motivo": "Objetos equivalentes a We e They"
+      }
+    ],
+    "tabela_visual": "| Subject | Object |\n|---|---|\n| I | me |\n| You | you |\n| He | him |\n| She | her |\n| It | it |\n| We | us |\n| They | them |",
+    "exemplos_prc": [
+      {
+        "oracao": "I call him every day.",
+        "pergunta": "Por que não podemos dizer 'I call he'?",
+        "resposta": "'He' só é usado quando ele pratica a ação. Como ele está recebendo a ação de ser chamado, devemos usar 'him'.",
+        "conclusao": "Use o Object Pronoun DEPOIS de verbos ou preposições."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "She loves he.",
+        "certo": "She loves him.",
+        "explicacao": "'He' é o pronome sujeito (faz a ação). O objeto da ação de amar aqui deve ser o pronome objeto 'him'."
+      },
+      {
+        "errado": "Talk to I.",
+        "certo": "Talk to me.",
+        "explicacao": "Após preposições (como 'to', 'for', 'with'), sempre usamos os pronomes objeto."
+      }
+    ],
+    "coda": "Sujeito (no início) age; Objeto (depois do verbo) sofre a ação. Decore essa tabelinha que ela salva vidas!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I don't know that man. Do you know ___?",
+        "opcoes": [
+          "he",
+          "him",
+          "his",
+          "me"
+        ],
+        "resposta": 1,
+        "explicacao": "Estamos nos referindo a 'that man' (ele) recebendo a ação de ser conhecido, então usamos o pronome objeto 'him'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: This present is for you and me. This present is for _______.",
+        "resposta": "us",
+        "explicacao": "'You and me' formam o pronome 'nós'. O pronome objeto equivalente a 'We' é 'us'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: I love my parents. I visit ___ every week.",
+        "opcoes": [
+          "they",
+          "their",
+          "them",
+          "us"
+        ],
+        "resposta": 2,
+        "explicacao": "'My parents' equivale a 'They' (eles). O pronome objeto correspondente é 'them'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: Can you help _______? Eu preciso de ajuda.",
+        "resposta": "me",
+        "explicacao": "A pessoa que precisa de ajuda é 'I' (eu), logo o pronome que recebe a ação é 'me'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: Look at that girl. Do you see ___?",
+        "opcoes": [
+          "she",
+          "her",
+          "hers",
+          "him"
+        ],
+        "resposta": 1,
+        "explicacao": "Referindo-se a 'that girl' (she) como objeto, o correto é 'her'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o pronome objeto correto para 'it': I have a dog. I play with _______.",
+        "resposta": "it",
+        "explicacao": "Para 'It', o pronome objeto é o mesmo: 'it'."
+      }
+    ]
+  }
+]

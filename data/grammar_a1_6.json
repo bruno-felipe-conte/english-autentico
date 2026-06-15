@@ -1,0 +1,516 @@
+[
+  {
+    "id": "a1-lez26",
+    "num": "Lesson 26",
+    "titulo": "Present Simple vs Present Continuous",
+    "subtitulo": "Rotina vs Momento atual",
+    "alerta": "Você sabe diferenciar o que você faz todo dia do que está fazendo agora? Usamos tempos verbais diferentes para isso!",
+    "observacao_cards": [
+      {
+        "italiano": "I study English every day.",
+        "traducao": "Eu estudo inglês todo dia.",
+        "genero": "Present Simple",
+        "motivo": "Rotina ou hábito"
+      },
+      {
+        "italiano": "I am studying English now.",
+        "traducao": "Eu estou estudando inglês agora.",
+        "genero": "Present Continuous",
+        "motivo": "Ação acontecendo no momento"
+      }
+    ],
+    "tabela_visual": "| Tense | Usage | Example |\n|---|---|---|\n| Present Simple | Routines, habits, facts | I play tennis on Sundays. |\n| Present Continuous | Actions happening right now | I am playing tennis right now. |",
+    "exemplos_prc": [
+      {
+        "oracao": "She usually works in an office, but today she is working from home.",
+        "pergunta": "Por que usamos dois tempos verbais diferentes aqui?",
+        "resposta": "Porque o primeiro indica a rotina habitual e o segundo indica algo temporário/acontecendo hoje.",
+        "conclusao": "Rotina = Simple; Momento atual = Continuous"
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I am playing soccer every day.",
+        "certo": "I play soccer every day.",
+        "explicacao": "Para rotinas diárias, use o Present Simple, não o Continuous."
+      },
+      {
+        "errado": "Look! The baby sleeps.",
+        "certo": "Look! The baby is sleeping.",
+        "explicacao": "Para ações acontecendo no momento da fala ('Look!'), use o Present Continuous."
+      }
+    ],
+    "coda": "Agora você já sabe como separar suas rotinas diárias das coisas que estão acontecendo bem agora!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase indica um hábito?",
+        "opcoes": [
+          "I am eating an apple.",
+          "I eat an apple every morning.",
+          "She is eating an apple.",
+          "They are eating."
+        ],
+        "resposta": 1,
+        "explicacao": "O Present Simple ('eat') com 'every morning' indica rotina."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com o Present Continuous: 'Shh! The baby _____ (sleep).'",
+        "resposta": "is sleeping",
+        "explicacao": "O bebê está dormindo neste momento."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: 'My father _____ (watch) TV every evening.'",
+        "opcoes": [
+          "is watching",
+          "watch",
+          "watches",
+          "watching"
+        ],
+        "resposta": 2,
+        "explicacao": "Rotina (every evening) na 3ª pessoa do singular usa 'watches'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a forma correta: 'I usually drink coffee, mas hoje I _____ (drink) tea.'",
+        "resposta": "am drinking",
+        "explicacao": "Hoje, no momento, o Present Continuous é usado."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a forma correta para algo acontecendo agora?",
+        "opcoes": [
+          "I work.",
+          "He plays.",
+          "We are studying.",
+          "They go."
+        ],
+        "resposta": 2,
+        "explicacao": "'We are studying' (Present Continuous) mostra ação em andamento."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: 'Listen! The birds _____ (sing).'",
+        "resposta": "are singing",
+        "explicacao": "O verbo 'listen' (ouça) indica que a ação está acontecendo agora."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez27",
+    "num": "Lesson 27",
+    "titulo": "Modal Verb 'Can'",
+    "subtitulo": "Habilidades e permissões",
+    "alerta": "Como dizer o que você consegue fazer ou pedir permissão? O verbo 'can' é um super-herói: não muda com as pessoas!",
+    "observacao_cards": [
+      {
+        "italiano": "I can swim",
+        "traducao": "Eu sei nadar / Eu consigo nadar",
+        "genero": "Ability",
+        "motivo": "Expressa habilidade"
+      },
+      {
+        "italiano": "Can I go to the bathroom?",
+        "traducao": "Posso ir ao banheiro?",
+        "genero": "Permission",
+        "motivo": "Pedido de permissão"
+      },
+      {
+        "italiano": "He cannot / can't sing",
+        "traducao": "Ele não sabe / não consegue cantar",
+        "genero": "Inability",
+        "motivo": "Falta de habilidade"
+      }
+    ],
+    "tabela_visual": "| Pronoun | Affirmative | Negative | Question |\n|---|---|---|---|\n| I / You / He / She / It / We / They | can speak | can't speak | Can ... speak? |",
+    "exemplos_prc": [
+      {
+        "oracao": "Can you help me?",
+        "pergunta": "Para que usamos 'Can' no início da frase?",
+        "resposta": "Para fazer uma pergunta, como um pedido.",
+        "conclusao": "Inverta 'Can' com o sujeito para perguntas."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "He can speaks English.",
+        "certo": "He can speak English.",
+        "explicacao": "O verbo 'can' não leva 's' na 3ª pessoa, e o verbo principal fica na forma base sem 'to'."
+      },
+      {
+        "errado": "Do you can swim?",
+        "certo": "Can you swim?",
+        "explicacao": "O verbo 'can' não usa os auxiliares 'do' ou 'does'."
+      }
+    ],
+    "coda": "'Can' é prático e fácil, você já pode falar sobre todos os seus talentos!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizer 'Ela sabe cozinhar' em inglês?",
+        "opcoes": [
+          "She cans cook.",
+          "She can cooks.",
+          "She can cook.",
+          "She do can cook."
+        ],
+        "resposta": 2,
+        "explicacao": "'Can' não muda na 3ª pessoa e o verbo seguinte também não leva 's'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a pergunta: '___ you ride a bike?'",
+        "resposta": "Can",
+        "explicacao": "Usamos 'Can' no início para perguntar sobre habilidade."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma negativa abreviada de 'can'?",
+        "opcoes": [
+          "don't can",
+          "can't",
+          "doesn't can",
+          "not can"
+        ],
+        "resposta": 1,
+        "explicacao": "A contração de 'cannot' é 'can't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Traduza 'Eu não sei nadar': 'I ___ swim.'",
+        "resposta": "can't",
+        "explicacao": "Usa-se a negativa 'can't' para falta de habilidade."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase é um pedido de permissão?",
+        "opcoes": [
+          "I can swim.",
+          "She can't dance.",
+          "Can I open the window?",
+          "They can play tennis."
+        ],
+        "resposta": 2,
+        "explicacao": "'Can I...' é usado para pedir permissão."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: 'They ___ play the guitar very well.' (afirmativa)",
+        "resposta": "can",
+        "explicacao": "O verbo modal 'can' indica que eles têm a habilidade."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez28",
+    "num": "Lesson 28",
+    "titulo": "Imperatives",
+    "subtitulo": "Comandos e instruções (Do this / Don't do that)",
+    "alerta": "Precisa dar uma ordem, conselho ou instrução? Use o modo Imperativo, indo direto ao ponto sem colocar o sujeito!",
+    "observacao_cards": [
+      {
+        "italiano": "Open the door.",
+        "traducao": "Abra a porta.",
+        "genero": "Affirmative",
+        "motivo": "Comando direto"
+      },
+      {
+        "italiano": "Don't touch that!",
+        "traducao": "Não toque nisso!",
+        "genero": "Negative",
+        "motivo": "Proibição ou aviso"
+      },
+      {
+        "italiano": "Let's go!",
+        "traducao": "Vamos!",
+        "genero": "Suggestion",
+        "motivo": "Convite (incluindo o falante)"
+      }
+    ],
+    "tabela_visual": "| Type | Example | Translation |\n|---|---|---|\n| Affirmative | Close the window. | Feche a janela. |\n| Negative | Don't talk. | Não converse. |\n| Suggestion (We) | Let's eat. | Vamos comer. |",
+    "exemplos_prc": [
+      {
+        "oracao": "Please, sit down.",
+        "pergunta": "Qual a diferença de colocar 'Please'?",
+        "resposta": "Torna a instrução ou comando mais educado.",
+        "conclusao": "Use 'please' para ser cortês."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "You open the book.",
+        "certo": "Open the book.",
+        "explicacao": "No imperativo, omitimos o pronome sujeito ('you')."
+      },
+      {
+        "errado": "No smoke here.",
+        "certo": "Don't smoke here.",
+        "explicacao": "Para imperativos negativos, use sempre 'Don't', nunca 'No' ou 'Not' sozinho."
+      }
+    ],
+    "coda": "Seja direto, mas lembre-se do 'please' para ser gentil!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual a forma correta para dar uma ordem negativa?",
+        "opcoes": [
+          "Not run!",
+          "Don't run!",
+          "No run!",
+          "Doesn't run!"
+        ],
+        "resposta": 1,
+        "explicacao": "O imperativo negativo é formado com 'Don't'."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete o comando afirmativo: '___ careful!' (seja cuidadoso)",
+        "resposta": "Be",
+        "explicacao": "Usa-se o verbo na sua forma base; para ser/estar é 'Be'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase é um imperativo correto?",
+        "opcoes": [
+          "You stand up.",
+          "Stand up.",
+          "To stand up.",
+          "Standing up."
+        ],
+        "resposta": 1,
+        "explicacao": "Omitimos o sujeito e usamos a forma base do verbo."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a negativa: '___ forget your umbrella!'",
+        "resposta": "Don't",
+        "explicacao": "'Don't' é a maneira de expressar proibições ou ordens negativas."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como sugerimos fazer algo juntos ('Vamos estudar')?",
+        "opcoes": [
+          "Let study.",
+          "Let's study.",
+          "We study.",
+          "Don't study."
+        ],
+        "resposta": 1,
+        "explicacao": "'Let's' é usado para dar sugestões e fazer convites ('Let us')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: '___ me the salt, please.' (passe)",
+        "resposta": "Pass",
+        "explicacao": "O comando afirmativo usa o verbo na sua forma base."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez29",
+    "num": "Lesson 29",
+    "titulo": "Basic Conjunctions",
+    "subtitulo": "And, But, Or, Because, So",
+    "alerta": "Pare de falar só frases curtas! As conjunções são a cola que vai juntar suas ideias e dar fluidez ao seu inglês.",
+    "observacao_cards": [
+      {
+        "italiano": "and",
+        "traducao": "e",
+        "genero": "Addition",
+        "motivo": "Junta ideias similares ou informações adicionais"
+      },
+      {
+        "italiano": "but",
+        "traducao": "mas",
+        "genero": "Contrast",
+        "motivo": "Mostra ideias opostas ou contraste"
+      },
+      {
+        "italiano": "because",
+        "traducao": "porque",
+        "genero": "Reason",
+        "motivo": "Explica a causa de algo"
+      },
+      {
+        "italiano": "so",
+        "traducao": "então / por isso",
+        "genero": "Result",
+        "motivo": "Mostra a consequência de uma ação"
+      }
+    ],
+    "tabela_visual": "| Conjunction | Meaning | Example |\n|---|---|---|\n| And | e | I like apples and bananas. |\n| But | mas | I like apples, but not bananas. |\n| Or | ou | Tea or coffee? |\n| Because | porque | I'm happy because it's Friday. |\n| So | então | It was raining, so I stayed home. |",
+    "exemplos_prc": [
+      {
+        "oracao": "I was tired, so I went to bed early.",
+        "pergunta": "Qual a relação entre as duas partes da frase?",
+        "resposta": "A primeira é a causa e a segunda (após o 'so') é a consequência.",
+        "conclusao": "So = Resultado/Consequência."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "I like dogs, because I don't like cats.",
+        "certo": "I like dogs, but I don't like cats.",
+        "explicacao": "'Because' é usado para dar a razão de algo. Para mostrar o contraste (gostar de um e não de outro), use 'but'."
+      }
+    ],
+    "coda": "Essas palavrinhas são mágicas! Elas transformarão seu inglês de frases fragmentadas para uma comunicação contínua.",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: 'I want to go to the beach, ___ it is raining.'",
+        "opcoes": [
+          "and",
+          "but",
+          "so",
+          "because"
+        ],
+        "resposta": 1,
+        "explicacao": "'But' indica contraste entre a vontade de ir e a realidade da chuva."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: 'Do you prefer tea ___ coffee?'",
+        "resposta": "or",
+        "explicacao": "'Or' apresenta alternativas."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Complete: 'I am studying hard ___ I want to pass the exam.'",
+        "opcoes": [
+          "but",
+          "so",
+          "or",
+          "because"
+        ],
+        "resposta": 3,
+        "explicacao": "'Because' introduz a razão por estar estudando muito."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: 'He was sick, ___ he didn't go to work.'",
+        "resposta": "so",
+        "explicacao": "Ficar doente causou o resultado: por isso ('so') ele não foi."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual conjunção usamos para adicionar informações semelhantes?",
+        "opcoes": [
+          "but",
+          "because",
+          "and",
+          "so"
+        ],
+        "resposta": 2,
+        "explicacao": "'And' liga ideias iguais e adicionais."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete: 'She speaks English ___ Spanish.'",
+        "resposta": "and",
+        "explicacao": "'And' conecta dois idiomas que ela sabe falar."
+      }
+    ]
+  },
+  {
+    "id": "a1-lez30",
+    "num": "Lesson 30",
+    "titulo": "Adjectives & Word Order",
+    "subtitulo": "Posição do adjetivo antes do substantivo",
+    "alerta": "No inglês, as características (adjetivos) vêm ANTES da coisa que descrevem. É como dizer 'o vermelho carro' em vez de 'o carro vermelho'!",
+    "observacao_cards": [
+      {
+        "italiano": "a red car",
+        "traducao": "um carro vermelho",
+        "genero": "Adjective + Noun",
+        "motivo": "Adjetivo vem antes do substantivo"
+      },
+      {
+        "italiano": "beautiful flowers",
+        "traducao": "flores bonitas",
+        "genero": "No plural",
+        "motivo": "Adjetivos nunca ganham 's' no plural"
+      }
+    ],
+    "tabela_visual": "| Adjective | Noun | Translation |\n|---|---|---|\n| tall | boy | menino alto |\n| old | house | casa velha |\n| fast | cars | carros rápidos |",
+    "exemplos_prc": [
+      {
+        "oracao": "She is a smart student.",
+        "pergunta": "Onde o adjetivo 'smart' se encontra?",
+        "resposta": "Antes do substantivo 'student'.",
+        "conclusao": "Adjetivo sempre antes do substantivo que qualifica."
+      }
+    ],
+    "armadilhas": [
+      {
+        "errado": "The car red is fast.",
+        "certo": "The red car is fast.",
+        "explicacao": "A ordem correta é Adjetivo + Substantivo."
+      },
+      {
+        "errado": "I have two blues shirts.",
+        "certo": "I have two blue shirts.",
+        "explicacao": "Adjetivos em inglês NUNCA vão para o plural, apenas o substantivo (shirts)."
+      }
+    ],
+    "coda": "Lembre-se: no inglês a qualidade chega primeiro e nunca vai pro plural!",
+    "exercicios": [
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual é a tradução correta para 'um cachorro grande'?",
+        "opcoes": [
+          "a dog big",
+          "a big dog",
+          "big a dog",
+          "a big dogs"
+        ],
+        "resposta": 1,
+        "explicacao": "O adjetivo ('big') vem antes do substantivo ('dog')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Traduza as palavras em ordem correta: (book / good / a) -> 'a ___ ___'",
+        "resposta": "good book",
+        "explicacao": "O adjetivo 'good' vem antes de 'book'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Qual frase está correta em relação ao plural?",
+        "opcoes": [
+          "beautifuls girls",
+          "beautiful girls",
+          "beautifuls girl",
+          "girls beautiful"
+        ],
+        "resposta": 1,
+        "explicacao": "Adjetivos ('beautiful') não levam 's', só os substantivos ('girls')."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete com a ordem correta para 'casas velhas': '___ houses'",
+        "resposta": "old",
+        "explicacao": "O adjetivo 'old' deve vir primeiro, e sem 's'."
+      },
+      {
+        "tipo": "escolha",
+        "pergunta": "Como dizemos 'um dia quente'?",
+        "opcoes": [
+          "a hot day",
+          "a day hot",
+          "hot a day",
+          "day hot"
+        ],
+        "resposta": 0,
+        "explicacao": "Artigo + Adjetivo + Substantivo = a hot day."
+      },
+      {
+        "tipo": "revelar",
+        "pergunta": "Complete a frase: 'It is an ___ (interessante) movie.'",
+        "resposta": "interesting",
+        "explicacao": "Adjetivo vem antes do substantivo."
+      }
+    ]
+  }
+]
