@@ -600,15 +600,17 @@ const Grammatica = {
       .replace(/\*([^*]+)\*/g, '<em>$1</em>');
 
     // 2. Linhas pipe → <tr> (separadores |---|---| viram vazio)
-    texto = texto.replace(/^(\|.+\|)$/gm, (row) => {
+    let isFirstRow = true;
+    texto = texto.replace(/^\s*(\|.+\|)\s*$/gm, (match, row) => {
       const clean = row.replace(/[\|\s\-:]/g, '');
       if (!clean) return '';
-      const cells = row.split('|').filter((_, i, a) => i > 0 && i < a.length - 1);
+      const cells = row.split('|').map(c => c.trim()).filter((_, i, a) => i > 0 && i < a.length - 1);
       if (cells.some(c => /^[\s\-:]+$/.test(c))) return '';
-      return '<tr>' + cells.map((c, i) => {
-        const tag = i === 0 ? 'th' : 'td';
-        return `<${tag}>${c.trim()}</${tag}>`;
-      }).join('') + '</tr>';
+      
+      const tag = isFirstRow ? 'th' : 'td';
+      isFirstRow = false; // Após a primeira linha com conteúdo, as demais são td
+      
+      return '<tr>' + cells.map(c => `<${tag}>${c}</${tag}>`).join('') + '</tr>';
     });
 
     // 3. Agrupa <tr> consecutivos em <table class="gram-table">
