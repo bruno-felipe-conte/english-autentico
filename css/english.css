@@ -601,3 +601,197 @@ body.dark-mode .badge-a3 { background: rgba(26,54,93,.35); }
     display: none;
   }
 }
+
+/* ============================================================ */
+/* DIALOGHI - CHAT UI */
+/* ============================================================ */
+.dialogo-conversa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: var(--cor-papel, var(--cor-marmore-escuro));
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.dialogo-turno {
+  display: flex;
+  width: 100%;
+}
+
+.dialogo-turno.personaggio {
+  justify-content: flex-start;
+}
+
+.dialogo-turno.utente {
+  justify-content: flex-end;
+}
+
+.dialogo-bubble {
+  max-width: 75%;
+  padding: 1.2rem;
+  border-radius: 16px;
+  position: relative;
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Bolha do Personagem (Esquerda - Bege escuro/Azul claro) */
+.dialogo-turno.personaggio .dialogo-bubble {
+  background: var(--cor-pergaminho); 
+  color: var(--cor-veneziano-escuro);
+  border: 1px solid #d0e3ec;
+  border-bottom-left-radius: 4px;
+}
+
+/* Bolha do Usuário 'You' (Direita - Azul Royal) */
+.dialogo-turno.utente .dialogo-bubble {
+  background: var(--cor-veneziano-escuro); 
+  color: #ffffff;
+  border: 1px solid var(--cor-toscano);
+  border-bottom-right-radius: 4px;
+}
+
+/* Dark Mode Adaptações */
+body.dark-mode .dialogo-conversa {
+  background: var(--dark-marmore-escuro);
+}
+body.dark-mode .dialogo-turno.personaggio .dialogo-bubble {
+  background: var(--dark-marmore);
+  color: #eee;
+  border-color: #333;
+}
+body.dark-mode .dialogo-turno.utente .dialogo-bubble {
+  background: var(--dark-veneziano-escuro);
+  color: #fff;
+  border-color: #4D8FD9;
+}
+
+.dialogo-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.dialogo-turno.personaggio .dialogo-nome {
+  color: var(--cor-pietra);
+}
+
+.dialogo-turno.utente .dialogo-nome {
+  text-align: right;
+  color: #cce0ff;
+}
+
+.dialogo-traducao {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  margin-top: 0.6rem;
+  font-style: italic;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 0.4rem;
+  opacity: 0.85;
+}
+
+.dialogo-turno.personaggio .dialogo-traducao {
+  border-top-color: rgba(0,0,0,0.1);
+  color: var(--cor-pietra);
+}
+
+.dialogo-turno.utente .dialogo-traducao {
+  border-top-color: rgba(255,255,255,0.2);
+  color: #cce0ff;
+}
+
+.dialogo-audio-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.1s;
+  vertical-align: middle;
+  padding: 0 0.4rem;
+}
+
+.dialogo-turno.personaggio .dialogo-audio-btn {
+  color: #457B9D;
+}
+
+.dialogo-turno.utente .dialogo-audio-btn {
+  color: #fff;
+}
+
+.dialogo-audio-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.dialogo-pratica-frase {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--cor-veneziano-escuro);
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.dialogo-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dialogo-opcao {
+  padding: 0.8rem 1rem;
+  background: white;
+  border: 2px solid var(--cor-inchiostro-claro);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+body.dark-mode .dialogo-opcao {
+  background: var(--dark-marmore);
+  border-color: #333;
+}
+
+.dialogo-opcao:hover:not([disabled]) {
+  border-color: var(--cor-veneziano-escuro);
+  background: var(--cor-pergaminho);
+}
+body.dark-mode .dialogo-opcao:hover:not([disabled]) {
+  background: var(--dark-marmore-escuro);
+}
+
+.dialogo-opcao.correta {
+  border-color: var(--cor-oliva);
+  background: #E8F5E9;
+  color: #1a7d42;
+  font-weight: 600;
+}
+body.dark-mode .dialogo-opcao.correta {
+  background: #1e3a24;
+  color: #a5d6a7;
+}
+
+.dialogo-opcao.errada {
+  border-color: #C0392B;
+  background: #FDEDEC;
+  color: #922b21;
+}
+body.dark-mode .dialogo-opcao.errada {
+  background: #3a1e1e;
+  color: #ef9a9a;
+}
