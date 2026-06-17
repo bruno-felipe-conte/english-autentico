@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'english-v1001';
+const CACHE = 'english-v1012';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -19,7 +19,8 @@ const STATIC = [
   './js/conquistas.js?v=1001',
   './js/core.js?v=1001',
   './js/dialoghi.js?v=1001',
-  './js/canzoni.js?v=1001',
+  './js/audio-store.js?v=1006',
+  './js/canzoni.js?v=1012',
   './js/imitazione.js?v=1001',
   './js/flashcards.js?v=1001',
   './js/grammar.js?v=1001',
@@ -100,7 +101,7 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
 
   // 2. /data/*.json — network-first (recebe atualizações de conteúdo)
-  //    Se offline, entrega do cache
+  //    Se offline, entrega do cache. Se não tiver no cache, entrega fallback estruturado.
   if (url.pathname.includes('/data/')) {
     event.respondWith(
       fetch(req)
@@ -109,7 +110,22 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE).then(c => c.put(req, clone));
           return res;
         })
-        .catch(() => caches.match(req))
+        .catch(() => caches.match(req).then(cached => {
+          if (cached) return cached;
+          // Fallback estruturado para prevenir WSOD
+          const fallbackData = { 
+            palavras: [], 
+            storie: [], 
+            dialogi: [], 
+            canzoni: [], 
+            grammar: [], 
+            quizzes: [], 
+            imitazioni: [] 
+          };
+          return new Response(JSON.stringify(fallbackData), {
+            headers: { 'Content-Type': 'application/json' }
+          });
+        }))
     );
     return;
   }

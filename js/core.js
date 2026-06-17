@@ -434,7 +434,11 @@ const App = {
   salvarProgresso() {
     try {
       localStorage.setItem('en_progresso', JSON.stringify(this.estado.progresso));
-    } catch (e) { /* ignore */ }
+    } catch (e) {
+      if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+        alert('Storage Limit Reached! The app cannot save your progress. Please clear some space in your browser data or delete unused flashcards.');
+      }
+    }
   },
 
   carregarFlashcards() {
@@ -448,7 +452,16 @@ const App = {
   salvarFlashcards() {
     try {
       localStorage.setItem('en_flashcards', JSON.stringify(this.estado.flashcardData));
-    } catch (e) { /* ignore */ }
+    } catch (e) {
+      if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+        alert('Storage Limit Reached! Cannot save new flashcards. Running auto-cleanup of oldest inactive cards...');
+        // Auto-cleanup simple GC: remove 20 oldest cards if possible
+        if (this.estado.flashcardData && this.estado.flashcardData.cards) {
+            this.estado.flashcardData.cards = this.estado.flashcardData.cards.slice(20);
+            try { localStorage.setItem('en_flashcards', JSON.stringify(this.estado.flashcardData)); } catch(_) {}
+        }
+      }
+    }
   },
 
   // ── Temple grid rendering ──────────────────────────────────
@@ -474,7 +487,7 @@ const App = {
     // Check localStorage cache
     let cached = null;
     try { cached = JSON.parse(localStorage.getItem('en_palavra_dia') || 'null'); } catch (_) {}
-    const todayStr = now.toISOString().slice(0, 10);
+    const todayStr = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
     let palavra;
     if (cached && cached.data === todayStr) {
       palavra = vocab.find(p => p.id === cached.id) || vocab[dayN % vocab.length];
@@ -494,7 +507,7 @@ const App = {
 
     container.innerHTML = `
       <div class="pdd-header">
-        <span class="pdd-label">🇺🇸 Word of the Day</span>
+        <span class="pdd-label">${I18n.t('pdd_titulo_label')}</span>
         <span class="pdd-data">${data}</span>
       </div>
       <div class="pdd-body">
@@ -505,8 +518,8 @@ const App = {
         ${palavra.example || palavra.exemplo ? `<div class="pdd-exemplo">"${palavra.example || palavra.exemplo}"${palavra.exemplo_pt ? ` — ${palavra.exemplo_pt}` : ''}</div>` : ''}
       </div>
       <div class="pdd-acoes">
-        <button class="pdd-btn" onclick="App.pronunciar('${(palavra.word || palavra.italiano || '').replace(/'/g, "\\'")}')">🔊 Listen</button>
-        <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Study</button>
+        <button class="pdd-btn" onclick="App.pronunciar('${(palavra.word || palavra.italiano || '').replace(/'/g, "\\'")}')">${I18n.t('pdd_ouvir')}</button>
+        <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">${I18n.t('pdd_estudar')}</button>
         <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
           ${favEmoji} Fav
         </button>
@@ -859,7 +872,8 @@ const App = {
     }
 
     // Daily goal bar — reset xp_hoje when the date rolls over
-    const hoje = new Date().toISOString().slice(0, 10);
+    const now = new Date();
+    const hoje = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
     if (p.data_xp_hoje !== hoje) {
       p.xp_hoje = 0;
       p.data_xp_hoje = hoje;
@@ -1023,7 +1037,7 @@ const App = {
   _pronunciarRV(texto) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 0.9;
+      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 1.0;
       responsiveVoice.speak(texto, 'US English Female', { rate: speed, pitch: 1 });
     }
   },
@@ -1040,7 +1054,9 @@ const App = {
     const tentarFalar = () => {
       const voz = this._getVozAmericana();
 
-      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 0.85;
+      let speed = parseFloat(localStorage.getItem('en_audio_speed')) || 1.0;
+      speed = Math.max(0.1, Math.min(2.0, speed)); // Previne crashes de bounds out-of-range no WebKit
+      
       const u = new SpeechSynthesisUtterance(texto);
       u.lang  = 'en-US';
       u.rate  = speed;
@@ -1050,6 +1066,7 @@ const App = {
       // (a maioria dos browsers ainda sintetiza com o melhor disponível)
 
       u.onerror = (e) => {
+        speechSynthesis.cancel(); // Previne travamentos irreversíveis do buffer no iOS
         // Voz EN indisponível no browser → ResponsiveVoice
         if (['language-unavailable','synthesis-failed','not-allowed'].includes(e.error)) {
           this._pronunciarRV(texto);
@@ -1074,7 +1091,34 @@ const App = {
         tentarFalar();
       };
     }
-  }
+  },
+
+  toggleAudioSpeed() {
+    const SPEEDS = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5];
+    const current = parseFloat(localStorage.getItem('en_audio_speed') || '1.0');
+    let idx = SPEEDS.indexOf(current);
+    if (idx === -1) idx = SPEEDS.indexOf(1.0);
+    const next = SPEEDS[(idx + 1) % SPEEDS.length];
+    try {
+      localStorage.setItem('en_audio_speed', next);
+    } catch (e) {
+      console.warn("Could not save audio speed to localStorage due to quota limits.");
+    }
+    this.atualizarAudioSpeedUI();
+  },
+
+  atualizarAudioSpeedUI() {
+    const btn = document.getElementById('btn-audio-speed');
+    if (!btn) return;
+    const rate = parseFloat(localStorage.getItem('en_audio_speed') || '1.0');
+    let label = rate % 1 === 0 ? rate.toFixed(0) : rate.toString().replace(/^0\./, '.');
+    btn.textContent = label + 'x';
+    // Sync profile slider if visible
+    const slider = document.getElementById('audio-speed-slider');
+    const display = document.getElementById('audio-speed-val');
+    if (slider) slider.value = rate;
+    if (display) display.textContent = rate + 'x';
+  },
 };
 
 // ── Bootstrap ─────────────────────────────────────────────────

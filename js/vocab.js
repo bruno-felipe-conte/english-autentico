@@ -19,7 +19,7 @@ const Vocab = {
 
     const todos = App.estado.vocabCache;
     if (!todos || todos.length === 0) {
-      listEl.innerHTML = '<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">Nenhuma palavra carregada ainda.</p>';
+      listEl.innerHTML = `<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma_palavra')}</p>`;
       if (statsEl) statsEl.textContent = '';
       return;
     }
@@ -110,7 +110,7 @@ const Vocab = {
       // Botão "estudar este filtro" só aparece quando há filtro ativo e resulados
       const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos;
       const btnEstudar = (temFiltro && filtrados.length > 0)
-        ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#9B2335;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">🃏 ${I18n.idioma==='it'?'Studia questo filtro':'Estudar este filtro'}</button>`
+        ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#9B2335;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">${I18n.t('vocab_estudar_filtro')}</button>`
         : '';
       statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}`;
     }
@@ -243,7 +243,7 @@ const Vocab = {
     if (!sel) return;
 
     // Keep "Tutti i templi" option
-    sel.innerHTML = '<option value="">All temples</option>';
+    sel.innerHTML = `<option value="">${I18n.t('vocab_todos_templos')}</option>`;
 
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
     desbloqueados.forEach(num => {
@@ -261,7 +261,7 @@ const Vocab = {
     const sel = document.getElementById('vocab-categoria-filtro');
     if (!sel) return;
 
-    sel.innerHTML = '<option value="">All categories</option>';
+    sel.innerHTML = `<option value="">${I18n.t('vocab_todas_cats')}</option>`;
 
     // Collect unique categories from vocab cache
     const categorias = new Set();

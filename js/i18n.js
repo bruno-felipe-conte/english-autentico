@@ -3,7 +3,7 @@
 // ============================================================
 
 const I18n = {
-  idioma: 'pt',
+  idioma: 'en',
   
   dict: {
     // ── Abas de Navegação (Bottom / Mobile) ──
@@ -224,7 +224,7 @@ const I18n = {
     'imit_erro_ouvir': { pt: 'Error listening. Try again.', en: 'Error listening. Try again.' },
 
     // ── Reading — interactive reading ──
-    'storie_titulo_secao':   { pt: 'English Reading', en: 'English Reading' },
+    'storie_titulo_secao':   { pt: 'Leitura em Inglês', en: 'English Reading' },
     'storie_escolha':        { pt: 'Choose a story to start reading', en: 'Choose a story to start reading' },
     'storie_btn_traduzir':   { pt: '👁️ Hide translation', en: '👁️ Hide translation' },
     'storie_btn_mostrar':    { pt: '👁️ Show translation', en: '👁️ Show translation' },
@@ -384,8 +384,8 @@ const I18n = {
     'ob_slide3_li4': { pt: 'Practise what you learned by answering the <strong>QUIZZES</strong>!', en: 'Practise what you learned by answering the <strong>QUIZZES</strong>!' },
 
     // ── Dialogues / Songs — create buttons ──
-    'dial_btn_adicionar': { pt: '➕ Add Dialogue', en: '➕ Add Dialogue' },
-    'can_btn_adicionar':  { pt: '➕ Add Song',  en: '➕ Add Song' },
+    'dial_btn_adicionar': { pt: '➕ Adicionar Diálogo', en: '➕ Add Dialogue' },
+    'can_btn_adicionar':  { pt: '➕ Adicionar Música',  en: '➕ Add Song' },
 
     // ── Listen & Repeat — listen button ──
     'imit_btn_ouvir_exemplo': { pt: '🔊 Listen to Example', en: '🔊 Listen to Example' },
@@ -408,11 +408,98 @@ const I18n = {
     'tour_vocabolario_title': { pt: '📖 Vocabulary', en: '📖 Vocabulary' },
     'tour_vocabolario_desc': { pt: 'Your master glossary. Search for any word learned so far.', en: 'Your master glossary. Search for any word learned so far.' },
     'tour_config_title': { pt: '⚙️ Settings & Profile', en: '⚙️ Settings & Profile' },
-    'tour_config_desc': { pt: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.', en: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.' }
+    'tour_config_desc': { pt: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.', en: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.' },
+
+    // ── Profile — stats labels ──
+    'prof_stats_gerais':     { pt: '📊 Estatísticas Gerais',       en: '📊 General Stats' },
+    'prof_nivel_atual':      { pt: 'Nível Atual',                   en: 'Current Level' },
+    'prof_xp_total':         { pt: 'XP Total',                     en: 'Total XP' },
+    'prof_sequencia_atual':  { pt: 'Sequência Atual',               en: 'Current Streak' },
+    'prof_fc_revisados':     { pt: 'Flashcards Revisados',          en: 'Flashcards Reviewed' },
+    'prof_palavras_dom':     { pt: 'Palavras Dominadas',            en: 'Words Mastered' },
+    'prof_palavras_dif':     { pt: 'Palavras Difíceis',             en: 'Difficult Words' },
+    'prof_tempo_estimado':   { pt: 'Tempo Estimado',                en: 'Estimated Time' },
+    'prof_templos_desbloq':  { pt: 'Templos Desbloqueados',         en: 'Temples Unlocked' },
+    'prof_precisao_quiz':    { pt: 'Precisão no Quiz',              en: 'Quiz Accuracy' },
+    'prof_esta_semana':      { pt: '📅 Esta Semana',                en: '📅 This Week' },
+    'prof_sessoes':          { pt: 'Sessões totais',                en: 'Total sessions' },
+    'prof_cards_estudados':  { pt: 'Cards estudados',               en: 'Cards studied' },
+    'prof_xp_ganho':         { pt: 'XP ganho',                     en: 'XP earned' },
+    'prof_dias_ativos':      { pt: 'Dias ativos',                   en: 'Active days' },
+    'prof_categorias':       { pt: '📚 Categorias Mais Estudadas',  en: '📚 Top Categories' },
+    'prof_conquistas':       { pt: '🏆 Minhas Conquistas',          en: '🏆 My Achievements' },
+    'prof_reiniciar_tour':   { pt: '🗺️ Reiniciar Tour',             en: '🗺️ Restart Introduction Tour' },
+    'prof_export_content':   { pt: '⬇️ Exportar Conteúdo',         en: '⬇️ Export Content' },
+    'prof_import_content':   { pt: '⬆️ Importar Conteúdo',         en: '⬆️ Import Content' },
+
+    // ── Songs — additional UI ──
+    'can_busca_placeholder': { pt: '🔍 Título ou artista...',       en: '🔍 Title or artist...' },
+    'can_sem_resultados':    { pt: 'Sem resultados.',                en: 'No results.' },
+    'can_sem_musicas':       { pt: 'Nenhuma música ainda.',          en: 'No songs yet.' },
+    'can_editar_musica':     { pt: 'Editar Música',                  en: 'Edit Song' },
+    'can_nova_musica':       { pt: 'Nova Música',                    en: 'New Song' },
+    'can_escolha_palavra':   { pt: 'Escolha a palavra',              en: 'Choose the word' },
+    'can_revelar':           { pt: 'Clique para revelar 👆',         en: 'Click to reveal 👆' },
+    'can_ocultar_confirm':   { pt: 'Ocultar "{t}"?\nSome da lista mas pode ser restaurada.', en: 'Hide "{t}"?\nIt disappears from the list but can be restored later.' },
+    'can_oculta_notif':      { pt: 'Música oculta. Use "Restaurar" para trazer de volta.', en: 'Song hidden. Use "Restore" to bring it back.' },
+    'can_restauradas_notif': { pt: 'Músicas nativas restauradas!',   en: 'Built-in songs restored!' },
+    'can_restaurar':         { pt: '↩ Restaurar',                    en: '↩ Restore' },
+
+    // ── Grammar — navigation & exercises ──
+    'gram_todos_modulos':    { pt: '‹ Todos os módulos',             en: '‹ All modules' },
+    'gram_confirmar_sair':   { pt: 'Tem certeza? O progresso nesta lição será perdido.', en: 'Are you sure? Progress on this lesson will be lost.' },
+    'gram_exercicio_de':     { pt: 'Exercício {a} / {b}',            en: 'Exercise {a} / {b}' },
+    'gram_verificar':        { pt: '✔ Verificar',                    en: '✔ Verify' },
+    'gram_revelar_resp':     { pt: 'Revelar resposta',               en: 'Reveal answer' },
+    'gram_ocultar':          { pt: 'Ocultar',                        en: 'Hide' },
+    'gram_clique_revelar':   { pt: '👆 Clique nas palavras para revelar, ou clique em "Revelar resposta"', en: '👆 Click on the words to reveal, or click "Reveal answer"' },
+    'gram_continue':         { pt: 'Continue estudando — você consegue!', en: 'Keep studying — you can do it!' },
+    'gram_perfeito':         { pt: 'Perfeito! Sem erros!',            en: 'Perfect! No mistakes!' },
+    'gram_otimo':            { pt: 'Ótimo trabalho! Quase perfeito!', en: 'Great work! Almost perfect!' },
+    'gram_bom_resultado':    { pt: 'Bom! Continue assim!',            en: 'Good! Keep it up!' },
+    'gram_proximo_cap':      { pt: 'Próximo capítulo →',              en: 'Next chapter →' },
+    'gram_capitulo_completo':{ pt: 'Capítulo Concluído!',             en: 'Chapter Complete!' },
+    'gram_pct_correto':      { pt: '{a}% correto',                    en: '{a}% correct' },
+    'gram_bonus_xp':         { pt: '+{a} XP bônus 🏆',               en: '+{a} XP bonus 🏆' },
+    'gram_badge_reveal':     { pt: '👁️ Revelar',                     en: '👁️ Reveal' },
+    'gram_badge_type':       { pt: '⌨️ Digitar',                     en: '⌨️ Type' },
+    'gram_badge_choose':     { pt: '🔘 Escolher',                    en: '🔘 Choose' },
+
+    // ── Vocabulary — additional UI ──
+    'vocab_todos_templos':   { pt: 'Todos os templos',               en: 'All temples' },
+    'vocab_todas_cats':      { pt: 'Todas as categorias',            en: 'All categories' },
+    'vocab_nenhuma_palavra': { pt: 'Nenhuma palavra carregada ainda.', en: 'No words loaded yet.' },
+    'vocab_estudar_filtro':  { pt: '🃏 Estudar este filtro',         en: '🃏 Study this filter' },
+
+    // ── Quiz — result messages ──
+    'quiz_perfeito':         { pt: '🏆 Perfeito! Você domina o inglês!', en: '🏆 Perfect! You are a master of English!' },
+    'quiz_muito_bom':        { pt: '👏 Muito bom! Continue assim!',  en: '👏 Very good! Keep it up!' },
+    'quiz_bom_resultado':    { pt: '📚 Bom! Mas pode melhorar!',     en: '📚 Good! But you can do better!' },
+    'quiz_nao_desista':      { pt: '💪 Não desista! Continue estudando!', en: '💪 Don\'t give up! Keep studying!' },
+
+    // ── Quiz / Flashcard — untranslated UI ──
+    'quiz_titulo':           { pt: 'Teste seu Conhecimento',    en: 'Test your Knowledge' },
+    'fc_estudando':          { pt: 'Estudando:',                en: 'Studying:' },
+    'fc_selecionar_templo':  { pt: '-- Selecione um templo --', en: '-- Select a temple --' },
+    'fc_revisao_geral':      { pt: 'Revisão Geral',             en: 'General Review' },
+    'quiz_nivel_requerido':  { pt: 'Nível {n}',                 en: 'Level {n}' },
+
+    // ── Home / Temples section ──
+    'hm_sua_atividade':      { pt: '🔥 Sua Atividade',              en: '🔥 Your Activity' },
+    'pdd_titulo_label':      { pt: '🇺🇸 Palavra do Dia',            en: '🇺🇸 Word of the Day' },
+    'pdd_ouvir':             { pt: '🔊 Ouvir',                      en: '🔊 Listen' },
+    'pdd_estudar':           { pt: '📚 Estudar',                    en: '📚 Study' },
+    'sec_canzoni_titulo':    { pt: 'Modo Canção',                    en: 'Song Mode' },
+    'sec_imitazione_titulo': { pt: 'Ouvir e Repetir',               en: 'Listen & Repeat' },
+    'btn_add_dialogo':       { pt: '➕ Adicionar Diálogo',           en: '➕ Add Dialogue' },
+    'btn_add_song':          { pt: '➕ Adicionar Música',            en: '➕ Add Song' },
+    'btn_via_ia':            { pt: '🤖 via IA',                     en: '🤖 via IA' },
+    'filtro_todos':          { pt: 'Todos',                          en: 'All' },
+    'filtro_nativo':         { pt: '📚 Nativas',                    en: '📚 Built-in' }
   },
 
   inicializar() {
-    this.idioma = localStorage.getItem('en_idioma') || 'pt';
+    this.idioma = localStorage.getItem('en_idioma') || 'en';
     this.traduzirDOM();
   },
 

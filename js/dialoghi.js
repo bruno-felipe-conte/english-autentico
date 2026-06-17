@@ -68,12 +68,12 @@ const Dialoghi = {
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
         <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
-        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">🤖 via IA</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">${I18n.t('btn_via_ia')}</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
-        ${_origemPill('','All',todos.length)}
+        ${_origemPill('',I18n.t('filtro_todos'),todos.length)}
         ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
-        ${nNativo  ? _origemPill('nativo','📚 Built-in',nNativo) : ''}
+        ${nNativo  ? _origemPill('nativo',I18n.t('filtro_nativo'),nNativo) : ''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
           <option value="">🎯 Level</option>

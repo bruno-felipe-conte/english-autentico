@@ -261,19 +261,29 @@ VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "res
     return words.sort(() => 0.5 - Math.random()).slice(0, 7);
   },
 
+  _obterTopicosGramaticaDificeis() {
+    if (typeof Grammatica === 'undefined' || typeof Grammatica.obterTopicosDificeis !== 'function') return [];
+    return Grammatica.obterTopicosDificeis(3);
+  },
+
   abrir(tipo) {
     this.tipoAtual = tipo;
     const modal = document.getElementById('ia-import-modal');
     if (!modal) return;
     document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Add via AI';
-    
+
     let basePrompt = this.prompts[tipo] || '';
-    
-    // Injetar palavras difíceis dinamicamente
-    if (tipo === 'dialogo' || tipo === 'storia' || tipo === 'imitazione') {
+
+    // Injetar palavras difíceis e pontos de gramática difíceis dinamicamente
+    if (tipo === 'dialogo' || tipo === 'storia' || tipo === 'imitazione' || tipo === 'canzone') {
       const dificeis = this._obterPalavrasDificeis();
       if (dificeis.length > 0) {
         basePrompt += `\n\n🎯 MANDATORY VOCABULARY CHALLENGE:\nYou MUST organically include the following words in the English text (they are words the student is currently struggling with):\n[ ${dificeis.join(', ')} ]`;
+      }
+
+      const topicosGram = this._obterTopicosGramaticaDificeis();
+      if (topicosGram.length > 0) {
+        basePrompt += `\n\n📚 GRAMMAR FOCUS:\nNaturally incorporate sentences using these grammar points the student is currently struggling with:\n[ ${topicosGram.join(', ')} ]`;
       }
     }
 

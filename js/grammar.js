@@ -43,7 +43,7 @@ const Grammatica = {
   voltarSeletor() {
     const total = this.unidadeAtual?.exercicios?.length || 0;
     if (this.unidadeAtual && this.exIndex > 0 && this.exIndex < total) {
-      if (!confirm('Are you sure? Progress on this lesson will be lost.')) return;
+      if (!confirm(I18n.t('gram_confirmar_sair'))) return;
     }
     this.renderizarSeletor();
   },
@@ -234,7 +234,7 @@ const Grammatica = {
 
     // Nav
     html += '<div class="gram-lesson-nav">';
-    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">‹ All modules</button>`;
+    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">${I18n.t('gram_todos_modulos')}</button>`;
     html += `<div class="gram-lesson-breadcrumb"><span>${mod.id}</span> › <span>${u.num}</span></div>`;
     html += '</div>';
 
@@ -278,10 +278,10 @@ const Grammatica = {
     let html = '<div class="gram-card">';
 
     // Progresso + tipo badge na mesma linha
-    const tipoLabel = ex.tipo === 'revelar' ? '👁️ Reveal' : ex.tipo === 'digitar' ? '⌨️ Type' : '🔘 Choose';
+    const tipoLabel = ex.tipo === 'revelar' ? I18n.t('gram_badge_reveal') : ex.tipo === 'digitar' ? I18n.t('gram_badge_type') : I18n.t('gram_badge_choose');
     const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : ex.tipo === 'digitar' ? 'gram-ex-tipo-digitar' : 'gram-ex-tipo-escolha';
     html += '<div class="gram-ex-header">';
-    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Exercise ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
+    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">${I18n.t('gram_exercicio_de').replace('{a}', this.exIndex + 1).replace('{b}', total)}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
     html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
     html += '</div>';
 
@@ -341,7 +341,7 @@ const Grammatica = {
                  type="text" placeholder="${I18n.t('gram_placeholder_resposta')}"
                  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                  onkeydown="if(event.key==='Enter')Grammatica.responderDigitar()">
-          <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">✔ Verificar</button>
+          <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">${I18n.t('gram_verificar')}</button>
         </div>
       </div>`;
   },
@@ -356,12 +356,11 @@ const Grammatica = {
     }).join('');
 
     let html = '<div class="gram-revelar-area">';
-    const hint = '👆 Click on the words to reveal, or click "Reveal answer"';
-    html += `<div class="gram-revelar-hint">${hint}</div>`;
+    html += `<div class="gram-revelar-hint">${I18n.t('gram_clique_revelar')}</div>`;
     html += `<div class="gram-risposta-container" id="gram-risposta">${spans}</div>`;
     html += '<div class="gram-revelar-actions">';
-    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Reveal answer</button>';
-    html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Hide</button>';
+    html += `<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">${I18n.t('gram_revelar_resp')}</button>`;
+    html += `<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">${I18n.t('gram_ocultar')}</button>`;
     html += '</div>';
     html += '</div>';
     return html;
@@ -449,6 +448,7 @@ const Grammatica = {
     if (actions) actions.style.display = 'flex';
 
     if (correto) { this.acertos++; App.ganharXP(8); }
+    this._registrarResultadoExercicio(correto);
   },
 
   // ─────────────────────────────────────────────────────────
@@ -482,6 +482,37 @@ const Grammatica = {
     if (actions) actions.style.display = 'flex';
 
     if (correto) { this.acertos++; App.ganharXP(8); }
+    this._registrarResultadoExercicio(correto);
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // Rastreio de erros por lição (para alimentar prompts de IA)
+  // ─────────────────────────────────────────────────────────
+  _registrarResultadoExercicio(correto) {
+    if (!this.unidadeAtual || !this.unidadeAtual.id) return;
+    let dados;
+    try { dados = JSON.parse(localStorage.getItem('en_gram_erros') || '{}'); }
+    catch (e) { dados = {}; }
+
+    const id = this.unidadeAtual.id;
+    const atual = dados[id] || { titulo: this.unidadeAtual.titulo, erros: 0 };
+    atual.titulo = this.unidadeAtual.titulo;
+    atual.erros = correto ? Math.max(0, (atual.erros || 0) - 1) : (atual.erros || 0) + 1;
+    dados[id] = atual;
+
+    try { localStorage.setItem('en_gram_erros', JSON.stringify(dados)); } catch (e) {}
+  },
+
+  obterTopicosDificeis(n = 3) {
+    let dados;
+    try { dados = JSON.parse(localStorage.getItem('en_gram_erros') || '{}'); }
+    catch (e) { dados = {}; }
+
+    return Object.values(dados)
+      .filter(d => (d.erros || 0) > 0)
+      .sort((a, b) => b.erros - a.erros)
+      .slice(0, n)
+      .map(d => d.titulo);
   },
 
   // ─────────────────────────────────────────────────────────
@@ -537,10 +568,10 @@ const Grammatica = {
 
     if (typeof Calor !== 'undefined') Calor.registrar(total);
 
-    let emoji = '📚', msg = 'Keep studying — you can do it!';
-    if      (pct === 100) { emoji = '🌟'; msg = 'Perfect! No mistakes!'; }
-    else if (pct >= 80)   { emoji = '🎉'; msg = 'Great work! Almost perfect!'; }
-    else if (pct >= 60)   { emoji = '💪'; msg = 'Good! Keep it up!'; }
+    let emoji = '📚', msg = I18n.t('gram_continue');
+    if      (pct === 100) { emoji = '🌟'; msg = I18n.t('gram_perfeito'); }
+    else if (pct >= 80)   { emoji = '🎉'; msg = I18n.t('gram_otimo'); }
+    else if (pct >= 60)   { emoji = '💪'; msg = I18n.t('gram_bom_resultado'); }
 
     // Próxima lição
     const unids = (this.moduloAtual.lezioni || []);
@@ -548,21 +579,21 @@ const Grammatica = {
     let proxBtn = '';
     if (idx >= 0 && idx < unids.length - 1) {
       const prox = unids[idx + 1];
-      proxBtn = `<button class="gram-btn-next" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${prox.id}')">Next chapter →</button>`;
+      proxBtn = `<button class="gram-btn-next" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${prox.id}')">${I18n.t('gram_proximo_cap')}</button>`;
     }
 
     return `
       <div class="gram-card gram-resultado">
         <div class="gram-res-emoji">${emoji}</div>
-        <div class="gram-res-title">Chapter Complete!</div>
+        <div class="gram-res-title">${I18n.t('gram_capitulo_completo')}</div>
         <div class="gram-res-score">${acertos}<span>/${total}</span></div>
-        <div class="gram-res-pct">${pct}% correct</div>
-        ${!jaFeita ? `<div class="gram-res-xp">+${bonus} XP bonus 🏆</div>` : ''}
+        <div class="gram-res-pct">${I18n.t('gram_pct_correto').replace('{a}', pct)}</div>
+        ${!jaFeita ? `<div class="gram-res-xp">${I18n.t('gram_bonus_xp').replace('{a}', bonus)}</div>` : ''}
         <div class="gram-res-msg">${msg}</div>
         <div class="gram-res-actions">
           <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Retry</button>
           ${proxBtn}
-          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">‹ All modules</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">${I18n.t('gram_todos_modulos')}</button>
         </div>
       </div>`;
   },

@@ -75,14 +75,8 @@ body {
   font-family: var(--fonte-ui);
   line-height: 1.6;
   min-height: 100vh;
-  min-height: 100dvh;   /* dynamic viewport --- no gap in PWA/mobile */
+  min-height: 100dvh;
   overflow-x: hidden;
-  
-  /* BRITISH ROYAL BLUE GRADIENT BACKGROUND */
-  background-image:
-    repeating-linear-gradient(0deg,transparent,transparent 28px,#E8F4F8 28px,#1A365D 28px,#15273A 29px),
-    repeating-linear-gradient(90deg,transparent,transparent 60px,#FFFFFF 60px,#6FB9B3 60px,#457B9D 61px);
-  
   transition: opacity 0.18s ease;
 }
 
@@ -95,25 +89,13 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
 input,textarea,select { font-family:inherit; }
 
 /* 4. LAYOUT */
-.app-container { max-width:1100px; margin:0 auto; padding:0 var(--esp-md); }
+.app-container { max-width:900px; margin:0 auto; padding:0 var(--esp-md); }
 
 .app-header {
   position:sticky; top:0; z-index:var(--z-sticky);
   background-color:var(--cor-marmore);
   box-shadow:var(--sombra-md);
-  border-bottom:3px solid var(--cor-veneziano);
   padding-top: env(safe-area-inset-top, 0px);
-}
-
-.app-header-inner {
-  display:flex; align-items:center; justify-content:space-between;
-  gap:var(--esp-md); padding:var(--esp-sm) var(--esp-md); flex-wrap:wrap;
-}
-
-.logo {
-  font-family:var(--fonte-titulo); font-size:1.35rem; font-weight:700;
-  color:var(--cor-veneziano); letter-spacing:.05em;
-  display:flex; align-items:center; gap:var(--esp-sm); white-space:nowrap;
 }
 
 /* 5. NAVIGATION TABS */
@@ -596,7 +578,7 @@ body.dark-mode .badge-a3 { background: rgba(26,54,93,.35); }
    ============================================================================= */
 
 /* Mobile: hide top nav, show bottom nav */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .nav-tabs {
     display: none;
   }
@@ -649,7 +631,7 @@ body.dark-mode .badge-a3 { background: rgba(26,54,93,.35); }
   border-bottom-left-radius: 4px;
 }
 
-/* Bolha do Usuário 'You' (Direita - Azul Royal) */
+/* Bolha do Usuï¿½rio 'You' (Direita - Azul Royal) */
 .dialogo-turno.utente .dialogo-bubble {
   background: var(--cor-veneziano-escuro); 
   color: #ffffff;
@@ -657,7 +639,7 @@ body.dark-mode .badge-a3 { background: rgba(26,54,93,.35); }
   border-bottom-right-radius: 4px;
 }
 
-/* Dark Mode Adaptações */
+/* Dark Mode Adaptaï¿½ï¿½es */
 body.dark-mode .dialogo-conversa {
   background: var(--dark-marmore-escuro);
 }

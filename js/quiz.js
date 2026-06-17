@@ -294,10 +294,10 @@ const Quiz = {
 
     // Choose message based on score
     let msg = '';
-    if (pct >= 90) msg = '🏆 Perfect! You are a master of English!';
-    else if (pct >= 70) msg = '👏 Very good! Keep it up!';
-    else if (pct >= 50) msg = '📚 Good! But you can do better!';
-    else msg = '💪 Don\'t give up! Keep studying!';
+    if (pct >= 90) msg = I18n.t('quiz_perfeito');
+    else if (pct >= 70) msg = I18n.t('quiz_muito_bom');
+    else if (pct >= 50) msg = I18n.t('quiz_bom_resultado');
+    else msg = I18n.t('quiz_nao_desista');
 
     const scoreEl = document.getElementById('resultado-score');
     const xpEl = document.getElementById('resultado-xp');
@@ -359,7 +359,7 @@ const Quiz = {
     if (Progressao.temploDesbloqueado(1)) {
       const btnMisto = document.createElement('button');
       btnMisto.className = 'quiz-templo-btn';
-      btnMisto.innerHTML = '🌍 Mixed Quiz<br><small>All temples combined</small>';
+      btnMisto.innerHTML = I18n.idioma === 'pt' ? '🌍 Quiz Misto<br><small>Todos os templos</small>' : '🌍 Mixed Quiz<br><small>All temples combined</small>';
       btnMisto.style.gridColumn = '1 / -1'; // span full width
       btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
       btnMisto.style.color = 'white';
@@ -381,7 +381,7 @@ const Quiz = {
       btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
       btn.innerHTML = desbloqueado
         ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
-        : `🔒 ${i}. ${nome}<br><small>Level ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+        : `🔒 ${i}. ${nome}<br><small>${I18n.t('quiz_nivel_requerido').replace('{n}', Progressao.TEMPLO_NIVEL[i] || i)}</small>`;
 
       if (desbloqueado) btn.onclick = () => this.iniciar(i);
       else btn.disabled = true;
@@ -464,11 +464,11 @@ const Quiz = {
       msg.textContent = I18n.t('quiz_verbi_nao_carregado');
       seletor.appendChild(msg);
     } else {
-      const tempos = ['Presente', 'Imperfetto', 'Futuro'];
+      const tempos = ['Present', 'Past Simple', 'Future'];
       tempos.forEach(tempo => {
         const btn = document.createElement('button');
         btn.className = 'quiz-templo-btn quiz-verbi-btn';
-        const emoji = tempo === 'Presente' ? '⏱️' : tempo === 'Imperfetto' ? '⏪' : '⏩';
+        const emoji = tempo === 'Present' ? '⏱️' : tempo === 'Past Simple' ? '⏪' : '⏩';
         btn.innerHTML = `${emoji} ${tempo}`;
         btn.onclick = () => this.iniciarConjugacao(tempo);
         seletor.appendChild(btn);
@@ -574,7 +574,7 @@ const Quiz = {
   _gerarConjugacao(tempo) {
     const verbos = App.estado.conjugacoesData || [];
     const perguntas = [];
-    const pronomes = ['io','tu','lui/lei','noi','voi','loro'];
+    const pronomes = ['I','you','he/she/it','we','they'];
 
     // Collect all forms for this tense (for distractors)
     const todasFormas = [];
@@ -600,7 +600,7 @@ const Quiz = {
         const erradas = pool.slice(0, 3);
         if (erradas.length < 3) return; // skip if not enough distractors
 
-        const pronomeLabel = pr === 'lui/lei' ? 'lui / lei' : pr;
+        const pronomeLabel = pr;
         perguntas.push({
           id: `conj_${v.infinitivo}_${tempo}_${pr}`,
           templo: 0,

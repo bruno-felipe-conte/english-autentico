@@ -1,0 +1,26 @@
+{
+  "name": "english-learning-app-pro",
+  "version": "1.0.0",
+  "description": "**🔗 App online:** https://bruno-felipe-conte.github.io/english-autentico/",
+  "main": "assemble.js",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruno-felipe-conte/english-autentico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bruno-felipe-conte/english-autentico/issues"
+  },
+  "homepage": "https://github.com/bruno-felipe-conte/english-autentico#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "http-server": "^14.1.1"
+  }
+}

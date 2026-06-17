@@ -66,37 +66,37 @@ const Profilo = {
 
         <!-- General stats -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📊 General Stats</div>
-          ${this._row('Current Level', `${p.nivel || 1}`)}
-          ${this._row('Total XP', `${(p.xp || 0).toLocaleString()} XP`)}
-          ${this._row('Current Streak', `${p.streak || 0} 🔥 days`)}
-          ${this._row('Flashcards Reviewed', `${totalRevisoes.toLocaleString()}`)}
-          ${this._row('Words Mastered', `${totalDominadas}`)}
-          ${this._row('Parole difficili', totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
-          ${this._row('Tempo stimato', `${tempoEstimadoMin} min`)}
-          ${this._row('Templi sbloccati', `${(p.templos_desbloqueados||[]).length} / 50`)}
-          ${this._row('Accuratezza quiz', quizAcuracia)}
+          <div class="profilo-card-titulo">${I18n.t('prof_stats_gerais')}</div>
+          ${this._row(I18n.t('prof_nivel_atual'), `${p.nivel || 1}`)}
+          ${this._row(I18n.t('prof_xp_total'), `${(p.xp || 0).toLocaleString()} XP`)}
+          ${this._row(I18n.t('prof_sequencia_atual'), `${p.streak || 0} 🔥 days`)}
+          ${this._row(I18n.t('prof_fc_revisados'), `${totalRevisoes.toLocaleString()}`)}
+          ${this._row(I18n.t('prof_palavras_dom'), `${totalDominadas}`)}
+          ${this._row(I18n.t('prof_palavras_dif'), totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
+          ${this._row(I18n.t('prof_tempo_estimado'), `${tempoEstimadoMin} min`)}
+          ${this._row(I18n.t('prof_templos_desbloq'), `${(p.templos_desbloqueados||[]).length} / 50`)}
+          ${this._row(I18n.t('prof_precisao_quiz'), quizAcuracia)}
         </div>
 
         <!-- Weekly report -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📅 Questa Settimana</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_esta_semana')}</div>
           ${this._renderGrafico(semana)}
-          ${this._row('Totale sessioni', `${semana.totalSessoes}`)}
-          ${this._row('Card studiate', `${semana.totalCards}`)}
-          ${this._row('XP guadagnato', `${semana.totalXP} XP`)}
-          ${this._row('Giorni attivi', `${semana.giorniAttivi} / 7`)}
+          ${this._row(I18n.t('prof_sessoes'), `${semana.totalSessoes}`)}
+          ${this._row(I18n.t('prof_cards_estudados'), `${semana.totalCards}`)}
+          ${this._row(I18n.t('prof_xp_ganho'), `${semana.totalXP} XP`)}
+          ${this._row(I18n.t('prof_dias_ativos'), `${semana.giorniAttivi} / 7`)}
         </div>
 
         <!-- Categories -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📚 Categorie Più Studiate</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_categorias')}</div>
           <div style="font-size:0.87rem;color:#666;line-height:1.8;">${topCats}</div>
         </div>
 
         <!-- Conquistas -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">🏆 I Miei Traguardi</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_conquistas')}</div>
           ${typeof Conquistas !== 'undefined' ? Conquistas.renderizarPainelCompleto() : ''}
         </div>
 
@@ -129,7 +129,7 @@ const Profilo = {
           <!-- Tour -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
             <button class="btn-secondario" style="width:100%;font-size:0.85rem" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),200)">
-              🗺️ Ver tour introdutório novamente
+              ${I18n.t('prof_reiniciar_tour')}
             </button>
           </div>
           <!-- Conteúdo Criado por Mim -->
@@ -138,14 +138,14 @@ const Profilo = {
             <div style="font-size:0.75rem;color:#888;margin-bottom:0.5rem">
               ${I18n.idioma==='it'
                 ? 'Canzoni, dialoghi, storie, imitazioni e vocabolario aggiunti manualmente o via IA.'
-                : 'Músicas, diálogos, histórias, imitações e vocabulário adicionados manualmente ou via IA.'}
+                : 'Songs, dialogues, stories, listen phrases, and vocabulary added manually or via AI.'}
             </div>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
               <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="font-size:0.82rem">
-                ⬇️ ${I18n.idioma==='it' ? 'Esporta Contenuto' : 'Exportar Conteúdo'}
+                ${I18n.t('prof_export_content')}
               </button>
               <button class="btn-secondario" onclick="document.getElementById('custom-input').click()" style="font-size:0.82rem">
-                ⬆️ ${I18n.idioma==='it' ? 'Importa Contenuto' : 'Importar Conteúdo'}
+                ${I18n.t('prof_import_content')}
               </button>
             </div>
           </div>
@@ -251,20 +251,26 @@ const Profilo = {
     reader.onload = (e) => {
       try {
         const backup = JSON.parse(e.target.result);
-        if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
+        if (!backup.versao || !backup.progresso || typeof backup.progresso !== 'object') throw new Error(I18n.t('prof_erro_formato'));
+        // A2: validate array fields before writing to avoid type corruption
+        const isArr = (v) => Array.isArray(v);
         if (!confirm(I18n.t('prof_confirm_importar'))) return;
-        if (backup.progresso)         localStorage.setItem('en_progresso',         JSON.stringify(backup.progresso));
-        if (backup.flashcards)        localStorage.setItem('en_flashcards',        JSON.stringify(backup.flashcards));
-        if (backup.diario)            localStorage.setItem('en_diario',            JSON.stringify(backup.diario));
-        if (backup.onboarding)        localStorage.setItem('en_onboarding_done',   backup.onboarding);
-        if (backup.tema)              localStorage.setItem('en_tema',              backup.tema);
-        if (backup.idioma)            localStorage.setItem('en_idioma',            backup.idioma);
-        if (backup.canzoni_custom?.length)    localStorage.setItem('en_canzoni_custom',    JSON.stringify(backup.canzoni_custom));
-        if (backup.dialoghi_custom?.length)   localStorage.setItem('en_dialoghi_custom',   JSON.stringify(backup.dialoghi_custom));
-        if (backup.storie_custom?.length)     localStorage.setItem('en_storie_custom',     JSON.stringify(backup.storie_custom));
-        if (backup.imitazioni_custom?.length) localStorage.setItem('en_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
-        if (backup.vocab_custom?.length)      localStorage.setItem('en_vocab_custom',      JSON.stringify(backup.vocab_custom));
-        if (backup.canzoni_ocultas?.length)   localStorage.setItem('en_canzoni_ocultas',   JSON.stringify(backup.canzoni_ocultas));
+        try {
+          if (backup.progresso)         localStorage.setItem('en_progresso',         JSON.stringify(backup.progresso));
+          if (backup.flashcards)        localStorage.setItem('en_flashcards',        JSON.stringify(backup.flashcards));
+          if (backup.diario)            localStorage.setItem('en_diario',            JSON.stringify(backup.diario));
+          if (backup.onboarding)        localStorage.setItem('en_onboarding_done',   String(backup.onboarding));
+          if (backup.tema)              localStorage.setItem('en_tema',              String(backup.tema));
+          if (backup.idioma)            localStorage.setItem('en_idioma',            String(backup.idioma));
+          if (isArr(backup.canzoni_custom)    && backup.canzoni_custom.length)    localStorage.setItem('en_canzoni_custom',    JSON.stringify(backup.canzoni_custom));
+          if (isArr(backup.dialoghi_custom)   && backup.dialoghi_custom.length)   localStorage.setItem('en_dialoghi_custom',   JSON.stringify(backup.dialoghi_custom));
+          if (isArr(backup.storie_custom)     && backup.storie_custom.length)     localStorage.setItem('en_storie_custom',     JSON.stringify(backup.storie_custom));
+          if (isArr(backup.imitazioni_custom) && backup.imitazioni_custom.length) localStorage.setItem('en_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
+          if (isArr(backup.vocab_custom)      && backup.vocab_custom.length)      localStorage.setItem('en_vocab_custom',      JSON.stringify(backup.vocab_custom));
+          if (isArr(backup.canzoni_ocultas)   && backup.canzoni_ocultas.length)   localStorage.setItem('en_canzoni_ocultas',   JSON.stringify(backup.canzoni_ocultas));
+        } catch (quotaErr) {
+          throw new Error('Storage quota exceeded. Free up space and try again.');
+        }
         App.notificar('notif_backup_imp', 'sucesso');
         setTimeout(() => location.reload(), 1200);
       } catch(err) {
@@ -281,7 +287,8 @@ const Profilo = {
     if (!confirm(I18n.t('prof_confirm_apagar2'))) return;
     ['en_progresso','en_flashcards','en_diario','en_onboarding_done','en_palavra_dia',
      'en_canzoni_custom','en_dialoghi_custom','en_storie_custom','en_imitazioni_custom',
-     'en_vocab_custom','en_canzoni_ocultas'].forEach(k => localStorage.removeItem(k));
+     'en_vocab_custom','en_canzoni_ocultas',
+     'en_audio_speed','en_idioma','en_tema','en_quiz_historico'].forEach(k => localStorage.removeItem(k));
     App.notificar('notif_prog_reset', 'alerta');
     setTimeout(() => location.reload(), 1200);
   },
@@ -323,7 +330,7 @@ const Profilo = {
         const nc = backup.canzoni?.length||0, nd = backup.dialoghi?.length||0,
               ns = backup.storie?.length||0,  ni = backup.imitazioni?.length||0,
               nv = backup.vocab?.length||0;
-        if (!confirm(`Importar conteúdo?\n• ${nc} músicas\n• ${nd} diálogos\n• ${ns} histórias\n• ${ni} imitações\n• ${nv} palavras de vocab`)) return;
+        if (!confirm(`Import content?\n• ${nc} songs\n• ${nd} dialogues\n• ${ns} stories\n• ${ni} listen phrases\n• ${nv} vocabulary words`)) return;
 
         // Merge por chave (não sobrescreve itens existentes)
         const _merge = (lsKey, novos) => {
@@ -351,6 +358,7 @@ const Profilo = {
   // ── Salvar Velocidade do Áudio ────────────────────────────
   salvarAudioSpeed(val) {
     localStorage.setItem('en_audio_speed', val);
+    if (typeof App !== 'undefined') App.atualizarAudioSpeedUI();
   },
 
   // ── Helper: stat row ──────────────────────────────────────
