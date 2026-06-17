@@ -171,32 +171,53 @@ const Canzoni = {
       </div>
 
       <div class="gram-card" style="margin-top:1rem;padding:1.2rem">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1rem">
-          <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Título *</label>
-            <input id="can-titulo" type="text" value="${titulo}" placeholder="Ex: Bella Ciao"
-              style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
-          </div>
-          <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Artista</label>
-            <input id="can-artista" type="text" value="${artista}" placeholder="Ex: Tradicional"
-              style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
-          </div>
-        </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1.2rem">
-          <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Level</label>
-            <select id="can-nivel" style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
-              ${['A1','A2','B1','B2','C1'].map(n => `<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
-            </select>
+        ${/* Hidden metadata inputs — always saved; visible only in edit mode */ ''}
+        <input type="hidden" id="can-titulo" value="${titulo}">
+        <input type="hidden" id="can-artista" value="${artista}">
+        <input type="hidden" id="can-nivel" value="${nivel}">
+        <input type="hidden" id="can-icone" value="${icone}">
+
+        ${idEditar ? `
+        <div id="can-meta-fields" style="margin-bottom:1rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem">
+            <div>
+              <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Título *</label>
+              <input id="can-titulo-vis" type="text" value="${titulo}" placeholder="Ex: Bella Ciao"
+                oninput="document.getElementById('can-titulo').value=this.value"
+                style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
+            </div>
+            <div>
+              <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Artista</label>
+              <input id="can-artista-vis" type="text" value="${artista}" placeholder="Ex: Tradicional"
+                oninput="document.getElementById('can-artista').value=this.value"
+                style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
+            </div>
           </div>
-          <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">${I18n.idioma === 'it' ? 'Icona (emoji)' : 'Ícone (emoji)'}</label>
-            <input id="can-icone" type="text" value="${icone}" maxlength="4"
-              style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:1.2rem;text-align:center">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem">
+            <div>
+              <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Level</label>
+              <select id="can-nivel-vis" oninput="document.getElementById('can-nivel').value=this.value"
+                style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
+                ${['A1','A2','B1','B2','C1'].map(n => `<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Ícone (emoji)</label>
+              <input id="can-icone-vis" type="text" value="${icone}" maxlength="4"
+                oninput="document.getElementById('can-icone').value=this.value"
+                style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:1.2rem;text-align:center">
+            </div>
           </div>
-        </div>
+        </div>` : ''}
+
+        ${/* Summary bar shown after import (hidden initially for new songs) */ ''}
+        ${!idEditar ? `<div id="can-meta-summary" style="display:none;background:#e8f4e8;border:1px solid #a8d8a8;border-radius:8px;padding:0.6rem 0.9rem;margin-bottom:1rem;font-size:0.85rem;align-items:center;gap:0.8rem;flex-wrap:wrap">
+          <span id="can-meta-icone" style="font-size:1.3rem"></span>
+          <strong id="can-meta-titulo" style="color:#1a5c1a"></strong>
+          <span id="can-meta-artista" style="color:#4a7a4a"></span>
+          <span id="can-meta-nivel" style="background:#27ae60;color:#fff;padding:0.15rem 0.5rem;border-radius:12px;font-size:0.75rem;font-weight:700"></span>
+        </div>` : ''}
 
         <div style="background:#f0f4fa;border:1px solid #c8d6ea;border-radius:10px;padding:0.9rem;margin-bottom:1rem">
           <div style="font-size:0.85rem;font-weight:700;color:#003E8A;margin-bottom:0.6rem">🎵 Song Audio (optional)</div>
@@ -217,7 +238,7 @@ const Canzoni = {
             <button class="btn-secondario" onclick="Canzoni._construirPromptIA()">🤖 Build AI Prompt (with exercises)</button>
           </div>
 
-          <div id="can-ia-bloco" style="display:block;margin-top:0.8rem">
+          <div id="can-ia-bloco" style="display:none;margin-top:0.8rem">
             <p style="font-size:0.78rem;color:#8a7a60;margin-bottom:0.4rem">1. Copy the prompt below and paste it into your favorite AI (ChatGPT, Claude, etc.):</p>
             <div class="ia-prompt-box">
               <pre id="can-ia-prompt-text"></pre>
@@ -405,6 +426,8 @@ MANDATORY RULES:
 TRANSCRIPT:
 ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'}`;
 
+    const bloco = document.getElementById('can-ia-bloco');
+    if (bloco) bloco.style.display = 'block';
     const pre = document.getElementById('can-ia-prompt-text');
     if (pre) pre.textContent = prompt;
     pre?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -475,6 +498,24 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       container.appendChild(div.firstElementChild);
     });
     App.notificar(I18n.t('can_ia_importados').replace('{n}', validos.length), 'sucesso');
+
+    // Show metadata summary bar (only in new-song mode, not edit mode)
+    const summary = document.getElementById('can-meta-summary');
+    if (summary) {
+      const tit = document.getElementById('can-titulo')?.value || '';
+      const art = document.getElementById('can-artista')?.value || '';
+      const niv = document.getElementById('can-nivel')?.value || '';
+      const ico = document.getElementById('can-icone')?.value || '🎵';
+      const elIco = document.getElementById('can-meta-icone');
+      const elTit = document.getElementById('can-meta-titulo');
+      const elArt = document.getElementById('can-meta-artista');
+      const elNiv = document.getElementById('can-meta-nivel');
+      if (elIco) elIco.textContent = ico;
+      if (elTit) elTit.textContent = tit;
+      if (elArt) elArt.textContent = art ? `— ${art}` : '';
+      if (elNiv) elNiv.textContent = niv;
+      summary.style.display = 'flex';
+    }
   },
 
   _htmlEstrofeForm(est, i) {
