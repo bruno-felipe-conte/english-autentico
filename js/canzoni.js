@@ -512,6 +512,7 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       if (dados.length > 0 && dados[0].words && Array.isArray(dados[0].words)) {
         dados = dados.map(item => {
           const words = item.words.map(w => ({ ...w, ms: this._parseTimestamp(w.t) }));
+          this._distribuirTimestamps(words);
           const hiddenWord = words.find(w => w.hidden);
           const inicioMs = words[0]?.ms ?? 0;
           const palavraOcultaMs = hiddenWord?.ms ?? null;
@@ -601,6 +602,7 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       if (dados.length > 0 && dados[0].words && Array.isArray(dados[0].words)) {
         dados = dados.map(item => {
           const words = item.words.map(w => ({ ...w, ms: this._parseTimestamp(w.t) }));
+          this._distribuirTimestamps(words);
           const hiddenWord = words.find(w => w.hidden);
           const inicioMs = words[0]?.ms ?? 0;
           const palavraOcultaMs = hiddenWord?.ms ?? null;
@@ -868,6 +870,20 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     if (totEl && dur > 0) totEl.textContent = this._formatTime(dur);
   },
 
+  _distribuirTimestamps(words) {
+    for (let i = 0; i < words.length; ) {
+      let j = i;
+      while (j < words.length && words[j].ms === words[i].ms) j++;
+      if (j > i + 1) {
+        const baseMs = words[i].ms;
+        const nextMs = j < words.length ? words[j].ms : baseMs + 1000;
+        const step   = (nextMs - baseMs) / (j - i);
+        for (let k = i; k < j; k++) words[k].ms = Math.round(baseMs + step * (k - i));
+      }
+      i = j;
+    }
+    return words;
+  },
   _formatTime(sec) {
     const m = Math.floor(sec / 60);
     return m + ':' + Math.floor(sec % 60).toString().padStart(2, '0');
@@ -935,8 +951,9 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       let lineHtml;
       if (v.words && v.words.length > 0) {
         // Word-level rendering with clickable spans
-        const wordsHtml = v.words.map((wd, wi) => {
-          const nextMs = (wi + 1 < v.words.length) ? v.words[wi + 1].ms : (wd.ms + 1500);
+        const distribWords = this._distribuirTimestamps(v.words.map(w => ({ ...w })));
+        const wordsHtml = distribWords.map((wd, wi) => {
+          const nextMs = (wi + 1 < distribWords.length) ? distribWords[wi + 1].ms : (wd.ms + 1500);
           const msVal = wd.ms ?? 0;
           const tooltip = wd.m ? ' title="' + this._esc(wd.m) + '"' : '';
           if (wd.hidden) {
@@ -1145,15 +1162,9 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
         let pauseAtMs = estrofeAtualObj.palavra_oculta_ms
           ?? estrofeAtualObj.words?.find(w => w.hidden)?.ms
           ?? estrofeAtualObj.inicio_ms;
-        // Gemini arredonda timestamps para segundos inteiros, então a palavra anterior
-        // pode compartilhar o mesmo ms da lacuna. Interpolamos com a palavra seguinte.
-        if (pauseAtMs != null && estrofeAtualObj.words) {
-          const hiddenIdx = estrofeAtualObj.words.findIndex(w => w.hidden);
-          if (hiddenIdx > 0 && estrofeAtualObj.words[hiddenIdx - 1].ms === pauseAtMs) {
-            const nextDiff = estrofeAtualObj.words.slice(hiddenIdx + 1).find(w => w.ms > pauseAtMs);
-            const nextMs = nextDiff?.ms ?? pauseAtMs + 1000;
-            pauseAtMs = pauseAtMs + Math.round((nextMs - pauseAtMs) / 2);
-          }
+        // Add 200ms buffer so audio stops just after the word before the blank
+        if (pauseAtMs != null) {
+          pauseAtMs = pauseAtMs + 200;
         }
         if (!pausadoParaLacuna && pauseAtMs != null && curMs >= pauseAtMs) {
           pausadoParaLacuna = true;
