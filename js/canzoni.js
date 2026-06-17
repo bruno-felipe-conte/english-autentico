@@ -432,7 +432,7 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
 
   _importarResultadoIA() {
     const raw = document.getElementById('can-ia-resultado')?.value.trim() || '';
-    if (!raw) { App.notificar('Paste the AI-generated JSON first', 'alerta'); return; }
+    if (!raw) { App.notificar(I18n.t('can_ia_cole_json'), 'alerta'); return; }
 
     let dados;
     try {
@@ -441,20 +441,20 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       dados = JSON.parse(match[1]);
       // Novo formato: wrapper com { titulo, artista, nivel, icone, estrofes }
       if (!Array.isArray(dados) && Array.isArray(dados.estrofes)) {
-        if (dados.titulo) { const el = document.getElementById('can-titulo'); if (el && !el.value.trim()) el.value = dados.titulo; }
-        if (dados.artista) { const el = document.getElementById('can-artista'); if (el && !el.value.trim()) el.value = dados.artista; }
-        if (dados.nivel) { const el = document.getElementById('can-nivel'); if (el) el.value = dados.nivel; }
-        if (dados.icone) { const el = document.getElementById('can-icone'); if (el && !el.value.trim()) el.value = dados.icone; }
+        if (dados.titulo)  { const el = document.getElementById('can-titulo');  if (el) el.value = dados.titulo; }
+        if (dados.artista) { const el = document.getElementById('can-artista'); if (el) el.value = dados.artista; }
+        if (dados.nivel)   { const el = document.getElementById('can-nivel');   if (el) el.value = dados.nivel; }
+        if (dados.icone)   { const el = document.getElementById('can-icone');   if (el) el.value = dados.icone; }
         dados = dados.estrofes;
       }
       if (!Array.isArray(dados)) dados = [dados];
     } catch (e) {
-      App.notificar('Invalid JSON. Check the AI response and try again.', 'erro');
+      App.notificar(I18n.t('can_ia_json_invalido'), 'erro');
       return;
     }
 
     const validos = dados.filter(d => d && typeof d.texto_completo === 'string' && d.texto_completo.trim());
-    if (validos.length === 0) { App.notificar('No valid verses found in the JSON', 'erro'); return; }
+    if (validos.length === 0) { App.notificar(I18n.t('can_ia_sem_versos'), 'erro'); return; }
 
     const container = document.getElementById('can-estrofes');
     if (!container) return;
@@ -474,7 +474,7 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       }, i);
       container.appendChild(div.firstElementChild);
     });
-    App.notificar(`${validos.length} verses imported from AI result`, 'sucesso');
+    App.notificar(I18n.t('can_ia_importados').replace('{n}', validos.length), 'sucesso');
   },
 
   _htmlEstrofeForm(est, i) {

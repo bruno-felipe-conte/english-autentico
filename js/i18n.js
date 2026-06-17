@@ -511,6 +511,10 @@ const I18n = {
     'imit_filtro_nivel':     { pt: '🎯 Nível',                     en: '🎯 Level' },
 
     // ── Alerts / confirms ──
+    'can_ia_cole_json':      { pt: 'Cole o JSON gerado pela IA primeiro',                                             en: 'Paste the AI-generated JSON first' },
+    'can_ia_json_invalido':  { pt: 'JSON inválido. Verifique a resposta da IA e tente novamente.',                    en: 'Invalid JSON. Check the AI response and try again.' },
+    'can_ia_sem_versos':     { pt: 'Nenhum verso válido no JSON',                                                      en: 'No valid verses found in the JSON' },
+    'can_ia_importados':     { pt: '{n} versos importados com sucesso',                                                en: '{n} verses imported from AI result' },
     'can_substituir_versos': { pt: 'Isso vai substituir {a} verso(s) existente(s) por {b} versos importados. Continuar?', en: 'This will replace {a} existing verse(s) with {b} imported verses. Continue?' },
     'prof_importar_conteudo':{ pt: 'Importar conteúdo?\n• {nc} músicas\n• {nd} diálogos\n• {ns} histórias\n• {ni} frases\n• {nv} palavras', en: 'Import content?\n• {nc} songs\n• {nd} dialogues\n• {ns} stories\n• {ni} listen phrases\n• {nv} vocabulary words' },
     'ia_remover_item':       { pt: 'Remover este item?',           en: 'Remove this item?' },
