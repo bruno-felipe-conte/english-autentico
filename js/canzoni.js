@@ -384,47 +384,99 @@ const Canzoni = {
     App.notificar(`${linhas.length} lines imported`, 'sucesso');
   },
 
-  // ── Prompt de IA: padroniza tempo + letra + tradução + cria as lacunas, tudo de uma vez ──
-  _construirPromptIA() {
-    const textarea = document.getElementById('can-lrc-paste');
-    const textoColado = (textarea?.value || '').trim();
+  // ── Helper: parse timestamp "M:SS" → milliseconds ────────────
+  _parseTimestamp(t) {
+    if (!t) return 0;
+    const parts = String(t).split(':');
+    if (parts.length === 2) return (parseInt(parts[0]) * 60 + parseInt(parts[1])) * 1000;
+    if (parts.length === 3) return (parseInt(parts[0]) * 3600 + parseInt(parts[1]) * 60 + parseInt(parts[2])) * 1000;
+    return parseFloat(t) * 1000;
+  },
 
+  // ── Novo prompt para Google Gemini (análise de áudio com timestamps por palavra) ──
+  _construirPromptIA() {
     const titulo = document.getElementById('can-titulo')?.value.trim() || '';
     const artista = document.getElementById('can-artista')?.value.trim() || '';
     const nivel   = document.getElementById('can-nivel')?.value || 'A2';
     const icone   = document.getElementById('can-icone')?.value.trim() || '🎵';
 
-    const prompt = `You are helping build a synchronized, fill-in-the-blank listening exercise for an English-learning app, from a timed song transcript.
+    const nomeDaMusica = titulo && artista ? `${titulo} — ${artista}` : titulo || artista || 'NOME DA MÚSICA — ARTISTA';
 
-I will paste a timed transcript below. It may be in LRC format ("[mm:ss.xx] text"), or a table with columns like Time / Subtitle / Translation (e.g. copied from a YouTube transcript site), with times written as "12s", "1:01", or "1:02:03".
+    const prompt = `Você é um assistente especializado em transcrição musical pedagógica para um aplicativo de aprendizado de inglês.
 
-Return a single JSON object (not an array) with this exact structure:
+══════════════════════════════════════════════
+📋 COMO USAR ESTE PROMPT NO GOOGLE GEMINI:
+══════════════════════════════════════════════
+1. Acesse gemini.google.com no seu navegador
+2. Clique no ícone de clipe (📎) ou arraste e solte o arquivo de áudio da música
+3. Na mesma mensagem, escreva o nome da música: "${nomeDaMusica}"
+4. Cole este prompt completo abaixo do nome da música e envie
+5. Aguarde — o Gemini vai analisar o áudio e retornar o JSON
+6. Copie o JSON retornado e cole no campo abaixo (✅ Import AI Result)
+══════════════════════════════════════════════
+
+Analise o arquivo de áudio da música "${nomeDaMusica}" e retorne um JSON com timestamps por palavra individual.
+
+### 1. ESTRUTURA DO JSON
+
+Retorne um array de objetos JSON. Cada objeto representa uma linha completa ("line") e deve conter:
+
+- "id": (int) Identificador único e sequencial do bloco.
+- "line": (string) A frase completa cantada em inglês.
+- "translation": (string) Tradução natural da frase para o português brasileiro.
+- "words": (array) Lista de objetos, um por palavra da frase:
+    - "w": (string) A palavra individual em inglês.
+    - "t": (string) Timestamp exato em que a palavra começa, no formato "M:SS" (ex: "0:15", "1:02").
+    - "m": (string) Tradução literal ou significado morfológico daquela palavra isolada.
+    - "hidden": (boolean) true para a palavra escolhida como lacuna de exercício, false para todas as outras.
+
+### 2. EXEMPLO DE REFERÊNCIA (use como gabarito de formatação)
+
+[
+  {
+    "id": 1,
+    "line": "First things first, I'ma say all the words inside my head",
+    "translation": "Em primeiro lugar, vou dizer todas as palavras dentro da minha cabeça",
+    "words": [
+      {"w": "First",  "t": "0:15", "m": "Primeiro",  "hidden": false},
+      {"w": "things", "t": "0:15", "m": "coisas",    "hidden": false},
+      {"w": "first",  "t": "0:16", "m": "primeiro",  "hidden": false},
+      {"w": "I'ma",   "t": "0:16", "m": "Eu vou",    "hidden": false},
+      {"w": "say",    "t": "0:16", "m": "dizer",      "hidden": true},
+      {"w": "all",    "t": "0:17", "m": "todas",      "hidden": false},
+      {"w": "the",    "t": "0:17", "m": "as",         "hidden": false},
+      {"w": "words",  "t": "0:17", "m": "palavras",   "hidden": false},
+      {"w": "inside", "t": "0:17", "m": "dentro de",  "hidden": false},
+      {"w": "my",     "t": "0:18", "m": "minha",      "hidden": false},
+      {"w": "head",   "t": "0:18", "m": "cabeça",     "hidden": false}
+    ]
+  }
+]
+
+### 3. REGRAS OBRIGATÓRIAS
+
+1. Segmentação: divida a música por frases lógicas (versos ou linhas). Não agrupe estrofes inteiras em uma única "line".
+2. Timestamps por palavra: estime o segundo exato em que cada palavra começa a ser vocalizada no áudio.
+3. Campo "hidden":
+   - Em 30% a 50% das linhas com conteúdo cantado real, marque UMA palavra com "hidden": true.
+   - Escolha palavras pedagogicamente úteis: substantivos, verbos, adjetivos ou advérbios relevantes. NUNCA artigos ("the", "a"), preposições curtas ou pronomes.
+   - Linhas sem exercício: todas as palavras têm "hidden": false.
+4. Traduções:
+   - "translation": tradução natural da frase inteira (sentido contextual em português).
+   - "m": tradução literal/morfológica da palavra isolada.
+5. Retorne APENAS o JSON válido, sem texto antes ou depois.
+6. Nível de inglês alvo: ${nivel}. Prefira lacunas com palavras adequadas a esse nível.
+
+### 4. METADADOS PARA IMPORTAÇÃO
+
+Inclua no início do JSON, antes do array, um objeto wrapper:
 {
-  "titulo": "${titulo || 'FILL IN THE SONG TITLE'}",
-  "artista": "${artista || 'FILL IN THE ARTIST NAME'}",
+  "titulo": "${titulo || 'PREENCHER TÍTULO DA MÚSICA'}",
+  "artista": "${artista || 'PREENCHER NOME DO ARTISTA'}",
   "nivel": "${nivel}",
   "icone": "${icone}",
-  "estrofes": [
-    {
-      "tempo": <number — the line's start time in SECONDS, as a decimal, e.g. "1:02" -> 62, "0:12.5" -> 12.5>,
-      "texto_completo": "<the line's text, cleaned of any ♪ symbols>",
-      "traducao": "<Portuguese translation of the line — use the one given in the transcript if present, otherwise translate it yourself>",
-      "palavra_oculta": "<one pedagogically useful word from this line, or \\"\\" if this line has no gap>",
-      "texto_lacuna": "<the same line with that word replaced by \\"___\\", or \\"\\" if no gap>",
-      "dica": "<short hint: part of speech + brief meaning, or \\"\\" if no gap>"
-    }
-  ]
-}
-
-MANDATORY RULES:
-1. Keep the lines in the same order as the original transcript. Do not skip any line.
-2. Convert every timestamp to decimal seconds.
-3. For roughly 30%–50% of the lines with real sung content (skip crowd noise, sound effects in parentheses, or repeated ad-libs), fill in "palavra_oculta", "texto_lacuna" and "dica" as described above. Pick useful vocabulary, not "the"/"a"/pronouns.
-4. For all other lines, leave "palavra_oculta", "texto_lacuna" and "dica" as empty strings "".
-5. Return ONLY the JSON object, no text before or after.
-
-TRANSCRIPT:
-${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'}`;
+  "estrofes": [ ... array de linhas acima ... ]
+}`;
 
     const bloco = document.getElementById('can-ia-bloco');
     if (bloco) bloco.style.display = 'block';
@@ -462,7 +514,8 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       const match = raw.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
       if (!match) throw new Error('No JSON found');
       dados = JSON.parse(match[1]);
-      // Novo formato: wrapper com { titulo, artista, nivel, icone, estrofes }
+
+      // Extrair metadados do wrapper {titulo, artista, nivel, icone, estrofes}
       if (!Array.isArray(dados) && Array.isArray(dados.estrofes)) {
         if (dados.titulo)  { const el = document.getElementById('can-titulo');  if (el) el.value = dados.titulo; }
         if (dados.artista) { const el = document.getElementById('can-artista'); if (el) el.value = dados.artista; }
@@ -471,6 +524,32 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
         dados = dados.estrofes;
       }
       if (!Array.isArray(dados)) dados = [dados];
+
+      // ── Converter novo formato Gemini [{id, line, translation, words}] ──
+      if (dados.length > 0 && dados[0].words && Array.isArray(dados[0].words)) {
+        dados = dados.map(item => {
+          const words = item.words.map(w => ({ ...w, ms: this._parseTimestamp(w.t) }));
+          const hiddenWord = words.find(w => w.hidden);
+          const inicioMs = words[0]?.ms ?? 0;
+          const palavraOcultaMs = hiddenWord?.ms ?? null;
+          let textoLacuna = '';
+          if (hiddenWord) {
+            const re = new RegExp('(?<![\\w\'])' + hiddenWord.w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\w\'])', 'i');
+            textoLacuna = item.line.replace(re, '___');
+          }
+          return {
+            texto_completo: item.line,
+            traducao: item.translation || '',
+            palavra_oculta: hiddenWord?.w || '',
+            dica: hiddenWord?.m || '',
+            texto_lacuna: textoLacuna,
+            tempo: inicioMs / 1000,
+            inicio_ms: inicioMs,
+            palavra_oculta_ms: palavraOcultaMs,
+            words
+          };
+        });
+      }
     } catch (e) {
       App.notificar(I18n.t('can_ia_json_invalido'), 'erro');
       return;
@@ -493,7 +572,9 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
         palavra_oculta: l.palavra_oculta || '',
         traducao: l.traducao || '',
         dica: l.dica || '',
-        tempo: l.tempo ?? ''
+        tempo: l.tempo ?? '',
+        words: l.words || null,
+        palavra_oculta_ms: l.palavra_oculta_ms ?? null
       }, i);
       container.appendChild(div.firstElementChild);
     });
@@ -550,6 +631,8 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
             <button class="can-btn-marcar-tempo" onclick="Canzoni._marcarTempoAgora(${i})"
               style="background:none;border:1px solid #003E8A;color:#003E8A;border-radius:7px;padding:0.4rem 0.6rem;cursor:pointer;font-size:0.78rem;white-space:nowrap">🎙️ Mark now</button>
           </div>
+          <input type="hidden" data-campo="words_json" data-idx="${i}" value="${est.words ? this._esc(JSON.stringify(est.words)) : ''}">
+          <input type="hidden" data-campo="palavra_oculta_ms" data-idx="${i}" value="${est.palavra_oculta_ms ?? ''}">
         </div>
       </div>`;
   },
@@ -603,6 +686,9 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       };
       const tempo = campos.tempo !== '' && campos.tempo != null ? parseFloat(campos.tempo) : NaN;
       if (!isNaN(tempo)) est.inicio_ms = Math.round(tempo * 1000);
+      const wordsJson = campos.words_json || '';
+      if (wordsJson) { try { est.words = JSON.parse(wordsJson); } catch(e) {} }
+      if (campos.palavra_oculta_ms) est.palavra_oculta_ms = parseInt(campos.palavra_oculta_ms);
       estrofes.push(est);
     });
     if (estrofes.length === 0) { App.notificar('notif_can_sem_verso', 'erro'); return; }
@@ -748,7 +834,30 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       }
 
       let lineHtml;
-      if (!v.palavra_oculta || !v.texto_lacuna) {
+      if (v.words && v.words.length > 0) {
+        // Word-level rendering with clickable spans
+        const wordsHtml = v.words.map((wd, wi) => {
+          const nextMs = (wi + 1 < v.words.length) ? v.words[wi + 1].ms : (wd.ms + 1500);
+          const msVal = wd.ms ?? 0;
+          const tooltip = wd.m ? ' title="' + this._esc(wd.m) + '"' : '';
+          if (wd.hidden) {
+            let blankHtml;
+            if (cls === 'future' || cls === 'active') {
+              blankHtml = '<span class="can-blank" data-ms="' + msVal + '" data-fim="' + nextMs + '"' + tooltip + '>_____</span>';
+            } else if (resp && resp.correto) {
+              blankHtml = '<span class="can-blank can-blank-correct can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
+            } else if (resp) {
+              blankHtml = '<span class="can-blank can-blank-wrong">' + this._esc(resp.escolha) + '</span>'
+                        + '<span class="can-blank can-blank-revealed can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '> ' + this._esc(wd.w) + '</span>';
+            } else {
+              blankHtml = '<span class="can-blank can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
+            }
+            return blankHtml;
+          }
+          return '<span class="can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
+        }).join(' ');
+        lineHtml = '<span class="can-verse-line">' + wordsHtml + '</span>';
+      } else if (!v.palavra_oculta || !v.texto_lacuna) {
         lineHtml = '<span class="can-verse-line">' + this._esc(v.texto_completo||'') + '</span>';
       } else {
         let blankHtml;
@@ -890,15 +999,12 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
       // Pausa automaticamente ao alcançar uma lacuna ainda não respondida
       const idxAtual = this.estrofeAtual;
       const estrofeAtualObj = can.estrofes[idxAtual];
-      if (
-        !pausadoParaLacuna &&
-        estrofeAtualObj && estrofeAtualObj.palavra_oculta &&
-        this.respostas[idxAtual] == null &&
-        estrofeAtualObj.inicio_ms != null &&
-        curMs >= estrofeAtualObj.inicio_ms
-      ) {
-        pausadoParaLacuna = true;
-        audioEl.pause();
+      if (estrofeAtualObj && estrofeAtualObj.palavra_oculta && this.respostas[idxAtual] == null) {
+        const pauseAtMs = estrofeAtualObj.palavra_oculta_ms ?? estrofeAtualObj.inicio_ms;
+        if (!pausadoParaLacuna && pauseAtMs != null && curMs >= pauseAtMs) {
+          pausadoParaLacuna = true;
+          audioEl.pause();
+        }
       }
     });
   },
