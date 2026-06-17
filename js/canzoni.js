@@ -809,6 +809,12 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     this._audioShouldPlay = false;
     this._distratorCache = {};
     this._syncGen = (this._syncGen || 0) + 1;
+    // Limpa listener e marca src como descarregado ao trocar de música
+    const _audioReset = document.getElementById('can-audio-player');
+    if (_audioReset) {
+      if (this._timeupdateListener) { _audioReset.removeEventListener('timeupdate', this._timeupdateListener); this._timeupdateListener = null; }
+      _audioReset.dataset.loadedKey = '';
+    }
     this._avancarProximoBlank();
   },
 
@@ -1005,25 +1011,39 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     const audioEl = document.getElementById('can-audio-player');
     if (!audioEl) return;
 
-    // Preserva a posição de reprodução entre re-renders (responder uma lacuna re-renderiza o player)
-    // Listener ANTES do src= para não perder evento em áudio cacheado
-    if (this._audioResumeTime != null) {
+    // Remove listener acumulado de render anterior (evita N listeners após N respostas)
+    if (this._timeupdateListener) {
+      audioEl.removeEventListener('timeupdate', this._timeupdateListener);
+      this._timeupdateListener = null;
+    }
+
+    // Só recarrega src se a música mudou — recarregar desnecessariamente reseta currentTime→0
+    // causando highlight errado do verso durante o reload
+    if (audioEl.dataset.loadedKey !== can.audio_store_key) {
+      audioEl.dataset.loadedKey = can.audio_store_key;
       const tempoRetomar = this._audioResumeTime;
       const deveTocar = this._audioShouldPlay;
       this._audioResumeTime = null;
       this._audioShouldPlay = false;
-      const onMeta = () => {
-        audioEl.currentTime = tempoRetomar;
-        if (deveTocar) audioEl.play();
-      };
-      audioEl.addEventListener('loadedmetadata', onMeta, { once: true });
-      audioEl.src = url;
-      if (audioEl.readyState >= 1) {
-        audioEl.removeEventListener('loadedmetadata', onMeta);
-        onMeta();
+      if (tempoRetomar != null) {
+        const onMeta = () => {
+          audioEl.currentTime = tempoRetomar;
+          if (deveTocar) audioEl.play();
+        };
+        audioEl.addEventListener('loadedmetadata', onMeta, { once: true });
+        audioEl.src = url;
+        if (audioEl.readyState >= 1) { audioEl.removeEventListener('loadedmetadata', onMeta); onMeta(); }
+      } else {
+        audioEl.src = url;
       }
-    } else {
-      audioEl.src = url;
+    } else if (this._audioResumeTime != null) {
+      // Áudio já carregado — apenas faz seek e resume, sem reload
+      const tempoRetomar = this._audioResumeTime;
+      const deveTocar = this._audioShouldPlay;
+      this._audioResumeTime = null;
+      this._audioShouldPlay = false;
+      audioEl.currentTime = tempoRetomar;
+      if (deveTocar) audioEl.play();
     }
 
     const verseEls = Array.from(document.querySelectorAll('#can-lyrics .can-verse[data-tempo-ms]'))
@@ -1041,7 +1061,7 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
 
     let pausadoParaLacuna = false;
 
-    audioEl.addEventListener('timeupdate', () => {
+    const timeupdateFn = () => {
       const curMs = audioEl.currentTime * 1000;
       let activeEl = null;
       for (let i = 0; i < verseEls.length; i++) {
@@ -1072,7 +1092,9 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
           audioEl.pause();
         }
       }
-    });
+    };
+    this._timeupdateListener = timeupdateFn;
+    audioEl.addEventListener('timeupdate', timeupdateFn);
   },
 
   _escolher(palavra) {
