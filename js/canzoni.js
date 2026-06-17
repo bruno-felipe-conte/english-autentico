@@ -1181,10 +1181,11 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     const can = this.canzonAtual;
     if (!can || this.estrofeAtual >= can.estrofes.length) return;
     const est = can.estrofes[this.estrofeAtual];
-    if (!est.palavra_oculta) return;
+    const palavraCorreta = est.palavra_oculta || est.words?.find(w => w.hidden)?.w || '';
+    if (!palavraCorreta) return;
     document.querySelectorAll('.can-choice-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
     const norm = s => s.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const correto = norm(palavra) === norm(est.palavra_oculta);
+    const correto = norm(palavra) === norm(palavraCorreta);
     this.respostas[this.estrofeAtual] = { escolha: palavra, correto };
     if (correto) {
       this.acertos++;
