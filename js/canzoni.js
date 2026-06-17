@@ -242,7 +242,6 @@ const Canzoni = {
             </div>
             <p style="font-size:0.78rem;color:#8a7a60;margin:0.6rem 0 0.4rem">2. Paste the JSON the AI generated here:</p>
             <textarea id="can-ia-resultado" class="ia-paste-area" rows="5" placeholder="Paste the AI-generated JSON here..."></textarea>
-            <button class="btn-primario" onclick="Canzoni._importarResultadoIA()" style="margin-top:0.5rem">✅ Import AI Result</button>
           </div>
         </div>
 
@@ -252,9 +251,10 @@ const Canzoni = {
 
         <div style="position:sticky;bottom:0;background:#fff;padding:0.75rem 0 0.25rem;border-top:1px solid #f0e8d8;z-index:10;margin-top:0.25rem">
           <div style="display:flex;gap:0.5rem">
-            <button class="btn-primario" style="flex:1" onclick="Canzoni._salvarFormulario('${idEditar || ''}')">
-              💾 Save Song
-            </button>
+            ${idEditar
+              ? `<button class="btn-primario" style="flex:1" onclick="Canzoni._salvarFormulario('${idEditar}')">💾 Save Song</button>`
+              : `<button class="btn-primario" style="flex:1" onclick="Canzoni._importarESalvar()">✅ Salvar Música</button>`
+            }
             <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">Cancelar</button>
           </div>
         </div>
@@ -580,6 +580,79 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       if (elNiv) elNiv.textContent = niv;
       summary.style.display = 'flex';
     }
+  },
+
+  _importarESalvar() {
+    const raw = document.getElementById('can-ia-resultado')?.value.trim() || '';
+    if (!raw) { App.notificar(I18n.t('can_ia_cole_json'), 'alerta'); return; }
+
+    let dados, meta = {};
+    try {
+      const match = raw.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+      if (!match) throw new Error('No JSON found');
+      dados = JSON.parse(match[1]);
+
+      if (!Array.isArray(dados) && Array.isArray(dados.estrofes)) {
+        meta = { titulo: dados.titulo, artista: dados.artista, nivel: dados.nivel, icone: dados.icone };
+        dados = dados.estrofes;
+      }
+      if (!Array.isArray(dados)) dados = [dados];
+
+      if (dados.length > 0 && dados[0].words && Array.isArray(dados[0].words)) {
+        dados = dados.map(item => {
+          const words = item.words.map(w => ({ ...w, ms: this._parseTimestamp(w.t) }));
+          const hiddenWord = words.find(w => w.hidden);
+          const inicioMs = words[0]?.ms ?? 0;
+          const palavraOcultaMs = hiddenWord?.ms ?? null;
+          let textoLacuna = '';
+          if (hiddenWord) {
+            const re = new RegExp('(?<![\\w\'])' + hiddenWord.w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\w\'])', 'i');
+            textoLacuna = item.line.replace(re, '___');
+          }
+          return {
+            texto_completo: item.line, traducao: item.translation || '',
+            palavra_oculta: hiddenWord?.w || '', dica: hiddenWord?.m || '',
+            texto_lacuna: textoLacuna, inicio_ms: inicioMs,
+            palavra_oculta_ms: palavraOcultaMs, words
+          };
+        });
+      }
+    } catch(e) { App.notificar(I18n.t('can_ia_json_invalido'), 'erro'); return; }
+
+    const validos = dados.filter(d => d && typeof d.texto_completo === 'string' && d.texto_completo.trim());
+    if (!validos.length) { App.notificar(I18n.t('can_ia_sem_versos'), 'erro'); return; }
+
+    const titulo = meta.titulo || document.getElementById('can-titulo')?.value.trim() || '';
+    if (!titulo) { App.notificar(I18n.t('notif_can_titulo_obr'), 'erro'); return; }
+
+    const estrofes = validos.map((l, i) => {
+      const est = {
+        id: i + 1, texto_completo: l.texto_completo, texto_lacuna: l.texto_lacuna || '',
+        palavra_oculta: l.palavra_oculta || '', traducao: l.traducao || '', dica: l.dica || ''
+      };
+      if (l.inicio_ms != null) est.inicio_ms = l.inicio_ms;
+      if (l.palavra_oculta_ms != null) est.palavra_oculta_ms = l.palavra_oculta_ms;
+      if (l.words) est.words = l.words;
+      return est;
+    });
+
+    const audioKey = document.getElementById('can-audio-key')?.value || '';
+    const nova = {
+      id: `custom_can_${Date.now()}`,
+      titulo,
+      artista: meta.artista || '',
+      nivel: meta.nivel || 'A2',
+      icone: meta.icone || '🎵',
+      tema: 'custom', criado_em: Date.now(), custom: true,
+      estrofes,
+      vocabulario_chave: estrofes.map(e => e.palavra_oculta).filter(Boolean),
+      xp_recompensa: Math.min(10 + estrofes.length * 5, 60)
+    };
+    if (audioKey) nova.audio_store_key = audioKey;
+    this.custom.push(nova);
+    this._salvarCustom();
+    App.notificar(I18n.t('can_salva').replace('{t}', titulo), 'sucesso');
+    this.renderizarSeletor();
   },
 
   _htmlEstrofeForm(est, i) {
