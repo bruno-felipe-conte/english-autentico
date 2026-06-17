@@ -840,13 +840,50 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     }
   },
 
+  _togglePlay() {
+    const a = document.getElementById('can-audio-player');
+    if (!a) return;
+    a.paused ? a.play() : a.pause();
+  },
+
+  _seekAudio(event) {
+    const a   = document.getElementById('can-audio-player');
+    const bar = document.getElementById('can-player-progress');
+    if (!a || !bar || !a.duration) return;
+    const rect = bar.getBoundingClientRect();
+    a.currentTime = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)) * a.duration;
+  },
+
+  _updatePlayerUI() {
+    const a = document.getElementById('can-audio-player');
+    if (!a) return;
+    const btn    = document.getElementById('can-play-btn');
+    const fill   = document.getElementById('can-player-fill');
+    const timeEl = document.getElementById('can-player-time');
+    const totEl  = document.getElementById('can-player-total');
+    if (btn)   btn.textContent = a.paused ? '▶' : '⏸';
+    const cur = a.currentTime || 0, dur = a.duration || 0;
+    if (fill)  fill.style.width = (dur > 0 ? (cur / dur * 100) : 0) + '%';
+    if (timeEl) timeEl.textContent = this._formatTime(cur);
+    if (totEl && dur > 0) totEl.textContent = this._formatTime(dur);
+  },
+
+  _formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    return m + ':' + Math.floor(sec % 60).toString().padStart(2, '0');
+  },
+
+  _hasBlank(est) {
+    return !!(est.palavra_oculta || (est.words && est.words.some(w => w.hidden)));
+  },
+
   _avancarProximoBlank() {
     const can = this.canzonAtual;
     if (!can) return;
     // Músicas sem nenhuma lacuna (ex.: só áudio sincronizado, sem exercício) ficam em modo "ouvir letra",
     // sem pular automaticamente pra tela de resultado.
-    const temLacunas = can.estrofes.some(e => e.palavra_oculta);
-    while (this.estrofeAtual < can.estrofes.length && !can.estrofes[this.estrofeAtual].palavra_oculta) {
+    const temLacunas = can.estrofes.some(e => this._hasBlank(e));
+    while (this.estrofeAtual < can.estrofes.length && !this._hasBlank(can.estrofes[this.estrofeAtual])) {
       this.estrofeAtual++;
     }
     if (this.estrofeAtual >= can.estrofes.length) {
@@ -877,8 +914,8 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     if (!c || !this.canzonAtual) return;
     const can = this.canzonAtual;
 
-    const total = can.estrofes.filter(e => e.palavra_oculta).length;
-    const done  = can.estrofes.filter((e, i) => e.palavra_oculta && this.respostas[i] !== null).length;
+    const total = can.estrofes.filter(e => this._hasBlank(e)).length;
+    const done  = can.estrofes.filter((e, i) => this._hasBlank(e) && this.respostas[i] !== null).length;
     const pct   = total > 0 ? Math.round(done / total * 100) : 0;
 
     const versosHtml = can.estrofes.map((v, i) => {
@@ -950,14 +987,15 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
 
     let choicesHtml = '';
     const est = can.estrofes[this.estrofeAtual];
-    if (est && est.palavra_oculta) {
+    if (est && this._hasBlank(est)) {
+      const palavraCorreta = est.palavra_oculta || est.words?.find(w => w.hidden)?.w || '';
       const idx = this.estrofeAtual;
       if (!this._distratorCache) this._distratorCache = {};
       if (!this._distratorCache[idx]) {
         this._distratorCache[idx] = { dist: this._getDistrator(est), ordem: Math.random() > 0.5 };
       }
       const { dist, ordem } = this._distratorCache[idx];
-      const arr = ordem ? [est.palavra_oculta, dist] : [dist, est.palavra_oculta];
+      const arr = ordem ? [palavraCorreta, dist] : [dist, palavraCorreta];
       const btns = arr.map(w => {
         const safeW = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
         return '<button class="can-choice-btn" onclick="Canzoni._escolher(\'' + safeW + '\')"><i>' + this._esc(w) + '</i></button>';
@@ -966,7 +1004,17 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     }
 
     const audioBarHtml = can.audio_store_key
-      ? '<div class="can-audio-bar"><audio id="can-audio-player" controls></audio></div>'
+      ? '<div class="can-audio-bar">' +
+          '<audio id="can-audio-player"></audio>' +
+          '<div class="can-custom-player">' +
+            '<button class="can-play-btn" id="can-play-btn" onclick="Canzoni._togglePlay()">&#9654;</button>' +
+            '<span class="can-player-time" id="can-player-time">0:00</span>' +
+            '<div class="can-player-progress" id="can-player-progress" onclick="Canzoni._seekAudio(event)">' +
+              '<div class="can-player-fill" id="can-player-fill"></div>' +
+            '</div>' +
+            '<span class="can-player-total" id="can-player-total">--:--</span>' +
+          '</div>' +
+        '</div>'
       : '';
 
     c.innerHTML =
@@ -1036,6 +1084,11 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       } else {
         audioEl.src = url;
       }
+      // Listeners de estado para o player customizado (adicionados só na primeira carga)
+      audioEl.addEventListener('play',  () => this._updatePlayerUI());
+      audioEl.addEventListener('pause', () => this._updatePlayerUI());
+      audioEl.addEventListener('ended', () => this._updatePlayerUI());
+      audioEl.addEventListener('loadedmetadata', () => this._updatePlayerUI());
     } else if (this._audioResumeTime != null) {
       // Áudio já carregado — apenas faz seek e resume, sem reload
       const tempoRetomar = this._audioResumeTime;
@@ -1059,10 +1112,23 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       });
     });
 
+    // Cache word elements once per render for karaoke effect
+    const lyricWordEls = Array.from(document.querySelectorAll('#can-lyrics .can-word[data-ms]'));
+
     let pausadoParaLacuna = false;
 
     const timeupdateFn = () => {
       const curMs = audioEl.currentTime * 1000;
+
+      // Karaokê: colorir palavras conforme o áudio avança
+      lyricWordEls.forEach(el => {
+        const wMs  = parseInt(el.dataset.ms);
+        const wFim = parseInt(el.dataset.fim);
+        el.classList.toggle('can-word-past',    curMs >= wFim);
+        el.classList.toggle('can-word-current', curMs >= wMs && curMs < wFim);
+      });
+      this._updatePlayerUI();
+
       let activeEl = null;
       for (let i = 0; i < verseEls.length; i++) {
         const startMs = parseInt(verseEls[i].dataset.tempoMs, 10);
@@ -1075,8 +1141,10 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       // Pausa automaticamente ao alcançar uma lacuna ainda não respondida
       const idxAtual = this.estrofeAtual;
       const estrofeAtualObj = can.estrofes[idxAtual];
-      if (estrofeAtualObj && estrofeAtualObj.palavra_oculta && this.respostas[idxAtual] == null) {
-        let pauseAtMs = estrofeAtualObj.palavra_oculta_ms ?? estrofeAtualObj.inicio_ms;
+      if (estrofeAtualObj && this._hasBlank(estrofeAtualObj) && this.respostas[idxAtual] == null) {
+        let pauseAtMs = estrofeAtualObj.palavra_oculta_ms
+          ?? estrofeAtualObj.words?.find(w => w.hidden)?.ms
+          ?? estrofeAtualObj.inicio_ms;
         // Gemini arredonda timestamps para segundos inteiros, então a palavra anterior
         // pode compartilhar o mesmo ms da lacuna. Interpolamos com a palavra seguinte.
         if (pauseAtMs != null && estrofeAtualObj.words) {
@@ -1090,6 +1158,7 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
         if (!pausadoParaLacuna && pauseAtMs != null && curMs >= pauseAtMs) {
           pausadoParaLacuna = true;
           audioEl.pause();
+          this._updatePlayerUI();
         }
       }
     };
