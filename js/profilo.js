@@ -330,7 +330,7 @@ const Profilo = {
         const nc = backup.canzoni?.length||0, nd = backup.dialoghi?.length||0,
               ns = backup.storie?.length||0,  ni = backup.imitazioni?.length||0,
               nv = backup.vocab?.length||0;
-        if (!confirm(`Import content?\n• ${nc} songs\n• ${nd} dialogues\n• ${ns} stories\n• ${ni} listen phrases\n• ${nv} vocabulary words`)) return;
+        if (!confirm(I18n.t('prof_importar_conteudo').replace('{nc}',nc).replace('{nd}',nd).replace('{ns}',ns).replace('{ni}',ni).replace('{nv}',nv))) return;
 
         // Merge por chave (não sobrescreve itens existentes)
         const _merge = (lsKey, novos) => {

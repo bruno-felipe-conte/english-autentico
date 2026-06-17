@@ -436,7 +436,7 @@ const App = {
       localStorage.setItem('en_progresso', JSON.stringify(this.estado.progresso));
     } catch (e) {
       if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
-        alert('Storage Limit Reached! The app cannot save your progress. Please clear some space in your browser data or delete unused flashcards.');
+        alert(I18n.t('storage_limite'));
       }
     }
   },
@@ -454,7 +454,7 @@ const App = {
       localStorage.setItem('en_flashcards', JSON.stringify(this.estado.flashcardData));
     } catch (e) {
       if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
-        alert('Storage Limit Reached! Cannot save new flashcards. Running auto-cleanup of oldest inactive cards...');
+        alert(I18n.t('storage_limite_fc'));
         // Auto-cleanup simple GC: remove 20 oldest cards if possible
         if (this.estado.flashcardData && this.estado.flashcardData.cards) {
             this.estado.flashcardData.cards = this.estado.flashcardData.cards.slice(20);
@@ -751,16 +751,16 @@ const App = {
         <p class="tm-desc">${desc}</p>
         ${desbloqueado ? `
           <div class="tm-actions">
-            <button class="tm-btn-primary" onclick="App.fecharModalTemplo();App.estudarTemplo(${i})">📚 Study vocabulary</button>
-            <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">❓ Take the Quiz</button>
+            <button class="tm-btn-primary" onclick="App.fecharModalTemplo();App.estudarTemplo(${i})">${I18n.t('tm_estudar_vocab')}</button>
+            <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">${I18n.t('tm_take_quiz')}</button>
           </div>
         ` : `
           <details class="tm-unlock-area">
-            <summary>Have an access code?</summary>
+            <summary>${I18n.t('tm_access_code')}</summary>
             <div class="tm-unlock-form">
-              <input id="tm-code-input" type="password" placeholder="Enter code..." class="tm-code-input"
+              <input id="tm-code-input" type="password" placeholder="${I18n.t('tm_code_placeholder')}" class="tm-code-input"
                 onkeydown="if(event.key==='Enter')App.tentarDesbloquear(${i})">
-              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">Unlock</button>
+              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">${I18n.t('tm_unlock')}</button>
             </div>
           </details>
         `}

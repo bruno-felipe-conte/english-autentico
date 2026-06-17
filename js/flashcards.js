@@ -946,7 +946,7 @@ const Flashcards = {
     const sel = document.getElementById('flashcard-templo-select');
     if (!sel) return;
     const anterior = sel.value;
-    sel.innerHTML  = '<option value="">-- Select a temple --</option>';
+    sel.innerHTML  = `<option value="">${I18n.t('fc_selecionar_templo')}</option>`;
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
     desbloqueados.forEach(num => {
       const data = App.estado.templosData[num];

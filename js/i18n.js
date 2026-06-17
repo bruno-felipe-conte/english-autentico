@@ -495,7 +495,27 @@ const I18n = {
     'btn_add_song':          { pt: '➕ Adicionar Música',            en: '➕ Add Song' },
     'btn_via_ia':            { pt: '🤖 via IA',                     en: '🤖 via IA' },
     'filtro_todos':          { pt: 'Todos',                          en: 'All' },
-    'filtro_nativo':         { pt: '📚 Nativas',                    en: '📚 Built-in' }
+    'filtro_nativo':         { pt: '📚 Nativas',                    en: '📚 Built-in' },
+
+    // ── Temple modal ──
+    'tm_estudar_vocab':      { pt: '📚 Estudar vocabulário',        en: '📚 Study vocabulary' },
+    'tm_take_quiz':          { pt: '❓ Fazer o Quiz',               en: '❓ Take the Quiz' },
+    'tm_access_code':        { pt: 'Tem um código de acesso?',      en: 'Have an access code?' },
+    'tm_code_placeholder':   { pt: 'Digite o código...',            en: 'Enter code...' },
+    'tm_unlock':             { pt: 'Desbloquear',                   en: 'Unlock' },
+
+    // ── Imitazione filter bar ──
+    'imit_filtro_todas':     { pt: 'Todas',                         en: 'All' },
+    'imit_filtro_adicionadas':{ pt: '🤖 Adicionadas',              en: '🤖 Added' },
+    'imit_filtro_nativas':   { pt: '📚 Nativas',                   en: '📚 Built-in' },
+    'imit_filtro_nivel':     { pt: '🎯 Nível',                     en: '🎯 Level' },
+
+    // ── Alerts / confirms ──
+    'can_substituir_versos': { pt: 'Isso vai substituir {a} verso(s) existente(s) por {b} versos importados. Continuar?', en: 'This will replace {a} existing verse(s) with {b} imported verses. Continue?' },
+    'prof_importar_conteudo':{ pt: 'Importar conteúdo?\n• {nc} músicas\n• {nd} diálogos\n• {ns} histórias\n• {ni} frases\n• {nv} palavras', en: 'Import content?\n• {nc} songs\n• {nd} dialogues\n• {ns} stories\n• {ni} listen phrases\n• {nv} vocabulary words' },
+    'ia_remover_item':       { pt: 'Remover este item?',           en: 'Remove this item?' },
+    'storage_limite':        { pt: 'Limite de armazenamento atingido! O app não consegue salvar seu progresso. Por favor, libere espaço no navegador ou exclua alguns flashcards.', en: 'Storage Limit Reached! The app cannot save your progress. Please clear some space in your browser data or delete unused flashcards.' },
+    'storage_limite_fc':     { pt: 'Limite de armazenamento! Não é possível salvar novos flashcards. Executando limpeza automática...', en: 'Storage Limit Reached! Cannot save new flashcards. Running auto-cleanup of oldest inactive cards...' }
   },
 
   inicializar() {

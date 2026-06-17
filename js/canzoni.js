@@ -459,7 +459,7 @@ ${textoColado || '[PASTE YOUR TIMED TRANSCRIPT HERE BEFORE SENDING THIS PROMPT]'
     const container = document.getElementById('can-estrofes');
     if (!container) return;
     const existentes = container.querySelectorAll('.can-estrofe-form').length;
-    if (existentes > 0 && !confirm(`This will replace ${existentes} existing verse(s) with ${validos.length} imported verses. Continue?`)) return;
+    if (existentes > 0 && !confirm(I18n.t('can_substituir_versos').replace('{a}', existentes).replace('{b}', validos.length))) return;
     container.innerHTML = '';
     validos.forEach((l, i) => {
       const div = document.createElement('div');

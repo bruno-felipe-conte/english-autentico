@@ -64,11 +64,11 @@ const Imitazione = {
 
     bar.innerHTML = `
     <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.9rem;align-items:center">
-      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.2rem">🤖 via IA</button>
-      ${oP('','Todas',todasRaw.length)}${nC?oP('custom','🤖 Adicionadas',nC):''}${nN?oP('nativo','📚 Nativas',nN):''}
+      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.2rem">${I18n.t('btn_via_ia')}</button>
+      ${oP('',I18n.t('imit_filtro_todas'),todasRaw.length)}${nC?oP('custom',I18n.t('imit_filtro_adicionadas'),nC):''}${nN?oP('nativo',I18n.t('imit_filtro_nativas'),nN):''}
       <select class="nivel-select${this._filtroNivel?' ativo':''}"
         onchange="Imitazione._filtroNivel=this.value;Imitazione._aplicarFiltro()">
-        <option value="">🎯 Level</option>
+        <option value="">${I18n.t('imit_filtro_nivel')}</option>
         ${niveis.map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]||0})</option>`).join('')}
       </select>
     </div>`;

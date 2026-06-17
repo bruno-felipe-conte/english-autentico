@@ -450,7 +450,7 @@ VOCABULARY TOPIC: [REPLACE HERE — e.g., "travel vocabulary for airports", "res
 
   // ── Excluir item customizado ─────────────────────────────
   excluir(tipo, id) {
-    if (!confirm('Remover este item?')) return;
+    if (!confirm(I18n.t('ia_remover_item'))) return;
     const keys = {
       dialogo: 'en_dialoghi_custom',
       canzone: 'en_canzoni_custom',

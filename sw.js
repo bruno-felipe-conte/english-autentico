@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker  |  Cache v46  |  Offline-first PWA
+// sw.js — Service Worker  |  Cache v47  |  Offline-first PWA
 // Estratégia:
 //   • Static assets  → cache-first  (JS, CSS, HTML, ícones)
 //   • /data/*.json   → network-first com fallback de cache
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'english-v1012';
+const CACHE = 'english-v1014';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
