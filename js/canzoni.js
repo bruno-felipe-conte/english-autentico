@@ -1056,7 +1056,17 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       const idxAtual = this.estrofeAtual;
       const estrofeAtualObj = can.estrofes[idxAtual];
       if (estrofeAtualObj && estrofeAtualObj.palavra_oculta && this.respostas[idxAtual] == null) {
-        const pauseAtMs = estrofeAtualObj.palavra_oculta_ms ?? estrofeAtualObj.inicio_ms;
+        let pauseAtMs = estrofeAtualObj.palavra_oculta_ms ?? estrofeAtualObj.inicio_ms;
+        // Gemini arredonda timestamps para segundos inteiros, então a palavra anterior
+        // pode compartilhar o mesmo ms da lacuna. Interpolamos com a palavra seguinte.
+        if (pauseAtMs != null && estrofeAtualObj.words) {
+          const hiddenIdx = estrofeAtualObj.words.findIndex(w => w.hidden);
+          if (hiddenIdx > 0 && estrofeAtualObj.words[hiddenIdx - 1].ms === pauseAtMs) {
+            const nextDiff = estrofeAtualObj.words.slice(hiddenIdx + 1).find(w => w.ms > pauseAtMs);
+            const nextMs = nextDiff?.ms ?? pauseAtMs + 1000;
+            pauseAtMs = pauseAtMs + Math.round((nextMs - pauseAtMs) / 2);
+          }
+        }
         if (!pausadoParaLacuna && pauseAtMs != null && curMs >= pauseAtMs) {
           pausadoParaLacuna = true;
           audioEl.pause();
