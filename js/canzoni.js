@@ -229,16 +229,12 @@ const Canzoni = {
         </div>
 
         <div style="background:#f9f6f0;border:1px solid #ede5d5;border-radius:10px;padding:0.9rem;margin-bottom:1rem">
-          <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.6rem">🤖 Build AI Song Exercises</div>
-          <div style="font-size:0.75rem;color:#8a7a60;margin-bottom:0.5rem">Paste a timed transcript (LRC format or YouTube table), click <strong>Build AI Prompt</strong>, copy the prompt into ChatGPT / Claude, then paste the result back to import all verses automatically.</div>
-          <textarea id="can-lrc-paste" class="ia-paste-area" rows="5" style="width:100%;font-family:monospace;font-size:0.82rem"
-            placeholder="[00:12.34] Line of the song
-[00:16.80] Next line"></textarea>
+          <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.6rem">🤖 Build AI Prompt (with exercises)</div>
           <div style="margin-top:0.5rem">
             <button class="btn-secondario" onclick="Canzoni._construirPromptIA()">🤖 Build AI Prompt (with exercises)</button>
           </div>
 
-          <div id="can-ia-bloco" style="display:none;margin-top:0.8rem">
+          <div id="can-ia-bloco" style="${idEditar ? 'display:none' : 'display:block'};margin-top:0.8rem">
             <p style="font-size:0.78rem;color:#8a7a60;margin-bottom:0.4rem">1. Copy the prompt below and paste it into your favorite AI (ChatGPT, Claude, etc.):</p>
             <div class="ia-prompt-box">
               <pre id="can-ia-prompt-text"></pre>
@@ -250,22 +246,8 @@ const Canzoni = {
           </div>
         </div>
 
-        <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.8rem;border-top:1px solid #f0e8d8;padding-top:1rem">
-          📝 Estrofes (versos com lacunas)
-        </div>
-
-        <div style="max-height:420px;overflow-y:auto;padding-right:4px;margin-bottom:0.8rem">
+        <div style="display:none">
           <div id="can-estrofes">${estrofesHtml}</div>
-        </div>
-
-        <button onclick="Canzoni._adicionarEstrofe()" class="btn-secondario" style="width:100%;margin:0 0 0.8rem">
-          ➕ Add verse
-        </button>
-
-        <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.8rem;margin-bottom:0.5rem;font-size:0.82rem;color:#6B4C1A">
-          💡 <strong>How to create a gap:</strong> Write the full text in the "Full text" field.
-          In "Text with gap", replace the word you want to hide with <code>___</code> (three underscores).
-          Enter the hidden word in the "Hidden word" field.
         </div>
 
         <div style="position:sticky;bottom:0;background:#fff;padding:0.75rem 0 0.25rem;border-top:1px solid #f0e8d8;z-index:10;margin-top:0.25rem">
@@ -284,6 +266,7 @@ const Canzoni = {
         if (audioEl && url) audioEl.src = url;
       });
     }
+    if (!idEditar) setTimeout(() => this._construirPromptIA(), 50);
   },
 
   // ── Áudio sincronizado (formulário) ────────────────────────
