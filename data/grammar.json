@@ -12,49 +12,49 @@
           "num": "Lesson 1",
           "titulo": "Personal Pronouns & Verb To Be (Affirmative)",
           "subtitulo": "I am, You are, He is",
-          "alerta": "O verbo 'To Be' é o coração do inglês! Ele significa 'ser' ou 'estar' e muda dependendo de quem está falando.",
+          "alerta": "O verbo 'To Be' é o coração do inglês! Em português temos 'ser' e 'estar', mas em inglês é um único verbo que muda de forma dependendo de quem está falando: I am, You are, He is. Dominar isso é o seu primeiro grande passo.",
           "observacao_cards": [
             {
               "italiano": "I am",
               "traducao": "Eu sou / estou",
               "genero": "1ª Pessoa Singular",
-              "motivo": "Sempre usa 'am'"
+              "motivo": "SOMENTE 'I' usa 'am'. Nunca 'is' ou 'are' com 'I'."
             },
             {
               "italiano": "You are",
               "traducao": "Você é / está",
               "genero": "2ª Pessoa",
-              "motivo": "Usa 'are' no singular e plural"
+              "motivo": "'You' usa 'are' tanto para singular (você) quanto plural (vocês)."
             },
             {
               "italiano": "He is",
               "traducao": "Ele é / está",
               "genero": "3ª Pessoa Singular (Ele)",
-              "motivo": "Sempre usa 'is'"
+              "motivo": "He, She e It SEMPRE usam 'is' — a regra dos três singulares."
             },
             {
               "italiano": "She is",
               "traducao": "Ela é / está",
               "genero": "3ª Pessoa Singular (Ela)",
-              "motivo": "Sempre usa 'is'"
+              "motivo": "She, como He e It, é 3ª pessoa singular, por isso usa 'is'."
             },
             {
               "italiano": "It is",
               "traducao": "Ele/Ela é / está (coisas/animais)",
               "genero": "3ª Pessoa Neutra",
-              "motivo": "Sempre usa 'is'"
+              "motivo": "'It' é para coisas e animais. Também usa 'is', igual a He e She."
             },
             {
               "italiano": "We are",
               "traducao": "Nós somos / estamos",
               "genero": "1ª Pessoa Plural",
-              "motivo": "Plural usa 'are'"
+              "motivo": "We, They e You (plural) usam 'are'. Plurais = are."
             },
             {
               "italiano": "They are",
               "traducao": "Eles/Elas são / estão",
               "genero": "3ª Pessoa Plural",
-              "motivo": "Plural usa 'are'"
+              "motivo": "'They' é 3ª pessoa plural, usa 'are', igual a We e You."
             }
           ],
           "tabela_visual": "| Pronoun | Verb To Be | Contraction |\n|---|---|---|\n| I | am | I'm |\n| You | are | You're |\n| He/She/It | is | He's/She's/It's |\n| We/They | are | We're/They're |",
@@ -62,29 +62,29 @@
             {
               "oracao": "She is a teacher.",
               "pergunta": "Por que usamos 'is'?",
-              "resposta": "Porque 'She' é terceira pessoa do singular.",
-              "conclusao": "She is = Ela é"
+              "resposta": "Porque 'She' é terceira pessoa do singular. A regra: He/She/It sempre 'is'. Pense nos três como um grupo especial que nunca muda.",
+              "conclusao": "She/He/It is — o grupo dos três singulares."
             },
             {
               "oracao": "They are happy.",
               "pergunta": "O que significa 'are' aqui?",
-              "resposta": "Significa 'estão'. Eles estão felizes.",
-              "conclusao": "They are = Eles estão"
+              "resposta": "Significa 'estão'. 'They' é plural, então usa 'are'. A mesma regra vale para 'We' e 'You'.",
+              "conclusao": "Plurais (We/They/You) sempre usam 'are'."
             }
           ],
           "armadilhas": [
             {
               "errado": "She am beautiful.",
               "certo": "She is beautiful.",
-              "explicacao": "'She' é 3ª pessoa do singular e exige 'is'."
+              "explicacao": "'She' pertence ao grupo He/She/It, que SEMPRE usa 'is'. 'Am' é exclusivo de 'I'. Nunca misture: 'She am' não existe."
             },
             {
               "errado": "It are a dog.",
               "certo": "It is a dog.",
-              "explicacao": "'It' é singular e exige 'is'."
+              "explicacao": "'It' é terceira pessoa singular (como He e She). O grupo He/She/It sempre usa 'is', nunca 'are'. 'It are' não existe."
             }
           ],
-          "coda": "Lembre-se: I am, You are, He/She/It is. Dominar isso é o primeiro passo para falar inglês com confiança!",
+          "coda": "Decore este triângulo: I → AM | He/She/It → IS | We/You/They → ARE. São apenas 3 regras para cobrir todos os casos do To Be afirmativo!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -153,31 +153,31 @@
           "num": "Lesson 2",
           "titulo": "Verb To Be (Negative & Questions)",
           "subtitulo": "I am not, Are you?",
-          "alerta": "Fazer perguntas e negar com o verbo 'To Be' é simples: basta adicionar o 'not' ou inverter a ordem das palavras!",
+          "alerta": "Para negar com To Be, adicione 'not' logo depois do verbo (He is not). Para perguntar, inverta a posição do verbo e do sujeito (Is he?). O verbo em si não muda — só a posição ou a adição de 'not' muda!",
           "observacao_cards": [
             {
               "italiano": "I am not",
               "traducao": "Eu não sou / estou",
               "genero": "Negativa",
-              "motivo": "Adiciona 'not' depois do verbo"
+              "motivo": "'Not' vem logo após o verbo To Be. Pode contrair: I'm not (única forma, sem 'amn't')."
             },
             {
               "italiano": "He is not (isn't)",
               "traducao": "Ele não é / está",
               "genero": "Negativa",
-              "motivo": "Pode ser contraído para isn't"
+              "motivo": "'is not' contrai para 'isn't'. Contrações são normais em inglês falado e informal."
             },
             {
               "italiano": "Are you?",
               "traducao": "Você é / está?",
               "genero": "Interrogativa",
-              "motivo": "Inverte o verbo e o sujeito"
+              "motivo": "Para perguntar: verbo vai para o INÍCIO, antes do sujeito. 'You are' vira 'Are you?'"
             },
             {
               "italiano": "Is she?",
               "traducao": "Ela é / está?",
               "genero": "Interrogativa",
-              "motivo": "Inverte o verbo e o sujeito"
+              "motivo": "Mesmo padrão de inversão: 'She is' vira 'Is she?' O verbo salta para a frente."
             }
           ],
           "tabela_visual": "| Affirmative | Negative | Question |\n|---|---|---|\n| I am | I am not (I'm not) | Am I? |\n| You are | You are not (aren't) | Are you? |\n| He is | He is not (isn't) | Is he? |",
@@ -185,29 +185,29 @@
             {
               "oracao": "Are they from Spain?",
               "pergunta": "Como sabemos que é uma pergunta?",
-              "resposta": "O verbo 'Are' está antes do sujeito 'they'.",
-              "conclusao": "Inverta a ordem para perguntar."
+              "resposta": "O verbo 'Are' está ANTES do sujeito 'they'. Em perguntas com To Be, o verbo sempre vem primeiro — é o sinal visual de que é uma pergunta, não uma afirmação.",
+              "conclusao": "Pergunta com To Be = verbo primeiro!"
             },
             {
               "oracao": "We aren't ready.",
               "pergunta": "O que é 'aren't'?",
-              "resposta": "É a contração de 'are not'.",
-              "conclusao": "Are not = Aren't"
+              "resposta": "É a contração de 'are not'. O apóstrofo marca onde a letra 'o' foi removida. Contrações são muito usadas no inglês falado e informal.",
+              "conclusao": "are not = aren't | is not = isn't | am not = I'm not"
             }
           ],
           "armadilhas": [
             {
               "errado": "You are doctor?",
               "certo": "Are you a doctor?",
-              "explicacao": "Em perguntas com 'To Be', o verbo DEVE vir antes do sujeito."
+              "explicacao": "Em inglês, perguntas com To Be OBRIGAM o verbo a vir antes do sujeito. Mudar só a entonação (como em português) não é suficiente em inglês escrito."
             },
             {
               "errado": "I amn't sad.",
               "certo": "I am not sad. (ou I'm not sad.)",
-              "explicacao": "Não existe a contração 'amn't'."
+              "explicacao": "'amn't' não existe no inglês padrão. As únicas formas corretas são 'I am not' (formal) e 'I'm not' (informal)."
             }
           ],
-          "coda": "Perguntas? Verbo na frente! Negativas? 'Not' depois do verbo! Pratique e isso vai ficar natural.",
+          "coda": "Três operações: NEGAR → adicione 'not' após o verbo. CONTRAIR → verbo+not (isn't, aren't, I'm not). PERGUNTAR → coloque o verbo na frente (Is he? Are you?).",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -276,31 +276,31 @@
           "num": "Lesson 3",
           "titulo": "Demonstrative Pronouns",
           "subtitulo": "This, That, These, Those",
-          "alerta": "Use os pronomes demonstrativos para apontar coisas. A escolha depende da distância (perto/longe) e da quantidade (singular/plural).",
+          "alerta": "Pronomes demonstrativos 'apontam' para coisas. A escolha depende de duas perguntas: (1) É perto ou longe? (2) É um ou vários? This/These = perto. That/Those = longe. This/That = um só. These/Those = vários.",
           "observacao_cards": [
             {
               "italiano": "This",
               "traducao": "Este, esta, isto",
               "genero": "Singular (Perto)",
-              "motivo": "Para uma coisa próxima"
+              "motivo": "Singular + perto de você. Pense: 'This' = posso tocar agora."
             },
             {
               "italiano": "That",
               "traducao": "Aquele, aquela, aquilo, esse, essa",
               "genero": "Singular (Longe)",
-              "motivo": "Para uma coisa distante"
+              "motivo": "Singular + longe. Pense: 'That' = preciso apontar com o dedo."
             },
             {
               "italiano": "These",
               "traducao": "Estes, estas",
               "genero": "Plural (Perto)",
-              "motivo": "Para várias coisas próximas"
+              "motivo": "Plural + perto. 'These' é o plural de 'This' (ambos perto)."
             },
             {
               "italiano": "Those",
               "traducao": "Aqueles, aquelas",
               "genero": "Plural (Longe)",
-              "motivo": "Para várias coisas distantes"
+              "motivo": "Plural + longe. 'Those' é o plural de 'That' (ambos longe)."
             }
           ],
           "tabela_visual": "| Quantidade | Perto (Aqui) | Longe (Lá) |\n|---|---|---|\n| **Singular** | This | That |\n| **Plural** | These | Those |",
@@ -308,29 +308,29 @@
             {
               "oracao": "This is my car.",
               "pergunta": "O carro está perto ou longe?",
-              "resposta": "Está perto, pois usamos 'This'.",
-              "conclusao": "This = singular perto"
+              "resposta": "Está perto, pois usamos 'This'. Regra: This/These = aqui do meu lado. 'This' = você pode tocar agora, está ao seu alcance.",
+              "conclusao": "This = 1 objeto perto (pode tocar)"
             },
             {
               "oracao": "Look at those birds!",
               "pergunta": "Os pássaros estão perto ou longe?",
-              "resposta": "Estão longe, pois usamos 'those'.",
-              "conclusao": "Those = plural longe"
+              "resposta": "Estão longe, pois usamos 'those'. 'Those' = plural e distante. Pense que você precisa apontar para um ponto distante.",
+              "conclusao": "Those = vários objetos longe (você aponta)"
             }
           ],
           "armadilhas": [
             {
               "errado": "These is my shoes.",
               "certo": "These are my shoes.",
-              "explicacao": "'These' é plural, então precisa do verbo no plural 'are'."
+              "explicacao": "'These' é plural e obriga o verbo To Be a ser 'are' (plural). Regra de concordância: pronome plural sempre combina com verbo plural."
             },
             {
               "errado": "This are my pen.",
               "certo": "This is my pen.",
-              "explicacao": "'This' é singular, use com 'is'."
+              "explicacao": "'This' é singular e obriga o verbo a ser 'is'. Concordância automática: This/That (singular) + is | These/Those (plural) + are."
             }
           ],
-          "coda": "This (um perto), These (vários perto). That (um longe), Those (vários longe).",
+          "coda": "Mapa mental: PERTO → This (1) / These (vários). LONGE → That (1) / Those (vários). E lembre: singular usa 'is', plural usa 'are'. Dois critérios, quatro palavras.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -398,25 +398,25 @@
           "num": "Lesson 4",
           "titulo": "Articles",
           "subtitulo": "A vs An vs The",
-          "alerta": "Em inglês, 'A' e 'An' significam 'um/uma'. A regra não depende da letra, mas sim do SOM (consoante ou vogal). 'The' é o artigo definido 'o/a/os/as'.",
+          "alerta": "A regra de 'A' vs 'An' NÃO depende da letra escrita — depende do SOM pronunciado. Pergunte: 'O primeiro som que ouço é vogal ou consoante?' Se vogal → 'an'. Se consoante → 'a'. Cuidado: 'hour' (h mudo = vogal) e 'university' (u soa como 'yu' = consoante).",
           "observacao_cards": [
             {
               "italiano": "A",
               "traducao": "Um, uma",
               "genero": "Artigo Indefinido",
-              "motivo": "Usado antes de som de consoante"
+              "motivo": "Antes de SOM de consoante. Ex: a car, a dog, a university (u=yu=consoante)."
             },
             {
               "italiano": "An",
               "traducao": "Um, uma",
               "genero": "Artigo Indefinido",
-              "motivo": "Usado antes de som de vogal"
+              "motivo": "Antes de SOM de vogal. Ex: an apple, an hour (h mudo), an egg, an idea."
             },
             {
               "italiano": "The",
               "traducao": "O, a, os, as",
               "genero": "Artigo Definido",
-              "motivo": "Usado para coisas específicas"
+              "motivo": "Para algo já conhecido/específico. Só existe um sol → 'the sun'. Já mencionamos o carro → 'the car'."
             }
           ],
           "tabela_visual": "| Article | Rule | Example |\n|---|---|---|\n| **A** | Before consonant sound | A car, a dog, a university |\n| **An** | Before vowel sound | An apple, an egg, an hour |\n| **The** | Specific things | The sun, the boy, the cars |",
@@ -424,29 +424,29 @@
             {
               "oracao": "I have an apple.",
               "pergunta": "Por que 'an' e não 'a'?",
-              "resposta": "Porque 'apple' começa com som de vogal.",
-              "conclusao": "An + som de vogal"
+              "resposta": "Porque 'apple' começa com o som de vogal /æ/. A regra: você OUVE vogal no início → use 'an'. Teste: pronuncie a palavra e preste atenção no primeiro som.",
+              "conclusao": "Teste de som: vogal → 'an'. Consoante → 'a'."
             },
             {
               "oracao": "The car is blue.",
               "pergunta": "Qualquer carro é azul?",
-              "resposta": "Não, um carro específico do qual estamos falando.",
-              "conclusao": "The = O/A específico"
+              "resposta": "Não, é um carro específico do qual já estamos falando. 'The' indica que ambos, quem fala e quem ouve, sabem de qual carro se trata.",
+              "conclusao": "'The' = os dois sabem de qual objeto falamos."
             }
           ],
           "armadilhas": [
             {
               "errado": "A hour.",
               "certo": "An hour.",
-              "explicacao": "A letra 'h' em 'hour' é muda, o som inicial é de vogal."
+              "explicacao": "A letra 'h' em 'hour' é completamente muda. O primeiro som ouvido é /aʊ/ (vogal). A regra sempre se aplica ao SOM, nunca à letra escrita."
             },
             {
               "errado": "An university.",
               "certo": "A university.",
-              "explicacao": "A letra 'u' em 'university' tem som de consoante (yu)."
+              "explicacao": "A letra 'u' em 'university' soa como /juː/ (= 'you'). Como 'y' é som de consoante, usamos 'a'. Outros: a union, a useful book."
             }
           ],
-          "coda": "Lembre-se da regra do som: 'A' para som de consoante, 'An' para som de vogal. Isso fará seu inglês fluir melhor!",
+          "coda": "3 passos: (1) Indefinido (um/uma)? → 'a' ou 'an'. (2) Som inicial de vogal? → 'an'. Consoante? → 'a'. (3) Específico/já conhecido? → 'the'. A regra é sempre sobre o SOM, não a letra!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -515,43 +515,43 @@
           "num": "Lesson 5",
           "titulo": "Plural of Nouns",
           "subtitulo": "Regulares (-s) e Irregulares (men, women, children)",
-          "alerta": "O plural em inglês é frequentemente fácil: basta colocar um '-s'. Mas cuidado com os irregulares teimosos que mudam a palavra toda!",
+          "alerta": "A maioria dos plurais em inglês é simples: adicione '-s'. Mas existe um grupo de palavras antigas que trocam a vogal interna em vez de adicionar '-s'. Esses são os 'plurais irregulares' — memorize-os um por um, pois aparecem em toda conversa.",
           "observacao_cards": [
             {
               "italiano": "-s (Regular)",
               "traducao": "-s",
               "genero": "Regra Geral",
-              "motivo": "Adiciona-se -s à maioria das palavras"
+              "motivo": "Regra geral para 90%+ das palavras: book→books, car→cars, dog→dogs."
             },
             {
               "italiano": "Men",
               "traducao": "Homens",
               "genero": "Irregular",
-              "motivo": "Plural de 'man'"
+              "motivo": "Muda a vogal interna (a→e). Par para memorizar: man→men / woman→women."
             },
             {
               "italiano": "Women",
               "traducao": "Mulheres",
               "genero": "Irregular",
-              "motivo": "Plural de 'woman'"
+              "motivo": "Muda a vogal interna (a→e). Par para memorizar: woman→women / man→men."
             },
             {
               "italiano": "Children",
               "traducao": "Crianças",
               "genero": "Irregular",
-              "motivo": "Plural de 'child'"
+              "motivo": "Plural completamente diferente, sem padrão de vogal. 'Child' vira 'children' — memorize!"
             },
             {
               "italiano": "Teeth",
               "traducao": "Dentes",
               "genero": "Irregular",
-              "motivo": "Plural de 'tooth'"
+              "motivo": "Muda a vogal (oo→ee). Par para memorizar: tooth→teeth / foot→feet."
             },
             {
               "italiano": "Feet",
               "traducao": "Pés",
               "genero": "Irregular",
-              "motivo": "Plural de 'foot'"
+              "motivo": "Muda a vogal (oo→ee). Par para memorizar: foot→feet / tooth→teeth."
             }
           ],
           "tabela_visual": "| Singular | Plural (Regular) | Singular | Plural (Irregular) |\n|---|---|---|---|\n| car | cars | man | men |\n| dog | dogs | woman | women |\n| book | books | child | children |",
@@ -559,29 +559,29 @@
             {
               "oracao": "The children are playing.",
               "pergunta": "'Children' está no singular ou plural?",
-              "resposta": "Plural. O singular é 'child'.",
-              "conclusao": "Child -> Children"
+              "resposta": "Plural. O singular é 'child'. 'Children' é completamente irregular — a palavra toda muda. É um dos irregulares mais usados no inglês cotidiano.",
+              "conclusao": "Child → Children (irregular, sem '-s')"
             },
             {
               "oracao": "I have two dogs.",
               "pergunta": "Como formamos o plural de dog?",
-              "resposta": "Apenas adicionando -s.",
-              "conclusao": "Dog -> Dogs"
+              "resposta": "Apenas adicionando '-s'. 'Dog' é um plural regular — sem exceções. A regra geral funciona para a maioria esmagadora dos substantivos em inglês.",
+              "conclusao": "Dog → Dogs (regular, só +s)"
             }
           ],
           "armadilhas": [
             {
               "errado": "Two childrens.",
               "certo": "Two children.",
-              "explicacao": "'Children' já é plural, não se adiciona '-s'."
+              "explicacao": "'Children' já é plural — ele carrega o significado de 'crianças'. Adicionar '-s' seria duplicar o plural. Irregulares já são plurais completos."
             },
             {
               "errado": "Five mans.",
               "certo": "Five men.",
-              "explicacao": "O plural de 'man' é 'men'."
+              "explicacao": "'man' tem plural irregular pela troca de vogal interna (a→e), não pela adição de '-s'. Mesmo com woman→women. A forma 'mans' simplesmente não existe."
             }
           ],
-          "coda": "Conhecer os plurais irregulares salva você de erros super comuns. Pratique-os bastante!",
+          "coda": "Regra de ouro: adicione '-s' por padrão. Mas memorize estes 5 irregulares essenciais: man→men, woman→women, child→children, tooth→teeth, foot→feet. Eles aparecem em qualquer conversa!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -650,49 +650,49 @@
           "num": "Lesson 6",
           "titulo": "Possessive Adjectives",
           "subtitulo": "My, Your, His, Her",
-          "alerta": "Os adjetivos possessivos sempre vêm ANTES de um substantivo para mostrar a quem algo pertence.",
+          "alerta": "Adjetivos possessivos (my, your, his...) mostram posse e SEMPRE aparecem antes de um substantivo. Em inglês, o possessivo não muda de forma com o gênero ou número do objeto — 'my car' e 'my cars' usam o mesmo 'my'. O possessivo muda apenas com o DONO.",
           "observacao_cards": [
             {
               "italiano": "My",
               "traducao": "Meu(s), Minha(s)",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'I' (Eu)"
+              "motivo": "Possessivo de 'I'. Sempre antes do substantivo: my car, my books, my name."
             },
             {
               "italiano": "Your",
               "traducao": "Seu(s), Sua(s)",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'You' (Você/Vocês)"
+              "motivo": "Possessivo de 'You'. Serve para singular e plural: your phone, your friends."
             },
             {
               "italiano": "His",
               "traducao": "Dele",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'He' (Ele)"
+              "motivo": "Possessivo de 'He'. Nunca use 'he' antes de substantivo — use 'his car', não 'he car'."
             },
             {
               "italiano": "Her",
               "traducao": "Dela",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'She' (Ela)"
+              "motivo": "'Her' é possessivo de 'She'. Também é pronome objeto ('I love her'). O contexto diferencia."
             },
             {
               "italiano": "Its",
               "traducao": "Dele/Dela (coisas/animais)",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'It' (Ele/Ela neutro)"
+              "motivo": "Possessivo de 'It' (SEM apóstrofo). 'It's' (COM apóstrofo) = 'It is'. Confusão clássica!"
             },
             {
               "italiano": "Our",
               "traducao": "Nosso(s), Nossa(s)",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'We' (Nós)"
+              "motivo": "Possessivo de 'We'. Fácil lembrar: somos NÓS → NOSSO = OUR."
             },
             {
               "italiano": "Their",
               "traducao": "Deles, Delas",
               "genero": "Possessive",
-              "motivo": "Refere-se a 'They' (Eles/Elas)"
+              "motivo": "Possessivo de 'They'. Não confunda: 'there' = lá, 'they're' = they are, 'their' = deles."
             }
           ],
           "tabela_visual": "| Pronoun | Possessive Adjective | Example |\n|---|---|---|\n| I | My | my car |\n| You | Your | your book |\n| He | His | his dog |\n| She | Her | her cat |\n| It | Its | its tail |\n| We | Our | our house |\n| They | Their | their friends |",
@@ -700,29 +700,29 @@
             {
               "oracao": "Her name is Maria.",
               "pergunta": "De quem é o nome?",
-              "resposta": "Dela.",
-              "conclusao": "Her = Dela."
+              "resposta": "Dela (de Maria, sujeito feminino). Quando vemos 'her + substantivo', sabemos que aquilo pertence a uma mulher. O possessivo reflete quem é o dono, não o que é possuído.",
+              "conclusao": "her = possessivo de She (dela)"
             },
             {
               "oracao": "Our house is big.",
               "pergunta": "O que indica 'Our'?",
-              "resposta": "Indica 'nosso' (de nós).",
-              "conclusao": "Our = Nosso."
+              "resposta": "Indica 'nosso' — a casa pertence a 'nós'. 'Our' é o possessivo de 'We'. Sempre antes do substantivo: our house, our car, our friends.",
+              "conclusao": "our = possessivo de We (nosso/nossa)"
             }
           ],
           "armadilhas": [
             {
               "errado": "The dog plays with it's toy.",
               "certo": "The dog plays with its toy.",
-              "explicacao": "'Its' (sem apóstrofo) é o possessivo. 'It's' (com apóstrofo) significa 'It is' ou 'It has'."
+              "explicacao": "Dica essencial: 'Its' (sem apóstrofo) = possessivo. 'It's' (com apóstrofo) = 'It is'. O apóstrofo sempre marca uma letra omitida — aqui, o 'i' de 'is'."
             },
             {
               "errado": "This is he car.",
               "certo": "This is his car.",
-              "explicacao": "Usamos o adjetivo possessivo (his) e não o pronome pessoal (he) antes do substantivo."
+              "explicacao": "Antes de substantivo, use sempre o adjetivo possessivo (his, her, my...), nunca o pronome pessoal (he, she, I). 'He car' ❌ → 'His car' ✅"
             }
           ],
-          "coda": "Lembre-se: em inglês, o possessivo não muda se a coisa possuída é plural ou singular (ex: 'my car' / 'my cars'). E sempre coloque o possessivo antes do substantivo!",
+          "coda": "Tabela mental: I→my, You→your, He→his, She→her, It→its, We→our, They→their. O possessivo em inglês nunca concorda com o objeto — só muda com o dono!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -785,25 +785,25 @@
           "num": "Lesson 7",
           "titulo": "Possessive Pronouns & Genitive Case",
           "subtitulo": "Mine, Yours, John's car",
-          "alerta": "Pronomes possessivos substituem o substantivo, e o caso genitivo ('s) mostra posse de forma direta conectando o dono e a coisa possuída.",
+          "alerta": "Há duas formas de mostrar posse em inglês: (1) Pronome possessivo (mine, yours...) — substitui o substantivo e nunca vem antes dele. (2) Caso genitivo ('s) — adiciona 's ao possuidor. O possuidor em inglês SEMPRE vem antes do objeto (John's car), ao contrário do português (o carro do John).",
           "observacao_cards": [
             {
               "italiano": "Mine",
               "traducao": "Meu(s), Minha(s)",
               "genero": "Pronoun",
-              "motivo": "Substitui 'my + substantivo'"
+              "motivo": "Substitui 'my + substantivo'. Vai no final da frase, nunca antes de outro substantivo."
             },
             {
               "italiano": "Yours",
               "traducao": "Seu(s), Sua(s)",
               "genero": "Pronoun",
-              "motivo": "Substitui 'your + substantivo'"
+              "motivo": "Substitui 'your + substantivo'. 'This book is yours' = não precisa repetir 'book'."
             },
             {
               "italiano": "'s",
               "traducao": "De (Posse)",
               "genero": "Genitive Case",
-              "motivo": "Adicionado ao possuidor (ex: Maria's book)"
+              "motivo": "Adicionado ao NOME do possuidor. 'John's book' = possuidor primeiro, sempre."
             }
           ],
           "tabela_visual": "| Possessive Adjective | Possessive Pronoun | Genitive Case |\n|---|---|---|\n| My book | Mine | John's book |\n| Your book | Yours | The teacher's desk |\n| Her book | Hers | Mary's house |\n| Our book | Ours | My parents' car |",
@@ -811,29 +811,29 @@
             {
               "oracao": "This car is mine.",
               "pergunta": "O que 'mine' substitui?",
-              "resposta": "Substitui 'my car'.",
-              "conclusao": "Mine é um pronome, não precisa do substantivo depois."
+              "resposta": "Substitui 'my car'. Quando queremos dizer 'É meu' sem repetir o substantivo, usamos 'mine'. Pronomes possessivos ficam no final — 'This is mine', nunca 'This is mine car'.",
+              "conclusao": "mine = pronome que substitui 'my + substantivo'"
             },
             {
               "oracao": "It is Sarah's phone.",
               "pergunta": "De quem é o telefone?",
-              "resposta": "Da Sarah.",
-              "conclusao": "Sarah + 's = De Sarah."
+              "resposta": "Da Sarah. Em inglês, usamos o genitivo: 'Sarah's phone'. O possuidor SEMPRE vem primeiro — o oposto do português 'o telefone da Sarah'.",
+              "conclusao": "Sarah's = pertence a Sarah (possuidor + 's)"
             }
           ],
           "armadilhas": [
             {
               "errado": "This is the car of John.",
               "certo": "This is John's car.",
-              "explicacao": "Em inglês, para pessoas, usamos preferencialmente o caso genitivo ('s)."
+              "explicacao": "Para pessoas, prefira o genitivo ('s) ao invés de 'of'. 'of + possuidor' é mais usado para coisas/lugares: 'the door of the room', mas 'John's room'."
             },
             {
               "errado": "The book is my.",
               "certo": "The book is mine.",
-              "explicacao": "Não se usa adjetivos possessivos (my, your) sem um substantivo depois. No final da frase, usamos os pronomes (mine, yours)."
+              "explicacao": "Adjetivos possessivos (my, your...) EXIGEM substantivo depois. Sozinhos no final da frase, use o pronome: 'mine, yours, hers'. 'The book is my' ❌ → 'The book is mine' ✅"
             }
           ],
-          "coda": "Lembre-se da diferença: 'My book' (adjetivo + substantivo) vs. 'The book is mine' (pronome, sem substantivo depois). E para dizer que algo é de alguém, apenas adicione 's ao nome do dono!",
+          "coda": "Dois padrões de posse: (1) 'my book' (adjetivo + substantivo). (2) 'the book is mine' (pronome sozinho). (3) 'Tom's book' (genitivo para pessoas). O possuidor em inglês sempre vem primeiro!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -894,25 +894,25 @@
           "num": "Lesson 8",
           "titulo": "Question Words 1",
           "subtitulo": "What, Who, Where",
-          "alerta": "Em inglês, as palavras de pergunta (Wh- words) vêm sempre no início da frase para buscar informações específicas.",
+          "alerta": "Question Words (Wh- words) abrem perguntas buscando informação específica — não apenas 'sim' ou 'não'. Elas SEMPRE ficam no início da frase, seguidas do auxiliar (do/does/is/are) e depois o sujeito. Estrutura: QW + auxiliar + sujeito + verbo?",
           "observacao_cards": [
             {
               "italiano": "What",
               "traducao": "O que / Qual",
               "genero": "Question Word",
-              "motivo": "Para perguntar sobre coisas ou ações"
+              "motivo": "Pergunta sobre COISAS ou AÇÕES. 'What is this?' / 'What do you do?' Nunca para pessoas."
             },
             {
               "italiano": "Who",
               "traducao": "Quem",
               "genero": "Question Word",
-              "motivo": "Para perguntar sobre pessoas"
+              "motivo": "Pergunta sobre PESSOAS. 'Who is she?' Nunca use 'who' para objetos ou lugares."
             },
             {
               "italiano": "Where",
               "traducao": "Onde",
               "genero": "Question Word",
-              "motivo": "Para perguntar sobre lugares"
+              "motivo": "Pergunta sobre LUGARES. 'Where do you live?' Sempre no início, antes do auxiliar."
             }
           ],
           "tabela_visual": "| Question Word | Meaning | Example |\n|---|---|---|\n| What | Coisas/Ações | What is this? |\n| Who | Pessoas | Who is she? |\n| Where | Lugares | Where are you? |",
@@ -920,29 +920,29 @@
             {
               "oracao": "What is your name?",
               "pergunta": "O que 'What' significa aqui?",
-              "resposta": "Qual.",
-              "conclusao": "What = O que ou Qual."
+              "resposta": "'What' pergunta sobre COISAS/INFORMAÇÕES. Aqui pergunta sobre o nome. Estrutura: What + verbo auxiliar + sujeito? Com To Be: What is + sujeito?",
+              "conclusao": "What = coisas, informações, ações"
             },
             {
               "oracao": "Where is the station?",
               "pergunta": "Sobre o que estamos perguntando?",
-              "resposta": "Sobre um lugar.",
-              "conclusao": "Where = Onde."
+              "resposta": "Sobre um LUGAR (a estação). 'Where' sempre busca informação de localização. Com To Be: 'Where is/are + sujeito?' Com outros verbos: 'Where do/does + sujeito + verbo?'",
+              "conclusao": "Where = lugares, localizações"
             }
           ],
           "armadilhas": [
             {
               "errado": "Who is your phone?",
               "certo": "What is your phone?",
-              "explicacao": "Não se usa 'Who' (quem) para coisas. Use 'What' ou 'Which'."
+              "explicacao": "'Who' é exclusivo para PESSOAS. Para coisas → What. Para lugares → Where. Separação clara: Who = pessoa, What = coisa, Where = lugar."
             },
             {
               "errado": "Is where the hospital?",
               "certo": "Where is the hospital?",
-              "explicacao": "A Question Word vem ANTES do verbo auxiliar (Where is...)."
+              "explicacao": "Question Words LIDERAM a frase. Ordem obrigatória: QW + auxiliar + sujeito + verbo. 'Where is the hospital?' — a QW vem antes do verbo auxiliar."
             }
           ],
-          "coda": "What (coisas), Who (pessoas) e Where (lugares). Coloque essas palavras sempre no comecinho da sua pergunta!",
+          "coda": "Guia rápido: WHO = pessoas (quem). WHAT = coisas/ações (o quê/qual). WHERE = lugares (onde). Sempre no início, sempre seguidas do auxiliar. Estrutura: QW + aux + sujeito + verbo?",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1005,19 +1005,19 @@
           "num": "Lesson 9",
           "titulo": "Present Simple (Affirmative)",
           "subtitulo": "I, You, We, They",
-          "alerta": "O Present Simple é usado para rotinas, hábitos e fatos permanentes. Para I, You, We e They, o verbo permanece igual ao infinitivo (sem o 'to').",
+          "alerta": "O Present Simple descreve rotinas, hábitos e fatos permanentes — não ações acontecendo agora. Para os pronomes I, You, We e They, o verbo fica exatamente igual ao infinitivo (sem o 'to'). Sem modificações, sem '-s', sem auxiliares no afirmativo.",
           "observacao_cards": [
             {
               "italiano": "Work",
               "traducao": "Trabalhar",
               "genero": "Verb",
-              "motivo": "Mantém-se igual para I, You, We, They"
+              "motivo": "Com I, You, We, They: o verbo não muda. I work, you work, we work, they work — idêntico."
             },
             {
               "italiano": "Like",
               "traducao": "Gostar",
               "genero": "Verb",
-              "motivo": "I like, You like, We like, They like"
+              "motivo": "Outro exemplo fixo: I like, you like, we like, they like. O verbo nunca muda para esses pronomes."
             }
           ],
           "tabela_visual": "| Pronoun | Verb (Play) | Example |\n|---|---|---|\n| I | play | I play tennis |\n| You | play | You play well |\n| We | play | We play together |\n| They | play | They play games |",
@@ -1025,29 +1025,29 @@
             {
               "oracao": "They live in New York.",
               "pergunta": "O verbo 'live' muda?",
-              "resposta": "Não.",
-              "conclusao": "Com 'They', o verbo não sofre alteração."
+              "resposta": "Não. Com 'They' (e com I, You, We), o verbo permanece igual ao infinitivo, sem modificação alguma. Isso muda SOMENTE com He, She e It — que é a Lição 10.",
+              "conclusao": "I/You/We/They + verbo base = zero modificação"
             },
             {
               "oracao": "We study English every day.",
               "pergunta": "O que esta frase expressa?",
-              "resposta": "Uma rotina ou hábito.",
-              "conclusao": "Present Simple é usado para hábitos e rotinas."
+              "resposta": "Uma rotina ou hábito regular. 'Every day' é a pista — indica que isso acontece repetidamente. Present Simple é o tempo do 'faço isso sempre', não do 'estou fazendo agora'.",
+              "conclusao": "Pistas de rotina: every day, always, usually, on Mondays..."
             }
           ],
           "armadilhas": [
             {
               "errado": "I am play soccer.",
               "certo": "I play soccer.",
-              "explicacao": "Não use o verbo 'to be' (am/is/are) junto com outro verbo principal no Present Simple."
+              "explicacao": "NUNCA use To Be (am/is/are) + verbo de ação no Present Simple afirmativo. A estrutura correta é simplesmente: sujeito + verbo base. 'I am play' ❌ → 'I play' ✅"
             },
             {
               "errado": "They plays tennis.",
               "certo": "They play tennis.",
-              "explicacao": "Para 'They', o verbo não ganha 's'. O 's' é apenas para He/She/It."
+              "explicacao": "O '-s' no Present Simple é EXCLUSIVO de He/She/It. Para 'They' (e We, You, I) o verbo fica na forma base. 'They plays' é o erro mais comum de iniciantes."
             }
           ],
-          "coda": "Dizer o que você faz todo dia é muito simples! Basta usar o pronome (I, You, We, They) e o verbo na sua forma básica. Nada de 'am', 'is' ou 'are' pelo meio!",
+          "coda": "Fórmula: Sujeito + Verbo Base (sem nada). Para I, You, We, They: zero modificação. Para He, She, It: adicione '-s' ou '-es' (isso é a Lição 10!). Nada de 'am/is/are' no afirmativo de ação.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1110,25 +1110,25 @@
           "num": "Lesson 10",
           "titulo": "Present Simple (He/She/It)",
           "subtitulo": "Regras do -s, -es, -ies",
-          "alerta": "Quando falamos sobre Ele (He), Ela (She) ou um animal/coisa (It) no presente, o verbo principal sofre uma pequena mudança no final!",
+          "alerta": "He, She e It são especiais no Present Simple: o verbo sempre recebe uma terminação extra. A regra principal é simples — adicione '-s'. Mas há variações ortográficas: verbos em ch/sh/s/x/z/o ganham '-es', e verbos em consoante+y trocam 'y' por '-ies'.",
           "observacao_cards": [
             {
               "italiano": "-s",
               "traducao": "Regra geral",
               "genero": "Spelling Rule",
-              "motivo": "Adicionar 's' na maioria dos verbos (work -> works)"
+              "motivo": "Regra geral (90% dos verbos): +s. play→plays, work→works, like→likes, eat→eats."
             },
             {
               "italiano": "-es",
               "traducao": "ch, sh, s, x, z, o",
               "genero": "Spelling Rule",
-              "motivo": "Adicionar 'es' (watch -> watches, go -> goes)"
+              "motivo": "Para facilitar pronúncia: -ch/-sh/-s/-x/-z/-o → +es. watch→watches, go→goes, fix→fixes."
             },
             {
               "italiano": "-ies",
               "traducao": "Consoante + y",
               "genero": "Spelling Rule",
-              "motivo": "Tirar o 'y' e colocar 'ies' (study -> studies)"
+              "motivo": "Consoante+y → troque 'y' por '-ies'. study→studies, fly→flies. Vogal+y → só '-s': play→plays."
             }
           ],
           "tabela_visual": "| Verb | He / She / It |\n|---|---|\n| play | plays |\n| go | goes |\n| watch | watches |\n| study | studies |",
@@ -1136,29 +1136,29 @@
             {
               "oracao": "She goes to school.",
               "pergunta": "Por que o verbo é 'goes' e não 'go'?",
-              "resposta": "Porque com 'She' adicionamos '-es' a verbos terminados em 'o'.",
-              "conclusao": "go -> goes para He/She/It."
+              "resposta": "'go' termina em 'o', então recebe '-es' para facilitar a pronúncia. Regra: verbos terminados em -o, -ch, -sh, -s, -x, -z → adicione '-es', não apenas '-s'.",
+              "conclusao": "Terminação -o/-ch/-sh/-x/-z/-s → adiciona '-es'"
             },
             {
               "oracao": "He studies English.",
               "pergunta": "Qual era a forma original do verbo?",
-              "resposta": "Study.",
-              "conclusao": "Study termina em consoante + y, então vira studies."
+              "resposta": "'Study'. Termina em consoante (d) + y → tire o 'y' e adicione '-ies'. Se terminasse em VOGAL + y (como 'play'), seria só '-s' (plays). Olhe sempre a letra antes do 'y'.",
+              "conclusao": "Consoante + y → troca 'y' por '-ies'"
             }
           ],
           "armadilhas": [
             {
               "errado": "He play soccer.",
               "certo": "He plays soccer.",
-              "explicacao": "É obrigatório adicionar o 's' para a 3ª pessoa do singular no presente afirmativo."
+              "explicacao": "Para He/She/It, a terminação no Present Simple afirmativo é OBRIGATÓRIA. Esquecer o '-s' é o erro mais marcante de iniciantes. Soa errado para qualquer falante nativo."
             },
             {
               "errado": "She flys a plane.",
               "certo": "She flies a plane.",
-              "explicacao": "O verbo 'fly' termina em consoante (l) + y. Devemos tirar o y e colocar 'ies'."
+              "explicacao": "'fly' termina em consoante (l) + y → troca 'y' por '-ies' = flies. Mas 'play' termina em VOGAL (a) + y → só '+s' = plays. Regra: olhe a letra ANTES do 'y'."
             }
           ],
-          "coda": "Lembre-se da regra do Super-S! Com He, She ou It, o verbo sempre leva um 's', 'es' ou 'ies' no final nas frases afirmativas do presente.",
+          "coda": "Regras do He/She/It: (1) Maioria → +s | (2) -ch/-sh/-s/-x/-z/-o → +es | (3) Consoante+y → troca y por -ies | (4) Vogal+y → +s. Pronto — você domina a regra completa do Present Simple!",
           "exercicios": [
             {
               "tipo": "escolha",
