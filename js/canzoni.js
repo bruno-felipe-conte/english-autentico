@@ -259,12 +259,12 @@ const Canzoni = {
             <!-- Botão de unir e importar -->
             <div style="margin-top:0.8rem;display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
               <button class="btn-primario" style="flex:1;min-width:180px" onclick="Canzoni._unirEImportar()">✅ Unir e Importar (4 partes)</button>
-              <button class="btn-secondario" style="font-size:0.78rem" onclick="Canzoni._importarResultadoIA()">📥 Importar parte única</button>
+              <button class="btn-secondario" style="font-size:0.78rem" onclick="Canzoni._mostrarCampoParteUnica()">📥 Importar parte única</button>
             </div>
             <p style="font-size:0.72rem;color:#8a7a60;margin-top:0.4rem">💡 Se tiver só uma parte ou a música inteira, use o botão "Importar parte única".</p>
 
-            <!-- Campo legado para importação de parte única -->
-            <textarea id="can-ia-resultado" class="ia-paste-area" rows="4" placeholder="Ou cole aqui um JSON completo (parte única)..." style="margin-top:0.5rem;display:none"></textarea>
+            <!-- Campo para importação de parte única — revelado pelo botão -->
+            <textarea id="can-ia-resultado" class="ia-paste-area" rows="4" placeholder="Cole aqui o JSON completo (parte única ou música inteira)..." style="margin-top:0.5rem;display:none"></textarea>
           </div>
         </div>
 
@@ -676,6 +676,23 @@ ${estrutura}${entrega}`;
     }
     this._importarResultadoIA();
     App.notificar(`✅ ${partes.length} linhas unidas e importadas com sucesso!`, 'sucesso');
+  },
+
+  _mostrarCampoParteUnica() {
+    const ta = document.getElementById('can-ia-resultado');
+    if (!ta) return;
+    if (ta.style.display === 'none' || !ta.style.display) {
+      // First click: reveal field and focus it
+      ta.style.display = 'block';
+      ta.placeholder = 'Cole aqui o JSON completo (parte única ou música inteira) e clique no botão novamente...';
+      ta.focus();
+      // Change button label to signal second click will import
+      const btn = document.querySelector('[onclick="Canzoni._mostrarCampoParteUnica()"]');
+      if (btn) { btn.textContent = '✅ Confirmar e Importar'; btn.style.background = 'rgba(74,222,128,0.2)'; }
+    } else {
+      // Second click (or field already visible): import
+      this._importarResultadoIA();
+    }
   },
 
   _importarResultadoIA() {
