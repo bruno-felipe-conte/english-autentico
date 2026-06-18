@@ -1026,8 +1026,6 @@ ${estrutura}${entrega}`;
     const can = this.todasCanzoni().find(c => c.id === id);
     if (!can) return;
     this.canzonAtual = can;
-    // Multi-part imports can produce out-of-order estrofes; binary search requires sorted input
-    can.estrofes.sort((a, b) => (a.inicio_ms ?? a.words?.[0]?.ms ?? 0) - (b.inicio_ms ?? b.words?.[0]?.ms ?? 0));
     this.estrofeAtual = 0;
     this.acertos = 0;
     this.erros = 0;
@@ -1200,7 +1198,7 @@ ${estrutura}${entrega}`;
       words.push(...lineWords);
     });
 
-    // Pass 2: line endMs = next line's startMs
+    // Pass 2: line endMs = next line's startMs (original order)
     for (let i = 0; i < lines.length - 1; i++) {
       lines[i].endMs = lines[i + 1].startMs;
     }
@@ -1214,7 +1212,27 @@ ${estrutura}${entrega}`;
       }
     }
 
-    this._songIdx = { words, lines };
+    // Pass 4: sort lines and words by startMs for binary search.
+    // Multi-part Gemini imports can produce out-of-order timestamps (each part starts near 0s).
+    // We sort internally WITHOUT modifying can.estrofes, so rendering order is preserved.
+    // line.index always holds the original estrofe index → state.lineIndex maps to DOM order.
+    const sortedLineOrder = [...Array(lines.length).keys()]
+      .sort((a, b) => lines[a].startMs - lines[b].startMs);
+    const linesSorted = sortedLineOrder.map(i => lines[i]);
+
+    // Build sorted words array following sorted line order, and map original flat idx → sorted idx
+    const wordsSorted = [];
+    const wordSortedIdx = new Array(words.length);
+    for (const li of sortedLineOrder) {
+      const line = lines[li];
+      for (let wi = 0; wi < line.wordCount; wi++) {
+        const origIdx = line.firstWordIdx + wi;
+        wordSortedIdx[origIdx] = wordsSorted.length;
+        wordsSorted.push(words[origIdx]);
+      }
+    }
+
+    this._songIdx = { words: wordsSorted, lines: linesSorted, wordSortedIdx, originalLines: lines };
   },
 
   // Binary search: last index in arr where arr[i].startMs <= ms (-1 if none)
@@ -1331,11 +1349,12 @@ ${estrutura}${entrega}`;
       if (v.words && v.words.length > 0) {
         // Word-level rendering with clickable spans
         const distribWords = this._distribuirTimestamps(v.words.map(w => ({ ...w })));
-        const firstWordIdx = this._songIdx?.lines[i]?.firstWordIdx ?? 0;
+        const origFirstWordIdx = this._songIdx?.originalLines?.[i]?.firstWordIdx ?? 0;
         const wordsHtml = distribWords.map((wd, wi) => {
           const nextMs = (wi + 1 < distribWords.length) ? distribWords[wi + 1].ms : (wd.ms + 1500);
           const msVal = wd.ms ?? 0;
-          const gIdx = firstWordIdx + wi; // global word index in _songIdx.words
+          // gIdx = sorted word index so RAF can look up this._songIdx.words[el._wIdx]
+          const gIdx = this._songIdx?.wordSortedIdx?.[origFirstWordIdx + wi] ?? (origFirstWordIdx + wi);
           const tooltip = wd.m ? ' title="' + this._esc(wd.m) + '"' : '';
           if (wd.hidden) {
             let blankHtml;
@@ -1510,8 +1529,8 @@ ${estrutura}${entrega}`;
       if (deveTocar) audioEl.play();
     }
 
-    const verseEls = Array.from(document.querySelectorAll('#can-lyrics .can-verse[data-tempo-ms]'))
-      .sort((a, b) => parseInt(a.dataset.tempoMs, 10) - parseInt(b.dataset.tempoMs, 10));
+    // verseEls in DOM order = original estrofe order, matching state.lineIndex (= line.index = original estrofe idx)
+    const verseEls = Array.from(document.querySelectorAll('#can-lyrics .can-verse'));
 
     verseEls.forEach(el => {
       el.style.cursor = 'pointer';
@@ -1593,7 +1612,7 @@ ${estrutura}${entrega}`;
 
       // 3. Pause at blank — index-driven, offset-corrected
       const estIdx  = this.estrofeAtual;
-      const estLine = this._songIdx?.lines[estIdx];
+      const estLine = this._songIdx?.originalLines?.[estIdx];
       if (estLine?.hasBlank && this.respostas[estIdx] == null && !pausadoParaLacuna) {
         const pauseTarget = (estLine.pauseMs ?? 0) + (this.syncOffsetMs || 0);
         if (audioMs >= pauseTarget) {
