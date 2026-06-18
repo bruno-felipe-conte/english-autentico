@@ -1026,6 +1026,8 @@ ${estrutura}${entrega}`;
     const can = this.todasCanzoni().find(c => c.id === id);
     if (!can) return;
     this.canzonAtual = can;
+    // Multi-part imports can produce out-of-order estrofes; binary search requires sorted input
+    can.estrofes.sort((a, b) => (a.inicio_ms ?? a.words?.[0]?.ms ?? 0) - (b.inicio_ms ?? b.words?.[0]?.ms ?? 0));
     this.estrofeAtual = 0;
     this.acertos = 0;
     this.erros = 0;
