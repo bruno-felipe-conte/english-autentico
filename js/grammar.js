@@ -775,7 +775,7 @@ const Grammatica = {
         <div class="gram-flip-card" onclick="this.classList.toggle('flipped')">
           <div class="gram-flip-card-inner">
             <div class="gram-flip-card-front">
-              <div class="gfc-it">${c.italiano}</div>
+              <div class="gfc-en">${c.ingles}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
               <div class="gfc-click">Clique para revelar 👆</div>
