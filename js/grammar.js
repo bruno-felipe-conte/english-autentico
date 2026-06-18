@@ -778,10 +778,10 @@ const Grammatica = {
               <div class="gfc-it">${c.italiano}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
-              <div class="gfc-click">${'Click to reveal 👆'}</div>
+              <div class="gfc-click">${I18n.idioma === 'pt' ? 'Clique para revelar 👆' : 'Click to reveal 👆'}</div>
             </div>
             <div class="gram-flip-card-back">
-              <div class="gfc-titulo-regra">The Pattern:</div>
+              <div class="gfc-titulo-regra">${I18n.idioma === 'pt' ? 'O Padrão:' : 'The Pattern:'}</div>
               <div class="gfc-regra-txt">${c.motivo}</div>
             </div>
           </div>
@@ -856,7 +856,7 @@ const Grammatica = {
             </div>
           </div>
           <div class="gram-armadilha-motivo">
-            <strong>${I18n.t('gram_fase5_porque')}</strong> ${a.motivo}
+            <strong>${I18n.t('gram_fase5_porque')}</strong> ${a.motivo || a.explicacao}
           </div>
         </div>`;
     }
@@ -871,8 +871,11 @@ const Grammatica = {
   // ── Tabela colapsável acima dos exercícios ──
   _htmlTabelaVisual(u) {
     if (!u.tabela_visual) return '';
+    const label = I18n.idioma === 'pt' 
+      ? '📋 Ver tabela de referência (use durante os exercícios)' 
+      : '📋 View reference table (use during exercises)';
     return `<details class="gram-tabela-visual">
-      <summary>📋 View reference table (use during exercises)</summary>
+      <summary>${label}</summary>
       <div class="gram-tabela-conteudo">${this._formatarTeoria(u.tabela_visual)}</div>
     </details>`;
   },
