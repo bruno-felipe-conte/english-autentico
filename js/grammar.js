@@ -77,7 +77,7 @@ const Grammatica = {
       html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;
       html += `</div>`;
       html += `<div class="gram-nivel-nome">${mod.nome}</div>`;
-      html += `<div class="gram-nivel-info">${completas}/${totalUnid} complete &middot; ${totalEx} exercises</div>`;
+      html += `<div class="gram-nivel-info">${completas}/${totalUnid} concluídas &middot; ${totalEx} exercícios</div>`;
       html += `<div class="gram-nivel-barra"><div style="width:${pct}%"></div></div>`;
       html += '</div>';
 
@@ -91,7 +91,7 @@ const Grammatica = {
         html += `<span class="gram-lez-info">`;
         html += `<span class="gram-lez-num-label">${u.num}</span>`;
         html += `<span class="gram-lez-titulo">${u.titulo}</span>`;
-        html += `<span class="gram-lez-meta">${nEx} exercises</span>`;
+        html += `<span class="gram-lez-meta">${nEx} exercícios</span>`;
         html += `</span>`;
         html += `<span class="gram-lez-arrow">›</span>`;
         html += '</button>';
@@ -104,12 +104,12 @@ const Grammatica = {
     if (bloqueados.length > 0) {
       html += '<div class="gram-locked-row">';
       for (const mod of bloqueados) {
-        html += `<button class="gram-locked-pill" onclick="Grammatica.pedirSenhaAdmin('${mod.id}')" title="Accesso amministratore">`;
+        html += `<button class="gram-locked-pill" onclick="Grammatica.pedirSenhaAdmin('${mod.id}')" title="Acesso do Administrador">`;
         html += `<span class="gram-locked-pill-icon">🔒</span>`;
         html += `<span class="gram-locked-pill-info">`;
         html += `<span class="gram-locked-pill-id">${mod.id}</span>`;
         html += `<span class="gram-locked-pill-nome">${mod.nome}</span>`;
-        html += `<span class="gram-locked-pill-req">Requires Level ${mod.nivel_minimo}</span>`;
+        html += `<span class="gram-locked-pill-req">Requer Nível ${mod.nivel_minimo}</span>`;
         html += `</span>`;
         html += `<span class="gram-locked-pill-arrow">›</span>`;
         html += `</button>`;
@@ -138,21 +138,21 @@ const Grammatica = {
     overlay.innerHTML = `
       <div class="gram-admin-box" role="dialog" aria-modal="true">
         <div class="gram-admin-icon">🔐</div>
-        <div class="gram-admin-titulo">Administrator Access</div>
+        <div class="gram-admin-titulo">Acesso do Administrador</div>
         <div class="gram-admin-subtit">${nome}</div>
         <input
           id="gram-admin-input"
           class="gram-admin-input"
           type="password"
-          placeholder="Enter password"
+          placeholder="Digite a senha"
           maxlength="20"
           autocomplete="off"
           onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
         />
-        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Wrong password. Try again.</div>
+        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Senha incorreta. Tente novamente.</div>
         <div class="gram-admin-btns">
-          <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Annulla</button>
-          <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Conferma</button>
+          <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Cancelar</button>
+          <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Confirmar</button>
         </div>
       </div>`;
 
@@ -591,7 +591,7 @@ const Grammatica = {
         ${!jaFeita ? `<div class="gram-res-xp">${I18n.t('gram_bonus_xp').replace('{a}', bonus)}</div>` : ''}
         <div class="gram-res-msg">${msg}</div>
         <div class="gram-res-actions">
-          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Retry</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Refazer</button>
           ${proxBtn}
           <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">${I18n.t('gram_todos_modulos')}</button>
         </div>
@@ -778,10 +778,10 @@ const Grammatica = {
               <div class="gfc-it">${c.italiano}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
-              <div class="gfc-click">${I18n.idioma === 'pt' ? 'Clique para revelar 👆' : 'Click to reveal 👆'}</div>
+              <div class="gfc-click">Clique para revelar 👆</div>
             </div>
             <div class="gram-flip-card-back">
-              <div class="gfc-titulo-regra">${I18n.idioma === 'pt' ? 'O Padrão:' : 'The Pattern:'}</div>
+              <div class="gfc-titulo-regra">O Padrão:</div>
               <div class="gfc-regra-txt">${c.motivo}</div>
             </div>
           </div>
@@ -871,9 +871,7 @@ const Grammatica = {
   // ── Tabela colapsável acima dos exercícios ──
   _htmlTabelaVisual(u) {
     if (!u.tabela_visual) return '';
-    const label = I18n.idioma === 'pt' 
-      ? '📋 Ver tabela de referência (use durante os exercícios)' 
-      : '📋 View reference table (use during exercises)';
+    const label = '📋 Ver tabela de referência (use durante os exercícios)';
     return `<details class="gram-tabela-visual">
       <summary>${label}</summary>
       <div class="gram-tabela-conteudo">${this._formatarTeoria(u.tabela_visual)}</div>
