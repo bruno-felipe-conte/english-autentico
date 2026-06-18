@@ -1168,8 +1168,14 @@ ${estrutura}${entrega}`;
         }
       }
 
+      // Usa o endMs real da palavra (campo e) para prevEndMs, não ms+800.
+      // Sem isso, estrofes com e > ms+800 ficam com prevEndMs conservador demais,
+      // bloqueando a normalização das estrofes seguintes (Bug: 41/56 não normalizadas).
       const lastW = est.words[est.words.length - 1];
-      prevEndMs = Math.max(prevEndMs, (lastW?.ms ?? 0) + 800);
+      const lastEndMs = lastW
+        ? (lastW.e != null ? this._parseTimestamp(lastW.e) : (lastW.ms ?? 0) + 800)
+        : 0;
+      prevEndMs = Math.max(prevEndMs, lastEndMs);
     });
     return dados;
   },
@@ -1362,7 +1368,9 @@ ${estrutura}${entrega}`;
 
   _formatTime(sec) {
     const m = Math.floor(sec / 60);
-    return m + ':' + Math.floor(sec % 60).toString().padStart(2, '0');
+    const s = Math.floor(sec % 60).toString().padStart(2, '0');
+    const ms = Math.floor((sec % 1) * 1000).toString().padStart(3, '0');
+    return m + ':' + s + '.' + ms;
   },
 
   _hasBlank(est) {
