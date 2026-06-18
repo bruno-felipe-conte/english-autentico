@@ -1,6 +1,1506 @@
 {
   "canzoni": [
     {
+      "id": "can_custom_999",
+      "titulo": "Believer",
+      "artista": "Imagine Dragons",
+      "nivel": "A2",
+      "icone": "🎵",
+      "tema": "custom",
+      "audio_url": "believer_test.mp3",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "First things first, I'ma say all the words inside my head",
+          "traducao": "Em primeiro lugar, vou dizer todas as palavras dentro da minha cabeça",
+          "palavra_oculta": "words",
+          "dica": "palavras",
+          "texto_lacuna": "First things first, I'ma say all the ___ inside my head",
+          "tempo": 14,
+          "inicio_ms": 14000,
+          "palavra_oculta_ms": 17000,
+          "words": [
+            {
+              "w": "First",
+              "t": "0:14",
+              "m": "Primeiro",
+              "hidden": false,
+              "ms": 14000
+            },
+            {
+              "w": "things",
+              "t": "0:15",
+              "m": "coisas",
+              "hidden": false,
+              "ms": 15000
+            },
+            {
+              "w": "first,",
+              "t": "0:15",
+              "m": "primeiro",
+              "hidden": false,
+              "ms": 15000
+            },
+            {
+              "w": "I'ma",
+              "t": "0:15",
+              "m": "Eu vou",
+              "hidden": false,
+              "ms": 15000
+            },
+            {
+              "w": "say",
+              "t": "0:16",
+              "m": "dizer",
+              "hidden": false,
+              "ms": 16000
+            },
+            {
+              "w": "all",
+              "t": "0:16",
+              "m": "todas",
+              "hidden": false,
+              "ms": 16000
+            },
+            {
+              "w": "the",
+              "t": "0:16",
+              "m": "as",
+              "hidden": false,
+              "ms": 16000
+            },
+            {
+              "w": "words",
+              "t": "0:17",
+              "m": "palavras",
+              "hidden": true,
+              "ms": 17000
+            },
+            {
+              "w": "inside",
+              "t": "0:17",
+              "m": "dentro",
+              "hidden": false,
+              "ms": 17000
+            },
+            {
+              "w": "my",
+              "t": "0:17",
+              "m": "minha",
+              "hidden": false,
+              "ms": 17000
+            },
+            {
+              "w": "head",
+              "t": "0:18",
+              "m": "cabeça",
+              "hidden": false,
+              "ms": 18000
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "texto_completo": "I'm fired up and tired of the way that things have been",
+          "traducao": "Estou animado e cansado do jeito que as coisas têm sido",
+          "palavra_oculta": "tired",
+          "dica": "cansado",
+          "texto_lacuna": "I'm fired up and ___ of the way that things have been",
+          "tempo": 19,
+          "inicio_ms": 19000,
+          "palavra_oculta_ms": 20000,
+          "words": [
+            {
+              "w": "I'm",
+              "t": "0:19",
+              "m": "Eu estou",
+              "hidden": false,
+              "ms": 19000
+            },
+            {
+              "w": "fired",
+              "t": "0:19",
+              "m": "incendiado",
+              "hidden": false,
+              "ms": 19000
+            },
+            {
+              "w": "up",
+              "t": "0:20",
+              "m": "para cima",
+              "hidden": false,
+              "ms": 20000
+            },
+            {
+              "w": "and",
+              "t": "0:20",
+              "m": "e",
+              "hidden": false,
+              "ms": 20000
+            },
+            {
+              "w": "tired",
+              "t": "0:20",
+              "m": "cansado",
+              "hidden": true,
+              "ms": 20000
+            },
+            {
+              "w": "of",
+              "t": "0:21",
+              "m": "de",
+              "hidden": false,
+              "ms": 21000
+            },
+            {
+              "w": "the",
+              "t": "0:21",
+              "m": "o",
+              "hidden": false,
+              "ms": 21000
+            },
+            {
+              "w": "way",
+              "t": "0:22",
+              "m": "jeito",
+              "hidden": false,
+              "ms": 22000
+            },
+            {
+              "w": "that",
+              "t": "0:22",
+              "m": "que",
+              "hidden": false,
+              "ms": 22000
+            },
+            {
+              "w": "things",
+              "t": "0:22",
+              "m": "coisas",
+              "hidden": false,
+              "ms": 22000
+            },
+            {
+              "w": "have",
+              "t": "0:23",
+              "m": "têm",
+              "hidden": false,
+              "ms": 23000
+            },
+            {
+              "w": "been",
+              "t": "0:23",
+              "m": "sido",
+              "hidden": false,
+              "ms": 23000
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "texto_completo": "The way that things have been, oh-ooh",
+          "traducao": "O jeito que as coisas têm sido, oh-ooh",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 25,
+          "inicio_ms": 25000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "The",
+              "t": "0:25",
+              "m": "O",
+              "hidden": false,
+              "ms": 25000
+            },
+            {
+              "w": "way",
+              "t": "0:25",
+              "m": "jeito",
+              "hidden": false,
+              "ms": 25000
+            },
+            {
+              "w": "that",
+              "t": "0:26",
+              "m": "que",
+              "hidden": false,
+              "ms": 26000
+            },
+            {
+              "w": "things",
+              "t": "0:26",
+              "m": "coisas",
+              "hidden": false,
+              "ms": 26000
+            },
+            {
+              "w": "have",
+              "t": "0:27",
+              "m": "têm",
+              "hidden": false,
+              "ms": 27000
+            },
+            {
+              "w": "been,",
+              "t": "0:27",
+              "m": "sido",
+              "hidden": false,
+              "ms": 27000
+            },
+            {
+              "w": "oh-ooh",
+              "t": "0:27",
+              "m": "oh-ooh",
+              "hidden": false,
+              "ms": 27000
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "texto_completo": "Second thing second, don't you tell me what you think that I could be",
+          "traducao": "Em segundo lugar, não me diga o que você pensa que eu poderia ser",
+          "palavra_oculta": "think",
+          "dica": "pensa",
+          "texto_lacuna": "Second thing second, don't you tell me what you ___ that I could be",
+          "tempo": 28,
+          "inicio_ms": 28000,
+          "palavra_oculta_ms": 30000,
+          "words": [
+            {
+              "w": "Second",
+              "t": "0:28",
+              "m": "Segunda",
+              "hidden": false,
+              "ms": 28000
+            },
+            {
+              "w": "thing",
+              "t": "0:28",
+              "m": "coisa",
+              "hidden": false,
+              "ms": 28000
+            },
+            {
+              "w": "second,",
+              "t": "0:29",
+              "m": "segunda",
+              "hidden": false,
+              "ms": 29000
+            },
+            {
+              "w": "don't",
+              "t": "0:29",
+              "m": "não",
+              "hidden": false,
+              "ms": 29000
+            },
+            {
+              "w": "you",
+              "t": "0:29",
+              "m": "você",
+              "hidden": false,
+              "ms": 29000
+            },
+            {
+              "w": "tell",
+              "t": "0:29",
+              "m": "diga",
+              "hidden": false,
+              "ms": 29000
+            },
+            {
+              "w": "me",
+              "t": "0:30",
+              "m": "me",
+              "hidden": false,
+              "ms": 30000
+            },
+            {
+              "w": "what",
+              "t": "0:30",
+              "m": "o que",
+              "hidden": false,
+              "ms": 30000
+            },
+            {
+              "w": "you",
+              "t": "0:30",
+              "m": "você",
+              "hidden": false,
+              "ms": 30000
+            },
+            {
+              "w": "think",
+              "t": "0:30",
+              "m": "pensa",
+              "hidden": true,
+              "ms": 30000
+            },
+            {
+              "w": "that",
+              "t": "0:31",
+              "m": "que",
+              "hidden": false,
+              "ms": 31000
+            },
+            {
+              "w": "I",
+              "t": "0:31",
+              "m": "eu",
+              "hidden": false,
+              "ms": 31000
+            },
+            {
+              "w": "could",
+              "t": "0:31",
+              "m": "poderia",
+              "hidden": false,
+              "ms": 31000
+            },
+            {
+              "w": "be",
+              "t": "0:31",
+              "m": "ser",
+              "hidden": false,
+              "ms": 31000
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "texto_completo": "I'm the one at the sail, I'm the master of my sea",
+          "traducao": "Eu sou aquele no leme, eu sou o mestre do meu mar",
+          "palavra_oculta": "master",
+          "dica": "mestre",
+          "texto_lacuna": "I'm the one at the sail, I'm the ___ of my sea",
+          "tempo": 32,
+          "inicio_ms": 32000,
+          "palavra_oculta_ms": 35000,
+          "words": [
+            {
+              "w": "I'm",
+              "t": "0:32",
+              "m": "Eu sou",
+              "hidden": false,
+              "ms": 32000
+            },
+            {
+              "w": "the",
+              "t": "0:32",
+              "m": "o",
+              "hidden": false,
+              "ms": 32000
+            },
+            {
+              "w": "one",
+              "t": "0:32",
+              "m": "um",
+              "hidden": false,
+              "ms": 32000
+            },
+            {
+              "w": "at",
+              "t": "0:33",
+              "m": "na",
+              "hidden": false,
+              "ms": 33000
+            },
+            {
+              "w": "the",
+              "t": "0:33",
+              "m": "a",
+              "hidden": false,
+              "ms": 33000
+            },
+            {
+              "w": "sail,",
+              "t": "0:33",
+              "m": "vela",
+              "hidden": false,
+              "ms": 33000
+            },
+            {
+              "w": "I'm",
+              "t": "0:34",
+              "m": "Eu sou",
+              "hidden": false,
+              "ms": 34000
+            },
+            {
+              "w": "the",
+              "t": "0:34",
+              "m": "o",
+              "hidden": false,
+              "ms": 34000
+            },
+            {
+              "w": "master",
+              "t": "0:35",
+              "m": "mestre",
+              "hidden": true,
+              "ms": 35000
+            },
+            {
+              "w": "of",
+              "t": "0:35",
+              "m": "de",
+              "hidden": false,
+              "ms": 35000
+            },
+            {
+              "w": "my",
+              "t": "0:36",
+              "m": "meu",
+              "hidden": false,
+              "ms": 36000
+            },
+            {
+              "w": "sea",
+              "t": "0:36",
+              "m": "mar",
+              "hidden": false,
+              "ms": 36000
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "texto_completo": "The master of my sea, oh-ooh",
+          "traducao": "O mestre do meu mar, oh-ooh",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 38,
+          "inicio_ms": 38000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "The",
+              "t": "0:38",
+              "m": "O",
+              "hidden": false,
+              "ms": 38000
+            },
+            {
+              "w": "master",
+              "t": "0:39",
+              "m": "mestre",
+              "hidden": false,
+              "ms": 39000
+            },
+            {
+              "w": "of",
+              "t": "0:39",
+              "m": "de",
+              "hidden": false,
+              "ms": 39000
+            },
+            {
+              "w": "my",
+              "t": "0:40",
+              "m": "meu",
+              "hidden": false,
+              "ms": 40000
+            },
+            {
+              "w": "sea,",
+              "t": "0:40",
+              "m": "mar",
+              "hidden": false,
+              "ms": 40000
+            },
+            {
+              "w": "oh-ooh",
+              "t": "0:41",
+              "m": "oh-ooh",
+              "hidden": false,
+              "ms": 41000
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "texto_completo": "I was broken from a young age",
+          "traducao": "Fui quebrado desde jovem",
+          "palavra_oculta": "young",
+          "dica": "jovem",
+          "texto_lacuna": "I was broken from a ___ age",
+          "tempo": 42,
+          "inicio_ms": 42000,
+          "palavra_oculta_ms": 43000,
+          "words": [
+            {
+              "w": "I",
+              "t": "0:42",
+              "m": "Eu",
+              "hidden": false,
+              "ms": 42000
+            },
+            {
+              "w": "was",
+              "t": "0:42",
+              "m": "fui",
+              "hidden": false,
+              "ms": 42000
+            },
+            {
+              "w": "broken",
+              "t": "0:42",
+              "m": "quebrado",
+              "hidden": false,
+              "ms": 42000
+            },
+            {
+              "w": "from",
+              "t": "0:42",
+              "m": "desde",
+              "hidden": false,
+              "ms": 42000
+            },
+            {
+              "w": "a",
+              "t": "0:43",
+              "m": "uma",
+              "hidden": false,
+              "ms": 43000
+            },
+            {
+              "w": "young",
+              "t": "0:43",
+              "m": "jovem",
+              "hidden": true,
+              "ms": 43000
+            },
+            {
+              "w": "age",
+              "t": "0:43",
+              "m": "idade",
+              "hidden": false,
+              "ms": 43000
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "texto_completo": "Taking my sulking to the masses",
+          "traducao": "Levando meu mau humor para as massas",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 44,
+          "inicio_ms": 44000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Taking",
+              "t": "0:44",
+              "m": "Levando",
+              "hidden": false,
+              "ms": 44000
+            },
+            {
+              "w": "my",
+              "t": "0:44",
+              "m": "meu",
+              "hidden": false,
+              "ms": 44000
+            },
+            {
+              "w": "sulking",
+              "t": "0:44",
+              "m": "mau humor",
+              "hidden": false,
+              "ms": 44000
+            },
+            {
+              "w": "to",
+              "t": "0:45",
+              "m": "para",
+              "hidden": false,
+              "ms": 45000
+            },
+            {
+              "w": "the",
+              "t": "0:45",
+              "m": "as",
+              "hidden": false,
+              "ms": 45000
+            },
+            {
+              "w": "masses",
+              "t": "0:45",
+              "m": "massas",
+              "hidden": false,
+              "ms": 45000
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "texto_completo": "Writing my poems for the few",
+          "traducao": "Escrevendo meus poemas para os poucos",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 45,
+          "inicio_ms": 45000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Writing",
+              "t": "0:45",
+              "m": "Escrevendo",
+              "hidden": false,
+              "ms": 45000
+            },
+            {
+              "w": "my",
+              "t": "0:45",
+              "m": "meus",
+              "hidden": false,
+              "ms": 45000
+            },
+            {
+              "w": "poems",
+              "t": "0:45",
+              "m": "poemas",
+              "hidden": false,
+              "ms": 45000
+            },
+            {
+              "w": "for",
+              "t": "0:46",
+              "m": "para",
+              "hidden": false,
+              "ms": 46000
+            },
+            {
+              "w": "the",
+              "t": "0:46",
+              "m": "os",
+              "hidden": false,
+              "ms": 46000
+            },
+            {
+              "w": "few",
+              "t": "0:46",
+              "m": "poucos",
+              "hidden": false,
+              "ms": 46000
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "texto_completo": "That look at me, took to me, shook to me, feeling me",
+          "traducao": "Que olham para mim, se apegaram a mim, se abalaram comigo, me sentindo",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 46,
+          "inicio_ms": 46000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "That",
+              "t": "0:46",
+              "m": "Que",
+              "hidden": false,
+              "ms": 46000
+            },
+            {
+              "w": "look",
+              "t": "0:46",
+              "m": "olham",
+              "hidden": false,
+              "ms": 46000
+            },
+            {
+              "w": "at",
+              "t": "0:47",
+              "m": "para",
+              "hidden": false,
+              "ms": 47000
+            },
+            {
+              "w": "me,",
+              "t": "0:47",
+              "m": "mim",
+              "hidden": false,
+              "ms": 47000
+            },
+            {
+              "w": "took",
+              "t": "0:47",
+              "m": "apegaram",
+              "hidden": false,
+              "ms": 47000
+            },
+            {
+              "w": "to",
+              "t": "0:47",
+              "m": "a",
+              "hidden": false,
+              "ms": 47000
+            },
+            {
+              "w": "me,",
+              "t": "0:47",
+              "m": "mim",
+              "hidden": false,
+              "ms": 47000
+            },
+            {
+              "w": "shook",
+              "t": "0:48",
+              "m": "abalaram",
+              "hidden": false,
+              "ms": 48000
+            },
+            {
+              "w": "to",
+              "t": "0:48",
+              "m": "a",
+              "hidden": false,
+              "ms": 48000
+            },
+            {
+              "w": "me,",
+              "t": "0:48",
+              "m": "mim",
+              "hidden": false,
+              "ms": 48000
+            },
+            {
+              "w": "feeling",
+              "t": "0:48",
+              "m": "sentindo",
+              "hidden": false,
+              "ms": 48000
+            },
+            {
+              "w": "me",
+              "t": "0:48",
+              "m": "me",
+              "hidden": false,
+              "ms": 48000
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "texto_completo": "Singing from heartache from the pain",
+          "traducao": "Cantando pela dor no coração, a partir da dor",
+          "palavra_oculta": "Singing",
+          "dica": "Cantando",
+          "texto_lacuna": "___ from heartache from the pain",
+          "tempo": 49,
+          "inicio_ms": 49000,
+          "palavra_oculta_ms": 49000,
+          "words": [
+            {
+              "w": "Singing",
+              "t": "0:49",
+              "m": "Cantando",
+              "hidden": true,
+              "ms": 49000
+            },
+            {
+              "w": "from",
+              "t": "0:49",
+              "m": "da",
+              "hidden": false,
+              "ms": 49000
+            },
+            {
+              "w": "heartache",
+              "t": "0:50",
+              "m": "dor no coração",
+              "hidden": false,
+              "ms": 50000
+            },
+            {
+              "w": "from",
+              "t": "0:50",
+              "m": "da",
+              "hidden": false,
+              "ms": 50000
+            },
+            {
+              "w": "the",
+              "t": "0:51",
+              "m": "a",
+              "hidden": false,
+              "ms": 51000
+            },
+            {
+              "w": "pain",
+              "t": "0:51",
+              "m": "dor",
+              "hidden": false,
+              "ms": 51000
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "texto_completo": "Taking my message from the veins",
+          "traducao": "Tirando minha mensagem das veias",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 51,
+          "inicio_ms": 51000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Taking",
+              "t": "0:51",
+              "m": "Pegando",
+              "hidden": false,
+              "ms": 51000
+            },
+            {
+              "w": "my",
+              "t": "0:52",
+              "m": "minha",
+              "hidden": false,
+              "ms": 52000
+            },
+            {
+              "w": "message",
+              "t": "0:52",
+              "m": "mensagem",
+              "hidden": false,
+              "ms": 52000
+            },
+            {
+              "w": "from",
+              "t": "0:52",
+              "m": "das",
+              "hidden": false,
+              "ms": 52000
+            },
+            {
+              "w": "the",
+              "t": "0:53",
+              "m": "as",
+              "hidden": false,
+              "ms": 53000
+            },
+            {
+              "w": "veins",
+              "t": "0:53",
+              "m": "veias",
+              "hidden": false,
+              "ms": 53000
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "texto_completo": "Speaking my lesson from the brain",
+          "traducao": "Falando minha lição do cérebro",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 53,
+          "inicio_ms": 53000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Speaking",
+              "t": "0:53",
+              "m": "Falando",
+              "hidden": false,
+              "ms": 53000
+            },
+            {
+              "w": "my",
+              "t": "0:54",
+              "m": "minha",
+              "hidden": false,
+              "ms": 54000
+            },
+            {
+              "w": "lesson",
+              "t": "0:54",
+              "m": "lição",
+              "hidden": false,
+              "ms": 54000
+            },
+            {
+              "w": "from",
+              "t": "0:54",
+              "m": "do",
+              "hidden": false,
+              "ms": 54000
+            },
+            {
+              "w": "the",
+              "t": "0:55",
+              "m": "o",
+              "hidden": false,
+              "ms": 55000
+            },
+            {
+              "w": "brain",
+              "t": "0:55",
+              "m": "cérebro",
+              "hidden": false,
+              "ms": 55000
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "texto_completo": "Seeing the beauty through the",
+          "traducao": "Vendo a beleza através da",
+          "palavra_oculta": "beauty",
+          "dica": "beleza",
+          "texto_lacuna": "Seeing the ___ through the",
+          "tempo": 55,
+          "inicio_ms": 55000,
+          "palavra_oculta_ms": 56000,
+          "words": [
+            {
+              "w": "Seeing",
+              "t": "0:55",
+              "m": "Vendo",
+              "hidden": false,
+              "ms": 55000
+            },
+            {
+              "w": "the",
+              "t": "0:56",
+              "m": "a",
+              "hidden": false,
+              "ms": 56000
+            },
+            {
+              "w": "beauty",
+              "t": "0:56",
+              "m": "beleza",
+              "hidden": true,
+              "ms": 56000
+            },
+            {
+              "w": "through",
+              "t": "0:56",
+              "m": "através",
+              "hidden": false,
+              "ms": 56000
+            },
+            {
+              "w": "the",
+              "t": "0:56",
+              "m": "da",
+              "hidden": false,
+              "ms": 56000
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "texto_completo": "Pain!",
+          "traducao": "Dor!",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 57,
+          "inicio_ms": 57000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Pain!",
+              "t": "0:57",
+              "m": "Dor!",
+              "hidden": false,
+              "ms": 57000
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "texto_completo": "You made me a, you made me a believer, believer",
+          "traducao": "Você me fez um, você me fez um crente, crente",
+          "palavra_oculta": "believer,",
+          "dica": "crente",
+          "texto_lacuna": "You made me a, you made me a ___ believer",
+          "tempo": 58,
+          "inicio_ms": 58000,
+          "palavra_oculta_ms": 60000,
+          "words": [
+            {
+              "w": "You",
+              "t": "0:58",
+              "m": "Você",
+              "hidden": false,
+              "ms": 58000
+            },
+            {
+              "w": "made",
+              "t": "0:58",
+              "m": "fez",
+              "hidden": false,
+              "ms": 58000
+            },
+            {
+              "w": "me",
+              "t": "0:59",
+              "m": "me",
+              "hidden": false,
+              "ms": 59000
+            },
+            {
+              "w": "a,",
+              "t": "0:59",
+              "m": "um",
+              "hidden": false,
+              "ms": 59000
+            },
+            {
+              "w": "you",
+              "t": "0:59",
+              "m": "você",
+              "hidden": false,
+              "ms": 59000
+            },
+            {
+              "w": "made",
+              "t": "1:00",
+              "m": "fez",
+              "hidden": false,
+              "ms": 60000
+            },
+            {
+              "w": "me",
+              "t": "1:00",
+              "m": "me",
+              "hidden": false,
+              "ms": 60000
+            },
+            {
+              "w": "a",
+              "t": "1:00",
+              "m": "um",
+              "hidden": false,
+              "ms": 60000
+            },
+            {
+              "w": "believer,",
+              "t": "1:00",
+              "m": "crente",
+              "hidden": true,
+              "ms": 60000
+            },
+            {
+              "w": "believer",
+              "t": "1:02",
+              "m": "crente",
+              "hidden": false,
+              "ms": 62000
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "texto_completo": "Pain!",
+          "traducao": "Dor!",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 64,
+          "inicio_ms": 64000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Pain!",
+              "t": "1:04",
+              "m": "Dor!",
+              "hidden": false,
+              "ms": 64000
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "texto_completo": "You break me down and build me up, believer, believer",
+          "traducao": "Você me quebra e me constrói, crente, crente",
+          "palavra_oculta": "build",
+          "dica": "constrói",
+          "texto_lacuna": "You break me down and ___ me up, believer, believer",
+          "tempo": 65,
+          "inicio_ms": 65000,
+          "palavra_oculta_ms": 66000,
+          "words": [
+            {
+              "w": "You",
+              "t": "1:05",
+              "m": "Você",
+              "hidden": false,
+              "ms": 65000
+            },
+            {
+              "w": "break",
+              "t": "1:05",
+              "m": "quebra",
+              "hidden": false,
+              "ms": 65000
+            },
+            {
+              "w": "me",
+              "t": "1:05",
+              "m": "me",
+              "hidden": false,
+              "ms": 65000
+            },
+            {
+              "w": "down",
+              "t": "1:05",
+              "m": "para baixo",
+              "hidden": false,
+              "ms": 65000
+            },
+            {
+              "w": "and",
+              "t": "1:06",
+              "m": "e",
+              "hidden": false,
+              "ms": 66000
+            },
+            {
+              "w": "build",
+              "t": "1:06",
+              "m": "constrói",
+              "hidden": true,
+              "ms": 66000
+            },
+            {
+              "w": "me",
+              "t": "1:06",
+              "m": "me",
+              "hidden": false,
+              "ms": 66000
+            },
+            {
+              "w": "up,",
+              "t": "1:06",
+              "m": "para cima",
+              "hidden": false,
+              "ms": 66000
+            },
+            {
+              "w": "believer,",
+              "t": "1:07",
+              "m": "crente",
+              "hidden": false,
+              "ms": 67000
+            },
+            {
+              "w": "believer",
+              "t": "1:09",
+              "m": "crente",
+              "hidden": false,
+              "ms": 69000
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "texto_completo": "Pain!",
+          "traducao": "Dor!",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 71,
+          "inicio_ms": 71000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Pain!",
+              "t": "1:11",
+              "m": "Dor!",
+              "hidden": false,
+              "ms": 71000
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "texto_completo": "Oh let the bullets fly, oh let them rain",
+          "traducao": "Oh, deixe as balas voarem, oh, deixe elas choverem",
+          "palavra_oculta": "rain",
+          "dica": "choverem",
+          "texto_lacuna": "Oh let the bullets fly, oh let them ___",
+          "tempo": 72,
+          "inicio_ms": 72000,
+          "palavra_oculta_ms": 74000,
+          "words": [
+            {
+              "w": "Oh",
+              "t": "1:12",
+              "m": "Oh",
+              "hidden": false,
+              "ms": 72000
+            },
+            {
+              "w": "let",
+              "t": "1:12",
+              "m": "deixe",
+              "hidden": false,
+              "ms": 72000
+            },
+            {
+              "w": "the",
+              "t": "1:12",
+              "m": "as",
+              "hidden": false,
+              "ms": 72000
+            },
+            {
+              "w": "bullets",
+              "t": "1:12",
+              "m": "balas",
+              "hidden": false,
+              "ms": 72000
+            },
+            {
+              "w": "fly,",
+              "t": "1:13",
+              "m": "voarem",
+              "hidden": false,
+              "ms": 73000
+            },
+            {
+              "w": "oh",
+              "t": "1:13",
+              "m": "oh",
+              "hidden": false,
+              "ms": 73000
+            },
+            {
+              "w": "let",
+              "t": "1:13",
+              "m": "deixe",
+              "hidden": false,
+              "ms": 73000
+            },
+            {
+              "w": "them",
+              "t": "1:14",
+              "m": "elas",
+              "hidden": false,
+              "ms": 74000
+            },
+            {
+              "w": "rain",
+              "t": "1:14",
+              "m": "choverem",
+              "hidden": true,
+              "ms": 74000
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "texto_completo": "My life, my love, my drive, it came from",
+          "traducao": "Minha vida, meu amor, minha motivação, vieram da",
+          "palavra_oculta": "life,",
+          "dica": "vida",
+          "texto_lacuna": "My ___ my love, my drive, it came from",
+          "tempo": 75,
+          "inicio_ms": 75000,
+          "palavra_oculta_ms": 75000,
+          "words": [
+            {
+              "w": "My",
+              "t": "1:15",
+              "m": "Minha",
+              "hidden": false,
+              "ms": 75000
+            },
+            {
+              "w": "life,",
+              "t": "1:15",
+              "m": "vida",
+              "hidden": true,
+              "ms": 75000
+            },
+            {
+              "w": "my",
+              "t": "1:15",
+              "m": "meu",
+              "hidden": false,
+              "ms": 75000
+            },
+            {
+              "w": "love,",
+              "t": "1:16",
+              "m": "amor",
+              "hidden": false,
+              "ms": 76000
+            },
+            {
+              "w": "my",
+              "t": "1:16",
+              "m": "minha",
+              "hidden": false,
+              "ms": 76000
+            },
+            {
+              "w": "drive,",
+              "t": "1:16",
+              "m": "motivação",
+              "hidden": false,
+              "ms": 76000
+            },
+            {
+              "w": "it",
+              "t": "1:17",
+              "m": "isso",
+              "hidden": false,
+              "ms": 77000
+            },
+            {
+              "w": "came",
+              "t": "1:17",
+              "m": "veio",
+              "hidden": false,
+              "ms": 77000
+            },
+            {
+              "w": "from",
+              "t": "1:17",
+              "m": "de",
+              "hidden": false,
+              "ms": 77000
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "texto_completo": "Pain!",
+          "traducao": "Dor!",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 78,
+          "inicio_ms": 78000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "Pain!",
+              "t": "1:18",
+              "m": "Dor!",
+              "hidden": false,
+              "ms": 78000
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "texto_completo": "You made me a, you made me a believer, believer",
+          "traducao": "Você me fez um, você me fez um crente, crente",
+          "palavra_oculta": "",
+          "dica": "",
+          "texto_lacuna": "",
+          "tempo": 79,
+          "inicio_ms": 79000,
+          "palavra_oculta_ms": null,
+          "words": [
+            {
+              "w": "You",
+              "t": "1:19",
+              "m": "Você",
+              "hidden": false,
+              "ms": 79000
+            },
+            {
+              "w": "made",
+              "t": "1:19",
+              "m": "fez",
+              "hidden": false,
+              "ms": 79000
+            },
+            {
+              "w": "me",
+              "t": "1:19",
+              "m": "me",
+              "hidden": false,
+              "ms": 79000
+            },
+            {
+              "w": "a,",
+              "t": "1:20",
+              "m": "um",
+              "hidden": false,
+              "ms": 80000
+            },
+            {
+              "w": "you",
+              "t": "1:20",
+              "m": "você",
+              "hidden": false,
+              "ms": 80000
+            },
+            {
+              "w": "made",
+              "t": "1:20",
+              "m": "fez",
+              "hidden": false,
+              "ms": 80000
+            },
+            {
+              "w": "me",
+              "t": "1:20",
+              "m": "me",
+              "hidden": false,
+              "ms": 80000
+            },
+            {
+              "w": "a",
+              "t": "1:21",
+              "m": "um",
+              "hidden": false,
+              "ms": 81000
+            },
+            {
+              "w": "believer,",
+              "t": "1:21",
+              "m": "crente",
+              "hidden": false,
+              "ms": 81000
+            },
+            {
+              "w": "believer",
+              "t": "1:23",
+              "m": "crente",
+              "hidden": false,
+              "ms": 83000
+            }
+          ]
+        }
+      ],
+      "vocabulario_chave": [
+        "words",
+        "tired",
+        "think",
+        "master",
+        "young",
+        "Singing",
+        "beauty",
+        "believer,",
+        "build",
+        "rain",
+        "life,"
+      ],
+      "xp_recompensa": 50
+    },
+    {
       "id": "can_001",
       "titulo": "Let It Be",
       "artista": "The Beatles",

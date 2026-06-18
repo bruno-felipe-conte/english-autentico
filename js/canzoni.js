@@ -371,8 +371,11 @@ const Canzoni = {
   _parseTimestamp(t) {
     if (!t) return 0;
     const parts = String(t).split(':');
-    if (parts.length === 2) return (parseInt(parts[0]) * 60 + parseInt(parts[1])) * 1000;
-    if (parts.length === 3) return (parseInt(parts[0]) * 3600 + parseInt(parts[1]) * 60 + parseInt(parts[2])) * 1000;
+    if (parts.length === 2) {
+      // Supports "M:SS" and "M:SS.x" (decimal seconds)
+      return Math.round((parseInt(parts[0]) * 60 + parseFloat(parts[1])) * 1000);
+    }
+    if (parts.length === 3) return (parseInt(parts[0]) * 3600 + parseInt(parts[1]) * 60 + parseFloat(parts[2])) * 1000;
     return parseFloat(t) * 1000;
   },
 
@@ -385,81 +388,83 @@ const Canzoni = {
 
     const nomeDaMusica = titulo && artista ? `${titulo} — ${artista}` : titulo || artista || 'NOME DA MÚSICA — ARTISTA';
 
-    const prompt = `Você é um assistente especializado em transcrição musical pedagógica para um aplicativo de aprendizado de inglês.
+    const prompt = `Você é um assistente especializado em transcrição musical pedagógica para um aplicativo de aprendizado de inglês. Sua missão é analisar arquivos de áudio de músicas e retornar JSONs com timestamps extremamente precisos para cada palavra individualmente vocalizada.
 
-══════════════════════════════════════════════
-📋 COMO USAR ESTE PROMPT NO GOOGLE GEMINI:
-══════════════════════════════════════════════
-1. Acesse gemini.google.com no seu navegador
-2. Clique no ícone de clipe (📎) ou arraste e solte o arquivo de áudio da música
-3. Na mesma mensagem, escreva o nome da música: "${nomeDaMusica}"
-4. Cole este prompt completo abaixo do nome da música e envie
-5. Aguarde — o Gemini vai analisar o áudio e retornar o JSON
-6. Copie o JSON retornado e cole no campo abaixo (✅ Import AI Result)
-══════════════════════════════════════════════
-
+══════════════════════════════════════════════ ANÁLISE DO ÁUDIO ═══════════════════════════════════════════════
 Analise o arquivo de áudio da música "${nomeDaMusica}" e retorne um JSON com timestamps por palavra individual.
 
 ### 1. ESTRUTURA DO JSON
-
 Retorne um array de objetos JSON. Cada objeto representa uma linha completa ("line") e deve conter:
 
-- "id": (int) Identificador único e sequencial do bloco.
-- "line": (string) A frase completa cantada em inglês.
-- "translation": (string) Tradução natural da frase para o português brasileiro.
-- "words": (array) Lista de objetos, um por palavra da frase:
-    - "w": (string) A palavra individual em inglês.
-    - "t": (string) Timestamp exato em que a palavra começa, no formato "M:SS" (ex: "0:15", "1:02").
-    - "m": (string) Tradução literal ou significado morfológico daquela palavra isolada.
-    - "hidden": (boolean) true para a palavra escolhida como lacuna de exercício, false para todas as outras.
+- "id": (int) Identificador único e sequencial do bloco
+- "line": (string) A frase completa cantada em inglês
+- "translation": (string) Tradução natural da frase para o português brasileiro
+- "words": (array) Lista de objetos, UM POR PALAVRA da frase:
+  - "w": (string) A palavra individual em inglês
+  - "t": (string) Timestamp EXATO em que a palavra começa, no formato "M:SS" (ex: "0:15", "1:02", ou até "1:05.3" para décimos de segundo)
+  - "m": (string) Tradução literal ou significado morfológico daquela palavra isolada
+  - "hidden": (boolean) true para a palavra escolhida como lacuna de exercício, false para todas as outras
 
-### 2. EXEMPLO DE REFERÊNCIA (use como gabarito de formatação)
+### 2. REGRAS OBRIGATÓRIAS DE PRECISÃO
 
+1. **Segmentação mínima**: Divida a música por FRASES LÓGICAS únicas (versos ou linhas). Não agrupe múltiplas linhas em um único bloco.
+
+2. **Timestamps por palavra individual**: Estime o SEGUNDO EXATO em que cada palavra começa a ser vocalizada no áudio.
+   - Cada palavra deve ter seu próprio objeto no array "words"
+   - O timestamp deve refletir quando aquela palavra específica começa (não termina)
+   - Precisão: identifique até o segundo decimal se possível (M:SS.x)
+
+3. **Campo "hidden"**:
+   - Em 40% a 50% das linhas com conteúdo cantado real, marque UMA palavra com "hidden": true
+   - Escolha palavras pedagogicamente úteis: substantivos, verbos, adjetivos ou advérbios relevantes
+   - NUNCA artigos ("the", "a"), preposições curtas, pronomes ou conjunções simples
+   - Linhas sem exercício: todas as palavras têm "hidden": false
+
+4. **Traduções**:
+   - "translation": tradução natural da frase inteira (sentido contextual em português)
+   - "m": tradução literal/morfológica da palavra isolada
+
+5. **Retorne APENAS o JSON válido**, sem texto antes ou depois
+
+6. **Nível de inglês alvo**: ${nivel}. Prefira lacunas com palavras adequadas a esse nível (palavras-chave, não conectivos)
+
+### 3. METADADOS PARA IMPORTAÇÃO
+Inclua no início do JSON, antes do array, um objeto wrapper:
+
+{
+  "titulo": "${titulo || 'NOME DA MÚSICA'}",
+  "artista": "${artista || 'NOME DO ARTISTA'}",
+  "nivel": "${nivel}",
+  "icone": "${icone}",
+  "estrofes": [...] // array de linhas acima...
+}
+
+══════════════════════════════════════════════ EXEMPLO DE SAIDA ESPERADA ═══════════════════════════════════════════════
 [
   {
     "id": 1,
     "line": "First things first, I'ma say all the words inside my head",
     "translation": "Em primeiro lugar, vou dizer todas as palavras dentro da minha cabeça",
     "words": [
-      {"w": "First",  "t": "0:15", "m": "Primeiro",  "hidden": false},
-      {"w": "things", "t": "0:15", "m": "coisas",    "hidden": false},
-      {"w": "first",  "t": "0:16", "m": "primeiro",  "hidden": false},
-      {"w": "I'ma",   "t": "0:16", "m": "Eu vou",    "hidden": false},
-      {"w": "say",    "t": "0:16", "m": "dizer",      "hidden": true},
-      {"w": "all",    "t": "0:17", "m": "todas",      "hidden": false},
-      {"w": "the",    "t": "0:17", "m": "as",         "hidden": false},
-      {"w": "words",  "t": "0:17", "m": "palavras",   "hidden": false},
-      {"w": "inside", "t": "0:17", "m": "dentro de",  "hidden": false},
-      {"w": "my",     "t": "0:18", "m": "minha",      "hidden": false},
-      {"w": "head",   "t": "0:18", "m": "cabeça",     "hidden": false}
+      {"w": "First",  "t": "0:15.0", "m": "Primeiro",  "hidden": false},
+      {"w": "things", "t": "0:15.3", "m": "coisas",    "hidden": false},
+      {"w": "first",  "t": "0:16.0", "m": "primeiro",  "hidden": false},
+      {"w": "I'ma",   "t": "0:16.5", "m": "Eu vou",    "hidden": false},
+      {"w": "say",    "t": "0:17.0", "m": "dizer",      "hidden": true},
+      {"w": "all",    "t": "0:17.3", "m": "todas",      "hidden": false},
+      {"w": "the",    "t": "0:17.5", "m": "as",         "hidden": false},
+      {"w": "words",  "t": "0:18.0", "m": "palavras",   "hidden": false},
+      {"w": "inside", "t": "0:18.2", "m": "dentro de",  "hidden": false},
+      {"w": "my",     "t": "0:18.5", "m": "minha",      "hidden": false},
+      {"w": "head",   "t": "0:19.0", "m": "cabeça",     "hidden": false}
     ]
   }
 ]
 
-### 3. REGRAS OBRIGATÓRIAS
-
-1. Segmentação: divida a música por frases lógicas (versos ou linhas). Não agrupe estrofes inteiras em uma única "line".
-2. Timestamps por palavra: estime o segundo exato em que cada palavra começa a ser vocalizada no áudio.
-3. Campo "hidden":
-   - Em 30% a 50% das linhas com conteúdo cantado real, marque UMA palavra com "hidden": true.
-   - Escolha palavras pedagogicamente úteis: substantivos, verbos, adjetivos ou advérbios relevantes. NUNCA artigos ("the", "a"), preposições curtas ou pronomes.
-   - Linhas sem exercício: todas as palavras têm "hidden": false.
-4. Traduções:
-   - "translation": tradução natural da frase inteira (sentido contextual em português).
-   - "m": tradução literal/morfológica da palavra isolada.
-5. Retorne APENAS o JSON válido, sem texto antes ou depois.
-6. Nível de inglês alvo: ${nivel}. Prefira lacunas com palavras adequadas a esse nível.
-
-### 4. METADADOS PARA IMPORTAÇÃO
-
-Inclua no início do JSON, antes do array, um objeto wrapper:
-{
-  "titulo": "${titulo || 'PREENCHER TÍTULO DA MÚSICA'}",
-  "artista": "${artista || 'PREENCHER NOME DO ARTISTA'}",
-  "nivel": "${nivel}",
-  "icone": "${icone}",
-  "estrofes": [ ... array de linhas acima ... ]
-}`;
+══════════════════════════════════════════════ 📍 IMPORTANTE ══════════════════════════════════════════════════
+- Timestamps devem ser extremamente precisos (cada palavra tem seu próprio timestamp de INÍCIO)
+- Não agrupe palavras em timestamps únicos — cada palavra deve ter seu momento exato de vocalização
+- O JSON deve estar validado e pronto para importação direta no aplicativo`;
 
     const bloco = document.getElementById('can-ia-bloco');
     if (bloco) bloco.style.display = 'block';
@@ -800,12 +805,14 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
 
   async abrirCanzone(id) {
     await this.carregar();
-    this.canzonAtual = this.todasCanzoni().find(c => c.id === id);
-    if (!this.canzonAtual) return;
+    const can = this.todasCanzoni().find(c => c.id === id);
+    if (!can) return;
+    this.canzonAtual = can;
     this.estrofeAtual = 0;
     this.acertos = 0;
     this.erros = 0;
     this.respostas = this.canzonAtual.estrofes.map(() => null);
+    this.syncOffsetMs = 0;
     this.traduzirVisivel = false;
     this._audioResumeTime = null;
     this._audioShouldPlay = false;
@@ -995,7 +1002,7 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
         ? '<div class="can-verse-trad">' + this._esc(v.traducao) + '</div>' : '';
 
       const proximoMs = can.estrofes.slice(i + 1).find(e => e.inicio_ms != null)?.inicio_ms;
-      const repeatHtml = (cls !== 'future' && v.inicio_ms != null && can.audio_store_key)
+      const repeatHtml = (cls !== 'future' && v.inicio_ms != null && (can.audio_store_key || can.audio_url))
         ? '<button class="can-repeat-btn" onclick="Canzoni._repetirVerso(' + v.inicio_ms + ',' + (proximoMs ?? 'undefined') + ')">&#9654; repetir</button>' : '';
 
       const temposAttr = (v.inicio_ms != null) ? ' data-tempo-ms="' + v.inicio_ms + '"' : '';
@@ -1020,7 +1027,8 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">' + I18n.t('can_escolha_palavra') + '</div><div class="can-choices-grid">' + btns + '</div></div>';
     }
 
-    const audioBarHtml = can.audio_store_key
+    const hasAudio = can.audio_store_key || can.audio_url;
+    const audioBarHtml = hasAudio
       ? '<div class="can-audio-bar">' +
           '<audio id="can-audio-player"></audio>' +
           '<div class="can-custom-player">' +
@@ -1030,6 +1038,11 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
               '<div class="can-player-fill" id="can-player-fill"></div>' +
             '</div>' +
             '<span class="can-player-total" id="can-player-total">--:--</span>' +
+          '</div>' +
+          '<div class="can-sync-controls" style="display:flex; justify-content:center; gap:10px; margin-top:5px; font-size:0.75rem;">' +
+            '<button onclick="Canzoni._ajustarSincronia(-500)" title="Adiantar a letra (letras est\u00e3o lentas)" style="background:var(--card-bg); color:var(--text-color); border:1px solid rgba(128,128,128,0.3); border-radius:4px; padding:2px 6px;">-0.5s</button>' +
+            '<span id="can-sync-display">Sync: ' + ((this.syncOffsetMs||0)/1000).toFixed(1) + 's</span>' +
+            '<button onclick="Canzoni._ajustarSincronia(500)" title="Atrasar a letra (letras est\u00e3o r\u00e1pidas)" style="background:var(--card-bg); color:var(--text-color); border:1px solid rgba(128,128,128,0.3); border-radius:4px; padding:2px 6px;">+0.5s</button>' +
           '</div>' +
         '</div>'
       : '';
@@ -1064,14 +1077,18 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       if (el) el.scrollIntoView({ behavior:'instant', block:'center' });
     }, 0);
 
-    if (can.audio_store_key) this._iniciarSyncAudio(can);
+    if (can.audio_store_key || can.audio_url) this._iniciarSyncAudio(can);
   },
 
   // ── Reprodução de áudio sincronizado com a letra ──────────
   async _iniciarSyncAudio(can) {
     const gen = this._syncGen;
     let url;
-    try { url = await AudioStore.obterURL(can.audio_store_key); } catch (e) { return; }
+    if (can.audio_store_key) {
+      try { url = await AudioStore.obterURL(can.audio_store_key); } catch (e) { return; }
+    } else if (can.audio_url) {
+      url = can.audio_url;
+    }
     if (!url || gen !== this._syncGen) return; // render mais recente tomou conta
     const audioEl = document.getElementById('can-audio-player');
     if (!audioEl) return;
@@ -1084,8 +1101,9 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
 
     // Só recarrega src se a música mudou — recarregar desnecessariamente reseta currentTime→0
     // causando highlight errado do verso durante o reload
-    if (audioEl.dataset.loadedKey !== can.audio_store_key) {
-      audioEl.dataset.loadedKey = can.audio_store_key;
+    const cacheKey = can.audio_store_key || can.audio_url;
+    if (audioEl.dataset.loadedKey !== cacheKey) {
+      audioEl.dataset.loadedKey = cacheKey;
       const tempoRetomar = this._audioResumeTime;
       const deveTocar = this._audioShouldPlay;
       this._audioResumeTime = null;
@@ -1135,7 +1153,8 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     let pausadoParaLacuna = false;
 
     const timeupdateFn = () => {
-      const curMs = audioEl.currentTime * 1000;
+      // Use offset to advance/delay lyrics relative to audio
+      const curMs = (audioEl.currentTime * 1000) - (this.syncOffsetMs || 0);
 
       // Karaokê: colorir palavras conforme o áudio avança
       lyricWordEls.forEach(el => {
@@ -1162,9 +1181,9 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
         let pauseAtMs = estrofeAtualObj.palavra_oculta_ms
           ?? estrofeAtualObj.words?.find(w => w.hidden)?.ms
           ?? estrofeAtualObj.inicio_ms;
-        // Add 200ms buffer so audio stops just after the word before the blank
+        // Pause shortly before the gap word instead of after it
         if (pauseAtMs != null) {
-          pauseAtMs = pauseAtMs + 200;
+          pauseAtMs = pauseAtMs - 100;
         }
         if (!pausadoParaLacuna && pauseAtMs != null && curMs >= pauseAtMs) {
           pausadoParaLacuna = true;
@@ -1213,6 +1232,18 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       this._audioShouldPlay = !audioEl.paused;
     }
     this._renderizarPlayer();
+  },
+
+  _ajustarSincronia(deltaMs) {
+    this.syncOffsetMs = (this.syncOffsetMs || 0) + deltaMs;
+    const displayEl = document.getElementById('can-sync-display');
+    if (displayEl) {
+      displayEl.textContent = 'Sync: ' + (this.syncOffsetMs / 1000).toFixed(1) + 's';
+    }
+    // Força update imediato do UI de palavras chamando o timeupdateFn manualmente
+    if (this._timeupdateListener) {
+      this._timeupdateListener();
+    }
   },
 
   verificar() {},
