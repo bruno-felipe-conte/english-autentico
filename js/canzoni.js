@@ -124,8 +124,8 @@ const Canzoni = {
       const badgeCustom = ehCustom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Minha</span>' : '';
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
         <div class="dialogo-icone">${can.icone || '🎵'}</div>
-        <div class="dialogo-titulo">${can.titulo}${badgeCustom}</div>
-        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${can.artista || ''}</div>
+        <div class="dialogo-titulo">${this._esc(can.titulo)}${badgeCustom}</div>
+        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${this._esc(can.artista || '')}</div>
         <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
           <span class="dialogo-nivel">${can.nivel}</span>
           ${ehCustom ? `
@@ -173,23 +173,23 @@ const Canzoni = {
       <div class="gram-card" style="margin-top:1rem;padding:1.2rem">
 
         ${/* Hidden metadata inputs — always saved; visible only in edit mode */ ''}
-        <input type="hidden" id="can-titulo" value="${titulo}">
-        <input type="hidden" id="can-artista" value="${artista}">
-        <input type="hidden" id="can-nivel" value="${nivel}">
-        <input type="hidden" id="can-icone" value="${icone}">
+        <input type="hidden" id="can-titulo" value="${this._esc(titulo)}">
+        <input type="hidden" id="can-artista" value="${this._esc(artista)}">
+        <input type="hidden" id="can-nivel" value="${this._esc(nivel)}">
+        <input type="hidden" id="can-icone" value="${this._esc(icone)}">
 
         ${idEditar ? `
         <div id="can-meta-fields" style="margin-bottom:1rem">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem">
             <div>
               <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Título *</label>
-              <input id="can-titulo-vis" type="text" value="${titulo}" placeholder="Ex: Bella Ciao"
+              <input id="can-titulo-vis" type="text" value="${this._esc(titulo)}" placeholder="Ex: Bella Ciao"
                 oninput="document.getElementById('can-titulo').value=this.value"
                 style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
             </div>
             <div>
               <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Artista</label>
-              <input id="can-artista-vis" type="text" value="${artista}" placeholder="Ex: Tradicional"
+              <input id="can-artista-vis" type="text" value="${this._esc(artista)}" placeholder="Ex: Tradicional"
                 oninput="document.getElementById('can-artista').value=this.value"
                 style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
             </div>
@@ -204,7 +204,7 @@ const Canzoni = {
             </div>
             <div>
               <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Ícone (emoji)</label>
-              <input id="can-icone-vis" type="text" value="${icone}" maxlength="4"
+              <input id="can-icone-vis" type="text" value="${this._esc(icone)}" maxlength="4"
                 oninput="document.getElementById('can-icone').value=this.value"
                 style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:1.2rem;text-align:center">
             </div>
@@ -235,13 +235,36 @@ const Canzoni = {
           </div>
 
           <div id="can-ia-bloco" style="${idEditar ? 'display:none' : 'display:block'};margin-top:0.8rem">
-            <p style="font-size:0.78rem;color:#8a7a60;margin-bottom:0.4rem">1. Copy the prompt below and paste it into your favorite AI (ChatGPT, Claude, etc.):</p>
-            <div class="ia-prompt-box">
-              <pre id="can-ia-prompt-text"></pre>
-              <button class="ia-copy-btn" onclick="Canzoni._copiarPromptIA()">📋 Copy Prompt</button>
+            <p style="font-size:0.78rem;color:#8a7a60;margin-bottom:0.6rem">
+              💡 <strong>Modo 4 Partes:</strong> Para músicas longas, envie um prompt por conversa separada no Gemini. Cole o JSON de cada parte nas abas abaixo, depois clique em <strong>✅ Unir e Importar</strong>.
+            </p>
+
+            <!-- Abas de partes -->
+            <div style="display:flex;gap:4px;margin-bottom:0;flex-wrap:wrap">
+              ${[1,2,3,4].map(n => `<button id="can-tab-btn-${n}" onclick="Canzoni._selecionarPartIA(${n})" style="flex:1;min-width:60px;padding:0.4rem 0.5rem;font-size:0.8rem;font-weight:700;border:1px solid #ede5d5;border-bottom:none;border-radius:6px 6px 0 0;cursor:pointer;background:${n===1?'#fff':'#f0ece6'};color:${n===1?'#9B2335':'#8a7a60'};transition:all 0.15s">Parte ${n}</button>`).join('')}
             </div>
-            <p style="font-size:0.78rem;color:#8a7a60;margin:0.6rem 0 0.4rem">2. Paste the JSON the AI generated here:</p>
-            <textarea id="can-ia-resultado" class="ia-paste-area" rows="5" placeholder="Paste the AI-generated JSON here..."></textarea>
+
+            <!-- Conteúdo de cada aba -->
+            ${[1,2,3,4].map(n => `
+            <div id="can-tab-${n}" style="display:${n===1?'block':'none'};border:1px solid #ede5d5;border-radius:0 6px 6px 6px;background:#fff;padding:0.8rem">
+              <p style="font-size:0.75rem;color:#8a7a60;margin-bottom:0.4rem">Prompt da Parte ${n} — envie separadamente ao Gemini:</p>
+              <div class="ia-prompt-box">
+                <pre id="can-ia-prompt-text-${n}"></pre>
+                <button class="ia-copy-btn" onclick="Canzoni._copiarPromptIA(${n})">📋 Copiar Parte ${n}</button>
+              </div>
+              <p style="font-size:0.75rem;color:#8a7a60;margin:0.6rem 0 0.3rem">Cole o JSON que o Gemini gerou para esta parte:</p>
+              <textarea id="can-ia-parte-${n}" class="ia-paste-area" rows="4" placeholder="Cole aqui o JSON da Parte ${n}..."></textarea>
+            </div>`).join('')}
+
+            <!-- Botão de unir e importar -->
+            <div style="margin-top:0.8rem;display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
+              <button class="btn-primario" style="flex:1;min-width:180px" onclick="Canzoni._unirEImportar()">✅ Unir e Importar (4 partes)</button>
+              <button class="btn-secondario" style="font-size:0.78rem" onclick="Canzoni._importarResultadoIA()">📥 Importar parte única</button>
+            </div>
+            <p style="font-size:0.72rem;color:#8a7a60;margin-top:0.4rem">💡 Se tiver só uma parte ou a música inteira, use o botão "Importar parte única".</p>
+
+            <!-- Campo legado para importação de parte única -->
+            <textarea id="can-ia-resultado" class="ia-paste-area" rows="4" placeholder="Ou cole aqui um JSON completo (parte única)..." style="margin-top:0.5rem;display:none"></textarea>
           </div>
         </div>
 
@@ -367,7 +390,7 @@ const Canzoni = {
     App.notificar(`${linhas.length} lines imported`, 'sucesso');
   },
 
-  // ── Helper: parse timestamp "M:SS" → milliseconds ────────────
+  // ── Helper: parse timestamp → milliseconds (supports decimal seconds "15.274", "M:SS", "M:SS.x") ──
   _parseTimestamp(t) {
     if (!t) return 0;
     const parts = String(t).split(':');
@@ -401,7 +424,7 @@ Retorne um array de objetos JSON. Cada objeto representa uma linha completa ("li
 - "translation": (string) Tradução natural da frase para o português brasileiro
 - "words": (array) Lista de objetos, UM POR PALAVRA da frase:
   - "w": (string) A palavra individual em inglês
-  - "t": (string) Timestamp EXATO em que a palavra começa, no formato "M:SS" (ex: "0:15", "1:02", ou até "1:05.3" para décimos de segundo)
+  - "t": (number) Timestamp EXATO em que a palavra começa, em segundos decimais a partir do início do áudio (ex: 15.274, 62.891, 79.034)
   - "m": (string) Tradução literal ou significado morfológico daquela palavra isolada
   - "hidden": (boolean) true para a palavra escolhida como lacuna de exercício, false para todas as outras
 
@@ -412,7 +435,7 @@ Retorne um array de objetos JSON. Cada objeto representa uma linha completa ("li
 2. **Timestamps por palavra individual**: Estime o SEGUNDO EXATO em que cada palavra começa a ser vocalizada no áudio.
    - Cada palavra deve ter seu próprio objeto no array "words"
    - O timestamp deve refletir quando aquela palavra específica começa (não termina)
-   - Precisão: identifique até o segundo decimal se possível (M:SS.x)
+   - Precisão: use 3 casas decimais de segundo (ex: 15.274)
 
 3. **Campo "hidden"**:
    - Em 40% a 50% das linhas com conteúdo cantado real, marque UMA palavra com "hidden": true
@@ -446,40 +469,156 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     "line": "First things first, I'ma say all the words inside my head",
     "translation": "Em primeiro lugar, vou dizer todas as palavras dentro da minha cabeça",
     "words": [
-      {"w": "First",  "t": "0:15.0", "m": "Primeiro",  "hidden": false},
-      {"w": "things", "t": "0:15.3", "m": "coisas",    "hidden": false},
-      {"w": "first",  "t": "0:16.0", "m": "primeiro",  "hidden": false},
-      {"w": "I'ma",   "t": "0:16.5", "m": "Eu vou",    "hidden": false},
-      {"w": "say",    "t": "0:17.0", "m": "dizer",      "hidden": true},
-      {"w": "all",    "t": "0:17.3", "m": "todas",      "hidden": false},
-      {"w": "the",    "t": "0:17.5", "m": "as",         "hidden": false},
-      {"w": "words",  "t": "0:18.0", "m": "palavras",   "hidden": false},
-      {"w": "inside", "t": "0:18.2", "m": "dentro de",  "hidden": false},
-      {"w": "my",     "t": "0:18.5", "m": "minha",      "hidden": false},
-      {"w": "head",   "t": "0:19.0", "m": "cabeça",     "hidden": false}
+      {"w": "First",  "t": 15.000, "m": "Primeiro",  "hidden": false},
+      {"w": "things", "t": 15.274, "m": "coisas",    "hidden": false},
+      {"w": "first",  "t": 15.891, "m": "primeiro",  "hidden": false},
+      {"w": "I'ma",   "t": 16.134, "m": "Eu vou",    "hidden": false},
+      {"w": "say",    "t": 16.512, "m": "dizer",      "hidden": true},
+      {"w": "all",    "t": 16.891, "m": "todas",      "hidden": false},
+      {"w": "the",    "t": 17.103, "m": "as",         "hidden": false},
+      {"w": "words",  "t": 17.312, "m": "palavras",   "hidden": false},
+      {"w": "inside", "t": 17.623, "m": "dentro de",  "hidden": false},
+      {"w": "my",     "t": 17.891, "m": "minha",      "hidden": false},
+      {"w": "head",   "t": 18.204, "m": "cabeça",     "hidden": false}
     ]
   }
 ]
 
 ══════════════════════════════════════════════ 📍 IMPORTANTE ══════════════════════════════════════════════════
 - Timestamps devem ser extremamente precisos (cada palavra tem seu próprio timestamp de INÍCIO)
-- Não agrupe palavras em timestamps únicos — cada palavra deve ter seu momento exato de vocalização
+- NUNCA repita o mesmo valor de "t" em duas palavras da mesma linha — o motor calcula o fim de cada palavra como o início da próxima; timestamps iguais resultam em duração zero e a palavra nunca acende no karaokê
+- Use 3 casas decimais (ex: 15.274) para máxima precisão de highlight
 - O JSON deve estar validado e pronto para importação direta no aplicativo`;
 
     const bloco = document.getElementById('can-ia-bloco');
     if (bloco) bloco.style.display = 'block';
-    const pre = document.getElementById('can-ia-prompt-text');
-    if (pre) pre.textContent = prompt;
-    pre?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Build prompts for all 4 parts and inject into tabs
+    const prompts = this._construirPrompts4Partes(titulo, artista, nivel, icone, nomeDaMusica);
+    prompts.forEach((p, i) => {
+      const pre = document.getElementById(`can-ia-prompt-text-${i + 1}`);
+      if (pre) pre.textContent = p;
+    });
+
+    // Activate part 1 tab by default
+    this._selecionarPartIA(1);
+    const tab1 = document.getElementById('can-tab-1');
+    tab1?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   },
 
-  _copiarPromptIA() {
-    const txt = document.getElementById('can-ia-prompt-text')?.textContent || '';
+  _selecionarPartIA(n) {
+    [1,2,3,4].forEach(i => {
+      const tab = document.getElementById(`can-tab-${i}`);
+      const btn = document.getElementById(`can-tab-btn-${i}`);
+      if (tab) tab.style.display = i === n ? 'block' : 'none';
+      if (btn) {
+        btn.style.background = i === n ? '#fff' : '#f0ece6';
+        btn.style.color      = i === n ? '#9B2335' : '#8a7a60';
+      }
+    });
+  },
+
+  _construirPrompts4Partes(titulo, artista, nivel, icone, nomeDaMusica) {
+    const parteLabels = [
+      'primeira parte (início até aproximadamente 25% da música)',
+      'segunda parte (de aproximadamente 25% até 50% da música)',
+      'terceira parte (de aproximadamente 50% até 75% da música)',
+      'quarta e última parte (de aproximadamente 75% até o fim da música)',
+    ];
+
+    const regraBase = `### REGRAS OBRIGATÓRIAS DE PRECISÃO
+
+1. **Segmentação mínima**: Divida por FRASES LÓGICAS únicas (versos ou linhas). Não agrupe múltiplas linhas.
+
+2. **Timestamps por palavra individual**: Estime o SEGUNDO EXATO em que cada palavra começa.
+   - Cada palavra deve ter seu próprio objeto no array "words"
+   - O timestamp deve refletir quando aquela palavra começa (não termina)
+   - Precisão: use 3 casas decimais em segundos (ex: 79.034)
+
+3. **Campo "hidden"**:
+   - Em 40% a 50% das linhas com conteúdo cantado real, marque UMA palavra com "hidden": true
+   - Escolha palavras úteis: substantivos, verbos, adjetivos ou advérbios relevantes
+   - NUNCA artigos ("the", "a"), preposições curtas, pronomes ou conjunções simples
+   - Linhas sem exercício: todas as palavras têm "hidden": false
+
+4. **Traduções**:
+   - "translation": tradução natural da frase inteira em português
+   - "m": tradução literal/morfológica da palavra isolada
+
+5. **Retorne APENAS o JSON válido**, sem texto antes ou depois
+
+6. **Nível de inglês alvo**: ${nivel}. Prefira lacunas adequadas a esse nível`;
+
+    const estrutura = `### ESTRUTURA DE CADA LINHA
+⚠️ "t" e "e" devem ser NÚMEROS (float), não strings. Correto: 79.034  |  Errado: "79.034"
+⚠️ "e" (end) é OBRIGATÓRIO: timestamp do fim da palavra em segundos decimais. "e" deve ser MAIOR que "t".
+[
+  {
+    "id": 1,
+    "line": "You made me a believer",
+    "translation": "Você me fez um crente",
+    "words": [
+      {"w": "You",      "t": 79.034, "e": 79.312, "m": "Você",    "hidden": false},
+      {"w": "made",     "t": 79.312, "e": 79.578, "m": "fez",     "hidden": false},
+      {"w": "me",       "t": 79.578, "e": 79.801, "m": "me",      "hidden": false},
+      {"w": "a",        "t": 79.801, "e": 80.124, "m": "um",      "hidden": false},
+      {"w": "believer", "t": 80.124, "e": 80.950, "m": "crente",  "hidden": true}
+    ]
+  }
+]`;
+
+    const metadadosParte1 = `
+### ENTREGA PARTE 1 — retorne o objeto wrapper completo:
+{
+  "titulo": "${titulo || 'NOME DA MÚSICA'}",
+  "artista": "${artista || 'NOME DO ARTISTA'}",
+  "nivel": "${nivel}",
+  "icone": "${icone}",
+  "estrofes": [ ...array de linhas desta parte... ]
+}`;
+
+    return parteLabels.map((label, idx) => {
+      const partNum = idx + 1;
+      const isFirst = partNum === 1;
+      const continuacaoNote = isFirst ? '' : `
+⚠️ ATENÇÃO: Este é um prompt de CONTINUAÇÃO. Continue a numeração de "id" de onde a parte anterior parou. NÃO repita linhas já transcritas.`;
+
+      const entrega = isFirst
+        ? metadadosParte1
+        : `
+══════════════════════════════ 📍 ENTREGA ══════════════════════════════
+- Retorne APENAS o array JSON de linhas desta parte (sem wrapper, sem explicações)
+- Parte ${partNum} de 4 — continue a numeração do "id" sequencialmente
+- "t" e "e" são NÚMEROS float (ex: 80.124), não strings — "e" > "t" obrigatoriamente
+- NUNCA repita o mesmo valor de "t" em duas palavras`;
+
+      return `Você é um assistente especializado em transcrição musical pedagógica para um aplicativo de aprendizado de inglês.${continuacaoNote}
+
+══════════════════════════════ PARTE ${partNum} DE 4 ══════════════════════════════
+Analise o arquivo de áudio da música "${nomeDaMusica}".
+Transcreva APENAS a ${label}.
+
+Importante: NÃO transcreva a música inteira — apenas a fração indicada acima.
+════════════════════════════════════════════════════════════════════════
+
+${regraBase}
+
+${estrutura}${entrega}`;
+    });
+  },
+
+  _copiarPromptIA(partNum) {
+    // Support copying by part tab (1-4) or fallback to legacy single prompt element
+    const elId = partNum ? `can-ia-prompt-text-${partNum}` : 'can-ia-prompt-text';
+    const txt = document.getElementById(elId)?.textContent || '';
+    const btnSel = partNum
+      ? `#can-tab-${partNum} .ia-copy-btn`
+      : '#can-ia-bloco .ia-copy-btn';
     const setCopiado = () => {
-      const btn = document.querySelector('#can-ia-bloco .ia-copy-btn');
+      const btn = document.querySelector(btnSel);
       if (!btn) return;
       const orig = btn.textContent;
-      btn.textContent = '✅ Copied!';
+      btn.textContent = '✅ Copiado!';
       setTimeout(() => { btn.textContent = orig; }, 2000);
     };
     navigator.clipboard.writeText(txt).then(setCopiado).catch(() => {
@@ -491,6 +630,52 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       document.body.removeChild(ta);
       setCopiado();
     });
+  },
+
+  _unirEImportar() {
+    // Collect JSON from all 4 part textareas and merge estrofes
+    const partes = [];
+    let metadados = null;
+
+    for (let i = 1; i <= 4; i++) {
+      const raw = (document.getElementById(`can-ia-parte-${i}`)?.value || '').trim();
+      if (!raw) continue;
+      try {
+        let parsed = JSON.parse(raw);
+        // Support both array and wrapper object formats
+        if (Array.isArray(parsed)) {
+          partes.push(...parsed);
+        } else if (parsed.estrofes) {
+          if (!metadados) metadados = { titulo: parsed.titulo, artista: parsed.artista, nivel: parsed.nivel, icone: parsed.icone };
+          partes.push(...parsed.estrofes);
+        }
+      } catch (e) {
+        App.notificar(`Parte ${i}: JSON inválido — verifique o conteúdo`, 'erro');
+        return;
+      }
+    }
+
+    if (partes.length === 0) {
+      App.notificar('Nenhuma parte preenchida. Cole o JSON das partes antes de unir.', 'alerta');
+      return;
+    }
+
+    // Re-number IDs sequentially after merge
+    partes.forEach((e, idx) => { e.id = idx + 1; });
+
+    // Build unified JSON and feed it to the existing import pipeline
+    const unificado = metadados
+      ? { ...metadados, estrofes: partes }
+      : { titulo: document.getElementById('can-titulo')?.value || '', artista: document.getElementById('can-artista')?.value || '', nivel: document.getElementById('can-nivel')?.value || 'A2', icone: document.getElementById('can-icone')?.value || '🎵', estrofes: partes };
+
+    // Inject into the legacy textarea so _importarResultadoIA can process it
+    const ta = document.getElementById('can-ia-resultado');
+    if (ta) {
+      ta.value = JSON.stringify(unificado);
+      ta.style.display = 'block';
+    }
+    this._importarResultadoIA();
+    App.notificar(`✅ ${partes.length} linhas unidas e importadas com sucesso!`, 'sucesso');
   },
 
   _importarResultadoIA() {
@@ -798,8 +983,24 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     this.renderizarSeletor();
   },
 
+  // ── EVENT BUS ─────────────────────────────────────────────────
+  // Minimal pub/sub: decouples RAF loop from UI consumers (Lyrics, Exercise, Debug).
+  // Usage: Canzoni._bus.on('sync', fn)  /  Canzoni._bus.off('sync', fn)
+  // RAF loop calls _bus.emit('sync', state) — consumers react independently.
+  _bus: {
+    _h: {},
+    on(e, fn)   { (this._h[e] = this._h[e] || []).push(fn); },
+    off(e, fn)  { if (this._h[e]) this._h[e] = this._h[e].filter(f => f !== fn); },
+    emit(e, d)  { const hs = this._h[e]; if (hs) for (let i = 0; i < hs.length; i++) { try { hs[i](d); } catch(ex) { console.error('[bus]', e, ex); } } },
+    clear(e)    { delete this._h[e]; },
+  },
+
   // ── MÉTODOS DE JOGO ──────────────────────────────────────────
   erros: 0,
+  // ⚠️ Mutated in-place every RAF frame — do NOT retain a reference between frames.
+  //    Subscribers must read fields immediately inside their callback, never cache the object itself.
+  _syncState: { curMs:0, wordIndex:-1, lineIndex:-1, currentWord:null, nextWord:null, currentLine:null, nextLine:null, progress:0 },
+  _syncDebugVisible: false,
   respostas: [],
   traduzirVisivel: false,
 
@@ -812,18 +1013,23 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     this.acertos = 0;
     this.erros = 0;
     this.respostas = this.canzonAtual.estrofes.map(() => null);
-    this.syncOffsetMs = 0;
+    this.syncOffsetMs = parseFloat(localStorage.getItem('can_sync_' + (can.id || '')) || '0') || 0;
+    this._songIdx = null;
+    this._lastLineIndex = -1;
     this.traduzirVisivel = false;
     this._audioResumeTime = null;
     this._audioShouldPlay = false;
     this._distratorCache = {};
     this._syncGen = (this._syncGen || 0) + 1;
-    // Limpa listener e marca src como descarregado ao trocar de música
+    // Limpa listeners e bus ao trocar de música — evita handlers duplicados acumulados
+    this._bus.clear('sync');
+    if (this._karaokeRafStop) { this._karaokeRafStop(); this._karaokeRafStop = null; }
     const _audioReset = document.getElementById('can-audio-player');
     if (_audioReset) {
       if (this._timeupdateListener) { _audioReset.removeEventListener('timeupdate', this._timeupdateListener); this._timeupdateListener = null; }
       _audioReset.dataset.loadedKey = '';
     }
+    this._buildSongIndex(this.canzonAtual);
     this._avancarProximoBlank();
   },
 
@@ -834,11 +1040,13 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       audioEl.removeEventListener('timeupdate', this._repeatListener);
       this._repeatListener = null;
     }
-    audioEl.currentTime = inicioMs / 1000;
+    const off = this.syncOffsetMs || 0;
+    audioEl.currentTime = (inicioMs + off) / 1000;
     audioEl.play();
     if (fimMs != null) {
+      const stopAt = fimMs + off;
       const parar = () => {
-        if (audioEl.currentTime * 1000 >= fimMs) {
+        if (audioEl.currentTime * 1000 >= stopAt) {
           audioEl.pause();
           audioEl.removeEventListener('timeupdate', parar);
           this._repeatListener = null;
@@ -861,6 +1069,37 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     if (!a || !bar || !a.duration) return;
     const rect = bar.getBoundingClientRect();
     a.currentTime = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)) * a.duration;
+  },
+
+  _toggleSyncDebug() {
+    this._syncDebugVisible = !this._syncDebugVisible;
+    const el = document.getElementById('can-sync-debug');
+    if (!el) return;
+    el.style.display = this._syncDebugVisible ? 'block' : 'none';
+    // Populate immediately so overlay is not empty when audio is paused
+    if (this._syncDebugVisible) {
+      const audio = document.getElementById('can-audio-player');
+      const audioMs = audio ? audio.currentTime * 1000 : 0;
+      const curMs   = audioMs - (this.syncOffsetMs || 0);
+      this._updateSyncDebug(audioMs, curMs, this._syncState, 0);
+    }
+  },
+
+  _updateSyncDebug(audioMs, curMs, state, fps) {
+    const el = document.getElementById('can-sync-debug');
+    if (!el) return;
+    const fmt = ms => ms == null ? '—' : (ms / 1000).toFixed(3) + 's';
+    const cw = state.currentWord;
+    const cl = state.currentLine;
+    el.innerHTML =
+      `<b>Sync Debug</b><br>` +
+      `fps: ${fps}<br>` +
+      `audioMs: ${fmt(audioMs)}<br>` +
+      `curMs: ${fmt(curMs)}<br>` +
+      `offset: ${fmt(this.syncOffsetMs || 0)}<br>` +
+      `word[${state.wordIndex}]: ${cw ? cw.text : '—'} (${fmt(cw?.startMs)}→${fmt(cw?.endMs)})<br>` +
+      `line[${state.lineIndex}]: pauseMs=${fmt(cl?.pauseMs)}<br>` +
+      `progress: ${(state.progress * 100).toFixed(1)}%`;
   },
 
   _updatePlayerUI() {
@@ -891,6 +1130,120 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
     }
     return words;
   },
+  // ── Sync Engine ─────────────────────────────────────────────
+  // Helper: startMs of the hidden word in this line (uses pre-distributed lineWords)
+  _getPauseMsForEst(est, lineWords) {
+    const hw = lineWords.find(w => w.hidden);
+    if (hw) return hw.startMs;
+    return est.palavra_oculta_ms ?? est.inicio_ms ?? null;
+  },
+
+  // Build flat word/line index once per song — called in abrirCanzone
+  _buildSongIndex(can) {
+    const words = [];
+    const lines = [];
+
+    can.estrofes.forEach((est, lineIdx) => {
+      const distrib = est.words
+        ? this._distribuirTimestamps(est.words.map(w => ({ ...w })))
+        : [];
+
+      const firstWordIdx = words.length;
+      const lineWords = distrib.map((w, wi) => ({
+        text:      w.w,
+        startMs:   w.ms,
+        // Use explicit "e" field from JSON when present and valid (must be > startMs after redistribution)
+        endMs: (() => {
+          if (w.e == null) return wi + 1 < distrib.length ? distrib[wi + 1].ms : w.ms + 800;
+          const eMs = this._parseTimestamp(w.e);
+          if (eMs <= w.ms) {
+            console.warn(`[sync] word "${w.w}" has e(${eMs}) <= startMs(${w.ms}) after redistribution — using fallback`);
+            return wi + 1 < distrib.length ? distrib[wi + 1].ms : w.ms + 800;
+          }
+          return eMs;
+        })(),
+        hidden:    !!w.hidden,
+        meaning:   w.m || '',
+        lineIndex: lineIdx,
+        wordIndex: firstWordIdx + wi,
+      }));
+
+      lines.push({
+        index:        lineIdx,
+        startMs:      est.inicio_ms ?? (lineWords[0]?.startMs ?? 0),
+        endMs:        0, // filled in pass 2
+        hasBlank:     this._hasBlank(est),
+        pauseMs:      this._getPauseMsForEst(est, lineWords),
+        firstWordIdx,
+        wordCount:    lineWords.length,
+      });
+
+      words.push(...lineWords);
+    });
+
+    // Pass 2: line endMs = next line's startMs
+    for (let i = 0; i < lines.length - 1; i++) {
+      lines[i].endMs = lines[i + 1].startMs;
+    }
+    if (lines.length > 0) lines[lines.length - 1].endMs = Infinity;
+
+    // Pass 3: fix endMs of last word per line (replaces the startMs+800 heuristic)
+    for (let li = 0; li < lines.length; li++) {
+      const line = lines[li];
+      if (line.wordCount > 0) {
+        words[line.firstWordIdx + line.wordCount - 1].endMs = line.endMs;
+      }
+    }
+
+    this._songIdx = { words, lines };
+  },
+
+  // Binary search: last index in arr where arr[i].startMs <= ms (-1 if none)
+  _binarySearchMs(arr, ms) {
+    let lo = 0, hi = arr.length - 1, result = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (arr[mid].startMs <= ms) { result = mid; lo = mid + 1; }
+      else hi = mid - 1;
+    }
+    return result;
+  },
+
+  // Compute current sync state — mutates this._syncState (zero allocation per frame)
+  _computeSyncState(curMs) {
+    const idx = this._songIdx;
+    const s   = this._syncState;
+    s.curMs = curMs;
+    if (!idx) {
+      s.wordIndex = -1; s.lineIndex = -1;
+      s.currentWord = null; s.nextWord = null;
+      s.currentLine = null; s.nextLine = null;
+      s.progress = 0;
+      return s;
+    }
+    // Cache: skip binary search when curMs is still within the cached word/line interval.
+    // lines[i].index === i always (built in order), so s.lineIndex doubles as the array index.
+    const cw = s.currentWord;
+    const cl = s.currentLine;
+    const wordI = (cw && curMs >= cw.startMs && curMs < cw.endMs)
+      ? s.wordIndex
+      : this._binarySearchMs(idx.words, curMs);
+    const lineI = (cl && curMs >= cl.startMs && curMs < cl.endMs)
+      ? s.lineIndex   // s.lineIndex === lines[] array index (lines[i].index === i)
+      : this._binarySearchMs(idx.lines, curMs);
+    s.wordIndex   = wordI;
+    s.lineIndex   = lineI >= 0 ? idx.lines[lineI].index : -1;
+    s.currentWord = wordI >= 0 ? idx.words[wordI] : null;
+    s.nextWord    = wordI + 1 < idx.words.length ? idx.words[wordI + 1] : null;
+    s.currentLine = lineI >= 0 ? idx.lines[lineI] : null;
+    s.nextLine    = lineI >= 0 && lineI + 1 < idx.lines.length ? idx.lines[lineI + 1] : null;
+    s.progress    = s.currentWord
+      ? (curMs >= s.currentWord.endMs ? 1 : (curMs - s.currentWord.startMs) / (s.currentWord.endMs - s.currentWord.startMs))
+      : 0;
+    return s;
+  },
+  // ─────────────────────────────────────────────────────────────
+
   _formatTime(sec) {
     const m = Math.floor(sec / 60);
     return m + ':' + Math.floor(sec % 60).toString().padStart(2, '0');
@@ -959,25 +1312,27 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       if (v.words && v.words.length > 0) {
         // Word-level rendering with clickable spans
         const distribWords = this._distribuirTimestamps(v.words.map(w => ({ ...w })));
+        const firstWordIdx = this._songIdx?.lines[i]?.firstWordIdx ?? 0;
         const wordsHtml = distribWords.map((wd, wi) => {
           const nextMs = (wi + 1 < distribWords.length) ? distribWords[wi + 1].ms : (wd.ms + 1500);
           const msVal = wd.ms ?? 0;
+          const gIdx = firstWordIdx + wi; // global word index in _songIdx.words
           const tooltip = wd.m ? ' title="' + this._esc(wd.m) + '"' : '';
           if (wd.hidden) {
             let blankHtml;
             if (cls === 'future' || cls === 'active') {
-              blankHtml = '<span class="can-blank" data-ms="' + msVal + '" data-fim="' + nextMs + '"' + tooltip + '>_____</span>';
+              blankHtml = '<span class="can-blank" data-word-idx="' + gIdx + '"' + tooltip + '>_____</span>';
             } else if (resp && resp.correto) {
-              blankHtml = '<span class="can-blank can-blank-correct can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
+              blankHtml = '<span class="can-blank can-blank-correct can-word" data-word-idx="' + gIdx + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
             } else if (resp) {
               blankHtml = '<span class="can-blank can-blank-wrong">' + this._esc(resp.escolha) + '</span>'
-                        + '<span class="can-blank can-blank-revealed can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '> ' + this._esc(wd.w) + '</span>';
+                        + '<span class="can-blank can-blank-revealed can-word" data-word-idx="' + gIdx + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '> ' + this._esc(wd.w) + '</span>';
             } else {
-              blankHtml = '<span class="can-blank can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
+              blankHtml = '<span class="can-blank can-word" data-word-idx="' + gIdx + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
             }
             return blankHtml;
           }
-          return '<span class="can-word" data-ms="' + msVal + '" data-fim="' + nextMs + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
+          return '<span class="can-word" data-word-idx="' + gIdx + '" onclick="Canzoni._repetirVerso(' + msVal + ',' + nextMs + ')"' + tooltip + '>' + this._esc(wd.w) + '</span>';
         }).join(' ');
         lineHtml = '<span class="can-verse-line">' + wordsHtml + '</span>';
       } else if (!v.palavra_oculta || !v.texto_lacuna) {
@@ -1038,12 +1393,9 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
               '<div class="can-player-fill" id="can-player-fill"></div>' +
             '</div>' +
             '<span class="can-player-total" id="can-player-total">--:--</span>' +
+            '<button onclick="Canzoni._toggleSyncDebug()" title="Sync debug" style="background:none;border:none;color:rgba(255,210,180,0.4);font-size:0.75rem;cursor:pointer;padding:0 4px;flex-shrink:0;">&#128295;</button>' +
           '</div>' +
-          '<div class="can-sync-controls" style="display:flex; justify-content:center; gap:10px; margin-top:5px; font-size:0.75rem;">' +
-            '<button onclick="Canzoni._ajustarSincronia(-500)" title="Adiantar a letra (letras est\u00e3o lentas)" style="background:var(--card-bg); color:var(--text-color); border:1px solid rgba(128,128,128,0.3); border-radius:4px; padding:2px 6px;">-0.5s</button>' +
-            '<span id="can-sync-display">Sync: ' + ((this.syncOffsetMs||0)/1000).toFixed(1) + 's</span>' +
-            '<button onclick="Canzoni._ajustarSincronia(500)" title="Atrasar a letra (letras est\u00e3o r\u00e1pidas)" style="background:var(--card-bg); color:var(--text-color); border:1px solid rgba(128,128,128,0.3); border-radius:4px; padding:2px 6px;">+0.5s</button>' +
-          '</div>' +
+          '<div id="can-sync-debug" style="display:none;position:fixed;top:60px;right:10px;background:rgba(0,0,0,0.85);color:#4ade80;font-family:monospace;font-size:0.7rem;padding:8px 10px;border-radius:6px;z-index:9999;min-width:200px;line-height:1.7;pointer-events:none;"></div>' +
         '</div>'
       : '';
 
@@ -1098,6 +1450,11 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       audioEl.removeEventListener('timeupdate', this._timeupdateListener);
       this._timeupdateListener = null;
     }
+    // Cancel any running RAF karaoke loop from previous render
+    if (this._karaokeRafStop) {
+      this._karaokeRafStop();
+      this._karaokeRafStop = null;
+    }
 
     // Só recarrega src se a música mudou — recarregar desnecessariamente reseta currentTime→0
     // causando highlight errado do verso durante o reload
@@ -1147,53 +1504,116 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
       });
     });
 
-    // Cache word elements once per render for karaoke effect
-    const lyricWordEls = Array.from(document.querySelectorAll('#can-lyrics .can-word[data-ms]'));
+    // Cache word elements — use data-word-idx to look up timing from _songIdx (single source of truth)
+    const lyricWordEls = Array.from(document.querySelectorAll('#can-lyrics [data-word-idx]'));
+    for (let i = 0; i < lyricWordEls.length; i++) {
+      const el = lyricWordEls[i];
+      el._wIdx    = +el.dataset.wordIdx;
+      el._past    = false;
+      el._current = false;
+    }
 
     let pausadoParaLacuna = false;
+    let _dbgFrames = 0, _dbgFps = 0, _dbgFpsT = performance.now();
 
-    const timeupdateFn = () => {
-      // Use offset to advance/delay lyrics relative to audio
-      const curMs = (audioEl.currentTime * 1000) - (this.syncOffsetMs || 0);
+    // High-resolution Clock — anchored on timeupdate, interpolated with performance.now()
+    // audio.currentTime updates every ~4-15ms (browser-dependent); RAF runs at ~16ms.
+    // Without interpolation, curMs is "frozen" for several RAF frames after each timeupdate.
+    let _clkAudioMs  = audioEl.currentTime * 1000;
+    let _clkPerfMs   = performance.now();
+    let _clkRate     = audioEl.playbackRate || 1;
+    const _clkAnchor = () => {
+      _clkAudioMs = audioEl.currentTime * 1000;
+      _clkPerfMs  = performance.now();
+      _clkRate    = audioEl.playbackRate || 1;
+    };
+    // Invalidate word/line cache on seek or rate change so _computeSyncState runs a full
+    // binary search on the next frame instead of trusting the stale cached interval.
+    const _clkInvalidate = () => {
+      _clkAnchor();
+      this._syncState.currentWord = null;
+      this._syncState.currentLine = null;
+    };
+    audioEl.addEventListener('timeupdate',   _clkAnchor);
+    audioEl.addEventListener('seeking',      _clkInvalidate);
+    audioEl.addEventListener('ratechange',   _clkInvalidate);
 
-      // Karaokê: colorir palavras conforme o áudio avança
-      lyricWordEls.forEach(el => {
-        const wMs  = parseInt(el.dataset.ms);
-        const wFim = parseInt(el.dataset.fim);
-        el.classList.toggle('can-word-past',    curMs >= wFim);
-        el.classList.toggle('can-word-current', curMs >= wMs && curMs < wFim);
-      });
-      this._updatePlayerUI();
+    // 60fps RAF loop — reads clock, delegates to Sync Engine, applies to DOM
+    let rafId = null;
+    const rafLoop = () => {
+      rafId = requestAnimationFrame(rafLoop);
+      if (audioEl.paused && !audioEl.seeking) return;
 
-      let activeEl = null;
-      for (let i = 0; i < verseEls.length; i++) {
-        const startMs = parseInt(verseEls[i].dataset.tempoMs, 10);
-        const nextMs = (i + 1 < verseEls.length) ? parseInt(verseEls[i + 1].dataset.tempoMs, 10) : Infinity;
-        if (curMs >= startMs && curMs < nextMs) { activeEl = verseEls[i]; break; }
+      // Interpolate: add elapsed wall-clock time since last anchor
+      const audioMs = _clkAudioMs + (performance.now() - _clkPerfMs) * _clkRate;
+      const curMs   = audioMs - (this.syncOffsetMs || 0);   // syncOffset applied once — IA→audio scale
+
+      const state = this._computeSyncState(curMs);          // zero-allocation Sync Engine call
+
+      // 1. Karaokê — timing from _songIdx.words (DOM is never the timing source)
+      for (let i = 0; i < lyricWordEls.length; i++) {
+        const el = lyricWordEls[i];
+        const w  = this._songIdx?.words[el._wIdx];
+        if (!w) continue;
+        const past    = curMs >= w.endMs;
+        const current = !past && curMs >= w.startMs;
+        if (past    !== el._past)    { el._past    = past;    el.classList.toggle('can-word-past',    past); }
+        if (current !== el._current) { el._current = current; el.classList.toggle('can-word-current', current); }
       }
-      verseEls.forEach(el => el.classList.toggle('can-verse-playing', el === activeEl));
-      if (activeEl) activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-      // Pausa automaticamente ao alcançar uma lacuna ainda não respondida
-      const idxAtual = this.estrofeAtual;
-      const estrofeAtualObj = can.estrofes[idxAtual];
-      if (estrofeAtualObj && this._hasBlank(estrofeAtualObj) && this.respostas[idxAtual] == null) {
-        let pauseAtMs = estrofeAtualObj.palavra_oculta_ms
-          ?? estrofeAtualObj.words?.find(w => w.hidden)?.ms
-          ?? estrofeAtualObj.inicio_ms;
-        // Pause shortly before the gap word instead of after it
-        if (pauseAtMs != null) {
-          pauseAtMs = pauseAtMs - 100;
+      // 2. Verse highlight (scroll) — only when line changes
+      if (state.lineIndex !== this._lastLineIndex) {
+        this._lastLineIndex = state.lineIndex;
+        for (let i = 0; i < verseEls.length; i++) {
+          verseEls[i].classList.toggle('can-verse-playing', i === state.lineIndex);
         }
-        if (!pausadoParaLacuna && pauseAtMs != null && curMs >= pauseAtMs) {
+        if (verseEls[state.lineIndex]) {
+          verseEls[state.lineIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      // 3. Pause at blank — index-driven, offset-corrected
+      const estIdx  = this.estrofeAtual;
+      const estLine = this._songIdx?.lines[estIdx];
+      if (estLine?.hasBlank && this.respostas[estIdx] == null && !pausadoParaLacuna) {
+        const pauseTarget = (estLine.pauseMs ?? 0) + (this.syncOffsetMs || 0);
+        if (audioMs >= pauseTarget) {
           pausadoParaLacuna = true;
           audioEl.pause();
           this._updatePlayerUI();
         }
       }
+
+      // 4. Emit sync event — bus subscribers (debug overlay, future: translation, exercise)
+      _dbgFrames++;
+      const _now = performance.now();
+      if (_now - _dbgFpsT >= 500) {
+        _dbgFps = Math.round(_dbgFrames * 1000 / (_now - _dbgFpsT));
+        _dbgFrames = 0; _dbgFpsT = _now;
+      }
+      this._bus.emit('sync', { audioMs, curMs, state, fps: _dbgFps });
     };
+
+    // timeupdate keeps progress bar smooth when RAF is paused
+    const timeupdateFn = () => this._updatePlayerUI();
     this._timeupdateListener = timeupdateFn;
     audioEl.addEventListener('timeupdate', timeupdateFn);
+
+    // Debug overlay subscriber — reacts to 'sync' bus event
+    const _debugSubscriber = ({ audioMs, curMs, state, fps }) => {
+      if (this._syncDebugVisible) this._updateSyncDebug(audioMs, curMs, state, fps);
+    };
+    this._bus.on('sync', _debugSubscriber);
+
+    if (this._karaokeRafId) cancelAnimationFrame(this._karaokeRafId);
+    rafId = requestAnimationFrame(rafLoop);
+    this._karaokeRafStop = () => {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      audioEl.removeEventListener('timeupdate',  _clkAnchor);
+      audioEl.removeEventListener('seeking',     _clkInvalidate);
+      audioEl.removeEventListener('ratechange',  _clkInvalidate);
+      this._bus.off('sync', _debugSubscriber);
+    };
   },
 
   _escolher(palavra) {
@@ -1236,14 +1656,56 @@ Inclua no início do JSON, antes do array, um objeto wrapper:
 
   _ajustarSincronia(deltaMs) {
     this.syncOffsetMs = (this.syncOffsetMs || 0) + deltaMs;
+    // Persist to localStorage so it survives page refresh
+    if (this.canzonAtual) {
+      localStorage.setItem('can_sync_' + this.canzonAtual.id, String(this.syncOffsetMs));
+    }
+    const syncSec = (this.syncOffsetMs / 1000).toFixed(1);
     const displayEl = document.getElementById('can-sync-display');
-    if (displayEl) {
-      displayEl.textContent = 'Sync: ' + (this.syncOffsetMs / 1000).toFixed(1) + 's';
+    if (displayEl) displayEl.textContent = syncSec + 's';
+    // Force immediate highlight update
+    if (this._timeupdateListener) this._timeupdateListener();
+  },
+
+  _calibrarSincronia() {
+    const audioEl = document.getElementById('can-audio-player');
+    if (!audioEl || audioEl.paused) {
+      // Se parado: inicia instrução de tap
+      const btn = document.getElementById('can-calib-btn');
+      if (btn) {
+        btn.textContent = '\u25b6 Play e toque!';
+        btn.style.background = 'rgba(212,168,67,0.5)';
+        btn.style.animation = 'none';
+        // Start audio and prepare for tap
+        audioEl.play().catch(() => {});
+      }
+      this._calibrando = true;
+      return;
     }
-    // Força update imediato do UI de palavras chamando o timeupdateFn manualmente
-    if (this._timeupdateListener) {
-      this._timeupdateListener();
+    if (!this._calibrando) {
+      // Primeira chamada com audio tocando: aguardar tap
+      this._calibrando = true;
+      const btn = document.getElementById('can-calib-btn');
+      if (btn) { btn.textContent = '\u1f3af Toque ao ouvir!'; btn.style.background = 'rgba(212,168,67,0.5)'; }
+      return;
     }
+    // Segunda chamada: o user tocou quando ouviu a 1ª palavra
+    this._calibrando = false;
+    // O audio está em audioEl.currentTime. A 1ª palavra deveria iniciar em firstWordMs.
+    const can = this.canzonAtual;
+    if (!can) return;
+    const firstWord = can.estrofes[0]?.words?.[0];
+    const firstWordMs = firstWord?.ms ?? can.estrofes[0]?.inicio_ms ?? 0;
+    const tapAudioMs = audioEl.currentTime * 1000;
+    // offset = tapAudioMs - firstWordMs (how much the audio is ahead of timestamps)
+    const newOffset = Math.round(tapAudioMs - firstWordMs);
+    this.syncOffsetMs = newOffset;
+    if (can) localStorage.setItem('can_sync_' + can.id, String(newOffset));
+    const displayEl = document.getElementById('can-sync-display');
+    if (displayEl) displayEl.textContent = (newOffset / 1000).toFixed(1) + 's';
+    const btn = document.getElementById('can-calib-btn');
+    if (btn) { btn.textContent = '\u2705 Calibrado!'; btn.style.background = 'rgba(74,222,128,0.25)'; setTimeout(() => { if (btn) btn.textContent = '\u1f3af Calibrar'; }, 2000); }
+    if (this._timeupdateListener) this._timeupdateListener();
   },
 
   verificar() {},
