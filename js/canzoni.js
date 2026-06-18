@@ -1153,7 +1153,13 @@ ${estrutura}${entrega}`;
           est.words.forEach(w => {
             const tRaw = parseFloat(w.t ?? NaN);
             if (!isNaN(tRaw)) w.ms = Math.round(tRaw * 60 * 1000);
-            if (w.e != null) w.e = parseFloat(w.e) * 60; // min-decimal → segundos
+            // Só converte e se ainda estiver em minutos decimais.
+            // Se _parseTimestamp(w.e) já é maior que w.ms, w.e já está em segundos
+            // (convertido numa importação anterior) — não multiplicar de novo.
+            if (w.e != null) {
+              const eMs = this._parseTimestamp(w.e);
+              if (eMs <= w.ms) w.e = parseFloat(w.e) * 60; // min-decimal → segundos
+            }
           });
           est.inicio_ms = est.words[0].ms;
           est.tempo = est.inicio_ms / 1000;
@@ -1424,10 +1430,12 @@ ${estrutura}${entrega}`;
         const distribWords = this._distribuirTimestamps(v.words.map(w => ({ ...w })));
         const origFirstWordIdx = this._songIdx?.originalLines?.[i]?.firstWordIdx ?? 0;
         const wordsHtml = distribWords.map((wd, wi) => {
-          const nextMs = (wi + 1 < distribWords.length) ? distribWords[wi + 1].ms : (wd.ms + 1500);
-          const msVal = wd.ms ?? 0;
           // gIdx = sorted word index so RAF can look up this._songIdx.words[el._wIdx]
           const gIdx = this._songIdx?.wordSortedIdx?.[origFirstWordIdx + wi] ?? (origFirstWordIdx + wi);
+          // Use normalized timing from _songIdx (handles decimal-minutes imports correctly)
+          const syncWord = this._songIdx?.words?.[gIdx];
+          const msVal  = syncWord?.startMs ?? wd.ms ?? 0;
+          const nextMs = syncWord?.endMs   ?? ((wi + 1 < distribWords.length) ? distribWords[wi + 1].ms : (wd.ms + 1500));
           const tooltip = wd.m ? ' title="' + this._esc(wd.m) + '"' : '';
           if (wd.hidden) {
             let blankHtml;
