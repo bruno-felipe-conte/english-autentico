@@ -1221,19 +1221,19 @@
           "num": "Lesson 11",
           "titulo": "Present Simple (Negative)",
           "subtitulo": "Don't vs Doesn't",
-          "alerta": "Para dizer 'não' no Present Simple, precisamos da ajuda de 'don't' e 'doesn't'.",
+          "alerta": "Para dizer 'não' no Present Simple, não usamos apenas 'not'. Precisamos dos auxiliares 'don't' ou 'doesn't' antes do verbo principal. Eles mostram que a frase é negativa e em qual tempo verbal ela está.",
           "observacao_cards": [
             {
               "italiano": "don't",
               "traducao": "não (I, You, We, They)",
               "genero": "Verbo Auxiliar",
-              "motivo": "Negativa para a maioria das pessoas"
+              "motivo": "Contração de 'do not'. Usado com I, You, We, They. Coloque antes do verbo base."
             },
             {
               "italiano": "doesn't",
               "traducao": "não (He, She, It)",
               "genero": "Verbo Auxiliar",
-              "motivo": "Negativa para a 3ª pessoa do singular"
+              "motivo": "Contração de 'does not'. Exclusivo para He, She, It. O verbo seguinte perde o 's'."
             }
           ],
           "tabela_visual": "| Subject | Auxiliary Negative | Verb |\n|---|---|---|\n| I / You / We / They | don't | play |\n| He / She / It | doesn't | play |",
@@ -1241,7 +1241,7 @@
             {
               "oracao": "She doesn't like pizza.",
               "pergunta": "Por que o verbo 'like' não tem 's' no final?",
-              "resposta": "Porque o 'doesn't' já indica que a frase está na 3ª pessoa do singular. O verbo principal volta à sua forma base.",
+              "resposta": "Como o auxiliar 'doesn't' já carrega a marcação de terceira pessoa do singular (es), o verbo principal 'like' deve voltar à sua forma básica, sem o 's' final.",
               "conclusao": "Com 'doesn't', o verbo principal perde o 's'."
             }
           ],
@@ -1249,10 +1249,10 @@
             {
               "errado": "He doesn't plays soccer.",
               "certo": "He doesn't play soccer.",
-              "explicacao": "Nunca adicione 's' ao verbo principal em frases negativas. O auxiliar 'doesn't' já faz esse trabalho."
+              "explicacao": "Nunca adicione 's' ao verbo principal em frases negativas. O auxiliar 'doesn't' já faz esse trabalho de marcação."
             }
           ],
-          "coda": "Lembre-se: 'don't' para a maioria, e 'doesn't' para He, She, It (e sempre use o verbo normal depois deles)!",
+          "coda": "Fórmula da negação: Sujeito + don't / doesn't + Verbo Base (sem 'to' e sem 's'). Lembre: o 's' só aparece na afirmativa!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1315,19 +1315,19 @@
           "num": "Lesson 12",
           "titulo": "Present Simple (Questions)",
           "subtitulo": "Do vs Does",
-          "alerta": "No inglês, não basta apenas mudar a entonação da voz. Precisamos colocar 'Do' ou 'Does' no começo da frase para fazer uma pergunta no presente!",
+          "alerta": "No inglês, não basta apenas mudar a entonação da voz para fazer uma pergunta. Precisamos colocar 'Do' ou 'Does' no começo da frase para interrogar corretamente no presente!",
           "observacao_cards": [
             {
               "italiano": "Do",
               "traducao": "(Indicador de pergunta)",
               "genero": "Verbo Auxiliar",
-              "motivo": "Usado antes de I, You, We, They"
+              "motivo": "Usado antes de I, You, We, They para indicar pergunta no Present Simple."
             },
             {
               "italiano": "Does",
               "traducao": "(Indicador de pergunta)",
               "genero": "Verbo Auxiliar",
-              "motivo": "Usado antes de He, She, It"
+              "motivo": "Usado antes de He, She, It. O verbo seguinte perde o 's' na pergunta."
             }
           ],
           "tabela_visual": "| Auxiliary | Subject | Verb | ? |\n|---|---|---|---|\n| Do | you | work | ? |\n| Does | she | work | ? |",
@@ -1335,7 +1335,7 @@
             {
               "oracao": "Does he live here?",
               "pergunta": "Por que usamos 'Does' e não 'Do'?",
-              "resposta": "Porque o sujeito é 'he' (ele), que é 3ª pessoa do singular.",
+              "resposta": "O sujeito é 'he' (ele), que é 3ª pessoa do singular. Por isso, a pergunta começa com 'Does' e o verbo principal fica na forma base.",
               "conclusao": "Coloque 'Does' antes de He, She, It."
             }
           ],
@@ -1343,7 +1343,7 @@
             {
               "errado": "You like coffee?",
               "certo": "Do you like coffee?",
-              "explicacao": "Em inglês não podemos fazer perguntas no Present Simple apenas com entonação de voz. O auxiliar 'Do' é obrigatório no início."
+              "explicacao": "Em inglês não podemos fazer perguntas no Present Simple apenas com entonação de voz. O auxiliar 'Do' ou 'Does' é obrigatório no início."
             },
             {
               "errado": "Does she likes coffee?",
@@ -1414,31 +1414,31 @@
           "num": "Lesson 13",
           "titulo": "Adverbs of Frequency",
           "subtitulo": "Always, Usually, Sometimes, Never",
-          "alerta": "Usamos esses advérbios para dizer COM QUE FREQUÊNCIA fazemos algo (Sempre? Às vezes? Nunca?).",
+          "alerta": "Usamos esses advérbios para dizer com que frequência fazemos algo (Sempre? Às vezes? Nunca?). A posição deles na frase é muito importante para manter o fluxo correto da frase.",
           "observacao_cards": [
             {
               "italiano": "always",
               "traducao": "sempre (100%)",
               "genero": "Advérbio",
-              "motivo": "Uma ação constante"
+              "motivo": "Uma ação constante (100% das vezes). Posicionado antes do verbo principal."
             },
             {
               "italiano": "usually",
               "traducao": "normalmente (80%)",
               "genero": "Advérbio",
-              "motivo": "Maior parte do tempo"
+              "motivo": "Na maior parte do tempo (geralmente). Posicionado antes do verbo principal."
             },
             {
               "italiano": "sometimes",
               "traducao": "às vezes (50%)",
               "genero": "Advérbio",
-              "motivo": "Metade das vezes"
+              "motivo": "Indica regularidade intermediária (às vezes). Antes do verbo de ação."
             },
             {
               "italiano": "never",
               "traducao": "nunca (0%)",
               "genero": "Advérbio",
-              "motivo": "Ação inexistente"
+              "motivo": "Indica 0% das vezes (nunca). Posição: antes do verbo principal."
             }
           ],
           "tabela_visual": "| Adverb | Meaning | Position |\n|---|---|---|\n| Always | Sempre | Antes do verbo principal |\n| Usually | Geralmente | Antes do verbo principal |\n| Sometimes | Às vezes | Antes do verbo principal |\n| Never | Nunca | Antes do verbo principal |",
@@ -1446,7 +1446,7 @@
             {
               "oracao": "I always wake up early.",
               "pergunta": "Onde fica o advérbio de frequência na frase?",
-              "resposta": "Fica entre o sujeito (I) e o verbo principal (wake up).",
+              "resposta": "A posição padrão do advérbio de frequência é diretamente entre o sujeito ('I') e o verbo principal ('wake up').",
               "conclusao": "A ordem é: Sujeito + Advérbio + Verbo Principal."
             },
             {
@@ -1460,7 +1460,7 @@
             {
               "errado": "I play usually soccer.",
               "certo": "I usually play soccer.",
-              "explicacao": "Com verbos comuns, o advérbio de frequência deve vir ANTES do verbo."
+              "explicacao": "Com verbos comuns, o advérbio de frequência deve vir ANTES do verbo (I usually play, não I play usually)."
             },
             {
               "errado": "I don't never eat meat.",
@@ -1531,31 +1531,31 @@
           "num": "Lesson 14",
           "titulo": "Question Words 2",
           "subtitulo": "When, Why, How, How often",
-          "alerta": "Quer obter mais do que apenas um 'Sim' ou 'Não'? Use as Question Words! Elas lideram a pergunta.",
+          "alerta": "Quer obter mais do que apenas um 'Sim' ou 'Não'? Use as Question Words! Elas lideram a pergunta e servem para investigar detalhes específicos das situações cotidianas.",
           "observacao_cards": [
             {
               "italiano": "when",
               "traducao": "quando",
               "genero": "Question Word",
-              "motivo": "Pergunta sobre tempo/data"
+              "motivo": "Pergunta sobre tempo/data específicos em que algo ocorre."
             },
             {
               "italiano": "why",
               "traducao": "por que",
               "genero": "Question Word",
-              "motivo": "Pergunta sobre motivo/razão"
+              "motivo": "Pergunta sobre motivo/razão pelo qual algo está acontecendo."
             },
             {
               "italiano": "how",
               "traducao": "como",
               "genero": "Question Word",
-              "motivo": "Pergunta sobre maneira/estado"
+              "motivo": "Pergunta sobre maneira/estado em que algo se encontra."
             },
             {
               "italiano": "how often",
               "traducao": "com que frequência",
               "genero": "Question Word",
-              "motivo": "Pergunta sobre rotina/frequência"
+              "motivo": "Pergunta sobre rotina/frequência com que uma ação ocorre."
             }
           ],
           "tabela_visual": "| Question Word | Auxiliary | Subject | Verb | ? |\n|---|---|---|---|---|\n| When | do | you | study | ? |\n| Why | does | she | cry | ? |",
@@ -1563,18 +1563,18 @@
             {
               "oracao": "Why do you study English? - Because I want to travel.",
               "pergunta": "Por que usamos 'Why' e 'Because'?",
-              "resposta": "Em inglês, usamos 'Why' para PERGUNTAR o porquê, e 'Because' para RESPONDER o porquê.",
-              "conclusao": "Why = pergunta / Because = resposta"
+              "resposta": "Para perguntar sobre rotina ou frequência, iniciamos a frase com 'How often', seguido obrigatoriamente do auxiliar 'do', do sujeito 'you' e do verbo base 'go'.",
+              "conclusao": "How often no início investiga a regularidade de uma ação."
             }
           ],
           "armadilhas": [
             {
               "errado": "Why you study English?",
               "certo": "Why do you study English?",
-              "explicacao": "As Question Words não substituem o auxiliar (Do/Does). Elas devem vir ANTES do auxiliar."
+              "explicacao": "Ao fazer perguntas com question words no Present Simple, você ainda precisa usar os auxiliares Do ou Does após a palavra de pergunta (Where do you, não Where you)."
             }
           ],
-          "coda": "Use a fórmula mágica: Question Word + Do/Does + Sujeito + Verbo!",
+          "coda": "Use a fórmula mágica: Question Word + Do/Does + Sujeito + Verbo! As Question Words são o farol da pergunta.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1637,25 +1637,25 @@
           "num": "Lesson 15",
           "titulo": "Object Pronouns",
           "subtitulo": "Me, You, Him, Her, Us, Them",
-          "alerta": "Pronomes pessoais regulares (I, He, She) FAZEM a ação. Mas e quem RECEBE a ação? Apresentando os Object Pronouns!",
+          "alerta": "Os pronomes objeto recebem a ação na frase e aparecem sempre após o verbo principal ou de uma preposição. Eles evitam repetições desnecessárias ao nos referirmos a pessoas ou objetos.",
           "observacao_cards": [
             {
               "italiano": "me",
               "traducao": "me / mim (recebe a ação de 'I')",
               "genero": "Object Pronoun",
-              "motivo": "Objeto da frase"
+              "motivo": "Objeto da frase que equivale ao pronome sujeito 'I' (eu)."
             },
             {
               "italiano": "him / her",
               "traducao": "o, lhe, a ele / a, lhe, a ela",
               "genero": "Object Pronoun",
-              "motivo": "Objetos equivalentes a He e She"
+              "motivo": "Objetos correspondentes a He e She (ele e ela) que recebem a ação."
             },
             {
               "italiano": "us / them",
               "traducao": "nos / os, as, lhes, a eles",
               "genero": "Object Pronoun",
-              "motivo": "Objetos equivalentes a We e They"
+              "motivo": "Objetos correspondentes a We e They (nós e eles/elas) que recebem a ação."
             }
           ],
           "tabela_visual": "| Subject | Object |\n|---|---|\n| I | me |\n| You | you |\n| He | him |\n| She | her |\n| It | it |\n| We | us |\n| They | them |",
@@ -1663,15 +1663,15 @@
             {
               "oracao": "I call him every day.",
               "pergunta": "Por que não podemos dizer 'I call he'?",
-              "resposta": "'He' só é usado quando ele pratica a ação. Como ele está recebendo a ação de ser chamado, devemos usar 'him'.",
-              "conclusao": "Use o Object Pronoun DEPOIS de verbos ou preposições."
+              "resposta": "O pronome 'him' é usado porque ele recebe a ação do verbo 'like' (objeto) e se refere a 'John' (sujeito masculino singular). Nunca use 'he' nesta posição.",
+              "conclusao": "Pronomes objeto (me, him, her) sempre vêm após o verbo."
             }
           ],
           "armadilhas": [
             {
               "errado": "She loves he.",
               "certo": "She loves him.",
-              "explicacao": "'He' é o pronome sujeito (faz a ação). O objeto da ação de amar aqui deve ser o pronome objeto 'him'."
+              "explicacao": "Não use pronomes sujeito (I, he, she) após verbos ou preposições. Os pronomes sujeito praticam a ação; quem recebe a ação é o pronome objeto (him, não he)."
             },
             {
               "errado": "Talk to I.",
@@ -1679,7 +1679,7 @@
               "explicacao": "Após preposições (como 'to', 'for', 'with'), sempre usamos os pronomes objeto."
             }
           ],
-          "coda": "Sujeito (no início) age; Objeto (depois do verbo) sofre a ação. Decore essa tabelinha que ela salva vidas!",
+          "coda": "Pratica a ação (antes do verbo) → I, He, She, We, They. Recebe a ação (depois do verbo) → Me, Him, Her, Us, Them. Memorize essa divisão essencial!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1742,19 +1742,19 @@
           "num": "Lesson 16",
           "titulo": "\"Have got / Has got:\" Posse e \"have\" para ações",
           "subtitulo": "Possession and Actions",
-          "alerta": "Em inglês, 'have got' é muito comum para falar de posse e características, enquanto 'have' sozinho também é usado para posse, mas especialmente para indicar ações como comer ou tomar banho.",
+          "alerta": "No inglês britânico e no dia a dia, usa-se muito 'have got' para falar de posse e relações familiares. Mas atenção: para ações cotidianas como tomar banho ou almoçar, use apenas 'have', sem o 'got'!",
           "observacao_cards": [
             {
               "italiano": "I have got",
               "traducao": "Eu tenho",
               "genero": "Posse",
-              "motivo": "Usado para indicar que possuo algo (mais comum no Reino Unido)."
+              "motivo": "Usados para posse física, características e família (has got para he/she/it)."
             },
             {
               "italiano": "He has got",
               "traducao": "Ele tem",
               "genero": "Posse",
-              "motivo": "Forma para a 3ª pessoa do singular (He, She, It)."
+              "motivo": "Formas básicas. Usados sozinhos para ações/atividades (ex: have lunch, have a shower)."
             },
             {
               "italiano": "I have breakfast",
@@ -1768,24 +1768,24 @@
             {
               "oracao": "She has got a new car.",
               "pergunta": "O que indica 'has got'?",
-              "resposta": "Indica posse, que ela é dona do carro.",
-              "conclusao": "has got = ter/possuir"
+              "resposta": "Usamos 'has got' para expressar posse física (ser dona do carro). A forma é 'has' porque o sujeito é de terceira pessoa do singular ('She').",
+              "conclusao": "Has got indica posse para a terceira pessoa (He/She/It)."
             },
             {
               "oracao": "They have lunch at noon.",
               "pergunta": "Por que não usamos 'got' aqui?",
-              "resposta": "Porque 'have lunch' é uma ação (almoçar), não posse.",
-              "conclusao": "have = ação"
+              "resposta": "Tomar banho ('a shower') é uma ação/evento cotidiano, não uma posse física. Por isso, a regra gramatical proíbe o uso de 'got', usando-se apenas o verbo 'have'.",
+              "conclusao": "Use apenas 'have' para ações e atividades cotidianas."
             }
           ],
           "armadilhas": [
             {
               "errado": "I have got breakfast at 8 am.",
               "certo": "I have breakfast at 8 am.",
-              "explicacao": "Não usamos 'got' quando 'have' significa comer/beber/tomar banho (ações)."
+              "explicacao": "Ações cotidianas como refeições e banho não são posses físicas. Diga sempre 'have a coffee' ou 'have dinner'. O uso de 'got' aqui é incorreto."
             }
           ],
-          "coda": "Lembre-se: 'have got' é para o que você possui ou para descrever a si mesmo, enquanto 'have' puro muitas vezes representa ações da rotina!",
+          "coda": "Posse física ou família → have got / has got (ex: I've got a car). Ações, refeições, atividades → have / has (ex: I have lunch). Evite misturar os dois!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1848,19 +1848,19 @@
           "num": "Lesson 17",
           "titulo": "\"There is / There are:\" Existência no presente",
           "subtitulo": "There is a cat... There are dogs...",
-          "alerta": "Em inglês, usamos 'There is' e 'There are' para dizer que algo existe em um lugar. É o equivalente ao verbo 'haver' ou 'ter' no sentido de existência.",
+          "alerta": "Para dizer que algo 'existe' ou 'tem' em um lugar, não use o verbo 'have'. Em inglês, usamos 'There is' para singular e 'There are' para plural. É o equivalente correto do nosso 'há' ou 'existe'.",
           "observacao_cards": [
             {
               "italiano": "There is",
               "traducao": "Há / Tem (Singular)",
               "genero": "Existência",
-              "motivo": "Usado para um único objeto, pessoa ou animal."
+              "motivo": "Significa 'há' ou 'existe' para coisas no singular. Pode ser contraído como 'There's'."
             },
             {
               "italiano": "There are",
               "traducao": "Há / Têm (Plural)",
               "genero": "Existência",
-              "motivo": "Usado para dois ou mais objetos, pessoas ou animais."
+              "motivo": "Significa 'há' ou 'existem' para coisas no plural. Não possui forma contraída."
             }
           ],
           "tabela_visual": "| Forma | Singular | Plural |\n|---|---|---|\n| Afirmativa | There is a book | There are books |\n| Negativa | There isn't a book | There aren't any books |\n| Interrogativa | Is there a book? | Are there any books? |",
@@ -1868,24 +1868,24 @@
             {
               "oracao": "There is a dog in the park.",
               "pergunta": "Por que usamos 'There is'?",
-              "resposta": "Porque 'a dog' (um cachorro) é singular.",
-              "conclusao": "There is = Singular"
+              "resposta": "O objeto que existe na sala ('a dog') está no singular, o que exige a concordância com a forma singular do verbo de existência: 'There is'.",
+              "conclusao": "There is = usado para um único objeto (singular)."
             },
             {
               "oracao": "There are three apples on the table.",
               "pergunta": "Por que usamos 'There are'?",
-              "resposta": "Porque 'three apples' é plural.",
-              "conclusao": "There are = Plural"
+              "resposta": "As frutas ('three apples') estão no plural, exigindo a concordância correta com a forma plural de existência: 'There are'.",
+              "conclusao": "There are = usado para dois ou mais objetos (plural)."
             }
           ],
           "armadilhas": [
             {
               "errado": "Have a dog in the park.",
               "certo": "There is a dog in the park.",
-              "explicacao": "Nunca traduza o 'tem' (existir) do português por 'have' nesse contexto."
+              "explicacao": "Em português dizemos 'tem um carro lá'. Mas em inglês, o verbo 'have' indica apenas posse de alguém. Para existência de algo, use 'There is' ou 'There are'."
             }
           ],
-          "coda": "Dica de ouro: Nunca traduza o nosso 'tem um carro na rua' com 'have'. Sempre use 'There is / There are' para dizer o que existe ao seu redor!",
+          "coda": "Para indicar existência no presente: Singular → There is (ou There's). Plural → There are. Nunca use o verbo 'have' para dizer que algo existe em um local!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -1948,25 +1948,25 @@
           "num": "Lesson 18",
           "titulo": "\"Prepositions of Place:\" In, On, At (físico/localização)",
           "subtitulo": "Where are you?",
-          "alerta": "In, On, e At são preposições de lugar que funcionam como uma pirâmide invertida: do mais amplo e geral (In) para o ponto mais específico (At).",
+          "alerta": "As preposições de lugar In, On e At causam muitas dúvidas porque o português usa 'em' ou 'no/na' para todas. Em inglês, a escolha depende do nível de precisão física do espaço.",
           "observacao_cards": [
             {
               "italiano": "In",
               "traducao": "Dentro de / Em",
               "genero": "Amplo",
-              "motivo": "Para continentes, países, cidades ou espaços fechados (uma caixa)."
+              "motivo": "Indica dentro de uma área fechada, espaço tridimensional, cidades, estados ou países."
             },
             {
               "italiano": "On",
               "traducao": "Sobre / Na",
               "genero": "Superfície",
-              "motivo": "Para ruas, avenidas, ou algo que está encostado em uma superfície."
+              "motivo": "Indica contato físico com uma superfície (mesa, parede) ou em ruas e avenidas."
             },
             {
               "italiano": "At",
               "traducao": "No / Na",
               "genero": "Ponto Específico",
-              "motivo": "Endereços completos com número ou pontos exatos num mapa."
+              "motivo": "Indica um ponto específico de referência (no aeroporto, na parada de ônibus, no topo)."
             }
           ],
           "tabela_visual": "| Preposição | Uso de Lugar | Exemplo |\n|---|---|---|\n| IN | Países, cidades, cômodos | in Brazil, in the living room |\n| ON | Superfícies, ruas | on the table, on Main Street |\n| AT | Endereços completos, locais exatos | at 123 Main St, at the bus stop |",
@@ -1974,24 +1974,24 @@
             {
               "oracao": "The book is on the table.",
               "pergunta": "Por que usamos 'on'?",
-              "resposta": "Porque o livro está tocando a superfície da mesa.",
-              "conclusao": "On = Contato/Superfície"
+              "resposta": "O livro está apoiado em cima da mesa, fazendo contato físico com a sua superfície. Por isso, a preposição correta a ser usada é 'on'.",
+              "conclusao": "On = contato físico direto com superfícies."
             },
             {
               "oracao": "I live in Paris.",
               "pergunta": "Por que usamos 'in'?",
-              "resposta": "Paris é uma cidade. Cidades levam 'in'.",
-              "conclusao": "In = Cidades/Países"
+              "resposta": "Paris é uma cidade (um espaço delimitado geograficamente). Cidades, estados e países sempre exigem a preposição de espaço fechado 'in'.",
+              "conclusao": "In = cidades, estados, países e espaços fechados."
             }
           ],
           "armadilhas": [
             {
               "errado": "I am at Brazil.",
               "certo": "I am in Brazil.",
-              "explicacao": "Para países, sendo lugares amplos, sempre usamos 'in'."
+              "explicacao": "Para países, sendo lugares amplos, sempre usamos 'in' (in Brazil, in London), nunca 'at' ou 'on'."
             }
           ],
-          "coda": "Pense no IN como uma fronteira ao seu redor, o ON como o chão/parede onde você toca e o AT como o X no mapa do GPS.",
+          "coda": "Resumo visual: IN = espaço fechado ou área ampla (cidades/países) | ON = superfícies e ruas | AT = pontos de referência exatos no espaço.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2054,25 +2054,25 @@
           "num": "Lesson 19",
           "titulo": "\"Prepositions of Time:\" In, On, At (temporal)",
           "subtitulo": "When is it?",
-          "alerta": "As preposições in, on e at também funcionam para tempo! A regra da pirâmide invertida (do longo/geral para o curto/exato) se mantém perfeitamente.",
+          "alerta": "Assim como no espaço, o tempo em inglês exige preposições específicas. Usamos 'in' para períodos longos, 'on' para dias específicos e datas, e 'at' para horários exatos e momentos precisos.",
           "observacao_cards": [
             {
               "italiano": "In",
               "traducao": "Em",
               "genero": "Períodos Longos",
-              "motivo": "Anos, meses, estações do ano, séculos e partes do dia (manhã, tarde)."
+              "motivo": "Períodos longos (meses, anos, estações do ano, séculos) ou partes do dia (morning/afternoon)."
             },
             {
               "italiano": "On",
               "traducao": "Em (No/Na)",
               "genero": "Dias e Datas",
-              "motivo": "Dias da semana e datas específicas com dia e mês."
+              "motivo": "Dias da semana (on Monday), datas completas (on June 5th) e dias especiais (on Christmas Day)."
             },
             {
               "italiano": "At",
               "traducao": "Às",
               "genero": "Horas e Momentos",
-              "motivo": "Horários de relógio, feriados específicos e a exceção 'at night'."
+              "motivo": "Horários específicos do relógio (at 8 PM), momentos do dia (at noon/night) e feriados sem a palavra 'day'."
             }
           ],
           "tabela_visual": "| Preposição | Uso de Tempo | Exemplo |\n|---|---|---|\n| IN | Meses, anos, partes do dia | in May, in 1999, in the morning |\n| ON | Dias da semana e datas | on Monday, on May 5th |\n| AT | Horários exatos | at 8:00, at night, at noon |",
@@ -2080,24 +2080,24 @@
             {
               "oracao": "My birthday is in June.",
               "pergunta": "Por que 'in' e não 'on'?",
-              "resposta": "Porque mencionamos apenas o mês. O mês é um período longo.",
-              "conclusao": "In = Mês sozinho"
+              "resposta": "Como o exemplo menciona apenas o mês de dezembro ('December') sem um dia específico, a regra exige a preposição de períodos longos 'in'.",
+              "conclusao": "In = usado para meses isolados, anos e estações."
             },
             {
               "oracao": "The meeting is on Friday.",
               "pergunta": "Por que 'on'?",
-              "resposta": "Para dias da semana, a preposição obrigatória é 'on'.",
-              "conclusao": "On = Dia da semana"
+              "resposta": "O exemplo menciona 'Monday' (segunda-feira). Para qualquer dia da semana ou data específica, a preposição obrigatória é 'on'.",
+              "conclusao": "On = dias da semana e datas específicas no calendário."
             }
           ],
           "armadilhas": [
             {
               "errado": "I study in night.",
               "certo": "I study at night.",
-              "explicacao": "Apesar de dizermos 'in the morning' e 'in the afternoon', a palavra 'night' sempre exige 'at'."
+              "explicacao": "Não use 'in' antes de dias da semana ou datas. A regra de tempo é clara: para dias (como Monday) ou datas completas, a única preposição correta é 'on'."
             }
           ],
-          "coda": "Se for longo (anos, meses), use IN. Se for dia da semana ou data redonda, use ON. Se você vai olhar para o relógio, use AT.",
+          "coda": "Pirâmide do tempo: IN = geral/longo (meses, anos) | ON = específico/médio (dias, datas) | AT = exato/curto (horas, momentos específicos).",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2160,19 +2160,19 @@
           "num": "Lesson 20",
           "titulo": "\"Countable vs Uncountable Nouns:\" A lógica do que pode ser contado",
           "subtitulo": "Apples and Water",
-          "alerta": "No inglês, coisas se dividem fortemente entre o que dá para contar (1, 2, 3 maçãs) e o que se precisa medir ou agrupar (como água, não existe '2 águas', mas sim '2 copos de água').",
+          "alerta": "Substantivos em inglês dividem-se em contáveis (podemos contar um a um e têm plural) e incontáveis (não podemos contar e sempre concordam no singular, como água, dinheiro e informação).",
           "observacao_cards": [
             {
               "italiano": "Countable",
               "traducao": "Contável",
               "genero": "Contagem",
-              "motivo": "Pode ir para o plural (com 's') e aceita os artigos 'a'/'an' e números."
+              "motivo": "Coisas individuais que têm forma plural (ex: book→books, apple→apples, dog→dogs)."
             },
             {
               "italiano": "Uncountable",
               "traducao": "Incontável",
               "genero": "Sem plural",
-              "motivo": "Sempre no singular, não aceita 'a'/'an' diretamente ou números puros."
+              "motivo": "Conceitos abstratos, líquidos ou substâncias que não têm plural (ex: water, money, information)."
             }
           ],
           "tabela_visual": "| Categoria | Regra | Exemplos |\n|---|---|---|\n| Countable | Aceita plural (a/an/numbers) | an apple, two cars, five dogs |\n| Uncountable | Singular apenas (use some/much) | water, money, information, bread |",
@@ -2180,24 +2180,24 @@
             {
               "oracao": "I need some information.",
               "pergunta": "Podemos dizer 'an information' ou 'two informations'?",
-              "resposta": "Não, 'information' é um conceito abstrato e incontável no inglês.",
-              "conclusao": "Information = Incontável"
+              "resposta": "Em inglês, 'information' é considerado um substantivo abstrato e incontável. Portanto, não aceita plural ('informations') e concorda com o verbo no singular.",
+              "conclusao": "Information é incontável. Nunca adicione 's' a ela!"
             },
             {
               "oracao": "I have two dogs.",
               "pergunta": "Por que 'dogs' é contável?",
-              "resposta": "Porque você pode contá-los com números inteiros (1 cachorro, 2 cachorros).",
-              "conclusao": "Dogs = Contável"
+              "resposta": "O substantivo 'dogs' representa animais individuais que podemos contar fisicamente (um cachorro, dois cachorros). Logo, possui forma plural normal.",
+              "conclusao": "Substantivos contáveis aceitam números e plural com 's'."
             }
           ],
           "armadilhas": [
             {
               "errado": "I have two baggages.",
               "certo": "I have two bags. (ou 'some baggage')",
-              "explicacao": "A palavra 'baggage' (bagagem) é incontável em inglês. Para contar as malas, contamos as bolsas ('bags')."
+              "explicacao": "Palavras como 'money' (dinheiro), 'information' (informação) e 'bread' (pão) são incontáveis no inglês. Jamais coloque-as no plural com 's'."
             }
           ],
-          "coda": "Pense na forma da coisa: se for líquido, pó, grãos, blocos sem formato ou uma ideia abstrata (como informações ou conselhos), quase sempre é incontável!",
+          "coda": "Contáveis: dá para colocar um número antes (1 car, 2 cars). Incontáveis: não dá para contar diretamente (não existe '2 moneys' ou '3 advices').",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2260,19 +2260,19 @@
           "num": "Lesson 21",
           "titulo": "Quantifiers 1: Some vs Any",
           "subtitulo": "Some vs Any",
-          "alerta": "Para falarmos sobre quantidades indefinidas, usamos 'some' e 'any'. A escolha entre eles depende do tipo de frase que estamos construindo.",
+          "alerta": "Some e Any são usados para indicar quantidades indefinidas. A regra principal para escolher entre eles depende se a frase é afirmativa, negativa ou uma pergunta de sim/não.",
           "observacao_cards": [
             {
               "italiano": "Some",
               "traducao": "Algum, alguns, um pouco de",
               "genero": "Afirmativas",
-              "motivo": "Usado em frases afirmativas (e em pedidos ou oferecimentos)."
+              "motivo": "Significa 'algum/alguns'. Usado em frases afirmativas e em ofertas/pedidos educados."
             },
             {
               "italiano": "Any",
               "traducao": "Nenhum, qualquer, algum",
               "genero": "Negativas e Interrogativas",
-              "motivo": "Usado em frases negativas e na maioria das perguntas."
+              "motivo": "Significa 'algum' (em perguntas) ou 'nenhum' (em frases negativas com don't/doesn't/not)."
             }
           ],
           "tabela_visual": "| Quantifier | Sentence Type | Example |\n|---|---|---|\n| Some | Affirmative | I have some apples. |\n| Any | Negative | I don't have any apples. |\n| Any | Interrogative | Do you have any apples? |\n| Some | Offer / Request | Would you like some tea? |",
@@ -2280,21 +2280,21 @@
             {
               "oracao": "I have some money.",
               "pergunta": "Por que usamos 'some'?",
-              "resposta": "Porque a frase é afirmativa.",
-              "conclusao": "Some = afirmativa."
+              "resposta": "A frase é afirmativa ('I have... apples'), o que exige o uso do quantificador 'some' para indicar uma quantidade indefinida de maçãs.",
+              "conclusao": "Some = frases afirmativas com contáveis ou incontáveis."
             },
             {
               "oracao": "Do you have any questions?",
               "pergunta": "Por que usamos 'any'?",
-              "resposta": "Porque a frase é uma pergunta.",
-              "conclusao": "Any = pergunta comum."
+              "resposta": "A frase é uma pergunta simples ('Do you have... money?'), o que exige o uso de 'any' para questionar sobre a existência de alguma quantia.",
+              "conclusao": "Any = perguntas gerais de sim/não sobre quantidade."
             }
           ],
           "armadilhas": [
             {
               "errado": "I don't have some money.",
               "certo": "I don't have any money.",
-              "explicacao": "Em frases negativas, usamos 'any' no lugar de 'some'."
+              "explicacao": "Em frases negativas com 'not', não use 'some'. A regra exige a mudança para 'any' para expressar a ideia de 'nenhum' (I don't have any money)."
             },
             {
               "errado": "Would you like any coffee?",
@@ -2302,7 +2302,7 @@
               "explicacao": "Ao oferecer ou pedir algo polidamente (Would you like...? / Can I have...?), usamos 'some'."
             }
           ],
-          "coda": "Lembre-se: 'Some' é positivo e prestativo (oferecimentos), enquanto 'Any' é para negativas e dúvidas!",
+          "coda": "Fórmula rápida: AFIRMATIVA → Some (ex: some books). NEGATIVA/PERGUNTA → Any (ex: haven't any, do you have any?). Dica: use 'some' ao oferecer algo.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2365,25 +2365,25 @@
           "num": "Lesson 22",
           "titulo": "Quantifiers 2: Much, Many, A lot of",
           "subtitulo": "Much, Many, A lot of",
-          "alerta": "Quando a quantidade é grande, precisamos saber se o substantivo é contável (pode ir para o plural) ou incontável (sempre singular).",
+          "alerta": "Para falar de 'muito' ou 'muitos', precisamos olhar se o substantivo é contável ou incontável. 'Much' e 'Many' são comuns em negativas e perguntas, enquanto 'A lot of' brilha nas afirmativas.",
           "observacao_cards": [
             {
               "italiano": "Many",
               "traducao": "Muitos, muitas",
               "genero": "Contáveis",
-              "motivo": "Usado com coisas que podemos contar (ex: apples, cars, people)."
+              "motivo": "Significa 'muito/muita'. Usado com substantivos incontáveis (ex: much water, much time)."
             },
             {
               "italiano": "Much",
               "traducao": "Muito, muita",
               "genero": "Incontáveis",
-              "motivo": "Usado com coisas incontáveis, geralmente líquidos, sentimentos, conceitos (ex: water, time, money)."
+              "motivo": "Significa 'muitos/muitas'. Usado com substantivos contáveis no plural (ex: many books, many people)."
             },
             {
               "italiano": "A lot of",
               "traducao": "Muito(s), um monte de",
               "genero": "Ambos",
-              "motivo": "Usado tanto para contáveis quanto incontáveis, geralmente em frases afirmativas."
+              "motivo": "Significa 'muito/muitos'. Super flexível: serve para ambos e é a escolha natural em frases afirmativas."
             }
           ],
           "tabela_visual": "| Quantifier | Used with | Example |\n|---|---|---|\n| Many | Countable Plural | I don't have many books. |\n| Much | Uncountable | I don't have much time. |\n| A lot of | Both | She has a lot of friends. / He has a lot of money. |",
@@ -2391,21 +2391,21 @@
             {
               "oracao": "She has a lot of friends.",
               "pergunta": "Por que usamos 'a lot of'?",
-              "resposta": "Porque é comum usar 'a lot of' em frases afirmativas em vez de 'many'.",
-              "conclusao": "A lot of é versátil em afirmativas."
+              "resposta": "Como o substantivo 'water' (água) é incontável e a frase está na forma afirmativa, 'a lot of' é a escolha ideal para o inglês falado.",
+              "conclusao": "A lot of = ideal para afirmativas de ambos os tipos."
             },
             {
               "oracao": "We don't have much water.",
               "pergunta": "Por que 'much'?",
-              "resposta": "Porque 'water' é incontável e a frase é negativa.",
-              "conclusao": "Much para incontáveis em negativas."
+              "resposta": "Como o substantivo 'water' (água) é incontável e a frase está na forma negativa ('doesn't drink'), o quantificador correto para expressar 'muito' é 'much'.",
+              "conclusao": "Much = usado para substantivos incontáveis em negativas/perguntas."
             }
           ],
           "armadilhas": [
             {
               "errado": "I have much friends.",
               "certo": "I have a lot of friends.",
-              "explicacao": "Friends é contável (plural), então usamos 'many' ou 'a lot of', nunca 'much'."
+              "explicacao": "Não use 'much' com substantivos contáveis no plural. Dizer 'much books' está errado. O correto é 'many books' ou 'a lot of books'."
             },
             {
               "errado": "He has many money.",
@@ -2413,7 +2413,7 @@
               "explicacao": "Money é incontável, então usamos 'much' (em negativas/perguntas) ou 'a lot of' (em afirmativas)."
             }
           ],
-          "coda": "Na dúvida em uma frase afirmativa, 'a lot of' é o seu melhor amigo e serve para quase tudo!",
+          "coda": "Incontável (tempo, água) → Much | Contável (pessoas, carros) → Many. Em frases afirmativas comuns do dia a dia, prefira 'A lot of' para ambos!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2476,19 +2476,19 @@
           "num": "Lesson 23",
           "titulo": "How much vs How many",
           "subtitulo": "Perguntando sobre quantidades",
-          "alerta": "Para perguntar 'quanto' ou 'quantos', usamos 'How much' e 'How many'. O segredo está em saber se podemos contar o item (com 's' no plural) ou não!",
+          "alerta": "Quando queremos perguntar a quantidade de algo (Quanto? Quantos?), usamos 'How much' para coisas incontáveis (ou para perguntar o preço de algo) e 'How many' para coisas contáveis.",
           "observacao_cards": [
             {
               "italiano": "How many",
               "traducao": "Quantos / Quantas",
               "genero": "Contáveis",
-              "motivo": "Usado para perguntar a quantidade de coisas contáveis (frequentemente no plural)."
+              "motivo": "Significa 'quanto/quanta'. Usado para coisas incontáveis ou para perguntar o preço de itens."
             },
             {
               "italiano": "How much",
               "traducao": "Quanto / Quanta",
               "genero": "Incontáveis e Preço",
-              "motivo": "Usado para perguntar a quantidade de coisas incontáveis, ou para perguntar o preço de algo."
+              "motivo": "Significa 'quantos/quantas'. Usado exclusivamente para substantivos contáveis no plural."
             }
           ],
           "tabela_visual": "| Question Word | Used with | Example |\n|---|---|---|\n| How many | Countable (Plural) | How many apples do you want? |\n| How much | Uncountable | How much water do you drink? |\n| How much | Price | How much is this shirt? |",
@@ -2496,21 +2496,21 @@
             {
               "oracao": "How many cars does he have?",
               "pergunta": "Por que 'How many'?",
-              "resposta": "Porque 'cars' é contável e está no plural.",
-              "conclusao": "How many + substantivo plural."
+              "resposta": "O substantivo 'cars' (carros) é contável e está no plural. Por isso, para perguntar a quantidade exata de veículos, a estrutura correta é 'How many'.",
+              "conclusao": "How many = pergunta quantos/quantas para itens contáveis."
             },
             {
               "oracao": "How much is the coffee?",
               "pergunta": "Por que 'How much'?",
-              "resposta": "Porque estamos perguntando o preço.",
-              "conclusao": "How much = preço."
+              "resposta": "Para perguntar o preço de um item comercial (quanto custa), a língua inglesa padronizou a expressão 'How much is/are...' de forma fixa.",
+              "conclusao": "How much = usado para saber o preço de mercadorias."
             }
           ],
           "armadilhas": [
             {
               "errado": "How much people are there?",
               "certo": "How many people are there?",
-              "explicacao": "'People' é o plural de person, ou seja, é contável. Usamos 'How many'."
+              "explicacao": "Não use 'How many' para perguntar preços ou para coisas que não podem ser contadas uma a uma (como água, açúcar). Nesses casos, prefira 'How much'."
             },
             {
               "errado": "How many money do you have?",
@@ -2518,7 +2518,7 @@
               "explicacao": "A palavra 'money' é incontável (você não diz 'dois dinheiros'). Usamos 'How much'."
             }
           ],
-          "coda": "Lembre-se: se termina com 's' (plural) ou se refere a pessoas no plural, geralmente é 'How many'. Se não tem 's' ou está perguntando o preço, é 'How much'!",
+          "coda": "Contável (pessoas, livros) → How many? | Incontável (tempo, café) ou Preço de algo → How much? Lembre disso ao fazer compras!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2581,19 +2581,19 @@
           "num": "Lesson 24",
           "titulo": "Present Continuous (Affirmative)",
           "subtitulo": "Ações acontecendo agora",
-          "alerta": "O Present Continuous (ou Present Progressive) é usado para falar sobre ações que estão acontecendo neste exato momento.",
+          "alerta": "O Present Continuous descreve ações que estão acontecendo exatamente agora, no momento da fala. Ele exige dois verbos: o verbo To Be (am/is/are) e o verbo de ação com a terminação '-ing'.",
           "observacao_cards": [
             {
               "italiano": "Verb To Be + verb-ing",
               "traducao": "Ser/Estar + verbo com -ing (gerúndio)",
               "genero": "Estrutura",
-              "motivo": "A fórmula mágica para dizer que está fazendo algo."
+              "motivo": "O auxiliar To Be (am, is, are) deve concordar perfeitamente com o sujeito da frase."
             },
             {
               "italiano": "Playing, Eating, Working",
               "traducao": "Jogando, comendo, trabalhando",
               "genero": "Sufixo -ing",
-              "motivo": "Equivale ao nosso '-ndo' do português."
+              "motivo": "O sufixo '-ing' é equivalente ao nosso gerúndio (-ando, -endo, -indo) e marca a ação em progresso."
             }
           ],
           "tabela_visual": "| Subject | Verb to Be | Verb + ing |\n|---|---|---|\n| I | am | working. |\n| You / We / They | are | reading. |\n| He / She / It | is | sleeping. |",
@@ -2601,21 +2601,21 @@
             {
               "oracao": "She is eating an apple.",
               "pergunta": "Como sabemos que a ação está acontecendo agora?",
-              "resposta": "Pelo uso do verbo 'is' e do verbo principal com '-ing'.",
-              "conclusao": "is + -ing = acontecendo agora."
+              "resposta": "Para formar a ação em progresso com o sujeito 'They' (plural), precisamos do verbo To Be no plural ('are') seguido do verbo principal com a terminação '-ing' ('running').",
+              "conclusao": "Estrutura: Sujeito + are + Verbo-ing (para plural We/They/You)."
             },
             {
               "oracao": "They are playing football.",
               "pergunta": "Por que usamos 'are'?",
-              "resposta": "Porque o sujeito é 'They' (plural).",
-              "conclusao": "Ajuste o verbo To Be ao sujeito."
+              "resposta": "Como o verbo principal é 'write' (terminado em 'e' mudo), a regra ortográfica exige retirar a letra 'e' antes de adicionar a terminação '-ing', resultando em 'writing'.",
+              "conclusao": "Verbos terminados em 'e' perdem a letra 'e' antes do -ing."
             }
           ],
           "armadilhas": [
             {
               "errado": "I playing tennis.",
               "certo": "I am playing tennis.",
-              "explicacao": "Nunca esqueça o verbo 'To Be' (am, is, are) antes do verbo com -ing."
+              "explicacao": "Nunca esqueça o verbo To Be no Present Continuous. Dizer 'They playing' está incompleto e incorreto. A estrutura exige 'They are playing'."
             },
             {
               "errado": "He is makeing dinner.",
@@ -2623,7 +2623,7 @@
               "explicacao": "Verbos terminados na letra 'e' perdem o 'e' antes de adicionar o '-ing' (make -> making)."
             }
           ],
-          "coda": "O Present Continuous precisa de duas peças essenciais: o verbo 'To Be' ajudando e o '-ing' no final da ação. Não se esqueça de nenhum!",
+          "coda": "Fórmula do progresso: Sujeito + To Be (am/is/are) + Verbo com -ing. Lembre: você precisa do To Be para conectar o sujeito à ação!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2686,19 +2686,19 @@
           "num": "Lesson 25",
           "titulo": "Present Continuous (Negative & Questions)",
           "subtitulo": "Estrutura completa",
-          "alerta": "Agora que você sabe afirmar o que está acontecendo, vamos aprender a negar e a fazer perguntas usando o Present Continuous.",
+          "alerta": "Para negar ou perguntar sobre ações que ocorrem no momento, alteramos a estrutura do verbo To Be. Colocamos 'not' após o To Be para negar, e invertemos a posição do To Be com o sujeito para perguntar.",
           "observacao_cards": [
             {
               "italiano": "Not",
               "traducao": "Não",
               "genero": "Negativa",
-              "motivo": "Coloque o 'not' logo depois do verbo To Be (am not, isn't, aren't)."
+              "motivo": "Adicione 'not' após am/is/are. Exemplo: 'He is not (isn't) working now'."
             },
             {
               "italiano": "Am / Is / Are + Subject",
               "traducao": "Inversão na Pergunta",
               "genero": "Interrogativa",
-              "motivo": "Para perguntar, o verbo To Be vai para o início da frase, antes do sujeito."
+              "motivo": "Coloque am/is/are no início da frase, antes do sujeito. Exemplo: 'Are you listening?'"
             }
           ],
           "tabela_visual": "| Form | Structure | Example |\n|---|---|---|\n| Negative | Subj + To Be + NOT + V-ing | I am not working. / She isn't sleeping. |\n| Question | To Be + Subj + V-ing? | Are you working? / Is she sleeping? |\n| Short Answer | Yes/No, Subj + To Be | Yes, I am. / No, she isn't. |",
@@ -2706,29 +2706,29 @@
             {
               "oracao": "Are they coming to the party?",
               "pergunta": "Por que 'Are' está no começo?",
-              "resposta": "Porque em perguntas de sim ou não, invertemos a ordem do sujeito e do verbo To Be.",
-              "conclusao": "To Be antes do sujeito na pergunta."
+              "resposta": "Para fazer uma pergunta com o sujeito 'you', colocamos a forma correta do verbo To Be ('Are') no início da frase, posicionando-a antes do sujeito.",
+              "conclusao": "Pergunta no Present Continuous = To Be vem no início da frase."
             },
             {
               "oracao": "He isn't watching TV.",
               "pergunta": "Como formamos a negativa?",
-              "resposta": "Adicionamos 'not' ao verbo To Be (is + not = isn't).",
-              "conclusao": "To Be + not."
+              "resposta": "Para negar a ação em progresso com o sujeito 'I', adicionamos a partícula negativa 'not' diretamente após o To Be 'am'. Forma contraída: 'I'm not'.",
+              "conclusao": "To Be + not = forma negativa do Present Continuous."
             }
           ],
           "armadilhas": [
             {
               "errado": "You are working?",
               "certo": "Are you working?",
-              "explicacao": "Em perguntas com o verbo To Be, você não usa apenas a entonação, precisa inverter a ordem (Are you...)."
+              "explicacao": "Ao fazer perguntas, não use o auxiliar 'do/does' com o Present Continuous. O próprio verbo To Be se move para a frente do sujeito (Are you studying? ✅)."
             },
             {
               "errado": "I no am studying.",
               "certo": "I am not studying.",
-              "explicacao": "O 'not' entra sempre DEPOIS do verbo 'To Be'."
+              "explicacao": "O 'not' entra sempre DEPOIS do verbo 'To Be'. Nunca coloque o 'not' antes ou no final da frase (I am not working)."
             }
           ],
-          "coda": "Negar ou perguntar no Present Continuous é como dançar com o verbo To Be: coloque o 'not' depois dele, ou coloque-o na frente de tudo na pergunta!",
+          "coda": "Negação: Sujeito + To Be + not + Verbo-ing. Pergunta: To Be + Sujeito + Verbo-ing? O To Be é quem comanda todas as modificações na frase!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2791,19 +2791,19 @@
           "num": "Lesson 26",
           "titulo": "Present Simple vs Present Continuous",
           "subtitulo": "Rotina vs Momento atual",
-          "alerta": "Você sabe diferenciar o que você faz todo dia do que está fazendo agora? Usamos tempos verbais diferentes para isso!",
+          "alerta": "Esta é a batalha dos tempos verbais no presente! Use o Present Simple para rotinas e verdades gerais (o que sempre acontece). Use o Present Continuous para ações temporárias que ocorrem agora.",
           "observacao_cards": [
             {
               "italiano": "I study English every day.",
               "traducao": "Eu estudo inglês todo dia.",
               "genero": "Present Simple",
-              "motivo": "Rotina ou hábito"
+              "motivo": "Expressa hábitos frequentes. Pistas: words like 'every day', 'always', 'usually'."
             },
             {
               "italiano": "I am studying English now.",
               "traducao": "Eu estou estudando inglês agora.",
               "genero": "Present Continuous",
-              "motivo": "Ação acontecendo no momento"
+              "motivo": "Ações acontecendo neste exato momento. Pistas: words like 'now', 'at the moment'."
             }
           ],
           "tabela_visual": "| Tense | Usage | Example |\n|---|---|---|\n| Present Simple | Routines, habits, facts | I play tennis on Sundays. |\n| Present Continuous | Actions happening right now | I am playing tennis right now. |",
@@ -2811,15 +2811,15 @@
             {
               "oracao": "She usually works in an office, but today she is working from home.",
               "pergunta": "Por que usamos dois tempos verbais diferentes aqui?",
-              "resposta": "Porque o primeiro indica a rotina habitual e o segundo indica algo temporário/acontecendo hoje.",
-              "conclusao": "Rotina = Simple; Momento atual = Continuous"
+              "resposta": "A frase expressa um hábito ou rotina diária ('every morning'), o que exige gramaticalmente a estrutura simples do Present Simple: 'I eat'.",
+              "conclusao": "Present Simple = usado para rotinas diárias e hábitos regulares."
             }
           ],
           "armadilhas": [
             {
               "errado": "I am playing soccer every day.",
               "certo": "I play soccer every day.",
-              "explicacao": "Para rotinas diárias, use o Present Simple, não o Continuous."
+              "explicacao": "Não confunda os tempos: 'I'm study' mistura estruturas incorretamente. Diga 'I study' para sua rotina geral ou 'I'm studying' para a ação de agora."
             },
             {
               "errado": "Look! The baby sleeps.",
@@ -2827,7 +2827,7 @@
               "explicacao": "Para ações acontecendo no momento da fala ('Look!'), use o Present Continuous."
             }
           ],
-          "coda": "Agora você já sabe como separar suas rotinas diárias das coisas que estão acontecendo bem agora!",
+          "coda": "Pergunte-se: É uma rotina frequente (Present Simple)? Ou está acontecendo agora (Present Continuous)? Identificar a frequência é o segredo do sucesso!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2890,25 +2890,25 @@
           "num": "Lesson 27",
           "titulo": "Modal Verb 'Can'",
           "subtitulo": "Habilidades e permissões",
-          "alerta": "Como dizer o que você consegue fazer ou pedir permissão? O verbo 'can' é um super-herói: não muda com as pessoas!",
+          "alerta": "O verbo modal 'Can' é um dos mais úteis do inglês. Usamos 'can' para falar sobre habilidades, fazer pedidos ou pedir permissão. Ele é super simples porque nunca muda de forma (não ganha 's')!",
           "observacao_cards": [
             {
               "italiano": "I can swim",
               "traducao": "Eu sei nadar / Eu consigo nadar",
               "genero": "Ability",
-              "motivo": "Expressa habilidade"
+              "motivo": "Capacidade de fazer algo física ou mentalmente. Exemplo: 'I can play the piano'."
             },
             {
               "italiano": "Can I go to the bathroom?",
               "traducao": "Posso ir ao banheiro?",
               "genero": "Permission",
-              "motivo": "Pedido de permissão"
+              "motivo": "Usado em perguntas para pedir autorização de forma amigável. Exemplo: 'Can I go to the bathroom?'"
             },
             {
               "italiano": "He cannot / can't sing",
               "traducao": "Ele não sabe / não consegue cantar",
               "genero": "Inability",
-              "motivo": "Falta de habilidade"
+              "motivo": "Expressa incapacidade ou proibição. Junta-se em uma só palavra: 'cannot' (can't)."
             }
           ],
           "tabela_visual": "| Pronoun | Affirmative | Negative | Question |\n|---|---|---|---|\n| I / You / He / She / It / We / They | can speak | can't speak | Can ... speak? |",
@@ -2916,23 +2916,23 @@
             {
               "oracao": "Can you help me?",
               "pergunta": "Para que usamos 'Can' no início da frase?",
-              "resposta": "Para fazer uma pergunta, como um pedido.",
-              "conclusao": "Inverta 'Can' com o sujeito para perguntas."
+              "resposta": "Para fazer perguntas com 'can', movemos este verbo modal para a frente do sujeito (Can + sujeito + verbo base). O verbo principal fica na forma base.",
+              "conclusao": "Pergunta com Can = coloque-o antes do sujeito no início."
             }
           ],
           "armadilhas": [
             {
               "errado": "He can speaks English.",
               "certo": "He can speak English.",
-              "explicacao": "O verbo 'can' não leva 's' na 3ª pessoa, e o verbo principal fica na forma base sem 'to'."
+              "explicacao": "O verbo modal 'can' é autônomo. Ele nunca usa 'do', 'does' ou 'to'. Escreva sempre 'Can you help me?', e nunca 'Do you can help me?' ou 'I can to swim'."
             },
             {
               "errado": "Do you can swim?",
               "certo": "Can you swim?",
-              "explicacao": "O verbo 'can' não usa os auxiliares 'do' ou 'does'."
+              "explicacao": "O verbo 'can' não usa os auxiliares 'do' ou 'does'. Ele próprio faz a pergunta ou negação."
             }
           ],
-          "coda": "'Can' é prático e fácil, você já pode falar sobre todos os seus talentos!",
+          "coda": "Fórmula mágica do Can: Sujeito + Can + Verbo Base (sem 'to' e sem 's'). Ele é idêntico para todas as pessoas: I can, he can, they can. Simples assim!",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -2995,25 +2995,25 @@
           "num": "Lesson 28",
           "titulo": "Imperatives",
           "subtitulo": "Comandos e instruções (Do this / Don't do that)",
-          "alerta": "Precisa dar uma ordem, conselho ou instrução? Use o modo Imperativo, indo direto ao ponto sem colocar o sujeito!",
+          "alerta": "Usamos o imperativo para dar instruções, ordens, conselhos ou fazer convites diretos. Em inglês, a estrutura é extremamente direta: basta usar o verbo na sua forma base e omitir o sujeito.",
           "observacao_cards": [
             {
               "italiano": "Open the door.",
               "traducao": "Abra a porta.",
               "genero": "Affirmative",
-              "motivo": "Comando direto"
+              "motivo": "Comece a frase diretamente com o verbo de ação. Exemplo: 'Open the door'."
             },
             {
               "italiano": "Don't touch that!",
               "traducao": "Não toque nisso!",
               "genero": "Negative",
-              "motivo": "Proibição ou aviso"
+              "motivo": "Adicione 'Don't' antes do verbo para proibir ou avisar. Exemplo: 'Don't touch that!'"
             },
             {
               "italiano": "Let's go!",
               "traducao": "Vamos!",
               "genero": "Suggestion",
-              "motivo": "Convite (incluindo o falante)"
+              "motivo": "Contração de 'let us'. Convida outras pessoas incluindo você. Exemplo: 'Let's go'."
             }
           ],
           "tabela_visual": "| Type | Example | Translation |\n|---|---|---|\n| Affirmative | Close the window. | Feche a janela. |\n| Negative | Don't talk. | Não converse. |\n| Suggestion (We) | Let's eat. | Vamos comer. |",
@@ -3021,15 +3021,15 @@
             {
               "oracao": "Please, sit down.",
               "pergunta": "Qual a diferença de colocar 'Please'?",
-              "resposta": "Torna a instrução ou comando mais educado.",
-              "conclusao": "Use 'please' para ser cortês."
+              "resposta": "Para tornar um comando ou instrução direta mais educado e amigável na conversação, adicionamos o advérbio de cortesia 'please' no final da frase.",
+              "conclusao": "Use 'please' no final para suavizar o comando ou instrução."
             }
           ],
           "armadilhas": [
             {
               "errado": "You open the book.",
               "certo": "Open the book.",
-              "explicacao": "No imperativo, omitimos o pronome sujeito ('you')."
+              "explicacao": "No imperativo em inglês, você deve omitir completamente o pronome sujeito ('you'). Comece a frase diretamente com o verbo de ação (Close the door, e nunca You close)."
             },
             {
               "errado": "No smoke here.",
@@ -3037,7 +3037,7 @@
               "explicacao": "Para imperativos negativos, use sempre 'Don't', nunca 'No' ou 'Not' sozinho."
             }
           ],
-          "coda": "Seja direto, mas lembre-se do 'please' para ser gentil!",
+          "coda": "Regra prática: Fazer algo → Verbo de Ação (ex: Stop!). Não fazer algo → Don't + Verbo (ex: Don't stop!). Incluir-se no convite → Let's + Verbo.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -3100,31 +3100,31 @@
           "num": "Lesson 29",
           "titulo": "Basic Conjunctions",
           "subtitulo": "And, But, Or, Because, So",
-          "alerta": "Pare de falar só frases curtas! As conjunções são a cola que vai juntar suas ideias e dar fluidez ao seu inglês.",
+          "alerta": "As conjunções são as colas que unem nossas ideias em frases mais longas e sofisticadas. Usamos 'and' para somar informações, 'but' para opor ideias, 'so' para resultados e 'because' para explicações.",
           "observacao_cards": [
             {
               "italiano": "and",
               "traducao": "e",
               "genero": "Addition",
-              "motivo": "Junta ideias similares ou informações adicionais"
+              "motivo": "Soma ou adiciona elementos e ideias semelhantes. Exemplo: 'I like coffee and tea'."
             },
             {
               "italiano": "but",
               "traducao": "mas",
               "genero": "Contrast",
-              "motivo": "Mostra ideias opostas ou contraste"
+              "motivo": "Apresenta uma oposição ou contraste inesperado de ideias. Exemplo: 'I study but I don't pass'."
             },
             {
               "italiano": "because",
               "traducao": "porque",
               "genero": "Reason",
-              "motivo": "Explica a causa de algo"
+              "motivo": "Explica a causa, motivo ou razão de algo ter acontecido. Exemplo: 'I run because I am late'."
             },
             {
               "italiano": "so",
               "traducao": "então / por isso",
               "genero": "Result",
-              "motivo": "Mostra a consequência de uma ação"
+              "motivo": "Mostra o resultado, efeito ou consequência direta de uma ação anterior. Exemplo: 'It rained, so I stayed'."
             }
           ],
           "tabela_visual": "| Conjunction | Meaning | Example |\n|---|---|---|\n| And | e | I like apples and bananas. |\n| But | mas | I like apples, but not bananas. |\n| Or | ou | Tea or coffee? |\n| Because | porque | I'm happy because it's Friday. |\n| So | então | It was raining, so I stayed home. |",
@@ -3132,18 +3132,18 @@
             {
               "oracao": "I was tired, so I went to bed early.",
               "pergunta": "Qual a relação entre as duas partes da frase?",
-              "resposta": "A primeira é a causa e a segunda (após o 'so') é a consequência.",
-              "conclusao": "So = Resultado/Consequência."
+              "resposta": "Como a segunda parte da frase expressa a consequência direta do cansaço (ir para a cama cedo), usamos a conjunção de resultado 'so' para conectar as orações.",
+              "conclusao": "So = introduz o resultado ou consequência de uma ação."
             }
           ],
           "armadilhas": [
             {
               "errado": "I like dogs, because I don't like cats.",
               "certo": "I like dogs, but I don't like cats.",
-              "explicacao": "'Because' é usado para dar a razão de algo. Para mostrar o contraste (gostar de um e não de outro), use 'but'."
+              "explicacao": "Não confunda 'because' com 'so'. 'Because' explica a causa (o porquê), enquanto 'so' mostra o resultado de algo (então). Eles têm funções inversas."
             }
           ],
-          "coda": "Essas palavrinhas são mágicas! Elas transformarão seu inglês de frases fragmentadas para uma comunicação contínua.",
+          "coda": "Resumo das conexões: AND (+) soma ideias | BUT (-) opõe ideias | BECAUSE (←) explica a causa | SO (→) mostra o resultado direto.",
           "exercicios": [
             {
               "tipo": "escolha",
@@ -3206,19 +3206,19 @@
           "num": "Lesson 30",
           "titulo": "Adjectives & Word Order",
           "subtitulo": "Posição do adjetivo antes do substantivo",
-          "alerta": "No inglês, as características (adjetivos) vêm ANTES da coisa que descrevem. É como dizer 'o vermelho carro' em vez de 'o carro vermelho'!",
+          "alerta": "A ordem das palavras em inglês tem uma diferença crucial em relação ao português: os adjetivos (características) sempre vêm posicionados ANTES dos substantivos (coisas) e nunca vão para o plural!",
           "observacao_cards": [
             {
               "italiano": "a red car",
               "traducao": "um carro vermelho",
               "genero": "Adjective + Noun",
-              "motivo": "Adjetivo vem antes do substantivo"
+              "motivo": "Posicione a característica antes do objeto. Exemplo: 'a red car' (um carro azul)."
             },
             {
               "italiano": "beautiful flowers",
               "traducao": "flores bonitas",
               "genero": "No plural",
-              "motivo": "Adjetivos nunca ganham 's' no plural"
+              "motivo": "Adjetivos em inglês são invariáveis: eles não recebem 's' no plural. Exemplo: 'red apples' (maçãs vermelhas)."
             }
           ],
           "tabela_visual": "| Adjective | Noun | Translation |\n|---|---|---|\n| tall | boy | menino alto |\n| old | house | casa velha |\n| fast | cars | carros rápidos |",
@@ -3226,15 +3226,15 @@
             {
               "oracao": "She is a smart student.",
               "pergunta": "Onde o adjetivo 'smart' se encontra?",
-              "resposta": "Antes do substantivo 'student'.",
-              "conclusao": "Adjetivo sempre antes do substantivo que qualifica."
+              "resposta": "O adjetivo 'good' (bom) deve vir posicionado antes do substantivo 'student' (estudante) para qualificá-lo de acordo com a ordem correta em inglês.",
+              "conclusao": "Ordem em inglês: Adjetivo sempre antes do substantivo."
             }
           ],
           "armadilhas": [
             {
               "errado": "The car red is fast.",
               "certo": "The red car is fast.",
-              "explicacao": "A ordem correta é Adjetivo + Substantivo."
+              "explicacao": "Ao falar em inglês, mude a chave da ordem: a qualidade vem sempre antes do objeto. Além disso, nunca coloque adjetivos no plural (yellow cars, e jamais yellows cars)."
             },
             {
               "errado": "I have two blues shirts.",
@@ -3242,7 +3242,7 @@
               "explicacao": "Adjetivos em inglês NUNCA vão para o plural, apenas o substantivo (shirts)."
             }
           ],
-          "coda": "Lembre-se: no inglês a qualidade chega primeiro e nunca vai pro plural!",
+          "coda": "Fórmula visual: Adjetivo (invariável) + Substantivo (pluralizável). Exemplo: a new house / two new houses. A qualidade vem primeiro e não ganha 's'!",
           "exercicios": [
             {
               "tipo": "escolha",
