@@ -1198,6 +1198,30 @@ ${estrutura}${entrega}`;
       words.push(...lineWords);
     });
 
+    // Pass 1.5: fix non-monotonic timestamps from multi-part Gemini imports.
+    // Each Gemini part resets timestamps to ~0s instead of continuing from the
+    // previous part's end. Detect backward jumps and add an offset so all lines
+    // become monotonically increasing — in memory only, stored JSON is untouched.
+    {
+      let floor = 0;
+      for (let li = 0; li < lines.length; li++) {
+        const line = lines[li];
+        if (line.startMs < floor) {
+          const offset = floor - line.startMs;
+          line.startMs += offset;
+          if (line.pauseMs != null) line.pauseMs += offset;
+          for (let wi = 0; wi < line.wordCount; wi++) {
+            words[line.firstWordIdx + wi].startMs += offset;
+            words[line.firstWordIdx + wi].endMs   += offset;
+          }
+        }
+        const lastW = line.wordCount > 0
+          ? words[line.firstWordIdx + line.wordCount - 1]
+          : null;
+        floor = Math.max(floor, lastW ? lastW.endMs : line.startMs + 100);
+      }
+    }
+
     // Pass 2: line endMs = next line's startMs (original order)
     for (let i = 0; i < lines.length - 1; i++) {
       lines[i].endMs = lines[i + 1].startMs;
