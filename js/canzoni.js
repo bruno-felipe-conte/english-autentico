@@ -1195,9 +1195,23 @@ ${estrutura}${entrega}`;
     const words = [];
     const lines = [];
 
+    // Re-derive ms from raw "t" and normalize decimal-minutes format (OWL Alpha etc.)
+    // This fixes songs imported before _normalizarTimestamps existed: stored ms values
+    // (e.g. 1020ms for t=1.02 min) are corrected to proper values (61200ms) in memory.
+    const estNorm = (can.estrofes || []).map(est => ({
+      inicio_ms:         est.inicio_ms,
+      palavra_oculta_ms: est.palavra_oculta_ms,
+      words: (est.words || []).map(w => ({
+        ...w,
+        ms: w.t != null ? this._parseTimestamp(w.t) : (w.ms ?? 0),
+      })),
+    }));
+    this._normalizarTimestamps(estNorm);
+
     can.estrofes.forEach((est, lineIdx) => {
-      const distrib = est.words
-        ? this._distribuirTimestamps(est.words.map(w => ({ ...w })))
+      const normEst = estNorm[lineIdx];
+      const distrib = normEst.words.length
+        ? this._distribuirTimestamps(normEst.words.map(w => ({ ...w })))
         : [];
 
       const firstWordIdx = words.length;
@@ -1222,10 +1236,10 @@ ${estrutura}${entrega}`;
 
       lines.push({
         index:        lineIdx,
-        startMs:      est.inicio_ms ?? (lineWords[0]?.startMs ?? 0),
+        startMs:      normEst.inicio_ms ?? (lineWords[0]?.startMs ?? 0),
         endMs:        0, // filled in pass 2
         hasBlank:     this._hasBlank(est),
-        pauseMs:      this._getPauseMsForEst(est, lineWords),
+        pauseMs:      this._getPauseMsForEst(normEst, lineWords),
         firstWordIdx,
         wordCount:    lineWords.length,
       });
