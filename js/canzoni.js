@@ -715,7 +715,7 @@ ${estrutura}${entrega}`;
       }
       if (!Array.isArray(dados)) dados = [dados];
 
-      // ── Converter novo formato Gemini [{id, line, translation, words}] ──
+      // ── Converter novo formato [{id, line, translation, words}] ──
       if (dados.length > 0 && dados[0].words && Array.isArray(dados[0].words)) {
         dados = dados.map(item => {
           const words = item.words.map(w => ({ ...w, ms: this._parseTimestamp(w.t) }));
@@ -740,6 +740,7 @@ ${estrutura}${entrega}`;
             words
           };
         });
+        this._normalizarTimestamps(dados);
       }
     } catch (e) {
       App.notificar(I18n.t('can_ia_json_invalido'), 'erro');
@@ -825,6 +826,7 @@ ${estrutura}${entrega}`;
             palavra_oculta_ms: palavraOcultaMs, words
           };
         });
+        this._normalizarTimestamps(dados);
       }
     } catch(e) { App.notificar(I18n.t('can_ia_json_invalido'), 'erro'); return; }
 
@@ -1131,6 +1133,39 @@ ${estrutura}${entrega}`;
     if (fill)  fill.style.width = (dur > 0 ? (cur / dur * 100) : 0) + '%';
     if (timeEl) timeEl.textContent = this._formatTime(cur);
     if (totEl && dur > 0) totEl.textContent = this._formatTime(dur);
+  },
+
+  // Detecta timestamps em minutos decimais (ex: OWL Alpha: 1.02 = 1min 1.2s = 61.2s).
+  // Quando um estrofe começa antes do fim do anterior (salto para trás) E interpretar
+  // o timestamp bruto como minutos decimais o colocaria DEPOIS, recomputa os ms.
+  // Modifica `dados` in-place e retorna. Chamado logo após o map de importação.
+  _normalizarTimestamps(dados) {
+    let prevEndMs = 0;
+    dados.forEach(est => {
+      if (!est.words?.length) return;
+      const firstMs  = est.words[0].ms;
+      const firstT   = parseFloat(est.words[0].t ?? NaN);
+
+      if (firstMs < prevEndMs && !isNaN(firstT) && firstT > 0) {
+        const asMinutesMs = firstT * 60 * 1000;
+        if (asMinutesMs >= prevEndMs) {
+          // Reinterpretar este estrofe (e os seguintes com salto) como minutos decimais
+          est.words.forEach(w => {
+            const tRaw = parseFloat(w.t ?? NaN);
+            if (!isNaN(tRaw)) w.ms = Math.round(tRaw * 60 * 1000);
+            if (w.e != null) w.e = parseFloat(w.e) * 60; // min-decimal → segundos
+          });
+          est.inicio_ms = est.words[0].ms;
+          est.tempo = est.inicio_ms / 1000;
+          const hw = est.words.find(w => w.hidden);
+          if (hw) est.palavra_oculta_ms = hw.ms;
+        }
+      }
+
+      const lastW = est.words[est.words.length - 1];
+      prevEndMs = Math.max(prevEndMs, (lastW?.ms ?? 0) + 800);
+    });
+    return dados;
   },
 
   _distribuirTimestamps(words) {
