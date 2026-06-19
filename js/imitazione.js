@@ -76,7 +76,7 @@ const Imitazione = {
 
   initSpeechRecognition() {
     if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-      alert("Seu navegador não suporta reconhecimento de voz (use Chrome).");
+      alert(I18n.t('notif_fc_sem_voz'));
       return false;
     }
     
@@ -89,7 +89,7 @@ const Imitazione = {
     this.recognition.onstart = () => {
       this.isRecording = true;
       document.getElementById('btn-mic').classList.add('recording');
-      document.getElementById('mic-status').innerText = I18n.idioma === 'it' ? 'In ascolto... Parla adesso!' : 'Ouvindo... Fale agora!';
+      document.getElementById('mic-status').innerText = I18n.t('imit_mic_listening');
     };
 
     this.recognition.onresult = (event) => {
@@ -109,9 +109,9 @@ const Imitazione = {
       const btnMic = document.getElementById('btn-mic');
       if (btnMic) btnMic.classList.remove('recording');
       const st = document.getElementById('mic-status');
-      const ouvindo = I18n.idioma === 'it' ? 'In ascolto... Parla adesso!' : 'Ouvindo... Fale agora!';
+      const ouvindo = I18n.t('imit_mic_listening');
       if (st && st.innerText === ouvindo) {
-        st.innerText = I18n.idioma === 'it' ? 'Elaborazione...' : 'Processando...';
+        st.innerText = I18n.t('imit_mic_processing');
       }
     };
     
@@ -155,7 +155,7 @@ const Imitazione = {
 
     if (score >= 0.8) {
       resContainer.innerHTML = `
-        <div style="color:#27AE60;font-size:1.5rem;margin-bottom:0.5rem">Perfect! 🌟</div>
+        <div style="color:#27AE60;font-size:1.5rem;margin-bottom:0.5rem">${I18n.t('imit_perfect')}</div>
         <p>${I18n.t('imit_voce_disse')} <i>"${textoOuvido}"</i></p>
         <div style="margin-top:1rem;color:#D4A843;font-weight:700">+${item.xp_recompensa} XP</div>
         <button class="btn-primario" style="margin-top:1rem" onclick="Imitazione.avancar()">${I18n.t('imit_proxima_frase')}</button>
@@ -163,14 +163,14 @@ const Imitazione = {
       Progressao.ganhar(item.xp_recompensa);
     } else if (score >= 0.5) {
       resContainer.innerHTML = `
-        <div style="color:#E67E22;font-size:1.5rem;margin-bottom:0.5rem">Almost! 👍</div>
+        <div style="color:#E67E22;font-size:1.5rem;margin-bottom:0.5rem">${I18n.t('imit_almost')}</div>
         <p>${I18n.t('imit_ouvimos')} <i>"${textoOuvido}"</i></p>
         <p style="font-size:0.85rem;margin-top:0.5rem">${I18n.t('imit_pronunciar_melhor')}</p>
         <button class="btn-secondario" style="margin-top:1rem" onclick="Imitazione.mostrarDesafio()">${I18n.t('imit_tentar_novamente')}</button>
       `;
     } else {
       resContainer.innerHTML = `
-        <div style="color:#C0392B;font-size:1.5rem;margin-bottom:0.5rem">Try again! 🔄</div>
+        <div style="color:#C0392B;font-size:1.5rem;margin-bottom:0.5rem">${I18n.t('imit_try_again')}</div>
         <p>${I18n.t('imit_ouvimos')} <i>"${textoOuvido}"</i></p>
         <p style="font-size:0.85rem;margin-top:0.5rem">${I18n.t('imit_ouvir_exemplo')}</p>
         <button class="btn-secondario" style="margin-top:1rem" onclick="Imitazione.mostrarDesafio()">${I18n.t('imit_tentar_novamente')}</button>
@@ -194,19 +194,18 @@ const Imitazione = {
     const item = lista[this.itemAtual];
     if (!item) { this.mostrarFinal(); return; }
 
-    const it = I18n.idioma === 'it';
     c.innerHTML = `
       <div style="text-align:center;margin-bottom:1.5rem">
         <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap">
-          <span>Phrase ${this.itemAtual + 1} of ${lista.length}</span>
+          <span>${I18n.t('imit_phrase_indicator').replace('{a}', this.itemAtual + 1).replace('{b}', lista.length)}</span>
           <span style="background:rgba(155,35,53,0.1);border-radius:4px;padding:0.1rem 0.4rem">${item.nivel}</span>
-          ${item._custom ? `<button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:1.5px solid #c0392b;color:#c0392b;border-radius:6px;padding:0.1rem 0.45rem;font-size:0.72rem;cursor:pointer;font-weight:700;" title="Remove this phrase">🗑️ Remove</button>` : ''}
+          ${item._custom ? `<button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:1.5px solid #c0392b;color:#c0392b;border-radius:6px;padding:0.1rem 0.45rem;font-size:0.72rem;cursor:pointer;font-weight:700;" title="${I18n.t('imit_remove_btn')}">🗑️ ${I18n.t('imit_remove_btn')}</button>` : ''}
         </div>
         <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase}"</h3>
         <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.traducao}</i></p>
         
         <div style="background:var(--cor-marmore);padding:1rem;border-radius:12px;display:inline-block;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
-          <div style="font-size:0.75rem;color:var(--cor-pietra);font-weight:700;text-transform:uppercase;margin-bottom:0.3rem">Dica Fonética</div>
+          <div style="font-size:0.75rem;color:var(--cor-pietra);font-weight:700;text-transform:uppercase;margin-bottom:0.3rem">${I18n.t('imit_phonetic_hint')}</div>
           <div style="font-family:monospace;color:var(--cor-inchiostro);font-size:1rem">${item.dica_fonetica || item.contexto}</div>
           <div style="font-family:monospace;color:var(--cor-pietra);font-size:0.8rem;margin-top:0.3rem">${item.audio_ipa}</div>
         </div>
@@ -216,7 +215,7 @@ const Imitazione = {
 
       <div style="text-align:center;background:var(--cor-marmore-escuro);padding:2rem;border-radius:16px">
         <button id="btn-mic" class="mic-button" onclick="Imitazione.toggleGravacao()">🎙️</button>
-        <div id="mic-status" style="margin-top:1rem;font-weight:700;color:var(--cor-inchiostro-claro)">${I18n.idioma === 'it' ? 'Clicca sul microfono per parlare' : 'Clique no microfone para falar'}</div>
+        <div id="mic-status" style="margin-top:1rem;font-weight:700;color:var(--cor-inchiostro-claro)">${I18n.t('imit_mic_start')}</div>
       </div>
 
       <div id="imitazione-resultado" style="display:none;margin-top:1.5rem;text-align:center;background:var(--cor-marmore);padding:1.5rem;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
@@ -226,18 +225,17 @@ const Imitazione = {
 
   mostrarFinal() {
     const c = document.getElementById('imitazione-container');
-    const it = I18n.idioma === 'it';
     const lista = this._listaAtual || this.dados?.imitazioni || [];
     c.innerHTML = `
       <div style="text-align:center;padding:3rem 1rem">
         <div style="font-size:4rem;margin-bottom:1rem">🏆</div>
-        <h3 style="font-family:'Playfair Display',serif;color:#003E8A;font-size:1.8rem;margin-bottom:1rem">Excellent!</h3>
+        <h3 style="font-family:'Playfair Display',serif;color:#003E8A;font-size:1.8rem;margin-bottom:1rem">${I18n.t('imit_excellent')}</h3>
         <p style="font-size:1.1rem;color:#555;margin-bottom:1rem">
-          You completed all ${lista.length} phrases!
+          ${I18n.t('imit_completed_desc').replace('{n}', lista.length)}
         </p>
         <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
-          <button class="btn-secondario" onclick="Imitazione._aplicarFiltro()">🔄 Repeat</button>
-          <button class="btn-primario" onclick="App.navegar('templi')">Return to Home</button>
+          <button class="btn-secondario" onclick="Imitazione._aplicarFiltro()">${I18n.t('imit_repeat')}</button>
+          <button class="btn-primario" onclick="App.navegar('templi')">${I18n.t('imit_return_home')}</button>
         </div>
       </div>
     `;

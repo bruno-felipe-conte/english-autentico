@@ -29,10 +29,13 @@ const SomFeedback = {
     const btn = document.getElementById('btn-som');
     if (btn) btn.textContent = this.ativo ? '🔔' : '🔕';
     if (btn) {
-      const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-      btn.title = this.ativo
-        ? (it ? 'Suoni: attivi (clicca per disattivare)' : 'Sons: ativados (clique para desligar)')
-        : (it ? 'Suoni: disattivati (clicca per attivare)' : 'Sons: desativados (clique para ligar)');
+      if (typeof I18n !== 'undefined') {
+        btn.title = this.ativo
+          ? I18n.t('btn_som_ativo_title')
+          : I18n.t('btn_som_desativo_title');
+      } else {
+        btn.title = this.ativo ? 'Sons: ativados' : 'Sons: desativados';
+      }
     }
   },
 

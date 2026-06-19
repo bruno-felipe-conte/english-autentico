@@ -9,9 +9,9 @@ const _LEVEL_NOMES = {
   19:'Master', 20:'Grand Master'
 };
 function _nomePorNivel(n) {
-  const keys = Object.keys(_LEVEL_NOMES).map(Number).sort((a,b)=>b-a);
-  for (const k of keys) { if (n >= k) return _LEVEL_NOMES[k]; }
-  return 'Beginner';
+  const keys = [1, 2, 3, 5, 7, 10, 13, 16, 19, 20].sort((a,b)=>b-a);
+  for (const k of keys) { if (n >= k) return I18n.t(`lvl_name_${k}`); }
+  return I18n.t('lvl_name_1');
 }
 
 // ── Level-Up modal ─────────────────────────────────────────
@@ -26,7 +26,7 @@ const LevelUp = {
     // Desbloqueios relacionados
     const templos = Object.entries(Progressao.TEMPLO_NIVEL)
       .filter(([,n]) => n === nivel)
-      .map(([t]) => `🏛️ Temple ${t} unlocked!`);
+      .map(([t]) => I18n.t('notif_templo_sbloccato').replace('{n}', t));
     if (el('levelup-desbloqueios')) {
       el('levelup-desbloqueios').textContent = templos.join(' · ') || '';
     }
@@ -159,7 +159,7 @@ const Progressao = {
       if (typeof LevelUp !== 'undefined') {
         LevelUp.mostrar(p.nivel);
       } else {
-        App.notificar(`🎉 Level ${p.nivel}! Keep it up!`, 'successo');
+        App.notificar(I18n.t('lv_levelup_notif').replace('{n}', p.nivel), 'sucesso');
       }
       if (typeof SomFeedback !== 'undefined') SomFeedback.nivelUp();
       if (typeof Conquistas !== 'undefined') Conquistas.verificar();

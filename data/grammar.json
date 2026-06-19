@@ -57,7 +57,7 @@
               "motivo": "'They' é 3ª pessoa plural, usa 'are', igual a We e You."
             }
           ],
-          "tabela_visual": "| Pronoun | Verb To Be | Contraction |\n|---|---|---|\n| I | am | I'm |\n| You | are | You're |\n| He/She/It | is | He's/She's/It's |\n| We/They | are | We're/They're |",
+          "tabela_visual": "| Pronoun (Pronome) | Verb To Be (Verbo To Be) | Contraction (Contração) |\n|---|---|---|\n| I (Eu) | am (sou/estou) | I'm (Eu sou/estou) |\n| You (Você/Vocês) | are (é/está/são/estão) | You're (Você é/está) |\n| He/She/It (Ele/Ela/Coisa) | is (é/está) | He's/She's/It's (Ele/Ela/Coisa é/está) |\n| We/They (Nós/Eles/Elas) | are (somos/estamos/são/estão) | We're/They're (Nós somos/estamos / Eles/Elas são/estão) |",
           "exemplos_prc": [
             {
               "oracao": "She is a teacher.",
@@ -180,7 +180,7 @@
               "motivo": "Mesmo padrão de inversão: 'She is' vira 'Is she?' O verbo salta para a frente."
             }
           ],
-          "tabela_visual": "| Affirmative | Negative | Question |\n|---|---|---|\n| I am | I am not (I'm not) | Am I? |\n| You are | You are not (aren't) | Are you? |\n| He is | He is not (isn't) | Is he? |",
+          "tabela_visual": "| Affirmative (Afirmativa) | Negative (Negativa) | Question (Pergunta) |\n|---|---|---|\n| I am (Eu sou/estou) | I am not (I'm not) (Eu não sou/estou) | Am I? (Eu sou/estou?) |\n| You are (Você é/está) | You are not (aren't) (Você não é/está) | Are you? (Você é/está?) |\n| He is (Ele é/está) | He is not (isn't) (Ele não é/está) | Is he? (Ele é/está?) |",
           "exemplos_prc": [
             {
               "oracao": "Are they from Spain?",
@@ -303,7 +303,7 @@
               "motivo": "Plural + longe. 'Those' é o plural de 'That' (ambos longe)."
             }
           ],
-          "tabela_visual": "| Quantidade | Perto (Aqui) | Longe (Lá) |\n|---|---|---|\n| **Singular** | This | That |\n| **Plural** | These | Those |",
+          "tabela_visual": "| Quantidade | Perto (Aqui) | Longe (Lá) |\n|---|---|---|\n| **Singular** | This (Este/Esta/Isto) | That (Aquele/Aquela/Isso) |\n| **Plural** | These (Estes/Estas) | Those (Aqueles/Aquelas) |",
           "exemplos_prc": [
             {
               "oracao": "This is my car.",
@@ -419,7 +419,7 @@
               "motivo": "Para algo já conhecido/específico. Só existe um sol → 'the sun'. Já mencionamos o carro → 'the car'."
             }
           ],
-          "tabela_visual": "| Article | Rule | Example |\n|---|---|---|\n| **A** | Before consonant sound | A car, a dog, a university |\n| **An** | Before vowel sound | An apple, an egg, an hour |\n| **The** | Specific things | The sun, the boy, the cars |",
+          "tabela_visual": "| Article (Artigo) | Rule (Regra) | Example (Exemplo) |\n|---|---|---|\n| **A** | Before consonant sound (Antes de som de consoante) | A car (Um carro), a dog (um cachorro) |\n| **An** | Before vowel sound (Antes de som de vogal) | An apple (Uma maçã), an hour (uma hora) |\n| **The** | Specific things (Coisas específicas) | The sun (O sol), the cars (os carros) |",
           "exemplos_prc": [
             {
               "oracao": "I have an apple.",
@@ -554,7 +554,7 @@
               "motivo": "Muda a vogal (oo→ee). Par para memorizar: foot→feet / tooth→teeth."
             }
           ],
-          "tabela_visual": "| Singular | Plural (Regular) | Singular | Plural (Irregular) |\n|---|---|---|---|\n| car | cars | man | men |\n| dog | dogs | woman | women |\n| book | books | child | children |",
+          "tabela_visual": "| Singular | Plural (Regular) | Singular | Plural (Irregular) |\n|---|---|---|---|\n| car (carro) | cars (carros) | man (homem) | men (homens) |\n| dog (cachorro) | dogs (cachorros) | woman (mulher) | women (mulheres) |\n| book (livro) | books (livros) | child (criança) | children (crianças) |",
           "exemplos_prc": [
             {
               "oracao": "The children are playing.",
@@ -695,7 +695,7 @@
               "motivo": "Possessivo de 'They'. Não confunda: 'there' = lá, 'they're' = they are, 'their' = deles."
             }
           ],
-          "tabela_visual": "| Pronoun | Possessive Adjective | Example |\n|---|---|---|\n| I | My | my car |\n| You | Your | your book |\n| He | His | his dog |\n| She | Her | her cat |\n| It | Its | its tail |\n| We | Our | our house |\n| They | Their | their friends |",
+          "tabela_visual": "| Pronoun (Pronome) | Possessive Adjective (Adj. Possessivo) | Example (Exemplo) |\n|---|---|---|\n| I (Eu) | My (Meu/Minha) | my car (meu carro) |\n| You (Você) | Your (Seu/Sua) | your book (seu livro) |\n| He (Ele) | His (Dele) | his dog (o cachorro dele) |\n| She (Ela) | Her (Dela) | her cat (o gato dela) |\n| It (Neutro) | Its (Dele/Dela) | its tail (a cauda dele/dela) |\n| We (Nós) | Our (Nosso/Nossa) | our house (nossa casa) |\n| They (Eles/Elas) | Their (Deles/Delas) | their friends (os amigos deles/delas) |",
           "exemplos_prc": [
             {
               "oracao": "Her name is Maria.",
@@ -806,7 +806,7 @@
               "motivo": "Adicionado ao NOME do possuidor. 'John's book' = possuidor primeiro, sempre."
             }
           ],
-          "tabela_visual": "| Possessive Adjective | Possessive Pronoun | Genitive Case |\n|---|---|---|\n| My book | Mine | John's book |\n| Your book | Yours | The teacher's desk |\n| Her book | Hers | Mary's house |\n| Our book | Ours | My parents' car |",
+          "tabela_visual": "| Possessive Adjective (Adj. Possessivo) | Possessive Pronoun (Pronome Possessivo) | Genitive Case (Caso Genitivo) |\n|---|---|---|\n| My book (Meu livro) | Mine (Meu/Minha) | John's book (O livro do John) |\n| Your book (Seu livro) | Yours (Seu/Sua) | The teacher's desk (A mesa do professor) |\n| Her book (O livro dela) | Hers (Dela) | Mary's house (A casa da Mary) |\n| Our book (Nosso livro) | Ours (Nosso/Nossa) | My parents' car (O carro dos meus pais) |",
           "exemplos_prc": [
             {
               "oracao": "This car is mine.",
@@ -915,7 +915,7 @@
               "motivo": "Pergunta sobre LUGARES. 'Where do you live?' Sempre no início, antes do auxiliar."
             }
           ],
-          "tabela_visual": "| Question Word | Meaning | Example |\n|---|---|---|\n| What | Coisas/Ações | What is this? |\n| Who | Pessoas | Who is she? |\n| Where | Lugares | Where are you? |",
+          "tabela_visual": "| Question Word (Palavra de Pergunta) | Meaning (Significado) | Example (Exemplo) |\n|---|---|---|\n| What | Coisas/Ações (O que / Qual) | What is this? (O que é isto?) |\n| Who | Pessoas (Quem) | Who is she? (Quem é ela?) |\n| Where | Lugares (Onde) | Where are you? (Onde você está?) |",
           "exemplos_prc": [
             {
               "oracao": "What is your name?",
@@ -1020,7 +1020,7 @@
               "motivo": "Outro exemplo fixo: I like, you like, we like, they like. O verbo nunca muda para esses pronomes."
             }
           ],
-          "tabela_visual": "| Pronoun | Verb (Play) | Example |\n|---|---|---|\n| I | play | I play tennis |\n| You | play | You play well |\n| We | play | We play together |\n| They | play | They play games |",
+          "tabela_visual": "| Pronoun (Pronome) | Verb (Play) (Verbo) | Example (Exemplo) |\n|---|---|---|\n| I (Eu) | play (jogo) | I play tennis (Eu jogo tênis) |\n| You (Você) | play (joga) | You play well (Você joga bem) |\n| We (Nós) | play (jogamos) | We play together (Nós jogamos juntos) |\n| They (Eles/Elas) | play (jogam) | They play games (Eles jogam jogos) |",
           "exemplos_prc": [
             {
               "oracao": "They live in New York.",
@@ -1131,7 +1131,7 @@
               "motivo": "Consoante+y → troque 'y' por '-ies'. study→studies, fly→flies. Vogal+y → só '-s': play→plays."
             }
           ],
-          "tabela_visual": "| Verb | He / She / It |\n|---|---|\n| play | plays |\n| go | goes |\n| watch | watches |\n| study | studies |",
+          "tabela_visual": "| Verb (Verbo) | He / She / It (Ele/Ela/Coisa) |\n|---|---|\n| play (jogar) | plays (joga) |\n| go (ir) | goes (vai) |\n| watch (assistir) | watches (assiste) |\n| study (estudar) | studies (estuda) |",
           "exemplos_prc": [
             {
               "oracao": "She goes to school.",
@@ -1236,7 +1236,7 @@
               "motivo": "Contração de 'does not'. Exclusivo para He, She, It. O verbo seguinte perde o 's'."
             }
           ],
-          "tabela_visual": "| Subject | Auxiliary Negative | Verb |\n|---|---|---|\n| I / You / We / They | don't | play |\n| He / She / It | doesn't | play |",
+          "tabela_visual": "| Subject (Sujeito) | Auxiliary Negative (Auxiliar Negativo) | Verb (Verbo) |\n|---|---|---|\n| I / You / We / They | don't (não) | play (jogar) |\n| He / She / It | doesn't (não) | play (jogar) |",
           "exemplos_prc": [
             {
               "oracao": "She doesn't like pizza.",
@@ -1330,7 +1330,7 @@
               "motivo": "Usado antes de He, She, It. O verbo seguinte perde o 's' na pergunta."
             }
           ],
-          "tabela_visual": "| Auxiliary | Subject | Verb | ? |\n|---|---|---|---|\n| Do | you | work | ? |\n| Does | she | work | ? |",
+          "tabela_visual": "| Auxiliary (Auxiliar) | Subject (Sujeito) | Verb (Verbo) | ? |\n|---|---|---|---|\n| Do | you (você) | work (trabalha) | ? |\n| Does | she (ela) | work (trabalha) | ? |",
           "exemplos_prc": [
             {
               "oracao": "Does he live here?",
@@ -1441,7 +1441,7 @@
               "motivo": "Indica 0% das vezes (nunca). Posição: antes do verbo principal."
             }
           ],
-          "tabela_visual": "| Adverb | Meaning | Position |\n|---|---|---|\n| Always | Sempre | Antes do verbo principal |\n| Usually | Geralmente | Antes do verbo principal |\n| Sometimes | Às vezes | Antes do verbo principal |\n| Never | Nunca | Antes do verbo principal |",
+          "tabela_visual": "| Adverb (Advérbio) | Meaning (Significado) | Position (Posição) |\n|---|---|---|\n| Always | Sempre | Antes do verbo principal |\n| Usually | Geralmente | Antes do verbo principal |\n| Sometimes | Às vezes | Antes do verbo principal |\n| Never | Nunca | Antes do verbo principal |",
           "exemplos_prc": [
             {
               "oracao": "I always wake up early.",
@@ -1558,7 +1558,7 @@
               "motivo": "Pergunta sobre rotina/frequência com que uma ação ocorre."
             }
           ],
-          "tabela_visual": "| Question Word | Auxiliary | Subject | Verb | ? |\n|---|---|---|---|---|\n| When | do | you | study | ? |\n| Why | does | she | cry | ? |",
+          "tabela_visual": "| Question Word (Palavra de Pergunta) | Auxiliary (Auxiliar) | Subject (Sujeito) | Verb (Verbo) | ? |\n|---|---|---|---|---|\n| When (Quando) | do | you (você) | study (estuda) | ? |\n| Why (Por que) | does | she (ela) | cry (chora) | ? |",
           "exemplos_prc": [
             {
               "oracao": "Why do you study English? - Because I want to travel.",
@@ -1658,7 +1658,7 @@
               "motivo": "Objetos correspondentes a We e They (nós e eles/elas) que recebem a ação."
             }
           ],
-          "tabela_visual": "| Subject | Object |\n|---|---|\n| I | me |\n| You | you |\n| He | him |\n| She | her |\n| It | it |\n| We | us |\n| They | them |",
+          "tabela_visual": "| Subject (Sujeito) | Object (Objeto) |\n|---|---|\n| I (Eu) | me (me / mim) |\n| You (Você) | you (te / você) |\n| He (Ele) | him (o / ele) |\n| She (Ela) | her (a / ela) |\n| It (Neutro) | it (o / a / ele / ela) |\n| We (Nós) | us (nos / nós) |\n| They (Eles/Elas) | them (os / as / eles / elas) |",
           "exemplos_prc": [
             {
               "oracao": "I call him every day.",
@@ -1763,7 +1763,7 @@
               "motivo": "Não usamos 'got' quando 'have' significa uma ação (comer, beber)."
             }
           ],
-          "tabela_visual": "| Sujeito | Posse (Have/Has got) | Ação (Have/Has) |\n|---|---|---|\n| I / You / We / They | have got ('ve got) | have |\n| He / She / It | has got ('s got) | has |",
+          "tabela_visual": "| Sujeito | Posse (Have/Has got) | Ação (Have/Has) |\n|---|---|---|\n| I / You / We / They | have got ('ve got) (tenho/temos/têm) | have (ter/comer/tomar) |\n| He / She / It | has got ('s got) (tem) | has (ter/comer/tomar) |",
           "exemplos_prc": [
             {
               "oracao": "She has got a new car.",
@@ -1863,7 +1863,7 @@
               "motivo": "Significa 'há' ou 'existem' para coisas no plural. Não possui forma contraída."
             }
           ],
-          "tabela_visual": "| Forma | Singular | Plural |\n|---|---|---|\n| Afirmativa | There is a book | There are books |\n| Negativa | There isn't a book | There aren't any books |\n| Interrogativa | Is there a book? | Are there any books? |",
+          "tabela_visual": "| Forma | Singular | Plural |\n|---|---|---|\n| Afirmativa | There is a book (Há um livro) | There are books (Há livros) |\n| Negativa | There isn't a book (Não há um livro) | There aren't any books (Não há nenhuns livros) |\n| Interrogativa | Is there a book? (Há um livro?) | Are there any books? (Há nenhuns livros?) |",
           "exemplos_prc": [
             {
               "oracao": "There is a dog in the park.",
@@ -1969,7 +1969,7 @@
               "motivo": "Indica um ponto específico de referência (no aeroporto, na parada de ônibus, no topo)."
             }
           ],
-          "tabela_visual": "| Preposição | Uso de Lugar | Exemplo |\n|---|---|---|\n| IN | Países, cidades, cômodos | in Brazil, in the living room |\n| ON | Superfícies, ruas | on the table, on Main Street |\n| AT | Endereços completos, locais exatos | at 123 Main St, at the bus stop |",
+          "tabela_visual": "| Preposição | Uso de Lugar | Exemplo |\n|---|---|---|\n| IN | Países, cidades, cômodos | in Brazil (no Brasil), in the living room (na sala de estar) |\n| ON | Superfícies, ruas | on the table (na mesa), on Main Street (na Rua Principal) |\n| AT | Endereços completos, locais exatos | at 123 Main St (no 123 da Rua Principal), at the bus stop (no ponto de ônibus) |",
           "exemplos_prc": [
             {
               "oracao": "The book is on the table.",
@@ -2075,7 +2075,7 @@
               "motivo": "Horários específicos do relógio (at 8 PM), momentos do dia (at noon/night) e feriados sem a palavra 'day'."
             }
           ],
-          "tabela_visual": "| Preposição | Uso de Tempo | Exemplo |\n|---|---|---|\n| IN | Meses, anos, partes do dia | in May, in 1999, in the morning |\n| ON | Dias da semana e datas | on Monday, on May 5th |\n| AT | Horários exatos | at 8:00, at night, at noon |",
+          "tabela_visual": "| Preposição | Uso de Tempo | Exemplo |\n|---|---|---|\n| IN | Meses, anos, partes do dia | in May (em maio), in 1999 (em 1999), in the morning (de manhã) |\n| ON | Dias da semana e datas | on Monday (na segunda-feira), on May 5th (em 5 de maio) |\n| AT | Horários exatos | at 8:00 (às 8:00), at night (à noite), at noon (ao meio-dia) |",
           "exemplos_prc": [
             {
               "oracao": "My birthday is in June.",
@@ -2175,7 +2175,7 @@
               "motivo": "Conceitos abstratos, líquidos ou substâncias que não têm plural (ex: water, money, information)."
             }
           ],
-          "tabela_visual": "| Categoria | Regra | Exemplos |\n|---|---|---|\n| Countable | Aceita plural (a/an/numbers) | an apple, two cars, five dogs |\n| Uncountable | Singular apenas (use some/much) | water, money, information, bread |",
+          "tabela_visual": "| Categoria | Regra | Exemplos |\n|---|---|---|\n| Countable (Contável) | Aceita plural (a/an/numbers) | an apple (uma maçã), two cars (dois carros) |\n| Uncountable (Incontável) | Singular apenas (use some/much) | water (água), money (dinheiro), bread (pão) |",
           "exemplos_prc": [
             {
               "oracao": "I need some information.",
@@ -2275,7 +2275,7 @@
               "motivo": "Significa 'algum' (em perguntas) ou 'nenhum' (em frases negativas com don't/doesn't/not)."
             }
           ],
-          "tabela_visual": "| Quantifier | Sentence Type | Example |\n|---|---|---|\n| Some | Affirmative | I have some apples. |\n| Any | Negative | I don't have any apples. |\n| Any | Interrogative | Do you have any apples? |\n| Some | Offer / Request | Would you like some tea? |",
+          "tabela_visual": "| Quantifier (Quantificador) | Sentence Type (Tipo de Frase) | Example (Exemplo) |\n|---|---|---|\n| Some | Affirmative (Afirmativa) | I have some apples (Tenho algumas maçãs). |\n| Any | Negative (Negativa) | I don't have any apples (Não tenho nenhuma maçã). |\n| Any | Interrogative (Interrogativa) | Do you have any apples? (Você tem alguma maçã?) |\n| Some | Offer / Request (Oferta/Pedido) | Would you like some tea? (Você gostaria de um pouco de chá?) |",
           "exemplos_prc": [
             {
               "oracao": "I have some money.",
@@ -2386,7 +2386,7 @@
               "motivo": "Significa 'muito/muitos'. Super flexível: serve para ambos e é a escolha natural em frases afirmativas."
             }
           ],
-          "tabela_visual": "| Quantifier | Used with | Example |\n|---|---|---|\n| Many | Countable Plural | I don't have many books. |\n| Much | Uncountable | I don't have much time. |\n| A lot of | Both | She has a lot of friends. / He has a lot of money. |",
+          "tabela_visual": "| Quantifier (Quantificador) | Used with (Usado com) | Example (Exemplo) |\n|---|---|---|\n| Many | Countable Plural (Contável Plural) | I don't have many books (Não tenho muitos livros). |\n| Much | Uncountable (Incontável) | I don't have much time (Não tenho muito tempo). |\n| A lot of | Both (Ambos) | She has a lot of friends (Ela tem muitos amigos) / He has a lot of money (Ele tem muito dinheiro). |",
           "exemplos_prc": [
             {
               "oracao": "She has a lot of friends.",
@@ -2491,7 +2491,7 @@
               "motivo": "Significa 'quantos/quantas'. Usado exclusivamente para substantivos contáveis no plural."
             }
           ],
-          "tabela_visual": "| Question Word | Used with | Example |\n|---|---|---|\n| How many | Countable (Plural) | How many apples do you want? |\n| How much | Uncountable | How much water do you drink? |\n| How much | Price | How much is this shirt? |",
+          "tabela_visual": "| Question Word (Palavra de Pergunta) | Used with (Usado com) | Example (Exemplo) |\n|---|---|---|\n| How many | Countable (Plural) (Contável Plural) | How many apples do you want? (Quantas maçãs você quer?) |\n| How much | Uncountable (Incontável) | How much water do you drink? (Quanto de água você bebe?) |\n| How much | Price (Preço) | How much is this shirt? (Quanto custa esta camisa?) |",
           "exemplos_prc": [
             {
               "oracao": "How many cars does he have?",
@@ -2596,7 +2596,7 @@
               "motivo": "O sufixo '-ing' é equivalente ao nosso gerúndio (-ando, -endo, -indo) e marca a ação em progresso."
             }
           ],
-          "tabela_visual": "| Subject | Verb to Be | Verb + ing |\n|---|---|---|\n| I | am | working. |\n| You / We / They | are | reading. |\n| He / She / It | is | sleeping. |",
+          "tabela_visual": "| Subject (Sujeito) | Verb to Be (Verbo to Be) | Verb + ing (Verbo com -ing) |\n|---|---|---|\n| I (Eu) | am (estou) | working (trabalhando). |\n| You / We / They (Você/Nós/Eles) | are (está/estamos/estão) | reading (lendo). |\n| He / She / It (Ele/Ela/Coisa) | is (está) | sleeping (dormindo). |",
           "exemplos_prc": [
             {
               "oracao": "She is eating an apple.",
@@ -2701,7 +2701,7 @@
               "motivo": "Coloque am/is/are no início da frase, antes do sujeito. Exemplo: 'Are you listening?'"
             }
           ],
-          "tabela_visual": "| Form | Structure | Example |\n|---|---|---|\n| Negative | Subj + To Be + NOT + V-ing | I am not working. / She isn't sleeping. |\n| Question | To Be + Subj + V-ing? | Are you working? / Is she sleeping? |\n| Short Answer | Yes/No, Subj + To Be | Yes, I am. / No, she isn't. |",
+          "tabela_visual": "| Form (Forma) | Structure (Estrutura) | Example (Exemplo) |\n|---|---|---|\n| Negative (Negativa) | Subj + To Be + NOT + V-ing | I am not working (Não estou trabalhando). / She isn't sleeping (Ela não está dormindo). |\n| Question (Pergunta) | To Be + Subj + V-ing? | Are you working? (Você está trabalhando?) / Is she sleeping? (Ela está dormindo?) |\n| Short Answer (Resp. Curta) | Yes/No, Subj + To Be | Yes, I am (Sim, estou). / No, she isn't (Não, ela não está). |",
           "exemplos_prc": [
             {
               "oracao": "Are they coming to the party?",
@@ -2806,7 +2806,7 @@
               "motivo": "Ações acontecendo neste exato momento. Pistas: words like 'now', 'at the moment'."
             }
           ],
-          "tabela_visual": "| Tense | Usage | Example |\n|---|---|---|\n| Present Simple | Routines, habits, facts | I play tennis on Sundays. |\n| Present Continuous | Actions happening right now | I am playing tennis right now. |",
+          "tabela_visual": "| Tense (Tempo Verbal) | Usage (Uso) | Example (Exemplo) |\n|---|---|---|\n| Present Simple (Pres. Simples) | Routines, habits, facts (Rotina, fatos) | I play tennis on Sundays (Jogo tênis aos domingos). |\n| Present Continuous (Pres. Contínuo) | Actions happening right now (Ações ocorrendo agora) | I am playing tennis right now (Estou jogando tênis agora). |",
           "exemplos_prc": [
             {
               "oracao": "She usually works in an office, but today she is working from home.",
@@ -2911,7 +2911,7 @@
               "motivo": "Expressa incapacidade ou proibição. Junta-se em uma só palavra: 'cannot' (can't)."
             }
           ],
-          "tabela_visual": "| Pronoun | Affirmative | Negative | Question |\n|---|---|---|---|\n| I / You / He / She / It / We / They | can speak | can't speak | Can ... speak? |",
+          "tabela_visual": "| Pronoun (Pronome) | Affirmative (Afirmativa) | Negative (Negativa) | Question (Pergunta) |\n|---|---|---|---|\n| I / You / He / She / It / We / They | can speak (consigo/consegue falar) | can't speak (não consigo/consegue falar) | Can ... speak? (Consigo/Consegue ... falar?) |",
           "exemplos_prc": [
             {
               "oracao": "Can you help me?",
@@ -3016,7 +3016,7 @@
               "motivo": "Contração de 'let us'. Convida outras pessoas incluindo você. Exemplo: 'Let's go'."
             }
           ],
-          "tabela_visual": "| Type | Example | Translation |\n|---|---|---|\n| Affirmative | Close the window. | Feche a janela. |\n| Negative | Don't talk. | Não converse. |\n| Suggestion (We) | Let's eat. | Vamos comer. |",
+          "tabela_visual": "| Type (Tipo) | Example (Exemplo) | Translation (Tradução) |\n|---|---|---|\n| Affirmative (Afirmativo) | Close the window. | Feche a janela. |\n| Negative (Negativo) | Don't talk. | Não converse. |\n| Suggestion (We) (Sugestão) | Let's eat. | Vamos comer. |",
           "exemplos_prc": [
             {
               "oracao": "Please, sit down.",
@@ -3127,7 +3127,7 @@
               "motivo": "Mostra o resultado, efeito ou consequência direta de uma ação anterior. Exemplo: 'It rained, so I stayed'."
             }
           ],
-          "tabela_visual": "| Conjunction | Meaning | Example |\n|---|---|---|\n| And | e | I like apples and bananas. |\n| But | mas | I like apples, but not bananas. |\n| Or | ou | Tea or coffee? |\n| Because | porque | I'm happy because it's Friday. |\n| So | então | It was raining, so I stayed home. |",
+          "tabela_visual": "| Conjunction (Conjunção) | Meaning (Significado) | Example (Exemplo) |\n|---|---|---|\n| And | e | I like apples and bananas (Gosto de maçãs e bananas). |\n| But | mas | I like apples, but not bananas (Gosto de maçãs, mas não de bananas). |\n| Or | ou | Tea or coffee? (Chá ou café?) |\n| Because | porque | I'm happy because it's Friday (Estou feliz porque é sexta-feira). |\n| So | então | It was raining, so I stayed home (Estava chovendo, então fiquei em casa). |",
           "exemplos_prc": [
             {
               "oracao": "I was tired, so I went to bed early.",
@@ -3221,7 +3221,7 @@
               "motivo": "Adjetivos em inglês são invariáveis: eles não recebem 's' no plural. Exemplo: 'red apples' (maçãs vermelhas)."
             }
           ],
-          "tabela_visual": "| Adjective | Noun | Translation |\n|---|---|---|\n| tall | boy | menino alto |\n| old | house | casa velha |\n| fast | cars | carros rápidos |",
+          "tabela_visual": "| Adjective (Adjetivo) | Noun (Substantivo) | Translation (Tradução) |\n|---|---|---|\n| tall (alto) | boy | menino alto |\n| old (velho) | house | casa velha |\n| fast (rápido) | cars | carros rápidos |",
           "exemplos_prc": [
             {
               "oracao": "She is a smart student.",
@@ -3328,7 +3328,7 @@
               "motivo": "Usado para You, We, They"
             }
           ],
-          "tabela_visual": "| Pronoun | Past To Be |\n|---|---|\n| I / He / She / It | was |\n| You / We / They | were |",
+          "tabela_visual": "| Pronoun (Pronome) | Past To Be (Passado do Verb To Be) |\n|---|---|\n| I / He / She / It (Eu/Ele/Ela/Coisa) | was (era/estava) |\n| You / We / They (Você/Nós/Eles/Elas) | were (eram/estavam/você era/estava) |",
           "exemplos_prc": [
             {
               "oracao": "I was at home yesterday.",
@@ -3434,7 +3434,7 @@
               "motivo": "Troca o 'y' por 'ied'"
             }
           ],
-          "tabela_visual": "| Verb | Past Simple | Rule |\n|---|---|---|\n| work | worked | + ed |\n| like | liked | + d |\n| try | tried | y -> ied |\n| stop | stopped | CVC -> + p + ed |",
+          "tabela_visual": "| Verb (Verbo) | Past Simple (Passado Simples) | Rule (Regra) |\n|---|---|---|\n| work (trabalhar) | worked (trabalhou) | + ed |\n| like (gostar) | liked (gostou) | + d |\n| try (tentar) | tried (tentou) | y -> ied |\n| stop (parar) | stopped (parou) | Consoante-Vogal-Consoante (duplica final + ed) |",
           "exemplos_prc": [
             {
               "oracao": "I worked all day.",
@@ -3540,7 +3540,7 @@
               "motivo": "Muda a vogal"
             }
           ],
-          "tabela_visual": "| Verb | Past Simple |\n|---|---|\n| go | went |\n| have | had |\n| do | did |\n| make | made |\n| say | said |",
+          "tabela_visual": "| Verb (Verbo) | Past Simple (Passado Simples) |\n|---|---|\n| go (ir) | went (foi) |\n| have (ter) | had (teve) |\n| do (fazer) | did (fez) |\n| make (fazer/criar) | made (fez/criou) |\n| say (dizer) | said (disse) |",
           "exemplos_prc": [
             {
               "oracao": "I went to the store.",
@@ -3640,7 +3640,7 @@
               "motivo": "Inicia perguntas de sim/não no passado"
             }
           ],
-          "tabela_visual": "| Affirmative | Negative | Question |\n|---|---|---|\n| I played | I didn't play | Did I play? |\n| She went | She didn't go | Did she go? |\n| They had | They didn't have | Did they have? |",
+          "tabela_visual": "| Affirmative (Afirmativa) | Negative (Negativa) | Question (Pergunta) |\n|---|---|---|\n| I played (Eu joguei) | I didn't play (Eu não joguei) | Did I play? (Eu joguei?) |\n| She went (Ela foi) | She didn't go (Ela não foi) | Did she go? (Ela foi?) |\n| They had (Eles tinham) | They didn't have (Eles não tinham) | Did they have? (Eles tinham?) |",
           "exemplos_prc": [
             {
               "oracao": "I didn't go to the party.",
@@ -3740,7 +3740,7 @@
               "motivo": "Geralmente introduz a ação curta que interrompeu a longa"
             }
           ],
-          "tabela_visual": "| Past Continuous (Ação longa) | Past Simple (Ação curta) |\n|---|---|\n| I was sleeping | when the phone rang. |\n| They were eating | when it started to rain. |",
+          "tabela_visual": "| Past Continuous (Ação longa) | Past Simple (Ação curta) |\n|---|---|\n| I was sleeping (Eu estava dormindo) | when the phone rang (quando o telefone tocou). |\n| They were eating (Eles estavam comendo) | when it started to rain (quando começou a chover). |",
           "exemplos_prc": [
             {
               "oracao": "She was watching TV when I called.",
@@ -3840,7 +3840,7 @@
               "motivo": "Past Simple: verbo no passado simples"
             }
           ],
-          "tabela_visual": "| Conector | Seguido normalmente por | Exemplo |\n|---|---|---|\n| When (Quando) | Past Simple | ... when the phone rang. |\n| While (Enquanto) | Past Continuous | While I was sleeping... |",
+          "tabela_visual": "| Conector | Seguido normalmente por | Exemplo |\n|---|---|---|\n| When (Quando) | Past Simple | ... when the phone rang (quando o telefone tocou). |\n| While (Enquanto) | Past Continuous | While I was sleeping (Enquanto eu estava dormindo)... |",
           "exemplos_prc": [
             {
               "oracao": "She was cooking dinner when we arrived.",
@@ -3934,7 +3934,7 @@
               "motivo": "Previsão baseada em sinais visíveis agora"
             }
           ],
-          "tabela_visual": "| Sujeito | Verb To Be | Going to | Verbo Base |\n|---|---|---|---|\n| I | am | going to | work |\n| He/She/It | is | going to | play |\n| You/We/They | are | going to | travel |",
+          "tabela_visual": "| Sujeito | Verb To Be | Going to | Verbo Base |\n|---|---|---|---|\n| I (Eu) | am | going to | work (trabalhar) |\n| He/She/It (Ele/Ela/Coisa) | is | going to | play (jogar) |\n| You/We/They (Você/Nós/Eles) | are | going to | travel (viajar) |",
           "exemplos_prc": [
             {
               "oracao": "We are going to buy a new car next year.",
@@ -4028,7 +4028,7 @@
               "motivo": "Opinião pessoal sem forte evidência"
             }
           ],
-          "tabela_visual": "| Uso | Estrutura | Exemplo |\n|---|---|---|\n| Afirmativa | Sujeito + will + verbo | He will win. |\n| Negativa | Sujeito + will not (won't) | He won't win. |\n| Interrogativa | Will + sujeito + verbo | Will he win? |",
+          "tabela_visual": "| Uso | Estrutura | Exemplo |\n|---|---|---|\n| Afirmativa | Sujeito + will + verbo | He will win (Ele vencerá). |\n| Negativa | Sujeito + will not (won't) | He won't win (Ele não vencerá). |\n| Interrogativa | Will + sujeito + verbo | Will he win? (Ele vencerá?) |",
           "exemplos_prc": [
             {
               "oracao": "I'm thirsty. I will get a glass of water.",
@@ -4122,7 +4122,7 @@
               "motivo": "more + beautiful"
             }
           ],
-          "tabela_visual": "| Tipo | Regra | Exemplo |\n|---|---|---|\n| Curto (1 sílaba) | Adjetivo + -er | fast -> faster |\n| Terminado em -y | Tira o 'y' e põe -ier | happy -> happier |\n| Longo (2+ sílabas)| more + Adjetivo | modern -> more modern |",
+          "tabela_visual": "| Tipo | Regra | Exemplo |\n|---|---|---|\n| Curto (1 sílaba) | Adjetivo + -er | fast -> faster (rápido -> mais rápido) |\n| Terminado em -y | Tira o 'y' e põe -ier | happy -> happier (feliz -> mais feliz) |\n| Longo (2+ sílabas)| more + Adjetivo | modern -> more modern (moderno -> mais moderno) |",
           "exemplos_prc": [
             {
               "oracao": "A car is faster than a bicycle.",
@@ -4216,7 +4216,7 @@
               "motivo": "the most + expensive"
             }
           ],
-          "tabela_visual": "| Tipo | Regra | Exemplo |\n|---|---|---|\n| Curto | the + Adjetivo + -est | the fastest |\n| Em -y | the + tira 'y' põe -iest | the happiest |\n| Longo | the most + Adjetivo | the most modern |",
+          "tabela_visual": "| Tipo | Regra | Exemplo |\n|---|---|---|\n| Curto | the + Adjetivo + -est | the fastest (o mais rápido) |\n| Em -y | the + tira 'y' põe -iest | the happiest (o mais feliz) |\n| Longo | the most + Adjetivo | the most modern (o mais moderno) |",
           "exemplos_prc": [
             {
               "oracao": "Mount Everest is the highest mountain in the world.",
@@ -4316,7 +4316,7 @@
               "motivo": "Para obrigações vindas de fora (leis, chefes, horários)."
             }
           ],
-          "tabela_visual": "| Modal | Uso principal | Exemplo |\n|---|---|---|\n| Should | Conselho | You should rest. |\n| Must | Obrigação forte | I must go now. |\n| Have to | Necessidade / Rotina | I have to work. |",
+          "tabela_visual": "| Modal | Uso principal | Exemplo |\n|---|---|---|\n| Should (Deveria) | Conselho | You should rest (Você deveria descansar). |\n| Must (Deve) | Obrigação forte | I must go now (Eu devo ir agora). |\n| Have to (Ter que) | Necessidade / Rotina | I have to work (Eu tenho que trabalhar). |",
           "exemplos_prc": [
             {
               "oracao": "You should drink more water.",
@@ -4421,7 +4421,7 @@
               "motivo": "Pergunta comum que é respondida com o infinitivo de propósito."
             }
           ],
-          "tabela_visual": "| Ação (Action) | Propósito (Purpose) |\n|---|---|\n| I went to the store | **to buy** milk. |\n| She is studying | **to pass** the exam. |\n| He called me | **to ask** a question. |",
+          "tabela_visual": "| Ação (Action) | Propósito (Purpose) |\n|---|---|\n| I went to the store (Fui à loja) | **to buy** milk (para comprar leite). |\n| She is studying (Ela está estudando) | **to pass** the exam (para passar no exame). |\n| He called me (Ele me ligou) | **to ask** a question (para fazer uma pergunta). |",
           "exemplos_prc": [
             {
               "oracao": "I went online to check my emails.",
@@ -4526,7 +4526,7 @@
               "motivo": "Usado em perguntas para saber se uma experiência já ocorreu em toda a vida."
             }
           ],
-          "tabela_visual": "| Sujeito | Auxiliar | Particípio | Complemento |\n|---|---|---|---|\n| I / You / We / They | **have** | **visited** | Paris. |\n| He / She / It | **has** | **eaten** | sushi. |",
+          "tabela_visual": "| Sujeito | Auxiliar | Particípio | Complemento |\n|---|---|---|---|\n| I / You / We / They | **have** | **visited** | Paris (já visitaram Paris). |\n| He / She / It | **has** | **eaten** | sushi (já comeu sushi). |",
           "exemplos_prc": [
             {
               "oracao": "Have you ever seen a ghost?",
@@ -4637,7 +4637,7 @@
               "motivo": "Usado em negativas (ainda não) ou perguntas (já?). Vai sempre no final da frase."
             }
           ],
-          "tabela_visual": "| Palavra | Posição na frase | Tipo de frase |\n|---|---|---|\n| Just | Entre *have/has* e particípio | Afirmativa |\n| Already| Entre *have/has* e particípio | Afirmativa |\n| Yet | No final da frase | Negativa / Pergunta |",
+          "tabela_visual": "| Palavra | Posição na frase | Tipo de frase |\n|---|---|---|\n| Just (Acabar de) | Entre *have/has* e particípio | Afirmativa |\n| Already (Já) | Entre *have/has* e particípio | Afirmativa |\n| Yet (Ainda / Já) | No final da frase | Negativa / Pergunta |",
           "exemplos_prc": [
             {
               "oracao": "I have just finished my homework.",
@@ -4760,7 +4760,7 @@
               "motivo": "Movimento de um nível mais baixo para cima de uma superfície."
             }
           ],
-          "tabela_visual": "| Preposição | Ideia principal | Exemplo |\n|---|---|---|\n| Into | Fora → Dentro | He walked **into** the room. |\n| Onto | Baixo → Superfície | The cat jumped **onto** the table. |\n| Across | Lado A → Lado B | We swam **across** the river. |",
+          "tabela_visual": "| Preposição | Ideia principal | Exemplo |\n|---|---|---|\n| Into | Fora → Dentro | He walked **into** the room (Ele caminhou para dentro da sala). |\n| Onto | Baixo → Superfície | The cat jumped **onto** the table (O gato pulou sobre a mesa). |\n| Across | Lado A → Lado B | We swam **across** the river (Nós nadamos através do rio). |",
           "exemplos_prc": [
             {
               "oracao": "They walked through the forest.",
@@ -4877,7 +4877,7 @@
               "motivo": "Refere-se a todos os itens, pessoas ou lugares."
             }
           ],
-          "tabela_visual": "| Prefixo | Pessoas | Coisas | Lugares |\n|---|---|---|---|\n| Some- | someone / somebody | something | somewhere |\n| Any- | anyone / anybody | anything | anywhere |\n| No- | no one / nobody | nothing | nowhere |\n| Every- | everyone / everybody | everything | everywhere |",
+          "tabela_visual": "| Prefixo | Pessoas | Coisas | Lugares |\n|---|---|---|---|\n| Some- | someone / somebody (alguém) | something (alguma coisa) | somewhere (algum lugar) |\n| Any- | anyone / anybody (qualquer um) | anything (qualquer coisa) | anywhere (qualquer lugar) |\n| No- | no one / nobody (ninguém) | nothing (nada) | nowhere (lugar nenhum) |\n| Every- | everyone / everybody (todos) | everything (tudo) | everywhere (toda parte) |",
           "exemplos_prc": [
             {
               "oracao": "I need something to drink.",
@@ -4983,7 +4983,7 @@
               "motivo": "Podem ser seguidos por ambas as formas em muitas situações."
             }
           ],
-          "tabela_visual": "| + Gerund (-ing) | + Infinitive (to) |\n|---|---|\n| enjoy (reading) | want (to read) |\n| finish (eating) | need (to eat) |\n| mind (waiting) | decide (to wait) |\n| suggest (going) | hope (to go) |",
+          "tabela_visual": "| + Gerund (-ing) (com Gerúndio) | + Infinitive (to) (com Infinitivo) |\n|---|---|\n| enjoy (reading) (gostar de ler) | want (to read) (querer ler) |\n| finish (eating) (terminar de comer) | need (to eat) (precisar comer) |\n| mind (waiting) (importar-se em esperar) | decide (to wait) (decidir esperar) |\n| suggest (going) (sugerir ir) | hope (to go) (esperar ir) |",
           "exemplos_prc": [
             {
               "oracao": "I enjoy reading books.",
@@ -5300,7 +5300,7 @@
               "motivo": "O que acontecerá no futuro se a condição for cumprida."
             }
           ],
-          "tabela_visual": "| Condição (If + Present) | Resultado (Will) |\n|---|---|\n| If it rains, | I will stay at home. |\n| If you study, | you will pass the exam. |\n| If she calls me, | I will answer. |",
+          "tabela_visual": "| Condição (If + Present) | Resultado (Will) |\n|---|---|\n| If it rains (Se chover), | I will stay at home (eu ficarei em casa). |\n| If you study (Se você estudar), | you will pass the exam (você passará no exame). |\n| If she calls me (Se ela me ligar), | I will answer (eu atenderei). |",
           "exemplos_prc": [
             {
               "oracao": "If I have money, I will buy a car.",
@@ -5408,7 +5408,7 @@
               "motivo": "Experiência de vida, tempo não especificado"
             }
           ],
-          "tabela_visual": "| Tempo Verbal | Estrutura | Uso Principal | Exemplo |\n|---|---|---|---|\n| Past Simple | Verbo no passado | Ação concluída com tempo específico | She lived in Paris in 2010. |\n| Present Perfect | have/has + Particípio Passado | Experiências ou ações com impacto no presente | She has lived in Paris. |",
+          "tabela_visual": "| Tempo Verbal | Estrutura | Uso Principal | Exemplo |\n|---|---|---|---|\n| Past Simple | Verbo no passado | Ação concluída com tempo específico | She lived in Paris in 2010 (Ela morou em Paris em 2010). |\n| Present Perfect | have/has + Particípio Passado | Experiências ou ações com impacto no presente | She has lived in Paris (Ela já morou em Paris / tem morado em Paris). |",
           "exemplos_prc": [
             {
               "oracao": "Did you see him this morning?",
@@ -5508,7 +5508,7 @@
               "motivo": "Enfatiza que a chuva não parou e continua agora."
             }
           ],
-          "tabela_visual": "| Pronome | Auxiliar | Been | Verbo (-ing) |\n|---|---|---|---|\n| I / You / We / They | have | been | studying |\n| He / She / It | has | been | playing |",
+          "tabela_visual": "| Pronome | Auxiliar | Been | Verbo (-ing) |\n|---|---|---|---|\n| I / You / We / They | have | been | studying (tenho estudado) |\n| He / She / It | has | been | playing (tem jogado) |",
           "exemplos_prc": [
             {
               "oracao": "She is out of breath. She has been running.",
@@ -5602,7 +5602,7 @@
               "motivo": "Ação mais recente no passado."
             }
           ],
-          "tabela_visual": "| Ordem no tempo | Ação mais antiga | Ação no passado |\n|---|---|---|\n| Estrutura | Past Perfect (had + Particípio) | Past Simple |\n| Exemplo | When I arrived, they **had eaten**. | When I **arrived**... |",
+          "tabela_visual": "| Ordem no tempo | Ação mais antiga | Ação no passado |\n|---|---|---|\n| Estrutura | Past Perfect (had + Particípio) | Past Simple |\n| Exemplo | When I arrived, they **had eaten** (Quando cheguei, eles já tinham comido). | When I **arrived** (Quando cheguei)... |",
           "exemplos_prc": [
             {
               "oracao": "When we got to the station, the train had left.",
@@ -5696,7 +5696,7 @@
               "motivo": "'Would' indica o resultado imaginário"
             }
           ],
-          "tabela_visual": "| Condição (If) | Resultado (Would) |\n|---|---|\n| If + Past Simple | would/could + verbo no infinitivo |\n| If I lived in Japan | I would eat sushi every day. |",
+          "tabela_visual": "| Condição (If) | Resultado (Would) |\n|---|---|\n| If + Past Simple | would/could + verbo no infinitivo |\n| If I lived in Japan (Se eu morasse no Japão) | I would eat sushi every day (eu comeria sushi todos os dias). |",
           "exemplos_prc": [
             {
               "oracao": "If I were you, I would study more.",
@@ -5790,7 +5790,7 @@
               "motivo": "Present Simple"
             }
           ],
-          "tabela_visual": "| Condição (If / When) | Resultado |\n|---|---|\n| If + Present Simple | Present Simple |\n| If you mix blue and yellow | you get green. |",
+          "tabela_visual": "| Condição (If / When) | Resultado |\n|---|---|\n| If + Present Simple | Present Simple |\n| If you mix blue and yellow (Se você misturar azul e amarelo) | you get green (você obtém verde). |",
           "exemplos_prc": [
             {
               "oracao": "When the sun goes down, it gets dark.",
@@ -5884,7 +5884,7 @@
               "motivo": "Foco no livro, o autor não é o principal."
             }
           ],
-          "tabela_visual": "| Tense | Active Voice | Passive Voice |\n|---|---|---|\n| Present | She **makes** the cake. | The cake **is made** by her. |\n| Past | She **made** the cake. | The cake **was made** by her. |",
+          "tabela_visual": "| Tense (Tempo) | Active Voice (Voz Ativa) | Passive Voice (Voz Passiva) |\n|---|---|---|\n| Present | She **makes** the cake (Ela faz o bolo). | The cake **is made** by her (O bolo é feito por ela). |\n| Past | She **made** the cake (Ela fez o bolo). | The cake **was made** by her (O bolo foi feito por ela). |",
           "exemplos_prc": [
             {
               "oracao": "My car was stolen yesterday.",
@@ -5984,7 +5984,7 @@
               "motivo": "Usa-se 'where' para indicar um lugar."
             }
           ],
-          "tabela_visual": "| Relative Pronoun | Used for | Example |\n|---|---|---|\n| **Who / That** | People | The girl **who** works here. |\n| **Which / That** | Things / Animals | The car **which** is red. |\n| **Where** | Places | The park **where** we met. |",
+          "tabela_visual": "| Relative Pronoun (Pronome Relativo) | Used for (Usado para) | Example (Exemplo) |\n|---|---|---|\n| **Who / That** | People (Pessoas) | The girl **who** works here (A garota que trabalha aqui). |\n| **Which / That** | Things/Animals (Coisas/Animais) | The car **which** is red (O carro que é vermelho). |\n| **Where** | Places (Lugares) | The park **where** we met (O parque onde nos encontramos). |",
           "exemplos_prc": [
             {
               "oracao": "She is the woman who helped me.",
@@ -6078,7 +6078,7 @@
               "motivo": "Use 'tell' com objeto (told me), e 'say' sem (said)."
             }
           ],
-          "tabela_visual": "| Direct Speech (Fala Original) | Reported Speech (Relato) |\n|---|---|\n| I **am** happy. | He said he **was** happy. |\n| I **work** hard. | She said she **worked** hard. |\n| I **can** help. | He said he **could** help. |",
+          "tabela_visual": "| Direct Speech (Fala Original) | Reported Speech (Relato) |\n|---|---|\n| I **am** happy (Estou feliz). | He said he **was** happy (Ele disse que estava feliz). |\n| I **work** hard (Trabalho duro). | She said she **worked** hard (Ela disse que trabalhava duro). |\n| I **can** help (Posso ajudar). | He said he **could** help (Ele disse que podia ajudar). |",
           "exemplos_prc": [
             {
               "oracao": "They said that they were busy.",
@@ -6172,7 +6172,7 @@
               "motivo": "Atenção: com o auxiliar 'didn't', o 'use' perde o 'd'."
             }
           ],
-          "tabela_visual": "| Form | Structure | Example |\n|---|---|---|\n| Affirmative | subject + used to + verb | I **used to** smoke. |\n| Negative | subject + didn't use to + verb | I **didn't use to** exercise. |\n| Question | Did + subject + use to + verb? | **Did** you **use to** live here? |",
+          "tabela_visual": "| Form (Forma) | Structure (Estrutura) | Example (Exemplo) |\n|---|---|---|\n| Affirmative (Afirmativa) | subject + used to + verb | I **used to** smoke (Eu costumava fumar). |\n| Negative (Negativa) | subject + didn't use to + verb | I **didn't use to** exercise (Eu não costumava me exercitar). |\n| Question (Pergunta) | Did + subject + use to + verb? | **Did** you **use to** live here? (Você costumava morar aqui?) |",
           "exemplos_prc": [
             {
               "oracao": "He used to have long hair.",
@@ -6272,7 +6272,7 @@
               "motivo": "Usa-se 'can't' quando você tem certeza de que algo é impossível (ex: John está viajando)."
             }
           ],
-          "tabela_visual": "| Certainty Level | Modal Verb | Example |\n|---|---|---|\n| 99% Certain (True) | **Must** | They **must** be at home (lights are on). |\n| 50% Possible | **Might / May / Could** | She **might** be lost. |\n| 99% Certain (False) | **Can't** | He **can't** be 60 years old! |",
+          "tabela_visual": "| Certainty Level (Nível de Certeza) | Modal Verb (Verbo Modal) | Example (Exemplo) |\n|---|---|---|\n| 99% Certain (True) (Quase 100% Sim) | **Must** (Deve) | They **must** be at home (lights are on) (Eles devem estar em casa - as luzes estão ligadas). |\n| 50% Possible (Possibilidade) | **Might / May / Could** (Pode ser/Poderia) | She **might** be lost (Ela pode estar perdida). |\n| 99% Certain (False) (Quase 100% Não) | **Can't** (Não pode) | He **can't** be 60 years old! (Ele não pode ter 60 anos!). |",
           "exemplos_prc": [
             {
               "oracao": "You've been traveling all day. You must be exhausted.",
@@ -6366,7 +6366,7 @@
               "motivo": "Tag Afirmativa"
             }
           ],
-          "tabela_visual": "| Afirmação | Question Tag |\n|---|---|\n| You are late, | aren't you? |\n| She didn't go, | did she? |\n| They will come, | won't they? |\n| I am right, | aren't I? |",
+          "tabela_visual": "| Afirmação | Question Tag |\n|---|---|\n| You are late (Você está atrasado), | aren't you? (não está?) |\n| She didn't go (Ela não foi), | did she? (foi?) |\n| They will come (Eles virão), | won't they? (não virão?) |\n| I am right (Eu estou certo), | aren't I? (não estou?) |",
           "exemplos_prc": [
             {
               "oracao": "It's a beautiful day, isn't it?",
@@ -6460,7 +6460,7 @@
               "motivo": "Refere-se a 'They'"
             }
           ],
-          "tabela_visual": "| Sujeito | Pronome Reflexivo |\n|---|---|\n| I | myself |\n| You | yourself (Sing) / yourselves (Pl) |\n| He | himself |\n| She | herself |\n| It | itself |\n| We | ourselves |\n| They | themselves |",
+          "tabela_visual": "| Sujeito | Pronome Reflexivo |\n|---|---|\n| I (Eu) | myself (eu mesmo / me) |\n| You (Você) | yourself (Sing.) / yourselves (Pl.) (você mesmo/vocês mesmos) |\n| He (Ele) | himself (ele mesmo / se) |\n| She (Ela) | herself (ela mesma / se) |\n| It (Neutro) | itself (ele/ela mesmo/se) |\n| We (Nós) | ourselves (nós mesmos / nos) |\n| They (Eles/Elas) | themselves (eles/elas mesmos/se) |",
           "exemplos_prc": [
             {
               "oracao": "I cut myself while cooking.",
@@ -6560,7 +6560,7 @@
               "motivo": "Significa 'nem um, nem o outro'."
             }
           ],
-          "tabela_visual": "| Palavra | Uso | Exemplo |\n|---|---|---|\n| Both | Os dois juntos | Both books are good. |\n| Either | Uma opção entre duas | We can watch either movie. |\n| Neither | Nenhuma das duas | Neither restaurant is open. |",
+          "tabela_visual": "| Palavra | Uso | Exemplo |\n|---|---|---|\n| Both (Ambos) | Os dois juntos | Both books are good (Ambos os livros são bons). |\n| Either (Qualquer um) | Uma opção entre duas | We can watch either movie (Podemos assistir a qualquer um dos dois filmes). |\n| Neither (Nenhum) | Nenhuma das duas opções | Neither restaurant is open (Nenhum dos dois restaurantes está aberto). |",
           "exemplos_prc": [
             {
               "oracao": "Neither of my parents speaks Spanish.",
@@ -6654,7 +6654,7 @@
               "motivo": "Indica que o primeiro é menor/menos intenso que o segundo"
             }
           ],
-          "tabela_visual": "| Estrutura | Significado | Exemplo |\n|---|---|---|\n| as + adjetivo + as | Tão ... quanto | She is as tall as me. |\n| not as + adjetivo + as | Não tão ... quanto | It is not as hot as yesterday. |",
+          "tabela_visual": "| Estrutura | Significado | Exemplo |\n|---|---|---|\n| as + adjetivo + as | Tão ... quanto | She is as tall as me (Ela é tão alta quanto eu). |\n| not as + adjetivo + as | Não tão ... quanto | It is not as hot as yesterday (Não está tão quente quanto ontem). |",
           "exemplos_prc": [
             {
               "oracao": "My car is not as fast as yours.",
@@ -6748,7 +6748,7 @@
               "motivo": "Lembra de algo que já aconteceu (passado)"
             }
           ],
-          "tabela_visual": "| Verbo | Com Infinitivo (to do) | Com Gerúndio (doing) |\n|---|---|---|\n| Stop | Parar para fazer algo | Parar de fazer algo |\n| Remember | Lembrar de fazer algo | Lembrar de ter feito algo |\n| Try | Tentar (esforço, é difícil) | Tentar (experimentar, ver se dá certo) |",
+          "tabela_visual": "| Verbo | Com Infinitivo (to do) | Com Gerúndio (doing) |\n|---|---|---|\n| Stop | Parar para fazer algo (ex: stop to eat) | Parar de fazer algo (ex: stop eating) |\n| Remember | Lembrar de fazer algo (ex: remember to call) | Lembrar de ter feito algo (ex: remember calling) |\n| Try | Tentar (esforço, é difícil) | Tentar (experimentar, ver se dá certo) |",
           "exemplos_prc": [
             {
               "oracao": "I stopped smoking.",
@@ -6850,7 +6850,7 @@
               "motivo": "Would have + Past Participle para o resultado hipotético"
             }
           ],
-          "tabela_visual": "| If Clause (Past Perfect) | Main Clause (Would have + Particípio) |\n|---|---|\n| If I had known, | I would have gone. |\n| If we hadn't missed the bus, | we wouldn't have been late. |",
+          "tabela_visual": "| If Clause (Past Perfect) | Main Clause (Would have + Particípio) |\n|---|---|\n| If I had known (Se eu soubesse), | I would have gone (eu teria ido). |\n| If we hadn't missed the bus (Se não tivéssemos perdido o ônibus), | we wouldn't have been late (não teríamos nos atrasado). |",
           "exemplos_prc": [
             {
               "oracao": "If she had seen him, she would have said hello.",
@@ -6944,7 +6944,7 @@
               "motivo": "Would + verbo base (consequência no presente)"
             }
           ],
-          "tabela_visual": "| Tipo de Mistura | Condição (If) | Resultado (Main) |\n|---|---|---|\n| Passado afeta Presente | If I had saved money, | I would buy a car now. |\n| Presente afeta Passado | If I were taller, | I would have played basketball. |",
+          "tabela_visual": "| Tipo de Mistura | Condição (If) | Resultado (Main) |\n|---|---|---|\n| Passado afeta Presente | If I had saved money (Se eu tivesse guardado dinheiro), | I would buy a car now (eu compraria um carro agora). |\n| Presente afeta Passado | If I were taller (Se eu fosse mais alto), | I would have played basketball (eu teria jogado basquete). |",
           "exemplos_prc": [
             {
               "oracao": "If I spoke French, I would have got the job in Paris.",
@@ -7044,7 +7044,7 @@
               "motivo": "Modal + be + Past Participle"
             }
           ],
-          "tabela_visual": "| Tempo / Verbo | Voz Ativa | Voz Passiva |\n|---|---|---|\n| Continuous | They are fixing it. | It is being fixed. |\n| Perfect | She has finished the report. | The report has been finished. |\n| Modal | You must wear a seatbelt. | A seatbelt must be worn. |",
+          "tabela_visual": "| Tempo / Verbo | Voz Ativa | Voz Passiva |\n|---|---|---|\n| Continuous (Contínuo) | They are fixing it (Eles estão consertando). | It is being fixed (Está sendo consertado). |\n| Perfect (Perfeito) | She has finished the report (Ela terminou o relatório). | The report has been finished (O relatório foi finalizado). |\n| Modal | You must wear a seatbelt (Você deve usar o cinto). | A seatbelt must be worn (O cinto deve ser usado). |",
           "exemplos_prc": [
             {
               "oracao": "The project must be completed by tomorrow.",
@@ -7144,7 +7144,7 @@
               "motivo": "Verbo + objeto + to + infinitivo"
             }
           ],
-          "tabela_visual": "| Tipo | Discurso Direto | Discurso Indireto (Reported) |\n|---|---|---|\n| Pergunta W/H | \"Where do you live?\" | He asked where I lived. |\n| Ordem | \"Open the door!\" | She told me to open the door. |\n| Pedido | \"Please, help me.\" | He asked me to help him. |",
+          "tabela_visual": "| Tipo | Discurso Direto | Discurso Indireto (Reported) |\n|---|---|---|\n| Pergunta W/H | \"Where do you live?\" (Onde você mora?) | He asked where I lived (Ele perguntou onde eu morava). |\n| Ordem | \"Open the door!\" (Abra a porta!) | She told me to open the door (Ela me mandou abrir a porta). |\n| Pedido | \"Please, help me.\" (Por favor, ajude-me.) | He asked me to help him (Ele me pediu para ajudá-lo). |",
           "exemplos_prc": [
             {
               "oracao": "They asked whether the train had arrived.",
@@ -7238,7 +7238,7 @@
               "motivo": "Usamos 'which' para coisas ou ideias (nunca 'that')"
             }
           ],
-          "tabela_visual": "| Relativo | Uso Principal | Exemplo |\n|---|---|---|\n| who | Pessoas | John, who is my friend,... |\n| which | Coisas / Ideias | The car, which is blue,... |\n| whose | Posse | Anna, whose car is new,... |",
+          "tabela_visual": "| Relativo | Uso Principal | Exemplo |\n|---|---|---|\n| who (quem/que) | Pessoas | John, who is my friend,... (John, que é meu amigo...) |\n| which (o qual/que) | Coisas / Ideias | The car, which is blue,... (O carro, que é azul...) |\n| whose (cujo/cuja) | Posse | Anna, whose car is new,... (Anna, cujo carro é novo...) |",
           "exemplos_prc": [
             {
               "oracao": "London, which is the capital of the UK, is a massive city.",
@@ -7344,7 +7344,7 @@
               "motivo": "Quando é quase impossível que algo tenha acontecido."
             }
           ],
-          "tabela_visual": "| Modal | Uso | Exemplo |\n|---|---|---|\n| Must have | Certeza (quase total) | They must have left. |\n| Might have | Possibilidade | She might have forgotten. |\n| Should have | Crítica ou arrependimento | I should have studied. |\n| Can't have | Impossibilidade | He can't have done it. |",
+          "tabela_visual": "| Modal | Uso | Exemplo |\n|---|---|---|\n| Must have (Deve ter) | Certeza (quase total) | They must have left (Eles devem ter saído). |\n| Might have (Pode ter) | Possibilidade | She might have forgotten (Ela pode ter esquecido). |\n| Should have (Deveria ter) | Crítica ou arrependimento | I should have studied (Eu deveria ter estudado). |\n| Can't have (Não pode ter) | Impossibilidade | He can't have done it (Ele não pode ter feito isso). |",
           "exemplos_prc": [
             {
               "oracao": "The streets are wet. It must have rained.",
@@ -7455,7 +7455,7 @@
               "motivo": "Para expressar irritação e vontade de que alguém mude de atitude."
             }
           ],
-          "tabela_visual": "| Estrutura | Uso | Exemplo |\n|---|---|---|\n| Wish + Past Simple | Desejo no presente | I wish I had more money. |\n| Wish + Past Perfect | Arrependimento (passado) | I wish I had studied more. |\n| Wish + Would | Irritação ou pedido | I wish you would stop talking. |",
+          "tabela_visual": "| Estrutura | Uso | Exemplo |\n|---|---|---|\n| Wish + Past Simple | Desejo no presente | I wish I had more money (Eu queria ter mais dinheiro). |\n| Wish + Past Perfect | Arrependimento (passado) | I wish I had studied more (Eu queria ter estudado mais). |\n| Wish + Would | Irritação ou pedido | I wish you would stop talking (Eu queria que você parasse de falar). |",
           "exemplos_prc": [
             {
               "oracao": "I wish I knew the answer.",
@@ -7554,7 +7554,7 @@
               "motivo": "Focar em uma ação que ainda não estará terminada em um certo ponto do futuro."
             }
           ],
-          "tabela_visual": "| Afirmativa | Negativa | Interrogativa |\n|---|---|---|\n| I will be working | I won't be working | Will you be working? |\n| She will be flying | She won't be flying | Will she be flying? |",
+          "tabela_visual": "| Afirmativa | Negativa | Interrogativa |\n|---|---|---|\n| I will be working (Estarei trabalhando) | I won't be working (Não estarei trabalhando) | Will you be working? (Você estará trabalhando?) |\n| She will be flying (Ela estará voando) | She won't be flying (Ela não estará voando) | Will she be flying? (Ela estará voando?) |",
           "exemplos_prc": [
             {
               "oracao": "This time tomorrow, I will be flying to Paris.",
@@ -7659,7 +7659,7 @@
               "motivo": "Geralmente usado com o Future Perfect para estipular o prazo limite (ex: by next year)."
             }
           ],
-          "tabela_visual": "| Afirmativa | Negativa | Interrogativa |\n|---|---|---|\n| We will have finished | We won't have finished | Will we have finished? |\n| He will have arrived | He won't have arrived | Will he have arrived? |",
+          "tabela_visual": "| Afirmativa | Negativa | Interrogativa |\n|---|---|---|\n| We will have finished (Teremos terminado) | We won't have finished (Não teremos terminado) | Will we have finished? (Teremos terminado?) |\n| He will have arrived (Ele terá chegado) | He won't have arrived (Ele não terá chegado) | Will he have arrived? (Ele terá chegado?) |",
           "exemplos_prc": [
             {
               "oracao": "By 2030, I will have bought a house.",
@@ -7758,7 +7758,7 @@
               "motivo": "Mesmo sentido de 'have something done', mas com um tom um pouco mais informal e cotidiano."
             }
           ],
-          "tabela_visual": "| Sujeito | Have/Get (qualquer tempo) | Objeto (o quê) | Particípio Passado (ação) |\n|---|---|---|---|\n| I | had | my car | repaired. |\n| She | is getting | her hair | cut. |\n| We | will have | the house | painted. |",
+          "tabela_visual": "| Sujeito | Have/Get (qualquer tempo) | Objeto (o quê) | Particípio Passado (ação) |\n|---|---|---|---|\n| I (Eu) | had | my car (meu carro) | repaired (consertado). |\n| She (Ela) | is getting | her hair (cabelo dela) | cut (cortado). |\n| We (Nós) | will have | the house (a casa) | painted (pintada). |",
           "exemplos_prc": [
             {
               "oracao": "I had my computer fixed.",
@@ -7869,7 +7869,7 @@
               "motivo": "Sem artigo para conceitos gerais"
             }
           ],
-          "tabela_visual": "| Uso | Exemplo | Contexto |\n|---|---|---|\n| Sem 'the' | She is in prison. | Ela é prisioneira. |\n| Com 'the' | He went to the prison. | Ele foi lá (visitar). |\n| Abstrato Geral | Life is beautiful. | A vida em geral. |\n| Abstrato Específico| The life of a star. | A vida específica. |",
+          "tabela_visual": "| Uso | Exemplo | Contexto |\n|---|---|---|\n| Sem 'the' | She is in prison. | Ela é prisioneira (está presa como instituição). |\n| Com 'the' | He went to the prison. | Ele foi lá (visitar a prisão física). |\n| Abstrato Geral | Life is beautiful. | A vida em geral. |\n| Abstrato Específico| The life of a star. | A vida específica (de uma estrela). |",
           "exemplos_prc": [
             {
               "oracao": "Love is all you need.",
@@ -7960,7 +7960,7 @@
               "motivo": "Descreve a coisa ou pessoa que causa o sentimento."
             }
           ],
-          "tabela_visual": "| Causa (-ing) | Sentimento (-ed) | Exemplo Prático |\n|---|---|---|\n| Tiring (cansativo) | Tired (cansado) | Work is tiring, so I am tired. |\n| Interesting (interessante) | Interested (interessado) | The book is interesting. I am interested. |",
+          "tabela_visual": "| Causa (-ing) | Sentimento (-ed) | Exemplo Prático |\n|---|---|---|\n| Tiring (cansativo) | Tired (cansado) | Work is tiring, so I am tired (O trabalho é cansativo, então estou cansado). |\n| Interesting (interessante) | Interested (interessado) | The book is interesting. I am interested (O livro é interessante. Estou interessado). |",
           "exemplos_prc": [
             {
               "oracao": "This movie is so boring, I'm getting bored.",
@@ -8051,7 +8051,7 @@
               "motivo": "Exige apenas Substantivo, Pronome ou Verbo-ING"
             }
           ],
-          "tabela_visual": "| Conector | Estrutura Seguidora | Exemplo |\n|---|---|---|\n| Although | Sujeito + Verbo | Although it rained, we left. |\n| Even though | Sujeito + Verbo | Even though I was tired, I read. |\n| Despite | Substantivo ou -ING | Despite the rain, we left. |\n| In spite of | Substantivo ou -ING | In spite of being tired, I read. |",
+          "tabela_visual": "| Conector | Estrutura Seguidora | Exemplo |\n|---|---|---|\n| Although (Embora) | Sujeito + Verbo | Although it rained, we left (Embora tenha chovido, nós saímos). |\n| Even though (Apesar de) | Sujeito + Verbo | Even though I was tired, I read (Apesar de estar cansado, eu li). |\n| Despite (Apesar de) | Substantivo ou -ING | Despite the rain, we left (Apesar da chuva, nós saímos). |\n| In spite of (Apesar de) | Substantivo ou -ING | In spite of being tired, I read (Apesar de estar cansado, eu li). |",
           "exemplos_prc": [
             {
               "oracao": "Despite the heavy rain, we went for a walk.",
@@ -8148,7 +8148,7 @@
               "motivo": "Substitui 'if not'"
             }
           ],
-          "tabela_visual": "| Conector | Significado | Exemplo Prático |\n|---|---|---|\n| As long as | Contanto que | You can go as long as you behave. |\n| Provided that | Sob a condição | I will go provided that you pay. |\n| Unless | A menos que | I won't go unless you pay. |",
+          "tabela_visual": "| Conector | Significado | Exemplo Prático |\n|---|---|---|\n| As long as | Contanto que | You can go as long as you behave (Você pode ir contanto que se comporte). |\n| Provided that | Sob a condição | I will go provided that you pay (Eu irei desde que você pague). |\n| Unless | A menos que | I won't go unless you pay (Não irei a menos que você pague). |",
           "exemplos_prc": [
             {
               "oracao": "You can borrow my car as long as you drive carefully.",
@@ -8245,7 +8245,7 @@
               "motivo": "Nunca se separam, seja com pronome ou substantivo"
             }
           ],
-          "tabela_visual": "| Tipo | Substantivo (The TV/John) | Pronome (It/Him/Them) |\n|---|---|---|\n| Separable | Turn on the TV / Turn the TV on | Turn it on (Turn on it ❌) |\n| Inseparable| Look after John | Look after him (Look him after ❌) |",
+          "tabela_visual": "| Tipo | Substantivo (The TV/John) | Pronome (It/Him/Them) |\n|---|---|---|\n| Separable (Separável) | Turn on the TV / Turn the TV on (Ligue a TV) | Turn it on (Ligue-a) (Turn on it ❌) |\n| Inseparable (Inseparável)| Look after John (Cuide do John) | Look after him (Cuide dele) (Look him after ❌) |",
           "exemplos_prc": [
             {
               "oracao": "Take off your shoes / Take your shoes off.",
@@ -8343,7 +8343,7 @@
               "motivo": "Ênfase extrema"
             }
           ],
-          "tabela_visual": "| Advérbio Negativo | Auxiliar | Sujeito | Verbo Principal |\n|---|---|---|---|\n| Never | have | I | felt |\n| Seldom | does | she | visit |\n| Hardly | had | we | arrived |",
+          "tabela_visual": "| Advérbio Negativo | Auxiliar | Sujeito | Verbo Principal |\n|---|---|---|---|\n| Never (Nunca) | have | I (eu) | felt (senti) |\n| Seldom (Raramente) | does | she (ela) | visit (visita) |\n| Hardly (Mal) | had | we (nós) | arrived (tínhamos chegado) |",
           "exemplos_prc": [
             {
               "oracao": "Rarely have I seen such a beautiful sunset.",
@@ -8443,7 +8443,7 @@
               "motivo": "Foco no objeto/ideia"
             }
           ],
-          "tabela_visual": "| Tipo | Estrutura | Exemplo |\n|---|---|---|\n| It-cleft | It + be + [foco] + rel. pron. | It was John who broke it. |\n| Wh-cleft | What/All + oração + be + [foco] | What I want is peace. |",
+          "tabela_visual": "| Tipo | Estrutura | Exemplo |\n|---|---|---|\n| It-cleft | It + be + [foco] + rel. pron. | It was John who broke it (Foi o John que quebrou isso). |\n| Wh-cleft | What/All + oração + be + [foco] | What I want is peace (O que eu quero é paz). |",
           "exemplos_prc": [
             {
               "oracao": "It was the weather that ruined the trip.",
@@ -8543,7 +8543,7 @@
               "motivo": "Ações simultâneas/Causa"
             }
           ],
-          "tabela_visual": "| Forma | Exemplo | Significado |\n|---|---|---|\n| Presente (-ing) | Walking home, I met an old friend. | Enquanto caminhava... |\n| Perfeito (Having + -ed) | Having seen the movie, I knew the end. | Como já tinha visto... |\n| Passado (-ed) | Built in 1920, the house is old. | Construída em... |",
+          "tabela_visual": "| Forma | Exemplo | Significado |\n|---|---|---|\n| Presente (-ing) | Walking home, I met an old friend. | Enquanto caminhava... (Caminhando para casa, encontrei um velho amigo) |\n| Perfeito (Having + -ed) | Having seen the movie, I knew the end. | Como já tinha visto... (Tendo visto o filme, eu sabia o final) |\n| Passado (-ed) | Built in 1920, the house is old. | Construída em... (Construída em 1920, a casa é velha) |",
           "exemplos_prc": [
             {
               "oracao": "Not knowing what to do, she asked for help.",
@@ -8643,7 +8643,7 @@
               "motivo": "Mais curto e poético"
             }
           ],
-          "tabela_visual": "| Condicional Normal | Versão Invertida Avançada |\n|---|---|\n| If I had seen him... | Had I seen him... |\n| If you should need help... | Should you need help... |\n| If I were you... | Were I you... |",
+          "tabela_visual": "| Condicional Normal | Versão Invertida Avançada |\n|---|---|\n| If I had seen him... (Se eu o tivesse visto...) | Had I seen him... (Caso o tivesse visto...) |\n| If you should need help... (Se precisar de ajuda...) | Should you need help... (Caso precise de ajuda...) |\n| If I were you... (Se eu fosse você...) | Were I you... (Fosse eu você...) |",
           "exemplos_prc": [
             {
               "oracao": "Had I known it was going to rain, I would have brought an umbrella.",
@@ -8743,7 +8743,7 @@
               "motivo": "Uso de 'be' mesmo na 3ª pessoa"
             }
           ],
-          "tabela_visual": "| Verbo/Adjetivo de Gatilho | Cláusula no Subjuntivo |\n|---|---|\n| Demand | ...that they **stop** immediately. |\n| Suggest | ...that he **leave** early. |\n| Essential | ...that it **be** done. |",
+          "tabela_visual": "| Verbo/Adjetivo de Gatilho | Cláusula no Subjuntivo |\n|---|---|\n| Demand (Exigir) | ...that they **stop** immediately (que parem imediatamente). |\n| Suggest (Sugerir) | ...that he **leave** early (que saia cedo). |\n| Essential (Essencial) | ...that it **be** done (que seja feito). |",
           "exemplos_prc": [
             {
               "oracao": "They insisted that Mary take the exam again.",
@@ -8849,7 +8849,7 @@
               "motivo": "Usado para planos oficiais ou ordens formais."
             }
           ],
-          "tabela_visual": "| Expression | Meaning | Example |\n|---|---|---|\n| be bound to | Certainty | She is bound to win. |\n| be about to | Immediate future | I am about to leave. |\n| be to | Official arrangement | The president is to visit. |",
+          "tabela_visual": "| Expression (Expressão) | Meaning (Significado) | Example (Exemplo) |\n|---|---|---|\n| be bound to | Certeza (vai acontecer com certeza) | She is bound to win (Ela com certeza vencerá). |\n| be about to | Futuro imediato (prestes a) | I am about to leave (Estou prestes a sair). |\n| be to | Acordo oficial (deve / agendado) | The president is to visit (O presidente deve fazer uma visita). |",
           "exemplos_prc": [
             {
               "oracao": "They are about to make an announcement.",
@@ -8955,7 +8955,7 @@
               "motivo": "Um conselho forte com um tom de alerta sobre consequências negativas."
             }
           ],
-          "tabela_visual": "| Expression | Usage | Example |\n|---|---|---|\n| dare not | Lack of courage | I dare not ask him. |\n| needn't | No obligation | You needn't worry. |\n| would rather | Preference | I'd rather stay home. |\n| had better | Strong advice | You'd better go now. |",
+          "tabela_visual": "| Expression (Expressão) | Usage (Uso) | Example (Exemplo) |\n|---|---|---|\n| dare not | Falta de coragem (não ousar) | I dare not ask him (Não ouso perguntar a ele). |\n| needn't | Sem obrigação (não precisar) | You needn't worry (Você não precisa se preocupar). |\n| would rather | Preferência (preferir) | I'd rather stay home (Eu preferiria ficar em casa). |\n| had better | Conselho forte (é melhor) | You'd better go now (É melhor você ir agora). |",
           "exemplos_prc": [
             {
               "oracao": "I'd rather you didn't do that.",
@@ -9055,7 +9055,7 @@
               "motivo": "Substitui um substantivo para evitar repeti-lo, adaptando-se a singular ou plural."
             }
           ],
-          "tabela_visual": "| Concept | Full form | Short form |\n|---|---|---|\n| Ellipsis | I won't go, but you should go. | I won't go, but you should. |\n| 'So' Substitution | I hope he passes the exam. | I hope so. |\n| 'One' Substitution | I prefer the red car. | I prefer the red one. |",
+          "tabela_visual": "| Concept (Conceito) | Full form (Forma completa) | Short form (Forma curta) |\n|---|---|---|\n| Ellipsis (Elipse) | I won't go, but you should go. | I won't go, but you should (Não irei, mas você deveria). |\n| 'So' Substitution (Substituição por 'So') | I hope he passes the exam. | I hope so (Espero que sim). |\n| 'One' Substitution (Substituição por 'One') | I prefer the red car. | I prefer the red one (Prefiro o vermelho). |",
           "exemplos_prc": [
             {
               "oracao": "Are they coming? I hope so.",
@@ -9161,7 +9161,7 @@
               "motivo": "Adiciona uma informação complementar de peso em discursos formais."
             }
           ],
-          "tabela_visual": "| Marker | Function | Example |\n|---|---|---|\n| Furthermore | Addition | Furthermore, the data shows... |\n| Nevertheless | Contrast | It was hard; nevertheless, we won. |\n| Consequently | Result | Consequently, sales dropped. |\n| Broadly speaking | Generalizing | Broadly speaking, it is true. |",
+          "tabela_visual": "| Marker (Marcador) | Function (Função) | Example (Exemplo) |\n|---|---|---|\n| Furthermore | Adição (Além disso) | Furthermore, the data shows... (Além disso, os dados mostram...). |\n| Nevertheless | Contraste (Todavia / Mesmo assim) | It was hard; nevertheless, we won (Foi difícil; mesmo assim, vencemos). |\n| Consequently | Resultado (Consequentemente) | Consequently, sales dropped (Consequentemente, as vendas caíram). |\n| Broadly speaking | Generalizando (De modo geral) | Broadly speaking, it is true (De modo geral, é verdade). |",
           "exemplos_prc": [
             {
               "oracao": "It was raining heavily; nevertheless, we went for a run.",
@@ -9267,7 +9267,7 @@
               "motivo": "Expressão usada para tomar coragem e fazer algo desagradável."
             }
           ],
-          "tabela_visual": "| Use MAKE (Create) | Use DO (Actions) |\n|---|---|\n| a mistake | your homework |\n| an effort | someone a favor |\n| money | damage |\n| a decision | your best |",
+          "tabela_visual": "| Use MAKE (Criar/Produzir) | Use DO (Ações/Atividades) |\n|---|---|\n| a mistake (cometer um erro) | your homework (fazer a lição de casa) |\n| an effort (fazer um esforço) | someone a favor (fazer um favor a alguém) |\n| money (ganhar dinheiro) | damage (causar estrago/dano) |\n| a decision (tomar uma decisão) | your best (fazer o seu melhor) |",
           "exemplos_prc": [
             {
               "oracao": "Can you do me a favor?",

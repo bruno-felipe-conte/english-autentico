@@ -108,11 +108,11 @@ const Canzoni = {
       <!-- Linha 2: filtros numa só linha -->
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${_oPill('',I18n.t('filtro_todos'),todas.length)}
-        ${nC?_oPill('custom','🤖 Adicionadas',nC):''}
+        ${nC?_oPill('custom',I18n.t('imit_filtro_adicionadas'),nC):''}
         ${nN?_oPill('nativo',I18n.t('filtro_nativo'),nN):''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Canzoni._filtroNivel=this.value;Canzoni.renderizarSeletor()">
-          <option value="">🎯 Level</option>
+          <option value="">${I18n.t('dial_select_level')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
         ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${I18n.t('can_restaurar')} (${nOcultas})</button>` : ''}
@@ -121,7 +121,7 @@ const Canzoni = {
 
     for (const can of filtradas) {
       const ehCustom = can.custom || can._custom;
-      const badgeCustom = ehCustom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Minha</span>' : '';
+      const badgeCustom = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('can_my_badge')}</span>` : '';
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
         <div class="dialogo-icone">${can.icone || '🎵'}</div>
         <div class="dialogo-titulo">${this._esc(can.titulo)}${badgeCustom}</div>
@@ -165,8 +165,9 @@ const Canzoni = {
     });
 
     c.innerHTML = `
+    c.innerHTML = `
       <div class="gram-lesson-nav">
-        <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Cancelar</button>
+        <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ ${I18n.t('btn_cancelar')}</button>
         <span style="font-size:0.9rem;font-weight:700">${idEditar ? I18n.t('can_editar_musica') : I18n.t('can_nova_musica')}</span>
       </div>
 
@@ -196,7 +197,7 @@ const Canzoni = {
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem">
             <div>
-              <label style="font-size:0.82rem;font-weight:700;color:#003E8A">Level</label>
+              <label style="font-size:0.82rem;font-weight:700;color:#003E8A">${I18n.t('dial_form_level')}</label>
               <select id="can-nivel-vis" oninput="document.getElementById('can-nivel').value=this.value"
                 style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
                 ${['A1','A2','B1','B2','C1'].map(n => `<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
@@ -220,40 +221,40 @@ const Canzoni = {
         </div>` : ''}
 
         <div style="background:#f0f4fa;border:1px solid #c8d6ea;border-radius:10px;padding:0.9rem;margin-bottom:1rem">
-          <div style="font-size:0.85rem;font-weight:700;color:#003E8A;margin-bottom:0.6rem">🎵 Song Audio (optional)</div>
+          <div style="font-size:0.85rem;font-weight:700;color:#003E8A;margin-bottom:0.6rem">${I18n.t('can_form_song_audio')}</div>
           <input type="hidden" id="can-audio-key" value="${audioKey}">
           <input type="file" id="can-audio-file" accept="audio/*" onchange="Canzoni._onAudioSelecionado(event)" style="font-size:0.85rem">
           <audio id="can-audio-preview" controls style="width:100%;margin-top:0.6rem;display:${audioKey ? 'block' : 'none'}"></audio>
           <button id="can-btn-remover-audio" class="btn-secondario" onclick="Canzoni._removerAudio()"
-            style="margin-top:0.5rem;font-size:0.8rem;display:${audioKey ? 'inline-block' : 'none'}">🗑️ Remove audio</button>
+            style="margin-top:0.5rem;font-size:0.8rem;display:${audioKey ? 'inline-block' : 'none'}">${I18n.t('can_form_remove_audio')}</button>
         </div>
 
         <div style="background:#f9f6f0;border:1px solid #ede5d5;border-radius:10px;padding:0.9rem;margin-bottom:1rem">
-          <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.6rem">🤖 Build AI Prompt (with exercises)</div>
+          <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.6rem">${I18n.t('can_form_build_prompt')}</div>
           <div style="margin-top:0.5rem">
-            <button class="btn-secondario" onclick="Canzoni._construirPromptIA()">🤖 Build AI Prompt (with exercises)</button>
+            <button class="btn-secondario" onclick="Canzoni._construirPromptIA()">${I18n.t('can_form_build_prompt')}</button>
           </div>
 
           <div id="can-ia-bloco" style="${idEditar ? 'display:none' : 'display:block'};margin-top:0.8rem">
             <p style="font-size:0.78rem;color:#8a7a60;margin-bottom:0.6rem">
-              💡 <strong>Modo 4 Partes:</strong> Para músicas longas, envie um prompt por conversa separada no Gemini. Cole o JSON de cada parte nas abas abaixo, depois clique em <strong>✅ Unir e Importar</strong>.
+              ${I18n.t('can_form_mode_parts_desc')}
             </p>
 
             <!-- Abas de partes -->
             <div style="display:flex;gap:4px;margin-bottom:0;flex-wrap:wrap">
-              ${[1,2,3,4].map(n => `<button id="can-tab-btn-${n}" onclick="Canzoni._selecionarPartIA(${n})" style="flex:1;min-width:60px;padding:0.4rem 0.5rem;font-size:0.8rem;font-weight:700;border:1px solid #ede5d5;border-bottom:none;border-radius:6px 6px 0 0;cursor:pointer;background:${n===1?'#fff':'#f0ece6'};color:${n===1?'#9B2335':'#8a7a60'};transition:all 0.15s">Parte ${n}</button>`).join('')}
+              ${[1,2,3,4].map(n => `<button id="can-tab-btn-${n}" onclick="Canzoni._selecionarPartIA(${n})" style="flex:1;min-width:60px;padding:0.4rem 0.5rem;font-size:0.8rem;font-weight:700;border:1px solid #ede5d5;border-bottom:none;border-radius:6px 6px 0 0;cursor:pointer;background:${n===1?'#fff':'#f0ece6'};color:${n===1?'#9B2335':'#8a7a60'};transition:all 0.15s">${I18n.t('can_form_part').replace('{n}', n)}</button>`).join('')}
             </div>
 
             <!-- Conteúdo de cada aba -->
             ${[1,2,3,4].map(n => `
             <div id="can-tab-${n}" style="display:${n===1?'block':'none'};border:1px solid #ede5d5;border-radius:0 6px 6px 6px;background:#fff;padding:0.8rem">
-              <p style="font-size:0.75rem;color:#8a7a60;margin-bottom:0.4rem">Prompt da Parte ${n} — envie separadamente ao Gemini:</p>
+              <p style="font-size:0.75rem;color:#8a7a60;margin-bottom:0.4rem">${I18n.t('can_form_part_desc').replace('{n}', n)}</p>
               <div class="ia-prompt-box">
                 <pre id="can-ia-prompt-text-${n}"></pre>
-                <button class="ia-copy-btn" onclick="Canzoni._copiarPromptIA(${n})">📋 Copiar Parte ${n}</button>
+                <button class="ia-copy-btn" onclick="Canzoni._copiarPromptIA(${n})">📋 ${I18n.t('can_form_part').replace('{n}', n)}</button>
               </div>
               <p style="font-size:0.75rem;color:#8a7a60;margin:0.6rem 0 0.3rem">Cole o JSON que o Gemini gerou para esta parte:</p>
-              <textarea id="can-ia-parte-${n}" class="ia-paste-area" rows="4" placeholder="Cole aqui o JSON da Parte ${n}..."></textarea>
+              <textarea id="can-ia-parte-${n}" class="ia-paste-area" rows="4" placeholder="Cole aqui o JSON da ${I18n.t('can_form_part').replace('{n}', n)}..."></textarea>
             </div>`).join('')}
 
             <!-- Botão de unir e importar -->

@@ -63,31 +63,33 @@ const Tour = {
     let driverObj;
     driverObj = drv({
       showProgress: true, animate: true, allowClose: true,
-      nextBtnText: "Next →", prevBtnText: "← Back", doneBtnText: "🎉 Let's go!",
-      progressText: "{{current}} of {{total}}",
+      nextBtnText: I18n.t('tour_next_btn'), 
+      prevBtnText: I18n.t('tour_prev_btn'), 
+      doneBtnText: I18n.t('tour_done_btn'),
+      progressText: I18n.t('tour_progress'),
       popoverClass: "app-tour-theme",
       onNextClick: () => { const cur = driverObj.getActiveIndex() ?? 0; navegar(cur + 1, () => driverObj.moveNext()); },
       onPrevClick: () => { const cur = driverObj.getActiveIndex() ?? 0; navegar(cur - 1, () => driverObj.movePrevious()); },
       onDestroyStarted: () => {
-        if (!driverObj.hasNextStep() || confirm("Exit the tour?")) {
+        if (!driverObj.hasNextStep() || confirm(I18n.t('tour_confirm_exit'))) {
           driverObj.destroy();
           try { localStorage.setItem(Tour.STORAGE_KEY, "1"); } catch(e) {}
         }
       },
       steps: [
-        { element: ".app-header",         popover: { title: "👋 Welcome to English Autentico!",     description: "This 13-step tour shows you the main features. It takes less than 2 minutes — let's go!",                                                                                      side: "bottom", align: "center" } },
-        { element: ".stats-bar",           popover: { title: "🏅 Level, XP & Streak",               description: "Every activity earns XP. Accumulate enough and your level rises, unlocking new temples. Keep your 🔥 streak alive by studying every day!",                                   side: "bottom", align: "center" } },
-        { element: "#templos-grid .templo-card:first-child", popover: { title: "🏛️ Temples — Your Vocabulary Packs", description: "Each temple is a set of ~20 words from an English-speaking city. Start with Temple 1 (New York). New temples unlock as your level grows.",               side: "bottom", align: "center" } },
-        { element: "#meta-prazo-container",popover: { title: "🎯 Set a Goal with a Deadline",       description: "Pick a target level and a deadline date. The app calculates how many XP per day you need and shows your daily progress bar at the top.",                                   side: "bottom", align: "center" } },
-        { element: ".card-selecao-templo", popover: { title: "🃏 Smart Flashcards (FSRS)",          description: "Select a temple and study its words with Spaced Repetition. The FSRS-4.5 algorithm schedules each word so you review it just before you would forget it.",               side: "bottom", align: "center" } },
-        { element: "#btn-modos-wrapper",   popover: { title: "🔄 Four Study Modes",                 description: "Normal (EN→PT) · Reverse (PT→EN) · Context (fill the gap) · Listen (guess from audio). Switch modes to build all-round mastery!",                                       side: "bottom", align: "center" } },
-        { element: ".card-actions",        popover: { title: "⭐ Rate Every Card Honestly",          description: "Again = tomorrow · Hard = 1 day · Good = 3 days · Easy = 2 weeks. The algorithm adjusts future intervals based on your answer — honesty beats the system!",            side: "top",    align: "center" } },
-        { element: ".quiz-templo-btn:not(.bloqueado)", popover: { title: "❓ Quiz — 4 Exercise Types", description: "Vocabulary, Grammar, Listening and Spelling. Complete a quiz to unlock the next temple and earn bonus XP!",                                                           side: "top",    align: "center" } },
-        { element: ".gram-nivel-banner",   popover: { title: "📚 Grammar — A1 to B2",               description: "90 lessons from beginner to upper-intermediate. Each lesson has theory cards, examples, common traps and exercises — all in English.",                                   side: "bottom", align: "center" } },
-        { element: "#vocab-blur-btns",     popover: { title: "📖 Vocabulary — Self-Test Mode",      description: "Tap 'Hide EN' or 'Hide PT' to cover a column and test yourself. Filter by temple or category and click any word to hear it.",                                          side: "bottom", align: "center" } },
-        { element: "#storie-container",    popover: { title: "📜 Reading — Authentic Texts",        description: "Real English stories at A1–B2 level. Tap any word to see its translation. Use Immersion Mode to hide the Portuguese and challenge yourself!",                           side: "bottom", align: "center" } },
-        { element: ".dialogo-card",        popover: { title: "💬 Dialogues — Real Conversations",   description: "Practise everyday English scenarios: coffee shops, airports, job interviews. Listen, read and respond — or import your own via the 🤖 AI button!",                      side: "bottom", align: "center" } },
-        { element: "#canzoni-container",   popover: { title: "🎵 Songs — Learn with Music",         description: "Follow English song lyrics and fill in the missing words. Add any song with the 🤖 AI Import button. Music makes vocabulary stick!",                                     side: "bottom", align: "center" } },
+        { element: ".app-header",         popover: { title: I18n.t('tour_welcome_title'),     description: I18n.t('tour_welcome_desc'),    side: "bottom", align: "center" } },
+        { element: ".stats-bar",           popover: { title: I18n.t('tour_stats_title'),       description: I18n.t('tour_stats_desc'),      side: "bottom", align: "center" } },
+        { element: "#templos-grid .templo-card:first-child", popover: { title: I18n.t('tour_templi_title'), description: I18n.t('tour_templi_desc'), side: "bottom", align: "center" } },
+        { element: "#meta-prazo-container",popover: { title: I18n.t('tour_goal_title'),       description: I18n.t('tour_goal_desc'),       side: "bottom", align: "center" } },
+        { element: ".card-selecao-templo", popover: { title: I18n.t('tour_flashcard_title'),  description: I18n.t('tour_flashcard_desc'),  side: "bottom", align: "center" } },
+        { element: "#btn-modos-wrapper",   popover: { title: I18n.t('tour_modes_title'),      description: I18n.t('tour_modes_desc'),      side: "bottom", align: "center" } },
+        { element: ".card-actions",        popover: { title: I18n.t('tour_rate_title'),       description: I18n.t('tour_rate_desc'),       side: "top",    align: "center" } },
+        { element: ".quiz-templo-btn:not(.bloqueado)", popover: { title: I18n.t('tour_quiz_title'),  description: I18n.t('tour_quiz_desc'), side: "top",    align: "center" } },
+        { element: ".gram-nivel-banner",   popover: { title: I18n.t('tour_grammatica_title'),  description: I18n.t('tour_grammatica_desc'), side: "bottom", align: "center" } },
+        { element: "#vocab-blur-btns",     popover: { title: I18n.t('tour_vocabolario_title'),  description: I18n.t('tour_vocabolario_desc'), side: "bottom", align: "center" } },
+        { element: "#storie-container",    popover: { title: I18n.t('tour_reading_title'),     description: I18n.t('tour_reading_desc'),    side: "bottom", align: "center" } },
+        { element: ".dialogo-card",        popover: { title: I18n.t('tour_dialoghi_title'),    description: I18n.t('tour_dialoghi_desc'),   side: "bottom", align: "center" } },
+        { element: "#canzoni-container",   popover: { title: I18n.t('tour_canzoni_title'),     description: I18n.t('tour_canzoni_desc'),    side: "bottom", align: "center" } },
       ]
     });
 

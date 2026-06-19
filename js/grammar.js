@@ -12,6 +12,7 @@ const Grammatica = {
   exIndex: 0,
   acertos: 0,
   respondida: false,
+  abaAtiva: 'estudo',
   _adminMods: new Set(),   // módulos desbloqueados temporariamente pelo admin
 
   // ─────────────────────────────────────────────────────────
@@ -216,10 +217,36 @@ const Grammatica = {
     this.exIndex      = 0;
     this.acertos      = 0;
     this.respondida   = false;
+    this.abaAtiva     = 'estudo';
 
     const c = document.getElementById('grammatica-container');
     if (c) {
       c.innerHTML = this._htmlUnidade(unid);
+      window.scrollTo(0, 0);
+    }
+  },
+
+  mudarAba(aba) {
+    if (aba !== 'estudo' && aba !== 'pratica') return;
+    this.abaAtiva = aba;
+
+    const divEstudo = document.getElementById('gram-tab-estudo');
+    const divPratica = document.getElementById('gram-tab-pratica');
+    const btnEstudo = document.getElementById('gram-tab-btn-estudo');
+    const btnPratica = document.getElementById('gram-tab-btn-pratica');
+
+    if (divEstudo && divPratica && btnEstudo && btnPratica) {
+      if (aba === 'estudo') {
+        divEstudo.style.display = 'block';
+        divPratica.style.display = 'none';
+        btnEstudo.classList.add('ativo');
+        btnPratica.classList.remove('ativo');
+      } else {
+        divEstudo.style.display = 'none';
+        divPratica.style.display = 'block';
+        btnEstudo.classList.remove('ativo');
+        btnPratica.classList.add('ativo');
+      }
       window.scrollTo(0, 0);
     }
   },
@@ -229,6 +256,8 @@ const Grammatica = {
   // ─────────────────────────────────────────────────────────
   _htmlUnidade(u) {
     const mod = this.moduloAtual;
+    const estAtivo = this.abaAtiva === 'estudo' ? ' ativo' : '';
+    const prcAtivo = this.abaAtiva === 'pratica' ? ' ativo' : '';
 
     let html = '<div class="gram-lesson-layout">';
 
@@ -245,18 +274,32 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
+    // Abas segmentadas
+    html += '<div class="gram-lesson-tabs">';
+    html += `<button id="gram-tab-btn-estudo" class="gram-tab-btn${estAtivo}" onclick="Grammatica.mudarAba('estudo')">📖 ${I18n.t('gram_aba_estudo')}</button>`;
+    html += `<button id="gram-tab-btn-pratica" class="gram-tab-btn${prcAtivo}" onclick="Grammatica.mudarAba('pratica')">✏️ ${I18n.t('gram_aba_pratica')}</button>`;
+    html += '</div>';
+
+    // Aba de Estudo (Teoria)
+    const showEstudo = this.abaAtiva === 'estudo' ? 'style="display: block;"' : 'style="display: none;"';
+    html += `<div id="gram-tab-estudo" class="gram-tab-conteudo-bloco" ${showEstudo}>`;
+    html += '<div class="gram-card gram-teoria-card">';
+    html += `<div class="gram-card-header"><span>📖</span> ${I18n.t('gram_card_teoria_titulo')}</div>`;
+    html += this._htmlFases(u);
+    html += '</div>';
+    html += '<div class="gram-study-footer">';
+    html += `<button class="gram-btn-start-practice" onclick="Grammatica.mudarAba('pratica')">🚀 ${I18n.t('gram_btn_iniciar_pratica')}</button>`;
+    html += '</div>';
+    html += '</div>';
+
+    // Aba de Prática (Exercícios)
+    const showPratica = this.abaAtiva === 'pratica' ? 'style="display: block;"' : 'style="display: none;"';
+    html += `<div id="gram-tab-pratica" class="gram-tab-conteudo-bloco" ${showPratica}>`;
     // 📋 Tabela de consulta rápida (colapsável) para uso durante os exercícios
     html += this._htmlTabelaVisual(u);
-
-    // ✏️ Exercícios (MOVIDO PARA O TOPO)
     html += '<div id="gram-ex-area">';
     html += this._htmlExercicio();
     html += '</div>';
-
-    // 📖 Teoria estruturada (5 Fases Didáticas)
-    html += '<div class="gram-card gram-teoria-card">';
-    html += '<div class="gram-card-header"><span>📖</span> Teoria e Prática da Lição</div>';
-    html += this._htmlFases(u);
     html += '</div>';
 
     html += '</div>'; // lesson-layout
@@ -641,7 +684,46 @@ const Grammatica = {
       const tag = isFirstRow ? 'th' : 'td';
       isFirstRow = false; // Após a primeira linha com conteúdo, as demais são td
       
-      return '<tr>' + cells.map(c => `<${tag}>${c}</${tag}>`).join('') + '</tr>';
+      return '<tr>' + cells.map(c => {
+        const processarItem = (itemText, forceInline) => {
+          const matches = [...itemText.matchAll(/\(([^)]+)\)/g)];
+          if (matches.length === 0) return itemText;
+          
+          // O último parênteses é sempre a tradução em português
+          const lastMatch = matches[matches.length - 1];
+          const translationText = lastMatch[1];
+          const fullTranslationParen = lastMatch[0];
+          
+          const lastParenIndex = itemText.lastIndexOf(fullTranslationParen);
+          const englishPart = itemText.substring(0, lastParenIndex).trim();
+          
+          // Qualquer outro parênteses anterior é uma variante em inglês
+          let processedEnglish = englishPart;
+          const remainingMatches = [...englishPart.matchAll(/\(([^)]+)\)/g)];
+          remainingMatches.forEach(m => {
+            processedEnglish = processedEnglish.replace(m[0], `<span class="gram-tabela-variante">${m[0]}</span>`);
+          });
+          
+          if (I18n.idioma === 'en') {
+            return processedEnglish;
+          } else {
+            if (matches.length === 1 && itemText.endsWith(')') && !forceInline) {
+              return `${processedEnglish}<span class="gram-tabela-traducao block-tr">${translationText}</span>`;
+            } else {
+              return `${processedEnglish} <span class="gram-tabela-traducao inline-tr">${fullTranslationParen}</span>`;
+            }
+          }
+        };
+
+        let formatted = c;
+        if (c.includes(', ')) {
+          const parts = c.split(', ');
+          formatted = parts.map(p => processarItem(p, true)).join(', ');
+        } else {
+          formatted = processarItem(c, false);
+        }
+        return `<${tag}>${formatted}</${tag}>`;
+      }).join('') + '</tr>';
     });
 
     // 3. Agrupa <tr> consecutivos em <table class="gram-table">
@@ -935,3 +1017,19 @@ const Grammatica = {
     return `<div class="gram-coda">💡 ${this._formatarPergunta(u.coda)}</div>`;
   }
 };
+
+// Re-renderizar dinamicamente ao alterar o idioma do app
+document.addEventListener('i18n:changed', () => {
+  const activeTab = document.querySelector('section.active');
+  if (activeTab && activeTab.id === 'sec-grammar') {
+    if (Grammatica.unidadeAtual) {
+      // Abre novamente a unidade atual para re-renderizar a teoria e exercícios no novo idioma
+      Grammatica.abrirUnidade(Grammatica.moduloAtual.id, Grammatica.unidadeAtual.id);
+    } else if (Grammatica.moduloAtual) {
+      Grammatica.abrirModulo(Grammatica.moduloAtual.id);
+    } else {
+      Grammatica.dados = null; // Força recarregar os dados localizados
+      Grammatica.mostrarSeletor();
+    }
+  }
+});

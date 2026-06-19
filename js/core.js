@@ -315,6 +315,16 @@ const App = {
         .catch(() => { this.estado.conjugacoesData = []; })
     );
 
+    // Load grammar data
+    promises.push(
+      fetch('data/grammar.json')
+        .then(r => r.ok ? r.json() : { moduli: [] })
+        .then(data => {
+          this.estado.grammarData = data;
+        })
+        .catch(() => { this.estado.grammarData = { moduli: [] }; })
+    );
+
     await Promise.all(promises);
 
     // Injeta vocabulário customizado (via IA Import)
@@ -845,10 +855,10 @@ const App = {
     const percent = range > 0 ? Math.min(100, Math.round((current / range) * 100)) : 0;
 
     const totalTemplos = Object.keys(this.TEMPLO_NIVEL_MINIMO || {}).length || 50;
-    if (elNivel)   elNivel.textContent   = `Level ${p.nivel}`;
+    if (elNivel)   elNivel.textContent   = I18n.t('stats_level').replace('{n}', p.nivel);
     if (elXp)      elXp.textContent      = `XP: ${p.xp}/${xpFim}`;
-    if (elTempli)  elTempli.textContent  = `Temples: ${p.templos_desbloqueados.length}/${totalTemplos}`;
-    if (elParole)  elParole.textContent  = `Words: ${p.total_palavras}`;
+    if (elTempli)  elTempli.textContent  = I18n.t('stats_temples').replace('{a}', p.templos_desbloqueados.length).replace('{b}', totalTemplos);
+    if (elParole)  elParole.textContent  = I18n.t('stats_words').replace('{n}', p.total_palavras);
     if (elBarFill) elBarFill.style.width = percent + '%';
     const s = p.streak || 0;
     if (elStreak)  elStreak.textContent  = I18n.t(s !== 1 ? 'streak_dias' : 'streak_dia').replace('{n}', s);

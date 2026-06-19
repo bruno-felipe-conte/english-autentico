@@ -2146,6 +2146,125 @@
       background: rgba(255,255,255,0.04);
     }
 
+    /* ── Tradução das tabelas (PT/EN) ── */
+    .gram-tabela-traducao {
+      font-size: 0.74rem;
+      font-weight: 400;
+      color: #7f8c8d; /* Muted warm gray */
+    }
+    .gram-tabela-traducao.block-tr {
+      display: block;
+      margin-top: 3px;
+    }
+    .gram-tabela-traducao.inline-tr {
+      display: inline;
+      font-style: italic;
+      margin-left: 3px;
+    }
+    .gram-tabela-sem-details table th .gram-tabela-traducao,
+    .gram-tabela-conteudo table th .gram-tabela-traducao {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    body.dark-mode .gram-tabela-traducao {
+      color: #95a5a6; /* Warm gray/silver in dark mode */
+    }
+    body.dark-mode .gram-tabela-sem-details table th .gram-tabela-traducao,
+    body.dark-mode .gram-tabela-conteudo table th .gram-tabela-traducao {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .gram-tabela-variante {
+      font-style: italic;
+      font-weight: 500;
+      color: #7f8c8d; /* Muted variant color */
+    }
+    body.dark-mode .gram-tabela-variante {
+      color: #95a5a6;
+    }
+
+    /* ── Abas de Estudo e Prática da Lição ── */
+    .gram-lesson-tabs {
+      display: flex;
+      background: #f3ece0;
+      padding: 0.25rem;
+      border-radius: 12px;
+      margin: 1rem 0;
+      gap: 0.25rem;
+      border: 1px solid #ede4d5;
+    }
+    body.dark-mode .gram-lesson-tabs {
+      background: #25201e;
+      border-color: #352d2a;
+    }
+    .gram-tab-btn {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 0.65rem;
+      border-radius: 9px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #7f6a55;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    body.dark-mode .gram-tab-btn {
+      color: #9f8c7a;
+    }
+    .gram-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    body.dark-mode .gram-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .gram-tab-btn.ativo {
+      background: #ffffff;
+      color: var(--cor-veneziano-escuro);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    body.dark-mode .gram-tab-btn.ativo {
+      background: #1c1816;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .gram-tab-conteudo-bloco {
+      display: none;
+      animation: gramTabFade 0.2s ease-in-out;
+    }
+    @keyframes gramTabFade {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gram-btn-start-practice {
+      width: 100%;
+      background: linear-gradient(135deg, #003E8A, #002460);
+      color: #FFF8F0;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,62,138,0.25);
+      transition: transform 0.15s, box-shadow 0.15s;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .gram-btn-start-practice:hover {
+      background: linear-gradient(135deg, #004fad, #002c78);
+      transform: translateY(-1.5px);
+      box-shadow: 0 6px 16px rgba(0,62,138,0.35);
+    }
+    .gram-btn-start-practice:active {
+      transform: translateY(0);
+    }
+
     /* ── Fase 4: PRC Expandível ── */
     .gram-prc-expandivel {
       border: 1px solid #ede5d5;
@@ -2651,8 +2770,8 @@
           <span class="stat-item" id="stat-streak">🔥 0 dias</span>
         </div>
         <div class="stats-secondary-row">
-          <span class="stat-item secondary" id="stat-templi">Templi: 1/10</span>
-          <span class="stat-item secondary" id="stat-parole">Parole: 0</span>
+          <span class="stat-item secondary" id="stat-templi">Templos: 1/10</span>
+          <span class="stat-item secondary" id="stat-parole">Palavras: 0</span>
         </div>
       </div>
     </div>
@@ -2724,9 +2843,9 @@
       <!-- Word of the Day -->
       <div id="parola-del-giorno" style="display:none"></div>
 
-      <h2 class="section-titulo">The Ten Temples of English</h2>
+      <h2 class="section-titulo" data-i18n="templi_secao_titulo">The Ten Temples of English</h2>
       <div class="templos-grid" id="templos-grid">
-        <p style="color:#888;font-style:italic;padding:1rem;">Caricamento in corso...</p>
+        <p style="color:#888;font-style:italic;padding:1rem;" data-i18n="loading_text">Carregando...</p>
       </div>
     </section>
 
@@ -2846,35 +2965,35 @@
         </div>
       </div>
       <div class="quiz-resultado" id="quiz-resultado" style="display:none">
-        <p class="resultado-titulo">Risultato del Quiz</p>
+        <p class="resultado-titulo" data-i18n="quiz_result_title">Risultato del Quiz</p>
         <div class="resultado-score" id="resultado-score">0/10</div>
         <div class="resultado-xp" id="resultado-xp">+0 XP</div>
         <p class="resultado-msg" id="resultado-msg"></p>
-        <button class="btn-primario" onclick="Quiz.voltarSelector()" data-i18n="quiz_voltar">← Back aos Templi</button>
+        <button class="btn-primario" onclick="Quiz.voltarSelector()" data-i18n="quiz_voltar">← Voltar aos Templos</button>
       </div>
     </section>
 
     <!-- SECTION: Grammatica -->
     <section id="sec-grammatica" class="section">
-      <h2 class="section-titulo">English Grammar</h2>
+      <h2 class="section-titulo" data-i18n="top_nav_grammatica">English Grammar</h2>
       <div id="grammatica-container">
-        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;">Caricamento grammatica...</p>
+        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;" data-i18n="loading_text">Carregando...</p>
       </div>
     </section>
 
     <!-- SECTION: Storie -->
     <section id="sec-storie" class="section">
-      <h2 class="section-titulo" data-i18n="storie_titulo_secao">English Stories</h2>
+      <h2 class="section-titulo" data-i18n="top_nav_storie">English Stories</h2>
       <div id="storie-container">
-        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;">Caricamento storie...</p>
+        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;" data-i18n="loading_text">Carregando...</p>
       </div>
     </section>
 
     <!-- SECTION: Vocabulary -->
     <section id="sec-vocabolario" class="section">
-      <h2 class="section-titulo">Vocabulary</h2>
+      <h2 class="section-titulo" data-i18n="top_nav_vocabolario">Vocabulary</h2>
       <div class="vocab-filtros">
-        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Search in English or Portuguese..." oninput="Vocab.buscar(this.value)">
+        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Search in English or Portuguese..." data-i18n-placeholder="vocab_search_placeholder" oninput="Vocab.buscar(this.value)">
         <select id="vocab-templo-filtro" onchange="Vocab.filtrarTemplo(this.value)">
           <option value="">All temples</option>
         </select>
@@ -2898,13 +3017,13 @@
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
-        <p style="color:#aaa;font-style:italic;text-align:center;padding:1rem;">Caricamento vocabolario...</p>
+        <p style="color:#aaa;font-style:italic;text-align:center;padding:1rem;" data-i18n="loading_text">Carregando...</p>
       </div>
     </section>
 
     <!-- SECTION: Profilo -->
     <section id="sec-profilo" class="section">
-      <h2 class="section-titulo">My Profile</h2>
+      <h2 class="section-titulo" data-i18n="prof_secao_titulo">My Profile</h2>
       <div id="profilo-container"></div>
     </section>
 
@@ -2925,11 +3044,11 @@
   <!-- Conquista unlock modal -->
   <div id="conquista-modal" class="conquista-modal" onclick="if(event.target===this)Conquistas.fecharModal()">
     <div class="conquista-card">
-      <div class="conquista-card-label">🏆 Conquista desbloqueada!</div>
+      <div class="conquista-card-label" data-i18n="ach_unlocked_title">🏆 Conquista desbloqueada!</div>
       <span id="conquista-emoji" class="conquista-card-emoji">🌱</span>
       <div id="conquista-nome" class="conquista-card-nome">Primo Passo</div>
       <div id="conquista-desc" class="conquista-card-desc">Complete seu primeiro flashcard</div>
-      <button class="conquista-card-btn" onclick="Conquistas.fecharModal()">Continua →</button>
+      <button class="conquista-card-btn" onclick="Conquistas.fecharModal()" data-i18n="quiz_continuar">Continua →</button>
     </div>
   </div>
 
@@ -2938,11 +3057,11 @@
     <div class="levelup-card" id="levelup-card">
       <div class="levelup-shimmer"></div>
       <div class="levelup-stars">✦ ✦ ✦</div>
-      <div class="levelup-label">Avanzamento di livello</div>
+      <div class="levelup-label" data-i18n="lv_levelup_label">Avanzamento di livello</div>
       <div class="levelup-num" id="levelup-num">2</div>
       <div class="levelup-nome" id="levelup-nome">Esploratore</div>
       <div class="levelup-desbloqueios" id="levelup-desbloqueios"></div>
-      <button class="levelup-btn" onclick="LevelUp.fechar()">Forza! →</button>
+      <button class="levelup-btn" onclick="LevelUp.fechar()" data-i18n="lv_levelup_btn">Forza! →</button>
     </div>
   </div>
 
@@ -2953,28 +3072,28 @@
         <!-- Slide 1 -->
         <div class="onb-slide active">
           <div class="onb-emoji">🇺🇸</div>
-          <h3>Welcome!</h3>
+          <h3 data-i18n="ob_welcome_title">Welcome!</h3>
           <p data-i18n="ob_descricao">Este app foi desenhado para te levar do zero ao inglês falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.</p>
         </div>
         <!-- Slide 2 -->
         <div class="onb-slide">
           <div class="onb-emoji">🗺️</div>
-          <h3>What's Inside</h3>
+          <h3 data-i18n="ob_inside_title">What's Inside</h3>
           <ul class="onb-features-list">
-            <li>🏛️ <strong>Temples:</strong> Track your progress across English-speaking cities.</li>
-            <li>🃏 <strong>Flashcards:</strong> Memorise words with the FSRS-4.5 algorithm.</li>
-            <li>🎯 <strong>Quiz:</strong> Test your knowledge and earn XP.</li>
-            <li>📖 <strong>Vocabulary:</strong> Translation, IPA pronunciation and examples.</li>
-            <li>📚 <strong>Grammar:</strong> Lessons from A1 to B2.</li>
-            <li>📜 <strong>Reading:</strong> Read authentic texts in immersion mode.</li>
-            <li>💬 <strong>Dialogues:</strong> Practise real everyday conversations.</li>
-            <li>🎵 <strong>Songs:</strong> Learn with English songs.</li>
-            <li>🎤 <strong>Listen &amp; Repeat:</strong> Train your pronunciation.</li>
+            <li id="onb-inside-li1">🏛️ <strong>Temples:</strong> Track your progress across English-speaking cities.</li>
+            <li id="onb-inside-li2">🃏 <strong>Flashcards:</strong> Memorise words with the FSRS-4.5 algorithm.</li>
+            <li id="onb-inside-li3">🎯 <strong>Quiz:</strong> Test your knowledge and earn XP.</li>
+            <li id="onb-inside-li4">📖 <strong>Vocabulary:</strong> Translation, IPA pronunciation and examples.</li>
+            <li id="onb-inside-li5">📚 <strong>Grammar:</strong> Lessons from A1 to B2.</li>
+            <li id="onb-inside-li6">📜 <strong>Reading:</strong> Read authentic texts in immersion mode.</li>
+            <li id="onb-inside-li7">💬 <strong>Dialogues:</strong> Practise real everyday conversations.</li>
+            <li id="onb-inside-li8">🎵 <strong>Songs:</strong> Learn with English songs.</li>
+            <li id="onb-inside-li9">🎤 <strong>Listen &amp; Repeat:</strong> Train your pronunciation.</li>
           </ul>
         </div>
               <div class="onb-slide">
           <div class="onb-emoji">🚀</div>
-          <h3>Where to Start?</h3>
+          <h3 data-i18n="ob_start_title">Where to Start?</h3>
           <p data-i18n="ob_como_comecar">É muito fácil começar sua jornada:</p>
           <ol class="onb-steps-list" id="onb-steps-list">
             <li id="onb-li1">Go to the <strong>TEMPLES</strong> tab</li>
@@ -2982,7 +3101,7 @@
             <li id="onb-li3">Study using the <strong>FLASHCARDS</strong></li>
             <li id="onb-li4">Test yourself with the <strong>QUIZZES</strong>!</li>
           </ol>
-          <p style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">💡 Tap <strong>❓</strong> at the top at any time to replay the interactive app tour!</p>
+          <p id="onb-tour-hint" style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">💡 Tap <strong>❓</strong> at the top at any time to replay the interactive app tour!</p>
         </div>
       </div>
       
@@ -2993,7 +3112,7 @@
           <span class="onb-dot" onclick="Onboarding.irParaSlide(2)"></span>
         </div>
         <div class="onb-buttons">
-          <button id="onb-btn-prev" class="onb-btn btn-secondary" onclick="Onboarding.anteriorSlide()" style="visibility: hidden;">Back</button>
+          <button id="onb-btn-prev" class="onb-btn btn-secondary" onclick="Onboarding.anteriorSlide()" style="visibility: hidden;" data-i18n="ob_prev_btn">Back</button>
           <button id="onb-btn-next" class="onb-btn btn-primary" onclick="Onboarding.proximoSlide()">Next →</button>
         </div>
       </div>

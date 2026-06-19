@@ -99,9 +99,12 @@ const Storie = {
       );
     }
 
-    const labels = I18n.idioma === 'it'
-      ? { tut: 'All', cerca: '🔍 Title or author...', nenhuma: 'No stories yet.', risultato: 'No results.' }
-      : { tut: 'All', cerca: '🔍 Title or author...', nenhuma: 'No stories yet.', risultato: 'No results.' };
+    const labels = {
+      tut: I18n.t('storie_filter_all'),
+      cerca: I18n.t('storie_search_placeholder'),
+      nenhuma: I18n.t('storie_no_stories'),
+      risultato: I18n.t('storie_no_results')
+    };
 
     // Cores para cada nível CEFR
     const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
@@ -118,11 +121,11 @@ const Storie = {
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;
           const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
-          return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN);
+          return oP('',I18n.t('filtro_todos'),todas.length)+(nC?oP('custom',I18n.t('imit_filtro_adicionadas'),nC):'')+oP('nativo',I18n.t('filtro_nativo'),nN);
         })()}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Storie._filtroNivel=this.value;Storie.renderizarSeletor()">
-          <option value="">🎯 Level</option>
+          <option value="">${I18n.t('dial_select_level')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
       </div>
@@ -144,7 +147,7 @@ const Storie = {
           <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
             ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
-          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">🗑️ Remove</button>`:''}
+          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">${I18n.t('storie_remove')}</button>`:''}
           <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${s.autor||''}</div>
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
@@ -178,7 +181,7 @@ const Storie = {
     const c = document.getElementById('storie-container');
     if (!c || !this.storAttuale) return;
     const s = this.storAttuale;
-    const il = I18n.idioma === 'it';
+    const il = I18n.idioma === 'en';
 
     const tituloExibido = il ? s.titulo : (s.titulo_pt || s.titulo);
 
@@ -205,18 +208,18 @@ const Storie = {
 
     const html = `
       <div class="gram-lesson-nav">
-        <button class="gram-btn-back" onclick="Storie._fecharModal();Storie.renderizarSeletor()">‹ Storie</button>
+        <button class="gram-btn-back" onclick="Storie._fecharModal();Storie.renderizarSeletor()">‹ ${I18n.t('storie_back')}</button>
         <span style="font-size:0.85rem;font-weight:700">${s.nivel} · +${s.xp_recompensa||50} XP</span>
       </div>
 
       <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin:0.8rem 0 0">
         <button class="btn-secondario" onclick="Storie._toggleTraduzir()">
           ${this.traduzirVisivel
-            ? (il ? '👁️ Nascondi traduzione' : '👁️ Ocultar tradução')
-            : (il ? '👁️ Mostra traduzione'   : '👁️ Mostrar tradução')}
+            ? I18n.t('storie_hide_trans')
+            : I18n.t('storie_show_trans')}
         </button>
         <button class="btn-primario" onclick="Storie._ouvirTudo()">
-          ${il ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo'}
+          ${I18n.t('storie_listen_all')}
         </button>
       </div>
 
@@ -237,7 +240,7 @@ const Storie = {
           <div class="book-page book-page-right storie-texto-corrido">
             ${pgDir}
             <div class="book-ornamento" style="margin-top:auto;padding-top:1rem">— ✦ —</div>
-            <div class="book-fine">${il ? 'Fine' : 'Fim'}</div>
+            <div class="book-fine">${I18n.t('storie_fine')}</div>
             <div class="book-pagina">— ${paginaDir} —</div>
           </div>
 
@@ -246,12 +249,12 @@ const Storie = {
 
       <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
         <button class="btn-secondario" onclick="Storie._fecharModal();Storie.renderizarSeletor()">
-          ‹ All stories
+          ${I18n.t('storie_all_btn')}
         </button>
         <button class="btn-primario" onclick="Storie._marcarLida()">
           ${this.completate.includes(s.id)
-            ? (il ? '✓ Riletta' : '✓ Relida')
-            : (il ? `✓ Ho finito (+${s.xp_recompensa||50} XP)` : `✓ Concluir (+${s.xp_recompensa||50} XP)`)}
+            ? I18n.t('storie_riletta')
+            : I18n.t('storie_ho_finito').replace('{xp}', s.xp_recompensa||50)}
         </button>
       </div>
 
@@ -375,7 +378,7 @@ const Storie = {
       }
     }
 
-    const il      = I18n.idioma === 'it';
+    const il      = I18n.idioma === 'en';
     const jaSalva = this._verificarSalva(palavra);
 
     // Se já temos trad do parole[], renderiza direto
@@ -393,14 +396,14 @@ const Storie = {
         <button class="storie-modal-close" onclick="Storie._fecharModal()">×</button>
         <div class="storie-modal-palavra">${this._escape(palavra)}</div>
         ${ipa ? `<div class="storie-modal-ipa">${this._escape(ipa)}</div>` : ''}
-        <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">🔊 ${il?'Ascolta':'Ouvir'}</button>
+        <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">${I18n.t('quiz_ouvir')}</button>
         <div class="storie-modal-traducoes" id="storie-modal-pills">
           ${pills || (carregando ? '<span class="storie-trad-loading">…</span>' : '')}
         </div>
         ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
         <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
           onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})">
-          ${jaSalva ? '✅ Already saved' : '⭐ Save for review'}
+          ${jaSalva ? I18n.t('storie_already_saved') : I18n.t('storie_save_review')}
         </button>`;
     };
 
@@ -439,7 +442,7 @@ const Storie = {
     const norm = this._normWord(palavra);
     if (this._tradCache[norm]) return this._tradCache[norm];
     try {
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(palavra)}&langpair=it|pt-BR`;
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(palavra)}&langpair=en|pt-BR`;
       const res  = await fetch(url, { signal: AbortSignal.timeout(4000) });
       const json = await res.json();
       const t    = json?.responseData?.translatedText || '';
@@ -563,8 +566,7 @@ const Storie = {
     // Feedback visual no botão
     const btn = document.getElementById('storie-btn-salvar');
     if (btn) {
-      const il = I18n.idioma === 'it';
-      btn.textContent = '✅ Already saved';
+      btn.textContent = I18n.t('storie_already_saved');
       btn.classList.add('salvo');
     }
 
@@ -602,16 +604,15 @@ const Storie = {
   _marcarLida() {
     if (!this.storAttuale) return;
     const id = this.storAttuale.id;
-    const il = I18n.idioma === 'it';
     if (this.completate.includes(id)) {
-      App.notificar(il ? 'notif_gia_letta' : 'notif_ja_lida', 'info');
+      App.notificar('storie_notif_ja_lida', 'info');
       return;
     }
     this.completate.push(id);
     this._salvarCompletate();
     const xp = this.storAttuale.xp_recompensa || 50;
     if (typeof App !== 'undefined' && App.adicionarXP) App.adicionarXP(xp);
-    App.notificar(il ? `notif_storia_letta_${id}` : `notif_storia_lida_${id}`, 'sucesso');
+    App.notificar(I18n.t('storie_notif_lida').replace('{xp}', xp), 'sucesso');
     this._renderizarStoria();
   },
 

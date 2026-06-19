@@ -136,9 +136,7 @@ const Profilo = {
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
             <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.3rem">${I18n.t('prof_conteudo_criado')}</div>
             <div style="font-size:0.75rem;color:#888;margin-bottom:0.5rem">
-              ${I18n.idioma==='it'
-                ? 'Canzoni, dialoghi, storie, imitazioni e vocabolario aggiunti manualmente o via IA.'
-                : 'Songs, dialogues, stories, listen phrases, and vocabulary added manually or via AI.'}
+              ${I18n.t('prof_conteudo_criado_desc')}
             </div>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
               <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="font-size:0.82rem">
@@ -237,7 +235,7 @@ const Profilo = {
     const url  = URL.createObjectURL(blob);
     const a    = document.createElement('a');
     a.href     = url;
-    a.download = `italiano_backup_${new Date().toISOString().slice(0,10)}.json`;
+    a.download = `english_autentico_backup_${new Date().toISOString().slice(0,10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
     App.notificar('notif_backup_exp', 'sucesso');
@@ -310,7 +308,7 @@ const Profilo = {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `italiano_conteudo_${new Date().toISOString().slice(0,10)}.json`;
+    a.download = `english_autentico_conteudo_${new Date().toISOString().slice(0,10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
     const total = canzoni.length + dialoghi.length + storie.length + imitazioni.length + vocab.length;

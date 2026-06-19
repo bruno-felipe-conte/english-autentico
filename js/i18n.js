@@ -168,20 +168,37 @@ const I18n = {
 
     // ── Achievements ──
     'ach_primeiro_passo': { pt: 'Conclua seu primeiro flashcard', en: 'Complete your first flashcard' },
+    'ach_primeiro_passo_name': { pt: 'Primeiro Passo', en: 'First Step' },
     'ach_uma_semana': { pt: '7 dias consecutivos de estudo', en: '7 consecutive days of study' },
+    'ach_uma_semana_name': { pt: 'Uma Semana', en: 'One Week' },
     'ach_studioso': { pt: 'Revise 100 flashcards', en: 'Review 100 flashcards' },
+    'ach_studioso_name': { pt: 'Estudioso', en: 'Scholar' },
     'ach_quiz_perfetto': { pt: '10/10 respostas corretas em um quiz', en: '10/10 correct answers in a quiz' },
+    'ach_quiz_perfetto_name': { pt: 'Quiz Perfeito', en: 'Perfect Quiz' },
     'ach_primo_tempio': { pt: 'Conclua os flashcards do Templo 1', en: 'Complete Temple 1 flashcards' },
+    'ach_primo_tempio_name': { pt: 'Primeiro Templo', en: 'First Temple' },
     'ach_vocabulario': { pt: 'Domine 50 palavras (3+ revisões)', en: 'Master 50 words (3+ reviews)' },
+    'ach_vocabulario_name': { pt: 'Vocabulário Rico', en: 'Rich Vocabulary' },
     'ach_duro': { pt: 'Marque "De Novo" 50 vezes — a persistência compensa', en: 'Mark "Again" 50 times — persistence pays off' },
+    'ach_duro_name': { pt: 'Persistente!', en: 'Persistent!' },
     'ach_english_autentico': { pt: 'Alcance o Nível 10', en: 'Reach Level 10' },
+    'ach_english_autentico_name': { pt: 'English Autentico', en: 'English Autentico' },
     'ach_um_mes': { pt: '30 dias consecutivos de estudo', en: '30 consecutive days of study' },
+    'ach_um_mes_name': { pt: 'Um Mês', en: 'One Month' },
     'ach_maestro': { pt: 'Revise 500 flashcards', en: 'Review 500 flashcards' },
+    'ach_maestro_name': { pt: 'Mestre', en: 'Master' },
     'ach_esploratore': { pt: 'Desbloqueie 5 templos', en: 'Unlock 5 temples' },
+    'ach_esploratore_name': { pt: 'Explorador', en: 'Explorer' },
     'ach_grammatico': { pt: 'Conclua 10 lições de gramática', en: 'Complete 10 grammar lessons' },
+    'ach_grammatico_name': { pt: 'Gramático', en: 'Grammarian' },
     'ach_precisione': { pt: '5 quizzes seguidos com mais de 80% de acertos', en: '5 quizzes in a row with over 80% correct' },
+    'ach_precisione_name': { pt: 'Precisão', en: 'Precision' },
     'ach_notturno': { pt: 'Estude após as 22h', en: 'Study after 10 PM' },
+    'ach_notturno_name': { pt: 'Coruja da Noite', en: 'Night Owl' },
     'ach_mattiniero': { pt: 'Estude antes das 7h', en: 'Study before 7 AM' },
+    'ach_mattiniero_name': { pt: 'Madrugador', en: 'Early Bird' },
+    'ach_unlocked_section': { pt: '✅ Desbloqueadas', en: '✅ Unlocked' },
+    'ach_inprogress_section': { pt: '🔒 Em progresso', en: '🔒 In progress' },
 
     // ── Flashcard — empty state ──
     'fc_todas_estudadas': { pt: 'Todos os cartões estudados hoje.', en: 'All cards studied today.' },
@@ -239,6 +256,7 @@ const I18n = {
     // ── Onboarding ──
     'ob_descricao': { pt: 'Este aplicativo foi projetado para levar você do zero ao inglês falado de forma simples, natural e altamente eficaz. Cada sessão dura cerca de 10 minutos.', en: 'This app is designed to take you from zero to spoken English in a simple, natural and highly effective way. Each session lasts about 10 minutes.' },
     'ob_como_comecar': { pt: 'É muito fácil começar sua jornada:', en: 'It is very easy to start your journey:' },
+    'ob_get_started': { pt: 'Começar! 🚀', en: 'Get Started! 🚀' },
 
     // ── Flashcard — inline labels ──
     'fc_novas': { pt: 'novas', en: 'new' },
@@ -391,22 +409,37 @@ const I18n = {
     'imit_btn_ouvir_exemplo': { pt: '🔊 Listen to Example', en: '🔊 Listen to Example' },
 
     // ── Tour ──
-    'tour_templi_title': { pt: '🏛️ Templos (Sua Jornada)', en: '🏛️ Temples (Your Journey)' },
-    'tour_templi_desc': { pt: 'Este é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.', en: 'This is the heart of your learning. Unlock new temples and reach your daily experience goal.' },
-    'tour_dialoghi_title': { pt: '💬 Diálogos', en: '💬 Dialogues' },
-    'tour_dialoghi_desc': { pt: 'Leia e escute diálogos reais para pegar o ritmo, contexto e melhorar sua compreensão de áudio.', en: 'Read and listen to real dialogues to get the rhythm, context and improve your listening comprehension.' },
-    'tour_canzoni_title': { pt: '🎵 Músicas', en: '🎵 Songs' },
-    'tour_canzoni_desc': { pt: 'Aprenda vocabulário se divertindo com músicas populares em inglês.', en: 'Learn vocabulary while enjoying popular English songs.' },
-    'tour_imitazione_title': { pt: '🎙️ Ouvir e Repetir', en: '🎙️ Listen & Repeat' },
-    'tour_imitazione_desc': { pt: 'Escute um nativo e grave sua própria voz. O segredo para uma pronúncia autêntica.', en: 'Listen to a native speaker and record your own voice. The secret to authentic pronunciation.' },
-    'tour_flashcard_title': { pt: '🧠 Flashcards', en: '🧠 Flashcards' },
-    'tour_flashcard_desc': { pt: 'Revise o vocabulário no momento exato em que está prestes a esquecer, usando nosso algoritmo de repetição espaçada.', en: 'Review vocabulary at the exact moment you are about to forget, using our spaced repetition algorithm.' },
-    'tour_quiz_title': { pt: '📝 Quiz', en: '📝 Quiz' },
-    'tour_quiz_desc': { pt: 'Teste seus conhecimentos com séries rápidas de exercícios e ganhe XP.', en: 'Test your knowledge with quick exercise batches and earn XP.' },
-    'tour_grammatica_title': { pt: '📚 Gramática', en: '📚 Grammar' },
-    'tour_grammatica_desc': { pt: 'Dúvidas estruturais? Consulte rapidamente todas as regras de gramática aqui.', en: 'Structural questions? Quickly look up all grammar rules here.' },
-    'tour_vocabolario_title': { pt: '📖 Vocabulário', en: '📖 Vocabulary' },
-    'tour_vocabolario_desc': { pt: 'Seu glossário mestre. Busque por qualquer palavra aprendida até agora.', en: 'Your master glossary. Search for any word learned so far.' },
+    'tour_next_btn': { pt: 'Próximo →', en: 'Next →' },
+    'tour_prev_btn': { pt: '← Voltar', en: '← Back' },
+    'tour_done_btn': { pt: '🎉 Vamos lá!', en: '🎉 Let\'s go!' },
+    'tour_progress': { pt: '{{current}} de {{total}}', en: '{{current}} of {{total}}' },
+    'tour_confirm_exit': { pt: 'Sair do tour?', en: 'Exit the tour?' },
+    'tour_welcome_title': { pt: '👋 Bem-vindo ao English Autentico!', en: '👋 Welcome to English Autentico!' },
+    'tour_welcome_desc': { pt: 'Este tour de 13 passos mostrará as principais funcionalidades do app. Leva menos de 2 minutos — vamos lá!', en: 'This 13-step tour shows you the main features. It takes less than 2 minutes — let\'s go!' },
+    'tour_stats_title': { pt: '🏅 Nível, XP & Sequência', en: '🏅 Level, XP & Streak' },
+    'tour_stats_desc': { pt: 'Cada atividade rende XP. Acumule XP para subir de nível e desbloquear novos templos. Mantenha sua sequência 🔥 ativa estudando todos os dias!', en: 'Every activity earns XP. Accumulate enough and your level rises, unlocking new temples. Keep your 🔥 streak alive by studying every day!' },
+    'tour_templi_title': { pt: '🏛️ Templos (Sua Jornada)', en: '🏛️ Temples — Your Vocabulary Packs' },
+    'tour_templi_desc': { pt: 'Cada templo contém cerca de 20 palavras de uma cidade de língua inglesa. Comece pelo Templo 1 (New York). Novos templos se desbloqueiam ao subir de nível.', en: 'Each temple is a set of ~20 words from an English-speaking city. Start with Temple 1 (New York). New temples unlock as your level grows.' },
+    'tour_goal_title': { pt: '🎯 Defina uma Meta com Prazo', en: '🎯 Set a Goal with a Deadline' },
+    'tour_goal_desc': { pt: 'Escolha um nível alvo e uma data limite. O app calcula quantos XP por dia você precisa e mostra seu progresso no topo.', en: 'Pick a target level and a deadline date. The app calculates how many XP per day you need and shows your daily progress bar at the top.' },
+    'tour_flashcard_title': { pt: '🃏 Flashcards Inteligentes (FSRS)', en: '🃏 Smart Flashcards (FSRS)' },
+    'tour_flashcard_desc': { pt: 'Selecione um templo e estude usando repetição espaçada. O algoritmo FSRS-4.5 agenda cada palavra para você revisar exatamente antes de esquecer.', en: 'Select a temple and study its words with Spaced Repetition. The FSRS-4.5 algorithm schedules each word so you review it just before you would forget it.' },
+    'tour_modes_title': { pt: '🔄 Quatro Modos de Estudo', en: '🔄 Four Study Modes' },
+    'tour_modes_desc': { pt: 'Normal (EN→PT) · Reverso (PT→EN) · Contexto (lacunas) · Escuta (áudio). Mude de modo para desenvolver todas as habilidades!', en: 'Normal (EN→PT) · Reverse (PT→EN) · Context (fill the gap) · Listen (guess from audio). Switch modes to build all-round mastery!' },
+    'tour_rate_title': { pt: '⭐ Avalie com Honestidade', en: '⭐ Rate Every Card Honestly' },
+    'tour_rate_desc': { pt: 'Errei = amanhã · Difícil = 1 dia · Bom = 3 dias · Fácil = 2 semanas. O algoritmo se ajusta com base na sua resposta — a honestidade traz os melhores resultados!', en: 'Again = tomorrow · Hard = 1 day · Good = 3 days · Easy = 2 weeks. The algorithm adjusts future intervals based on your answer — honesty beats the system!' },
+    'tour_quiz_title': { pt: '❓ Quiz — 4 Tipos de Exercícios', en: '❓ Quiz — 4 Exercise Types' },
+    'tour_quiz_desc': { pt: 'Vocabulário, gramática, escuta e conjugação. Conclua quizzes para ganhar bônus de XP e fixar o conteúdo!', en: 'Vocabulary, Grammar, Listening and Spelling. Complete a quiz to unlock the next temple and earn bonus XP!' },
+    'tour_grammatica_title': { pt: '📚 Gramática — A1 ao B2', en: '📚 Grammar — A1 to B2' },
+    'tour_grammatica_desc': { pt: '90 lições do iniciante ao intermediário superior. Cada lição tem alertas práticos, explicações dos cards, exemplos e exercícios.', en: '90 lessons from beginner to upper-intermediate. Each lesson has theory cards, examples, common traps and exercises — all in English.' },
+    'tour_vocabolario_title': { pt: '📖 Vocabulário — Auto-Teste', en: '📖 Vocabulary — Self-Test Mode' },
+    'tour_vocabolario_desc': { pt: 'Toque em "Ocultar EN" ou "Ocultar PT" para testar sua memória. Filtre por templo ou categoria e ouça a pronúncia de qualquer palavra.', en: 'Tap \'Hide EN\' or \'Hide PT\' to cover a column and test yourself. Filter by temple or category and click any word to hear it.' },
+    'tour_reading_title': { pt: '📜 Leituras — Textos Autênticos', en: '📜 Reading — Authentic Texts' },
+    'tour_reading_desc': { pt: 'Histórias reais em inglês do nível A1 ao B2. Toque em qualquer palavra para ver a tradução. Use o Modo Imersão para ocultar a tradução em português!', en: 'Real English stories at A1–B2 level. Tap any word to see its translation. Use Immersion Mode to hide the Portuguese and challenge yourself!' },
+    'tour_dialoghi_title': { pt: '💬 Diálogos — Situações Reais', en: '💬 Dialogues — Real Conversations' },
+    'tour_dialoghi_desc': { pt: 'Pratique diálogos do dia a dia (café, aeroporto, entrevista). Ouça, leia e responda — ou crie os seus próprios diálogos usando Inteligência Artificial!', en: 'Practise everyday English scenarios: coffee shops, airports, job interviews. Listen, read and respond — or import your own via the 🤖 AI button!' },
+    'tour_canzoni_title': { pt: '🎵 Músicas — Aprenda Cantando', en: '🎵 Songs — Learn with Music' },
+    'tour_canzoni_desc': { pt: 'Acompanhe as letras e preencha as lacunas das músicas. Adicione suas músicas favoritas com o importador de IA. A música ajuda a fixar o vocabulário!', en: 'Follow English song lyrics and fill in the missing words. Add any song with the 🤖 AI Import button. Music makes vocabulary stick!' },
     'tour_config_title': { pt: '⚙️ Configurações & Perfil', en: '⚙️ Settings & Profile' },
     'tour_config_desc': { pt: 'Mude para o modo escuro, silencie sons e acesse as opções de Perfil no topo da tela.', en: 'Switch to dark mode, mute sounds and access Profile options at the top of the screen.' },
 
@@ -464,6 +497,10 @@ const I18n = {
     'gram_badge_reveal':     { pt: '👁️ Revelar',                     en: '👁️ Revelar' },
     'gram_badge_type':       { pt: '⌨️ Digitar',                     en: '⌨️ Digitar' },
     'gram_badge_choose':     { pt: '🔘 Escolher',                    en: '🔘 Escolher' },
+    'gram_aba_estudo':       { pt: 'Estudo & Teoria',                en: 'Study & Theory' },
+    'gram_aba_pratica':      { pt: 'Exercícios & Prática',           en: 'Practice & Exercises' },
+    'gram_card_teoria_titulo':{ pt: 'Teoria e Prática da Lição',       en: 'Lesson Theory & Practice' },
+    'gram_btn_iniciar_pratica':{ pt: 'Praticar agora (Exercícios) 🚀', en: 'Practice now (Exercises) 🚀' },
 
     // ── Vocabulary — additional UI ──
     'vocab_todos_templos':   { pt: 'Todos os templos',               en: 'All temples' },
@@ -519,7 +556,160 @@ const I18n = {
     'prof_importar_conteudo':{ pt: 'Importar conteúdo?\n• {nc} músicas\n• {nd} diálogos\n• {ns} histórias\n• {ni} frases\n• {nv} palavras', en: 'Import content?\n• {nc} songs\n• {nd} dialogues\n• {ns} stories\n• {ni} listen phrases\n• {nv} vocabulary words' },
     'ia_remover_item':       { pt: 'Remover este item?',           en: 'Remove this item?' },
     'storage_limite':        { pt: 'Limite de armazenamento atingido! O app não consegue salvar seu progresso. Por favor, libere espaço no navegador ou exclua alguns flashcards.', en: 'Storage Limit Reached! The app cannot save your progress. Please clear some space in your browser data or delete unused flashcards.' },
-    'storage_limite_fc':     { pt: 'Limite de armazenamento! Não é possível salvar novos flashcards. Executando limpeza automática...', en: 'Storage Limit Reached! Cannot save new flashcards. Running auto-cleanup of oldest inactive cards...' }
+    'storage_limite_fc':     { pt: 'Limite de armazenamento! Não é possível salvar novos flashcards. Executando limpeza automática...', en: 'Storage Limit Reached! Cannot save new flashcards. Running auto-cleanup of oldest inactive cards...' },
+
+    // ── Sons / Audio ──
+    'btn_som_ativo_title':    { pt: 'Sons: ativados (clique para desligar)', en: 'Sounds: On (click to mute)' },
+    'btn_som_desativo_title': { pt: 'Sons: desativados (clique para ligar)', en: 'Sounds: Off (click to unmute)' },
+
+    // ── Dialoghi ──
+    'dial_search_placeholder': { pt: '🔍 Buscar...', en: '🔍 Search...' },
+    'dial_select_level':       { pt: '🎯 Nível', en: '🎯 Level' },
+    'dial_no_results':         { pt: 'Nenhum resultado.', en: 'No results.' },
+    'dial_no_dialogues':       { pt: 'Nenhum diálogo ainda.', en: 'No dialogues yet.' },
+    'dial_new_dialogue':       { pt: 'Novo Diálogo', en: 'New Dialogue' },
+    'dial_edit_dialogue':      { pt: 'Editar Diálogo', en: 'Edit Dialogue' },
+    'dial_form_title':         { pt: 'Título *', en: 'Title *' },
+    'dial_form_level':         { pt: 'Nível', en: 'Level' },
+    'dial_form_icon':          { pt: 'Ícone', en: 'Icon' },
+    'dial_form_context':       { pt: 'Contexto (descrição da situação)', en: 'Context (situation description)' },
+    'dial_form_context_placeholder': { pt: 'Ex: Você entra em um café para pedir uma bebida.', en: 'Ex: You walk into a coffee shop to order a drink.' },
+    'dial_form_turns':         { pt: '💬 Turnos do Diálogo', en: '💬 Dialogue Turns' },
+    'dial_form_tip_body':      { pt: '💡 <strong>Tipo "Fala de Personagem":</strong> o personagem fala (o usuário apenas lê/ouve).<br>💡 <strong>Tipo "Resposta do Usuário":</strong> o usuário escolhe entre 4 opções — preencha as 4 alternativas e marque a correta.', en: '💡 <strong>Type "Character Line":</strong> the character speaks (the user just reads/listens).<br>💡 <strong>Type "User Response":</strong> the user chooses from 4 options — fill in all 4 alternatives and mark the correct one.' },
+    'dial_form_add_character': { pt: '➕ Adicionar Fala de Personagem', en: '➕ Add Character Line' },
+    'dial_form_add_user':      { pt: '➕ Adicionar Resposta do Usuário', en: '➕ Add User Response' },
+    'dial_form_save':          { pt: '💾 Salvar Diálogo', en: '💾 Save Dialogue' },
+    'dial_form_character_line':{ pt: '🗣️ Fala de Personagem', en: '🗣️ Character Line' },
+    'dial_form_user_response': { pt: '👤 Resposta do Usuário', en: '👤 User Response' },
+    'dial_form_char_name':     { pt: 'Nome do personagem', en: 'Character name' },
+    'dial_form_ipa':           { pt: 'IPA (opcional)', en: 'IPA (optional)' },
+    'dial_form_eng_phrase':    { pt: 'Frase em inglês *', en: 'English phrase *' },
+    'dial_form_pt_translation':{ pt: 'Tradução em português', en: 'Portuguese translation' },
+    'dial_form_correct_eng_phrase': { pt: 'Frase em inglês correta *', en: 'Correct English phrase *' },
+    'dial_form_alternatives_title': { pt: '4 Alternativas (marque a correta):', en: '4 Alternatives (mark the correct one):' },
+    'dial_form_alt_placeholder': { pt: 'Alternativa {n}', en: 'Alternative {n}' },
+    'dial_form_alt_correct':   { pt: ' (correta)', en: ' (correct)' },
+    'dial_practise_btn':       { pt: 'Praticar Diálogo ✍️', en: 'Practise Dialogue ✍️' },
+    'dial_your_turn':          { pt: 'Sua vez de falar. Escolha a melhor resposta:', en: 'Your turn to speak. Choose the best response:' },
+    'dial_continue':           { pt: 'Continuar', en: 'Continue' },
+    'dial_back':               { pt: '‹ Voltar', en: '‹ Back' },
+    'dial_my_badge':           { pt: 'Meu', en: 'Mine' },
+
+    // ── Canzoni ──
+    'can_form_song_audio':     { pt: '🎵 Áudio da música (opcional)', en: '🎵 Song audio (optional)' },
+    'can_form_remove_audio':   { pt: '🗑️ Remover áudio', en: '🗑️ Remove audio' },
+    'can_form_build_prompt':   { pt: '🤖 Gerar Prompt da IA (com exercícios)', en: '🤖 Build AI Prompt (with exercises)' },
+    'can_form_mode_parts_desc':{ pt: '💡 <strong>Modo 4 Partes:</strong> Para músicas longas, envie um prompt por conversa separada no Gemini. Cole o JSON de cada parte nas abas abaixo, depois clique em <strong>✅ Unir e Importar</strong>.', en: '💡 <strong>4-Part Mode:</strong> For long songs, send one prompt per separate conversation in Gemini. Paste the JSON of each part in the tabs below, then click <strong>✅ Merge and Import</strong>.' },
+    'can_form_part':           { pt: 'Parte {n}', en: 'Part {n}' },
+    'can_form_part_desc':      { pt: 'Prompt da Parte {n} — envie separadamente ao Gemini:', en: 'Prompt for Part {n} — send separately to Gemini:' },
+    'can_my_badge':            { pt: 'Minha', en: 'Mine' },
+
+    // ── Storie ──
+    'storie_back':             { pt: '‹ Leituras', en: '‹ Reading' },
+    'storie_hide_trans':       { pt: '👁️ Ocultar tradução', en: '👁️ Hide translation' },
+    'storie_show_trans':       { pt: '👁️ Mostrar tradução', en: '👁️ Show translation' },
+    'storie_listen_all':       { pt: '🔊 Ouvir tudo', en: '🔊 Listen to all' },
+    'storie_fine':             { pt: 'Fim', en: 'Fine' },
+    'storie_already_saved':    { pt: '✅ Já salvo', en: '✅ Already saved' },
+    'storie_save_review':      { pt: '⭐ Salvar para revisão', en: '⭐ Save for review' },
+    'storie_remove':           { pt: '🗑️ Remover', en: '🗑️ Remove' },
+    'storie_all_btn':          { pt: '‹ Todas as histórias', en: '‹ All stories' },
+    'storie_riletta':          { pt: '✓ Relida', en: '✓ Re-read' },
+    'storie_ho_finito':        { pt: '✓ Concluir (+{xp} XP)', en: '✓ Finished (+{xp} XP)' },
+
+    // ── Imitazione ──
+    'imit_phrase_indicator':   { pt: 'Frase {a} de {b}', en: 'Phrase {a} of {b}' },
+    'imit_remove_btn':         { pt: '🗑️ Remover', en: '🗑️ Remove' },
+    'imit_phonetic_hint':      { pt: 'Dica Fonética', en: 'Phonetic Hint' },
+    'imit_mic_start':          { pt: 'Clique no microfone para falar', en: 'Click on the microphone to speak' },
+    'imit_mic_listening':      { pt: 'Ouvindo... Fale agora!', en: 'Listening... Speak now!' },
+    'imit_mic_processing':     { pt: 'Processando...', en: 'Processing...' },
+    'imit_perfect':            { pt: 'Perfeito! 🌟', en: 'Perfect! 🌟' },
+    'imit_almost':             { pt: 'Quase! 👍', en: 'Almost! 👍' },
+    'imit_try_again':          { pt: 'Tente novamente! 🔄', en: 'Try again! 🔄' },
+    'imit_excellent':          { pt: 'Excelente!', en: 'Excellent!' },
+    'imit_completed_desc':     { pt: 'Você completou todas as {n} frases!', en: 'You completed all {n} phrases!' },
+    'imit_repeat':             { pt: '🔄 Repetir', en: '🔄 Repeat' },
+    'imit_return_home':        { pt: 'Voltar ao Início', en: 'Return to Home' },
+
+    // ── Vocab ──
+    'vocab_mastered':          { pt: 'Dominada', en: 'Mastered' },
+    'vocab_learning':          { pt: 'Em aprendizado', en: 'Learning' },
+    'vocab_new':               { pt: 'Nova', en: 'New' },
+    'vocab_click_listen':      { pt: 'Clique para ouvir', en: 'Click to listen' },
+    'vocab_parole_filtro':     { pt: '🃏 {n} palavras do filtro ativo', en: '🃏 {n} words from active filter' },
+
+    // ── Quiz ──
+    'quiz_what_does_mean':     { pt: 'O que significa "{w}"?', en: 'What does "{w}" mean?' },
+    'quiz_means_example':      { pt: '"{w}" significa "{t}". Exemplo: {e}', en: '"{w}" means "{t}". Example: {e}' },
+    'quiz_means_simple':       { pt: '"{w}" significa "{t}".', en: '"{w}" means "{t}".' },
+    'quiz_what_was_said':      { pt: 'Qual foi a palavra dita? ({p})', en: 'Which word was said? ({p})' },
+    'quiz_was_said_exp':       { pt: 'A palavra dita foi "{w}".', en: 'The word said was "{w}".' },
+    'quiz_sentence_complete_exp': { pt: 'A frase completa é: "{s}"', en: 'The complete sentence is: "{s}"' },
+    'quiz_mixed_title':        { pt: '🌍 Quiz Misto<br><small>Todos os templos</small>', en: '🌍 Mixed Quiz<br><small>All temples combined</small>' },
+
+    // ── Quiz Types & Extra Keys ──
+    'quiz_tipo_vocabulario':   { pt: 'Vocabulário', en: 'Vocabulary' },
+    'quiz_tipo_morfologia':    { pt: 'Morfologia', en: 'Morphology' },
+    'quiz_tipo_listening':     { pt: 'Escuta', en: 'Listening' },
+    'quiz_tipo_gramática':     { pt: 'Gramática', en: 'Grammar' },
+    'quiz_tipo_conjugação':    { pt: 'Conjugação', en: 'Conjugation' },
+    'quiz_resume_notif':       { pt: '↩️ Retomando da pergunta {n}', en: '↩️ Resuming from question {n}' },
+
+    // ── Profile custom content description ──
+    'prof_conteudo_criado_desc': { pt: 'Músicas, diálogos, histórias, imitações e vocabulário adicionados manualmente ou via IA.', en: 'Songs, dialogues, stories, listen phrases, and vocabulary added manually or via AI.' },
+
+    // ── Stories Extra Keys ──
+    'storie_filter_all':       { pt: 'Todas', en: 'All' },
+    'storie_search_placeholder': { pt: '🔍 Título ou autor...', en: '🔍 Title or author...' },
+    'storie_no_stories':       { pt: 'Nenhuma história ainda.', en: 'No stories yet.' },
+    'storie_no_results':       { pt: 'Nenhum resultado.', en: 'No results.' },
+
+    // ── Onboarding Extra Keys ──
+    'ob_welcome_title':        { pt: 'Bem-vindo!', en: 'Welcome!' },
+    'ob_inside_title':         { pt: 'O que há dentro', en: 'What\'s Inside' },
+    'ob_start_title':          { pt: 'Por onde começar?', en: 'Where to Start?' },
+    'ob_tour_hint':            { pt: '💡 Toque em <strong>❓</strong> no topo a qualquer momento para rever o tour interativo do app!', en: '💡 Tap <strong>❓</strong> at the top at any time to replay the interactive app tour!' },
+    'ob_prev_btn':             { pt: 'Voltar', en: 'Back' },
+    'ob_inside_li1':           { pt: '🏛️ <strong>Templos:</strong> Acompanhe seu progresso por cidades de língua inglesa.', en: '🏛️ <strong>Temples:</strong> Track your progress across English-speaking cities.' },
+    'ob_inside_li2':           { pt: '🃏 <strong>Flashcards:</strong> Memorize palavras com o algoritmo FSRS-4.5.', en: '🃏 <strong>Flashcards:</strong> Memorise words with the FSRS-4.5 algorithm.' },
+    'ob_inside_li3':           { pt: '🎯 <strong>Quiz:</strong> Teste seus conhecimentos e ganhe XP.', en: '🎯 <strong>Quiz:</strong> Test your knowledge and earn XP.' },
+    'ob_inside_li4':           { pt: '📖 <strong>Vocabulário:</strong> Tradução, pronúncia IPA e exemplos.', en: '📖 <strong>Vocabulary:</strong> Translation, IPA pronunciation and examples.' },
+    'ob_inside_li5':           { pt: '📚 <strong>Gramática:</strong> Lições do nível A1 ao B2.', en: '📚 <strong>Grammar:</strong> Lessons from A1 to B2.' },
+    'ob_inside_li6':           { pt: '📜 <strong>Leituras:</strong> Leia textos autênticos em modo imersão.', en: '📜 <strong>Reading:</strong> Read authentic texts in immersion mode.' },
+    'ob_inside_li7':           { pt: '💬 <strong>Diálogos:</strong> Pratique conversas reais do dia a dia.', en: '💬 <strong>Dialogues:</strong> Practise real everyday conversations.' },
+    'ob_inside_li8':           { pt: '🎵 <strong>Músicas:</strong> Aprenda com músicas em inglês.', en: '🎵 <strong>Songs:</strong> Learn with English songs.' },
+    'ob_inside_li9':           { pt: '🎤 <strong>Ouvir e Repetir:</strong> Treine sua pronúncia.', en: '🎤 <strong>Listen &amp; Repeat:</strong> Train your pronunciation.' },
+
+    // ── Progression / Level Up ──
+    'lv_levelup_label':        { pt: 'Subiu de Nível! 🎉', en: 'Level Up! 🎉' },
+    'lv_levelup_btn':          { pt: 'Vamos lá! →', en: 'Let\'s go! →' },
+    'lv_levelup_notif':        { pt: '🎉 Nível {n}! Continue assim!', en: '🎉 Level {n}! Keep it up!' },
+    'lvl_name_1':              { pt: 'Principiante', en: 'Beginner' },
+    'lvl_name_2':              { pt: 'Explorador', en: 'Explorer' },
+    'lvl_name_3':              { pt: 'Aventureiro', en: 'Adventurer' },
+    'lvl_name_5':              { pt: 'Estudante', en: 'Student' },
+    'lvl_name_7':              { pt: 'Intermediário', en: 'Intermediate' },
+    'lvl_name_10':             { pt: 'Avançado', en: 'Advanced' },
+    'lvl_name_13':             { pt: 'Especialista', en: 'Expert' },
+    'lvl_name_16':             { pt: 'Avançado Plus', en: 'Advanced Plus' },
+    'lvl_name_19':             { pt: 'Mestre', en: 'Master' },
+    'lvl_name_20':             { pt: 'Grão-Mestre', en: 'Grand Master' },
+
+    // ── Achievements ──
+    'ach_unlocked_title':      { pt: '🏆 Conquista desbloqueada!', en: '🏆 Achievement unlocked!' },
+
+    // ── Stats ──
+    'stats_level':             { pt: 'Nível {n}', en: 'Level {n}' },
+    'stats_temples':           { pt: 'Templos: {a}/{b}', en: 'Temples: {a}/{b}' },
+    'stats_words':             { pt: 'Palavras: {n}', en: 'Words: {n}' },
+
+    // ── General ──
+    'loading_text':            { pt: 'Carregando...', en: 'Loading...' },
+    'quiz_result_title':       { pt: 'Resultado do Quiz', en: 'Quiz Results' },
+    'templi_secao_titulo':     { pt: 'Os Dez Templos do Inglês', en: 'The Ten Temples of English' },
+    'vocab_search_placeholder': { pt: '🔍 Buscar em inglês ou português...', en: '🔍 Search in English or Portuguese...' },
+    'prof_secao_titulo':       { pt: 'Meu Perfil', en: 'My Profile' }
   },
 
   inicializar() {
@@ -586,12 +776,29 @@ const I18n = {
       if (this.dict[chave]) el.title = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
     });
 
+    // Traduz atributo placeholder (data-i18n-placeholder)
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const chave = el.getAttribute('data-i18n-placeholder');
+      if (this.dict[chave]) el.placeholder = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+    });
+
+    // Onboarding slide 2 — contém HTML (negrito), usa innerHTML
+    for (let i = 1; i <= 9; i++) {
+      const el = document.getElementById(`onb-inside-li${i}`);
+      const key = `ob_inside_li${i}`;
+      if (el && this.dict[key]) el.innerHTML = this.dict[key][this.idioma] || this.dict[key]['pt'];
+    }
+
     // Onboarding slide 3 — contém HTML (negrito), usa innerHTML
     ['onb-li1','onb-li2','onb-li3','onb-li4'].forEach((id, i) => {
       const el = document.getElementById(id);
       const key = `ob_slide3_li${i+1}`;
       if (el && this.dict[key]) el.innerHTML = this.dict[key][this.idioma] || this.dict[key]['pt'];
     });
+
+    // Onboarding tour hint
+    const hintEl = document.getElementById('onb-tour-hint');
+    if (hintEl && this.dict['ob_tour_hint']) hintEl.innerHTML = this.dict['ob_tour_hint'][this.idioma] || this.dict['ob_tour_hint']['pt'];
 
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {

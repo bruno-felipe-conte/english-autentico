@@ -9,21 +9,21 @@ const Conquistas = {
     {
       id: 'primeiro_passo',
       emoji: '🌱',
-      nome: 'First Step',
+      get nome() { return I18n.t('ach_primeiro_passo_name'); },
       get descricao() { return I18n.t('ach_primeiro_passo'); },
       verificar(p, fd) { return Object.keys(fd).length >= 1; }
     },
     {
       id: 'uma_semana',
       emoji: '🔥',
-      nome: 'One Week',
+      get nome() { return I18n.t('ach_uma_semana_name'); },
       get descricao() { return I18n.t('ach_uma_semana'); },
       verificar(p) { return (p.streak || 0) >= 7; }
     },
     {
       id: 'estudioso',
       emoji: '📚',
-      nome: 'Scholar',
+      get nome() { return I18n.t('ach_studioso_name'); },
       get descricao() { return I18n.t('ach_studioso'); },
       verificar(p, fd) {
         let total = 0;
@@ -34,7 +34,7 @@ const Conquistas = {
     {
       id: 'quiz_perfetto',
       emoji: '✅',
-      nome: 'Perfect Quiz',
+      get nome() { return I18n.t('ach_quiz_perfetto_name'); },
       get descricao() { return I18n.t('ach_quiz_perfetto'); },
       // Normally triggered via ganharQuizPerfetto(); falls back to flag
       // check so the achievement survives a save that lost conquistas[].
@@ -43,14 +43,14 @@ const Conquistas = {
     {
       id: 'primo_tempio',
       emoji: '🏛️',
-      nome: 'First Temple',
+      get nome() { return I18n.t('ach_primo_tempio_name'); },
       get descricao() { return I18n.t('ach_primo_tempio'); },
       verificar(p) { return (p.templos_concluidos || []).includes(1); }
     },
     {
       id: 'vocabulario',
       emoji: '⭐',
-      nome: 'Rich Vocabulary',
+      get nome() { return I18n.t('ach_vocabulario_name'); },
       get descricao() { return I18n.t('ach_vocabulario'); },
       verificar(p, fd) {
         let total = 0;
@@ -67,7 +67,7 @@ const Conquistas = {
     {
       id: 'duro',
       emoji: '💪',
-      nome: 'Persistent!',
+      get nome() { return I18n.t('ach_duro_name'); },
       get descricao() { return I18n.t('ach_duro'); },
       verificar(p, fd) {
         let total = 0;
@@ -78,21 +78,21 @@ const Conquistas = {
     {
       id: 'english_autentico',
       emoji: '🇺🇸',
-      nome: 'English Autentico',
+      get nome() { return I18n.t('ach_english_autentico_name'); },
       get descricao() { return I18n.t('ach_english_autentico'); },
       verificar(p) { return (p.nivel || 1) >= 10; }
     },
     {
       id: 'um_mes',
       emoji: '🔥🔥',
-      nome: 'One Month',
+      get nome() { return I18n.t('ach_um_mes_name'); },
       get descricao() { return I18n.t('ach_um_mes'); },
       verificar(p) { return (p.streak || 0) >= 30; }
     },
     {
       id: 'maestro',
       emoji: '🌟',
-      nome: 'Master',
+      get nome() { return I18n.t('ach_maestro_name'); },
       get descricao() { return I18n.t('ach_maestro'); },
       verificar(p, fd) {
         let total = 0;
@@ -103,35 +103,35 @@ const Conquistas = {
     {
       id: 'esploratore',
       emoji: '🗺️',
-      nome: 'Explorer',
+      get nome() { return I18n.t('ach_esploratore_name'); },
       get descricao() { return I18n.t('ach_esploratore'); },
       verificar(p) { return (p.templos_desbloqueados || []).length >= 5; }
     },
     {
       id: 'grammatico',
       emoji: '📖',
-      nome: 'Grammarian',
+      get nome() { return I18n.t('ach_grammatico_name'); },
       get descricao() { return I18n.t('ach_grammatico'); },
       verificar(p) { return (p.grammatica_completadas || []).length >= 10; }
     },
     {
       id: 'precisione',
       emoji: '🎯',
-      nome: 'Precision',
+      get nome() { return I18n.t('ach_precisione_name'); },
       get descricao() { return I18n.t('ach_precisione'); },
       verificar(p) { return (p.quiz_consecutivos_80 || 0) >= 5; }
     },
     {
       id: 'notturno',
       emoji: '🌙',
-      nome: 'Night Owl',
+      get nome() { return I18n.t('ach_notturno_name'); },
       get descricao() { return I18n.t('ach_notturno'); },
       verificar(p) { return (p.ultimo_estudo_hora || -1) >= 22; }
     },
     {
       id: 'mattiniero',
       emoji: '☀️',
-      nome: 'Early Bird',
+      get nome() { return I18n.t('ach_mattiniero_name'); },
       get descricao() { return I18n.t('ach_mattiniero'); },
       verificar(p) { const h = p.ultimo_estudo_hora; return h !== undefined && h >= 0 && h < 7; }
     }
@@ -236,10 +236,10 @@ const Conquistas = {
         <span class="ach-progresso-label">${ganhas} / ${total}</span>
       </div>
       ${ganhas > 0 ? `
-        <div class="ach-secao-titulo">✅ Unlocked</div>
+        <div class="ach-secao-titulo">${I18n.t('ach_unlocked_section')}</div>
         <div class="ach-lista">${desbloqueadas.map(c => renderBadge(c, true)).join('')}</div>
       ` : ''}
-      <div class="ach-secao-titulo" style="margin-top:${ganhas > 0 ? '1rem' : '0'}">🔒 In progress</div>
+      <div class="ach-secao-titulo" style="margin-top:${ganhas > 0 ? '1rem' : '0'}">${I18n.t('ach_inprogress_section')}</div>
       <div class="ach-lista">${bloqueadas.map(c => renderBadge(c, false)).join('')}</div>
     `;
   }

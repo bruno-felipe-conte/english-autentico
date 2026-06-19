@@ -149,13 +149,13 @@ const Vocab = {
         ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
         ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
         ${App.ehFavorito(p.id) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
-        <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? 'Dominata' : sm2Icon === '📚' ? 'In apprendimento' : 'Nuova'}">${sm2Icon}</span>
+        <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
         ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remover palavra">🗑️</button>` : ''}
       `;
 
       // Click: pronounce normally; in blur mode clicking blurred cell reveals it
       item.style.cursor = 'pointer';
-      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.idioma === 'it' ? 'Clicca per ascoltare' : 'Clique para ouvir'} "${p.italiano}"`;
+      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.italiano}"`;
       if (this.blurColuna) {
         item.onclick = (e) => {
           const target = e.target.closest('.vocab-pt, .vocab-it');
@@ -376,7 +376,7 @@ const Vocab = {
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
 
-    App.notificar(`🃏 ${embaralhado.length} parole dal filtro attivo`, 'alerta');
+    App.notificar(I18n.t('vocab_parole_filtro').replace('{n}', embaralhado.length), 'alerta');
     Flashcards.mostrarCarta();
   }
 };

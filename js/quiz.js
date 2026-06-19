@@ -28,7 +28,7 @@ const Quiz = {
       if (container) container.style.display = 'block';
       if (resultado)  resultado.style.display  = 'none';
       if (seletor)    seletor.style.display     = 'none';
-      App.notificar(`↩️ Retomando da pergunta ${this.perguntaAtual + 1}`, 'alerta');
+      App.notificar(I18n.t('quiz_resume_notif').replace('{n}', this.perguntaAtual + 1), 'alerta');
       this.mostrarPergunta();
       return;
     }
@@ -122,12 +122,12 @@ const Quiz = {
         templo: temploNum,
         tipo: 'vocabulario',
         nivel: data.nivel || 'A1',
-        pergunta: I18n.idioma === 'it' ? `Cosa significa "${termoStr}"?` : `O que significa "${termoStr}"?`,
+        pergunta: I18n.t('quiz_what_does_mean').replace('{w}', termoStr),
         resposta_correta: p.portugues,
         alternativas: alternativas,
         explicacao: p.exemplo
-          ? (I18n.idioma === 'it' ? `"${termoStr}" significa "${p.portugues}". Esempio: ${p.exemplo}` : `"${termoStr}" significa "${p.portugues}". Exemplo: ${p.exemplo}`)
-          : `"${termoStr}" significa "${p.portugues}".`,
+          ? I18n.t('quiz_means_example').replace('{w}', termoStr).replace('{t}', p.portugues).replace('{e}', p.exemplo)
+          : I18n.t('quiz_means_simple').replace('{w}', termoStr).replace('{t}', p.portugues),
         xp_recompensa: 20
       });
     });
@@ -156,7 +156,7 @@ const Quiz = {
 
     // Question type badge
     const tipoBadge = document.getElementById('quiz-tipo');
-    if (tipoBadge) tipoBadge.textContent = p.tipo || 'Vocabolario';
+    if (tipoBadge) tipoBadge.textContent = I18n.t('quiz_tipo_' + p.tipo) || p.tipo || I18n.t('quiz_tipo_vocabulario');
 
     // Question text
     const perguntaEl = document.getElementById('quiz-pergunta');
@@ -359,7 +359,7 @@ const Quiz = {
     if (Progressao.temploDesbloqueado(1)) {
       const btnMisto = document.createElement('button');
       btnMisto.className = 'quiz-templo-btn';
-      btnMisto.innerHTML = I18n.idioma === 'pt' ? '🌍 Quiz Misto<br><small>Todos os templos</small>' : '🌍 Mixed Quiz<br><small>All temples combined</small>';
+      btnMisto.innerHTML = I18n.t('quiz_mixed_title');
       btnMisto.style.gridColumn = '1 / -1'; // span full width
       btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
       btnMisto.style.color = 'white';
@@ -445,8 +445,8 @@ const Quiz = {
       gramData.moduli.forEach(mod => {
         const btn = document.createElement('button');
         btn.className = 'quiz-templo-btn quiz-gram-btn';
-        btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.livello);
-        btn.onclick = () => this.iniciarGramatica(mod.livello);
+        btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.id);
+        btn.onclick = () => this.iniciarGramatica(mod.id);
         seletor.appendChild(btn);
       });
     }
@@ -521,7 +521,7 @@ const Quiz = {
         pergunta: I18n.t('quiz_morf_genero_pergunta').replace('{w}', termoStr),
         resposta_correta: corretoIT,
         alternativas: [I18n.t('quiz_morf_genero_masc'), I18n.t('quiz_morf_genero_fem')],
-        explicacao: I18n.t('quiz_morf_genero_exp').replace('{w}', termoStr).replace('{g}', corretoIT) + (p.plural ? ` (${I18n.idioma === 'it' ? 'plurale' : 'plural'}: ${p.plural})` : '') + '.',
+        explicacao: I18n.t('quiz_morf_genero_exp').replace('{w}', termoStr).replace('{g}', corretoIT) + (p.plural ? ` (plural: ${p.plural})` : '') + '.',
         xp_recompensa: 20
       });
     });
@@ -657,10 +657,10 @@ const Quiz = {
         id: `list_${p.id}`, templo: temploNum, tipo: 'listening',
         nivel: data.nivel || 'A1',
         ingles: termoStr,
-        pergunta: `Qual foi a palavra dita? (${p.portugues})`,
+        pergunta: I18n.t('quiz_what_was_said').replace('{p}', p.portugues),
         resposta_correta: termoStr,
         alternativas: alternativas,
-        explicacao: `A palavra dita foi "${termoStr}".`,
+        explicacao: I18n.t('quiz_was_said_exp').replace('{w}', termoStr),
         xp_recompensa: 25
       });
     });
@@ -690,36 +690,26 @@ const Quiz = {
 
   _gerarGramatica(livello) {
     const data = App.estado.grammarData || { moduli: [] };
-    const modulo = data.moduli.find(m => m.livello === livello);
+    const modulo = data.moduli.find(m => m.id === livello);
     if (!modulo || !modulo.lezioni) return [];
 
     const perguntas = [];
     
     modulo.lezioni.forEach(lez => {
-      (lez.esempi || []).forEach(ex => {
-        if (!ex.it || !ex.pt) return;
-        
-        const palavras = ex.it.split(' ').map(w => w.replace(/[.,?!]/g, ''));
-        const candidatas = palavras.filter(w => w.length > 2);
-        if (candidatas.length === 0) return;
-        
-        const oculta = candidatas[Math.floor(Math.random() * candidatas.length)];
-        const regex = new RegExp(`\\b${oculta}\\b`, 'i');
-        const perguntaTexto = ex.it.replace(regex, '___');
-        
-        const poolErradas = ["di", "a", "da", "in", "con", "su", "per", "tra", "fra", "il", "lo", "la", "i", "gli", "le", "un", "una", "e", "sono", "ho", "hai", "ha", "abbiamo", "avete", "hanno"].filter(w => w !== oculta.toLowerCase());
-        const erradas = this._embaralhar(poolErradas).slice(0, 3);
-        
-        perguntas.push({
-          id: `gram_${Math.random().toString(36).substr(2, 9)}`,
-          tipo: 'gramática',
-          nivel: livello,
-          pergunta: `${perguntaTexto} (${ex.pt})`,
-          resposta_correta: oculta.toLowerCase(),
-          alternativas: this._embaralhar([oculta.toLowerCase(), ...erradas]),
-          explicacao: `A frase completa é: "${ex.it}"`,
-          xp_recompensa: 30
-        });
+      (lez.exercicios || []).forEach(ex => {
+        if (ex.tipo === 'escolha') {
+          const correta = ex.opcoes[ex.resposta];
+          perguntas.push({
+            id: `gram_${Math.random().toString(36).substr(2, 9)}`,
+            tipo: 'gramática',
+            nivel: livello,
+            pergunta: ex.pergunta,
+            resposta_correta: correta,
+            alternativas: this._embaralhar([...ex.opcoes]),
+            explicacao: ex.explicacao || '',
+            xp_recompensa: 30
+          });
+        }
       });
     });
     return perguntas;
