@@ -136,7 +136,7 @@ const Imitazione = {
 
   avaliarPronuncia(textoOuvido) {
     const item = this.dados.imitazioni[this.itemAtual];
-    const esperado = this.normalizeText(item.frase_italiano || item.frase);
+    const esperado = this.normalizeText(item.frase_italiano || item.frase_ingles || item.frase_inglês || item.frase || '');
     const recebido = this.normalizeText(textoOuvido);
 
     // Simple Jaro-Winkler or Levenshtein would be better, but we do simple string matching or token match
@@ -201,8 +201,8 @@ const Imitazione = {
           <span style="background:rgba(155,35,53,0.1);border-radius:4px;padding:0.1rem 0.4rem">${item.nivel}</span>
           ${item._custom ? `<button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:1.5px solid #c0392b;color:#c0392b;border-radius:6px;padding:0.1rem 0.45rem;font-size:0.72rem;cursor:pointer;font-weight:700;" title="${I18n.t('imit_remove_btn')}">🗑️ ${I18n.t('imit_remove_btn')}</button>` : ''}
         </div>
-        <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase}"</h3>
-        <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.traducao}</i></p>
+        <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase_ingles || item.frase_inglês || item.frase || ''}"</h3>
+        <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.frase_espanhol || item.traducao || ''}</i></p>
         
         <div style="background:var(--cor-marmore);padding:1rem;border-radius:12px;display:inline-block;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
           <div style="font-size:0.75rem;color:var(--cor-pietra);font-weight:700;text-transform:uppercase;margin-bottom:0.3rem">${I18n.t('imit_phonetic_hint')}</div>
@@ -210,7 +210,7 @@ const Imitazione = {
           <div style="font-family:monospace;color:var(--cor-pietra);font-size:0.8rem;margin-top:0.3rem">${item.audio_ipa}</div>
         </div>
         <br>
-        <button class="btn-audio" onclick="App.pronunciar('${(item.frase_italiano || item.frase).replace(/'/g, "\\'")}')" style="font-size:1.1rem;padding:0.6rem 1.2rem">${I18n.t('imit_btn_ouvir_exemplo')}</button>
+        <button class="btn-audio" onclick="App.pronunciar('${(item.frase_italiano || item.frase_ingles || item.frase_inglês || item.frase || '').replace(/'/g, "\\'")}')" style="font-size:1.1rem;padding:0.6rem 1.2rem">${I18n.t('imit_btn_ouvir_exemplo')}</button>
       </div>
 
       <div style="text-align:center;background:var(--cor-marmore-escuro);padding:2rem;border-radius:16px">
