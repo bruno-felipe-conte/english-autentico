@@ -860,11 +860,11 @@ const Grammatica = {
               <div class="gfc-en">${c.ingles}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
-              <div class="gfc-click">Clique para revelar 👆</div>
+              <div class="gfc-click">${I18n.t('gram_card_clique')}</div>
             </div>
             <div class="gram-flip-card-back">
-              <div class="gfc-titulo-regra">O Padrão:</div>
-              <div class="gfc-regra-txt">${c.motivo}</div>
+              <div class="gfc-titulo-regra">${I18n.t('gram_card_padrao')}</div>
+              <div class="gfc-regra-txt">${c.motivo || c.explicacao}</div>
             </div>
           </div>
         </div>`;
@@ -1021,15 +1021,14 @@ const Grammatica = {
 // Re-renderizar dinamicamente ao alterar o idioma do app
 document.addEventListener('i18n:changed', () => {
   const activeTab = document.querySelector('section.active');
-  if (activeTab && activeTab.id === 'sec-grammar') {
+  if (activeTab && activeTab.id === 'sec-grammatica') {
     if (Grammatica.unidadeAtual) {
       // Abre novamente a unidade atual para re-renderizar a teoria e exercícios no novo idioma
       Grammatica.abrirUnidade(Grammatica.moduloAtual.id, Grammatica.unidadeAtual.id);
     } else if (Grammatica.moduloAtual) {
-      Grammatica.abrirModulo(Grammatica.moduloAtual.id);
+      Grammatica.voltarSeletor();
     } else {
-      Grammatica.dados = null; // Força recarregar os dados localizados
-      Grammatica.mostrarSeletor();
+      Grammatica.voltarSeletor();
     }
   }
 });

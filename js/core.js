@@ -1047,7 +1047,7 @@ const App = {
   _pronunciarRV(texto) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 1.0;
+      const speed = parseFloat(localStorage.getItem('en_audio_speed')) || 0.85;
       responsiveVoice.speak(texto, 'US English Female', { rate: speed, pitch: 1 });
     }
   },
@@ -1064,7 +1064,7 @@ const App = {
     const tentarFalar = () => {
       const voz = this._getVozAmericana();
 
-      let speed = parseFloat(localStorage.getItem('en_audio_speed')) || 1.0;
+      let speed = parseFloat(localStorage.getItem('en_audio_speed')) || 0.85;
       speed = Math.max(0.1, Math.min(2.0, speed)); // Previne crashes de bounds out-of-range no WebKit
       
       const u = new SpeechSynthesisUtterance(texto);
@@ -1105,7 +1105,7 @@ const App = {
 
   toggleAudioSpeed() {
     const SPEEDS = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5];
-    const current = parseFloat(localStorage.getItem('en_audio_speed') || '1.0');
+    const current = parseFloat(localStorage.getItem('en_audio_speed') || '0.85');
     let idx = SPEEDS.indexOf(current);
     if (idx === -1) idx = SPEEDS.indexOf(1.0);
     const next = SPEEDS[(idx + 1) % SPEEDS.length];
@@ -1120,7 +1120,7 @@ const App = {
   atualizarAudioSpeedUI() {
     const btn = document.getElementById('btn-audio-speed');
     if (!btn) return;
-    const rate = parseFloat(localStorage.getItem('en_audio_speed') || '1.0');
+    const rate = parseFloat(localStorage.getItem('en_audio_speed') || '0.85');
     let label = rate % 1 === 0 ? rate.toFixed(0) : rate.toString().replace(/^0\./, '.');
     btn.textContent = label + 'x';
     // Sync profile slider if visible
