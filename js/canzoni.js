@@ -165,7 +165,6 @@ const Canzoni = {
     });
 
     c.innerHTML = `
-    c.innerHTML = `
       <div class="gram-lesson-nav">
         <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ ${I18n.t('btn_cancelar')}</button>
         <span style="font-size:0.9rem;font-weight:700">${idEditar ? I18n.t('can_editar_musica') : I18n.t('can_nova_musica')}</span>

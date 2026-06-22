@@ -2,9 +2,17 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('LocalStorage and State Handling', () => {
   test.beforeEach(async ({ page }) => {
-    // Disable onboarding tour
+    // Disable onboarding tour and Service Worker reloads
     await page.addInitScript(() => {
       window.localStorage.setItem('en_onboarding_done', 'true');
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register = () => new Promise(() => {}); // No-op
+        const originalAddEventListener = navigator.serviceWorker.addEventListener;
+        navigator.serviceWorker.addEventListener = function(type, listener, options) {
+          if (type === 'controllerchange') return;
+          return originalAddEventListener.apply(this, arguments);
+        };
+      }
     });
   });
 
@@ -25,7 +33,7 @@ test.describe('LocalStorage and State Handling', () => {
       };
       
       // Inject some mock flashcards to trigger GC
-      window.App.estado.flashcardData = {
+      App.estado.flashcardData = {
         cards: new Array(30).fill({}).map((_, i) => ({ id: `card_${i}`, deck: 't1' }))
       };
     });
@@ -39,11 +47,11 @@ test.describe('LocalStorage and State Handling', () => {
 
     // Trigger saving flashcards which will throw the mock QuotaExceededError
     await page.evaluate(() => {
-      window.App.salvarFlashcards();
+      App.salvarFlashcards();
     });
 
     // Verify Garbage Collection happened (reduced from 30 to 10 cards)
-    const cardCount = await page.evaluate(() => window.App.estado.flashcardData.cards.length);
+    const cardCount = await page.evaluate(() => App.estado.flashcardData.cards.length);
     expect(cardCount).toBe(10); // 30 - 20 = 10
   });
 
@@ -54,19 +62,26 @@ test.describe('LocalStorage and State Handling', () => {
     await page.evaluate(() => {
       // Mock an older date in localStorage
       const pastDate = new Date(Date.now() - 86400000 * 2).toISOString().slice(0, 10);
-      window.App.estado.progresso = {
+      App.estado.progresso = {
         ofensiva: 5,
         xp_hoje: 0,
-        data_xp_hoje: pastDate
+        data_xp_hoje: pastDate,
+        xp: 100,
+        nivel: 1,
+        streak: 5,
+        templos_desbloqueados: [1],
+        templos_concluidos: [],
+        total_palavras: 1000,
+        favoritos: []
       };
       // Trigger update
-      window.App.atualizarXP(50);
+      Progressao.ganhar(50);
     });
 
     const xpData = await page.evaluate(() => ({
-      ofensiva: window.App.estado.progresso.ofensiva,
-      xp_hoje: window.App.estado.progresso.xp_hoje,
-      data_hoje: window.App.estado.progresso.data_xp_hoje
+      ofensiva: App.estado.progresso.ofensiva,
+      xp_hoje: App.estado.progresso.xp_hoje,
+      data_hoje: App.estado.progresso.data_xp_hoje
     }));
 
     // Local timezone date check

@@ -15,17 +15,32 @@ test.describe('Offline and Service Worker Resilience', () => {
     const appContainer = page.locator('.app-container');
     await expect(appContainer).toBeVisible();
 
-    // Verify Service Worker registration
-    const swRegistration = await page.evaluate(async () => {
-      const registration = await navigator.serviceWorker.ready;
-      return !!registration;
-    });
+    // Verify Service Worker registration, handling context destruction from SW reload
+    let swRegistration;
+    try {
+      swRegistration = await page.evaluate(async () => {
+        const registration = await navigator.serviceWorker.ready;
+        return !!registration;
+      });
+    } catch (e) {
+      // If reload happened, wait for the page load and retry
+      await page.waitForLoadState('load');
+      swRegistration = await page.evaluate(async () => {
+        const registration = await navigator.serviceWorker.ready;
+        return !!registration;
+      });
+    }
     expect(swRegistration).toBe(true);
   });
 
   test('Should fallback gracefully without network and cache (WSOD prevention)', async ({ page, context }) => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
+
+    // Wait for the Service Worker to be ready
+    await page.evaluate(async () => {
+      await navigator.serviceWorker.ready;
+    });
 
     // Simulate offline mode
     await context.setOffline(true);
@@ -38,7 +53,7 @@ test.describe('Offline and Service Worker Resilience', () => {
     await expect(errorScreen).toHaveCount(0);
 
     // Verify that the fallback JSON prevented a crash, allowing the app container to render
-    const menuTitle = page.locator('.menu-titulo').first();
+    const menuTitle = page.locator('.section-titulo').first();
     await expect(menuTitle).toBeVisible();
   });
 });

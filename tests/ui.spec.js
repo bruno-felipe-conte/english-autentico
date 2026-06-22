@@ -2,9 +2,17 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('UI and User Journeys', () => {
   test.beforeEach(async ({ page }) => {
-    // Disable onboarding tour
+    // Disable onboarding tour and Service Worker reloads
     await page.addInitScript(() => {
       window.localStorage.setItem('en_onboarding_done', 'true');
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register = () => new Promise(() => {}); // No-op
+        const originalAddEventListener = navigator.serviceWorker.addEventListener;
+        navigator.serviceWorker.addEventListener = function(type, listener, options) {
+          if (type === 'controllerchange') return;
+          return originalAddEventListener.apply(this, arguments);
+        };
+      }
     });
   });
 
@@ -12,13 +20,13 @@ test.describe('UI and User Journeys', () => {
     await page.goto('/');
 
     // Wait for boot
-    await page.waitForSelector('.menu-btn');
+    await page.waitForSelector('.nav-tab');
     
     // Navigate to grammar
-    await page.evaluate(() => window.App.irPara('gramatica'));
+    await page.evaluate(() => App.navegar('grammatica'));
     
     // Wait for the grammar container
-    const grammarView = page.locator('#gramatica-view');
+    const grammarView = page.locator('#sec-grammatica');
     await expect(grammarView).toBeVisible();
 
     // Verify there are no raw markdown table characters like "|---|" showing in text
@@ -30,23 +38,30 @@ test.describe('UI and User Journeys', () => {
     await page.goto('/');
 
     // Wait for boot
-    await page.waitForSelector('.menu-btn');
+    await page.waitForSelector('.nav-tab');
 
     // Force load a dialogue to bypass navigation
-    await page.evaluate(() => {
+    await page.evaluate(async () => {
+      App.navegar('dialoghi');
+      // Wait for Dialoghi loader to finish and write selector HTML
+      await Dialoghi.carregar();
+      await new Promise(resolve => setTimeout(resolve, 50));
+      
       // Mock dialogue data for test
-      window.App.dialogoAtivo = {
+      Dialoghi.dialogoAtual = {
         titulo: "Test Dialogue",
-        linhas: [
-          { nome: "You", texto: "Hello there!", traducao: "Olá!" },
-          { nome: "Clerk", texto: "Hi! How can I help?", traducao: "Oi!" }
+        icone: "💬",
+        contexto: "Test Context",
+        turni: [
+          { id: 1, personaggio: "You", frase: "Hello there!", traducao: "Olá!" },
+          { id: 2, personaggio: "Clerk", frase: "Hi! How can I help?", traducao: "Oi!" }
         ]
       };
-      window.App.renderizarDialogo(window.App.dialogoAtivo);
-      window.App.irPara('dialogo');
+      Dialoghi.modo = 'leitura';
+      Dialoghi.renderizarDialogo();
     });
 
-    const dialogoView = page.locator('#dialogo-view');
+    const dialogoView = page.locator('#sec-dialoghi');
     await expect(dialogoView).toBeVisible();
 
     // Find the first bubble (You)

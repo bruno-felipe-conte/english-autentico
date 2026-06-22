@@ -194,7 +194,7 @@ const App = {
     // C1 topics
     39:11, 40:11, 42:11, 44:11, 45:11,
     // C2 topics
-    41:15, 47:15, 48:15, 49:15, 50:15,
+    41:15, 47:15, 48:15, 49:15, 50:15, 51:22,
   },
 
   // Secret unlock code — change to your personal password
@@ -223,6 +223,88 @@ const App = {
     'Austin is the city of tech, creativity, and work. This temple gives you professional vocabulary: resumes, meetings, negotiations, emails. The English of the workplace demands precision and respect.',
     // 10 Washington DC — B2
     'Washington DC is the home of American literature, rhetoric, and ideas. In the tenth temple you reach the summit: the language of literature, speeches, philosophy, and artistic expression. Words don\'t just communicate — they inspire.',
+    // 11 Philadelphia
+    'Philadelphia holds the secrets of the past. Explore history, milestones, and historical narratives in this temple.',
+    // 12 Phoenix
+    'Phoenix is energy and movement. Talk about schedules, time management, and the patterns of daily life.',
+    // 13 San Antonio
+    'San Antonio is warm and welcoming. Learn to describe routine tasks, hobbies, and simple daily interactions.',
+    // 14 San Diego
+    'San Diego is beach and city combined. Navigate urban spaces, neighborhoods, and the dynamic environment of city living.',
+    // 15 Dallas
+    'Dallas is about home and community. Discuss family connections, household objects, and comfortable living spaces.',
+    // 16 San Jose
+    'San Jose is innovation and art. Express your thoughts, creative ideas, hobbies, and design concepts.',
+    // 17 Austin (Second)
+    'Austin drives tech and commerce. Master vocabulary for companies, products, startup life, and basic economics.',
+    // 18 Jacksonville
+    'Jacksonville promotes a healthy life. Discuss symptoms, fitness routines, nutrition, and wellness practices.',
+    // 19 Fort Worth
+    'Fort Worth values diligence. Learn terms for workplace duties, projects, tools, and professional achievements.',
+    // 20 Columbus
+    'Columbus is a hub of travelers. Acquire key phrases for airports, hotels, bookings, and navigating foreign countries.',
+    // 21 Charlotte
+    'Charlotte is a center for learning. Master the vocabulary of classrooms, studies, assignments, and research basics.',
+    // 22 Seattle
+    'Seattle inspires introspection. Learn terms for emotions, habits, self-improvement, and future plans.',
+    // 23 Denver
+    'Denver is about community. Talk about friendship, social gatherings, celebrations, and networking.',
+    // 24 Portland
+    'Portland lives in the future. Discover words for software, hardware, internet tools, and digital communication.',
+    // 25 Las Vegas
+    'Las Vegas is culinary diversity. Master the vocabulary of restaurants, menus, cooking methods, and tastes.',
+    // 26 Memphis
+    'Memphis moves with energy. Talk about outdoor sports, leisure activities, games, and fitness.',
+    // 27 Detroit
+    'Detroit is soul and industry. Express your ideas about concerts, musical instruments, paintings, and performances.',
+    // 28 Oklahoma City
+    'Oklahoma City values the land. Discuss nature, weather phenomena, climate, and conservation.',
+    // 29 St. Louis
+    'St. Louis is about commerce. Understand vocabulary for banking, saving money, personal finance, and shopping.',
+    // 30 Louisville
+    'Louisville demands order. Learn about rules, rights, agreements, and public regulations.',
+    // 31 Baltimore
+    'Baltimore is a civic center. Discuss social issues, government systems, community projects, and public opinions.',
+    // 32 Milwaukee
+    'Milwaukee celebrates diversity. Explore traditions, festivals, cultural backgrounds, and history.',
+    // 33 Albuquerque
+    'Albuquerque is always connected. Learn to describe news events, media channels, articles, and public reports.',
+    // 34 Tucson
+    'Tucson invites deep reflection. Discuss values, ethical choices, abstract concepts, and logical arguments.',
+    // 35 Fresno
+    'Fresno is growth and observation. Learn terms for science experiments, facts, and logical deductions.',
+    // 36 Sacramento
+    'Sacramento is rich in history. Relive historical moments, eras, and major global events.',
+    // 37 Kansas City
+    'Kansas City lies at the heart. Master words for landscapes, countries, borders, and global geography.',
+    // 38 Mesa
+    'Mesa holds ancient stories. Discover tales of heroes, myths, folklore, and cultural legends.',
+    // 39 Atlanta (Second)
+    'Atlanta values spiritual history. Explore terms for beliefs, traditions, world religions, and philosophies.',
+    // 40 Virginia Beach
+    'Virginia Beach is a window to communication. Study grammar terms, idioms, and language learning strategies.',
+    // 41 Omaha
+    'Omaha is about focus. Learn to describe mental processes, recall techniques, and brain exercises.',
+    // 42 Colorado Springs
+    'Colorado Springs rises high. Master presentation skills, debate vocabulary, and speech delivery.',
+    // 43 Raleigh
+    'Raleigh is full of opportunity. Prepare for job interviews, resume reviews, and career discussions.',
+    // 44 Miami
+    'Miami is social energy. Connect with people, exchange contacts, and talk about collaborations.',
+    // 45 Long Beach
+    'Long Beach inspires guidance. Talk about teams, strategies, management, and leading projects.',
+    // 46 Oakland
+    'Oakland is about collaboration. Learn vocabulary for group work, division of labor, and collective effort.',
+    // 47 Minneapolis
+    'Minneapolis values peace. Express disagreement, negotiation points, and how to reach common ground.',
+    // 48 Wichita
+    'Wichita welcomes the world. Discuss cultural differences, global customs, and international communication.',
+    // 49 New Orleans (Second)
+    'New Orleans flows with complex structures. Master advanced relative clauses, conditionals, and subtle grammar rules.',
+    // 50 Tampa
+    'Tampa is the final summit. Refine your advanced English expressions, nuances, and idioms for perfect fluency.',
+    // 51 Oxford
+    'Oxford is the world-renowned center of excellence. Master advanced scientific terms, citations, peer reviews, and academic thesis writing.'
   ],
 
   // ── Initialization ─────────────────────────────────────────
@@ -606,7 +688,7 @@ const App = {
     if (!grid) return;
     grid.innerHTML = '';
 
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 1; i <= 51; i++) {
       if (!this.estado.templosData[i] && !this.TEMPLO_NIVEL_MINIMO[i]) continue; // templo não existe
       const data = this.estado.templosData[i];
       const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
@@ -616,7 +698,7 @@ const App = {
 
       // If data not loaded but temple is unlocked, show placeholder
       const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
-      const cidade = this.TEMPLO_CIDADES[i] || (data ? data.cidade : '—');
+      const cidade = (data && data.cidade) ? data.cidade : (this.TEMPLO_CIDADES[i] || '—');
       const nivel = data ? data.nivel : '—';
       const totalPalavras = data && data.palavras ? data.palavras.length : 0;
 
@@ -723,7 +805,7 @@ const App = {
     const concluido    = this.estado.progresso.templos_concluidos.includes(i);
     const cor          = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
     const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
-    const cidade       = this.TEMPLO_CIDADES[i] || (data ? data.cidade : '—');
+    const cidade       = (data && data.cidade) ? data.cidade : (this.TEMPLO_CIDADES[i] || '—');
     const nivel        = data ? data.nivel : '—';
     const desc         = this.TEMPLO_DESC[i] || '';
     const nivelMinimo  = this.TEMPLO_NIVEL_MINIMO[i] || i;
@@ -765,14 +847,9 @@ const App = {
             <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">${I18n.t('tm_take_quiz')}</button>
           </div>
         ` : `
-          <details class="tm-unlock-area">
-            <summary>${I18n.t('tm_access_code')}</summary>
-            <div class="tm-unlock-form">
-              <input id="tm-code-input" type="password" placeholder="${I18n.t('tm_code_placeholder')}" class="tm-code-input"
-                onkeydown="if(event.key==='Enter')App.tentarDesbloquear(${i})">
-              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">${I18n.t('tm_unlock')}</button>
-            </div>
-          </details>
+          <div class="tm-lock-help" style="text-align:center; padding:0.8rem; background:#fdf6e8; border:1px solid #e8d49a; border-radius:8px; font-size:0.83rem; color:#8a6520; font-weight:600;">
+            🔒 ${I18n.t('templo_requer_ajuda')}
+          </div>
         `}
       </div>
     `;

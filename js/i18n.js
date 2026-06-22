@@ -138,7 +138,8 @@ const I18n = {
     'meta_dias_restantes': { pt: '{n} dias restantes', en: '{n} days remaining' },
     'meta_no_ritmo': { pt: 'No ritmo atual:', en: 'At current pace:' },
     'meta_xp_necessarios': { pt: 'XP/dia necessários', en: 'XP/day needed' },
-    'templo_requer': { pt: 'Requer Nível {n} · Toque para inserir o código', en: 'Requires Level {n} · Tap to enter code' },
+    'templo_requer': { pt: 'Requer Nível {n} para desbloquear', en: 'Requires Level {n} to unlock' },
+    'templo_requer_ajuda': { pt: 'Continue estudando para subir de nível e desbloquear este templo!', en: 'Keep studying to level up and unlock this temple!' },
 
     // ── Heatmap ──
     'hm_atividades': { pt: 'atividades em', en: 'activities in' },
