@@ -274,6 +274,18 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
+    // Alerta motivacional global (visível em todas as abas)
+    if (u.alerta) {
+      html += `
+        <div class="gram-alerta-global">
+          <span class="gram-alerta-global-emoji">💬</span>
+          <div class="gram-alerta-global-conteudo">
+            <strong>${I18n.t('gram_por_que_importa')}</strong>
+            <p>${this._formatarPergunta(u.alerta)}</p>
+          </div>
+        </div>`;
+    }
+
     // Abas segmentadas
     html += '<div class="gram-lesson-tabs">';
     html += `<button id="gram-tab-btn-estudo" class="gram-tab-btn${estAtivo}" onclick="Grammatica.mudarAba('estudo')">📖 ${I18n.t('gram_aba_estudo')}</button>`;
@@ -393,9 +405,12 @@ const Grammatica = {
   _htmlRivelar(ex) {
     // Divide a resposta em palavras individuais com blur
     const partes = ex.resposta.split(/(\s+)/);
+    let wordCount = 0;
     const spans  = partes.map(p => {
       if (/^\s+$/.test(p)) return p; // espaços mantidos
-      return `<span class="gram-word-blur" onclick="Grammatica.togglePalavra(this)">${p}</span>`;
+      wordCount++;
+      const cls = 'gram-word-blur' + (wordCount === 1 ? ' first-blur' : '');
+      return `<span class="${cls}" onclick="Grammatica.togglePalavra(this)">${p}</span>`;
     }).join('');
 
     let html = '<div class="gram-revelar-area">';
@@ -598,15 +613,23 @@ const Grammatica = {
     const acertos = this.acertos;
     const pct     = total > 0 ? Math.round((acertos / total) * 100) : 0;
     const bonus   = 60;
+    const SCORE_MINIMO = 70;
 
     const completadas = (App.estado.progresso || {}).grammatica_completadas || [];
     const jaFeita     = completadas.includes(this.unidadeAtual.id);
+    let bonusConcedido = false;
+
     if (!jaFeita) {
-      completadas.push(this.unidadeAtual.id);
-      App.estado.progresso.grammatica_completadas = completadas;
-      App.salvarProgresso();
-      App.ganharXP(bonus);
-      App.notificar(I18n.t('notif_gram_capitolo').replace('{xp}', bonus), 'sucesso');
+      if (pct >= SCORE_MINIMO) {
+        completadas.push(this.unidadeAtual.id);
+        App.estado.progresso.grammatica_completadas = completadas;
+        App.salvarProgresso();
+        App.ganharXP(bonus);
+        App.notificar(I18n.t('notif_gram_capitolo').replace('{xp}', bonus), 'sucesso');
+        bonusConcedido = true;
+      } else {
+        App.notificar('Complete com 70%+ para conquistar o bônus de XP!', 'aviso');
+      }
     }
 
     if (typeof Calor !== 'undefined') Calor.registrar(total);
@@ -631,7 +654,7 @@ const Grammatica = {
         <div class="gram-res-title">${I18n.t('gram_capitulo_completo')}</div>
         <div class="gram-res-score">${acertos}<span>/${total}</span></div>
         <div class="gram-res-pct">${I18n.t('gram_pct_correto').replace('{a}', pct)}</div>
-        ${!jaFeita ? `<div class="gram-res-xp">${I18n.t('gram_bonus_xp').replace('{a}', bonus)}</div>` : ''}
+        ${bonusConcedido ? `<div class="gram-res-xp">${I18n.t('gram_bonus_xp').replace('{a}', bonus)}</div>` : ''}
         <div class="gram-res-msg">${msg}</div>
         <div class="gram-res-actions">
           <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Refazer</button>
@@ -843,8 +866,7 @@ const Grammatica = {
 
   // ─── FASE 1: Ancoragem ───
   _htmlFase1Ancoragem(u) {
-    if (!u.alerta) return '';
-    return `<div class="gram-alerta">💬 <strong>${I18n.t('gram_por_que_importa')}</strong><br>${this._formatarPergunta(u.alerta)}</div>`;
+    return '';
   },
 
   // ─── FASE 2: Observação (Flip Cards Clicáveis) ───
@@ -857,7 +879,7 @@ const Grammatica = {
         <div class="gram-flip-card" onclick="this.classList.toggle('flipped')">
           <div class="gram-flip-card-inner">
             <div class="gram-flip-card-front">
-              <div class="gfc-en">${c.ingles}</div>
+              <div class="gfc-en">${c.italiano || c.ingles}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
               <div class="gfc-click">${I18n.t('gram_card_clique')}</div>

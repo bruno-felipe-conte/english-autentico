@@ -777,3 +777,18 @@ body.dark-mode .dialogo-opcao.errada {
   background: #3a1e1e;
   color: #ef9a9a;
 }
+
+/* Identidade visual da tradução nas tabelas de gramática */
+.gram-tabela-traducao {
+  color: #8a7a60;
+  font-size: 0.88em;
+  font-style: italic;
+  font-weight: 400;
+}
+.gram-tabela-traducao.block-tr {
+  display: block;
+  margin-top: 2px;
+}
+body.dark-mode .gram-tabela-traducao {
+  color: #b0a595;
+}

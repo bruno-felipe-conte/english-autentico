@@ -249,6 +249,11 @@
         "errado": "I don't never eat meat.",
         "certo": "I never eat meat.",
         "explicacao": "A palavra 'never' já torna a frase negativa. Não use 'don't' com 'never'."
+      },
+      {
+        "errado": "Always I study at night.",
+        "certo": "I always study at night.",
+        "explicacao": "Advérbios de frequência ficam ENTRE o sujeito e o verbo principal em inglês, nunca no início da frase como no português ('Sempre eu estudo...')."
       }
     ],
     "coda": "A regra de ouro: Advérbio de frequência vai ANTES da maioria dos verbos, mas DEPOIS do verbo 'To Be'!",

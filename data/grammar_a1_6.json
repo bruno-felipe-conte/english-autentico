@@ -453,6 +453,11 @@
         "errado": "I have two blues shirts.",
         "certo": "I have two blue shirts.",
         "explicacao": "Adjetivos em inglês NUNCA vão para o plural, apenas o substantivo (shirts)."
+      },
+      {
+        "errado": "I have a car red.",
+        "certo": "I have a red car.",
+        "explicacao": "Em inglês, os adjetivos (características) sempre vêm ANTES do substantivo (a red car), ao contrário do português onde costumamos colocar depois ('um carro vermelho')."
       }
     ],
     "coda": "Lembre-se: no inglês a qualidade chega primeiro e nunca vai pro plural!",

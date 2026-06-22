@@ -44,6 +44,11 @@
         "errado": "Would you like any coffee?",
         "certo": "Would you like some coffee?",
         "explicacao": "Ao oferecer ou pedir algo polidamente (Would you like...? / Can I have...?), usamos 'some'."
+      },
+      {
+        "errado": "I don't know nothing.",
+        "certo": "I don't know anything.",
+        "explicacao": "O inglês não aceita dupla negação (usar duas palavras negativas na mesma frase). Se o verbo já está na negativa (don't), o objeto deve usar 'any' (anything), nunca 'no/nothing'."
       }
     ],
     "coda": "Lembre-se: 'Some' é positivo e prestativo (oferecimentos), enquanto 'Any' é para negativas e dúvidas!",
