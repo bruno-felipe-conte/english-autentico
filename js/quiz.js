@@ -252,6 +252,13 @@ const Quiz = {
       const xpBase = p.xp_recompensa || 20;
       this.xpTotal += xpBase * mult;
       if (typeof SomFeedback !== 'undefined') SomFeedback.correto();
+      // Remove da fila SRS se acertou durante revisão
+      if (this.temploAtual === 'revisao') {
+        try {
+          const fila = JSON.parse(localStorage.getItem('en_quiz_erros') || '[]');
+          localStorage.setItem('en_quiz_erros', JSON.stringify(fila.filter(e => e.id !== p.id)));
+        } catch (_) {}
+      }
     } else {
       this.combo = 0;
       if (typeof SomFeedback !== 'undefined') SomFeedback.errado();
@@ -328,14 +335,16 @@ const Quiz = {
     try { sessionStorage.removeItem('en_quiz_sessao'); } catch(_) {}
   },
 
-  mostrarResultado() {
-    this._limparSessao(); // sessão concluída — limpa
+  mostrarResultado(somenteUI = false) {
+    if (!somenteUI) {
+      this._limparSessao(); // sessão concluída — limpa
+    }
     const container = document.getElementById('quiz-container');
     const resultado = document.getElementById('quiz-resultado');
     if (container) container.style.display = 'none';
 
-    // Log quiz completion to heatmap diary (count actual questions answered)
-    if (typeof Calor !== 'undefined') Calor.registrar(this.perguntas.length || 1);
+    // Log quiz completion to heatmap diary (apenas na primeira chamada real)
+    if (!somenteUI && typeof Calor !== 'undefined') Calor.registrar(this.perguntas.length || 1);
     if (!resultado) return;
     resultado.style.display = 'block';
 
@@ -356,40 +365,38 @@ const Quiz = {
     if (xpEl) xpEl.textContent = I18n.t('quiz_xp_ganhos').replace('{n}', this.xpTotal);
     if (msgEl) msgEl.textContent = msg;
 
-    // Give XP (without XP toast — resultado screen is enough feedback)
-    if (this.xpTotal > 0) {
-      Progressao.ganhar(this.xpTotal);
+    // Give XP e streak apenas na primeira chamada (não em re-renders por i18n)
+    if (!somenteUI) {
+      if (this.xpTotal > 0) Progressao.ganhar(this.xpTotal);
+      this._atualizarStreak();
     }
 
-    // M-6: Atualizar streak após quiz completo
-    this._atualizarStreak();
-
-    // Check achievements
-    if (typeof Conquistas !== 'undefined') {
-      const p = App.estado.progresso;
-      if (p) {
-        if (pct >= 80) p.quiz_consecutivos_80 = (p.quiz_consecutivos_80 || 0) + 1;
-        else p.quiz_consecutivos_80 = 0;
-        App.salvarProgresso();
+    // Conquistas e histórico apenas na primeira chamada (não em re-renders por i18n)
+    if (!somenteUI) {
+      if (typeof Conquistas !== 'undefined') {
+        const p = App.estado.progresso;
+        if (p) {
+          if (pct >= 80) p.quiz_consecutivos_80 = (p.quiz_consecutivos_80 || 0) + 1;
+          else p.quiz_consecutivos_80 = 0;
+          App.salvarProgresso();
+        }
+        if (pct === 100) Conquistas.ganharQuizPerfetto();
+        Conquistas.verificar();
       }
-      if (pct === 100) Conquistas.ganharQuizPerfetto();
-      Conquistas.verificar();
-    }
 
-    // Save to quiz history
-    try {
-      const historico = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]');
-      historico.unshift({
-        templo: this.temploAtual,
-        pontuacao: pct,
-        xp_ganho: this.xpTotal,
-        acertos: this.pontuacao,
-        total: total,
-        data: Date.now()
-      });
-      // Keep only last 50 entries
-      localStorage.setItem('en_quiz_historico', JSON.stringify(historico.slice(0, 50)));
-    } catch (e) { /* ignore */ }
+      try {
+        const historico = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]');
+        historico.unshift({
+          templo: this.temploAtual,
+          pontuacao: pct,
+          xp_ganho: this.xpTotal,
+          acertos: this.pontuacao,
+          total: total,
+          data: Date.now()
+        });
+        localStorage.setItem('en_quiz_historico', JSON.stringify(historico.slice(0, 50)));
+      } catch (e) { /* ignore */ }
+    }
   },
 
   // ── Return to temple selector ──────────────────────────────
@@ -675,12 +682,13 @@ const Quiz = {
   _salvarErro(pergunta) {
     try {
       const fila = JSON.parse(localStorage.getItem('en_quiz_erros') || '[]');
-      // Remove duplicado
+      // Conta tentativas ANTES de remover o duplicado
+      const existing = fila.find(e => e.id === pergunta.id);
+      const tentativas = existing ? (existing.tentativas || 1) : 0;
       const idx = fila.findIndex(e => e.id === pergunta.id);
       if (idx >= 0) fila.splice(idx, 1);
 
       // Calcula próxima revisão (SRS simples: 1min, 10min, 1h, 1d, 3d)
-      const tentativas = (fila.filter(e => e.id === pergunta.id).length);
       const intervalos = [60000, 600000, 3600000, 86400000, 259200000];
       const intervalo = intervalos[Math.min(tentativas, intervalos.length - 1)];
 
@@ -880,9 +888,12 @@ const Quiz = {
       return;
     }
     
-    document.getElementById('quiz-container').style.display = 'block';
-    document.getElementById('quiz-resultado').style.display = 'none';
-    document.getElementById('quiz-templo-selector').style.display = 'none';
+    const cont1 = document.getElementById('quiz-container');
+    const res1  = document.getElementById('quiz-resultado');
+    const sel1  = document.getElementById('quiz-templo-selector');
+    if (cont1) cont1.style.display = 'block';
+    if (res1)  res1.style.display  = 'none';
+    if (sel1)  sel1.style.display  = 'none';
     this.mostrarPergunta();
   },
 
@@ -928,9 +939,12 @@ const Quiz = {
       return;
     }
     
-    document.getElementById('quiz-container').style.display = 'block';
-    document.getElementById('quiz-resultado').style.display = 'none';
-    document.getElementById('quiz-templo-selector').style.display = 'none';
+    const cont2 = document.getElementById('quiz-container');
+    const res2  = document.getElementById('quiz-resultado');
+    const sel2  = document.getElementById('quiz-templo-selector');
+    if (cont2) cont2.style.display = 'block';
+    if (res2)  res2.style.display  = 'none';
+    if (sel2)  sel2.style.display  = 'none';
     this.mostrarPergunta();
   },
 
@@ -946,7 +960,7 @@ const Quiz = {
         if (ex.tipo === 'escolha') {
           const correta = ex.opcoes[ex.resposta];
           perguntas.push({
-            id: `gram_${Math.random().toString(36).substr(2, 9)}`,
+            id: `gram_${livello}_${ex.pergunta.slice(0,32).replace(/\s+/g,'_')}`,
             tipo: 'gramática',
             nivel: livello,
             pergunta: ex.pergunta,
@@ -991,7 +1005,7 @@ document.addEventListener('i18n:changed', () => {
   if (!seletor && !resultado && !pergunta) return;
 
   if (resultado && resultado.style.display !== 'none') {
-    Quiz.mostrarResultado();
+    Quiz.mostrarResultado(true); // somenteUI — não regrava XP/streak/histórico
   } else if (document.getElementById('quiz-container')?.style.display !== 'none') {
     Quiz.mostrarPergunta();
   } else {

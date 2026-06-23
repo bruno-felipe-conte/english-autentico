@@ -853,3 +853,21 @@ body.dark-mode .dialogo-opcao.errada {
 body.dark-mode .gram-tabela-traducao {
   color: #b0a595;
 }
+
+/* ── QW: prefers-reduced-motion for vocab ── */
+@media (prefers-reduced-motion: reduce) {
+  .vocab-item {
+    transition: none !important;
+    animation: none !important;
+  }
+  .vocab-item:hover {
+    transform: none !important;
+  }
+}
+
+/* ── QW: Focus visible for vocab items ── */
+.vocab-item:focus-visible {
+  outline: 2px solid var(--cor-veneziano);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

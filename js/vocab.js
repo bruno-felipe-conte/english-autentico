@@ -10,6 +10,7 @@ const Vocab = {
   filtroDificeis:   false,
   filtroFavoritos:  false,
   blurColuna: null,   // null | 'pt' | 'it'
+  _onboardingMostrado: false,
 
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
@@ -19,9 +20,22 @@ const Vocab = {
 
     const todos = App.estado.vocabCache;
     if (!todos || todos.length === 0) {
-      listEl.innerHTML = `<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma_palavra')}</p>`;
+      // Empty state — nenhum vocabulário carregado
+      listEl.innerHTML = `<div style="text-align:center;padding:2.5rem 1rem;color:var(--cor-inchiostro-claro)">
+        <div style="font-size:2.5rem;margin-bottom:0.5rem">📚</div>
+        <div style="font-weight:600;margin-bottom:0.3rem">No words yet</div>
+        <div style="font-size:0.85rem;color:var(--cor-pietra)">Add words to your temples to build your vocabulary. Each temple needs at least 4 words.</div>
+      </div>`;
       if (statsEl) statsEl.textContent = '';
       return;
+    }
+
+    // Onboarding banner (primeira vez)
+    if (!this._onboardingMostrado) {
+      this._onboardingMostrado = true;
+      setTimeout(() => {
+        App.notificar('💡 Vocab tip: Use "Hide EN" or "Hide PT" to test yourself!', 'alerta');
+      }, 800);
     }
 
     // Update origin pills active state
@@ -119,14 +133,29 @@ const Vocab = {
     const visivel = filtrados.slice(0, 100);
 
     if (visivel.length === 0) {
-      listEl.innerHTML = `<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma')}</p>`;
+      // Empty state — filtro sem resultados
+      const filtrosAtivos = [];
+      if (this.filtroTexto) filtrosAtivos.push(`search: "${this.filtroTexto}"`);
+      if (this.filtroTemplo) filtrosAtivos.push(`temple: ${this.filtroTemplo}`);
+      if (this.filtroCategoria) filtrosAtivos.push(`category: ${this.filtroCategoria}`);
+      if (this.filtroDificeis) filtrosAtivos.push('difficult words');
+      if (this.filtroFavoritos) filtrosAtivos.push('favorites');
+      listEl.innerHTML = `<div style="text-align:center;padding:2.5rem 1rem;color:var(--cor-inchiostro-claro)">
+        <div style="font-size:2.5rem;margin-bottom:0.5rem">🔍</div>
+        <div style="font-weight:600;margin-bottom:0.3rem">No words match your filters</div>
+        <div style="font-size:0.85rem;color:var(--cor-pietra)">${filtrosAtivos.length > 0 ? 'Active filters: ' + filtrosAtivos.join(', ') : 'Try adjusting your filters'}</div>
+        <button onclick="Vocab.limparFiltros()" style="margin-top:0.8rem;padding:0.4rem 1rem;background:var(--cor-veneziano);color:#fff;border:none;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer">Clear all filters</button>
+      </div>`;
       return;
     }
 
     listEl.innerHTML = '';
-    visivel.forEach(p => {
+    visivel.forEach((p, idx) => {
       const item = document.createElement('div');
       item.className = 'vocab-item';
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'listitem');
+      item.setAttribute('aria-label', `${p.italiano || ''} — ${p.portugues || ''}`);
 
       // Determine FSRS status
       const sm = App.estado.flashcardData[p.id];
@@ -147,15 +176,16 @@ const Vocab = {
         <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
         ${p.categoria ? `<span class="vocab-cat-badge">${this._escapar(p.categoria)}</span>` : ''}
         ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
-        ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
+        ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} errors">⚠️ ${erros}</span>` : ''}
         ${App.ehFavorito(p.id) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
-        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remover palavra">🗑️</button>` : ''}
+        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
       `;
 
       // Click: pronounce normally; in blur mode clicking blurred cell reveals it
       item.style.cursor = 'pointer';
       item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.italiano}"`;
+      item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } };
       if (this.blurColuna) {
         item.onclick = (e) => {
           const target = e.target.closest('.vocab-pt, .vocab-it');
@@ -320,6 +350,20 @@ const Vocab = {
     const d = document.createElement('div');
     d.textContent = str;
     return d.innerHTML;
+  },
+
+  // ── Clear all filters ──────────────────────────────────────
+  limparFiltros() {
+    this.filtroTexto = '';
+    this.filtroTemplo = '';
+    this.filtroCategoria = '';
+    this.filtroOrigem = '';
+    this.filtroDificeis = false;
+    this.filtroFavoritos = false;
+    ['vocab-busca','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+    this.renderizar();
   },
 
   // ── Inicia flashcards com as palavras do filtro atual ───────
