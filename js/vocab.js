@@ -11,6 +11,8 @@ const Vocab = {
   filtroFavoritos:  false,
   blurColuna: null,   // null | 'pt' | 'it'
   _onboardingMostrado: false,
+  _ordenarPor: '',    // '' | 'alfabetica' | 'nivel' | 'progresso' | 'categoria'
+  _expandido: false,  // modo expandido (mais informações por palavra)
 
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
@@ -24,7 +26,7 @@ const Vocab = {
       listEl.innerHTML = `<div style="text-align:center;padding:2.5rem 1rem;color:var(--cor-inchiostro-claro)">
         <div style="font-size:2.5rem;margin-bottom:0.5rem">📚</div>
         <div style="font-weight:600;margin-bottom:0.3rem">No words yet</div>
-        <div style="font-size:0.85rem;color:var(--cor-pietra)">Add words to your temples to build your vocabulary. Each temple needs at least 4 words.</div>
+        <div style="font-size:0.85rem;color:var(--cor-pietra)">Add words to your temples to build your vocabulary.</div>
       </div>`;
       if (statsEl) statsEl.textContent = '';
       return;
@@ -88,6 +90,32 @@ const Vocab = {
       filtrados = filtrados.filter(p => favIds.includes(p.id));
     }
 
+    // NOVO: Ordenação
+    if (this._ordenarPor) {
+      filtrados = [...filtrados].sort((a, b) => {
+        switch (this._ordenarPor) {
+          case 'alfabetica':
+            return (a.italiano || '').localeCompare(b.italiano || '', 'en');
+          case 'categoria':
+            return (a.categoria || '').localeCompare(b.categoria || '');
+          case 'nivel': {
+            const lvlA = (App.estado.templosData[a.templo_num]?.nivel || 'Z');
+            const lvlB = (App.estado.templosData[b.templo_num]?.nivel || 'Z');
+            return lvlA.localeCompare(lvlB);
+          }
+          case 'progresso': {
+            const smA = App.estado.flashcardData[a.id];
+            const smB = App.estado.flashcardData[b.id];
+            const repsA = smA ? (smA.reps || smA.repeticoes || 0) : 0;
+            const repsB = smB ? (smB.reps || smB.repeticoes || 0) : 0;
+            return repsA - repsB; // menos estudadas primeiro
+          }
+          default:
+            return 0;
+        }
+      });
+    }
+
     // Count difficult words (for badge)
     const numDificeis = todos.filter(p => {
       const fsrs = App.estado.flashcardData[p.id];
@@ -121,7 +149,7 @@ const Vocab = {
           ? I18n.t('vocab_palavras_total').replace('{n}', total)
           : I18n.t('vocab_resultados').replace('{m}', mostrando).replace('{f}', filtrados.length).replace('{t}', total);
 
-      // Botão "estudar este filtro" só aparece quando há filtro ativo e resulados
+      // Botão "estudar este filtro" só aparece quando há filtro ativo e resultados
       const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos;
       const btnEstudar = (temFiltro && filtrados.length > 0)
         ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#9B2335;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">${I18n.t('vocab_estudar_filtro')}</button>`
@@ -149,10 +177,21 @@ const Vocab = {
       return;
     }
 
+    // NOVO: Estatísticas por categoria
+    const cats = {};
+    filtrados.forEach(p => {
+      const cat = p.categoria || 'Uncategorized';
+      cats[cat] = (cats[cat] || 0) + 1;
+    });
+
     listEl.innerHTML = '';
+
+    // NOVO: Modo expandido — mostra mais informações
+    const modoExpandido = this._expandido;
+
     visivel.forEach((p, idx) => {
       const item = document.createElement('div');
-      item.className = 'vocab-item';
+      item.className = `vocab-item${modoExpandido ? ' vocab-item-expanded' : ''}`;
       item.setAttribute('tabindex', '0');
       item.setAttribute('role', 'listitem');
       item.setAttribute('aria-label', `${p.italiano || ''} — ${p.portugues || ''}`);
@@ -160,9 +199,13 @@ const Vocab = {
       // Determine FSRS status
       const sm = App.estado.flashcardData[p.id];
       let sm2Icon = '🌱'; // new
+      let sm2Pct = 0;
       if (sm) {
-        if ((sm.reps >= 3) || (sm.repeticoes >= 3) || (sm.stability > 7)) sm2Icon = '⭐'; // mastered
-        else sm2Icon = '📚'; // learning
+        const reps = sm.reps || sm.repeticoes || 0;
+        const stability = sm.stability || 0;
+        if ((reps >= 3) || (stability > 7)) { sm2Icon = '⭐'; sm2Pct = 100; }
+        else if (reps > 0) { sm2Icon = '📚'; sm2Pct = Math.min(99, Math.round((reps / 3) * 100)); }
+        else { sm2Pct = 0; }
       }
       const erros = sm ? (sm.erros || 0) : 0;
 
@@ -170,15 +213,28 @@ const Vocab = {
       const temploData = App.estado.templosData[p.templo_num];
       const nivel = temploData ? temploData.nivel : '';
 
+      // NOVO: Exemplo de uso (se disponível)
+      const exemploHtml = p.exemplo
+        ? `<div class="vocab-exemplo" style="font-size:0.78rem;color:var(--cor-pietra);font-style:italic;margin-top:0.2rem">"${this._escapar(p.exemplo)}"</div>`
+        : '';
+
+      // NOVO: Barra de progresso FSRS
+      const progressoHtml = `<div class="vocab-progresso" style="width:40px;height:4px;background:#e0e0e0;border-radius:2px;margin-top:0.2rem;overflow:hidden"><div style="width:${sm2Pct}%;height:100%;background:${sm2Pct >= 100 ? '#27AE60' : sm2Pct > 0 ? '#F39C12' : '#ccc'};border-radius:2px;transition:width 0.3s"></div></div>`;
+
+      // NOVO: Coluna categoria com cor
+      const catCor = this._corParaCategoria(p.categoria);
+
       item.innerHTML = `
         <span class="vocab-it">${this._escapar(p.italiano || '—')}</span>
         <span class="vocab-seta">→</span>
         <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
-        ${p.categoria ? `<span class="vocab-cat-badge">${this._escapar(p.categoria)}</span>` : ''}
+        ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
         ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
         ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} errors">⚠️ ${erros}</span>` : ''}
-        ${App.ehFavorito(p.id) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
+        ${App.ehFavorito(p.id) ? '<span class="vocab-fav-badge">❤️</span>' : ''}
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
+        ${progressoHtml}
+        ${exemploHtml}
         ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
       `;
 
@@ -350,6 +406,20 @@ const Vocab = {
     const d = document.createElement('div');
     d.textContent = str;
     return d.innerHTML;
+  },
+
+  // ── NOVO: Cor por categoria ────────────────────────────────
+  _coresCategorias: {},
+  _coresDisponiveis: ['#1a5276','#117a65','#7d3c98','#c0392b','#d4a017','#2e86c1','#28b463','#8e44ad','#e67e22','#2c3e50'],
+  _corCatIdx: 0,
+  _corParaCategoria(cat) {
+    if (!cat) return '';
+    const key = cat.toLowerCase();
+    if (!this._coresCategorias[key]) {
+      this._coresCategorias[key] = this._coresDisponiveis[this._corCatIdx % this._coresDisponiveis.length];
+      this._corCatIdx++;
+    }
+    return this._coresCategorias[key];
   },
 
   // ── Clear all filters ──────────────────────────────────────
