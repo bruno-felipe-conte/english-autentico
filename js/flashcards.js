@@ -191,8 +191,9 @@ const Flashcards = {
     }
     this.temploAtual     = templo;
     this.praticandoTodas = false;
-    this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
+    this._metricasIniciarSessao();
     this.carregarCartas();
     this.indiceAtual = 0;
     this.virada      = false;
@@ -296,9 +297,15 @@ const Flashcards = {
       // 📖 Context: show example sentence with blank
       const ex = this.cartaAtual.exemplo || '';
       const mascarada = ex ? this._mascarar(this.cartaAtual.italiano, ex) : null;
-      if (elIt) elIt.textContent = mascarada || `${this.cartaAtual.italiano} → ?`;
+      if (mascarada) {
+        if (elIt) elIt.textContent = mascarada;
+        if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
+      } else {
+        // Example not available — show explicit notice instead of silent degradation
+        if (elIt) elIt.textContent = I18n.t('fc_contexto_sem_exemplo');
+        if (elDica) elDica.textContent = I18n.t('fc_contexto_sem_exemplo_hint');
+      }
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
-      if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else if (this.modoReverso) {
       // 🔄 Reverse: PT front, IT back
@@ -361,6 +368,26 @@ const Flashcards = {
     elInfo.innerHTML = `<strong>${atual}</strong> / ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}${rStr}`;
   },
 
+  // ── Streak badge update during session ───────────────────
+  _atualizarStreakBadge() {
+    const el = document.getElementById('fc-streak-badge');
+    if (!el || !this.sessaoStats) return;
+    const s = this.sessaoStats.streakAtual;
+    if (s >= 3) {
+      el.textContent = `🔥 ${s}`;
+      el.style.display = 'inline-block';
+    } else {
+      el.style.display = 'none';
+    }
+  },
+
+  // ── Show XP bonus badge after rating in context/listen mode ─
+  _mostrarXpBonus(xpBonus) {
+    if (xpBonus <= 0) return;
+    const modeKey = this.modoContexto ? 'fc_xp_bonus_contexto' : 'fc_xp_bonus_escuta';
+    App.notificar(I18n.t(modeKey).replace('{n}', xpBonus), 'sucesso');
+  },
+
   // ── Flip card to reveal answer ─────────────────────────────
   virar() {
     if (this.virada || !this.cartaAtual) return;
@@ -376,6 +403,43 @@ const Flashcards = {
       actions.style.display = 'grid';
       this._atualizarBotoesIntervalo();
       if (this.dicaUsada) this._aplicarPenalidadeDica();
+    }
+
+    // Modo Reverso: inject optional typing field before answer
+    if (this.modoReverso) {
+      const elTrad = document.getElementById('card-traducao');
+      if (elTrad && !document.getElementById('fc-reverso-input')) {
+        const wrapper = document.createElement('div');
+        wrapper.id = 'fc-reverso-input-wrap';
+        wrapper.style.cssText = 'margin:0.5rem 0;display:flex;gap:0.4rem;align-items:center;';
+        wrapper.innerHTML = `
+          <input id="fc-reverso-input" type="text"
+            placeholder="${I18n.t('fc_reverso_placeholder')}"
+            style="flex:1;padding:0.35rem 0.6rem;border-radius:6px;border:1px solid var(--cor-borda, #ccc);font-size:0.9rem;"
+            onkeydown="if(event.key==='Enter')Flashcards._verificarReversoInput()">
+          <button onclick="Flashcards._verificarReversoInput()"
+            style="padding:0.35rem 0.7rem;border-radius:6px;background:var(--cor-primaria,#4a90d9);color:#fff;border:none;cursor:pointer;font-size:0.85rem;">
+            ${I18n.t('fc_reverso_verificar')}
+          </button>`;
+        elTrad.parentNode.insertBefore(wrapper, elTrad);
+        document.getElementById('fc-reverso-input')?.focus();
+      }
+    }
+  },
+
+  _verificarReversoInput() {
+    const input = document.getElementById('fc-reverso-input');
+    if (!input || !this.cartaAtual) return;
+    const digitado = input.value.trim().toLowerCase().replace(/[.,!?;:]/g, '');
+    const alvo = (this.cartaAtual.italiano || '').toLowerCase().replace(/[.,!?;:]/g, '');
+    const acertou = digitado === alvo || alvo.includes(digitado) && digitado.length >= alvo.length * 0.8;
+    const wrap = document.getElementById('fc-reverso-input-wrap');
+    if (acertou) {
+      if (wrap) wrap.innerHTML = `<span style="color:var(--cor-sucesso,#2ecc71);font-weight:bold;">✅ ${I18n.t('fc_reverso_acerto')} +3 XP</span>`;
+      // Grant bonus XP for verified production
+      if (typeof Progressao !== 'undefined') Progressao.ganhar(3);
+    } else {
+      if (wrap) wrap.innerHTML = `<span style="color:var(--cor-erro,#e74c3c);">❌ ${I18n.t('fc_reverso_erro').replace('{alvo}', this.cartaAtual.italiano)}</span>`;
     }
   },
 
@@ -485,6 +549,7 @@ const Flashcards = {
           App.salvarProgresso();
           App.atualizarStats();
         }
+        if (xpBonus > 0) this._mostrarXpBonus(xpBonus);
       }
 
       // Track session stats
@@ -495,7 +560,25 @@ const Flashcards = {
         if (wasNew && updated.state === 'review') {
           this.sessaoStats.novas.push(carta);
         }
+        // Streak: increments on Good/Easy, resets on Again/Hard
+        if (rating >= 3) {
+          this.sessaoStats.streakAtual++;
+          if (this.sessaoStats.streakAtual > this.sessaoStats.streak) {
+            this.sessaoStats.streak = this.sessaoStats.streakAtual;
+          }
+        } else {
+          this.sessaoStats.streakAtual = 0;
+        }
+        this._atualizarStreakBadge();
       }
+
+      // Human feedback when user presses Again (zero XP shouldn't feel like rejection)
+      if (rating === 1) {
+        App.notificar(I18n.t('fc_again_mensagem'), 'alerta');
+      }
+
+      // Metrics
+      this._metricasRegistrarAvaliacao(rating, this.modoContexto, this.modoEscuta);
 
       // Log to heatmap diary
       if (typeof Calor !== 'undefined') Calor.registrar(1);
@@ -547,7 +630,32 @@ const Flashcards = {
       this.mostrarResumo();
     } else {
       if (resumo) resumo.style.display = 'none';
-      if (vazio)  vazio.style.display  = 'block';
+      if (vazio) {
+        // Inject temporal anchor: tell the user when their next card returns
+        const proxEl = vazio.querySelector('.fc-vazio-proximo');
+        if (proxEl) {
+          let proxLabel = null;
+          const agora = Date.now();
+          const todasFcData = Object.values(App.estado.flashcardData || {});
+          const futuras = todasFcData
+            .filter(f => f && f.nextReview && f.nextReview > agora)
+            .map(f => f.nextReview)
+            .sort((a, b) => a - b);
+          if (futuras.length > 0) {
+            const diffMs = futuras[0] - agora;
+            const diffH  = Math.round(diffMs / 3600000);
+            const diffD  = Math.round(diffMs / 86400000);
+            proxLabel = diffD >= 1
+              ? I18n.t(diffD > 1 ? 'fc_resumo_em_dias_plural' : 'fc_resumo_em_dias').replace('{n}', diffD)
+              : I18n.t('fc_resumo_em_horas').replace('{n}', diffH || 1);
+          }
+          proxEl.textContent = proxLabel
+            ? I18n.t('fc_vazio_retorno').replace('{quando}', proxLabel)
+            : I18n.t('fc_vazio_sem_agendamento');
+          proxEl.style.display = 'block';
+        }
+        vazio.style.display = 'block';
+      }
     }
   },
 
@@ -561,8 +669,8 @@ const Flashcards = {
     const pct = total > 0 ? Math.round((acertos / total) * 100) : 0;
 
     let emoji = '🎉';
-    let titulo = 'Sessione completata!';
-    if (pct >= 80) { emoji = '🏆'; titulo = 'Ottimo lavoro!'; }
+    let titulo = I18n.t('fc_resumo_sessao_concluida');
+    if (pct >= 80) { emoji = '🏆'; titulo = I18n.t('fc_resumo_excelente'); }
     else if (pct >= 60) { emoji = '👏'; titulo = I18n.t('fc_resumo_muito_bom'); }
     else if (pct < 40) { emoji = '💪'; titulo = I18n.t('fc_resumo_continua'); }
 
@@ -612,13 +720,18 @@ const Flashcards = {
           ${s.easy  > 0 ? `<span class="rr rr-easy">⭐ ${s.easy}</span>` : ''}
         </div>
         ${novCount > 0 ? `<p class="resumo-novas">${I18n.t(novCount > 1 ? 'fc_resumo_novas_plural' : 'fc_resumo_novas').replace('{n}', novCount)}</p>` : ''}
+        ${s.streak > 0 ? `<p class="resumo-streak">🔥 ${I18n.t('fc_resumo_streak').replace('{n}', s.streak)}</p>` : ''}
+        ${acertos > 0 ? `<p class="resumo-dominio">${I18n.t('fc_resumo_dominio').replace('{n}', acertos)}</p>` : ''}
         <p class="resumo-proxima">${I18n.t('fc_resumo_proxima')} <strong>${proxLabel}</strong></p>
         <div class="resumo-acoes">
+          <button class="btn-secondario" onclick="App.navegar('home')">${I18n.t('fc_resumo_inicio')}</button>
           <button class="btn-primario" onclick="Flashcards.praticaTodas()">${I18n.t('fc_resumo_praticar')}</button>
+          <button class="btn-secondario" onclick="Flashcards._proximoTemploDisponivel()">${I18n.t('fc_resumo_proximo_templo')}</button>
         </div>
       </div>
     `;
     resumo.style.display = 'block';
+    this._metricasConcluirSessao();
   },
 
   // ── Toggle favorite for current card ─────────────────────
@@ -645,7 +758,7 @@ const Flashcards = {
     }
     this.temploAtual      = null;
     this.praticandoTodas  = false;
-    this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     this.cartasDisponiveis = favPalavras;
     this.indiceAtual      = 0;
     this.virada           = false;
@@ -689,7 +802,7 @@ const Flashcards = {
 
     this.temploAtual    = null;
     this.praticandoTodas = false;
-    this.sessaoStats    = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.sessaoStats    = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     this.cartasDisponiveis = dificeis.slice(0, 20);
     this.indiceAtual   = 0;
     this.virada        = false;
@@ -719,12 +832,21 @@ const Flashcards = {
     });
   },
 
+  _onboardingModo(chave, msgKey) {
+    const storageKey = `fc_onboarding_${chave}`;
+    if (!localStorage.getItem(storageKey)) {
+      localStorage.setItem(storageKey, '1');
+      App.notificar(I18n.t(msgKey), 'info');
+    }
+  },
+
   toggleReverso() {
     const novoValor = !this.modoReverso;
     this._limparModos();
     this.modoReverso = novoValor;
     const btn = document.getElementById('btn-reverso');
     if (btn) btn.classList.toggle('ativo', this.modoReverso);
+    if (this.modoReverso) this._onboardingModo('reverso', 'fc_onboarding_reverso');
     if (this.cartaAtual) this.mostrarCarta();
   },
 
@@ -734,6 +856,7 @@ const Flashcards = {
     this.modoContexto = novoValor;
     const btn = document.getElementById('btn-contexto');
     if (btn) btn.classList.toggle('ativo', this.modoContexto);
+    if (this.modoContexto) this._onboardingModo('contexto', 'fc_onboarding_contexto');
     if (this.cartaAtual) this.mostrarCarta();
   },
 
@@ -743,10 +866,14 @@ const Flashcards = {
     this.modoEscuta = novoValor;
     const btn = document.getElementById('btn-escuta');
     if (btn) btn.classList.toggle('ativo', this.modoEscuta);
+    if (this.modoEscuta) this._onboardingModo('escuta', 'fc_onboarding_escuta');
     if (this.cartaAtual) {
       this.mostrarCarta();
       // Pronunciar imediatamente dentro do gesto do usuário (evita bloqueio mobile)
-      if (this.modoEscuta) this.pronunciar();
+      if (this.modoEscuta) {
+        if (!this.cartaAtual) { App.notificar('fc_escuta_aguarde', 'alerta'); return; }
+        this.pronunciar();
+      }
     }
   },
 
@@ -888,15 +1015,11 @@ const Flashcards = {
       return;
     }
 
-    // Shuffle for variety
-    for (let i = total.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [total[i], total[j]] = [total[j], total[i]];
-    }
+    // Keep FSRS priority order — most overdue cards first, no shuffle
 
     this.temploAtual       = null; // cross-temple mode
     this.praticandoTodas   = false;
-    this.sessaoStats       = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.sessaoStats       = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     this.cartasDisponiveis = total.slice(0, 30); // cap at 30
     this.indiceAtual       = 0;
     this.virada            = false;
@@ -914,12 +1037,38 @@ const Flashcards = {
     this.mostrarCarta();
   },
 
+  // ── Start session with custom word list (e.g. from Dialogues) ──
+  iniciarComPalavrasCustom(palavras, titulo) {
+    if (!palavras || palavras.length === 0) {
+      App.notificar('No vocabulary to practice!', 'alerta');
+      return;
+    }
+    this.temploAtual     = null;
+    this.praticandoTodas = false;
+    this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
+    this.cartasDisponiveis = palavras.slice(0, 20);
+    this.indiceAtual     = 0;
+    this.virada          = false;
+    if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
+
+    const vazio   = document.getElementById('flashcard-vazio');
+    const cardEl  = document.getElementById('flashcard');
+    const actions = document.getElementById('card-actions');
+    if (vazio)   vazio.style.display   = 'none';
+    if (cardEl)  cardEl.style.display  = '';
+    if (actions) actions.style.display = 'none';
+
+    const n = palavras.length;
+    App.notificar(`📚 ${n} word${n !== 1 ? 's' : ''} from "${titulo}"`, 'alerta');
+    this.mostrarCarta();
+  },
+
   // ── Practice all cards regardless of schedule ─────────────
   praticaTodas() {
     const data = App.estado.templosData[this.temploAtual];
     if (!data || !data.palavras || data.palavras.length === 0) return;
     this.praticandoTodas  = true;
-    this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     this.cartasDisponiveis = [...data.palavras];
     this.indiceAtual      = 0;
     this.virada           = false;
@@ -932,6 +1081,62 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     this.mostrarCarta();
+  },
+
+  // ── Metrics (localStorage, no backend) ───────────────────
+  _metricasIniciarSessao() {
+    const stats = this._metricasLer();
+    stats.sessoesIniciadas = (stats.sessoesIniciadas || 0) + 1;
+    stats.ultimaAbertura = Date.now();
+    if (!stats.primeiraAbertura) stats.primeiraAbertura = Date.now();
+    this._metricasSalvar(stats);
+    this._sessaoTimestamp = Date.now();
+  },
+
+  _metricasRegistrarAvaliacao(rating, modoContexto, modoEscuta) {
+    const stats = this._metricasLer();
+    const dist = stats.distribuicaoAvaliacoes || { again: 0, hard: 0, good: 0, easy: 0 };
+    const rNames = ['', 'again', 'hard', 'good', 'easy'];
+    dist[rNames[rating]] = (dist[rNames[rating]] || 0) + 1;
+    stats.distribuicaoAvaliacoes = dist;
+    if (modoContexto) stats.sessoesComContexto = (stats.sessoesComContexto || 0) + 1;
+    if (modoEscuta)   stats.sessoesComEscuta   = (stats.sessoesComEscuta   || 0) + 1;
+    this._metricasSalvar(stats);
+  },
+
+  _metricasConcluirSessao() {
+    const stats = this._metricasLer();
+    stats.sessoesConcluidas = (stats.sessoesConcluidas || 0) + 1;
+    if (this._sessaoTimestamp) {
+      const duracaoMs = Date.now() - this._sessaoTimestamp;
+      const duracoes = stats.duracoesSessao || [];
+      duracoes.push(duracaoMs);
+      if (duracoes.length > 50) duracoes.shift(); // keep last 50
+      stats.duracoesSessao = duracoes;
+    }
+    this._metricasSalvar(stats);
+  },
+
+  _metricasLer() {
+    try { return JSON.parse(localStorage.getItem('englishAutenticoStats') || '{}'); }
+    catch { return {}; }
+  },
+
+  _metricasSalvar(stats) {
+    try { localStorage.setItem('englishAutenticoStats', JSON.stringify(stats)); } catch {}
+  },
+
+  // ── Navigate to next available temple after session ──────
+  _proximoTemploDisponivel() {
+    const templos = Object.keys(App.estado.templosData || {});
+    if (templos.length === 0) { App.navegar('home'); return; }
+    const idx = templos.indexOf(String(this.temploAtual));
+    const proximo = templos[idx + 1] ? parseInt(templos[idx + 1]) : null;
+    if (proximo && App.estado.templosData[proximo]) {
+      Flashcards.init(proximo);
+    } else {
+      App.navegar('home');
+    }
   },
 
   // ── Pronounce the current word ────────────────────────────
@@ -998,7 +1203,7 @@ const Flashcards = {
       const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
       const alvoNormalize = alvo.replace(/[.,!?;:]/g, '').trim();
       
-      const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
+      const reconheceu = textoNormalize.includes(alvoNormalize);
       this._mostrarFeedbackPronuncia(texto, reconheceu);
     };
     this._recognition.onerror = () => { App.notificar('notif_fc_nao_ouviu', 'alerta'); };
@@ -1012,12 +1217,13 @@ const Flashcards = {
   _mostrarFeedbackPronuncia(texto, reconheceu) {
     const fb = document.getElementById('imitacao-feedback');
     if (!fb) return;
+    const textoSeguro = String(texto || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     if (reconheceu) {
-      fb.innerHTML = `<span style="color:#27AE60">✅ Perfect! We heard: "${texto}"</span>`;
+      fb.innerHTML = `<span style="color:#27AE60">✅ Perfect! We heard: "${textoSeguro}"</span>`;
       if (typeof Progressao !== 'undefined') Progressao.ganhar(3);
       else if (typeof App !== 'undefined') App.ganharXP(3);
     } else {
-      fb.innerHTML = `<span style="color:#E67E22">🔄 We heard: "${texto}" — try again!</span>`;
+      fb.innerHTML = `<span style="color:#E67E22">🔄 We heard: "${textoSeguro}" — try again!</span>`;
     }
     fb.style.display = 'block';
     setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);

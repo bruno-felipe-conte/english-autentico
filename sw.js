@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'english-v1046';
+const CACHE = 'english-v1048';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -17,21 +17,21 @@ const STATIC = [
   // JS — módulos da aplicação (URLs com ?v=1001 para forçar atualização de cache)
   './js/audio.js?v=1001',
   './js/conquistas.js?v=1001',
-  './js/core.js?v=1001',
-  './js/dialoghi.js?v=1001',
+  './js/core.js?v=1002',
+  './js/dialoghi.js?v=1002',
   './js/audio-store.js?v=1006',
-  './js/canzoni.js?v=1032',
+  './js/canzoni.js?v=1033',
   './js/imitazione.js?v=1002',
-  './js/flashcards.js?v=1001',
-  './js/grammar.js?v=1004',
+  './js/flashcards.js?v=1004',
+  './js/grammar.js?v=1005',
   './js/heatmap.js?v=1001',
   './js/onboarding.js?v=1001',
   './js/profilo.js?v=1001',
-  './js/progression.js?v=1001',
+  './js/progression.js?v=1002',
   './js/quiz.js?v=1001',
   './js/quiz_data.js',
   './js/vocab.js?v=1001',
-  './js/i18n.js?v=1002',
+  './js/i18n.js?v=1006',
   './js/notificacoes.js?v=1001',
   './js/tour.js?v=1001',
   './js/storie.js?v=1002',

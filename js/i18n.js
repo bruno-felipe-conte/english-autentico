@@ -210,6 +210,8 @@ const I18n = {
     'fc_dica_revelar': { pt: 'Clique para revelar', en: 'Click to reveal' },
 
     // ── Flashcard — session summary ──
+    'fc_resumo_sessao_concluida': { pt: 'Sessão concluída!', en: 'Session complete!' },
+    'fc_resumo_excelente': { pt: 'Excelente trabalho!', en: 'Excellent work!' },
     'fc_resumo_muito_bom': { pt: 'Ótimo trabalho!', en: 'Great job!' },
     'fc_resumo_continua': { pt: 'Continue praticando!', en: 'Keep practising!' },
     'fc_resumo_sem_agendamento': { pt: 'Sem agendamento', en: 'No schedule' },
@@ -222,6 +224,25 @@ const I18n = {
     'fc_resumo_novas': { pt: '🌱 {n} nova palavra aprendida!', en: '🌱 {n} new word learned!' },
     'fc_resumo_novas_plural': { pt: '🌱 {n} novas palavras aprendidas!', en: '🌱 {n} new words learned!' },
     'fc_resumo_praticar': { pt: '🔁 Praticar todas', en: '🔁 Practice all' },
+    'fc_resumo_inicio': { pt: '🏠 Início', en: '🏠 Home' },
+    'fc_resumo_proximo_templo': { pt: '➡️ Próximo templo', en: '➡️ Next temple' },
+    'fc_again_mensagem': { pt: 'Este cartão volta amanhã — você já o encontrou uma vez.', en: 'This card returns tomorrow — you\'ve met it once.' },
+    'fc_vazio_retorno': { pt: '⏰ Seus cartões voltam {quando}.', en: '⏰ Your cards return {quando}.' },
+    'fc_vazio_sem_agendamento': { pt: 'Nenhum cartão agendado no momento.', en: 'No cards scheduled right now.' },
+    'fc_escuta_aguarde': { pt: 'Carregando cartão — aguarde.', en: 'Loading card — please wait.' },
+    'fc_onboarding_reverso': { pt: '🔄 Modo Reverso: veja o português e pense na palavra em inglês antes de virar.', en: '🔄 Reverse mode: see Portuguese and think of the English word before flipping.' },
+    'fc_onboarding_contexto': { pt: '📖 Modo Contexto: complete a frase com a palavra que falta. +5 XP bônus!', en: '📖 Context mode: fill in the missing word. +5 XP bonus!' },
+    'fc_onboarding_escuta': { pt: '🎧 Modo Escuta: ouça a pronúncia e tente lembrar a palavra antes de ver. +5 XP bônus!', en: '🎧 Listen mode: hear the pronunciation and try to recall the word. +5 XP bonus!' },
+    'fc_contexto_sem_exemplo': { pt: '⚠️ Exemplo em contexto não disponível para este cartão.', en: '⚠️ Context example not available for this card.' },
+    'fc_contexto_sem_exemplo_hint': { pt: 'Use o Modo Normal para estudar este item.', en: 'Switch to Normal mode to study this item.' },
+    'fc_xp_bonus_contexto': { pt: '+{n} XP bônus — Modo Contexto!', en: '+{n} XP bonus — Context mode!' },
+    'fc_xp_bonus_escuta': { pt: '+{n} XP bônus — Modo Escuta!', en: '+{n} XP bonus — Listen mode!' },
+    'fc_resumo_streak': { pt: 'Maior sequência da sessão: {n} acertos!', en: 'Best streak this session: {n} correct!' },
+    'fc_resumo_dominio': { pt: '🎯 {n} cartões dominados nesta sessão.', en: '🎯 {n} cards mastered this session.' },
+    'fc_reverso_placeholder': { pt: 'Digite a palavra em inglês (opcional)', en: 'Type the English word (optional)' },
+    'fc_reverso_verificar': { pt: 'Verificar', en: 'Check' },
+    'fc_reverso_acerto': { pt: 'Correto!', en: 'Correct!' },
+    'fc_reverso_erro': { pt: 'Era: {alvo}', en: 'Answer: {alvo}' },
     'fc_gravar_parar': { pt: '⏹ Parar', en: '⏹ Stop' },
     'fc_gravar_imitar': { pt: '🎤 Imitar', en: '🎤 Imitate' },
 
@@ -340,6 +361,7 @@ const I18n = {
     'dial_vocab_chave': { pt: 'Key Vocabulary:', en: 'Key Vocabulary:' },
     'dial_voltar': { pt: '‹ Back', en: '‹ Back' },
     'dial_salvo': { pt: '💬 "{t}" saved!', en: '💬 "{t}" saved!' },
+    'dial_user_name': { pt: 'Você', en: 'You' },
 
     // ── Onboarding slide 2 ──
     'ob_vocabulario': { pt: 'Vocabulário:', en: 'Vocabulary:' },

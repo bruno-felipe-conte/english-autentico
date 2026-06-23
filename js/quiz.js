@@ -10,6 +10,7 @@ const Quiz = {
   xpTotal: 0,
   respondido: false,
   combo: 0,
+  _indiceAtual: 0,     // para restauração i18n
 
   // ── Start quiz for a temple ────────────────────────────────
   iniciar(temploNum) {
@@ -22,6 +23,7 @@ const Quiz = {
     const salvo = this._carregarSessao();
     if (salvo && salvo.temploAtual === temploNum && salvo.perguntaAtual > 0 && salvo.perguntas?.length > 0) {
       Object.assign(this, salvo);
+      this._indiceAtual = this.perguntaAtual;
       const container = document.getElementById('quiz-container');
       const resultado  = document.getElementById('quiz-resultado');
       const seletor    = document.getElementById('quiz-templo-selector');
@@ -39,6 +41,7 @@ const Quiz = {
     this.xpTotal = 0;
     this.respondido = false;
     this.combo = 0;
+    this._indiceAtual = 0;
 
     // Try to get quiz questions for this temple from the JSON data
     let pool = App.estado.quizData.filter(q => q.templo === temploNum);
@@ -144,6 +147,7 @@ const Quiz = {
 
     const p = this.perguntas[this.perguntaAtual];
     this.respondido = false;
+    this._indiceAtual = this.perguntaAtual;
     this._atualizarCombo();
 
     // Update progress bar
@@ -183,20 +187,39 @@ const Quiz = {
     const explicacaoContainer = document.getElementById('explicacao-container');
     if (explicacaoContainer) explicacaoContainer.style.display = 'none';
 
-    // Render options
+    // Render options with accessibility
     const grid = document.getElementById('opcoes-grid');
     if (!grid) return;
     grid.innerHTML = '';
+    grid.setAttribute('role', 'radiogroup');
+    grid.setAttribute('aria-label', 'Answer options');
 
     // Shuffle alternatives for display
     const alternativas = this._embaralhar([...(p.alternativas || [])]);
-    alternativas.forEach(alt => {
+    alternativas.forEach((alt, idx) => {
       const btn = document.createElement('button');
       btn.className = 'opcao-btn';
       btn.textContent = alt;
+      btn.setAttribute('role', 'radio');
+      btn.setAttribute('aria-checked', 'false');
+      btn.setAttribute('tabindex', '0');
+      btn.dataset.alt = alt;
       btn.onclick = () => this.checarResposta(alt);
+      btn.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.checarResposta(alt); } };
       grid.appendChild(btn);
     });
+
+    // QW: Timer bar (visual only, 30s countdown)
+    const timerBar = document.getElementById('quiz-timer-bar');
+    if (timerBar) {
+      timerBar.style.display = 'block';
+      timerBar.style.transition = 'none';
+      timerBar.style.width = '100%';
+      // Force reflow
+      void timerBar.offsetWidth;
+      timerBar.style.transition = 'width 30s linear';
+      timerBar.style.width = '0%';
+    }
   },
 
   // ── Check the selected answer ─────────────────────────────
@@ -207,11 +230,12 @@ const Quiz = {
     const p = this.perguntas[this.perguntaAtual];
     const correto = escolha === p.resposta_correta;
 
-    // Mark all buttons
+    // Mark all buttons with accessibility
     const grid = document.getElementById('opcoes-grid');
     if (grid) {
       grid.querySelectorAll('.opcao-btn').forEach(btn => {
         btn.disabled = true;
+        btn.setAttribute('aria-checked', btn.textContent === p.resposta_correta ? 'true' : 'false');
         if (btn.textContent === p.resposta_correta) {
           btn.classList.add('correta');
         } else if (btn.textContent === escolha && !correto) {
@@ -231,14 +255,40 @@ const Quiz = {
     } else {
       this.combo = 0;
       if (typeof SomFeedback !== 'undefined') SomFeedback.errado();
+      // M-5: Salvar erro para revisão futura (SRS)
+      this._salvarErro(p);
     }
     this._atualizarCombo();
 
-    // Show explanation
+    // Show explanation with improved feedback
     const explicacaoContainer = document.getElementById('explicacao-container');
     const explicacaoEl = document.getElementById('quiz-explicacao');
     if (explicacaoContainer) explicacaoContainer.style.display = 'block';
-    if (explicacaoEl) explicacaoEl.textContent = p.explicacao || (correto ? I18n.t('quiz_correto') : `${I18n.t('quiz_resposta_correta_era')} ${p.resposta_correta}`);
+    if (explicacaoEl) {
+      let explicacao = p.explicacao || '';
+      if (!explicacao) {
+        if (correto) {
+          explicacao = I18n.t('quiz_correto') + '!';
+        } else {
+          explicacao = `${I18n.t('quiz_resposta_correta_era')} "${p.resposta_correta}"`;
+        }
+      }
+      // Add combo info
+      if (correto && this.combo >= 3) {
+        explicacao += ` 🔥 ${this.combo}x combo!`;
+      }
+      // M-5: Indicar que erro será revisado
+      if (!correto) {
+        explicacao += ' 💡 We\'ll review this later.';
+      }
+      explicacaoEl.textContent = explicacao;
+    }
+
+    // Auto-advance after delay (shorter if correct)
+    const delay = correto ? 1500 : 2500;
+    setTimeout(() => {
+      this.proximaPergunta();
+    }, delay);
   },
 
   // ── Advance to next question ───────────────────────────────
@@ -311,6 +361,9 @@ const Quiz = {
       Progressao.ganhar(this.xpTotal);
     }
 
+    // M-6: Atualizar streak após quiz completo
+    this._atualizarStreak();
+
     // Check achievements
     if (typeof Conquistas !== 'undefined') {
       const p = App.estado.progresso;
@@ -355,32 +408,119 @@ const Quiz = {
     seletor.innerHTML = '';
     seletor.style.display = 'grid';
 
+    // ── M-2: Onboarding banner (primeira vez) ───────────────
+    if (!this._onboardingMostrado && Progressao.temploDesbloqueado(1)) {
+      this._onboardingMostrado = true;
+      const banner = document.createElement('div');
+      banner.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#2C3E50,#3498DB);color:white;padding:1rem;border-radius:12px;margin-bottom:0.5rem;text-align:center;';
+      banner.innerHTML = `<div style="font-size:1.3rem;margin-bottom:0.3rem">🎯 Welcome to Quiz!</div><div style="font-size:0.85rem;opacity:0.9">Test your knowledge, earn XP with combos, and track your progress. Start with Temple 1!</div>`;
+      seletor.appendChild(banner);
+    }
+
+    // ── M-6: Quiz Streak banner ─────────────────────────────
+    const streak = this._getQuizStreak();
+    if (streak > 0) {
+      const streakBanner = document.createElement('div');
+      streakBanner.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#E67E22,#D35400);color:white;padding:0.6rem;border-radius:10px;margin-bottom:0.5rem;text-align:center;font-weight:700;';
+      const flame = streak >= 7 ? '🔥🔥🔥' : streak >= 3 ? '🔥🔥' : '🔥';
+      streakBanner.innerHTML = `${flame} Quiz Streak: ${streak} day${streak !== 1 ? 's' : ''}! Keep it going!`;
+      seletor.appendChild(streakBanner);
+    }
+
+    // ── M-1: Verificar se há templos carregados ─────────────
+    const todosTemplos = Object.keys(App.estado.templosData).map(Number).sort((a, b) => a - b);
+
+    if (todosTemplos.length === 0) {
+      // M-1: Empty state — nenhum templo carregado
+      const empty = document.createElement('div');
+      empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:#aaa;';
+      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">📭</div><div style="font-weight:600;margin-bottom:0.3rem">No temples loaded yet</div><div style="font-size:0.85rem">Temple data is still loading. Please wait or check your connection.</div>`;
+      seletor.appendChild(empty);
+      return;
+    }
+
+    // ── M-1: Verificar se há perguntas de quiz disponíveis ──
+    const hasQuizData = App.estado.quizData?.length > 0;
+    const hasVocab = todosTemplos.some(i => {
+      const d = App.estado.templosData[i];
+      return d?.palavras?.length >= 4;
+    });
+
+    if (!hasQuizData && !hasVocab) {
+      const empty = document.createElement('div');
+      empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:#aaa;';
+      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">🎓</div><div style="font-weight:600;margin-bottom:0.3rem">Almost ready!</div><div style="font-size:0.85rem">Add more words to your temples to unlock quizzes. Each temple needs at least 4 words.</div>`;
+      seletor.appendChild(empty);
+      return;
+    }
+
+    // ── M-3: Calcular histórico por templo para ordenação ───
+    let historico = [];
+    try { historico = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]'); } catch (_) {}
+
+    const temploStats = {};
+    historico.forEach(h => {
+      const key = String(h.templo);
+      if (!temploStats[key]) temploStats[key] = { total: 0, acertos: 0, lastScore: 0 };
+      temploStats[key].total++;
+      temploStats[key].acertos += h.acertos || 0;
+      temploStats[key].lastScore = h.pontuacao || 0;
+    });
+
+    // ── M-3: Ordenação inteligente — menos feitos primeiro ──
+    const sortedTemplos = [...todosTemplos].sort((a, b) => {
+      const aUnlock = Progressao.temploDesbloqueado(a) ? 0 : 1;
+      const bUnlock = Progressao.temploDesbloqueado(b) ? 0 : 1;
+      if (aUnlock !== bUnlock) return aUnlock - bUnlock;
+
+      const aStats = temploStats[String(a)];
+      const bStats = temploStats[String(b)];
+      const aDone = aStats && aStats.total > 0 ? 1 : 0;
+      const bDone = bStats && bStats.total > 0 ? 1 : 0;
+      if (aDone !== bDone) return aDone - bDone; // não-feitos primeiro
+
+      // Entre os feitos, priorizar os com menor score (precisam de revisão)
+      if (aDone && bDone) {
+        const aAvg = aStats.acertos / (aStats.total * 10);
+        const bAvg = bStats.acertos / (bStats.total * 10);
+        if (aAvg !== bAvg) return aAvg - bAvg; // menor score primeiro
+      }
+
+      return a - b; // fallback: número do templo
+    });
+
     // ── Misto Button ───────────────────────────────────────
     if (Progressao.temploDesbloqueado(1)) {
       const btnMisto = document.createElement('button');
       btnMisto.className = 'quiz-templo-btn';
-      btnMisto.innerHTML = I18n.t('quiz_mixed_title');
-      btnMisto.style.gridColumn = '1 / -1'; // span full width
+      btnMisto.textContent = I18n.t('quiz_mixed_title');
+      btnMisto.style.gridColumn = '1 / -1';
       btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
       btnMisto.style.color = 'white';
       btnMisto.onclick = () => this.iniciarMisto();
       seletor.appendChild(btnMisto);
     }
 
-    // Usa a lista de templos carregados (1-50), ordenados
-    const todosTemplos = Object.keys(App.estado.templosData)
-      .map(Number).sort((a, b) => a - b);
-
-    todosTemplos.forEach(i => {
+    // ── M-3: Templos com indicação de progresso ────────────
+    sortedTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
       const nome = (data && data.nome) || `Temple ${i}`;
       const nivel = data ? data.nivel : '—';
+      const stats = temploStats[String(i)];
 
       const btn = document.createElement('button');
       btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
+
+      let statusHtml = '';
+      if (desbloqueado && stats) {
+        const avgPct = Math.round((stats.acertos / (stats.total * 10)) * 100);
+        const stars = avgPct >= 90 ? '⭐⭐⭐' : avgPct >= 70 ? '⭐⭐' : avgPct >= 50 ? '⭐' : '☆';
+        statusHtml = `<div style="font-size:0.7rem;color:#27AE60;margin-top:0.2rem">${stars} ${avgPct}% avg</div>`;
+      }
+
       btn.innerHTML = desbloqueado
-        ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
+        ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>${statusHtml}`
         : `🔒 ${i}. ${nome}<br><small>${I18n.t('quiz_nivel_requerido').replace('{n}', Progressao.TEMPLO_NIVEL[i] || i)}</small>`;
 
       if (desbloqueado) btn.onclick = () => this.iniciar(i);
@@ -388,48 +528,27 @@ const Quiz = {
       seletor.appendChild(btn);
     });
 
-    // ── Morphology section ────────────────────────────────
-    const sep = document.createElement('div');
-    sep.className = 'quiz-secao-titulo';
-    sep.textContent = I18n.t('quiz_morf_titulo');
-    seletor.appendChild(sep);
+    // ── M-5: Botão "Revisar Erros" ──────────────────────────
+    const errosPendentes = this._getErrosPendentes();
+    if (errosPendentes.length >= 3) {
+      const btnRevisar = document.createElement('button');
+      btnRevisar.className = 'quiz-templo-btn';
+      btnRevisar.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#C0392B,#E74C3C);color:white;font-weight:700;';
+      btnRevisar.innerHTML = `🔄 Review Mistakes (${errosPendentes.length} items)`;
+      btnRevisar.onclick = () => this.iniciarRevisao(errosPendentes);
+      seletor.appendChild(btnRevisar);
+    }
 
-    todosTemplos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Temple ${i}`;
-      const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
+    // ── Seções especiais (Morfologia, Listening, Gramática, Conjugação) ──
+    this._renderSecaoEspecial(seletor, sortedTemplos, 'morfologia', 'quiz_morf_titulo', '🔤', 'quiz-morf-btn', (desbloqueado, data) => {
+      return desbloqueado && data?.palavras?.some(p => p.genero || p.plural);
+    }, (i) => this.iniciarMorfologia(i));
 
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn quiz-morf-btn${desbloqueado && temMorf ? '' : ' bloqueado'}`;
-      btn.innerHTML = `🔤 ${i}. ${nome}`;
+    this._renderSecaoEspecial(seletor, sortedTemplos, 'listening', 'quiz_list_titulo', '🎧', 'quiz-list-btn', (desbloqueado, data) => {
+      return desbloqueado && data?.palavras?.length >= 4;
+    }, (i) => this.iniciarListening(i));
 
-      if (desbloqueado && temMorf) btn.onclick = () => this.iniciarMorfologia(i);
-      else btn.disabled = true;
-      seletor.appendChild(btn);
-    });
-
-    // ── Listening section ────────────────────────────────
-    const sepList = document.createElement('div');
-    sepList.className = 'quiz-secao-titulo';
-    sepList.textContent = I18n.t('quiz_list_titulo');
-    seletor.appendChild(sepList);
-
-    todosTemplos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Temple ${i}`;
-
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado ? '' : ' bloqueado'}`;
-      btn.innerHTML = `🎧 ${i}. ${nome}`;
-
-      if (desbloqueado) btn.onclick = () => this.iniciarListening(i);
-      else btn.disabled = true;
-      seletor.appendChild(btn);
-    });
-
-    // ── Gramática section ────────────────────────────────
+    // Gramática
     const sepGram = document.createElement('div');
     sepGram.className = 'quiz-secao-titulo';
     sepGram.textContent = I18n.t('quiz_gram_titulo');
@@ -445,13 +564,13 @@ const Quiz = {
       gramData.moduli.forEach(mod => {
         const btn = document.createElement('button');
         btn.className = 'quiz-templo-btn quiz-gram-btn';
-        btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.id);
+        btn.textContent = I18n.t('quiz_gram_nivel').replace('{n}', mod.id);
         btn.onclick = () => this.iniciarGramatica(mod.id);
         seletor.appendChild(btn);
       });
     }
 
-    // ── Conjugação section ────────────────────────────────
+    // Conjugação
     const sepVerbi = document.createElement('div');
     sepVerbi.className = 'quiz-secao-titulo';
     sepVerbi.textContent = I18n.t('quiz_verbi_titulo');
@@ -469,11 +588,138 @@ const Quiz = {
         const btn = document.createElement('button');
         btn.className = 'quiz-templo-btn quiz-verbi-btn';
         const emoji = tempo === 'Present' ? '⏱️' : tempo === 'Past Simple' ? '⏪' : '⏩';
-        btn.innerHTML = `${emoji} ${tempo}`;
+        btn.textContent = `${emoji} ${tempo}`;
         btn.onclick = () => this.iniciarConjugacao(tempo);
         seletor.appendChild(btn);
       });
     }
+  },
+
+  // ── M-3: Helper para renderizar seções especiais ──────────
+  _renderSecaoEspecial(seletor, templos, tipo, tituloKey, emoji, btnClass, checkFn, onClickFn) {
+    const sep = document.createElement('div');
+    sep.className = 'quiz-secao-titulo';
+    sep.textContent = I18n.t(tituloKey);
+    seletor.appendChild(sep);
+
+    let count = 0;
+    templos.forEach(i => {
+      const desbloqueado = Progressao.temploDesbloqueado(i);
+      const data = App.estado.templosData[i];
+      if (!checkFn(desbloqueado, data)) return;
+
+      count++;
+      const nome = (data && data.nome) || `Temple ${i}`;
+      const btn = document.createElement('button');
+      btn.className = `quiz-templo-btn ${btnClass}`;
+      btn.textContent = `${emoji} ${i}. ${nome}`;
+      btn.onclick = () => onClickFn(i);
+      seletor.appendChild(btn);
+    });
+
+    if (count === 0) {
+      const msg = document.createElement('p');
+      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.3rem;font-size:0.8rem;';
+      msg.textContent = `No ${tipo} quizzes available`;
+      seletor.appendChild(msg);
+    }
+  },
+
+  // ── M-6: Quiz Streak calculator ───────────────────────────
+  _getQuizStreak() {
+    try {
+      const streak = parseInt(localStorage.getItem('en_quiz_streak') || '0');
+      const lastDate = localStorage.getItem('en_quiz_streak_date');
+      if (!lastDate) return 0;
+
+      const hoje = new Date().toISOString().slice(0, 10);
+      const ontem = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+
+      if (lastDate === hoje || lastDate === ontem) return streak;
+      return 0; // quebrou o streak
+    } catch (_) { return 0; }
+  },
+
+  // ── M-6: Incrementa streak após quiz ──────────────────────
+  _atualizarStreak() {
+    try {
+      const hoje = new Date().toISOString().slice(0, 10);
+      const lastDate = localStorage.getItem('en_quiz_streak_date');
+      const ontem = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+
+      let streak = parseInt(localStorage.getItem('en_quiz_streak') || '0');
+      if (lastDate === hoje) return; // já fez hoje
+      if (lastDate === ontem) streak++;
+      else streak = 1; // novo streak
+
+      localStorage.setItem('en_quiz_streak', String(streak));
+      localStorage.setItem('en_quiz_streak_date', hoje);
+
+      // Conquista de streak
+      if (streak === 7 && typeof Conquistas !== 'undefined') {
+        App.notificar('🏆 7-day Quiz Streak achieved!', 'sucesso');
+      }
+    } catch (_) {}
+  },
+
+  // ── M-5: Get pending review items (SRS simples) ───────────
+  _getErrosPendentes() {
+    try {
+      const fila = JSON.parse(localStorage.getItem('en_quiz_erros') || '[]');
+      const agora = Date.now();
+      return fila.filter(e => e.proximaRevisao <= agora);
+    } catch (_) { return []; }
+  },
+
+  // ── M-5: Salva erro para revisão futura ────────────────────
+  _salvarErro(pergunta) {
+    try {
+      const fila = JSON.parse(localStorage.getItem('en_quiz_erros') || '[]');
+      // Remove duplicado
+      const idx = fila.findIndex(e => e.id === pergunta.id);
+      if (idx >= 0) fila.splice(idx, 1);
+
+      // Calcula próxima revisão (SRS simples: 1min, 10min, 1h, 1d, 3d)
+      const tentativas = (fila.filter(e => e.id === pergunta.id).length);
+      const intervalos = [60000, 600000, 3600000, 86400000, 259200000];
+      const intervalo = intervalos[Math.min(tentativas, intervalos.length - 1)];
+
+      fila.push({
+        ...pergunta,
+        proximaRevisao: Date.now() + intervalo,
+        tentativas: tentativas + 1,
+        ultimoErro: Date.now()
+      });
+
+      // Mantém máximo 100 itens
+      localStorage.setItem('en_quiz_erros', JSON.stringify(fila.slice(-100)));
+    } catch (_) {}
+  },
+
+  // ── M-5: Iniciar quiz de revisão de erros ──────────────────
+  iniciarRevisao(erros) {
+    this.temploAtual = 'revisao';
+    this.perguntaAtual = 0;
+    this.pontuacao = 0;
+    this.xpTotal = 0;
+    this.respondido = false;
+    this.combo = 0;
+    this.perguntas = this._embaralhar(erros).slice(0, 10);
+
+    if (this.perguntas.length === 0) {
+      App.notificar('No items to review right now!', 'alerta');
+      return;
+    }
+
+    const container = document.getElementById('quiz-container');
+    const resultado = document.getElementById('quiz-resultado');
+    const seletor = document.getElementById('quiz-templo-selector');
+    if (container) container.style.display = 'block';
+    if (resultado) resultado.style.display = 'none';
+    if (seletor) seletor.style.display = 'none';
+
+    App.notificar(`🔄 Reviewing ${this.perguntas.length} items you got wrong`, 'alerta');
+    this.mostrarPergunta();
   },
 
   // ── Morphology quiz (gênero & plural) ────────────────────
@@ -747,7 +993,7 @@ document.addEventListener('i18n:changed', () => {
   if (resultado && resultado.style.display !== 'none') {
     Quiz.mostrarResultado();
   } else if (document.getElementById('quiz-container')?.style.display !== 'none') {
-    Quiz.mostrarPergunta(Quiz.indiceAtual);
+    Quiz.mostrarPergunta();
   } else {
     Quiz.renderizarSeletor();
   }

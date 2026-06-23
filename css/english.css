@@ -778,7 +778,68 @@ body.dark-mode .dialogo-opcao.errada {
   color: #ef9a9a;
 }
 
-/* Identidade visual da tradução nas tabelas de gramática */
+/* ── QW-1: Toggle tradução ── */
+.traducao-oculta {
+  display: none !important;
+}
+
+/* ── QW-9: Diferenciação visual de personagens ── */
+.dialogo-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.dialogo-turno.personaggio .dialogo-nome {
+  color: var(--cor-pietra);
+}
+
+.dialogo-turno.utente .dialogo-nome {
+  text-align: right;
+  color: #cce0ff;
+}
+
+/* ── QW-6: Explicação de erros ── */
+.dialogo-explicacao {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ── QW-4: Cards com indicação de conclusão ── */
+.dialogo-card {
+  position: relative;
+}
+
+.dialogo-card[data-concluido="true"] {
+  opacity: 0.85;
+}
+
+/* ── Melhorias de acessibilidade ── */
+.dialogo-opcao:focus-visible {
+  outline: 2px solid var(--cor-veneziano);
+  outline-offset: 2px;
+}
+
+.dialogo-card:focus-visible {
+  outline: 2px solid var(--cor-veneziano);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* ── Animações com prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .dialogo-opcao,
+  .dialogo-turno,
+  .dialogo-explicacao {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── Identidade visual da tradução nas tabelas de gramática --
 .gram-tabela-traducao {
   color: #8a7a60;
   font-size: 0.88em;
