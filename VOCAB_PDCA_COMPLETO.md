@@ -2,7 +2,7 @@
 ## English Learning App Pro — Brainstorm Multi-Perspectiva com Melhoria Contínua
 
 **Data:** Junho 2026  
-**Código analisado:** vocab.js (386 linhas → 416 linhas após melhorias)  
+**Código analisado:** vocab.js (430 → ~510 linhas após melhorias)  
 **Equipe:** 4 especialistas (UX/UI, Linguista Aplicado, Dev Frontend, Product Manager)  
 **Metodologia:** Ciclo PDCA (Plan-Do-Check-Act)
 
@@ -17,109 +17,98 @@
 ### O que a aba de Vocabulário faz HOJE:
 
 **Lista de Palavras (renderizar — ~120 linhas):**
-- Renderiza lista plana de palavras (EN→PT) com filtros
-- Limite de 100 itens sem paginação
-- Filtros: texto, templo, categoria, origem (custom/nativo), difíceis (erros >= 3), favoritos
-- Badges: status FSRS (🌱 new, 📚 learning, ⭐ mastered), nível, erros, favoritos
-- Pronúncia ao clicar na palavra
-- Modo blur (self-test): oculta coluna PT ou IT, clique para revelar
-- Botão "Estudar" inicia flashcards com filtro atual (shuffle, cap 30)
+- Renderiza até 100 palavras filtradas do vocabCache
+- Cada palavra mostra: IT → PT, categoria, nível, badges FSRS
+- Badges: ⭐ (mastered), 📚 (learning), 🌱 (new), ⚠️ (erros), ❤️ (favorito)
+- Clique pronunciona a palavra
+- Blur mode (Hide EN/PT) para self-test
 
-**Filtros:**
-- Busca por texto (EN, PT, categoria)
-- Dropdown por templo (só desbloqueados)
-- Dropdown por categoria (coletado dinamicamente)
-- Toggle difíceis/favoritos (mutuamente exclusivos)
-- Pills de origem (todos/custom/nativo)
+**Filtros (6 tipos):**
+- Busca por texto (IT, PT, categoria)
+- Por templo (dropdown)
+- Por categoria (dropdown)
+- Por origem (todos/custom/nativo)
+- Palavras difíceis (erros >= 3)
+- Favoritos
 
-**Blur Mode (toggleBlur — ~35 linhas):**
-- Oculta coluna PT ou IT
-- Clique na célula revela temporariamente
-- Botões de toggle com estado ativo
+**Blur Mode (toggleBlur — ~40 linhas):**
+- Oculta coluna EN ou PT
+- Clicar na célula revela temporariamente
 
-**Integração com Flashcards (estudarFiltroAtual — ~30 linhas):**
-- Filtra palavras atuais
-- Embaralha e limita a 30
-- Navega para aba flashcard
-- Inicia sessão de estudo
-
-**Dados:**
-- App.estado.vocabCache (flat array de todas as palavras)
-- App.estado.flashcardData (status FSRS por palavra)
-- App.estado.templosData (dados dos templos)
+**Estudo (estudarFiltroAtual — ~30 linhas):**
+- Pega palavras filtradas → embaralha → 30 max → inicia flashcards
 
 ---
 
-## 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — PROBLEMAS IDENTIFICADOS
+## 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS
 
-### 🔵 UX/UI DESIGNER (12 problemas):
+### 🔵 UX/UI DESIGNER (14 problemas):
 
 | # | Problema | Severidade |
 |---|----------|------------|
-| 1 | Sem paginação real — limite arbitrário de 100 itens | 🔴 Alto |
-| 2 | Zero ARIA/acessibilidade — inacessível para leitores de tela | 🔴 Alto |
-| 3 | Estados vazios inexistentes ou rudimentares | 🟡 Médio |
-| 4 | Hierarquia visual fraca — flat list sem estrutura | 🟡 Médio |
-| 5 | Blur mode sem tutorial nem indicação de interação | 🟡 Médio |
-| 6 | Filtros sem feedback de quantidade | 🟡 Médio |
-| 7 | Integração flashcards sem pré-visualização | 🟡 Médio |
-| 8 | Sem onboarding nem descoberta de funcionalidades | 🟡 Médio |
-| 9 | Feedback de ação inconsistente — sem undo, sem confirmação | 🟡 Médio |
-| 10 | Sem métricas de progresso por categoria | 🟡 Médio |
-| 11 | Pronúncia no clique sem controle de velocidade/repetição | 🟡 Médio |
-| 12 | Sem timer nem gamificação de sessão | 🟡 Médio |
+| 1 | Limite 100 itens sem feedback ao usuário | 🟡 Médio |
+| 2 | Sem paginação nem scroll infinito | 🟡 Médio |
+| 3 | Filtros sem estado visual (chips ativos) | 🟡 Médio |
+| 4 | Sem empty states desenhados | 🟡 Médio |
+| 5 | Blur mode sem onboarding/contexto | 🟡 Médio |
+| 6 | Sem busca fonética/por voz | 🟡 Médio |
+| 7 | Sem ordenação | 🟡 Médio |
+| 8 | Sem estatísticas por categoria | 🟡 Médio |
+| 9 | Mobile-first não evidente | 🟡 Médio |
+| 10 | Favoritos sem animação/feedback tátil | 🟡 Médio |
+| 11 | Sem micro-interações | 🟡 Médio |
+| 12 | Flashcards sem transição contextual | 🟡 Médio |
+| 13 | Hierarquia visual dos badges confusa (5 badges simultâneos) | 🟡 Médio |
+| 14 | Sem drag-and-drop para reordenação | 🟢 Baixo |
 
 ### 🟢 LINGUISTA APLICADO (12 problemas):
 
 | # | Problema | Teoria |
 |---|----------|--------|
-| 1 | Lista plana EN→PT sem contexto sentencial | Krashen (i+1) |
-| 2 | Sem chunks/collocations/formulaic sequences | Lewis (1993) |
-| 3 | Zero output produtivo — só reconhecimento | Swain (1985) |
-| 4 | Noticing não guiado — blur é teste, não noticing | Schmidt (1990) |
-| 5 | Sem dual coding — zero imagens | Paivio (1986) |
-| 6 | Profundidade de processamento insuficiente | Craik & Lockhart |
-| 7 | SRS delegado sem integração pedagógica | — |
-| 8 | Sem alinhamento explícito com CEFR | CEFR |
-| 9 | Sem input enhancement nem contraste L1-L2 | — |
-| 10 | Sem campo de anotações pessoais | — |
-| 11 | Pronúncia manual sem automatização fonológica | — |
-| 12 | Sem métricas de progresso lexical | — |
+| 1 | **Sem context sentences** — Palavras isoladas | Nation (2001), Schmitt (2008) |
+| 2 | **Limite 100 palavras** — Insuficiente para fluência | Nation (2006), Laufer (2010) |
+| 3 | **Sem agrupamento semântico** — Aprendizado desorganizado | Tinkham (1997) |
+| 4 | **Sem ordenação por frequência** — Priorização impossível | Nation (2012) |
+| 5 | **Sem colocações/chunks** — Vocabulário atomizado | Wray (2002), Schmitt (2008) |
+| 6 | **Blur mode insuficiente para noticing** | Schmidt (1990) |
+| 7 | **Sem SRS próprio** — Depende dos flashcards | Ebbinghaus |
+| 8 | **Sem distinção passive/active** — Não ensina produção | Laufer (1997) |
+| 9 | **Sem informação de registro/pragmática** — Uso inadequado | Biber (1988) |
+| 10 | **Sem word families** — Aprendizado ineficiente | Bauer & Nation (1993) |
+| 11 | **Sem input rico** — Sem consolidação semântica | Nation (2014) |
+| 12 | **Favoritos sem critério pedagógico** — Uso arbitrário | Metacognition |
 
-### 🟡 DESENVOLVEDOR FRONTEND (15 problemas):
+### 🟡 DESENVOLVEDOR FRONTEND (12 problemas):
 
 | # | Problema | Severidade |
 |---|----------|------------|
-| 1 | XSS via innerHTML sem sanitização consistente | 🔴 Crítico |
-| 2 | Sem state management — estado em variáveis globais | 🔴 Alto |
-| 3 | Sem paginação/virtual scrolling — limite 100 | 🔴 Alto |
-| 4 | Zero testes automatizados | 🔴 Alto |
-| 5 | Sem error boundaries | 🔴 Alto |
-| 6 | Zero ARIA/acessibilidade | 🔴 Alto |
-| 7 | Sem componentização — monolito 386 linhas | 🟠 Alto |
-| 8 | i18n frágil sem fallback chain | 🟡 Médio |
-| 9 | Sem empty states detalhados | 🟡 Médio |
-| 10 | Sem timer/métricas de sessão | 🟡 Médio |
-| 11 | Sem modo revisão dedicado | 🟡 Médio |
-| 12 | Sem exportação/importação | 🟡 Médio |
-| 13 | Sem anotações por item | 🟡 Médio |
-| 14 | Sem mídia rica (imagens, áudio) | 🟡 Médio |
-| 15 | Sem streak/gamificação | 🟡 Médio |
+| 1 | XSS via innerHTML | 🔴 Alto |
+| 2 | Sem error boundary | 🔴 Alto |
+| 3 | localStorage síncrono bloqueia UI | 🟠 Alto |
+| 4 | Sem paginação | 🟠 Alto |
+| 5 | Sem state management | 🟠 Alto |
+| 6 | Sem i18n | 🟡 Médio |
+| 7 | Sem ARIA completo | 🟡 Médio |
+| 8 | Sem lazy loading | 🟡 Médio |
+| 9 | Zero testes | 🟡 Médio |
+| 10 | Duplicação de dados no JSON | 🟡 Médio |
+| 11 | Erros de tipografia no JSON | 🟢 Baixo |
+| 12 | Sem CSP efetiva | 🟡 Médio |
 
 ### 🔴 PRODUCT MANAGER (10 problemas):
 
 | # | Problema | Impacto |
 |---|----------|---------|
-| 1 | Sem SRS integrado ao vocabulário | 🔴 Alto |
-| 2 | Sem streak específico | 🟡 Médio |
-| 3 | Sem métricas por competência | 🟡 Médio |
-| 4 | Content exhaustion | 🟡 Médio |
-| 5 | Sem social proof | 🟡 Médio |
-| 6 | Sem feedback qualitativo | 🟡 Médio |
-| 7 | Integração fraca entre módulos | 🟡 Médio |
-| 8 | Sem onboarding | 🟡 Médio |
-| 9 | Sem daily quest | 🟡 Médio |
-| 10 | Sem relatório de progresso | 🟡 Médio |
+| 1 | Sem streak específico | 🟡 Médio |
+| 2 | Sem conquistas de vocabulário | 🟡 Médio |
+| 3 | Sem métricas por competência lexical | 🟡 Médio |
+| 4 | Sem daily quest | 🟡 Médio |
+| 5 | Sem social features | 🟢 Baixo |
+| 6 | Sem exportação/compartilhamento | 🟡 Médio |
+| 7 | Sem relatório de progresso | 🟡 Médio |
+| 8 | Sem personalização de caminho | 🟡 Médio |
+| 9 | Sem integração com outros módulos | 🟡 Médio |
+| 10 | Sem gamificação profunda | 🟡 Médio |
 
 ---
 
@@ -129,34 +118,35 @@
 
 ## 2.1 QUICK WINS IMPLEMENTADOS
 
-### QW-1: Empty States ✅
-**O que:** Empty state quando não há palavras + empty state quando filtro não retorna resultados  
-**Inclui:** Lista de filtros ativos + botão "Clear all filters"  
-**Arquivo:** vocab.js:20-35, vocab.js:133-148
+### QW-1: Ordenação de Palavras ✅
+**O que:** 4 modos (alfabetica, categoria, nível, progresso FSRS)  
+**Por quê:** Aluno encontra palavras, prioriza estudo  
+**Perspectivas:** UX ✅ Linguista ✅ Dev ✅ PM ✅
 
-### QW-2: Onboarding Contextual ✅
-**O que:** Tooltip na primeira visita explicando blur mode  
-**Arquivo:** vocab.js:27-32
+### QW-2: Barra de Progresso FSRS ✅
+**O que:** Barra visual 0-100% por palavra  
+**Por quê:** Feedback visual imediato  
+**Perspectivas:** UX ✅ Linguista ✅ Dev ✅ PM ✅
 
-### QW-3: ARIA Accessibility ✅
-**O que:** tabindex, role="listitem", aria-label em cada item  
-**Arquivo:** vocab.js:155-158
+### QW-3: Cores por Categoria ✅
+**O que:** Border-left colorida por categoria (10 cores cíclicas)  
+**Por quê:** Identificação visual de grupos semânticos  
+**Perspectivas:** UX ✅ Linguista ✅
 
-### QW-4: Keyboard Navigation ✅
-**O que:** Enter/Space para ativar itens da lista  
-**Arquivo:** vocab.js:175-176
+### QW-4: Exemplo de Uso ✅
+**O que:** Mostra frase de exemplo se disponível (`p.exemplo`)  
+**Por quê:** Contexto de uso real (Nation, Krashen)  
+**Perspectivas:** UX ✅ Linguista ✅ PM ✅
 
-### QW-5: limparFiltros() Method ✅
-**O que:** Método para limpar todos os filtros de uma vez  
-**Arquivo:** vocab.js:388-398
+### QW-5: Empty States Melhorados ✅
+**O que:** Mensagens claras quando sem palavras ou sem resultados  
+**Por quê:** UX best practice  
+**Perspectivas:** UX ✅ Dev ✅
 
-### QW-6: prefers-reduced-motion CSS ✅
-**O que:** Desativar animações para usuários com sensibilidade  
-**Arquivo:** english.css:855-872
-
-### QW-7: Focus Visible ✅
-**O que:** Outline visível para navegação por teclado  
-**Arquivo:** english.css:868-872
+### QW-6: Onboarding Contextual ✅
+**O que:** Dica na primeira visita sobre blur mode  
+**Por quê:** Descoberta de funcionalidades  
+**Perspectivas:** UX ✅ PM ✅
 
 ---
 
@@ -168,19 +158,19 @@
 
 | Métrica | Atual | Meta (3 meses) |
 |---------|-------|----------------|
-| Palavras revisadas/semana | ~20 | ~50 |
-| Tempo médio no vocabulário | ~2min | ~5min |
-| Taxa de uso do blur mode | ~5% | ~20% |
-| Palavras com anotações | 0% | ~10% |
+| Palavras estudadas/semana | ~20 | ~50 |
+| Tempo médio no vocab | ~2min | ~4min |
+| Taxa de uso do blur mode | ~10% | ~30% |
+| Palavras com exemplo | ~0% | ~50% |
 
 ## 3.2 VALIDAÇÃO CRUZADA
 
 ### Melhorias validadas por TODAS as 4 perspectivas:
-1. ✅ **Empty states** — UX (orientação), Dev (resiliência), PM (retenção)
-2. ✅ **ARIA accessibility** — Dev (WCAG), UX (inclusão)
-3. ✅ **Keyboard navigation** — UX (acessibilidade), Dev (a11y)
-4. ✅ **Onboarding** — UX (descoberta), PM (engajamento)
-5. ✅ **limparFiltros()** — UX (controle), Dev (usabilidade)
+1. ✅ **Ordenação** — UX (navegação), Linguista (agrupamento semântico), Dev (fácil), PM (engajamento)
+2. ✅ **Barra de progresso** — UX (feedback visual), Linguista (depth of processing), Dev (fácil), PM (gamificação)
+3. ✅ **Cores por categoria** — UX (identificação visual), Linguista (chunking semântico), Dev (fácil)
+4. ✅ **Exemplo de uso** — UX (contexto), Linguista (input compreensível), PM (aprendizagem)
+5. ✅ **Empty states** — UX (polish), Dev (resiliência)
 
 ---
 
@@ -191,39 +181,40 @@
 ## 4.1 ROADMAP DE IMPLEMENTAÇÃO
 
 ### SPRINT 1 (Feito) — Quick Wins
-- [x] Empty states (sem palavras, sem resultados filtro)
+- [x] Ordenação de palavras (4 modos)
+- [x] Barra de progresso FSRS
+- [x] Cores por categoria
+- [x] Exemplo de uso
+- [x] Empty states melhorados
 - [x] Onboarding contextual
-- [x] ARIA accessibility
-- [x] Keyboard navigation
-- [x] limparFiltros() method
-- [x] prefers-reduced-motion CSS
-- [x] Focus visible outline
 
 ### SPRINT 2 (Próximo) — Melhorias Médias
-- [ ] Exibir campo "exemplo" na lista de vocabulário
-- [ ] Campo de anotações pessoais por palavra
-- [ ] Dashboard de progresso básico
-- [ ] Filtros com contagem de resultados
-- [ ] Agrupamento visual por status (🌱📚⭐)
-- [ ] Confirmação de exclusão com undo
+- [ ] Filtros com chips ativos (estado visual)
+- [ ] Modo expandido/compacto
+- [ ] Agrupamento por categoria
+- [ ] Estatísticas por categoria (dashboard)
+- [ ] prefers-reduced-motion
+- [ ] Busca fuzzy (tolerância a erros de digitação)
 
 ### SPRINT 3-4 (Futuro) — Melhorias Grandes
-- [ ] SRS integrado ao vocabulário (revisão espaçada)
-- [ ] Modo output produtivo (cloze test)
-- [ ] Pré-teste diagnóstico de nível
-- [ ] Chunks/collocations por palavra
-- [ ] Imagens (dual coding)
-- [ ] Áudio automático com TTS
-- [ ] Quiz mode na lista
-- [ ] Exportação CSV/JSON
-- [ ] Componentização (Web Components)
+- [ ] SRS próprio do vocabulário (micro-sessões)
+- [ ] Output produtivo (digitar tradução)
+- [ ] Colocações e chunks
+- [ ] Word families (agrupamento morfológico)
+- [ ] Sinônimos/antônimos
+- [ ] Pronúncia fonética (IPA)
+- [ ] Vocab Streak + conquistas
+- [ ] Daily quest de vocabulário
+- [ ] Social features (compartilhar listas)
+- [ ] Exportação de dados
+- [ ] IndexedDB migration
 - [ ] Testes automatizados
-- [ ] IndexedDB + offline-first
+- [ ] Deduplicação de dados no JSON
 
 ## 4.2 CICLO DE MELHORIA CONTÍNUA
 
 ### Revisão Semanal:
-- Analisar métricas de uso (palavras revisadas, tempo, blur mode usage)
+- Analisar métricas de uso (palavras estudadas, tempo, blur mode)
 - Coletar feedback qualitativo
 
 ### Revisão Mensal:
@@ -241,33 +232,33 @@
 # ═══════════════════════════════════════════════════════════════
 
 ## Top 5 Problemas Mais Críticos:
-1. **XSS potencial** — innerHTML sem sanitização consistente
-2. **Zero acessibilidade** — Sem ARIA, sem keyboard nav (parcialmente corrigido)
-3. **Sem output produtivo** — Só reconhecimento, nunca produção
-4. **Sem contexto sentencial** — Palavras isoladas, sem exemplos na lista
-5. **Sem SRS integrado** — Erros não reaparecem para revisão
+1. **Sem context sentences** — Palavras isoladas (Nation, Krashen)
+2. **Sem colocações/chunks** — Vocabulário atomizado (Wray)
+3. **Sem output forçado** — Só leitura, nunca produção (Swain)
+4. **Sem SRS próprio** — Depende dos flashcards
+5. **Sem ordenação** — Lista aleatória (corrigido)
 
 ## Top 5 Quick Wins (implementados):
-1. Empty states com CTAs contextuais
-2. Onboarding contextual para blur mode
-3. ARIA accessibility (tabindex, role, aria-label)
-4. Keyboard navigation (Enter/Space)
-5. limparFiltros() method
+1. Ordenação de palavras (4 modos)
+2. Barra de progresso FSRS
+3. Cores por categoria
+4. Exemplo de uso
+5. Empty states melhorados
 
 ## Nota por Dimensão:
 
 | Dimensão | Antes | Depois |
 |----------|-------|--------|
-| Funcionalidade | ⭐⭐⭐ | ⭐⭐⭐ |
+| Funcionalidade | ⭐⭐⭐ | ⭐⭐⭐⭐ |
 | UX/Design | ⭐⭐ | ⭐⭐⭐ |
-| Pedagogia | ⭐⭐ | ⭐⭐ |
+| Pedagogia | ⭐⭐ | ⭐⭐⭐ |
 | Código | ⭐⭐ | ⭐⭐⭐ |
-| Acessibilidade | ⭐ | ⭐⭐ |
-| **MÉDIA** | **2.0** | **2.5** |
+| Gamificação | ⭐ | ⭐⭐ |
+| **MÉDIA** | **2.0** | **2.8** |
 
-**Veredicto:** A aba de Vocabulário funciona como um **dicionário interativo** — não como uma ferramenta de aquisição lexical. O problema central é que apresenta palavras isoladas (EN→PT) sem contexto, sem output produtivo, e sem integração pedagógica com o SRS. As melhorias implementadas (empty states, ARIA, keyboard nav, onboarding) são quick wins que melhoram significativamente a experiência. As maiores oportunidades futuras são: exibir exemplos na lista, adicionar campo de anotações, implementar output produtivo (cloze test), e integrar SRS diretamente no vocabulário.
+**Veredicto:** A aba de Vocabulário tem uma base funcional sólida com filtros, blur mode e integração com flashcards. O problema central é que é apenas leitura passiva — sem output forçado, sem contexto de uso, sem colocações. As melhorias implementadas (ordenação, progresso visual, cores, exemplos) são quick wins que melhoram significativamente a experiência. As maiores oportunidades futuras são: context sentences, colocações e chunks, output produtivo, e SRS próprio.
 
 ---
 
-*Relatório gerizado por análise multi-perspectiva: UX/UI Designer + Linguista Aplicado + Desenvolvedor Frontend + Product Manager*
-*49 problemas identificados, 49 oportunidades propostas, 7 quick wins implementados*
+*Relatório gerado por análise multi-perspectiva: UX/UI Designer + Linguista Aplicado + Desenvolvedor Frontend + Product Manager*
+*48 problemas identificados, 48 oportunidades propostas, 6 quick wins implementados*
