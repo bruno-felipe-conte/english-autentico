@@ -40,7 +40,7 @@ const Vocab = {
     if (!this._onboardingMostrado) {
       this._onboardingMostrado = true;
       setTimeout(() => {
-        App.notificar('💡 Vocab tip: Use "Hide EN" or "Hide PT" to test yourself!', 'alerta');
+        App.notificar(I18n.t('vocab_tip_ocultar'), 'alerta');
       }, 800);
     }
 

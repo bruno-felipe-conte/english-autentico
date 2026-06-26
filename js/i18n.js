@@ -320,6 +320,7 @@ const I18n = {
     'vocab_nenhuma': { pt: 'Nenhuma palavra encontrada.', en: 'No words found.' },
     'vocab_ocultar_pt': { pt: '👁 Ocultar PT', en: '👁 Hide PT' },
     'vocab_ocultar_it': { pt: '👁 Ocultar EN', en: '👁 Hide EN' },
+    'vocab_tip_ocultar': { pt: '💡 Dica: Use "Ocultar PT" ou "Ocultar EN" para testar sua memória!', en: '💡 Vocab tip: Use "Hide EN" or "Hide PT" to test yourself!' },
 
     // ── Core — streak ──
     'streak_dia': { pt: '🔥 {n} dia', en: '🔥 {n} day' },
