@@ -120,6 +120,16 @@ const Storie = {
     // Cores para cada nível CEFR
     const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
 
+    // NOVO: Detectar dark mode
+    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const corMarmore = isDark ? '#2a2a3a' : 'var(--cor-marmore)';
+    const corTexto = isDark ? '#e0e0e0' : 'var(--cor-inchiostro)';
+    const corPietra = isDark ? '#aaa' : 'var(--cor-pietra)';
+    const corCard = isDark ? '#1e1e2e' : 'var(--cor-marmore)';
+    // NOVO: transição condicional (respeita prefers-reduced-motion)
+    const transicao = prefersReducedMotion ? 'none' : 'transform 0.18s,box-shadow 0.18s,border-color 0.18s';
+
     let html = `
       <!-- Linha 1: busca + ação -->
       <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
@@ -154,12 +164,12 @@ const Storie = {
       const corCobertura = cobertura && cobertura.cobertura >= 95 ? '#27AE60' : cobertura && cobertura.cobertura >= 80 ? '#F39C12' : '#E74C3C';
       html += `
         <div onclick="Storie.abrirStoria('${s.id}')"
-          style="background:var(--cor-marmore);border-radius:14px;padding:1.2rem 1rem;text-align:center;
-                 box-shadow:0 3px 12px rgba(0,0,0,0.09);cursor:pointer;border:2px solid transparent;
-                 transition:transform 0.18s,box-shadow 0.18s,border-color 0.18s;
+          style="background:${corCard};border-radius:14px;padding:1.2rem 1rem;text-align:center;
+                 box-shadow:0 3px 12px rgba(0,0,0,${isDark ? '0.3' : '0.09'});cursor:pointer;border:2px solid transparent;
+                 transition:${transicao};
                  display:flex;flex-direction:column;align-items:center;gap:0.35rem"
-          onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 22px rgba(0,0,0,0.14)';this.style.borderColor='${corN}'"
-          onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.09)';this.style.borderColor='transparent'">
+          onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 22px rgba(0,0,0,${isDark ? '0.4' : '0.14'})';this.style.borderColor='${corN}'"
+          onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(0,0,0,${isDark ? '0.3' : '0.09'})';this.style.borderColor='transparent'">
           <div style="font-size:2.4rem;line-height:1.1">${s.icone||'📜'}</div>
           <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
             ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
@@ -449,7 +459,8 @@ const Storie = {
             oninput="Storie._notaAtual=this.value"
             style="width:100%;padding:0.4rem 0.6rem;border:1px solid #ddd;border-radius:6px;font-size:0.8rem;outline:none;box-sizing:border-box"
             autocomplete="off" aria-label="Nota pessoal sobre esta palavra">
-        </div>`;
+        </div>
+        ${!jaSalva && tradAtual ? `<div style="margin-top:0.4rem;font-size:0.72rem;color:var(--cor-pietra);font-style:italic">💡 Tente inferir do contexto antes de salvar</div>` : ''}`;
     };
 
     const modal = document.getElementById('storie-word-modal');
@@ -635,6 +646,8 @@ const Storie = {
       btn.textContent = I18n.t('storie_already_saved');
       btn.classList.add('salvo');
     }
+    // NOVO: feedback sonoro
+    this._tocarSomSucesso();
 
     // Destaca todas as ocorrências no texto
     this._marcarPalavraSalvaNoDOM(palavra);
@@ -823,7 +836,23 @@ const Storie = {
       </div>`;
   },
 
-  // ── NOVO: Reading Fluency Metrics ──────────────────────────
+  // ── NOVO: Feedback Sonoro ao Salvar ────────────────────────
+  _tocarSomSucesso() {
+    try {
+      // Usar Web Audio API para som simples (sem arquivo externo)
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 800;
+      osc.type = 'sine';
+      gain.gain.value = 0.15;
+      osc.start();
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.15);
+      osc.stop(ctx.currentTime + 0.15);
+    } catch (_) {} // Silencioso se não suportado
+  },
   _fluencyAtivo: false,
   _fluencyInterval: null,
   _fluencySegundos: 0,
