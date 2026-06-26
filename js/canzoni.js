@@ -115,7 +115,7 @@ const Canzoni = {
           <option value="">${I18n.t('dial_select_level')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
-        ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${I18n.t('can_restaurar')} (${nOcultas})</button>` : ''}
+        ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit" aria-label="Restaurar músicas ocultas — ${nOcultas} ocultas">${I18n.t('can_restaurar')} (${nOcultas})</button>` : ''}
       </div>
       <div class="dialogo-grid">`;
 
@@ -128,10 +128,11 @@ const Canzoni = {
         <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${this._esc(can.artista || '')}</div>
         <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
           <span class="dialogo-nivel">${can.nivel}</span>
+          ${this._badgeProgresso(can.id)}
           ${ehCustom ? `
           ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
           <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
-          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Hide this song">🗑️</button>`}
+          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.6;transition:opacity 0.15s" aria-label="Ocultar esta música" title="Ocultar esta música">🗑️</button>`}
         </div>
       </div>`;
     }
@@ -1417,6 +1418,8 @@ ${estrutura}${entrega}`;
     const total = can.estrofes.filter(e => this._hasBlank(e)).length;
     const done  = can.estrofes.filter((e, i) => this._hasBlank(e) && this.respostas[i] !== null).length;
     const pct   = total > 0 ? Math.round(done / total * 100) : 0;
+    const _counterLabel = I18n.t('can_progress_counter') || 'Parole';
+    const _counterHtml = total > 0 ? `<span class="can-progress-counter" aria-live="polite">${_counterLabel}: ${done}/${total}</span>` : '';
 
     const versosHtml = can.estrofes.map((v, i) => {
       const resp = this.respostas[i];
@@ -1503,8 +1506,8 @@ ${estrutura}${entrega}`;
       const { dist, ordem } = this._distratorCache[idx];
       const arr = ordem ? [palavraCorreta, dist] : [dist, palavraCorreta];
       const btns = arr.map(w => {
-        const safeW = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-        return '<button class="can-choice-btn" onclick="Canzoni._escolher(\'' + safeW + '\')"><i>' + this._esc(w) + '</i></button>';
+        const safeW = w.replace(/[\\']/g, '\\$&');
+        return '<button class="can-choice-btn" type="button" onclick="Canzoni._escolher(\'' + safeW + '\')" aria-label="' + this._esc(w) + '">' + this._esc(w) + '</button>';
       }).join('');
       choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">' + I18n.t('can_escolha_palavra') + '</div><div class="can-choices-grid">' + btns + '</div></div>';
     }
@@ -1514,7 +1517,7 @@ ${estrutura}${entrega}`;
       ? '<div class="can-audio-bar">' +
           '<audio id="can-audio-player"></audio>' +
           '<div class="can-custom-player">' +
-            '<button class="can-play-btn" id="can-play-btn" onclick="Canzoni._togglePlay()">&#9654;</button>' +
+            '<button class="can-play-btn" id="can-play-btn" onclick="Canzoni._togglePlay()" aria-label="Reproduzir ou pausar">&#9654;</button>' +
             '<span class="can-player-time" id="can-player-time">0:00</span>' +
             '<div class="can-player-progress" id="can-player-progress" onclick="Canzoni._seekAudio(event)">' +
               '<div class="can-player-fill" id="can-player-fill"></div>' +
@@ -1527,26 +1530,31 @@ ${estrutura}${entrega}`;
       : '';
 
     c.innerHTML =
-      '<div class="can-player">' +
+      '<div class="can-player" role="region" aria-label="' + this._esc(can.titulo) + ' — ' + this._esc(can.artista||'') + '">' +
         '<div class="can-player-header">' +
-          '<button class="can-back-btn" onclick="Canzoni.renderizarSeletor()">&#8249;</button>' +
+          '<button class="can-back-btn" onclick="Canzoni.renderizarSeletor()" aria-label="Voltar à lista de músicas">&#8249;</button>' +
           '<div class="can-header-song">' +
             '<div class="can-header-title">' + this._esc(can.titulo) + '</div>' +
             '<div class="can-header-artist">' + this._esc(can.artista||'') + '</div>' +
           '</div>' +
           '<div class="can-score-row">' +
-            '<span class="can-score-pill can-score-correct">' + this.acertos + ' ✓</span>' +
-            '<span class="can-score-pill can-score-wrong">' + this.erros + ' ✗</span>' +
+            '<span class="can-score-pill can-score-correct" role="status">' + this.acertos + ' acertos ✓</span>' +
+            '<span class="can-score-pill can-score-wrong" role="status">' + this.erros + ' erros ✗</span>' +
           '</div>' +
         '</div>' +
         audioBarHtml +
         '<div class="can-subbar">' +
-          '<div class="can-progress-wrap"><div class="can-progress-fill" style="width:' + pct + '%"></div></div>' +
+          '<div class="can-progress-wrap" style="display:flex;align-items:center;gap:0.5rem">' +
+            '<div class="can-progress-fill" style="flex:1;height:6px;background:rgba(107,26,42,0.15);border-radius:3px;overflow:hidden">' +
+              '<div style="width:' + pct + '%;height:100%;background:var(--vinho-medio);border-radius:3px;transition:width 0.3s"></div>' +
+            '</div>' +
+            _counterHtml +
+          '</div>' +
           '<div class="can-toggle-row">' +
             '<span class="can-toggle-label">tradução</span>' +
-            '<button class="can-toggle-btn ' + (this.traduzirVisivel?'on':'off') + '" onclick="Canzoni._toggleTraduzir()" aria-label="alternar tradução"></button>' +
+            '<button class="can-toggle-btn ' + (this.traduzirVisivel?'on':'off') + '" onclick="Canzoni._toggleTraduzir()" aria-pressed="' + this.traduzirVisivel + '" aria-label="alternar tradução"></button>' +
           '</div>' +
-        '</div>' +
+        '</div>'
         '<div class="can-lyrics-area" id="can-lyrics">' + versosHtml + '</div>' +
         choicesHtml +
       '</div>';
@@ -1838,12 +1846,48 @@ ${estrutura}${entrega}`;
   verificar() {},
   renderizarEstrofe() { this._renderizarPlayer(); },
 
+  // ── Badge visual de progresso ──
+  _badgeProgresso(songId) {
+    const prog = this._carregarProgresso(songId);
+    if (!prog) return '';
+    if (prog.best >= 95) return '<span style="font-size:0.6rem;background:linear-gradient(135deg,#d4a847,#f5d07a);color:#5a4300;padding:0.1rem 0.35rem;border-radius:4px;font-weight:700">⭐</span>';
+    if (prog.completed) return '<span style="font-size:0.6rem;background:#27ae60;color:#fff;padding:0.1rem 0.35rem;border-radius:4px;font-weight:600">✓</span>';
+    if (prog.attempts > 0) return '<span style="font-size:0.6rem;background:#7B68A0;color:#fff;padding:0.1rem 0.35rem;border-radius:4px;font-weight:600">' + prog.best + '%</span>';
+    return '';
+  },
+
+  // ── Persistir progresso por música ──
+  _salvarProgresso(songId, pct) {
+    if (!songId) return;
+    try {
+      const all = JSON.parse(localStorage.getItem('en_canzoni_progress') || '{}');
+      const prev = all[songId] || { best: 0, attempts: 0, lastDate: '' };
+      all[songId] = {
+        best: Math.max(prev.best, pct),
+        attempts: (prev.attempts || 0) + 1,
+        lastDate: new Date().toISOString().slice(0,10),
+        completed: pct >= 80
+      };
+      localStorage.setItem('en_canzoni_progress', JSON.stringify(all));
+    } catch(e) {}
+  },
+
+  // ── Carregar progresso ao abrir música ──
+  _carregarProgresso(songId) {
+    if (!songId) return null;
+    try {
+      const all = JSON.parse(localStorage.getItem('en_canzoni_progress') || '{}');
+      return all[songId] || null;
+    } catch(e) { return null; }
+  },
+
   mostrarResultado() {
     const can = this.canzonAtual;
     const total = can.estrofes.filter(e => e.palavra_oculta).length;
     const pct = total > 0 ? Math.round(this.acertos / total * 100) : 100;
     const xpGanho = Math.round(can.xp_recompensa * pct / 100);
     if (xpGanho > 0 && typeof Progressao !== 'undefined' && Progressao.ganhar) Progressao.ganhar(xpGanho);
+    this._salvarProgresso(can.id, pct);
     const c = document.getElementById('canzoni-container');
     const emoji = pct >= 80 ? '🎤' : pct >= 50 ? '🎵' : '🎼';
     c.innerHTML =
