@@ -1554,7 +1554,7 @@ ${estrutura}${entrega}`;
             '<span class="can-toggle-label">tradução</span>' +
             '<button class="can-toggle-btn ' + (this.traduzirVisivel?'on':'off') + '" onclick="Canzoni._toggleTraduzir()" aria-pressed="' + this.traduzirVisivel + '" aria-label="alternar tradução"></button>' +
           '</div>' +
-        '</div>'
+        '</div>' +
         '<div class="can-lyrics-area" id="can-lyrics">' + versosHtml + '</div>' +
         choicesHtml +
       '</div>';
