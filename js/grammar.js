@@ -139,21 +139,21 @@ const Grammatica = {
     overlay.innerHTML = `
       <div class="gram-admin-box" role="dialog" aria-modal="true">
         <div class="gram-admin-icon">🔐</div>
-        <div class="gram-admin-titulo">Acesso do Administrador</div>
+        <div class="gram-admin-titulo">${I18n.t('gram_admin_titulo') || 'Acesso do Administrador'}</div>
         <div class="gram-admin-subtit">${nome}</div>
         <input
           id="gram-admin-input"
           class="gram-admin-input"
           type="password"
-          placeholder="Digite a senha"
+          placeholder="${I18n.t('gram_admin_senha_ph') || 'Digite a senha'}"
           maxlength="20"
           autocomplete="off"
           onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
         />
-        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Senha incorreta. Tente novamente.</div>
+        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">${I18n.t('gram_admin_senha_erro') || 'Senha incorreta. Tente novamente.'}</div>
         <div class="gram-admin-btns">
-          <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Cancelar</button>
-          <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Confirmar</button>
+          <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">${I18n.t('gram_btn_cancelar') || 'Cancelar'}</button>
+          <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">${I18n.t('gram_btn_confirmar') || 'Confirmar'}</button>
         </div>
       </div>`;
 
@@ -363,10 +363,10 @@ const Grammatica = {
     // Ações (ocultas até responder)
     html += '<div class="gram-ex-actions" id="gram-actions" style="display:none">';
     if (ex.tipo === 'revelar') {
-      html += '<button class="gram-btn-errei"  onclick="Grammatica.proximoExercicio()">❌ Errei</button>';
-      html += '<button class="gram-btn-acertei" onclick="Grammatica.marcarAcerto()">✅ Acertei</button>';
+      html += `<button class="gram-btn-errei"  onclick="Grammatica.proximoExercicio()">❌ ${I18n.t('gram_btn_errei') || 'Errei'}</button>`;
+      html += `<button class="gram-btn-acertei" onclick="Grammatica.marcarAcerto()">✅ ${I18n.t('gram_btn_acertei') || 'Acertei'}</button>`;
     } else {
-      html += '<button class="gram-btn-next" onclick="Grammatica.proximoExercicio()">Próximo →</button>';
+      html += `<button class="gram-btn-next" onclick="Grammatica.proximoExercicio()">${I18n.t('gram_btn_proximo_arrow') || 'Próximo →'}</button>`;
     }
     html += '</div>';
 
@@ -657,7 +657,7 @@ const Grammatica = {
         ${bonusConcedido ? `<div class="gram-res-xp">${I18n.t('gram_bonus_xp').replace('{a}', bonus)}</div>` : ''}
         <div class="gram-res-msg">${msg}</div>
         <div class="gram-res-actions">
-          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Refazer</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 ${I18n.t('gram_btn_refazer') || 'Refazer'}</button>
           ${proxBtn}
           <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">${I18n.t('gram_todos_modulos')}</button>
         </div>
@@ -840,10 +840,10 @@ const Grammatica = {
       if (u.exemplos && u.exemplos.length) {
         h += '<div class="gram-esempi-lista">';
         for (const ex of u.exemplos) {
-          const it = typeof ex === 'string' ? ex : (ex.it || '');
+          const en = typeof ex === 'string' ? ex : (ex.ingles || ex.en || ex.it || '');
           const pt = typeof ex === 'string' ? '' : (ex.pt || '');
-          const safe = it.replace(/'/g, "\\'");
-          h += `<div class="gram-esempio"><div class="gram-esempio-it" onclick="App.pronunciar('${safe}')">🔊 ${it}</div>`;
+          const safe = en.replace(/'/g, "\\'");
+          h += `<div class="gram-esempio"><div class="gram-esempio-it" onclick="App.pronunciar('${safe}')">🔊 ${en}</div>`;
           if (pt) h += `<div class="gram-esempio-pt">${pt}</div>`;
           h += '</div>';
         }
@@ -879,7 +879,7 @@ const Grammatica = {
         <div class="gram-flip-card" onclick="this.classList.toggle('flipped')">
           <div class="gram-flip-card-inner">
             <div class="gram-flip-card-front">
-              <div class="gfc-en">${c.italiano || c.ingles}</div>
+              <div class="gfc-en">${c.ingles || ''}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
               <div class="gfc-click">${I18n.t('gram_card_clique')}</div>
@@ -975,7 +975,7 @@ const Grammatica = {
   // ── Tabela colapsável acima dos exercícios ──
   _htmlTabelaVisual(u) {
     if (!u.tabela_visual) return '';
-    const label = '📋 Ver tabela de referência (use durante os exercícios)';
+    const label = I18n.t('gram_ver_tabela') || '📋 Ver tabela de referência (use durante os exercícios)';
     return `<details class="gram-tabela-visual">
       <summary>${label}</summary>
       <div class="gram-tabela-conteudo">${this._formatarTeoria(u.tabela_visual)}</div>

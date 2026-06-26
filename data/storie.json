@@ -18,14 +18,14 @@
           "portugues": "Meu nome é Emma e eu moro em um apartamento pequeno em Nova York.",
           "vocabulario": [
             {
-              "parola": "apartment",
-              "tradicao_portugues": "apartamento",
+              "ingles": "apartment",
+              "traducao_portugues": "apartamento",
               "ipa": "/əˈpɑːrtmənt/",
               "categoria": "noun"
             },
             {
-              "parola": "small",
-              "tradicao_portugues": "pequeno",
+              "ingles": "small",
+              "traducao_portugues": "pequeno",
               "ipa": "/smɔːl/",
               "categoria": "adjective"
             }
@@ -37,14 +37,14 @@
           "portugues": "Uma manhã, ouço uma batida na porta. É meu novo vizinho, Tom.",
           "vocabulario": [
             {
-              "parola": "knock",
-              "tradicao_portugues": "batida / bater",
+              "ingles": "knock",
+              "traducao_portugues": "batida / bater",
               "ipa": "/nɒk/",
               "categoria": "noun/verb"
             },
             {
-              "parola": "neighbour",
-              "tradicao_portugues": "vizinho",
+              "ingles": "neighbour",
+              "traducao_portugues": "vizinho",
               "ipa": "/ˈneɪbər/",
               "categoria": "noun"
             }
@@ -56,20 +56,20 @@
           "portugues": "\"Oi! Acabei de me mudar para o lado. Meu nome é Tom\", ele diz com um sorriso.",
           "vocabulario": [
             {
-              "parola": "moved in",
-              "tradicao_portugues": "se mudou",
+              "ingles": "moved in",
+              "traducao_portugues": "se mudou",
               "ipa": "/muːvd ɪn/",
               "categoria": "verb phrase"
             },
             {
-              "parola": "next door",
-              "tradicao_portugues": "ao lado",
+              "ingles": "next door",
+              "traducao_portugues": "ao lado",
               "ipa": "/nɛkst dɔːr/",
               "categoria": "expression"
             },
             {
-              "parola": "smile",
-              "tradicao_portugues": "sorriso",
+              "ingles": "smile",
+              "traducao_portugues": "sorriso",
               "ipa": "/smaɪl/",
               "categoria": "noun"
             }
@@ -81,14 +81,14 @@
           "portugues": "\"Prazer em conhecê-lo, Tom! Sou a Emma. Gostaria de uma xícara de café?\" pergunto.",
           "vocabulario": [
             {
-              "parola": "would you like",
-              "tradicao_portugues": "você gostaria de",
+              "ingles": "would you like",
+              "traducao_portugues": "você gostaria de",
               "ipa": "/wʊd juː laɪk/",
               "categoria": "expression"
             },
             {
-              "parola": "cup of coffee",
-              "tradicao_portugues": "xícara de café",
+              "ingles": "cup of coffee",
+              "traducao_portugues": "xícara de café",
               "ipa": "/kʌp əv ˈkɒfi/",
               "categoria": "noun phrase"
             }
@@ -100,14 +100,14 @@
           "portugues": "\"Seria ótimo, obrigado!\" ele responde.",
           "vocabulario": [
             {
-              "parola": "lovely",
-              "tradicao_portugues": "ótimo / encantador",
+              "ingles": "lovely",
+              "traducao_portugues": "ótimo / encantador",
               "ipa": "/ˈlʌvli/",
               "categoria": "adjective"
             },
             {
-              "parola": "replies",
-              "tradicao_portugues": "responde",
+              "ingles": "replies",
+              "traducao_portugues": "responde",
               "ipa": "/rɪˈplaɪz/",
               "categoria": "verb"
             }
@@ -119,14 +119,14 @@
           "portugues": "Tomamos café e conversamos por uma hora. Tom é de Chicago e trabalha como professor.",
           "vocabulario": [
             {
-              "parola": "works as",
-              "tradicao_portugues": "trabalha como",
+              "ingles": "works as",
+              "traducao_portugues": "trabalha como",
               "ipa": "/wɜːrks æz/",
               "categoria": "verb phrase"
             },
             {
-              "parola": "teacher",
-              "tradicao_portugues": "professor",
+              "ingles": "teacher",
+              "traducao_portugues": "professor",
               "ipa": "/ˈtiːtʃər/",
               "categoria": "noun"
             }
@@ -138,14 +138,14 @@
           "portugues": "É maravilhoso ter um vizinho amigável. Acho que seremos bons amigos.",
           "vocabulario": [
             {
-              "parola": "wonderful",
-              "tradicao_portugues": "maravilhoso",
+              "ingles": "wonderful",
+              "traducao_portugues": "maravilhoso",
               "ipa": "/ˈwʌndərfəl/",
               "categoria": "adjective"
             },
             {
-              "parola": "friendly",
-              "tradicao_portugues": "amigável",
+              "ingles": "friendly",
+              "traducao_portugues": "amigável",
               "ipa": "/ˈfrɛndli/",
               "categoria": "adjective"
             }
@@ -171,14 +171,14 @@
           "portugues": "Marco chega a Londres numa fria manhã de terça-feira em novembro.",
           "vocabulario": [
             {
-              "parola": "arrives",
-              "tradicao_portugues": "chega",
+              "ingles": "arrives",
+              "traducao_portugues": "chega",
               "ipa": "/əˈraɪvz/",
               "categoria": "verb"
             },
             {
-              "parola": "cold",
-              "tradicao_portugues": "frio",
+              "ingles": "cold",
+              "traducao_portugues": "frio",
               "ipa": "/koʊld/",
               "categoria": "adjective"
             }
@@ -190,14 +190,14 @@
           "portugues": "Ele pega o metrô do Aeroporto de Heathrow até o centro da cidade.",
           "vocabulario": [
             {
-              "parola": "underground",
-              "tradicao_portugues": "metrô (Londres)",
+              "ingles": "underground",
+              "traducao_portugues": "metrô (Londres)",
               "ipa": "/ˈʌndərɡraʊnd/",
               "categoria": "noun"
             },
             {
-              "parola": "city centre",
-              "tradicao_portugues": "centro da cidade",
+              "ingles": "city centre",
+              "traducao_portugues": "centro da cidade",
               "ipa": "/ˈsɪti ˌsɛntər/",
               "categoria": "noun phrase"
             }
@@ -209,14 +209,14 @@
           "portugues": "Sua primeira parada é a Tower Bridge. A vista é de tirar o fôlego.",
           "vocabulario": [
             {
-              "parola": "stop",
-              "tradicao_portugues": "parada",
+              "ingles": "stop",
+              "traducao_portugues": "parada",
               "ipa": "/stɒp/",
               "categoria": "noun"
             },
             {
-              "parola": "breathtaking",
-              "tradicao_portugues": "de tirar o fôlego",
+              "ingles": "breathtaking",
+              "traducao_portugues": "de tirar o fôlego",
               "ipa": "/ˈbrɛθˌteɪkɪŋ/",
               "categoria": "adjective"
             }
@@ -228,14 +228,14 @@
           "portugues": "Depois ele caminha ao longo do Tâmisa e visita a galeria de arte Tate Modern.",
           "vocabulario": [
             {
-              "parola": "along",
-              "tradicao_portugues": "ao longo de",
+              "ingles": "along",
+              "traducao_portugues": "ao longo de",
               "ipa": "/əˈlɒŋ/",
               "categoria": "preposition"
             },
             {
-              "parola": "gallery",
-              "tradicao_portugues": "galeria",
+              "ingles": "gallery",
+              "traducao_portugues": "galeria",
               "ipa": "/ˈɡæləri/",
               "categoria": "noun"
             }
@@ -247,14 +247,14 @@
           "portugues": "À noite, ele come fish and chips perto do Covent Garden. É delicioso.",
           "vocabulario": [
             {
-              "parola": "evening",
-              "tradicao_portugues": "noite / tarde",
+              "ingles": "evening",
+              "traducao_portugues": "noite / tarde",
               "ipa": "/ˈiːvnɪŋ/",
               "categoria": "noun"
             },
             {
-              "parola": "delicious",
-              "tradicao_portugues": "delicioso",
+              "ingles": "delicious",
+              "traducao_portugues": "delicioso",
               "ipa": "/dɪˈlɪʃəs/",
               "categoria": "adjective"
             }
@@ -266,20 +266,20 @@
           "portugues": "\"Londres é incrível\", Marco escreve em seu diário de viagem. \"Definitivamente voltarei.\"",
           "vocabulario": [
             {
-              "parola": "amazing",
-              "tradicao_portugues": "incrível",
+              "ingles": "amazing",
+              "traducao_portugues": "incrível",
               "ipa": "/əˈmeɪzɪŋ/",
               "categoria": "adjective"
             },
             {
-              "parola": "definitely",
-              "tradicao_portugues": "definitivamente",
+              "ingles": "definitely",
+              "traducao_portugues": "definitivamente",
               "ipa": "/ˈdɛfɪnɪtli/",
               "categoria": "adverb"
             },
             {
-              "parola": "travel diary",
-              "tradicao_portugues": "diário de viagem",
+              "ingles": "travel diary",
+              "traducao_portugues": "diário de viagem",
               "ipa": "/ˈtrævəl ˈdaɪəri/",
               "categoria": "noun phrase"
             }
@@ -305,13 +305,13 @@
           "portugues": "Hoje é sábado. Eu preciso comprar comida para o jantar.",
           "vocabulario": [
             {
-              "parola": "Today",
+              "ingles": "Today",
               "traducao_portugues": "hoje",
               "ipa": "/təˈdeɪ/",
               "categoria": "adverb"
             },
             {
-              "parola": "dinner",
+              "ingles": "dinner",
               "traducao_portugues": "jantar",
               "ipa": "/ˈdɪnər/",
               "categoria": "noun"
@@ -324,13 +324,13 @@
           "portugues": "Eu ando até o supermercado local. É muito grande e claro.",
           "vocabulario": [
             {
-              "parola": "walk",
+              "ingles": "walk",
               "traducao_portugues": "ando / caminhar",
               "ipa": "/wɔːk/",
               "categoria": "verb"
             },
             {
-              "parola": "supermarket",
+              "ingles": "supermarket",
               "traducao_portugues": "supermercado",
               "ipa": "/ˈsuːpərmɑːrkɪt/",
               "categoria": "noun"
@@ -343,13 +343,13 @@
           "portugues": "Primeiro, eu vou para a seção de frutas. Eu pego três maçãs vermelhas e algumas bananas amarelas.",
           "vocabulario": [
             {
-              "parola": "fruit",
+              "ingles": "fruit",
               "traducao_portugues": "fruta",
               "ipa": "/fruːt/",
               "categoria": "noun"
             },
             {
-              "parola": "apples",
+              "ingles": "apples",
               "traducao_portugues": "maçãs",
               "ipa": "/ˈæpəlz/",
               "categoria": "noun"
@@ -362,13 +362,13 @@
           "portugues": "Em seguida, eu preciso de leite e pão. Eu os encontro no corredor quatro.",
           "vocabulario": [
             {
-              "parola": "milk",
+              "ingles": "milk",
               "traducao_portugues": "leite",
               "ipa": "/mɪlk/",
               "categoria": "noun"
             },
             {
-              "parola": "bread",
+              "ingles": "bread",
               "traducao_portugues": "pão",
               "ipa": "/brɛd/",
               "categoria": "noun"
@@ -381,13 +381,13 @@
           "portugues": "Finalmente, eu compro um bolo pequeno para a sobremesa. Eu amo bolo de chocolate.",
           "vocabulario": [
             {
-              "parola": "cake",
+              "ingles": "cake",
               "traducao_portugues": "bolo",
               "ipa": "/keɪk/",
               "categoria": "noun"
             },
             {
-              "parola": "dessert",
+              "ingles": "dessert",
               "traducao_portugues": "sobremesa",
               "ipa": "/dɪˈzɜːrt/",
               "categoria": "noun"
@@ -400,13 +400,13 @@
           "portugues": "Eu vou ao caixa e pago com meu cartão de crédito.",
           "vocabulario": [
             {
-              "parola": "cashier",
+              "ingles": "cashier",
               "traducao_portugues": "caixa (funcionário)",
               "ipa": "/kæˈʃɪər/",
               "categoria": "noun"
             },
             {
-              "parola": "pay",
+              "ingles": "pay",
               "traducao_portugues": "pago / pagar",
               "ipa": "/peɪ/",
               "categoria": "verb"
@@ -419,13 +419,13 @@
           "portugues": "Eu volto a pé para casa. Agora, estou pronto para cozinhar uma refeição deliciosa.",
           "vocabulario": [
             {
-              "parola": "cook",
+              "ingles": "cook",
               "traducao_portugues": "cozinhar",
               "ipa": "/kʊk/",
               "categoria": "verb"
             },
             {
-              "parola": "meal",
+              "ingles": "meal",
               "traducao_portugues": "refeição",
               "ipa": "/miːl/",
               "categoria": "noun"
@@ -452,13 +452,13 @@
           "portugues": "O tempo está muito bonito hoje. O céu está azul e o sol está quente.",
           "vocabulario": [
             {
-              "parola": "weather",
+              "ingles": "weather",
               "traducao_portugues": "tempo / clima",
               "ipa": "/ˈwɛðər/",
               "categoria": "noun"
             },
             {
-              "parola": "beautiful",
+              "ingles": "beautiful",
               "traducao_portugues": "bonito",
               "ipa": "/ˈbjuːtɪfəl/",
               "categoria": "adjective"
@@ -471,13 +471,13 @@
           "portugues": "Eu decido ir ao parque com meu cachorro, Max.",
           "vocabulario": [
             {
-              "parola": "decide",
+              "ingles": "decide",
               "traducao_portugues": "decido / decidir",
               "ipa": "/dɪˈsaɪd/",
               "categoria": "verb"
             },
             {
-              "parola": "dog",
+              "ingles": "dog",
               "traducao_portugues": "cachorro",
               "ipa": "/dɔːɡ/",
               "categoria": "noun"
@@ -490,13 +490,13 @@
           "portugues": "Muitas pessoas estão no parque. As crianças estão brincando na grama.",
           "vocabulario": [
             {
-              "parola": "people",
+              "ingles": "people",
               "traducao_portugues": "pessoas",
               "ipa": "/ˈpiːpəl/",
               "categoria": "noun"
             },
             {
-              "parola": "playing",
+              "ingles": "playing",
               "traducao_portugues": "brincando",
               "ipa": "/ˈpleɪɪŋ/",
               "categoria": "verb"
@@ -509,13 +509,13 @@
           "portugues": "Eu me sento em um banco verde e leio um livro.",
           "vocabulario": [
             {
-              "parola": "sit",
+              "ingles": "sit",
               "traducao_portugues": "sento / sentar",
               "ipa": "/sɪt/",
               "categoria": "verb"
             },
             {
-              "parola": "bench",
+              "ingles": "bench",
               "traducao_portugues": "banco",
               "ipa": "/bɛntʃ/",
               "categoria": "noun"
@@ -528,13 +528,13 @@
           "portugues": "Max corre em volta e persegue um passarinho pequeno.",
           "vocabulario": [
             {
-              "parola": "runs",
+              "ingles": "runs",
               "traducao_portugues": "corre",
               "ipa": "/rʌnz/",
               "categoria": "verb"
             },
             {
-              "parola": "bird",
+              "ingles": "bird",
               "traducao_portugues": "pássaro",
               "ipa": "/bɜːrd/",
               "categoria": "noun"
@@ -547,13 +547,13 @@
           "portugues": "Nós ficamos no parque por duas horas. Nós nos sentimos felizes e relaxados.",
           "vocabulario": [
             {
-              "parola": "stay",
+              "ingles": "stay",
               "traducao_portugues": "ficamos / ficar",
               "ipa": "/steɪ/",
               "categoria": "verb"
             },
             {
-              "parola": "happy",
+              "ingles": "happy",
               "traducao_portugues": "felizes",
               "ipa": "/ˈhæpi/",
               "categoria": "adjective"
@@ -566,13 +566,13 @@
           "portugues": "Quando o sol se põe, nós caminhamos lentamente de volta para casa.",
           "vocabulario": [
             {
-              "parola": "goes down",
+              "ingles": "goes down",
               "traducao_portugues": "se põe",
               "ipa": "/ɡoʊz daʊn/",
               "categoria": "verb phrase"
             },
             {
-              "parola": "slowly",
+              "ingles": "slowly",
               "traducao_portugues": "lentamente",
               "ipa": "/ˈsloʊli/",
               "categoria": "adverb"
@@ -599,13 +599,13 @@
           "portugues": "Eu acordo às sete horas todas as manhãs, de segunda a sexta-feira.",
           "vocabulario": [
             {
-              "parola": "wake up",
+              "ingles": "wake up",
               "traducao_portugues": "acordo / acordar",
               "ipa": "/weɪk ʌp/",
               "categoria": "verb phrase"
             },
             {
-              "parola": "morning",
+              "ingles": "morning",
               "traducao_portugues": "manhã",
               "ipa": "/ˈmɔːrnɪŋ/",
               "categoria": "noun"
@@ -618,13 +618,13 @@
           "portugues": "Eu saio da cama e vou ao banheiro. Eu escovo meus dentes.",
           "vocabulario": [
             {
-              "parola": "bed",
+              "ingles": "bed",
               "traducao_portugues": "cama",
               "ipa": "/bɛd/",
               "categoria": "noun"
             },
             {
-              "parola": "teeth",
+              "ingles": "teeth",
               "traducao_portugues": "dentes",
               "ipa": "/tiːθ/",
               "categoria": "noun"
@@ -637,13 +637,13 @@
           "portugues": "Então, eu tomo um banho rápido e visto minhas roupas para o trabalho.",
           "vocabulario": [
             {
-              "parola": "shower",
+              "ingles": "shower",
               "traducao_portugues": "banho",
               "ipa": "/ˈʃaʊər/",
               "categoria": "noun"
             },
             {
-              "parola": "clothes",
+              "ingles": "clothes",
               "traducao_portugues": "roupas",
               "ipa": "/kloʊðz/",
               "categoria": "noun"
@@ -656,13 +656,13 @@
           "portugues": "Eu entro na cozinha para fazer o café da manhã. Eu estou sempre com fome.",
           "vocabulario": [
             {
-              "parola": "kitchen",
+              "ingles": "kitchen",
               "traducao_portugues": "cozinha",
               "ipa": "/ˈkɪtʃən/",
               "categoria": "noun"
             },
             {
-              "parola": "breakfast",
+              "ingles": "breakfast",
               "traducao_portugues": "café da manhã",
               "ipa": "/ˈbrɛkfəst/",
               "categoria": "noun"
@@ -675,13 +675,13 @@
           "portugues": "Eu geralmente como ovos e torradas, e bebo uma xícara grande de café.",
           "vocabulario": [
             {
-              "parola": "eggs",
+              "ingles": "eggs",
               "traducao_portugues": "ovos",
               "ipa": "/ɛɡz/",
               "categoria": "noun"
             },
             {
-              "parola": "drink",
+              "ingles": "drink",
               "traducao_portugues": "bebo",
               "ipa": "/drɪŋk/",
               "categoria": "verb"
@@ -694,13 +694,13 @@
           "portugues": "Após o café da manhã, eu checo meu celular e leio as notícias online.",
           "vocabulario": [
             {
-              "parola": "phone",
+              "ingles": "phone",
               "traducao_portugues": "celular / telefone",
               "ipa": "/foʊn/",
               "categoria": "noun"
             },
             {
-              "parola": "news",
+              "ingles": "news",
               "traducao_portugues": "notícias",
               "ipa": "/nuːz/",
               "categoria": "noun"
@@ -713,13 +713,13 @@
           "portugues": "Às oito horas, eu pego minhas chaves, abro a porta e saio de casa.",
           "vocabulario": [
             {
-              "parola": "keys",
+              "ingles": "keys",
               "traducao_portugues": "chaves",
               "ipa": "/kiːz/",
               "categoria": "noun"
             },
             {
-              "parola": "leave",
+              "ingles": "leave",
               "traducao_portugues": "saio",
               "ipa": "/liːv/",
               "categoria": "verb"
@@ -746,13 +746,13 @@
           "portugues": "Sarah acorda cedo na quinta-feira. Ela se sente um pouco nervosa, mas também animada.",
           "vocabulario": [
             {
-              "parola": "early",
+              "ingles": "early",
               "traducao_portugues": "cedo",
               "ipa": "/ˈɜːrli/",
               "categoria": "adverb"
             },
             {
-              "parola": "nervous",
+              "ingles": "nervous",
               "traducao_portugues": "nervosa",
               "ipa": "/ˈnɜːrvəs/",
               "categoria": "adjective"
@@ -765,13 +765,13 @@
           "portugues": "Hoje, ela tem uma entrevista de emprego muito importante em uma grande empresa de marketing.",
           "vocabulario": [
             {
-              "parola": "interview",
+              "ingles": "interview",
               "traducao_portugues": "entrevista",
               "ipa": "/ˈɪntərvjuː/",
               "categoria": "noun"
             },
             {
-              "parola": "company",
+              "ingles": "company",
               "traducao_portugues": "empresa",
               "ipa": "/ˈkʌmpəni/",
               "categoria": "noun"
@@ -784,13 +784,13 @@
           "portugues": "Ela veste um terno preto profissional e leva uma cópia do seu currículo.",
           "vocabulario": [
             {
-              "parola": "suit",
+              "ingles": "suit",
               "traducao_portugues": "terno",
               "ipa": "/suːt/",
               "categoria": "noun"
             },
             {
-              "parola": "resume",
+              "ingles": "resume",
               "traducao_portugues": "currículo",
               "ipa": "/ˈrɛzʊmeɪ/",
               "categoria": "noun"
@@ -803,13 +803,13 @@
           "portugues": "Quando ela chega no escritório, o recepcionista diz a ela para esperar no saguão.",
           "vocabulario": [
             {
-              "parola": "arrives",
+              "ingles": "arrives",
               "traducao_portugues": "chega",
               "ipa": "/əˈraɪvz/",
               "categoria": "verb"
             },
             {
-              "parola": "wait",
+              "ingles": "wait",
               "traducao_portugues": "esperar",
               "ipa": "/weɪt/",
               "categoria": "verb"
@@ -822,13 +822,13 @@
           "portugues": "Dez minutos depois, o gerente, Sr. Davis, a convida para o seu escritório.",
           "vocabulario": [
             {
-              "parola": "manager",
+              "ingles": "manager",
               "traducao_portugues": "gerente",
               "ipa": "/ˈmænɪdʒər/",
               "categoria": "noun"
             },
             {
-              "parola": "invites",
+              "ingles": "invites",
               "traducao_portugues": "convida",
               "ipa": "/ɪnˈvaɪts/",
               "categoria": "verb"
@@ -841,13 +841,13 @@
           "portugues": "Ele pergunta sobre a experiência anterior dela e por que ela quer este emprego.",
           "vocabulario": [
             {
-              "parola": "previous",
+              "ingles": "previous",
               "traducao_portugues": "anterior",
               "ipa": "/ˈpriːviəs/",
               "categoria": "adjective"
             },
             {
-              "parola": "experience",
+              "ingles": "experience",
               "traducao_portugues": "experiência",
               "ipa": "/ɪkˈspɪəriəns/",
               "categoria": "noun"
@@ -860,13 +860,13 @@
           "portugues": "Sarah responde com confiança. No final, ele diz: 'Bem-vinda à equipe!'",
           "vocabulario": [
             {
-              "parola": "answers",
+              "ingles": "answers",
               "traducao_portugues": "responde",
               "ipa": "/ˈænsərz/",
               "categoria": "verb"
             },
             {
-              "parola": "team",
+              "ingles": "team",
               "traducao_portugues": "equipe",
               "ipa": "/tiːm/",
               "categoria": "noun"
@@ -893,13 +893,13 @@
           "portugues": "Mark e seu melhor amigo, Leo, querem escapar da cidade movimentada no fim de semana.",
           "vocabulario": [
             {
-              "parola": "escape",
+              "ingles": "escape",
               "traducao_portugues": "escapar",
               "ipa": "/ɪˈskeɪp/",
               "categoria": "verb"
             },
             {
-              "parola": "busy",
+              "ingles": "busy",
               "traducao_portugues": "movimentada",
               "ipa": "/ˈbɪzi/",
               "categoria": "adjective"
@@ -912,13 +912,13 @@
           "portugues": "Eles decidem alugar uma cabana nas montanhas. Ela tem uma vista bonita.",
           "vocabulario": [
             {
-              "parola": "rent",
+              "ingles": "rent",
               "traducao_portugues": "alugar",
               "ipa": "/rɛnt/",
               "categoria": "verb"
             },
             {
-              "parola": "cabin",
+              "ingles": "cabin",
               "traducao_portugues": "cabana",
               "ipa": "/ˈkæbɪn/",
               "categoria": "noun"
@@ -931,13 +931,13 @@
           "portugues": "Eles arrumam as malas na sexta à noite. Eles levam roupas quentes e uma câmera.",
           "vocabulario": [
             {
-              "parola": "pack",
+              "ingles": "pack",
               "traducao_portugues": "arrumam",
               "ipa": "/pæk/",
               "categoria": "verb"
             },
             {
-              "parola": "warm",
+              "ingles": "warm",
               "traducao_portugues": "quentes",
               "ipa": "/wɔːrm/",
               "categoria": "adjective"
@@ -950,13 +950,13 @@
           "portugues": "No sábado de manhã, eles dirigem por três horas. A estrada está muito silenciosa.",
           "vocabulario": [
             {
-              "parola": "drive",
+              "ingles": "drive",
               "traducao_portugues": "dirigem",
               "ipa": "/draɪv/",
               "categoria": "verb"
             },
             {
-              "parola": "quiet",
+              "ingles": "quiet",
               "traducao_portugues": "silenciosa",
               "ipa": "/ˈkwaɪət/",
               "categoria": "adjective"
@@ -969,13 +969,13 @@
           "portugues": "Quando chegam, o ar é fresco. Eles fazem uma trilha perto de um lindo lago.",
           "vocabulario": [
             {
-              "parola": "fresh",
+              "ingles": "fresh",
               "traducao_portugues": "fresco",
               "ipa": "/frɛʃ/",
               "categoria": "adjective"
             },
             {
-              "parola": "hike",
+              "ingles": "hike",
               "traducao_portugues": "fazem trilha",
               "ipa": "/haɪk/",
               "categoria": "verb"
@@ -988,13 +988,13 @@
           "portugues": "À noite, eles acendem uma fogueira e cozinham salsichas do lado de fora.",
           "vocabulario": [
             {
-              "parola": "build",
+              "ingles": "build",
               "traducao_portugues": "constroem / acendem",
               "ipa": "/bɪld/",
               "categoria": "verb"
             },
             {
-              "parola": "outside",
+              "ingles": "outside",
               "traducao_portugues": "lá fora",
               "ipa": "/ˌaʊtˈsaɪd/",
               "categoria": "adverb"
@@ -1007,13 +1007,13 @@
           "portugues": "É uma fuga perfeita. Eles dormem bem, bem longe do estresse diário.",
           "vocabulario": [
             {
-              "parola": "perfect",
+              "ingles": "perfect",
               "traducao_portugues": "perfeita",
               "ipa": "/ˈpɜːrfɪkt/",
               "categoria": "adjective"
             },
             {
-              "parola": "far",
+              "ingles": "far",
               "traducao_portugues": "longe",
               "ipa": "/fɑːr/",
               "categoria": "adverb"
@@ -1040,13 +1040,13 @@
           "portugues": "James está almoçando em seu restaurante italiano favorito no centro da cidade.",
           "vocabulario": [
             {
-              "parola": "lunch",
+              "ingles": "lunch",
               "traducao_portugues": "almoçando / almoço",
               "ipa": "/lʌntʃ/",
               "categoria": "noun"
             },
             {
-              "parola": "downtown",
+              "ingles": "downtown",
               "traducao_portugues": "centro da cidade",
               "ipa": "/ˌdaʊnˈtaʊn/",
               "categoria": "adverb/noun"
@@ -1059,13 +1059,13 @@
           "portugues": "Quando ele termina sua pizza, ele pede a conta ao garçom.",
           "vocabulario": [
             {
-              "parola": "finishes",
+              "ingles": "finishes",
               "traducao_portugues": "termina",
               "ipa": "/ˈfɪnɪʃɪz/",
               "categoria": "verb"
             },
             {
-              "parola": "bill",
+              "ingles": "bill",
               "traducao_portugues": "conta",
               "ipa": "/bɪl/",
               "categoria": "noun"
@@ -1078,13 +1078,13 @@
           "portugues": "Ele coloca a mão no bolso da jaqueta, mas sua carteira não está lá.",
           "vocabulario": [
             {
-              "parola": "reaches",
+              "ingles": "reaches",
               "traducao_portugues": "alcança / coloca a mão",
               "ipa": "/ˈriːtʃɪz/",
               "categoria": "verb"
             },
             {
-              "parola": "wallet",
+              "ingles": "wallet",
               "traducao_portugues": "carteira",
               "ipa": "/ˈwɒlɪt/",
               "categoria": "noun"
@@ -1097,13 +1097,13 @@
           "portugues": "Ele começa a entrar em pânico. Seus cartões de crédito e sua carteira de motorista estão dentro.",
           "vocabulario": [
             {
-              "parola": "panic",
+              "ingles": "panic",
               "traducao_portugues": "pânico",
               "ipa": "/ˈpænɪk/",
               "categoria": "noun/verb"
             },
             {
-              "parola": "license",
+              "ingles": "license",
               "traducao_portugues": "licença / carteira",
               "ipa": "/ˈlaɪsəns/",
               "categoria": "noun"
@@ -1116,13 +1116,13 @@
           "portugues": "Ele olha debaixo da mesa e checa suas calças, mas não encontra nada.",
           "vocabulario": [
             {
-              "parola": "under",
+              "ingles": "under",
               "traducao_portugues": "debaixo",
               "ipa": "/ˈʌndər/",
               "categoria": "preposition"
             },
             {
-              "parola": "nothing",
+              "ingles": "nothing",
               "traducao_portugues": "nada",
               "ipa": "/ˈnʌθɪŋ/",
               "categoria": "pronoun"
@@ -1135,13 +1135,13 @@
           "portugues": "De repente, uma mulher gentil se aproxima dele. 'Isso é seu?' ela pergunta.",
           "vocabulario": [
             {
-              "parola": "Suddenly",
+              "ingles": "Suddenly",
               "traducao_portugues": "de repente",
               "ipa": "/ˈsʌdənli/",
               "categoria": "adverb"
             },
             {
-              "parola": "yours",
+              "ingles": "yours",
               "traducao_portugues": "seu",
               "ipa": "/jʊərz/",
               "categoria": "pronoun"
@@ -1154,13 +1154,13 @@
           "portugues": "É a carteira dele! Ele a deixou cair perto da entrada. Ele se sente muito aliviado.",
           "vocabulario": [
             {
-              "parola": "dropped",
+              "ingles": "dropped",
               "traducao_portugues": "deixou cair",
               "ipa": "/drɒpt/",
               "categoria": "verb"
             },
             {
-              "parola": "relieved",
+              "ingles": "relieved",
               "traducao_portugues": "aliviado",
               "ipa": "/rɪˈliːvd/",
               "categoria": "adjective"
@@ -1187,13 +1187,13 @@
           "portugues": "Quando Emily chegou a Tóquio, ela notou imediatamente o quão incrivelmente educados todos eram.",
           "vocabulario": [
             {
-              "parola": "immediately",
+              "ingles": "immediately",
               "traducao_portugues": "imediatamente",
               "ipa": "/ɪˈmiːdiətli/",
               "categoria": "adverb"
             },
             {
-              "parola": "polite",
+              "ingles": "polite",
               "traducao_portugues": "educados",
               "ipa": "/pəˈlaɪt/",
               "categoria": "adjective"
@@ -1206,13 +1206,13 @@
           "portugues": "As ruas eram impecáveis e, apesar das grandes multidões, havia um profundo senso de ordem.",
           "vocabulario": [
             {
-              "parola": "spotless",
+              "ingles": "spotless",
               "traducao_portugues": "impecáveis / sem manchas",
               "ipa": "/ˈspɒtləs/",
               "categoria": "adjective"
             },
             {
-              "parola": "crowds",
+              "ingles": "crowds",
               "traducao_portugues": "multidões",
               "ipa": "/kraʊdz/",
               "categoria": "noun"
@@ -1225,13 +1225,13 @@
           "portugues": "No entanto, navegar pelo complexo sistema de metrô na hora do rush foi bastante avassalador para ela.",
           "vocabulario": [
             {
-              "parola": "navigating",
+              "ingles": "navigating",
               "traducao_portugues": "navegar",
               "ipa": "/ˈnævɪɡeɪtɪŋ/",
               "categoria": "verb"
             },
             {
-              "parola": "overwhelming",
+              "ingles": "overwhelming",
               "traducao_portugues": "avassalador",
               "ipa": "/ˌoʊvərˈwɛlmɪŋ/",
               "categoria": "adjective"
@@ -1244,13 +1244,13 @@
           "portugues": "Ela também teve que aprender a etiqueta de se curvar, que depende do status social da pessoa.",
           "vocabulario": [
             {
-              "parola": "etiquette",
+              "ingles": "etiquette",
               "traducao_portugues": "etiqueta",
               "ipa": "/ˈɛtɪkɛt/",
               "categoria": "noun"
             },
             {
-              "parola": "bowing",
+              "ingles": "bowing",
               "traducao_portugues": "se curvar",
               "ipa": "/ˈbaʊɪŋ/",
               "categoria": "noun/verb"
@@ -1263,13 +1263,13 @@
           "portugues": "Sair para jantar apresentou outro desafio; usar hashis requer paciência e muita prática.",
           "vocabulario": [
             {
-              "parola": "Dining out",
+              "ingles": "Dining out",
               "traducao_portugues": "sair para jantar",
               "ipa": "/ˈdaɪnɪŋ aʊt/",
               "categoria": "verb phrase"
             },
             {
-              "parola": "chopsticks",
+              "ingles": "chopsticks",
               "traducao_portugues": "hashis",
               "ipa": "/ˈtʃɒpstɪks/",
               "categoria": "noun"
@@ -1282,13 +1282,13 @@
           "portugues": "Apesar do choque cultural inicial, Emily abraçou as diferenças e rapidamente se apaixonou pelo país.",
           "vocabulario": [
             {
-              "parola": "embraced",
+              "ingles": "embraced",
               "traducao_portugues": "abraçou / aceitou",
               "ipa": "/ɪmˈbreɪst/",
               "categoria": "verb"
             },
             {
-              "parola": "differences",
+              "ingles": "differences",
               "traducao_portugues": "diferenças",
               "ipa": "/ˈdɪfərənsɪz/",
               "categoria": "noun"
@@ -1301,13 +1301,13 @@
           "portugues": "Ela percebeu que sair da sua zona de conforto era a melhor maneira de crescer como pessoa.",
           "vocabulario": [
             {
-              "parola": "stepping out",
+              "ingles": "stepping out",
               "traducao_portugues": "sair (da zona)",
               "ipa": "/ˈstɛpɪŋ aʊt/",
               "categoria": "phrasal verb"
             },
             {
-              "parola": "comfort zone",
+              "ingles": "comfort zone",
               "traducao_portugues": "zona de conforto",
               "ipa": "/ˈkʌmfərt zoʊn/",
               "categoria": "noun phrase"
@@ -1334,13 +1334,13 @@
           "portugues": "Kevin e Alex tiveram uma ideia brilhante para um aplicativo de produtividade, então largaram a faculdade para construí-lo.",
           "vocabulario": [
             {
-              "parola": "brilliant",
+              "ingles": "brilliant",
               "traducao_portugues": "brilhante",
               "ipa": "/ˈbrɪljənt/",
               "categoria": "adjective"
             },
             {
-              "parola": "quit",
+              "ingles": "quit",
               "traducao_portugues": "largaram / desistiram",
               "ipa": "/kwɪt/",
               "categoria": "verb"
@@ -1353,13 +1353,13 @@
           "portugues": "Eles passaram incontáveis noites programando em uma garagem apertada, sobrevivendo de café e macarrão barato.",
           "vocabulario": [
             {
-              "parola": "countless",
+              "ingles": "countless",
               "traducao_portugues": "incontáveis",
               "ipa": "/ˈkaʊntləs/",
               "categoria": "adjective"
             },
             {
-              "parola": "cramped",
+              "ingles": "cramped",
               "traducao_portugues": "apertada",
               "ipa": "/kræmpt/",
               "categoria": "adjective"
@@ -1372,13 +1372,13 @@
           "portugues": "No entanto, financiar o projeto deles foi extremamente difícil sem nenhuma fonte confiável de renda.",
           "vocabulario": [
             {
-              "parola": "funding",
+              "ingles": "funding",
               "traducao_portugues": "financiar",
               "ipa": "/ˈfʌndɪŋ/",
               "categoria": "noun/verb"
             },
             {
-              "parola": "reliable",
+              "ingles": "reliable",
               "traducao_portugues": "confiável",
               "ipa": "/rɪˈlaɪəbəl/",
               "categoria": "adjective"
@@ -1391,13 +1391,13 @@
           "portugues": "Eles decidiram apresentar seu software para investidores-anjo durante uma grande conferência de tecnologia.",
           "vocabulario": [
             {
-              "parola": "pitch",
+              "ingles": "pitch",
               "traducao_portugues": "apresentar (vender a ideia)",
               "ipa": "/pɪtʃ/",
               "categoria": "verb"
             },
             {
-              "parola": "investors",
+              "ingles": "investors",
               "traducao_portugues": "investidores",
               "ipa": "/ɪnˈvɛstərz/",
               "categoria": "noun"
@@ -1410,13 +1410,13 @@
           "portugues": "Durante a apresentação, o aplicativo travou inesperadamente devido a uma sobrecarga no servidor.",
           "vocabulario": [
             {
-              "parola": "crashed",
+              "ingles": "crashed",
               "traducao_portugues": "travou / caiu",
               "ipa": "/kræʃt/",
               "categoria": "verb"
             },
             {
-              "parola": "unexpectedly",
+              "ingles": "unexpectedly",
               "traducao_portugues": "inesperadamente",
               "ipa": "/ˌʌnɪkˈspɛktɪdli/",
               "categoria": "adverb"
@@ -1429,13 +1429,13 @@
           "portugues": "Em vez de desistir, eles explicaram calmamente o bug e como planejavam resolvê-lo.",
           "vocabulario": [
             {
-              "parola": "giving up",
+              "ingles": "giving up",
               "traducao_portugues": "desistir",
               "ipa": "/ˈɡɪvɪŋ ʌp/",
               "categoria": "phrasal verb"
             },
             {
-              "parola": "calmly",
+              "ingles": "calmly",
               "traducao_portugues": "calmamente",
               "ipa": "/ˈkɑːmli/",
               "categoria": "adverb"
@@ -1448,13 +1448,13 @@
           "portugues": "Impressionado com a resiliência e honestidade deles, um investidor concordou em dar-lhes o capital de que precisavam.",
           "vocabulario": [
             {
-              "parola": "resilience",
+              "ingles": "resilience",
               "traducao_portugues": "resiliência",
               "ipa": "/rɪˈzɪliəns/",
               "categoria": "noun"
             },
             {
-              "parola": "capital",
+              "ingles": "capital",
               "traducao_portugues": "capital (dinheiro)",
               "ipa": "/ˈkæpɪtəl/",
               "categoria": "noun"
@@ -1481,13 +1481,13 @@
           "portugues": "O noticiário local emitiu um aviso de tempo severo para todo o condado.",
           "vocabulario": [
             {
-              "parola": "warning",
+              "ingles": "warning",
               "traducao_portugues": "aviso",
               "ipa": "/ˈwɔːrnɪŋ/",
               "categoria": "noun"
             },
             {
-              "parola": "county",
+              "ingles": "county",
               "traducao_portugues": "condado / região",
               "ipa": "/ˈkaʊnti/",
               "categoria": "noun"
@@ -1500,13 +1500,13 @@
           "portugues": "Nuvens escuras e pesadas se acumularam no horizonte, e o vento começou a uivar de forma sinistra.",
           "vocabulario": [
             {
-              "parola": "gathered",
+              "ingles": "gathered",
               "traducao_portugues": "se acumularam",
               "ipa": "/ˈɡæðərd/",
               "categoria": "verb"
             },
             {
-              "parola": "ominously",
+              "ingles": "ominously",
               "traducao_portugues": "de forma sinistra",
               "ipa": "/ˈɒmɪnəsli/",
               "categoria": "adverb"
@@ -1519,13 +1519,13 @@
           "portugues": "A família Miller rapidamente reuniu lanternas, baterias e comida enlatada da despensa.",
           "vocabulario": [
             {
-              "parola": "flashlights",
+              "ingles": "flashlights",
               "traducao_portugues": "lanternas",
               "ipa": "/ˈflæʃˌlaɪts/",
               "categoria": "noun"
             },
             {
-              "parola": "pantry",
+              "ingles": "pantry",
               "traducao_portugues": "despensa",
               "ipa": "/ˈpæntri/",
               "categoria": "noun"
@@ -1538,13 +1538,13 @@
           "portugues": "Eles correram para o porão logo que as primeiras gotas massivas de chuva atingiram o telhado.",
           "vocabulario": [
             {
-              "parola": "basement",
+              "ingles": "basement",
               "traducao_portugues": "porão",
               "ipa": "/ˈbeɪsmənt/",
               "categoria": "noun"
             },
             {
-              "parola": "roof",
+              "ingles": "roof",
               "traducao_portugues": "telhado",
               "ipa": "/ruːf/",
               "categoria": "noun"
@@ -1557,13 +1557,13 @@
           "portugues": "De repente, um estrondo alto ecoou pela casa, seguido por um apagão total.",
           "vocabulario": [
             {
-              "parola": "crash",
+              "ingles": "crash",
               "traducao_portugues": "estrondo",
               "ipa": "/kræʃ/",
               "categoria": "noun"
             },
             {
-              "parola": "blackout",
+              "ingles": "blackout",
               "traducao_portugues": "apagão",
               "ipa": "/ˈblækˌaʊt/",
               "categoria": "noun"
@@ -1576,13 +1576,13 @@
           "portugues": "Eles se amontoaram juntos no escuro, ouvindo o trovão sacudir as fundações de sua casa.",
           "vocabulario": [
             {
-              "parola": "huddled",
+              "ingles": "huddled",
               "traducao_portugues": "se amontoaram",
               "ipa": "/ˈhʌdəld/",
               "categoria": "verb"
             },
             {
-              "parola": "thunder",
+              "ingles": "thunder",
               "traducao_portugues": "trovão",
               "ipa": "/ˈθʌndər/",
               "categoria": "noun"
@@ -1595,13 +1595,13 @@
           "portugues": "Pela manhã, a tempestade havia passado. Uma grande árvore de carvalho havia caído, mas todos estavam seguros.",
           "vocabulario": [
             {
-              "parola": "passed",
+              "ingles": "passed",
               "traducao_portugues": "passado",
               "ipa": "/pæst/",
               "categoria": "verb"
             },
             {
-              "parola": "safe",
+              "ingles": "safe",
               "traducao_portugues": "seguros",
               "ipa": "/seɪf/",
               "categoria": "adjective"
@@ -1628,13 +1628,13 @@
           "portugues": "O rápido avanço da inteligência artificial desencadeou uma mudança de paradigma sem precedentes na sociedade moderna.",
           "vocabulario": [
             {
-              "parola": "advancement",
+              "ingles": "advancement",
               "traducao_portugues": "avanço",
               "ipa": "/ədˈvænsmənt/",
               "categoria": "noun"
             },
             {
-              "parola": "unprecedented",
+              "ingles": "unprecedented",
               "traducao_portugues": "sem precedentes",
               "ipa": "/ʌnˈprɛsɪdɛntɪd/",
               "categoria": "adjective"
@@ -1647,13 +1647,13 @@
           "portugues": "Os algoritmos não estão mais apenas executando tarefas predefinidas; eles estão continuamente aprendendo e se adaptando.",
           "vocabulario": [
             {
-              "parola": "merely",
+              "ingles": "merely",
               "traducao_portugues": "apenas / meramente",
               "ipa": "/ˈmɪərli/",
               "categoria": "adverb"
             },
             {
-              "parola": "predefined",
+              "ingles": "predefined",
               "traducao_portugues": "predefinidas",
               "ipa": "/ˌpriːdɪˈfaɪnd/",
               "categoria": "adjective"
@@ -1666,13 +1666,13 @@
           "portugues": "Esse salto tecnológico apresenta um dilema intrincado em relação à automação do trabalho intelectual.",
           "vocabulario": [
             {
-              "parola": "leap",
+              "ingles": "leap",
               "traducao_portugues": "salto",
               "ipa": "/liːp/",
               "categoria": "noun"
             },
             {
-              "parola": "intricate",
+              "ingles": "intricate",
               "traducao_portugues": "intrincado / complexo",
               "ipa": "/ˈɪntrɪkət/",
               "categoria": "adjective"
@@ -1685,13 +1685,13 @@
           "portugues": "Os otimistas vislumbram um futuro utópico onde as máquinas aliviam os humanos das tarefas mundanas, aumentando a produtividade geral.",
           "vocabulario": [
             {
-              "parola": "alleviate",
+              "ingles": "alleviate",
               "traducao_portugues": "aliviam",
               "ipa": "/əˈliːvieɪt/",
               "categoria": "verb"
             },
             {
-              "parola": "mundane",
+              "ingles": "mundane",
               "traducao_portugues": "mundanas / banais",
               "ipa": "/mʌnˈdeɪn/",
               "categoria": "adjective"
@@ -1704,13 +1704,13 @@
           "portugues": "Por outro lado, os céticos alertam sobre severas repercussões socioeconômicas, particularmente o desemprego generalizado e as violações de privacidade de dados.",
           "vocabulario": [
             {
-              "parola": "widespread",
+              "ingles": "widespread",
               "traducao_portugues": "generalizado",
               "ipa": "/ˈwaɪdsprɛd/",
               "categoria": "adjective"
             },
             {
-              "parola": "breaches",
+              "ingles": "breaches",
               "traducao_portugues": "violações",
               "ipa": "/briːtʃɪz/",
               "categoria": "noun"
@@ -1723,13 +1723,13 @@
           "portugues": "Além disso, há um profundo debate ético sobre os preconceitos inadvertidamente embutidos nos modelos de aprendizado de máquina.",
           "vocabulario": [
             {
-              "parola": "biases",
+              "ingles": "biases",
               "traducao_portugues": "preconceitos / vieses",
               "ipa": "/ˈbaɪəsɪz/",
               "categoria": "noun"
             },
             {
-              "parola": "embedded",
+              "ingles": "embedded",
               "traducao_portugues": "embutidos",
               "ipa": "/ɪmˈbɛdɪd/",
               "categoria": "adjective"
@@ -1742,13 +1742,13 @@
           "portugues": "Em última análise, a humanidade deve estabelecer proativamente estruturas éticas robustas para aproveitar esse poder de forma responsável.",
           "vocabulario": [
             {
-              "parola": "Ultimately",
+              "ingles": "Ultimately",
               "traducao_portugues": "em última análise",
               "ipa": "/ˈʌltɪmətli/",
               "categoria": "adverb"
             },
             {
-              "parola": "harness",
+              "ingles": "harness",
               "traducao_portugues": "aproveitar / dominar",
               "ipa": "/ˈhɑːrnɪs/",
               "categoria": "verb"
@@ -1775,13 +1775,13 @@
           "portugues": "O simpósio começou com um discurso de abertura convincente sobre os impactos devastadores do aquecimento global.",
           "vocabulario": [
             {
-              "parola": "symposium",
+              "ingles": "symposium",
               "traducao_portugues": "simpósio",
               "ipa": "/sɪmˈpoʊziəm/",
               "categoria": "noun"
             },
             {
-              "parola": "compelling",
+              "ingles": "compelling",
               "traducao_portugues": "convincente",
               "ipa": "/kəmˈpɛlɪŋ/",
               "categoria": "adjective"
@@ -1794,13 +1794,13 @@
           "portugues": "A Dra. Evans enfatizou que o derretimento sem precedentes das geleiras é um sinal inequívoco de uma crise ecológica iminente.",
           "vocabulario": [
             {
-              "parola": "unequivocal",
+              "ingles": "unequivocal",
               "traducao_portugues": "inequívoco",
               "ipa": "/ˌʌnɪˈkwɪvəkəl/",
               "categoria": "adjective"
             },
             {
-              "parola": "impending",
+              "ingles": "impending",
               "traducao_portugues": "iminente",
               "ipa": "/ɪmˈpɛndɪŋ/",
               "categoria": "adjective"
@@ -1813,13 +1813,13 @@
           "portugues": "Seu colega, Dr. Patel, argumentou que mitigar as emissões de carbono exige uma reformulação drástica do setor industrial.",
           "vocabulario": [
             {
-              "parola": "mitigating",
+              "ingles": "mitigating",
               "traducao_portugues": "mitigar / atenuar",
               "ipa": "/ˈmɪtɪɡeɪtɪŋ/",
               "categoria": "verb"
             },
             {
-              "parola": "overhaul",
+              "ingles": "overhaul",
               "traducao_portugues": "reformulação",
               "ipa": "/ˈoʊvərhɔːl/",
               "categoria": "noun"
@@ -1832,13 +1832,13 @@
           "portugues": "Eles debateram a viabilidade de implementar regulamentações ambientais rigorosas sem prejudicar o crescimento econômico.",
           "vocabulario": [
             {
-              "parola": "feasibility",
+              "ingles": "feasibility",
               "traducao_portugues": "viabilidade",
               "ipa": "/ˌfiːzəˈbɪlɪti/",
               "categoria": "noun"
             },
             {
-              "parola": "hindering",
+              "ingles": "hindering",
               "traducao_portugues": "prejudicar / atrapalhar",
               "ipa": "/ˈhɪndərɪŋ/",
               "categoria": "verb"
@@ -1851,13 +1851,13 @@
           "portugues": "Enquanto alguns formuladores de políticas defendem mudanças incrementais, os cientistas pedem uma intervenção imediata e radical.",
           "vocabulario": [
             {
-              "parola": "advocate",
+              "ingles": "advocate",
               "traducao_portugues": "defendem / advogam",
               "ipa": "/ˈædvəkeɪt/",
               "categoria": "verb"
             },
             {
-              "parola": "incremental",
+              "ingles": "incremental",
               "traducao_portugues": "incrementais",
               "ipa": "/ˌɪnkrəˈmɛntəl/",
               "categoria": "adjective"
@@ -1870,13 +1870,13 @@
           "portugues": "A transição para fontes de energia renováveis, como eólica e solar, é considerada absolutamente fundamental.",
           "vocabulario": [
             {
-              "parola": "deemed",
+              "ingles": "deemed",
               "traducao_portugues": "considerada",
               "ipa": "/diːmd/",
               "categoria": "verb"
             },
             {
-              "parola": "paramount",
+              "ingles": "paramount",
               "traducao_portugues": "fundamental / suprema",
               "ipa": "/ˈpærəmaʊnt/",
               "categoria": "adjective"
@@ -1889,13 +1889,13 @@
           "portugues": "Em última análise, preservar a biodiversidade não é apenas uma obrigação moral, mas um pré-requisito rigoroso para nossa própria sobrevivência.",
           "vocabulario": [
             {
-              "parola": "preserving",
+              "ingles": "preserving",
               "traducao_portugues": "preservar",
               "ipa": "/prɪˈzɜːrvɪŋ/",
               "categoria": "verb"
             },
             {
-              "parola": "prerequisite",
+              "ingles": "prerequisite",
               "traducao_portugues": "pré-requisito",
               "ipa": "/priːˈrɛkwɪzɪt/",
               "categoria": "noun"
@@ -1922,13 +1922,13 @@
           "portugues": "O detetive Marlowe se aproximou da mansão desolada e decadente situada nos arredores da cidade nebulosa.",
           "vocabulario": [
             {
-              "parola": "decaying",
+              "ingles": "decaying",
               "traducao_portugues": "decadente",
               "ipa": "/dɪˈkeɪɪŋ/",
               "categoria": "adjective"
             },
             {
-              "parola": "outskirts",
+              "ingles": "outskirts",
               "traducao_portugues": "arredores",
               "ipa": "/ˈaʊtskɜːrts/",
               "categoria": "noun"
@@ -1941,13 +1941,13 @@
           "portugues": "Rumores circulavam há décadas a respeito de fenômenos peculiares ocorrendo dentro de suas paredes em ruínas.",
           "vocabulario": [
             {
-              "parola": "peculiar",
+              "ingles": "peculiar",
               "traducao_portugues": "peculiares / estranhos",
               "ipa": "/pɪˈkjuːliər/",
               "categoria": "adjective"
             },
             {
-              "parola": "crumbling",
+              "ingles": "crumbling",
               "traducao_portugues": "em ruínas",
               "ipa": "/ˈkrʌmblɪŋ/",
               "categoria": "adjective"
@@ -1960,13 +1960,13 @@
           "portugues": "Ele empurrou as pesadas portas de mogno, que rangeram de forma sinistra na brisa fria do anoitecer.",
           "vocabulario": [
             {
-              "parola": "creaked",
+              "ingles": "creaked",
               "traducao_portugues": "rangeram",
               "ipa": "/kriːkt/",
               "categoria": "verb"
             },
             {
-              "parola": "chilling",
+              "ingles": "chilling",
               "traducao_portugues": "fria / arrepiante",
               "ipa": "/ˈtʃɪlɪŋ/",
               "categoria": "adjective"
@@ -1979,13 +1979,13 @@
           "portugues": "Lá dentro, o grande saguão estava coberto por grossas teias de aranha, e uma espessa camada de poeira cobria os móveis antigos.",
           "vocabulario": [
             {
-              "parola": "draped",
+              "ingles": "draped",
               "traducao_portugues": "coberto",
               "ipa": "/dreɪpt/",
               "categoria": "verb"
             },
             {
-              "parola": "cobwebs",
+              "ingles": "cobwebs",
               "traducao_portugues": "teias de aranha",
               "ipa": "/ˈkɒbwɛbz/",
               "categoria": "noun"
@@ -1998,13 +1998,13 @@
           "portugues": "De repente, uma melodia fraca e melancólica ecoou do piano de cauda dilapidado na sala adjacente.",
           "vocabulario": [
             {
-              "parola": "faint",
+              "ingles": "faint",
               "traducao_portugues": "fraca",
               "ipa": "/feɪnt/",
               "categoria": "adjective"
             },
             {
-              "parola": "dilapidated",
+              "ingles": "dilapidated",
               "traducao_portugues": "dilapidado / em ruínas",
               "ipa": "/dɪˈlæpɪdeɪtɪd/",
               "categoria": "adjective"
@@ -2017,13 +2017,13 @@
           "portugues": "Marlowe sacou cuidadosamente sua lanterna, iluminando uma cifra enigmática rabiscada apressadamente no papel de parede descascado.",
           "vocabulario": [
             {
-              "parola": "cryptic",
+              "ingles": "cryptic",
               "traducao_portugues": "enigmática",
               "ipa": "/ˈkrɪptɪk/",
               "categoria": "adjective"
             },
             {
-              "parola": "hastily",
+              "ingles": "hastily",
               "traducao_portugues": "apressadamente",
               "ipa": "/ˈheɪstɪli/",
               "categoria": "adverb"
@@ -2036,13 +2036,13 @@
           "portugues": "Ele percebeu que esta propriedade guardava segredos muito mais complexos do que meras superstições locais.",
           "vocabulario": [
             {
-              "parola": "held",
+              "ingles": "held",
               "traducao_portugues": "guardava",
               "ipa": "/hɛld/",
               "categoria": "verb"
             },
             {
-              "parola": "superstitions",
+              "ingles": "superstitions",
               "traducao_portugues": "superstições",
               "ipa": "/ˌsuːpərˈstɪʃənz/",
               "categoria": "noun"

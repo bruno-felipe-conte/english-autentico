@@ -274,6 +274,7 @@ const I18n = {
     'storie_notif_lida':     { pt: '📖 +{xp} XP por concluir a história!', en: '📖 +{xp} XP for finishing the story!' },
     'storie_notif_ja_lida':  { pt: 'Você já leu esta história.', en: 'You have already read this story.' },
     'storie_vocab_titulo':   { pt: '📚 Vocabulário ({n})', en: '📚 Vocabulary ({n})' },
+    'storie_btn_via_ia':     { pt: '🤖 via IA', en: '🤖 via AI' },
 
     // ── Onboarding ──
     'ob_descricao': { pt: 'Este aplicativo foi projetado para levar você do zero ao inglês falado de forma simples, natural e altamente eficaz. Cada sessão dura cerca de 10 minutos.', en: 'This app is designed to take you from zero to spoken English in a simple, natural and highly effective way. Each session lasts about 10 minutes.' },
@@ -526,6 +527,16 @@ const I18n = {
     'gram_aba_pratica':      { pt: 'Exercícios & Prática',           en: 'Practice & Exercises' },
     'gram_card_teoria_titulo':{ pt: 'Teoria e Prática da Lição',       en: 'Lesson Theory & Practice' },
     'gram_btn_iniciar_pratica':{ pt: 'Praticar agora (Exercícios) 🚀', en: 'Practice now (Exercises) 🚀' },
+    'gram_admin_titulo':     { pt: 'Acesso do Administrador',        en: 'Administrator Access' },
+    'gram_admin_senha_ph':   { pt: 'Digite a senha',                 en: 'Enter password' },
+    'gram_admin_senha_erro': { pt: 'Senha incorreta. Tente novamente.', en: 'Incorrect password. Try again.' },
+    'gram_btn_cancelar':     { pt: 'Cancelar',                       en: 'Cancel' },
+    'gram_btn_confirmar':    { pt: 'Confirmar',                      en: 'Confirm' },
+    'gram_btn_errei':        { pt: 'Errei',                          en: 'I got it wrong' },
+    'gram_btn_acertei':      { pt: 'Acertei',                        en: 'I got it right' },
+    'gram_btn_proximo_arrow':{ pt: 'Próximo →',                      en: 'Next →' },
+    'gram_btn_refazer':      { pt: 'Refazer',                        en: 'Retry' },
+    'gram_ver_tabela':       { pt: '📋 Ver tabela de referência (use durante os exercícios)', en: '📋 View reference table (use during exercises)' },
 
     // ── Vocabulary — additional UI ──
     'vocab_todos_templos':   { pt: 'Todos os templos',               en: 'All temples' },
@@ -732,6 +743,23 @@ const I18n = {
     // ── General ──
     'loading_text':            { pt: 'Carregando...', en: 'Loading...' },
     'quiz_result_title':       { pt: 'Resultado do Quiz', en: 'Quiz Results' },
+    'quiz_combo_fire':         { pt: '🔥 {n}x combo!', en: '🔥 {n}x combo!' },
+    'quiz_review_later':       { pt: '💡 Revisaremos isso depois.', en: '💡 We\'ll review this later.' },
+    'quiz_review_mistakes':    { pt: '🔄 Revisar Erros ({n} itens)', en: '🔄 Review Mistakes ({n} items)' },
+    'quiz_no_quizzes_avail':   { pt: 'Nenhum quiz de {t} disponível', en: 'No {t} quizzes available' },
+    'quiz_streak_achieved':    { pt: '🏆 Streak de 7 dias no Quiz alcançado!', en: '🏆 7-day Quiz Streak achieved!' },
+    'quiz_no_items_review':    { pt: 'Nenhum item para revisar agora!', en: 'No items to review right now!' },
+    'quiz_reviewing_items':    { pt: '🔄 Revisando {n} itens que você errou', en: '🔄 Reviewing {n} items you got wrong' },
+    'quiz_streak_banner':      { pt: '{f} Quiz Streak: {n} dia{s}! Continue assim!', en: '{f} Quiz Streak: {n} day{s}! Keep it going!' },
+    'quiz_onboarding_title':   { pt: '🎯 Bem-vindo ao Quiz!', en: '🎯 Welcome to Quiz!' },
+    'quiz_onboarding_desc':    { pt: 'Teste seus conhecimentos, ganhe XP com combos e acompanhe seu progresso. Comece pelo Templo 1!', en: 'Test your knowledge, earn XP with combos, and track your progress. Start with Temple 1!' },
+    'quiz_empty_no_temples':   { pt: '📭 Nenhum templo carregado ainda', en: '📭 No temples loaded yet' },
+    'quiz_empty_no_temples_d': { pt: 'Os dados dos templos ainda estão carregando. Aguarde ou verifique sua conexão.', en: 'Temple data is still loading. Please wait or check your connection.' },
+    'quiz_empty_almost':       { pt: '🎓 Quase pronto!', en: '🎓 Almost ready!' },
+    'quiz_empty_almost_d':     { pt: 'Adicione mais palavras aos seus templos para desbloquear os quizzes. Cada templo precisa de pelo menos 4 palavras.', en: 'Add more words to your temples to unlock quizzes. Each temple needs at least 4 words.' },
+    'quiz_tense_present':      { pt: '⏱️ Presente', en: '⏱️ Present' },
+    'quiz_tense_past':         { pt: '⏪ Passado Simples', en: '⏪ Past Simple' },
+    'quiz_tense_future':       { pt: '⏩ Futuro', en: '⏩ Future' },
     'templi_secao_titulo':     { pt: 'Os Dez Templos do Inglês', en: 'The Ten Temples of English' },
     'vocab_search_placeholder': { pt: '🔍 Buscar em inglês ou português...', en: '🔍 Search in English or Portuguese...' },
     'prof_secao_titulo':       { pt: 'Meu Perfil', en: 'My Profile' }
@@ -744,29 +772,21 @@ const I18n = {
 
   mudarIdioma(lang) {
     if (lang !== 'pt' && lang !== 'en') return;
-    document.body.classList.add('lang-switching');       // fade out
-    setTimeout(() => {
-      this.idioma = lang;
-      localStorage.setItem('en_idioma', lang);
-      this.traduzirDOM();
-      document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang } }));
-      // Força recarregamento dos dados de gramática na próxima visita à aba
-      if (typeof Grammatica !== 'undefined') Grammatica.dados = null;
-      document.body.classList.remove('lang-switching'); // fade in
-      if (typeof App !== 'undefined') {
-        if (lang === 'en') {
-          const primeiraVez = !localStorage.getItem('en_imersao_usada');
-          if (primeiraVez) {
-            localStorage.setItem('en_imersao_usada', '1');
-            App.notificar('Welcome! You are now in Immersion Mode 🇺🇸', 'alerta');
-          } else {
-            App.notificar('Language changed to English!', 'sucesso');
-          }
-        } else {
-          App.notificar('Idioma alterado para Português!', 'sucesso');
+    this.idioma = lang;
+    localStorage.setItem('en_idioma', lang);
+    this.traduzirDOM();
+    document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang } }));
+    // Força recarregamento dos dados de gramática na próxima visita à aba
+    if (typeof Grammatica !== 'undefined') Grammatica.dados = null;
+    if (typeof App !== 'undefined') {
+      if (lang === 'en') {
+        const primeiraVez = !localStorage.getItem('en_imersao_usada');
+        if (primeiraVez) {
+          localStorage.setItem('en_imersao_usada', '1');
+          App.notificar('Welcome! You are now in Immersion Mode 🇺🇸', 'alerta');
         }
       }
-    }, 180);
+    }
   },
 
   toggleIdioma() {
@@ -807,30 +827,14 @@ const I18n = {
       if (this.dict[chave]) el.placeholder = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
     });
 
-    // Onboarding slide 2 — contém HTML (negrito), usa innerHTML
-    for (let i = 1; i <= 9; i++) {
-      const el = document.getElementById(`onb-inside-li${i}`);
-      const key = `ob_inside_li${i}`;
-      if (el && this.dict[key]) el.innerHTML = this.dict[key][this.idioma] || this.dict[key]['pt'];
-    }
-
-    // Onboarding slide 3 — contém HTML (negrito), usa innerHTML
-    ['onb-li1','onb-li2','onb-li3','onb-li4'].forEach((id, i) => {
-      const el = document.getElementById(id);
-      const key = `ob_slide3_li${i+1}`;
-      if (el && this.dict[key]) el.innerHTML = this.dict[key][this.idioma] || this.dict[key]['pt'];
+    // Traduz elementos que precisam de innerHTML (data-i18n-html)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const chave = el.getAttribute('data-i18n-html');
+      if (this.dict[chave]) el.innerHTML = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
     });
-
-    // Onboarding tour hint
-    const hintEl = document.getElementById('onb-tour-hint');
-    if (hintEl && this.dict['ob_tour_hint']) hintEl.innerHTML = this.dict['ob_tour_hint'][this.idioma] || this.dict['ob_tour_hint']['pt'];
 
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
-      const ptSeg = document.getElementById('lang-pill-pt');
-      const enSeg = document.getElementById('lang-pill-it');
-      if (ptSeg) ptSeg.classList.toggle('ativo', this.idioma === 'pt');
-      if (enSeg) enSeg.classList.toggle('ativo', this.idioma === 'en');
       langBtn.title = this.idioma === 'pt' ? 'Switch to English' : 'Mudar para Português';
     }
   }

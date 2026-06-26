@@ -2,7 +2,7 @@
   "imitazioni": [
     {
       "id": "imi_001",
-      "frase_italiano": "Oh my God!",
+      "frase_ingles": "Oh my God!",
       "frase_portugues": "Oh meu Deus!",
       "nivel": "A1",
       "contexto": "A very common expression of surprise or shock in English.",
@@ -11,7 +11,7 @@
     },
     {
       "id": "imi_002",
-      "frase_italiano": "How are you doing?",
+      "frase_ingles": "How are you doing?",
       "frase_portugues": "Como você está?",
       "nivel": "A1",
       "contexto": "Informal way to greet someone and ask how they are.",
@@ -20,7 +20,7 @@
     },
     {
       "id": "imi_003",
-      "frase_italiano": "I'm afraid I can't make it.",
+      "frase_ingles": "I'm afraid I can't make it.",
       "frase_portugues": "Infelizmente não poderei comparecer.",
       "nivel": "A2",
       "contexto": "A polite way to say you cannot attend something or do something.",
@@ -29,7 +29,7 @@
     },
     {
       "id": "imi_004",
-      "frase_italiano": "That makes perfect sense.",
+      "frase_ingles": "That makes perfect sense.",
       "frase_portugues": "Isso faz todo o sentido.",
       "nivel": "B1",
       "contexto": "Used to confirm that you understood something clearly.",
@@ -38,7 +38,7 @@
     },
     {
       "id": "imi_005",
-      "frase_italiano": "Could you say that again, please?",
+      "frase_ingles": "Could you say that again, please?",
       "frase_portugues": "Você poderia repetir isso, por favor?",
       "nivel": "A1",
       "contexto": "Essential phrase when you didn't hear or understand something.",
@@ -47,7 +47,7 @@
     },
     {
       "id": "imi_006",
-      "frase_italiano": "It's on the tip of my tongue.",
+      "frase_ingles": "It's on the tip of my tongue.",
       "frase_portugues": "Está na ponta da língua.",
       "nivel": "B1",
       "contexto": "Used when you almost remember something but can't quite get it.",
@@ -56,7 +56,7 @@
     },
     {
       "id": "imi_007",
-      "frase_italiano": "I couldn't agree more.",
+      "frase_ingles": "I couldn't agree more.",
       "frase_portugues": "Não poderia concordar mais.",
       "nivel": "B1",
       "contexto": "A strong way to express complete agreement with someone.",
@@ -65,7 +65,7 @@
     },
     {
       "id": "imi_008",
-      "frase_italiano": "Never mind.",
+      "frase_ingles": "Never mind.",
       "frase_portugues": "Deixa para lá. / Não se preocupe.",
       "nivel": "A2",
       "contexto": "Used to dismiss something or tell someone not to worry about it.",
@@ -74,7 +74,7 @@
     },
     {
       "id": "imi_009",
-      "frase_italiano": "Break a leg!",
+      "frase_ingles": "Break a leg!",
       "frase_portugues": "Que tudo corra bem! (Boa sorte!)",
       "nivel": "B1",
       "contexto": "Idiomatic expression used to wish someone good luck before a performance or challenge.",
@@ -83,7 +83,7 @@
     },
     {
       "id": "imi_010",
-      "frase_italiano": "You're absolutely right.",
+      "frase_ingles": "You're absolutely right.",
       "frase_portugues": "Você tem toda a razão.",
       "nivel": "A2",
       "contexto": "A polite and emphatic way to confirm agreement.",
@@ -92,7 +92,7 @@
     },
     {
       "id": "imi_011",
-      "frase_italiano": "What do you do for a living?",
+      "frase_ingles": "What do you do for a living?",
       "frase_portugues": "O que você faz da vida? / Qual é a sua profissão?",
       "nivel": "A2",
       "contexto": "Common question when getting to know someone new.",
@@ -101,7 +101,7 @@
     },
     {
       "id": "imi_012",
-      "frase_italiano": "Long time no see!",
+      "frase_ingles": "Long time no see!",
       "frase_portugues": "Quanto tempo!",
       "nivel": "A2",
       "contexto": "Said to someone you haven't seen for a long time.",
