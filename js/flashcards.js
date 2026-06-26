@@ -555,7 +555,8 @@ const Flashcards = {
       // Track session stats
       if (this.sessaoStats) {
         const rNames = ['', 'again', 'hard', 'good', 'easy'];
-        this.sessaoStats[rNames[rating]]++;
+        const rKey = rNames[rating];
+        if (rKey) this.sessaoStats[rKey]++;
         this.sessaoStats.xp += xpGanho;
         if (wasNew && updated.state === 'review') {
           this.sessaoStats.novas.push(carta);
@@ -1097,7 +1098,8 @@ const Flashcards = {
     const stats = this._metricasLer();
     const dist = stats.distribuicaoAvaliacoes || { again: 0, hard: 0, good: 0, easy: 0 };
     const rNames = ['', 'again', 'hard', 'good', 'easy'];
-    dist[rNames[rating]] = (dist[rNames[rating]] || 0) + 1;
+    const rKey = rNames[rating];
+    if (rKey) dist[rKey] = (dist[rKey] || 0) + 1;
     stats.distribuicaoAvaliacoes = dist;
     if (modoContexto) stats.sessoesComContexto = (stats.sessoesComContexto || 0) + 1;
     if (modoEscuta)   stats.sessoesComEscuta   = (stats.sessoesComEscuta   || 0) + 1;

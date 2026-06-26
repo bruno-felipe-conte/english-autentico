@@ -128,17 +128,18 @@ const Dialoghi = {
       const concluido = this.concluidos.includes(dial.id);
       const badge = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${this._esc(I18n.t('dial_my_badge'))}</span>` : '';
       const checkmark = concluido ? '<span style="font-size:0.8rem;color:#27AE60;margin-left:0.3rem;" title="Completed" aria-label="Completed">✅</span>' : '';
-      const safeId = this._esc(dial.id);
+      // jsId: JS-string-escaped for use inside onclick='...' (single-quote delimited)
+      const jsId = dial.id.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
       const safeIcon = this._esc(dial.icone || '💬');
       const safeTitulo = this._esc(dial.titulo);
       const safeNivel = this._esc(dial.nivel);
-      html += `<div class="dialogo-card" role="listitem" tabindex="0" aria-label="${safeTitulo}, Level ${safeNivel}${concluido?', completed':''}" onclick="Dialoghi.abrirDialogo('${safeId}','leitura')" onkeydown="if(event.key==='Enter'||event.key===' ')Dialoghi.abrirDialogo('${safeId}','leitura')">
+      html += `<div class="dialogo-card" role="listitem" tabindex="0" aria-label="${safeTitulo}, Level ${safeNivel}${concluido?', completed':''}" onclick="Dialoghi.abrirDialogo('${jsId}','leitura')" onkeydown="if(event.key==='Enter'||event.key===' ')Dialoghi.abrirDialogo('${jsId}','leitura')">
         <div class="dialogo-icone">${safeIcon}</div>
         <div class="dialogo-titulo">${safeTitulo}${badge}${checkmark}</div>
         <div class="dialogo-nivel">${safeNivel}</div>
         ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
-          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${safeId}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Edit" aria-label="Edit dialogue">✏️</button>` : ''}
-          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${safeId}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Delete" aria-label="Delete dialogue">🗑️</button>
+          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${jsId}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Edit" aria-label="Edit dialogue">✏️</button>` : ''}
+          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${jsId}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Delete" aria-label="Delete dialogue">🗑️</button>
         </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa} XP</div>`}
       </div>`;
     }
@@ -434,7 +435,7 @@ const Dialoghi = {
           <div class="dialogo-turno ${cssClass}" style="${!isUtente && corPersonagem ? 'border-left: 3px solid ' + corPersonagem + '; padding-left: 0.5rem;' : ''}">
             <div class="dialogo-bubble">
               <div class="dialogo-nome" style="${!isUtente && corPersonagem ? 'font-weight:700;' : ''}">${nomePersonagem}</div>
-              <div>${this._esc(fraseExibir)} <button class="dialogo-audio-btn" onclick="App.pronunciar('${fraseExibir.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" aria-label="Play audio">🔊</button></div>
+              <div>${this._esc(fraseExibir)} <button class="dialogo-audio-btn" onclick="App.pronunciar('${fraseExibir.replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;')}')" aria-label="Play audio">🔊</button></div>
               ${t.audio_ipa ? `<div class="dialogo-ipa" style="font-size:0.76rem;color:#8a7a60;font-family:monospace;margin-top:0.2rem;display:inline-block" aria-label="IPA pronunciation">/ ${this._esc(t.audio_ipa)} /</div>` : ''}
               ${traducaoExibir ? `<div class="dialogo-traducao${this._tradVisivel ? '' : ' traducao-oculta'}">${this._esc(traducaoExibir)}</div>` : ''}
             </div>
@@ -462,7 +463,7 @@ const Dialoghi = {
             <div class="dialogo-turno ${cssClass}" style="${!isUtente && corPersonagem ? 'border-left: 3px solid ' + corPersonagem + '; padding-left: 0.5rem;' : ''}">
               <div class="dialogo-bubble">
                 <div class="dialogo-nome">${nomePersonagem}</div>
-                <div>${this._esc(t.frase)} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" aria-label="Play audio">🔊</button></div>
+                <div>${this._esc(t.frase)} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;')}')" aria-label="Play audio">🔊</button></div>
                 ${t.audio_ipa ? `<div class="dialogo-ipa" style="font-size:0.76rem;color:#8a7a60;font-family:monospace;margin-top:0.2rem;display:inline-block">/ ${this._esc(t.audio_ipa)} /</div>` : ''}
                 ${explicacao}
               </div>
@@ -476,7 +477,7 @@ const Dialoghi = {
               <div class="dialogo-turno ${cssClass}" style="animation:fadeIn 0.3s ease${!isUtente && corPersonagem ? ';border-left:3px solid ' + corPersonagem + ';padding-left:0.5rem' : ''}">
                 <div class="dialogo-bubble">
                   <div class="dialogo-nome">${nomePersonagem}</div>
-                  <div>${this._esc(t.frase)} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" aria-label="Play audio">🔊</button></div>
+                  <div>${this._esc(t.frase)} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;')}')" aria-label="Play audio">🔊</button></div>
                   ${t.audio_ipa ? `<div class="dialogo-ipa" style="font-size:0.76rem;color:#8a7a60;font-family:monospace;margin-top:0.2rem;display:inline-block">/ ${this._esc(t.audio_ipa)} /</div>` : ''}
                   <div class="dialogo-traducao">${this._esc(t.traducao)}</div>
                 </div>
@@ -645,7 +646,7 @@ const Dialoghi = {
       return {
         id: 'fc_dial_' + d.id + '_' + word.toLowerCase().replace(/\s+/g, '_'),
         italiano: word,
-        portugues: '',
+        portugues: turno ? (turno.traducao || '') : '',
         categoria: 'Dialogue',
         exemplo: turno ? turno.frase : '',
         exemplo_pt: turno ? (turno.traducao || '') : '',

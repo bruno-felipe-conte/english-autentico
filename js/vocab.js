@@ -224,6 +224,16 @@ const Vocab = {
     const agrupado = this._agruparPorCategoria;
     let catAtual = '';
 
+    // When grouping is active, ensure items are sorted by category so headers
+    // appear once per group regardless of the current sort order
+    if (agrupado) {
+      visivel = [...visivel].sort((a, b) => {
+        const ca = a.categoria || 'Sem categoria';
+        const cb = b.categoria || 'Sem categoria';
+        return ca.localeCompare(cb);
+      });
+    }
+
     visivel.forEach((p, idx) => {
       // Inserir header de categoria se agrupado
       if (agrupado && (p.categoria || 'Sem categoria') !== catAtual) {
@@ -285,7 +295,7 @@ const Vocab = {
         ${modoExpandido ? this.renderizarWordFamilies(p.italiano || '') : ''}
         ${modoExpandido ? `<div class="vocab-fonetica" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.15rem;font-style:italic">/${this._fonSimplificada(p.italiano || '')}/</div>` : ''}
         ${this._modoOutput && !this._vocabReviewAtivo ? `<div style="margin-top:0.4rem"><input type="text" placeholder="Digite a tradução..." style="padding:0.3rem 0.6rem;border:2px solid #ddd;border-radius:6px;font-size:0.85rem;width:160px;outline:none" autocomplete="off" autocapitalize="none" onkeydown="if(event.key==='Enter'){Vocab._verificarOutput(this,'${p.id}')}" data-word-id="${p.id}"></div>` : ''}
-        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
+        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}') " class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
       `;
 
       // Click: pronounce normally; in blur mode clicking blurred cell reveals it
@@ -1001,7 +1011,7 @@ const Vocab = {
 
     // Gerar nova quest
     const todos = App.estado.vocabCache;
-    const palavras = todos.sort(() => Math.random() - 0.5).slice(0, 5);
+    const palavras = [...todos].sort(() => Math.random() - 0.5).slice(0, 5);
     const quest = {
       data: hoje,
       palavras: palavras.map(p => p.id),

@@ -11,6 +11,7 @@ const Quiz = {
   respondido: false,
   combo: 0,
   _indiceAtual: 0,     // para restauração i18n
+  _autoAdvanceTimer: null,
 
   // ── Start quiz for a temple ────────────────────────────────
   iniciar(temploNum) {
@@ -119,7 +120,7 @@ const Quiz = {
       const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.portugues);
       const alternativas = this._embaralhar([p.portugues, ...erradas]);
 
-      const termoStr = p.ingles || p.italiano;
+      const termoStr = p.ingles;
       perguntas.push({
         id: `gen_${p.id}`,
         templo: temploNum,
@@ -166,9 +167,9 @@ const Quiz = {
     const perguntaEl = document.getElementById('quiz-pergunta');
     if (perguntaEl) {
       perguntaEl.textContent = p.pergunta;
-      const tLang = p.ingles || p.italiano;
-      if (tLang) perguntaEl.dataset.italiano = tLang;
-      else delete perguntaEl.dataset.italiano;
+      const tLang = p.ingles;
+      if (tLang) perguntaEl.dataset.ingles = tLang;
+      else delete perguntaEl.dataset.ingles;
     }
 
     const btnOuvir = document.getElementById('btn-ouvir-quiz');
@@ -176,7 +177,7 @@ const Quiz = {
       if (p.tipo === 'listening') {
         btnOuvir.style.display = 'flex';
         // Auto play audio when question appears
-        const tLang = p.ingles || p.italiano;
+        const tLang = p.ingles;
         if (tLang) setTimeout(() => { if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(tLang); }, 400);
       } else {
         btnOuvir.style.display = 'none';
@@ -282,24 +283,28 @@ const Quiz = {
       }
       // Add combo info
       if (correto && this.combo >= 3) {
-        explicacao += ` 🔥 ${this.combo}x combo!`;
+        explicacao += ' ' + I18n.t('quiz_combo_fire').replace('{n}', this.combo);
       }
       // M-5: Indicar que erro será revisado
       if (!correto) {
-        explicacao += ' 💡 We\'ll review this later.';
+        explicacao += ' ' + I18n.t('quiz_review_later');
       }
       explicacaoEl.textContent = explicacao;
     }
 
     // Auto-advance after delay (shorter if correct)
+    // Store ref so proximaPergunta() can cancel it if user clicks Continuar first
     const delay = correto ? 1500 : 2500;
-    setTimeout(() => {
+    if (this._autoAdvanceTimer) clearTimeout(this._autoAdvanceTimer);
+    this._autoAdvanceTimer = setTimeout(() => {
+      this._autoAdvanceTimer = null;
       this.proximaPergunta();
     }, delay);
   },
 
   // ── Advance to next question ───────────────────────────────
   proximaPergunta() {
+    if (this._autoAdvanceTimer) { clearTimeout(this._autoAdvanceTimer); this._autoAdvanceTimer = null; }
     this.perguntaAtual++;
     if (this.perguntaAtual >= this.perguntas.length) {
       this.mostrarResultado();
@@ -365,6 +370,32 @@ const Quiz = {
     if (xpEl) xpEl.textContent = I18n.t('quiz_xp_ganhos').replace('{n}', this.xpTotal);
     if (msgEl) msgEl.textContent = msg;
 
+    let acoesContainer = document.getElementById('quiz-resumo-acoes');
+    if (!acoesContainer && resultado) {
+      acoesContainer = document.createElement('div');
+      acoesContainer.id = 'quiz-resumo-acoes';
+      acoesContainer.className = 'resumo-acoes';
+      acoesContainer.style.cssText = 'display: flex; gap: 0.5rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;';
+      resultado.appendChild(acoesContainer);
+    }
+
+    if (acoesContainer) {
+      const errosPendentes = this._getErrosPendentes ? this._getErrosPendentes() : [];
+      const reviewBtn = errosPendentes.length > 0 
+        ? `<button class="btn-secondario" style="background:var(--cor-fogo);color:white;border-color:var(--cor-fogo);" onclick="Quiz.iniciarRevisao(Quiz._getErrosPendentes())">${I18n.t('quiz_review_mistakes').replace('{n}', errosPendentes.length)}</button>` 
+        : '';
+
+      acoesContainer.innerHTML = `
+        <button class="btn-secondario" onclick="App.navegar('home')" data-i18n="fc_resumo_inicio">${I18n.t('fc_resumo_inicio') || 'Início'}</button>
+        ${reviewBtn}
+        <button class="btn-primario" onclick="Quiz._proximoTemploDisponivel()" data-i18n="fc_resumo_proximo_templo">${I18n.t('fc_resumo_proximo_templo') || 'Próximo Templo'}</button>
+      `;
+    }
+    
+    // Hide old button
+    const btnVelho = resultado.querySelector('button[onclick="Quiz.voltarSelector()"]');
+    if (btnVelho) btnVelho.style.display = 'none';
+
     // Give XP e streak apenas na primeira chamada (não em re-renders por i18n)
     if (!somenteUI) {
       if (this.xpTotal > 0) Progressao.ganhar(this.xpTotal);
@@ -420,7 +451,7 @@ const Quiz = {
       this._onboardingMostrado = true;
       const banner = document.createElement('div');
       banner.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#2C3E50,#3498DB);color:white;padding:1rem;border-radius:12px;margin-bottom:0.5rem;text-align:center;';
-      banner.innerHTML = `<div style="font-size:1.3rem;margin-bottom:0.3rem">🎯 Welcome to Quiz!</div><div style="font-size:0.85rem;opacity:0.9">Test your knowledge, earn XP with combos, and track your progress. Start with Temple 1!</div>`;
+      banner.innerHTML = `<div style="font-size:1.3rem;margin-bottom:0.3rem">${I18n.t('quiz_onboarding_title')}</div><div style="font-size:0.85rem;opacity:0.9">${I18n.t('quiz_onboarding_desc')}</div>`;
       seletor.appendChild(banner);
     }
 
@@ -430,7 +461,7 @@ const Quiz = {
       const streakBanner = document.createElement('div');
       streakBanner.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#E67E22,#D35400);color:white;padding:0.6rem;border-radius:10px;margin-bottom:0.5rem;text-align:center;font-weight:700;';
       const flame = streak >= 7 ? '🔥🔥🔥' : streak >= 3 ? '🔥🔥' : '🔥';
-      streakBanner.innerHTML = `${flame} Quiz Streak: ${streak} day${streak !== 1 ? 's' : ''}! Keep it going!`;
+      streakBanner.innerHTML = I18n.t('quiz_streak_banner').replace('{f}', flame).replace('{n}', streak).replace('{s}', streak !== 1 ? 's' : '');
       seletor.appendChild(streakBanner);
     }
 
@@ -441,7 +472,7 @@ const Quiz = {
       // M-1: Empty state — nenhum templo carregado
       const empty = document.createElement('div');
       empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:#aaa;';
-      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">📭</div><div style="font-weight:600;margin-bottom:0.3rem">No temples loaded yet</div><div style="font-size:0.85rem">Temple data is still loading. Please wait or check your connection.</div>`;
+      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">📭</div><div style="font-weight:600;margin-bottom:0.3rem">${I18n.t('quiz_empty_no_temples')}</div><div style="font-size:0.85rem">${I18n.t('quiz_empty_no_temples_d')}</div>`;
       seletor.appendChild(empty);
       return;
     }
@@ -456,7 +487,7 @@ const Quiz = {
     if (!hasQuizData && !hasVocab) {
       const empty = document.createElement('div');
       empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:#aaa;';
-      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">🎓</div><div style="font-weight:600;margin-bottom:0.3rem">Almost ready!</div><div style="font-size:0.85rem">Add more words to your temples to unlock quizzes. Each temple needs at least 4 words.</div>`;
+      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">🎓</div><div style="font-weight:600;margin-bottom:0.3rem">${I18n.t('quiz_empty_almost')}</div><div style="font-size:0.85rem">${I18n.t('quiz_empty_almost_d')}</div>`;
       seletor.appendChild(empty);
       return;
     }
@@ -468,9 +499,10 @@ const Quiz = {
     const temploStats = {};
     historico.forEach(h => {
       const key = String(h.templo);
-      if (!temploStats[key]) temploStats[key] = { total: 0, acertos: 0, lastScore: 0 };
+      if (!temploStats[key]) temploStats[key] = { total: 0, acertos: 0, totalPerguntas: 0, lastScore: 0 };
       temploStats[key].total++;
       temploStats[key].acertos += h.acertos || 0;
+      temploStats[key].totalPerguntas += h.total || 10;
       temploStats[key].lastScore = h.pontuacao || 0;
     });
 
@@ -521,7 +553,7 @@ const Quiz = {
 
       let statusHtml = '';
       if (desbloqueado && stats) {
-        const avgPct = Math.round((stats.acertos / (stats.total * 10)) * 100);
+        const avgPct = stats.totalPerguntas > 0 ? Math.round((stats.acertos / stats.totalPerguntas) * 100) : 0;
         const stars = avgPct >= 90 ? '⭐⭐⭐' : avgPct >= 70 ? '⭐⭐' : avgPct >= 50 ? '⭐' : '☆';
         statusHtml = `<div style="font-size:0.7rem;color:#27AE60;margin-top:0.2rem">${stars} ${avgPct}% avg</div>`;
       }
@@ -541,7 +573,7 @@ const Quiz = {
       const btnRevisar = document.createElement('button');
       btnRevisar.className = 'quiz-templo-btn';
       btnRevisar.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#C0392B,#E74C3C);color:white;font-weight:700;';
-      btnRevisar.innerHTML = `🔄 Review Mistakes (${errosPendentes.length} items)`;
+      btnRevisar.innerHTML = I18n.t('quiz_review_mistakes').replace('{n}', errosPendentes.length);
       btnRevisar.onclick = () => this.iniciarRevisao(errosPendentes);
       seletor.appendChild(btnRevisar);
     }
@@ -595,7 +627,8 @@ const Quiz = {
         const btn = document.createElement('button');
         btn.className = 'quiz-templo-btn quiz-verbi-btn';
         const emoji = tempo === 'Present' ? '⏱️' : tempo === 'Past Simple' ? '⏪' : '⏩';
-        btn.textContent = `${emoji} ${tempo}`;
+        const labelStr = tempo === 'Present' ? I18n.t('quiz_tense_present') : tempo === 'Past Simple' ? I18n.t('quiz_tense_past') : I18n.t('quiz_tense_future');
+        btn.textContent = labelStr;
         btn.onclick = () => this.iniciarConjugacao(tempo);
         seletor.appendChild(btn);
       });
@@ -627,7 +660,7 @@ const Quiz = {
     if (count === 0) {
       const msg = document.createElement('p');
       msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.3rem;font-size:0.8rem;';
-      msg.textContent = `No ${tipo} quizzes available`;
+      msg.textContent = I18n.t('quiz_no_quizzes_avail').replace('{t}', tipo);
       seletor.appendChild(msg);
     }
   },
@@ -664,7 +697,7 @@ const Quiz = {
 
       // Conquista de streak
       if (streak === 7 && typeof Conquistas !== 'undefined') {
-        App.notificar('🏆 7-day Quiz Streak achieved!', 'sucesso');
+        App.notificar(I18n.t('quiz_streak_achieved'), 'sucesso');
       }
     } catch (_) {}
   },
@@ -715,7 +748,7 @@ const Quiz = {
     this.perguntas = this._embaralhar(erros).slice(0, 10);
 
     if (this.perguntas.length === 0) {
-      App.notificar('No items to review right now!', 'alerta');
+      App.notificar(I18n.t('quiz_no_items_review'), 'alerta');
       return;
     }
 
@@ -726,7 +759,7 @@ const Quiz = {
     if (resultado) resultado.style.display = 'none';
     if (seletor) seletor.style.display = 'none';
 
-    App.notificar(`🔄 Reviewing ${this.perguntas.length} items you got wrong`, 'alerta');
+    App.notificar(I18n.t('quiz_reviewing_items').replace('{n}', this.perguntas.length), 'alerta');
     this.mostrarPergunta();
   },
 
@@ -766,7 +799,7 @@ const Quiz = {
     // Gender questions
     const comGenero = palavras.filter(p => p.genero === 'm' || p.genero === 'f');
     comGenero.forEach(p => {
-      const termoStr = p.ingles || p.italiano;
+      const termoStr = p.ingles;
       const corretoPT = p.genero === 'm' ? 'masculino' : 'feminino';
       const corretoIT = p.genero === 'm' ? I18n.t('quiz_morf_genero_masc') : I18n.t('quiz_morf_genero_fem');
       perguntas.push({
@@ -781,11 +814,11 @@ const Quiz = {
     });
 
     // Plural questions — need at least 4 words with plural for wrong options
-    const comPlural = palavras.filter(p => p.plural && p.plural !== (p.ingles || p.italiano));
+    const comPlural = palavras.filter(p => p.plural && p.plural !== p.ingles);
     const todoPlurais = comPlural.map(p => p.plural);
     if (todoPlurais.length >= 4) {
       comPlural.forEach(p => {
-        const termoStr = p.ingles || p.italiano;
+        const termoStr = p.ingles;
         const erradas = this._embaralhar(todoPlurais.filter(pl => pl !== p.plural)).slice(0, 3);
         perguntas.push({
           id: `morf_p_${p.id}`, templo: temploNum, tipo: 'morfologia',
@@ -905,9 +938,9 @@ const Quiz = {
     const perguntas = [];
 
     palavras.forEach(p => {
-      const termoStr = p.ingles || p.italiano;
+      const termoStr = p.ingles;
       const outras = palavras.filter(o => o.id !== p.id);
-      const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.ingles || o.italiano);
+      const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.ingles);
       const alternativas = this._embaralhar([termoStr, ...erradas]);
 
       perguntas.push({
@@ -995,6 +1028,20 @@ const Quiz = {
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
+  },
+
+  // ── Navegação ─────────────────────────────────────────────
+  _proximoTemploDisponivel() {
+    if (typeof this.temploAtual !== 'number') { App.navegar('home'); return; }
+    const templos = Object.keys(App.estado.templosData || {});
+    if (templos.length === 0) { App.navegar('home'); return; }
+    const idx = templos.indexOf(String(this.temploAtual));
+    const proximo = templos[idx + 1] ? parseInt(templos[idx + 1]) : null;
+    if (proximo && App.estado.templosData[proximo] && Progressao.temploDesbloqueado(proximo)) {
+      Quiz.iniciar(proximo);
+    } else {
+      App.navegar('home');
+    }
   }
 };
 
