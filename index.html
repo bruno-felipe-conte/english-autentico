@@ -520,10 +520,12 @@
     .vocab-btn-blur.ativo { background: #7B68A0; color: white; border-color: #7B68A0; }
     /* Aplica blur na coluna selecionada */
     #vocab-list.blur-pt .vocab-pt,
-    #vocab-list.blur-it .vocab-it { filter: blur(5px); transition: filter 0.2s; user-select: none; cursor: pointer; }
+    #vocab-list.blur-it .vocab-it,
+    #vocab-list.blur-it .vocab-exemplo { filter: blur(5px); transition: filter 0.2s; user-select: none; cursor: pointer; }
     /* Reveal individual ao clicar */
     #vocab-list.blur-pt .vocab-item.revelada .vocab-pt,
-    #vocab-list.blur-it .vocab-item.revelada .vocab-it { filter: none; }
+    #vocab-list.blur-it .vocab-item.revelada .vocab-it,
+    #vocab-list.blur-it .vocab-item.revelada .vocab-exemplo { filter: none; }
     body.dark-mode .vocab-btn-blur { border-color: #9B84C4; color: #9B84C4; }
     body.dark-mode .vocab-btn-blur.ativo { background: #6B5490; border-color: #6B5490; color: white; }
     /* Favoritos */
