@@ -70,9 +70,9 @@ const Vocab = {
     if (this.filtroTexto) {
       const q = this.filtroTexto.toLowerCase().trim();
       filtrados = filtrados.filter(p =>
-        (p.italiano || '').toLowerCase().includes(q) ||
-        (p.portugues || '').toLowerCase().includes(q) ||
-        (p.categoria || '').toLowerCase().includes(q)
+        this._buscaFuzzy(p.italiano || '', q) ||
+        this._buscaFuzzy(p.portugues || '', q) ||
+        this._buscaFuzzy(p.categoria || '', q)
       );
     }
 
@@ -139,7 +139,7 @@ const Vocab = {
         : I18n.t('vocab_favoritos');
     }
 
-    // Stats line + botão estudar filtro
+    // Stats line + botão estudar filtro + chips ativos + exportar
     if (statsEl) {
       const total = todos.length;
       const mostrando = Math.min(filtrados.length, 100);
@@ -154,7 +154,30 @@ const Vocab = {
       const btnEstudar = (temFiltro && filtrados.length > 0)
         ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#9B2335;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">${I18n.t('vocab_estudar_filtro')}</button>`
         : '';
-      statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}`;
+
+      // Chips de filtros ativos
+      const chips = [];
+      if (this.filtroTexto) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#E8D5F5;color:#5B2C8E;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">🔍 "${this._escapar(this.filtroTexto)}" <button onclick="Vocab.filtroTexto='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#5B2C8E;padding:0 0.1rem" aria-label="Remover busca">✕</button></span>`);
+      if (this.filtroTemplo) {
+        const nomeTemplo = (App.TEMPLO_NOMES && App.TEMPLO_NOMES[parseInt(this.filtroTemplo)]) || `Templo ${this.filtroTemplo}`;
+        chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#D4E6F1;color:#1A5276;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">⛩️ ${this._escapar(nomeTemplo)} <button onclick="Vocab.filtroTemplo='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#1A5276;padding:0 0.1rem" aria-label="Remover filtro templo">✕</button></span>`);
+      }
+      if (this.filtroCategoria) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#D5F5E3;color:#117A65;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">🏷️ ${this._escapar(this.filtroCategoria)} <button onclick="Vocab.filtroCategoria='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#117A65;padding:0 0.1rem" aria-label="Remover filtro categoria">✕</button></span>`);
+      if (this.filtroDificeis) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#FADBD8;color:#922B21;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">⚠️ Difíceis <button onclick="Vocab.toggleDificeis();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#922B21;padding:0 0.1rem" aria-label="Remover filtro difíceis">✕</button></span>`);
+      if (this.filtroFavoritos) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#FDEBD0;color:#CA6F1E;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">❤️ Favoritos <button onclick="Vocab.toggleFavoritos();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#CA6F1E;padding:0 0.1rem" aria-label="Remover filtro favoritos">✕</button></span>`);
+      if (this.filtroOrigem === 'custom') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#E8DAEF;color:#6C3483;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">➕ Custom <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#6C3483;padding:0 0.1rem" aria-label="Remover filtro origem">✕</button></span>`);
+      if (this.filtroOrigem === 'nativo') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#D4EFDF;color:#1E8449;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">📦 Nativo <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#1E8449;padding:0 0.1rem" aria-label="Remover filtro origem">✕</button></span>`);
+
+      const chipsHtml = chips.length > 0
+        ? `<div style="margin-top:0.4rem;display:flex;flex-wrap:wrap;gap:0.35rem">${chips.join('')}</div>`
+        : '';
+
+      // Botão exportar
+      const btnExportar = filtrados.length > 0
+        ? `<button onclick="Vocab.exportarLista()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#1A5276;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer" title="Exportar lista filtrada">📥 Exportar</button>`
+        : '';
+
+      statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}${btnExportar}${chipsHtml}`;
     }
 
     // Limit display to 100
@@ -177,19 +200,35 @@ const Vocab = {
       return;
     }
 
-    // NOVO: Estatísticas por categoria
+    // Estatísticas por categoria
     const cats = {};
     filtrados.forEach(p => {
-      const cat = p.categoria || 'Uncategorized';
+      const cat = p.categoria || 'Sem categoria';
       cats[cat] = (cats[cat] || 0) + 1;
     });
 
     listEl.innerHTML = '';
 
-    // NOVO: Modo expandido — mostra mais informações
+    // Modo expandido — mostra mais informações
     const modoExpandido = this._expandido;
 
+    // Agrupamento por categoria (se ativado)
+    const agrupado = this._agruparPorCategoria;
+    let catAtual = '';
+
     visivel.forEach((p, idx) => {
+      // Inserir header de categoria se agrupado
+      if (agrupado && (p.categoria || 'Sem categoria') !== catAtual) {
+        catAtual = p.categoria || 'Sem categoria';
+        const catCor = this._corParaCategoria(catAtual);
+        const header = document.createElement('div');
+        header.className = 'vocab-cat-header';
+        header.style.cssText = `padding:0.5rem 0.8rem;margin-top:0.6rem;font-weight:700;font-size:0.85rem;color:${catCor};border-bottom:2px solid ${catCor};border-radius:4px 4px 0 0;background:${catCor}15`;
+        header.textContent = `${catAtual} (${cats[catAtual] || 0})`;
+        header.setAttribute('role', 'heading');
+        header.setAttribute('aria-level', '3');
+        listEl.appendChild(header);
+      }
       const item = document.createElement('div');
       item.className = `vocab-item${modoExpandido ? ' vocab-item-expanded' : ''}`;
       item.setAttribute('tabindex', '0');
@@ -401,6 +440,160 @@ const Vocab = {
     }
   },
 
+  // ── NOVO: Exportar lista filtrada ───────────────────────────
+  exportarLista(formato = 'json') {
+    const todos = App.estado.vocabCache;
+    let filtrados = todos;
+    // Aplicar mesmos filtros do renderizar()
+    if (this.filtroOrigem === 'custom') filtrados = filtrados.filter(p => p._custom || p.custom);
+    if (this.filtroOrigem === 'nativo') filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    if (this.filtroTemplo) {
+      const num = parseInt(this.filtroTemplo, 10);
+      filtrados = filtrados.filter(p => p.templo_num === num);
+    }
+    if (this.filtroCategoria) {
+      const cat = this.filtroCategoria.toLowerCase();
+      filtrados = filtrados.filter(p => (p.categoria || '').toLowerCase() === cat);
+    }
+    if (this.filtroTexto) {
+      const q = this.filtroTexto.toLowerCase().trim();
+      filtrados = filtrados.filter(p =>
+        (p.italiano || '').toLowerCase().includes(q) ||
+        (p.portugues || '').toLowerCase().includes(q)
+      );
+    }
+    if (this.filtroDificeis) {
+      filtrados = filtrados.filter(p => {
+        const f = App.estado.flashcardData[p.id];
+        return f && (f.erros || 0) >= 3;
+      });
+    }
+    if (this.filtroFavoritos) {
+      const favIds = (App.estado.progresso || {}).favoritos || [];
+      filtrados = filtrados.filter(p => favIds.includes(p.id));
+    }
+
+    if (filtrados.length === 0) {
+      App.notificar('Nenhuma palavra para exportar.', 'alerta');
+      return;
+    }
+
+    let conteudo, mimeType, extensao;
+    if (formato === 'txt') {
+      conteudo = filtrados.map((p, i) =>
+        `${i + 1}. ${p.italiano} → ${p.portugues}${p.categoria ? ' [' + p.categoria + ']' : ''}${p.exemplo ? ' — ' + p.exemplo : ''}`
+      ).join('\n');
+      mimeType = 'text/plain;charset=utf-8';
+      extensao = 'txt';
+    } else {
+      conteudo = JSON.stringify(filtrados.map(p => ({
+        italiano: p.italiano,
+        portugues: p.portugues,
+        categoria: p.categoria || '',
+        templo: p.templo_num,
+        exemplo: p.exemplo || ''
+      })), null, 2);
+      mimeType = 'application/json;charset=utf-8';
+      extensao = 'json';
+    }
+
+    const blob = new Blob([conteudo], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `vocab_${this.filtroCategoria || 'lista'}_${new Date().toISOString().slice(0, 10)}.${extensao}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    App.notificar(`✅ Exportadas ${filtrados.length} palavras!`, 'sucesso');
+  },
+
+  // ── NOVO: Dashboard de estatísticas por categoria ──────────
+  estatisticasCategoria() {
+    const todos = App.estado.vocabCache || [];
+    const cats = {};
+    todos.forEach(p => {
+      const cat = p.categoria || 'Sem categoria';
+      if (!cats[cat]) cats[cat] = { total: 0, dominadas: 0, aprendendo: 0, novas: 0, dificeis: 0 };
+      cats[cat].total++;
+      const sm = App.estado.flashcardData[p.id];
+      const reps = sm ? (sm.reps || sm.repeticoes || 0) : 0;
+      const erros = sm ? (sm.erros || 0) : 0;
+      if (reps >= 3) cats[cat].dominadas++;
+      else if (reps > 0) cats[cat].aprendendo++;
+      else cats[cat].novas++;
+      if (erros >= 3) cats[cat].dificeis++;
+    });
+    return cats;
+  },
+
+  renderizarEstatisticasCategoria() {
+    const container = document.getElementById('vocab-categoria-stats');
+    if (!container) return;
+    const cats = this.estatisticasCategoria();
+    const ordenadas = Object.entries(cats).sort((a, b) => b[1].total - a[1].total);
+    const maxTotal = Math.max(...ordenadas.map(c => c[1].total), 1);
+
+    container.innerHTML = ordenadas.map(([cat, stats]) => {
+      const pct = Math.round((stats.dominadas / stats.total) * 100);
+      const cor = this._corParaCategoria(cat);
+      return `<div style="margin-bottom:0.6rem">
+        <div style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:0.2rem">
+          <span style="font-weight:600;color:${cor}">${this._escapar(cat)}</span>
+          <span style="color:var(--cor-pietra)">${stats.dominadas}/${stats.total} (${pct}%)</span>
+        </div>
+        <div style="background:#e8e8e8;border-radius:4px;height:8px;overflow:hidden;display:flex">
+          <div style="width:${pct}%;background:#27AE60;transition:width 0.4s" title="Dominadas"></div>
+          <div style="width:${Math.round((stats.aprendendo / stats.total) * 100)}%;background:#F39C12;transition:width 0.4s" title="Aprendendo"></div>
+          <div style="width:${Math.round((stats.novas / stats.total) * 100)}%;background:#bdc3c7;transition:width 0.4s" title="Novas"></div>
+        </div>
+        ${stats.dificeis > 0 ? `<div style="font-size:0.68rem;color:#C0392B;margin-top:0.15rem">⚠️ ${stats.dificeis} difíceis</div>` : ''}
+      </div>`;
+    }).join('');
+  },
+
+  // ── NOVO: Agrupamento por categoria ────────────────────────
+  _agruparPorCategoria: false,
+  alternarAgrupamento() {
+    this._agruparPorCategoria = !this._agruparPorCategoria;
+    this.renderizar();
+  },
+
+  // ── NOVO: Busca fuzzy (tolerância a erros de digitação) ──
+  _buscaFuzzy(texto, termo) {
+    if (!termo) return true;
+    const t = termo.toLowerCase().trim();
+    const alvo = texto.toLowerCase();
+    if (alvo.includes(t)) return true;
+    // Distância de Levenshtein simplificada para termos curtos
+    if (t.length >= 3 && t.length <= 12) {
+      const palavras = alvo.split(/\s+/);
+      for (const palavra of palavras) {
+        if (this._levenshtein(palavra, t) <= Math.floor(t.length / 3)) return true;
+      }
+    }
+    return false;
+  },
+  _levenshtein(a, b) {
+    if (a === b) return 0;
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+    const matrix = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+    matrix[0] = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j - 1] + cost
+        );
+      }
+    }
+    return matrix[a.length][b.length];
+  },
+
   // ── Escape HTML helper ────────────────────────────────────
   _escapar(str) {
     const d = document.createElement('div');
@@ -451,8 +644,8 @@ const Vocab = {
     if (this.filtroTexto) {
       const q = this.filtroTexto.toLowerCase().trim();
       filtrados = filtrados.filter(p =>
-        (p.italiano||'').toLowerCase().includes(q) ||
-        (p.portugues||'').toLowerCase().includes(q)
+        this._buscaFuzzy(p.italiano || '', q) ||
+        this._buscaFuzzy(p.portugues || '', q)
       );
     }
     if (this.filtroDificeis) {
