@@ -120,8 +120,8 @@ const Storie = {
     // Cores para cada nível CEFR
     const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
 
-    // NOVO: Detectar dark mode
-    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Detectar dark mode via classe do app (não via OS preference)
+    const isDark = document.body.classList.contains('dark-mode');
     const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const corMarmore = isDark ? '#2a2a3a' : 'var(--cor-marmore)';
     const corTexto = isDark ? '#e0e0e0' : 'var(--cor-inchiostro)';

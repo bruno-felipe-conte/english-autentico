@@ -2770,6 +2770,27 @@
     body.dark-mode .app-tour-theme .driver-popover-footer button:hover {
       background: #003E8A !important;
     }
+    body.dark-mode .app-tour-theme .driver-popover-footer .driver-popover-prev-btn {
+      background: transparent !important;
+      color: #6B5A48 !important;
+      border-color: #3D3028 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-footer .driver-popover-prev-btn:hover {
+      background: #2E261D !important;
+      color: #C9BBA8 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-progress-text {
+      color: #5A4D40 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-close-btn {
+      color: #4A3D30 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-arrow-side-bottom::before {
+      border-top-color: #1E1912 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-arrow-side-top::before {
+      border-bottom-color: #1E1912 !important;
+    }
 
   </style>
 </head>
@@ -2794,7 +2815,7 @@
             <span id="lang-pill-it" class="lang-pill-seg">EN</span>
           </button>
           <button id="theme-toggle" class="theme-toggle-btn" title="Toggle theme">☀️</button>
-          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Audio Speed" style="display:none;">1x</button>
+          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Audio Speed" style="font-family:monospace;font-size:0.72rem;font-weight:700;letter-spacing:-0.02em;min-width:2rem;">1x</button>
           <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
           <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Restart the interactive tour">❓</button>
           <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="My profile">👤</button>
@@ -3189,7 +3210,7 @@
   <script src="js/audio-store.js?v=1006" charset="UTF-8"></script>
   <script src="js/canzoni.js?v=1033" charset="UTF-8"></script>
   <script src="js/imitazione.js?v=1003" charset="UTF-8"></script>
-  <script src="js/storie.js?v=1003" charset="UTF-8"></script>
+  <script src="js/storie.js?v=1004" charset="UTF-8"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (typeof App !== 'undefined') App.atualizarAudioSpeedUI();
