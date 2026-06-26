@@ -2770,27 +2770,6 @@
     body.dark-mode .app-tour-theme .driver-popover-footer button:hover {
       background: #003E8A !important;
     }
-    body.dark-mode .app-tour-theme .driver-popover-footer .driver-popover-prev-btn {
-      background: transparent !important;
-      color: #6B5A48 !important;
-      border-color: #3D3028 !important;
-    }
-    body.dark-mode .app-tour-theme .driver-popover-footer .driver-popover-prev-btn:hover {
-      background: #2E261D !important;
-      color: #C9BBA8 !important;
-    }
-    body.dark-mode .app-tour-theme .driver-popover-progress-text {
-      color: #5A4D40 !important;
-    }
-    body.dark-mode .app-tour-theme .driver-popover-close-btn {
-      color: #4A3D30 !important;
-    }
-    body.dark-mode .app-tour-theme .driver-popover-arrow-side-bottom::before {
-      border-top-color: #1E1912 !important;
-    }
-    body.dark-mode .app-tour-theme .driver-popover-arrow-side-top::before {
-      border-bottom-color: #1E1912 !important;
-    }
 
   </style>
 </head>
@@ -2815,7 +2794,7 @@
             <span id="lang-pill-it" class="lang-pill-seg">EN</span>
           </button>
           <button id="theme-toggle" class="theme-toggle-btn" title="Toggle theme">☀️</button>
-          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Audio Speed" style="font-family:monospace;font-size:0.72rem;font-weight:700;letter-spacing:-0.02em;min-width:2rem;">1x</button>
+          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Audio Speed" style="display:none;">1x</button>
           <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
           <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Restart the interactive tour">❓</button>
           <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="My profile">👤</button>
@@ -2837,6 +2816,14 @@
       <div class="xp-bar-fill" id="xp-bar-fill"></div>
     </div>
   </header>
+  <script>
+    document.addEventListener('i18n:changed', (e) => {
+      const ptSeg = document.getElementById('lang-pill-pt');
+      const enSeg = document.getElementById('lang-pill-it'); // keeping old ID for simplicity
+      if (ptSeg) ptSeg.classList.toggle('ativo', e.detail.lang === 'pt');
+      if (enSeg) enSeg.classList.toggle('ativo', e.detail.lang === 'en');
+    });
+  </script>
 
   <nav class="nav-tabs">
     <button class="nav-tab ativa" data-section="templi" onclick="App.navegar('templi')">🏛️ <span data-i18n="top_nav_templi">Temples</span></button>
@@ -3140,15 +3127,15 @@
           <div class="onb-emoji">🗺️</div>
           <h3 data-i18n="ob_inside_title">What's Inside</h3>
           <ul class="onb-features-list">
-            <li id="onb-inside-li1">🏛️ <strong>Temples:</strong> Track your progress across English-speaking cities.</li>
-            <li id="onb-inside-li2">🃏 <strong>Flashcards:</strong> Memorise words with the FSRS-4.5 algorithm.</li>
-            <li id="onb-inside-li3">🎯 <strong>Quiz:</strong> Test your knowledge and earn XP.</li>
-            <li id="onb-inside-li4">📖 <strong>Vocabulary:</strong> Translation, IPA pronunciation and examples.</li>
-            <li id="onb-inside-li5">📚 <strong>Grammar:</strong> Lessons from A1 to B2.</li>
-            <li id="onb-inside-li6">📜 <strong>Reading:</strong> Read authentic texts in immersion mode.</li>
-            <li id="onb-inside-li7">💬 <strong>Dialogues:</strong> Practise real everyday conversations.</li>
-            <li id="onb-inside-li8">🎵 <strong>Songs:</strong> Learn with English songs.</li>
-            <li id="onb-inside-li9">🎤 <strong>Listen &amp; Repeat:</strong> Train your pronunciation.</li>
+            <li data-i18n-html="ob_inside_li1">🏛️ <strong>Temples:</strong> Track your progress across English-speaking cities.</li>
+            <li data-i18n-html="ob_inside_li2">🃏 <strong>Flashcards:</strong> Memorise words with the FSRS-4.5 algorithm.</li>
+            <li data-i18n-html="ob_inside_li3">🎯 <strong>Quiz:</strong> Test your knowledge and earn XP.</li>
+            <li data-i18n-html="ob_inside_li4">📖 <strong>Vocabulary:</strong> Translation, IPA pronunciation and examples.</li>
+            <li data-i18n-html="ob_inside_li5">📚 <strong>Grammar:</strong> Lessons from A1 to B2.</li>
+            <li data-i18n-html="ob_inside_li6">📜 <strong>Reading:</strong> Read authentic texts in immersion mode.</li>
+            <li data-i18n-html="ob_inside_li7">💬 <strong>Dialogues:</strong> Practise real everyday conversations.</li>
+            <li data-i18n-html="ob_inside_li8">🎵 <strong>Songs:</strong> Learn with English songs.</li>
+            <li data-i18n-html="ob_inside_li9">🎤 <strong>Listen &amp; Repeat:</strong> Train your pronunciation.</li>
           </ul>
         </div>
               <div class="onb-slide">
@@ -3156,12 +3143,12 @@
           <h3 data-i18n="ob_start_title">Where to Start?</h3>
           <p data-i18n="ob_como_comecar">É muito fácil começar sua jornada:</p>
           <ol class="onb-steps-list" id="onb-steps-list">
-            <li id="onb-li1">Go to the <strong>TEMPLES</strong> tab</li>
-            <li id="onb-li2">Choose the <strong>1st Temple (New York — The Foundations)</strong></li>
-            <li id="onb-li3">Study using the <strong>FLASHCARDS</strong></li>
-            <li id="onb-li4">Test yourself with the <strong>QUIZZES</strong>!</li>
+            <li data-i18n-html="ob_slide3_li1">Go to the <strong>TEMPLES</strong> tab</li>
+            <li data-i18n-html="ob_slide3_li2">Choose the <strong>1st Temple (New York — The Foundations)</strong></li>
+            <li data-i18n-html="ob_slide3_li3">Study using the <strong>FLASHCARDS</strong></li>
+            <li data-i18n-html="ob_slide3_li4">Test yourself with the <strong>QUIZZES</strong>!</li>
           </ol>
-          <p id="onb-tour-hint" style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">💡 Tap <strong>❓</strong> at the top at any time to replay the interactive app tour!</p>
+          <p data-i18n-html="ob_tour_hint" style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">💡 Tap <strong>❓</strong> at the top at any time to replay the interactive app tour!</p>
         </div>
       </div>
       

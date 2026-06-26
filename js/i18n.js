@@ -799,13 +799,34 @@ const I18n = {
     return this.dict[chave][this.idioma] || this.dict[chave]['pt'];
   },
 
+  // Helpers para Imersão Híbrida
+  isNavKey(chave) {
+    return chave.startsWith('nav_') || 
+           chave.startsWith('top_nav_') || 
+           chave.startsWith('btn_') || 
+           chave.startsWith('meta_') || 
+           chave.startsWith('cfg_') || 
+           chave.startsWith('prof_');
+  },
+
+  getIdiomaEfetivo(chave) {
+    // Hybrid Immersion: Navigation and complex settings stay in PT even when in EN mode
+    if (this.idioma === 'en' && this.isNavKey(chave)) {
+      return 'pt';
+    }
+    return this.idioma;
+  },
+
   // Busca todos os elementos com data-i18n e substitui o innerText (ou HTML mantendo ícones)
   traduzirDOM() {
     // Traduz textContent / value
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const chave = el.getAttribute('data-i18n');
       if (!this.dict[chave]) return;
-      const texto = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+      
+      const langToUse = this.getIdiomaEfetivo(chave);
+      const texto = this.dict[chave][langToUse] || this.dict[chave]['pt'];
+      
       if (el.tagName.toLowerCase() === 'input' && el.type === 'button') {
         el.value = texto;
       } else if (el.tagName.toLowerCase() === 'button' && el.querySelector('span')) {
@@ -818,27 +839,33 @@ const I18n = {
     // Traduz atributo title (data-i18n-title)
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
       const chave = el.getAttribute('data-i18n-title');
-      if (this.dict[chave]) el.title = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+      if (this.dict[chave]) {
+        const langToUse = this.getIdiomaEfetivo(chave);
+        el.title = this.dict[chave][langToUse] || this.dict[chave]['pt'];
+      }
     });
 
     // Traduz atributo placeholder (data-i18n-placeholder)
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const chave = el.getAttribute('data-i18n-placeholder');
-      if (this.dict[chave]) el.placeholder = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+      if (this.dict[chave]) {
+        const langToUse = this.getIdiomaEfetivo(chave);
+        el.placeholder = this.dict[chave][langToUse] || this.dict[chave]['pt'];
+      }
     });
 
     // Traduz elementos que precisam de innerHTML (data-i18n-html)
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const chave = el.getAttribute('data-i18n-html');
-      if (this.dict[chave]) el.innerHTML = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+      if (this.dict[chave]) {
+        const langToUse = this.getIdiomaEfetivo(chave);
+        el.innerHTML = this.dict[chave][langToUse] || this.dict[chave]['pt'];
+      }
     });
 
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
-      langBtn.title = this.idioma === 'pt' ? 'Switch to English' : 'Mudar para Português';
+      langBtn.title = this.idioma === 'pt' ? 'Switch Language' : 'Mudar Idioma';
     }
   }
 };
-
-
-
