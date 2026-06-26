@@ -640,6 +640,7 @@ const I18n = {
     'can_form_part':           { pt: 'Parte {n}', en: 'Part {n}' },
     'can_form_part_desc':      { pt: 'Prompt da Parte {n} — envie separadamente ao Gemini:', en: 'Prompt for Part {n} — send separately to Gemini:' },
     'can_my_badge':            { pt: 'Minha', en: 'Mine' },
+    'can_progress_counter':    { pt: 'Palavras', en: 'Words' },
 
     // ── Storie ──
     'storie_back':             { pt: '‹ Leituras', en: '‹ Reading' },
