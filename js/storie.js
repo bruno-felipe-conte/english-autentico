@@ -17,6 +17,13 @@ const Storie = {
   _filtroOrigem: '',
   _escListener: null,
   _tradCache: {},   // cache in-memory: palavra → tradução
+  // NOVO: estado para melhorias de UX
+  _velocidadeTTS: 0.9,
+  _ttsAbortController: null,
+  _scrollThrottleId: null,
+  _wordCountSalvas: {},   // cache: storyId → count palavras salvas
+  // NOVO: tracking de progresso por história
+  _progressoLeitura: {},  // { storyId: { paginasVistas, totalPaginas } }
 
   // ── Carregar dados ─────────────────────────────────────────
   async carregar() {
@@ -60,7 +67,7 @@ const Storie = {
       for (let i = 0; i < frases.length; i += 3) {
         chunks.push({
           id: `p${i}`,
-          italiano: frases.slice(i, i + 3).join(' '),
+          ingles: frases.slice(i, i + 3).join(' '),
           portugues: '',
           parole: [],
         });
@@ -93,9 +100,12 @@ const Storie = {
     if (this._filtroTexto) {
       const q = this._filtroTexto.toLowerCase();
       filtrate = filtrate.filter(s =>
-        s.titulo.toLowerCase().includes(q) ||
+        (s.titulo || '').toLowerCase().includes(q) ||
         (s.titulo_pt || '').toLowerCase().includes(q) ||
-        (s.autor || '').toLowerCase().includes(q)
+        (s.autor || '').toLowerCase().includes(q) ||
+        (s.descricao || '').toLowerCase().includes(q) ||
+        (s.descricao_pt || '').toLowerCase().includes(q) ||
+        (s.tema || '').toLowerCase().includes(q)
       );
     }
 
@@ -115,7 +125,7 @@ const Storie = {
         <input type="search" placeholder="${labels.cerca}" value="${this._filtroTexto}"
           oninput="Storie._filtroTexto=this.value;Storie.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:20px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro);font-family:inherit">
-        <button class="btn-ia-add" onclick="IAImport.abrir('storia')" style="white-space:nowrap">🤖 via IA</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('storia')" style="white-space:nowrap">${I18n.t('storie_btn_via_ia') || '🤖 via IA'}</button>
       </div>
       <!-- Linha 2: filtros -->
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
@@ -135,6 +145,10 @@ const Storie = {
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);
       const corN = corNivel[s.nivel] || '#9B2335';
+      // NOVO: contador de palavras salvas
+      const salvas = this._contarPalavrasSalvas(s.id);
+      const totalPalavras = this._contarTotalPalavras(s);
+      const pctSalvas = totalPalavras > 0 ? Math.round((salvas / totalPalavras) * 100) : 0;
       html += `
         <div onclick="Storie.abrirStoria('${s.id}')"
           style="background:var(--cor-marmore);border-radius:14px;padding:1.2rem 1rem;text-align:center;
@@ -152,6 +166,7 @@ const Storie = {
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
             <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
+            ${salvas > 0 ? `<span style="font-size:0.68rem;color:#27AE60;font-weight:600">🌱 ${salvas}/${totalPalavras} (${pctSalvas}%)</span>` : ''}
           </div>
         </div>`;
     }
@@ -213,14 +228,22 @@ const Storie = {
       </div>
 
       <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin:0.8rem 0 0">
-        <button class="btn-secondario" onclick="Storie._toggleTraduzir()">
+        <button class="btn-secondario" onclick="Storie._toggleTraduzir()" aria-label="Mostrar ou ocultar tradução">
           ${this.traduzirVisivel
             ? I18n.t('storie_hide_trans')
             : I18n.t('storie_show_trans')}
         </button>
-        <button class="btn-primario" onclick="Storie._ouvirTudo()">
+        <button class="btn-primario" onclick="Storie._ouvirTudo()" aria-label="Ouvir história completa">
           ${I18n.t('storie_listen_all')}
         </button>
+        <button class="btn-secondario" onclick="Storie._alterarVelocidade()" aria-label="Alterar velocidade do áudio">
+          🔊 ${this._velocidadeTTS}x
+        </button>
+      </div>
+
+      <!-- NOVO: Barra de progresso de leitura -->
+      <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da leitura" style="width:100%;height:6px;background:#e0e0e0;border-radius:3px;margin:0.6rem 0;overflow:hidden">
+        <div id="storie-progress-bar" style="width:0%;height:100%;background:var(--cor-successo, #27AE60);border-radius:3px;transition:width 0.4s"></div>
       </div>
 
       <div class="book-scene">
@@ -304,7 +327,7 @@ const Storie = {
 
       // É uma palavra — buscar dados de vocab
       const vocabDado = parole.find(p =>
-        this._normWord(p.parola) === this._normWord(tok)
+        this._normWord(p.ingles || p.parola) === this._normWord(tok)
       );
       const jaSalva = this._verificarSalva(tok);
 
@@ -367,7 +390,7 @@ const Storie = {
       for (const p of this.storAttuale.testo) {
         const vocabs = p.vocabulario || p.parole || [];
         const found = vocabs.find(pw =>
-          this._normWord(pw.parola) === this._normWord(palavra)
+          this._normWord(pw.ingles || pw.parola) === this._normWord(palavra)
         );
         if (found) {
           ipa  = ipa  || found.ipa        || '';
@@ -393,16 +416,17 @@ const Storie = {
     const renderModal = (tradAtual, carregando = false) => {
       const pills = buildPills(tradAtual);
       return `
-        <button class="storie-modal-close" onclick="Storie._fecharModal()">×</button>
-        <div class="storie-modal-palavra">${this._escape(palavra)}</div>
-        ${ipa ? `<div class="storie-modal-ipa">${this._escape(ipa)}</div>` : ''}
-        <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">${I18n.t('quiz_ouvir')}</button>
-        <div class="storie-modal-traducoes" id="storie-modal-pills">
+        <button class="storie-modal-close" onclick="Storie._fecharModal()" aria-label="Fechar modal">×</button>
+        <div class="storie-modal-palavra" role="dialog" aria-label="Palavra: ${this._escape(palavra)}">${this._escape(palavra)}</div>
+        ${ipa ? `<div class="storie-modal-ipa" aria-label="Pronúncia: ${this._escape(ipa)}">${this._escape(ipa)}</div>` : ''}
+        <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')" aria-label="Ouvir pronúncia">${I18n.t('quiz_ouvir')}</button>
+        <div class="storie-modal-traducoes" id="storie-modal-pills" aria-live="polite">
           ${pills || (carregando ? '<span class="storie-trad-loading">…</span>' : '')}
         </div>
         ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
         <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
-          onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})">
+          onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})"
+          aria-label="${jaSalva ? 'Palavra já salva' : 'Salvar para revisão'}">
           ${jaSalva ? I18n.t('storie_already_saved') : I18n.t('storie_save_review')}
         </button>`;
     };
@@ -513,9 +537,19 @@ const Storie = {
     const overlay = document.getElementById('storie-modal-overlay');
     if (modal)   modal.style.display   = 'none';
     if (overlay) overlay.style.display = 'none';
+    // NOVO: abortar TTS se estiver tocando
+    if (this._ttsAbortController) {
+      this._ttsAbortController.abort();
+      this._ttsAbortController = null;
+    }
     if (removeEsc && this._escListener) {
       document.removeEventListener('keydown', this._escListener);
       this._escListener = null;
+    }
+    // NOVO: limpar throttle de scroll
+    if (this._scrollThrottleId) {
+      clearTimeout(this._scrollThrottleId);
+      this._scrollThrottleId = null;
     }
   },
 
@@ -526,7 +560,8 @@ const Storie = {
     const id = 'story_' + this._normWord(palavra).replace(/\W/g, '_') + '_' + Date.now();
     const entrada = {
       id,
-      italiano:  palavra,
+      italiano:  palavra, // Mantido para compatibilidade com deck SRS existente
+      ingles:    palavra,
       portugues: dados?.trad || '',
       categoria: dados?.cat  || 'vocabulo',
       templo_num: 0,
@@ -597,8 +632,15 @@ const Storie = {
 
   _ouvirTudo() {
     if (!this.storAttuale) return;
+    // NOVO: abortar TTS anterior para evitar memory leak
+    if (this._ttsAbortController) {
+      this._ttsAbortController.abort();
+    }
+    this._ttsAbortController = new AbortController();
     const texto = this.storAttuale.testo.map(p => p.ingles || p.italiano || '').join(' ');
-    if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(texto);
+    if (typeof App !== 'undefined' && App.pronunciar) {
+      App.pronunciar(texto, { rate: this._velocidadeTTS, signal: this._ttsAbortController?.signal });
+    }
   },
 
   _marcarLida() {
@@ -614,6 +656,44 @@ const Storie = {
     if (typeof App !== 'undefined' && App.adicionarXP) App.adicionarXP(xp);
     App.notificar(I18n.t('storie_notif_lida').replace('{xp}', xp), 'sucesso');
     this._renderizarStoria();
+  },
+
+  // ── NOVO: Controle de velocidade TTS ───────────────────────
+  _alterarVelocidade() {
+    const velocidades = [0.7, 0.9, 1.0, 1.2, 1.5];
+    const idx = velocidades.indexOf(this._velocidadeTTS);
+    this._velocidadeTTS = velocidades[(idx + 1) % velocidades.length];
+    App.notificar(`🔊 Velocidade TTS: ${this._velocidadeTTS}x`, 'info');
+  },
+
+  // ── NOVO: Contagem de palavras salvas por história ────────
+  _contarPalavrasSalvas(id) {
+    if (this._wordCountSalvas[id]) return this._wordCountSalvas[id];
+    const storia = (this.dados?.storie || []).find(s => s.id === id);
+    if (!storia) return 0;
+    let count = 0;
+    const palavrasSalvas = (App.estado?.vocabCache || []).filter(v => v._from_story);
+    (storia.testo || []).forEach(p => {
+      const vocabs = p.vocabulario || p.parole || [];
+      vocabs.forEach(v => {
+        if (palavrasSalvas.some(vs => this._normWord(vs.italiano || '') === this._normWord(v.parola || v.ingles || ''))) {
+          count++;
+        }
+      });
+    });
+    this._wordCountSalvas[id] = count;
+    return count;
+  },
+
+  _contarTotalPalavras(storia) {
+    if (!storia || !storia.testo) return 0;
+    let count = 0;
+    storia.testo.forEach(p => {
+      const texto = p.ingles || p.italiano || '';
+      const palavras = texto.match(/[A-Za-zÀ-öø-ÿ]+/g) || [];
+      count += palavras.length;
+    });
+    return count;
   },
 
   // ── Inicialização ao navegar para a aba ────────────────────
