@@ -176,12 +176,16 @@ const Vocab = {
         ? `<div style="margin-top:0.4rem;display:flex;flex-wrap:wrap;gap:0.35rem">${chips.join('')}</div>`
         : '';
 
-      // Botão exportar
+      // Botão exportar + compartilhar
       const btnExportar = filtrados.length > 0
         ? `<button onclick="Vocab.exportarLista()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#1A5276;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer" title="Exportar lista filtrada">📥 Exportar</button>`
         : '';
 
-      statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}${btnExportar}${chipsHtml}`;
+      const btnCompartilhar = (App.estado.vocabCache || []).length > 0
+        ? `<button onclick="Vocab.compartilharLista()" style="margin-left:0.4rem;padding:0.18rem 0.6rem;background:#7D3C98;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer" title="Compartilhar estatísticas">📤</button>`
+        : '';
+
+      statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}${btnExportar}${btnCompartilhar}${chipsHtml}`;
     }
 
     // Limit display to 100
@@ -1080,6 +1084,51 @@ const Vocab = {
     }
     inputEl.value = '';
     inputEl.focus();
+  },
+
+  // ── Social: Compartilhar lista ──────────────────────────────
+  async compartilharLista(formato = 'texto') {
+    const stats = this.estatisticasCategoria();
+    const cats = Object.entries(stats).sort((a, b) => b[1].total - a[1].total);
+    const prog = App.estado.progresso || {};
+    const streak = prog.vocab_streak || 0;
+
+    let conteudo, titulo;
+    if (formato === 'json') {
+      titulo = `Meu vocabulário — ${new Date().toLocaleDateString('pt-BR')}`;
+      conteudo = JSON.stringify({
+        data: new Date().toISOString(),
+        total_palavras: (App.estado.vocabCache || []).length,
+        streak_dias: streak,
+        categorias: stats
+      }, null, 2);
+    } else {
+      titulo = `📚 Meu vocabulário — Streak: ${streak} dias`;
+      const linhas = cats.slice(0, 10).map(([cat, s]) =>
+        `${cat}: ${s.dominadas}/${s.total} (${Math.round((s.dominadas / s.total) * 100)}%)`
+      );
+      conteudo = `${titulo}\n${'—'.repeat(30)}\n${linhas.join('\n')}\n${'—'.repeat(30)}\n🔥 Streak: ${streak} dias seguidos!`;
+    }
+
+    // Usar Web Share API se disponível
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: titulo, text: conteudo });
+        App.notificar('✅ Compartilhado!', 'sucesso');
+        return;
+      } catch (e) {
+        if (e.name === 'AbortError') return; // Usuário cancelou
+      }
+    }
+
+    // Fallback: copiar para clipboard
+    try {
+      await navigator.clipboard.writeText(conteudo);
+      App.notificar('📋 Copiado para a área de transferência!', 'sucesso');
+    } catch (e) {
+      // Fallback final: mostrar em diálogo
+      prompt('Copie o conteúdo abaixo:', conteudo);
+    }
   },
 
 };
