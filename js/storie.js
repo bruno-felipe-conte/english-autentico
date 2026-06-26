@@ -22,6 +22,7 @@ const Storie = {
   _ttsAbortController: null,
   _scrollThrottleId: null,
   _wordCountSalvas: {},   // cache: storyId → count palavras salvas
+  _notaAtual: '',         // nota pessoal temporária para salvar palavra
   // NOVO: tracking de progresso por história
   _progressoLeitura: {},  // { storyId: { paginasVistas, totalPaginas } }
 
@@ -145,10 +146,12 @@ const Storie = {
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);
       const corN = corNivel[s.nivel] || '#9B2335';
-      // NOVO: contador de palavras salvas
+      // NOVO: contador de palavras salvas + cobertura léxica
       const salvas = this._contarPalavrasSalvas(s.id);
       const totalPalavras = this._contarTotalPalavras(s);
       const pctSalvas = totalPalavras > 0 ? Math.round((salvas / totalPalavras) * 100) : 0;
+      const cobertura = this.calcularCobertura(s.id);
+      const corCobertura = cobertura && cobertura.cobertura >= 95 ? '#27AE60' : cobertura && cobertura.cobertura >= 80 ? '#F39C12' : '#E74C3C';
       html += `
         <div onclick="Storie.abrirStoria('${s.id}')"
           style="background:var(--cor-marmore);border-radius:14px;padding:1.2rem 1rem;text-align:center;
@@ -167,7 +170,9 @@ const Storie = {
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
             <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
             ${salvas > 0 ? `<span style="font-size:0.68rem;color:#27AE60;font-weight:600">🌱 ${salvas}/${totalPalavras} (${pctSalvas}%)</span>` : ''}
+            ${cobertura ? `<span style="font-size:0.68rem;color:${corCobertura};font-weight:600">📖 ${cobertura.cobertura}% coberto</span>` : ''}
           </div>
+          <button onclick="event.stopPropagation();Storie.renderizarPreview('${s.id}')" style="margin-top:0.4rem;padding:0.25rem 0.8rem;border:1.5px solid ${corN};border-radius:6px;background:transparent;color:${corN};font-size:0.7rem;font-weight:600;cursor:pointer;font-family:inherit" aria-label="Preview vocabulário">📚 Preview</button>
         </div>`;
     }
 
@@ -245,6 +250,16 @@ const Storie = {
       <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da leitura" style="width:100%;height:6px;background:#e0e0e0;border-radius:3px;margin:0.6rem 0;overflow:hidden">
         <div id="storie-progress-bar" style="width:0%;height:100%;background:var(--cor-successo, #27AE60);border-radius:3px;transition:width 0.4s"></div>
       </div>
+
+      <!-- NOVO: Métricas de fluência -->
+      <div style="display:flex;gap:1rem;justify-content:center;align-items:center;font-size:0.75rem;color:var(--cor-pietra);margin-bottom:0.5rem">
+        <span>⏱️ <span id="storie-tempo">0:00</span></span>
+        <span>📖 <span id="storie-palavras-lidas">0</span> palavras</span>
+        <span>⚡ <span id="storie-wpm">0</span> WPM</span>
+      </div>
+      <button class="btn-secondario" onclick="Storie._toggleFluencyMode()" id="storie-btn-fluency" style="font-size:0.72rem;padding:0.25rem 0.8rem;margin-bottom:0.5rem" aria-label="Ativar modo de fluência cronometrado">
+        🏃 Modo Fluência
+      </button>
 
       <div class="book-scene">
         <div class="book-spread">
@@ -428,7 +443,13 @@ const Storie = {
           onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})"
           aria-label="${jaSalva ? 'Palavra já salva' : 'Salvar para revisão'}">
           ${jaSalva ? I18n.t('storie_already_saved') : I18n.t('storie_save_review')}
-        </button>`;
+        </button>
+        <div style="margin-top:0.5rem">
+          <input type="text" id="storie-modal-nota" placeholder="📝 Sua nota pessoal (opcional)"
+            oninput="Storie._notaAtual=this.value"
+            style="width:100%;padding:0.4rem 0.6rem;border:1px solid #ddd;border-radius:6px;font-size:0.8rem;outline:none;box-sizing:border-box"
+            autocomplete="off" aria-label="Nota pessoal sobre esta palavra">
+        </div>`;
     };
 
     const modal = document.getElementById('storie-word-modal');
@@ -551,13 +572,22 @@ const Storie = {
       clearTimeout(this._scrollThrottleId);
       this._scrollThrottleId = null;
     }
+    // NOVO: parar fluência se estiver ativo
+    if (this._fluencyInterval) {
+      clearInterval(this._fluencyInterval);
+      this._fluencyInterval = null;
+      this._fluencyAtivo = false;
+    }
   },
 
   // ── Salvar palavra no deck SRS ─────────────────────────────
   _salvarNoDeck(palavra, dados) {
-    if (this._verificarSalva(palavra)) return;
+  // NOVO: adicionar nota pessoal se fornecida
+  const nota = (this._notaAtual || '').trim();
+  this._notaAtual = ''; // limpar após uso
+  if (this._verificarSalva(palavra)) return;
 
-    const id = 'story_' + this._normWord(palavra).replace(/\W/g, '_') + '_' + Date.now();
+  const id = 'story_' + this._normWord(palavra).replace(/\W/g, '_') + '_' + Date.now();
     const entrada = {
       id,
       italiano:  palavra, // Mantido para compatibilidade com deck SRS existente
@@ -567,6 +597,7 @@ const Storie = {
       templo_num: 0,
       _custom:    true,
       _from_story: true,
+      nota:       nota,
     };
 
     // Persistir em localStorage
@@ -696,8 +727,188 @@ const Storie = {
     return count;
   },
 
+  // ── NOVO: Lexical Coverage Calculator ──────────────────────
+  calcularCobertura(id) {
+    if (!this.dados?.storie || !App.estado?.vocabCache) return null;
+    const storia = this.dados.storie.find(s => s.id === id);
+    if (!storia || !storia.testo) return null;
+
+    const vocabConhecido = new Set(
+      (App.estado.vocabCache || []).map(v => this._normWord(v.italiano || v.ingles || ''))
+    );
+
+    let total = 0;
+    let conhecidas = 0;
+    const desconhecidas = [];
+
+    storia.testo.forEach(p => {
+      const texto = p.ingles || p.italiano || '';
+      const palavras = texto.match(/[A-Za-zÀ-öø-ÿ]+/g) || [];
+      palavras.forEach(palavra => {
+        const norm = this._normWord(palavra);
+        // Ignorar palavras muito curtas (artigos, preposições)
+        if (norm.length <= 2) return;
+        total++;
+        if (vocabConhecido.has(norm)) {
+          conhecidas++;
+        } else if (!desconhecidas.includes(norm)) {
+          desconhecidas.push(norm);
+        }
+      });
+    });
+
+    const cobertura = total > 0 ? Math.round((conhecidas / total) * 100) : 0;
+    return {
+      total,
+      conhecidas,
+      cobertura,
+      desconhecidas: desconhecidas.slice(0, 20),
+      nivelSugestado: cobertura >= 98 ? 'ideal' : cobertura >= 95 ? 'acessível' : cobertura >= 80 ? 'desafiador' : 'muito_dificil',
+    };
+  },
+
+  // ── NOVO: Pre-reading vocabulary preview ────────────────────
+  previewVocab(id) {
+    const storia = (this.dados?.storie || []).find(s => s.id === id);
+    if (!storia || !storia.testo) return [];
+    const palavras = [];
+    const vistos = new Set();
+    storia.testo.forEach(p => {
+      const vocabs = p.vocabulario || p.parole || [];
+      vocabs.forEach(v => {
+        const norm = this._normWord(v.parola || v.ingles || '');
+        if (!vistos.has(norm)) {
+          vistos.add(norm);
+          palavras.push({
+            palavra: v.parola || v.ingles || '',
+            ipa: v.ipa || '',
+            traducao: v.traducao_portugues || v.tradicao_portugues || v.traduzione || '',
+            categoria: v.categoria || '',
+          });
+        }
+      });
+    });
+    return palavras;
+  },
+
+  renderizarPreview(id) {
+    const palavras = this.previewVocab(id);
+    const c = document.getElementById('storie-container');
+    if (!c) return;
+    const storia = (this.dados?.storie || []).find(s => s.id === id);
+
+    const palavrasHtml = palavras.slice(0, 15).map(p => `
+      <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0.6rem;border-bottom:1px solid #eee">
+        <span style="font-weight:600;font-size:0.85rem;min-width:90px">${p.palavra}</span>
+        ${p.ipa ? `<span style="font-size:0.75rem;color:#888">${p.ipa}</span>` : ''}
+        <span style="font-size:0.8rem;color:var(--cor-pietra)">${p.traducao || '…'}</span>
+        ${p.categoria ? `<span style="font-size:0.65rem;background:#f0f0f0;padding:0.1rem 0.35rem;border-radius:4px;margin-left:auto">${p.categoria}</span>` : ''}
+      </div>`).join('');
+
+    c.innerHTML = `
+      <div class="gram-lesson-nav">
+        <button class="gram-btn-back" onclick="Storie.abrirStoria('${id}')">← ${I18n.t('storie_back')}</button>
+        <span style="font-size:0.85rem;font-weight:700">📖 Preview: ${storia?.titulo || ''}</span>
+      </div>
+      <div style="text-align:center;padding:1rem 0.5rem">
+        <div style="font-size:2rem;margin-bottom:0.4rem">📚</div>
+        <div style="font-weight:700;font-size:1rem;margin-bottom:0.2rem">Pre-reading Vocabulary</div>
+        <div style="font-size:0.82rem;color:var(--cor-pietra);margin-bottom:0.8rem">${palavras.length} palavras-chave encontradas nesta história</div>
+        <div style="max-height:50vh;overflow-y:auto;border:1px solid #ddd;border-radius:8px;text-align:left;background:var(--cor-marmore)">
+          ${palavrasHtml || '<div style="padding:1rem;color:#aaa;font-style:italic">Nenhuma palavra-chave listada</div>'}
+        </div>
+        <button class="btn-primario" onclick="Storie.abrirStoria('${id}')" style="margin-top:1rem;padding:0.6rem 1.5rem">
+          Começar leitura →
+        </button>
+      </div>`;
+  },
+
+  // ── NOVO: Reading Fluency Metrics ──────────────────────────
+  _fluencyAtivo: false,
+  _fluencyInterval: null,
+  _fluencySegundos: 0,
+  _fluencyPalavrasTotal: 0,
+
+  _toggleFluencyMode() {
+    if (this._fluencyAtivo) {
+      // Parar
+      clearInterval(this._fluencyInterval);
+      this._fluencyAtivo = false;
+      const btn = document.getElementById('storie-btn-fluency');
+      if (btn) { btn.textContent = '🏃 Modo Fluência'; btn.classList.remove('ativo'); }
+      const wpmFinal = this._fluencySegundos > 0 ? Math.round((this._fluencyPalavrasTotal / this._fluencySegundos) * 60) : 0;
+      App.notificar(`🏃 Fluência: ${wpmFinal} WPM (${this._fluencyPalavrasTotal} palavras em ${this._fluencySegundos}s)`, 'sucesso');
+    } else {
+      // Iniciar
+      this._fluencyAtivo = true;
+      this._fluencySegundos = 0;
+      this._fluencyPalavrasTotal = this._contarTotalPalavras(this.storAttuale);
+      const btn = document.getElementById('storie-btn-fluency');
+      if (btn) { btn.textContent = '⏹️ Parar'; btn.classList.add('ativo'); }
+      this._fluencyInterval = setInterval(() => {
+        this._fluencySegundos++;
+        const wpm = this._fluencySegundos > 0 ? Math.round((this._fluencyPalavrasTotal / this._fluencySegundos) * 60) : 0;
+        const tempoEl = document.getElementById('storie-tempo');
+        const palavrasEl = document.getElementById('storie-palavras-lidas');
+        const wpmEl = document.getElementById('storie-wpm');
+        if (tempoEl) tempoEl.textContent = `${Math.floor(this._fluencySegundos / 60)}:${String(this._fluencySegundos % 60).padStart(2, '0')}`;
+        if (palavrasEl) palavrasEl.textContent = this._fluencyPalavrasTotal;
+        if (wpmEl) wpmEl.textContent = wpm;
+      }, 1000);
+    }
+  },
+
   // ── Inicialização ao navegar para a aba ────────────────────
   init() {
     this.renderizarSeletor();
+  },
+
+  // ── NOVO: Revisão espaçada de palavras salvas ───────────────
+  revisarPalavrasStorie() {
+    if (!App.estado?.vocabCache) return;
+    const palavrasStorie = App.estado.vocabCache.filter(v => v._from_story);
+    if (palavrasStorie.length === 0) {
+      App.notificar('Nenhuma palavra salva de histórias ainda. Leia uma história e salve palavras!', 'info');
+      return;
+    }
+
+    // Embaralha e prioriza palavras com mais erros
+    const palavras = [...palavrasStorie].sort((a, b) => {
+      const smA = App.estado.flashcardData[a.id] || {};
+      const smB = App.estado.flashcardData[b.id] || {};
+      return (smA.erros || 0) - (smB.erros || 0);
+    }).slice(0, 20);
+
+    const c = document.getElementById('storie-container');
+    if (!c) return;
+
+    let cardsHtml = '';
+    palavras.forEach((p, idx) => {
+      const sm = App.estado.flashcardData[p.id] || {};
+      const reps = sm.reps || 0;
+      const nivel = reps >= 3 ? '⭐' : reps >= 1 ? '📚' : '🌱';
+      const nota = p.nota ? `<div style="font-size:0.68rem;color:var(--cor-pietra);margin-top:0.2rem;font-style:italic">📝 ${this._escape(p.nota)}</div>` : '';
+      cardsHtml += `
+        <div style="background:var(--cor-marmore);border-radius:10px;padding:0.8rem 1rem;border-left:3px solid ${reps >= 3 ? '#27AE60' : '#F39C12'};position:relative">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700;font-size:0.9rem">${this._escape(p.italiano || p.ingles || '')}</div>
+              <div style="font-size:0.8rem;color:var(--cor-pietra);margin-top:0.15rem">${this._escape(p.portugues || '')}</div>
+              ${p.categoria ? `<span style="font-size:0.65rem;background:#f0f0f0;padding:0.1rem 0.35rem;border-radius:4px;margin-top:0.2rem;display:inline-block">${this._escape(p.categoria)}</span>` : ''}
+              ${nota}
+            </div>
+            <span style="font-size:1.1rem" title="${reps} revisões">${nivel}</span>
+          </div>
+        </div>`;
+    });
+
+    c.innerHTML = `
+      <div class="gram-lesson-nav">
+        <button class="gram-btn-back" onclick="Storie.renderizarSeletor()">← Histórias</button>
+        <span style="font-size:0.85rem;font-weight:700">🔄 Revisão de Palavras (${palavras.length})</span>
+      </div>
+      <div style="max-height:70vh;overflow-y:auto;display:flex;flex-direction:column;gap:0.5rem;padding:0.5rem 0">
+        ${cardsHtml || '<div style="padding:1rem;color:#aaa;font-style:italic">Nenhuma palavra para revisar</div>'}
+      </div>`;
   },
 };
