@@ -532,7 +532,7 @@ const Quiz = {
     if (Progressao.temploDesbloqueado(1)) {
       const btnMisto = document.createElement('button');
       btnMisto.className = 'quiz-templo-btn';
-      btnMisto.textContent = I18n.t('quiz_mixed_title');
+      btnMisto.innerHTML = I18n.t('quiz_mixed_title');
       btnMisto.style.gridColumn = '1 / -1';
       btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
       btnMisto.style.color = 'white';

@@ -2640,6 +2640,39 @@
     .can-restart-btn.secundario { background:rgba(107,26,42,0.12); color:var(--vinho-medio); border-color:rgba(107,26,42,0.35); }
     .can-restart-btn.secundario:hover { background:rgba(107,26,42,0.22); }
 
+    /* ── Accessibility: Reduced Motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .can-word-current { transition: none !important; text-shadow: none !important; font-weight:700 !important; }
+      .can-word-past { transition: none !important; }
+      .can-verse { transition: none !important; }
+      .can-verse-playing { transition: none !important; }
+      .can-lyrics-area { scroll-behavior: auto !important; }
+      .can-toggle-btn { transition: none !important; }
+      .can-repeat-btn { transition: none !important; }
+      .can-choice-btn { transition: none !important; }
+      .can-restart-btn { transition: none !important; }
+    }
+
+    /* ── Accessibility: Focus Visible ── */
+    .can-choice-btn:focus-visible,
+    .can-repeat-btn:focus-visible,
+    .can-restart-btn:focus-visible,
+    .can-toggle-btn:focus-visible,
+    .can-play-btn:focus-visible { outline: 3px solid #7B68A0; outline-offset: 2px; }
+
+    /* ── Accessibility: Touch Target Minimum ── */
+    .can-choice-btn { min-height: 48px; min-width: 48px; }
+    .can-repeat-btn { min-height: 44px; min-width: 44px; }
+    .can-play-btn  { min-height: 44px; min-width: 44px; }
+
+    /* ── Accessibility: Karaoke non-color indicator ── */
+    .can-word-current { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .can-word-past { opacity: 0.6; }
+    .can-verse-playing { border-left: 4px solid #d4a847; padding-left: 0.75rem; }
+
+    /* ── Accessibility: Progress counter badge ── */
+    .can-progress-counter { font-size:0.75rem; color:var(--vinho-medio); font-weight:600; margin-left:auto; padding:0 0.5rem; }
+
     /* ── Imitazione ── */
     .mic-button { font-size: 3.5rem; width: 100px; height: 100px; border-radius: 50%; border: none; background: var(--cor-marmore); box-shadow: 0 8px 25px rgba(0,0,0,0.15); cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); outline: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
     .mic-button:hover { transform: scale(1.1); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
@@ -3201,7 +3234,7 @@
   <script src="js/core.js?v=1002" charset="UTF-8"></script>
   <script src="js/progression.js?v=1002" charset="UTF-8"></script>
   <script src="js/flashcards.js?v=1004" charset="UTF-8"></script>
-  <script src="js/quiz.js?v=1002" charset="UTF-8"></script>
+  <script src="js/quiz.js?v=1003" charset="UTF-8"></script>
   <script src="js/vocab.js?v=1003" charset="UTF-8"></script>
   <script src="js/heatmap.js?v=1001" charset="UTF-8"></script>
   <script src="js/grammar.js?v=1006" charset="UTF-8"></script>
