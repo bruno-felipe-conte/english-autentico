@@ -13,7 +13,11 @@ const Vocab = {
   _onboardingMostrado: false,
   _ordenarPor: '',    // '' | 'alfabetica' | 'nivel' | 'progresso' | 'categoria'
   _expandido: false,  // modo expandido (mais informações por palavra)
-
+  _modoOutput: false, // modo digitar tradução (output produtivo)
+  _vocabReviewAtivo: false, // sessão SRS de vocabulário ativa
+  _verbReviewCards: [], // cartas atuais do vocab review
+  _verbReviewIndex: 0,
+  _vocabXP: 0,         // XP ganho na sessão atual
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
     const listEl = document.getElementById('vocab-list');
@@ -274,6 +278,9 @@ const Vocab = {
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
         ${progressoHtml}
         ${exemploHtml}
+        ${modoExpandido ? this.renderizarWordFamilies(p.italiano || '') : ''}
+        ${modoExpandido ? `<div class="vocab-fonetica" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.15rem;font-style:italic">/${this._fonSimplificada(p.italiano || '')}/</div>` : ''}
+        ${this._modoOutput && !this._vocabReviewAtivo ? `<div style="margin-top:0.4rem"><input type="text" placeholder="Digite a tradução..." style="padding:0.3rem 0.6rem;border:2px solid #ddd;border-radius:6px;font-size:0.85rem;width:160px;outline:none" autocomplete="off" autocapitalize="none" onkeydown="if(event.key==='Enter'){Vocab._verificarOutput(this,'${p.id}')}" data-word-id="${p.id}"></div>` : ''}
         ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
       `;
 
@@ -685,7 +692,396 @@ const Vocab = {
 
     App.notificar(I18n.t('vocab_parole_filtro').replace('{n}', embaralhado.length), 'alerta');
     Flashcards.mostrarCarta();
-  }
+  },
+
+  // ── SRS Vocab Review (micro-sessões próprias) ────────────
+  iniciarVocabReview() {
+    const todos = App.estado.vocabCache;
+    let candidatas = todos;
+
+    // Priorizar palavras com erros ou que nunca foram estudadas
+    const comDados = candidatas.filter(p => {
+      const sm = App.estado.flashcardData[p.id];
+      return sm && (sm.reps || 0) < 3;
+    });
+    const semDados = candidatas.filter(p => !App.estado.flashcardData[p.id]);
+
+    // Intercalar: 70% palavras não estudadas/revisando, 30% revisão espaçada
+    const naoEstudadas = semDados.length > 0 ? semDados : comDados;
+    const revisando = comDados.filter(p => {
+      const sm = App.estado.flashcardData[p.id];
+      return sm && (sm.reps || 0) > 0 && (sm.reps || 0) < 3;
+    });
+
+    const cards = [
+      ...naoEstudadas.slice(0, 15),
+      ...revisando.slice(0, 5)
+    ].sort(() => Math.random() - 0.5).slice(0, 20);
+
+    if (cards.length === 0) {
+      App.notificar('🎉 Você já dominou todo o vocabulário desta seleção!', 'sucesso');
+      return;
+    }
+
+    this._vocabReviewAtivo = true;
+    this._vocabReviewCards = cards;
+    this._vocabReviewIndex = 0;
+    this._vocabXP = 0;
+    this._renderizarVocabReview();
+  },
+
+  _renderizarVocabReview() {
+    const listEl = document.getElementById('vocab-list');
+    const statsEl = document.getElementById('vocab-stats');
+    if (!listEl) return;
+
+    const cards = this._vocabReviewCards;
+    const idx = this._vocabReviewIndex;
+    const total = cards.length;
+
+    if (idx >= total) {
+      // Sessão completa
+      this._vocabReviewAtivo = false;
+      const xpTotal = this._vocabXP;
+      const acertos = Math.round(xpTotal / 10);
+      listEl.innerHTML = `
+        <div style="text-align:center;padding:2.5rem 1rem">
+          <div style="font-size:3rem;margin-bottom:0.5rem">🎉</div>
+          <div style="font-weight:700;font-size:1.1rem;margin-bottom:0.5rem">Sessão Completa!</div>
+          <div style="color:var(--cor-pietra);margin-bottom:0.8rem">${acertos}/${total} palavras corretas • +${xpTotal} XP</div>
+          <button onclick="Vocab.iniciarVocabReview()" style="padding:0.5rem 1.2rem;background:#27AE60;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;margin-right:0.5rem">Estudar mais</button>
+          <button onclick="Vocab._vocabReviewAtivo=false;Vocab.renderizar();" style="padding:0.5rem 1.2rem;background:#aaa;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer">Voltar</button>
+        </div>`;
+      if (statsEl) statsEl.innerHTML = `<span>✅ Revisão concluída (+${xpTotal} XP)</span>`;
+      // Atualizar streak
+      this._atualizarStreakVocab();
+      return;
+    }
+
+    const card = cards[idx];
+    const sm = App.estado.flashcardData[card.id];
+    const reps = sm ? (sm.reps || 0) : 0;
+    const nivel = (App.estado.templosData[card.templo_num] || {}).nivel || '';
+    const catCor = this._corParaCategoria(card.categoria);
+
+    // Modo output produtivo: mostrar IT e pedir PT
+    listEl.innerHTML = `
+      <div style="text-align:center;padding:1rem 0.5rem 0.3rem;font-size:0.78rem;color:var(--cor-pietra)">
+        Vocab Review — ${idx + 1}/${total} • +${this._vocabXP} XP
+      </div>
+      <div style="text-align:center;padding:1.5rem">
+        <div style="display:inline-block;padding:1.5rem 2.5rem;border-radius:12px;background:var(--cor-card);border-left:4px solid ${catCor};box-shadow:0 2px 8px rgba(0,0,0,0.08);max-width:350px">
+          <div style="font-size:0.7rem;color:var(--cor-pietra);margin-bottom:0.5rem">${card.categoria || ''} ${nivel ? '• ' + nivel : ''}</div>
+          <div style="font-size:1.5rem;font-weight:700;margin-bottom:0.8rem">${this._escapar(card.italiano || '')}</div>
+          <div class="vocab-review-resposta" style="min-height:2.5rem"></div>
+          <div class="vocab-review-input" style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem">
+            <input type="text" id="vocab-review-answer" placeholder="Digite a tradução..."
+              style="padding:0.5rem 0.8rem;border:2px solid #ddd;border-radius:8px;font-size:0.95rem;width:220px;outline:none;box-sizing:border-box"
+              autocomplete="off" autocapitalize="none" spellcheck="false"
+              onkeydown="if(event.key==='Enter')Vocab._verificarVocabReview()">
+            <button onclick="Vocab._verificarVocabReview()" style="padding:0.5rem 1rem;background:#27AE60;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer">✓</button>
+          </div>
+          <div class="vocab-review-feedback" style="margin-top:0.5rem;min-height:1.5rem;font-weight:600"></div>
+          <div style="margin-top:0.8rem;display:flex;gap:0.4rem;justify-content:center">
+            <button onclick="Vocab._responderVocabReview('again')" style="padding:0.3rem 0.8rem;background:#E74C3C;color:#fff;border:none;border-radius:6px;font-size:0.75rem;cursor:pointer;display:none" id="btn-vr-again">😕 Errei</button>
+            <button onclick="Vocab._responderVocabReview('hard')" style="padding:0.3rem 0.8rem;background:#F39C12;color:#fff;border:none;border-radius:6px;font-size:0.75rem;cursor:pointer;display:none" id="btn-vr-hard">😐 Difícil</button>
+            <button onclick="Vocab._responderVocabReview('good')" style="padding:0.3rem 0.8rem;background:#27AE60;color:#fff;border:none;border-radius:6px;font-size:0.75rem;cursor:pointer;display:none" id="btn-vr-good">😊 Certo</button>
+          </div>
+        </div>
+      </div>`;
+    setTimeout(() => {
+      const inp = document.getElementById('vocab-review-answer');
+      if (inp) inp.focus();
+    }, 100);
+
+    if (statsEl) statsEl.innerHTML = '';
+  },
+
+  _verificarVocabReview() {
+    const input = document.getElementById('vocab-review-answer');
+    if (!input) return;
+    const resposta = input.value.trim().toLowerCase();
+    const card = this._vocabReviewCards[this._vocabReviewIndex];
+    const correto = (card.portugues || '').toLowerCase().trim();
+
+    // Verificar se está correto (aceitar variações com/sem artigo)
+    const acertou = resposta === correto ||
+      resposta === correto.replace(/^o |^a |^os |^as |^um |^uma /, '') ||
+      correto.split('/').some(alt => resposta === alt.trim().replace(/^o |^a |^os |^as |^um |^uma /, ''));
+
+    const feedback = document.querySelector('.vocab-review-feedback');
+    const respostaEl = document.querySelector('.vocab-review-resposta');
+    const buttons = document.querySelectorAll('[id^="btn-vr-"]');
+
+    if (acertou) {
+      if (feedback) feedback.textContent = '✅ Correto!';
+      if (feedback) feedback.style.color = '#27AE60';
+      if (respostaEl) respostaEl.innerHTML = `<span style="color:#27AE60;font-weight:700">${this._escapar(card.portugues || '')}</span>`;
+      this._vocabXP += 10;
+    } else {
+      if (feedback) feedback.textContent = `❌ Correto: ${card.portugues}`;
+      if (feedback) feedback.style.color = '#E74C3C';
+      if (respostaEl) respostaEl.innerHTML = `<span style="color:#E74C3C;font-weight:700">${this._escapar(card.portugues || '')}</span>`;
+    }
+
+    buttons.forEach(b => b.style.display = 'inline-block');
+    input.disabled = true;
+  },
+
+  _responderVocabReview(qualidade) {
+    const card = this._vocabReviewCards[this._vocabReviewIndex];
+    const sm = App.estado.flashcardData[card.id] || { reps: 0, erros: 0 };
+
+    if (!App.estado.flashcardData[card.id]) {
+      App.estado.flashcardData[card.id] = { reps: 0, erros: 0 };
+    }
+
+    if (qualidade === 'again') {
+      App.estado.flashcardData[card.id].erros = (sm.erros || 0) + 1;
+      App.estado.flashcardData[card.id].reps = 0;
+    } else if (qualidade === 'hard') {
+      App.estado.flashcardData[card.id].reps = (sm.reps || 0) + 1;
+      this._vocabXP += 5;
+    } else {
+      App.estado.flashcardData[card.id].reps = (sm.reps || 0) + 1;
+      this._vocabXP += 10;
+    }
+
+    // Salvar no localStorage
+    try {
+      localStorage.setItem('en_flashcards', JSON.stringify(App.estado.flashcardData));
+    } catch (_) {}
+
+    this._vocabReviewIndex++;
+    this._renderizarVocabReview();
+  },
+
+  // ── Vocab Streak ──────────────────────────────────────────
+  _atualizarStreakVocab() {
+    const hoje = new Date().toISOString().slice(0, 10);
+    const prog = App.estado.progresso || {};
+    const ultimoDia = prog.vocab_streak_ultimo || '';
+    const streakAtual = prog.vocab_streak || 0;
+
+    if (ultimoDia === hoje) return; // Já contabilizado hoje
+
+    const ontem = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    let novoStreak;
+    if (ultimoDia === ontem) {
+      novoStreak = streakAtual + 1;
+    } else {
+      novoStreak = 1;
+    }
+
+    App.estado.progresso.vocab_streak = novoStreak;
+    App.estado.progresso.vocab_streak_ultimo = hoje;
+    try {
+      localStorage.setItem('en_progresso', JSON.stringify(App.estado.progresso));
+    } catch (_) {}
+
+    // Verificar conquistas
+    this._verificarConquistasVocab(novoStreak);
+  },
+
+  _verificarConquistasVocab(streak) {
+    const prog = App.estado.progresso || {};
+    const conquistas = prog.vocab_conquistas || [];
+    const novasConquistas = [];
+
+    if (streak >= 3 && !conquistas.includes('streak3')) novasConquistas.push('streak3');
+    if (streak >= 7 && !conquistas.includes('streak7')) novasConquistas.push('streak7');
+    if (streak >= 30 && !conquistas.includes('streak30')) novasConquistas.push('streak30');
+
+    const totalDominadas = Object.values(App.estado.flashcardData).filter(d => (d.reps || 0) >= 3).length;
+    if (totalDominadas >= 10 && !conquistas.includes('dominou10')) novasConquistas.push('dominou10');
+    if (totalDominadas >= 50 && !conquistas.includes('dominou50')) novasConquistas.push('dominou50');
+    if (totalDominadas >= 100 && !conquistas.includes('dominou100')) novasConquistas.push('dominou100');
+
+    if (novasConquistas.length > 0) {
+      App.estado.progresso.vocab_conquistas = [...conquistas, ...novasConquistas];
+      try {
+        localStorage.setItem('en_progresso', JSON.stringify(App.estado.progresso));
+      } catch (_) {}
+      // Notificar conquistas
+      const labels = {
+        streak3: '🔥 3 dias de vocabulário!',
+        streak7: '🔥🔥 1 semana de vocabulário!',
+        streak30: '🏆 1 mês de vocabulário!',
+        dominou10: '⭐ 10 palavras dominadas!',
+        dominou50: '⭐⭐ 50 palavras dominadas!',
+        dominou100: '🏅 100 palavras dominadas!'
+      };
+      novasConquistas.forEach(c => {
+        App.notificar(`🏆 Conquista: ${labels[c] || c}`, 'sucesso');
+      });
+    }
+  },
+
+  // ── Modo Output Produtivo (toggle) ────────────────────────
+  alternarModoOutput() {
+    this._modoOutput = !this._modoOutput;
+    this.renderizar();
+  },
+
+  // ── Colocações / Contexto ─────────────────────────────────
+  _buscarColocacoes(palavra) {
+    // Busca no dialogi e storie por frases que contêm a palavra
+    const colocacoes = [];
+    if (App.estado.dialoghi) {
+      Object.values(App.estado.dialoghi).forEach(d => {
+        if (d.frasi) {
+          d.frasi.forEach(f => {
+            if ((f.it || '').toLowerCase().includes(palavra.toLowerCase())) {
+              colocacoes.push({ tipo: 'dialogo', texto: f.it, trad: f.pt || '' });
+            }
+          });
+        }
+      });
+    }
+    return colocacoes.slice(0, 3); // Máximo 3 colocações
+  },
+
+  // ── Word Families (agrupamento morfológico) ───────────────
+  wordFamilies(palavra) {
+    const families = {
+      'giocare': ['giocare', 'gioco', 'giocatore', 'giocattolo', 'giocherebbe'],
+      'mangiare': ['mangiare', 'mangio', 'mangiato', 'mangiatore', 'mangiabile'],
+      'parlare': ['parlare', 'parlo', 'parlato', 'parlante', 'parlamento'],
+      'leggere': ['leggere', 'leggo', 'letto', 'lettore', 'leggibile'],
+      'scrivere': ['scrivere', 'scrivo', 'scritto', 'scrittore', 'scrivibile'],
+      'correre': ['correre', 'corro', 'corso', 'corridore', 'corribile'],
+      'dormire': ['dormire', 'dormo', 'dormito', 'dormiente', 'dormiglione'],
+      'lavorare': ['lavorare', 'lavoro', 'lavorato', 'lavoratore', 'lavorativo'],
+      'studiare': ['studiare', 'studio', 'studiato', 'studioso', 'studiante'],
+      'pensare': ['pensare', 'penso', 'pensato', 'pensatore', 'pensieroso'],
+      'vedere': ['vedere', 'vedo', 'visto', 'vedente', 'vedetta'],
+      'sentire': ['sentire', 'sento', 'sentito', 'sentimento', 'sensibile'],
+      'capire': ['capire', 'capisco', 'capito', 'capiente', 'incomprensibile'],
+      'prendere': ['prendere', 'prendo', 'preso', 'prenditore', 'prendibile'],
+      'dare': ['dare', 'do', 'dato', 'datore', 'dabile'],
+      'fare': ['fare', 'faccio', 'fatto', 'fattore', 'fattibile'],
+      'andare': ['andare', 'vado', 'andato', 'andatura', 'andante'],
+      'venire': ['venire', 'vengo', 'venuto', 'venuta', 'prevenire'],
+      'stare': ['stare', 'sto', 'stato', 'stante', 'stabile'],
+      'avere': ['avere', 'ho', 'avuto', 'avente', 'avanzare'],
+      'essere': ['essere', 'sono', 'stato', 'essenza', 'essenziale'],
+    };
+    const base = palavra.toLowerCase().replace(/are$|ere$|ire$/, '');
+    for (const [key, family] of Object.entries(families)) {
+      const keyBase = key.replace(/are$|ere$|ire$/, '');
+      if (keyBase === base || family.some(w => w.toLowerCase().startsWith(base))) {
+        return family;
+      }
+    }
+    return [];
+  },
+
+  renderizarWordFamilies(palavra) {
+    const family = this.wordFamilies(palavra);
+    if (family.length <= 1) return '';
+    const outros = family.filter(w => w.toLowerCase() !== palavra.toLowerCase());
+    return `<div class="vocab-wordfamily" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.2rem">
+      <span style="font-weight:600">Família:</span> ${outros.map(w => `<span style="background:#f0f0f0;padding:0.1rem 0.3rem;border-radius:3px;margin-right:0.2rem">${this._escapar(w)}</span>`).join('')}
+    </div>`;
+  },
+
+  // ── Daily Quest de Vocabulário ────────────────────────────
+  dailyQuestVocab() {
+    const prog = App.estado.progresso || {};
+    const hoje = new Date().toISOString().slice(0, 10);
+    const questData = prog.vocab_daily_quest || {};
+
+    if (questData.data === hoje) {
+      return questData; // Já gerada hoje
+    }
+
+    // Gerar nova quest
+    const todos = App.estado.vocabCache;
+    const palavras = todos.sort(() => Math.random() - 0.5).slice(0, 5);
+    const quest = {
+      data: hoje,
+      palavras: palavras.map(p => p.id),
+      completadas: 0,
+      total: palavras.length,
+      xpRecompensa: 25,
+      tipo: 'vocab'
+    };
+
+    App.estado.progresso.vocab_daily_quest = quest;
+    try {
+      localStorage.setItem('en_progresso', JSON.stringify(App.estado.progresso));
+    } catch (_) {}
+
+    return quest;
+  },
+
+  renderizarDailyQuest() {
+    const quest = this.dailyQuestVocab();
+    const container = document.getElementById('vocab-daily-quest');
+    if (!container) return;
+
+    const pct = quest.total > 0 ? Math.round((quest.completadas / quest.total) * 100) : 0;
+    const concluida = quest.completadas >= quest.total;
+
+    container.innerHTML = `
+      <div style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:1rem;color:#fff;margin-bottom:0.8rem">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+          <span style="font-weight:700;font-size:0.9rem">🎯 Daily Quest</span>
+          <span style="font-size:0.75rem;opacity:0.9">${quest.completadas}/${quest.total}</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.2);border-radius:4px;height:6px;overflow:hidden;margin-bottom:0.5rem">
+          <div style="width:${pct}%;background:#fff;height:100%;border-radius:4px;transition:width 0.4s"></div>
+        </div>
+        <div style="font-size:0.75rem;opacity:0.9">
+          ${concluida ? '✅ Completa! +' + quest.xpRecompensa + ' XP' : 'Estude ' + quest.total + ' palavras para ganhar ' + quest.xpRecompensa + ' XP'}
+        </div>
+      </div>`;
+  },
+
+  // ── Pronúncia Fonética simplificada ───────────────────────
+  _fonSimplificada(palavra) {
+    // Transcrição fonética simplificada para italiano
+    const regras = [
+      [/^gn/, 'ɲ'], [/^gl/, 'ʎ'], [/^sc(?=[ie])/, 'ʃ'],
+      [/^c(?=[ie])/, 'tʃ'], [/^ch(?=[ei])/, 'k'], [/^gh(?=[ei])/, 'g'],
+      [/^c(?=[aou])/, 'k'], [/^g(?=[aou])/, 'g'], [/^g(?=[ie])/, 'dʒ'],
+      [/^z/, 'dz'], [/^s(?=[bcdfgmpqtvz])/, 'z'], [/^s(?=[aeiou])/, 's'],
+      [/ci(?=[aou])/, 'tʃi'], [/gi(?=[aou])/, 'dʒi'], [/li(?=[aou])/, 'ʎi'],
+      [/ni(?=[aou])/, 'ɲi'], [/^h/, ''], [/^(?=[aeiou])/, ''],
+    ];
+    let result = palavra.toLowerCase();
+    regras.forEach(([pattern, replacement]) => {
+      result = result.replace(pattern, replacement);
+    });
+    return result;
+  },
+
+  // ── Verificar Output Produtivo (digitar tradução) ──────────
+  _verificarOutput(inputEl, palavraId) {
+    const resposta = inputEl.value.trim().toLowerCase();
+    const palavra = (App.estado.vocabCache || []).find(p => p.id == palavraId);
+    if (!palavra) return;
+    const correto = (palavra.portugues || '').toLowerCase().trim();
+    const acertou = resposta === correto ||
+      resposta === correto.replace(/^o |^a |^os |^as |^um |^uma /, '') ||
+      correto.split('/').some(alt => resposta === alt.trim());
+
+    if (acertou) {
+      inputEl.style.borderColor = '#27AE60';
+      inputEl.style.background = '#f0fff0';
+      inputEl.placeholder = '✅ Correto!';
+      // Atualizar flashcard data
+      if (!App.estado.flashcardData[palavraId]) App.estado.flashcardData[palavraId] = { reps: 0, erros: 0 };
+      App.estado.flashcardData[palavraId].reps = (App.estado.flashcardData[palavraId].reps || 0) + 1;
+    } else {
+      inputEl.style.borderColor = '#E74C3C';
+      inputEl.style.background = '#fff0f0';
+      inputEl.placeholder = `❌ Correto: ${correto}`;
+    }
+    inputEl.value = '';
+    inputEl.focus();
+  },
+
 };
 
 document.addEventListener('i18n:changed', () => {
