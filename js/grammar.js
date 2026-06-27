@@ -874,23 +874,23 @@ const Grammatica = {
       return this._htmlCamadasLegado(u);
     }
 
-    // Stepper visual das 7 fases
-    const fases = [
-      { id: 1, label: 'Ancoragem', emoji: '🎯' },
-      { id: 2, label: 'Observação', emoji: '👁️' },
-      { id: 3, label: 'Tabela', emoji: '📋' },
-      { id: 4, label: 'Exemplos P/R/C', emoji: '💬' },
-      { id: 5, label: 'Armadilhas', emoji: '⚠️' },
-      { id: 6, label: 'Ponte', emoji: '🌉' },
-      { id: 7, label: 'Coda', emoji: '🏁' }
+    // Stepper visual — mostra apenas as fases com conteúdo nesta lição
+    const todasFases = [
+      { id: 1, label: 'Ancoragem',     emoji: '🎯', campo: u.alerta },
+      { id: 2, label: 'Observação',    emoji: '👁️', campo: u.observacao_cards },
+      { id: 3, label: 'Tabela',        emoji: '📋', campo: u.tabela_visual },
+      { id: 4, label: 'Exemplos P/R/C',emoji: '💬', campo: u.exemplos_prc },
+      { id: 5, label: 'Armadilhas',    emoji: '⚠️', campo: u.armadilhas },
+      { id: 6, label: 'Ponte',         emoji: '🌉', campo: u.ponte },
+      { id: 7, label: 'Coda',          emoji: '🏁', campo: u.coda }
     ];
-    const faseAtiva = u._faseAtual || 1;
-    let stepper = '<div class="gram-nma-stepper" role="progressbar" aria-valuenow="' + faseAtiva + '" aria-valuemin="1" aria-valuemax="7" aria-label="Fase ' + faseAtiva + ' de 7 da teoria NMA">';
+    const fases = todasFases.filter(f => f.campo && (Array.isArray(f.campo) ? f.campo.length > 0 : true));
+    const total = fases.length;
+    let stepper = '<div class="gram-nma-stepper" role="progressbar" aria-valuenow="' + total + '" aria-valuemin="1" aria-valuemax="' + total + '" aria-label="' + total + ' fases nesta lição">';
     stepper += '<div class="gram-nma-stepper-track">';
-    fases.forEach(f => {
-      const cls = f.id < faseAtiva ? 'gram-step-done' : f.id === faseAtiva ? 'gram-step-active' : 'gram-step-pending';
-      stepper += '<div class="gram-step ' + cls + '" title="' + f.emoji + ' ' + f.label + '">';
-      stepper += '<span class="gram-step-dot">' + (f.id < faseAtiva ? '✓' : f.id) + '</span>';
+    fases.forEach((f, i) => {
+      stepper += '<div class="gram-step gram-step-done" title="' + f.emoji + ' ' + f.label + '">';
+      stepper += '<span class="gram-step-dot">✓</span>';
       stepper += '<span class="gram-step-label">' + f.label + '</span>';
       stepper += '</div>';
     });
