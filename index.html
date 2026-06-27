@@ -2675,6 +2675,44 @@
     /* ── Accessibility: Progress counter badge ── */
     .can-progress-counter { font-size:0.75rem; color:var(--vinho-medio); font-weight:600; margin-left:auto; padding:0 0.5rem; }
 
+
+    /* ── NMA Stepper (Progress Indicator) ── */
+    .gram-nma-stepper { margin-bottom: 1.5rem; }
+    .gram-nma-stepper-track { display: flex; gap: 0.25rem; align-items: center; justify-content: space-between; }
+    .gram-step { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; flex: 1; position: relative; }
+    .gram-step-dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; transition: all 0.2s; }
+    .gram-step-label { font-size: 0.6rem; text-align: center; color: #888; white-space: nowrap; }
+    .gram-step-done .gram-step-dot { background: #27ae60; color: #fff; }
+    .gram-step-active .gram-step-dot { background: var(--vinho-medio); color: #fff; box-shadow: 0 0 0 3px rgba(155,35,53,0.2); }
+    .gram-step-pending .gram-step-dot { background: #ddd; color: #999; }
+    .gram-step-active .gram-step-label { color: var(--vinho-medio); font-weight: 600; }
+
+    /* ── Skeleton Loading ── */
+    .gram-loading-skeleton { padding: 1rem; }
+    .gram-skeleton-pulse { background: linear-gradient(90deg, #f0ede6 25%, #e8e4dc 50%, #f0ede6 75%); background-size: 200% 100%; animation: gram-skeleton-pulse 1.5s infinite; border-radius: 4px; }
+    @keyframes gram-skeleton-pulse { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    .gram-empty-state { text-align: center; padding: 2rem; color: #888; }
+    .gram-empty-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+    /* ── Streak Banner ── */
+    .gram-streak-banner { animation: gram-streak-glow 2s ease-in-out infinite; }
+    @keyframes gram-streak-glow { 0%,100% { box-shadow: 0 0 0 0 rgba(212,149,42,0); } 50% { box-shadow: 0 0 12px 2px rgba(212,149,42,0.3); } }
+
+    /* ── Touch Targets ── */
+    .gram-word-blur { padding: 0.5rem 0.75rem; min-height: 44px; display: inline-flex; align-items: center; }
+    .gram-prc-topo { min-height: 44px; padding: 0.75rem; }
+
+    /* ── Focus Visible ── */
+    .gram-nivel-banner:focus-visible { outline: 3px solid #7B68A0; outline-offset: 2px; }
+    .gram-flip-card:focus-visible { outline: 3px solid #7B68A0; outline-offset: 2px; border-radius: 8px; }
+    .gram-prc-topo:focus-visible { outline: 3px solid #7B68A0; outline-offset: 2px; border-radius: 6px; }
+
+    /* ── Reduced Motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .gram-streak-banner { animation: none; }
+      .gram-skeleton-pulse { animation: none; background: #f0ede6; }
+    }
+
     /* ── Imitazione ── */
     .mic-button { font-size: 3.5rem; width: 100px; height: 100px; border-radius: 50%; border: none; background: var(--cor-marmore); box-shadow: 0 8px 25px rgba(0,0,0,0.15); cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); outline: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
     .mic-button:hover { transform: scale(1.1); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }

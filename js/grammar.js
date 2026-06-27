@@ -20,6 +20,16 @@ const Grammatica = {
   // ─────────────────────────────────────────────────────────
   async carregar() {
     if (this.dados) return;
+    const c = document.getElementById('grammatica-container');
+    if (c && !c.querySelector('.gram-loading-skeleton') && !c.querySelector('.gram-seletor')) {
+      c.innerHTML = '<div class="gram-loading-skeleton" role="status" aria-label="Carregando gramática...">' +
+        '<div class="gram-skeleton-pulse" style="width:60%;height:20px;margin-bottom:1rem"></div>' +
+        '<div class="gram-skeleton-pulse" style="width:80%;height:16px;margin-bottom:0.5rem"></div>' +
+        '<div class="gram-skeleton-pulse" style="width:70%;height:16px;margin-bottom:0.5rem"></div>' +
+        '<div class="gram-skeleton-pulse" style="width:50%;height:16px;margin-bottom:1.5rem"></div>' +
+        Array.from({length:6}, () => '<div class="gram-skeleton-pulse" style="height:56px;margin-bottom:0.5rem;border-radius:8px"></div>').join('') +
+        '</div>';
+    }
     try {
       const r = await fetch('data/grammar.json');
       if (!r.ok) throw new Error('grammar.json não encontrado');
@@ -27,6 +37,14 @@ const Grammatica = {
     } catch (e) {
       console.error('Grammatica: erro ao carregar dados', e);
       this.dados = { moduli: [] };
+      const container = document.getElementById('grammatica-container');
+      if (container) {
+        container.innerHTML = '<div class="gram-empty-state" role="alert">' +
+          '<div class="gram-empty-emoji">⚠️</div>' +
+          '<p>Erro ao carregar dados de gramática.</p>' +
+          '<button class="gram-btn-retry" onclick="Grammatica.renderizarSeletor()" style="margin-top:1rem;padding:0.5rem 1.5rem;border:2px solid var(--vinho-medio);border-radius:8px;background:transparent;color:var(--vinho-medio);cursor:pointer">🔄 Recarregar</button>' +
+          '</div>';
+      }
     }
   },
 
@@ -59,7 +77,18 @@ const Grammatica = {
     const nivel = App.estado.progresso?.nivel || 1;
     const completadas = App.estado.progresso?.grammatica_completadas || [];
 
-    let html = '<div class="gram-seletor">';
+    // Streak de gramática
+    let streakHtml = '';
+    try {
+      const streak = parseInt(localStorage.getItem('en_gram_streak') || '0');
+      const streakDate = localStorage.getItem('en_gram_streak_date') || '';
+      const today = new Date().toISOString().slice(0,10);
+      if (streak > 0 && (streakDate === today || streakDate === new Date(Date.now()-86400000).toISOString().slice(0,10))) {
+        streakHtml = '<div class="gram-streak-banner" style="background:linear-gradient(135deg,rgba(212,149,42,0.15),rgba(245,208,122,0.15));border:1.5px solid #d4a847;border-radius:10px;padding:0.5rem 1rem;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;font-weight:600;font-size:0.85rem;color:#5a4300">🔥 ' + streak + ' dias estudando gramática' + (streak >= 7 ? ' — Incrível!' : streak >= 3 ? ' — Mantenha assim!' : '') + '</div>';
+      }
+    } catch(e) {}
+
+    let html = '<div class="gram-seletor">' + streakHtml;
 
     for (const mod of this.dados.moduli) {
       const bloqueado = nivel < mod.nivel_minimo && !this._adminMods.has(mod.id);
@@ -72,7 +101,7 @@ const Grammatica = {
 
       // Module banner (clicável para colapsar/expandir)
       const adminDesbloqueado = this._adminMods.has(mod.id);
-      html += `<div class="gram-nivel-banner" data-nivel="${mod.id}" style="background:${mod.cor};cursor:pointer;user-select:none" onclick="Grammatica.toggleNivel('${mod.id}')">`;
+      html += `<button class="gram-nivel-banner" type="button" data-nivel="${mod.id}" aria-expanded="false" aria-controls="gram-grid-${mod.id}" style="background:${mod.cor};cursor:pointer;user-select:none;text-align:inherit;width:100%;border:none;font:inherit;padding:inherit" onclick="Grammatica.toggleNivel('${mod.id}')">`;
       html += `<div style="display:flex;align-items:center;justify-content:space-between">`;
       html += `<div class="gram-nivel-badge-txt">${mod.id}${adminDesbloqueado ? ' &nbsp;🔓 Admin' : ''}</div>`;
       html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;
@@ -80,7 +109,7 @@ const Grammatica = {
       html += `<div class="gram-nivel-nome">${mod.nome}</div>`;
       html += `<div class="gram-nivel-info">${completas}/${totalUnid} concluídas &middot; ${totalEx} exercícios</div>`;
       html += `<div class="gram-nivel-barra"><div style="width:${pct}%"></div></div>`;
-      html += '</div>';
+      html += '</button>';
 
       // Grid of lezione cards (id para colapso)
       html += `<div class="gram-lezioni-grid" id="gram-grid-${mod.id}">`;
@@ -357,8 +386,8 @@ const Grammatica = {
       html += this._htmlRivelar(ex);
     }
 
-    // Feedback (oculto)
-    html += '<div class="gram-ex-feedback" id="gram-feedback"></div>';
+    // Feedback (oculto) — com aria-live para screen readers
+    html += '<div class="gram-ex-feedback" id="gram-feedback" aria-live="polite" role="status" aria-atomic="true"></div>';
 
     // Ações (ocultas até responder)
     html += '<div class="gram-ex-actions" id="gram-actions" style="display:none">';
@@ -392,9 +421,11 @@ const Grammatica = {
       <div class="gram-digitar-area" id="gram-digitar-area">
         ${dica}
         <div class="gram-digitar-row">
+          <label for="gram-input-digitacao" class="sr-only">${I18n.t('gram_placeholder_resposta') || 'Sua resposta'}</label>
           <input class="gram-input-digitacao" id="gram-input-digitacao"
                  type="text" placeholder="${I18n.t('gram_placeholder_resposta')}"
                  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                 aria-describedby="gram-digitar-dica"
                  onkeydown="if(event.key==='Enter')Grammatica.responderDigitar()">
           <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">${I18n.t('gram_verificar')}</button>
         </div>
@@ -590,10 +621,18 @@ const Grammatica = {
     this.respondida = false;
     const area = document.getElementById('gram-ex-area');
     if (!area) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) {
+      area.innerHTML = this.exIndex >= this.unidadeAtual.exercicios.length
+        ? this._htmlResultado()
+        : this._htmlExercicio();
+      area.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+      return;
+    }
     // Animação de saída
-    area.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+    area.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
     area.style.opacity = '0';
-    area.style.transform = 'translateY(8px)';
+    area.style.transform = 'translateY(12px)';
     setTimeout(() => {
       area.innerHTML = this.exIndex >= this.unidadeAtual.exercicios.length
         ? this._htmlResultado()
@@ -602,7 +641,7 @@ const Grammatica = {
       area.style.opacity = '1';
       area.style.transform = 'translateY(0)';
       area.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 160);
+    }, 250);
   },
 
   // ─────────────────────────────────────────────────────────
@@ -627,6 +666,19 @@ const Grammatica = {
         App.ganharXP(bonus);
         App.notificar(I18n.t('notif_gram_capitolo').replace('{xp}', bonus), 'sucesso');
         bonusConcedido = true;
+        // Atualizar streak de gramática
+        try {
+          const today = new Date().toISOString().slice(0,10);
+          const lastDate = localStorage.getItem('en_gram_streak_date') || '';
+          const prev = new Date(lastDate);
+          const now = new Date(today);
+          const diffDays = Math.round((now - prev) / 86400000);
+          let streak = parseInt(localStorage.getItem('en_gram_streak') || '0');
+          if (diffDays === 1) { streak++; }
+          else if (diffDays > 1 || lastDate === '') { streak = 1; }
+          localStorage.setItem('en_gram_streak', String(streak));
+          localStorage.setItem('en_gram_streak_date', today);
+        } catch(e) {}
       } else {
         App.notificar('Complete com 70%+ para conquistar o bônus de XP!', 'aviso');
       }
@@ -822,7 +874,29 @@ const Grammatica = {
       return this._htmlCamadasLegado(u);
     }
 
-    let h = '<div class="gram-camadas">';
+    // Stepper visual das 7 fases
+    const fases = [
+      { id: 1, label: 'Ancoragem', emoji: '🎯' },
+      { id: 2, label: 'Observação', emoji: '👁️' },
+      { id: 3, label: 'Tabela', emoji: '📋' },
+      { id: 4, label: 'Exemplos P/R/C', emoji: '💬' },
+      { id: 5, label: 'Armadilhas', emoji: '⚠️' },
+      { id: 6, label: 'Ponte', emoji: '🌉' },
+      { id: 7, label: 'Coda', emoji: '🏁' }
+    ];
+    const faseAtiva = u._faseAtual || 1;
+    let stepper = '<div class="gram-nma-stepper" role="progressbar" aria-valuenow="' + faseAtiva + '" aria-valuemin="1" aria-valuemax="7" aria-label="Fase ' + faseAtiva + ' de 7 da teoria NMA">';
+    stepper += '<div class="gram-nma-stepper-track">';
+    fases.forEach(f => {
+      const cls = f.id < faseAtiva ? 'gram-step-done' : f.id === faseAtiva ? 'gram-step-active' : 'gram-step-pending';
+      stepper += '<div class="gram-step ' + cls + '" title="' + f.emoji + ' ' + f.label + '">';
+      stepper += '<span class="gram-step-dot">' + (f.id < faseAtiva ? '✓' : f.id) + '</span>';
+      stepper += '<span class="gram-step-label">' + f.label + '</span>';
+      stepper += '</div>';
+    });
+    stepper += '</div></div>';
+
+    let h = '<div class="gram-camadas">' + stepper;
     h += this._htmlFase1Ancoragem(u);
     h += this._htmlFase2Observacao(u);
     h += this._htmlFase3Tabela(u);
@@ -876,7 +950,7 @@ const Grammatica = {
     for (let i = 0; i < u.observacao_cards.length; i++) {
       const c = u.observacao_cards[i];
       cards += `
-        <div class="gram-flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="gram-flip-card" role="button" tabindex="0" aria-label="Card: ${c.ingles || ''} — clique para ver explicação" onclick="this.classList.toggle('flipped')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('flipped')}">
           <div class="gram-flip-card-inner">
             <div class="gram-flip-card-front">
               <div class="gfc-en">${c.ingles || ''}</div>
@@ -918,7 +992,7 @@ const Grammatica = {
       const safe = (e.oracao || '').replace(/'/g, "\\'");
       rows += `
         <div class="gram-prc-expandivel" id="gram-prc-card-${i}">
-          <div class="gram-prc-topo" onclick="this.parentElement.classList.toggle('aberto')">
+          <div class="gram-prc-topo" role="button" tabindex="0" aria-expanded="false" aria-controls="gram-prc-conteudo" onclick="this.parentElement.classList.toggle('aberto')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.parentElement.classList.toggle('aberto')}">
             <span class="gram-prc-it">🔊 <em>${e.oracao || ''}</em></span>
             <span class="gram-prc-btn-expandir">${I18n.t('gram_fase4_ver_detalhes')}</span>
           </div>
