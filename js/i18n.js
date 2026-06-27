@@ -649,7 +649,7 @@ const I18n = {
     'storie_listen_all':       { pt: '🔊 Ouvir tudo', en: '🔊 Listen to all' },
     'storie_fine':             { pt: 'Fim', en: 'Fine' },
     'storie_already_saved':    { pt: '✅ Já salvo', en: '✅ Already saved' },
-    'storie_save_review':      { pt: '⭐ Salvar para revisão', en: '⭐ Save for review' },
+    'storie_save_review':      { pt: '⭐ Salvar nos Flashcards', en: '⭐ Save to Flashcards' },
     'storie_remove':           { pt: '🗑️ Remover', en: '🗑️ Remove' },
     'storie_all_btn':          { pt: '‹ Todas as histórias', en: '‹ All stories' },
     'storie_riletta':          { pt: '✓ Relida', en: '✓ Re-read' },
