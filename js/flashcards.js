@@ -194,6 +194,21 @@ const Flashcards = {
     this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
     this._metricasIniciarSessao();
+    // Registrar dia de estudo para streak
+    try {
+      const today = new Date().toISOString().slice(0,10);
+      const lastDate = localStorage.getItem('en_fc_streak_date') || '';
+      if (lastDate !== today) {
+        const prev = new Date(lastDate);
+        const now = new Date(today);
+        const diffDays = Math.round((now - prev) / 86400000);
+        let streak = parseInt(localStorage.getItem('en_fc_streak') || '0');
+        if (diffDays === 1) { streak++; }
+        else if (diffDays > 1) { streak = 1; }
+        localStorage.setItem('en_fc_streak', String(streak));
+        localStorage.setItem('en_fc_streak_date', today);
+      }
+    } catch(e) {}
     this.carregarCartas();
     this.indiceAtual = 0;
     this.virada      = false;
@@ -699,6 +714,10 @@ const Flashcards = {
 
     const novCount = s.novas.length;
 
+
+    resumo.setAttribute('aria-live', 'polite');
+    resumo.setAttribute('role', 'status');
+    resumo.setAttribute('aria-atomic', 'true');
     resumo.innerHTML = `
       <div class="resumo-card">
         <div class="resumo-emoji">${emoji}</div>
@@ -733,6 +752,24 @@ const Flashcards = {
     `;
     resumo.style.display = 'block';
     this._metricasConcluirSessao();
+    // Atualizar streak diário de flashcards
+    try {
+      const today = new Date().toISOString().slice(0,10);
+      const lastDate = localStorage.getItem('en_fc_streak_date') || '';
+      const prev = new Date(lastDate);
+      const now = new Date(today);
+      const diffDays = Math.round((now - prev) / 86400000);
+      let streak = parseInt(localStorage.getItem('en_fc_streak') || '0');
+      if (diffDays === 1) { streak++; }
+      else if (diffDays > 1 || lastDate === '') { streak = 1; }
+      localStorage.setItem('en_fc_streak', String(streak));
+      localStorage.setItem('en_fc_streak_date', today);
+      // Bônus XP por streak
+      if (streak >= 3 && streak % 5 === 0) {
+        if (typeof Progressao !== 'undefined') Progressao.ganhar(25);
+        App.notificar('🔥 Streak de ' + streak + ' dias! +25 XP bônus', 'sucesso');
+      }
+    } catch(e) {}
   },
 
   // ── Toggle favorite for current card ─────────────────────
@@ -1174,7 +1211,7 @@ const Flashcards = {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return null;
     const r = new SR();
-    r.lang = 'en-US';
+    r.lang = 'it-IT';
     r.continuous = false;
     r.interimResults = false;
     return r;
@@ -1231,6 +1268,36 @@ const Flashcards = {
     setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);
   }
 };
+
+// ── Keyboard Shortcuts ──
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('flashcard')) return;
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  const isVirado = document.getElementById('flashcard')?.classList.contains('virado');
+  switch(e.key) {
+    case '1': case 'ArrowLeft':
+      if (isVirado) { e.preventDefault(); Flashcards.avaliar(1); }
+      break;
+    case '2': case 'ArrowUp':
+      if (isVirado) { e.preventDefault(); Flashcards.avaliar(2); }
+      break;
+    case '3': case 'ArrowDown':
+      if (isVirado) { e.preventDefault(); Flashcards.avaliar(3); }
+      break;
+    case '4': case 'ArrowRight':
+      if (isVirado) { e.preventDefault(); Flashcards.avaliar(4); }
+      break;
+    case ' ': case 'Enter':
+      if (!isVirado && !document.querySelector('section.active')) { e.preventDefault(); Flashcards.virar(); }
+      break;
+    case 'h': case 'H':
+      e.preventDefault(); Flashcards.mostrarDica(); break;
+    case 'r': case 'R':
+      e.preventDefault(); Flashcards.pronunciar(); break;
+    case 'f': case 'F':
+      e.preventDefault(); Flashcards.toggleFavorito(); break;
+  }
+});
 
 document.addEventListener('i18n:changed', () => {
   if (!document.getElementById('flashcard')) return;
