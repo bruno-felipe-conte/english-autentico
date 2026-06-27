@@ -7,25 +7,25 @@
     "alerta": "Quando não sabemos exatamente QUEM ou O QUÊ estamos mencionando, usamos os pronomes indefinidos.",
     "observacao_cards": [
       {
-        "italiano": "some- (someone, something, somewhere)",
+        "ingles": "some- (someone, something, somewhere)",
         "traducao": "alguém, algo, algum lugar",
         "genero": "Afirmativas",
         "motivo": "Usado em frases afirmativas ou ofertas."
       },
       {
-        "italiano": "any- (anyone, anything, anywhere)",
+        "ingles": "any- (anyone, anything, anywhere)",
         "traducao": "qualquer um, qualquer coisa, qualquer lugar",
         "genero": "Negativas/Interrogativas",
         "motivo": "Comum em perguntas e com verbos na negativa."
       },
       {
-        "italiano": "no- (no one, nothing, nowhere)",
+        "ingles": "no- (no one, nothing, nowhere)",
         "traducao": "ninguém, nada, lugar nenhum",
         "genero": "Afirmativas negativas",
         "motivo": "Usado quando o verbo já está na forma afirmativa."
       },
       {
-        "italiano": "every- (everyone, everything, everywhere)",
+        "ingles": "every- (everyone, everything, everywhere)",
         "traducao": "todo mundo, tudo, todos os lugares",
         "genero": "Totalidade",
         "motivo": "Refere-se a todos os itens, pessoas ou lugares."
@@ -119,19 +119,19 @@
     "alerta": "Certos verbos exigem que o próximo verbo venha com '-ing' (gerúndio), enquanto outros exigem o 'to' (infinitivo).",
     "observacao_cards": [
       {
-        "italiano": "enjoy / finish / mind + -ing",
+        "ingles": "enjoy / finish / mind + -ing",
         "traducao": "curtir / terminar / importar-se",
         "genero": "Verbos de Gerúndio",
         "motivo": "Esses verbos pedem o próximo verbo na forma -ing."
       },
       {
-        "italiano": "want / hope / decide + to",
+        "ingles": "want / hope / decide + to",
         "traducao": "querer / esperar / decidir",
         "genero": "Verbos de Infinitivo",
         "motivo": "Esses verbos pedem 'to + verbo base'."
       },
       {
-        "italiano": "like / love / hate",
+        "ingles": "like / love / hate",
         "traducao": "gostar / amar / odiar",
         "genero": "Flexíveis",
         "motivo": "Podem ser seguidos por ambas as formas em muitas situações."
@@ -230,19 +230,19 @@
     "alerta": "Quando queremos falar sobre a intensidade de algo, usamos 'too' (em excesso) ou 'enough' (na medida certa).",
     "observacao_cards": [
       {
-        "italiano": "Too + Adjective",
+        "ingles": "Too + Adjective",
         "traducao": "Demais / Muito",
         "genero": "Excesso",
         "motivo": "Indica mais do que o necessário, geralmente com sentido negativo."
       },
       {
-        "italiano": "Adjective + Enough",
+        "ingles": "Adjective + Enough",
         "traducao": "Suficientemente (adjetivo)",
         "genero": "Suficiência",
         "motivo": "Na quantidade certa. Note que vem DEPOIS do adjetivo."
       },
       {
-        "italiano": "Enough + Noun",
+        "ingles": "Enough + Noun",
         "traducao": "Suficiente (com substantivos)",
         "genero": "Suficiência",
         "motivo": "Vem ANTES de substantivos."
@@ -336,19 +336,19 @@
     "alerta": "Ao invés de repetir uma frase inteira para concordar com alguém, podemos ser mais diretos!",
     "observacao_cards": [
       {
-        "italiano": "So + Auxiliar + Sujeito",
+        "ingles": "So + Auxiliar + Sujeito",
         "traducao": "Eu também / fulano também",
         "genero": "Concordância Afirmativa",
         "motivo": "Para concordar com frases afirmativas."
       },
       {
-        "italiano": "Neither + Auxiliar + Sujeito",
+        "ingles": "Neither + Auxiliar + Sujeito",
         "traducao": "Nem eu / nem fulano",
         "genero": "Concordância Negativa",
         "motivo": "Para concordar com frases negativas."
       },
       {
-        "italiano": "Auxiliar (am/do/can/did)",
+        "ingles": "Auxiliar (am/do/can/did)",
         "traducao": "Auxiliar de tempo verbal",
         "genero": "Gramática",
         "motivo": "Deve combinar com o tempo verbal da frase original."
@@ -442,13 +442,13 @@
     "alerta": "Quando falamos de possibilidades reais no futuro, combinamos o 'If' (se) com o verbo 'Will'.",
     "observacao_cards": [
       {
-        "italiano": "If + Simple Present",
+        "ingles": "If + Simple Present",
         "traducao": "Se + Presente Simples",
         "genero": "A Condição",
         "motivo": "Descreve a situação que precisa acontecer."
       },
       {
-        "italiano": "Will + Verbo",
+        "ingles": "Will + Verbo",
         "traducao": "Acontecerá",
         "genero": "O Resultado",
         "motivo": "O que acontecerá no futuro se a condição for cumprida."

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t30_001",
-      "italiano": "law",
+      "ingles": "law",
       "portugues": "lei / direito",
       "genero": null,
       "plural": "laws",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t30_002",
-      "italiano": "court",
+      "ingles": "court",
       "portugues": "tribunal / corte",
       "genero": null,
       "plural": "courts",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t30_003",
-      "italiano": "judge",
+      "ingles": "judge",
       "portugues": "juiz / juíza",
       "genero": null,
       "plural": "judges",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t30_004",
-      "italiano": "jury",
+      "ingles": "jury",
       "portugues": "júri",
       "genero": null,
       "plural": "juries",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t30_005",
-      "italiano": "lawyer",
+      "ingles": "lawyer",
       "portugues": "advogado / advogada",
       "genero": null,
       "plural": "lawyers",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t30_006",
-      "italiano": "defendant",
+      "ingles": "defendant",
       "portugues": "réu / acusado",
       "genero": null,
       "plural": "defendants",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t30_007",
-      "italiano": "plaintiff",
+      "ingles": "plaintiff",
       "portugues": "autor / demandante",
       "genero": null,
       "plural": "plaintiffs",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t30_008",
-      "italiano": "evidence",
+      "ingles": "evidence",
       "portugues": "evidência / prova",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t30_009",
-      "italiano": "verdict",
+      "ingles": "verdict",
       "portugues": "veredicto",
       "genero": null,
       "plural": "verdicts",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t30_010",
-      "italiano": "sentence",
+      "ingles": "sentence",
       "portugues": "sentença / pena",
       "genero": null,
       "plural": "sentences",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t30_011",
-      "italiano": "rights",
+      "ingles": "rights",
       "portugues": "direitos",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t30_012",
-      "italiano": "amendment",
+      "ingles": "amendment",
       "portugues": "emenda",
       "genero": null,
       "plural": "amendments",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t30_013",
-      "italiano": "constitution",
+      "ingles": "constitution",
       "portugues": "constituição",
       "genero": null,
       "plural": "constitutions",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t30_014",
-      "italiano": "contract",
+      "ingles": "contract",
       "portugues": "contrato",
       "genero": null,
       "plural": "contracts",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t30_015",
-      "italiano": "liability",
+      "ingles": "liability",
       "portugues": "responsabilidade legal / responsabilização",
       "genero": null,
       "plural": "liabilities",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t30_016",
-      "italiano": "sue",
+      "ingles": "sue",
       "portugues": "processar / entrar com ação",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t30_017",
-      "italiano": "settle",
+      "ingles": "settle",
       "portugues": "chegar a um acordo",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t30_018",
-      "italiano": "appeal",
+      "ingles": "appeal",
       "portugues": "recurso / apelar",
       "genero": null,
       "plural": "appeals",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t30_019",
-      "italiano": "witness",
+      "ingles": "witness",
       "portugues": "testemunha",
       "genero": null,
       "plural": "witnesses",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t30_020",
-      "italiano": "bail",
+      "ingles": "bail",
       "portugues": "fiança",
       "genero": null,
       "plural": null,

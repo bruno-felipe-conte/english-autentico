@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t23_001",
-      "italiano": "friendship",
+      "ingles": "friendship",
       "portugues": "amizade",
       "genero": null,
       "plural": "friendships",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t23_002",
-      "italiano": "trust",
+      "ingles": "trust",
       "portugues": "confiança",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t23_003",
-      "italiano": "loyalty",
+      "ingles": "loyalty",
       "portugues": "lealdade / fidelidade",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t23_004",
-      "italiano": "support",
+      "ingles": "support",
       "portugues": "apoio / suporte",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t23_005",
-      "italiano": "conflict",
+      "ingles": "conflict",
       "portugues": "conflito / desentendimento",
       "genero": null,
       "plural": "conflicts",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t23_006",
-      "italiano": "forgive",
+      "ingles": "forgive",
       "portugues": "perdoar",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t23_007",
-      "italiano": "apologize",
+      "ingles": "apologize",
       "portugues": "pedir desculpas / se desculpar",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t23_008",
-      "italiano": "compromise",
+      "ingles": "compromise",
       "portugues": "acordo mútuo / concessão / ceder",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t23_009",
-      "italiano": "relationship",
+      "ingles": "relationship",
       "portugues": "relacionamento",
       "genero": null,
       "plural": "relationships",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t23_010",
-      "italiano": "partner",
+      "ingles": "partner",
       "portugues": "parceiro / companheiro",
       "genero": null,
       "plural": "partners",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t23_011",
-      "italiano": "date",
+      "ingles": "date",
       "portugues": "sair em um encontro / encontro romântico",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t23_012",
-      "italiano": "wedding",
+      "ingles": "wedding",
       "portugues": "casamento / cerimônia de casamento",
       "genero": null,
       "plural": "weddings",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t23_013",
-      "italiano": "divorce",
+      "ingles": "divorce",
       "portugues": "divórcio",
       "genero": null,
       "plural": "divorces",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t23_014",
-      "italiano": "colleague",
+      "ingles": "colleague",
       "portugues": "colega / colega de trabalho",
       "genero": null,
       "plural": "colleagues",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t23_015",
-      "italiano": "acquaintance",
+      "ingles": "acquaintance",
       "portugues": "conhecido / pessoa conhecida",
       "genero": null,
       "plural": "acquaintances",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t23_016",
-      "italiano": "neighbor",
+      "ingles": "neighbor",
       "portugues": "vizinho",
       "genero": null,
       "plural": "neighbors",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t23_017",
-      "italiano": "community",
+      "ingles": "community",
       "portugues": "comunidade",
       "genero": null,
       "plural": "communities",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t23_018",
-      "italiano": "volunteer",
+      "ingles": "volunteer",
       "portugues": "ser voluntário / voluntário",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t23_019",
-      "italiano": "belong",
+      "ingles": "belong",
       "portugues": "pertencer / fazer parte",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t23_020",
-      "italiano": "include",
+      "ingles": "include",
       "portugues": "incluir / fazer parte",
       "genero": null,
       "plural": null,

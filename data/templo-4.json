@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t4_001",
-      "italiano": "breakfast",
+      "ingles": "breakfast",
       "portugues": "café da manhã",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t4_002",
-      "italiano": "lunch",
+      "ingles": "lunch",
       "portugues": "almoço",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t4_003",
-      "italiano": "dinner",
+      "ingles": "dinner",
       "portugues": "jantar",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t4_004",
-      "italiano": "coffee",
+      "ingles": "coffee",
       "portugues": "café",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t4_005",
-      "italiano": "water",
+      "ingles": "water",
       "portugues": "água",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t4_006",
-      "italiano": "juice",
+      "ingles": "juice",
       "portugues": "suco",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t4_007",
-      "italiano": "bread",
+      "ingles": "bread",
       "portugues": "pão",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t4_008",
-      "italiano": "chicken",
+      "ingles": "chicken",
       "portugues": "frango",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t4_009",
-      "italiano": "rice",
+      "ingles": "rice",
       "portugues": "arroz",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t4_010",
-      "italiano": "salad",
+      "ingles": "salad",
       "portugues": "salada",
       "genero": null,
       "plural": "salads",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t4_011",
-      "italiano": "menu",
+      "ingles": "menu",
       "portugues": "cardápio / menu",
       "genero": null,
       "plural": "menus",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t4_012",
-      "italiano": "waiter",
+      "ingles": "waiter",
       "portugues": "garçom",
       "genero": null,
       "plural": "waiters",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t4_013",
-      "italiano": "bill",
+      "ingles": "bill",
       "portugues": "conta",
       "genero": null,
       "plural": "bills",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t4_014",
-      "italiano": "order",
+      "ingles": "order",
       "portugues": "pedido / pedir",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t4_015",
-      "italiano": "table",
+      "ingles": "table",
       "portugues": "mesa",
       "genero": null,
       "plural": "tables",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t4_016",
-      "italiano": "hungry",
+      "ingles": "hungry",
       "portugues": "com fome",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t4_017",
-      "italiano": "thirsty",
+      "ingles": "thirsty",
       "portugues": "com sede",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t4_018",
-      "italiano": "delicious",
+      "ingles": "delicious",
       "portugues": "delicioso",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t4_019",
-      "italiano": "spicy",
+      "ingles": "spicy",
       "portugues": "picante / apimentado",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t4_020",
-      "italiano": "vegetarian",
+      "ingles": "vegetarian",
       "portugues": "vegetariano",
       "genero": null,
       "plural": "vegetarians",

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t21_001",
-      "italiano": "degree",
+      "ingles": "degree",
       "portugues": "diploma / grau acadêmico",
       "genero": null,
       "plural": "degrees",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t21_002",
-      "italiano": "major",
+      "ingles": "major",
       "portugues": "área de especialização / curso principal",
       "genero": null,
       "plural": "majors",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t21_003",
-      "italiano": "semester",
+      "ingles": "semester",
       "portugues": "semestre",
       "genero": null,
       "plural": "semesters",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t21_004",
-      "italiano": "lecture",
+      "ingles": "lecture",
       "portugues": "aula expositiva / palestra",
       "genero": null,
       "plural": "lectures",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t21_005",
-      "italiano": "assignment",
+      "ingles": "assignment",
       "portugues": "tarefa / trabalho escolar",
       "genero": null,
       "plural": "assignments",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t21_006",
-      "italiano": "research",
+      "ingles": "research",
       "portugues": "pesquisa",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t21_007",
-      "italiano": "thesis",
+      "ingles": "thesis",
       "portugues": "tese / dissertação",
       "genero": null,
       "plural": "theses",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t21_008",
-      "italiano": "scholarship",
+      "ingles": "scholarship",
       "portugues": "bolsa de estudos",
       "genero": null,
       "plural": "scholarships",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t21_009",
-      "italiano": "campus",
+      "ingles": "campus",
       "portugues": "campus universitário",
       "genero": null,
       "plural": "campuses",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t21_010",
-      "italiano": "dormitory",
+      "ingles": "dormitory",
       "portugues": "alojamento estudantil / república",
       "genero": null,
       "plural": "dormitories",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t21_011",
-      "italiano": "graduate",
+      "ingles": "graduate",
       "portugues": "se formar / pós-graduado",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t21_012",
-      "italiano": "undergraduate",
+      "ingles": "undergraduate",
       "portugues": "graduando / aluno de graduação",
       "genero": null,
       "plural": "undergraduates",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t21_013",
-      "italiano": "professor",
+      "ingles": "professor",
       "portugues": "professor universitário",
       "genero": null,
       "plural": "professors",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t21_014",
-      "italiano": "essay",
+      "ingles": "essay",
       "portugues": "redação / ensaio",
       "genero": null,
       "plural": "essays",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t21_015",
-      "italiano": "bibliography",
+      "ingles": "bibliography",
       "portugues": "bibliografia",
       "genero": null,
       "plural": "bibliographies",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t21_016",
-      "italiano": "peer review",
+      "ingles": "peer review",
       "portugues": "revisão por pares / avaliação por colegas",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t21_017",
-      "italiano": "abstract",
+      "ingles": "abstract",
       "portugues": "resumo / abstract",
       "genero": null,
       "plural": "abstracts",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t21_018",
-      "italiano": "citation",
+      "ingles": "citation",
       "portugues": "citação / referência",
       "genero": null,
       "plural": "citations",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t21_019",
-      "italiano": "exam",
+      "ingles": "exam",
       "portugues": "prova / exame",
       "genero": null,
       "plural": "exams",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t21_020",
-      "italiano": "tuition",
+      "ingles": "tuition",
       "portugues": "mensalidade / anuidade escolar",
       "genero": null,
       "plural": null,

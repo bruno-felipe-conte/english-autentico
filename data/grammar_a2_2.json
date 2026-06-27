@@ -7,13 +7,13 @@
     "alerta": "Usamos o Past Continuous para uma ação que estava em andamento no passado, e o Past Simple para uma ação pontual, geralmente que a interrompeu.",
     "observacao_cards": [
       {
-        "italiano": "I was studying",
+        "ingles": "I was studying",
         "traducao": "Eu estava estudando",
         "genero": "Ação longa",
         "motivo": "Past Continuous: sujeito + was/were + verbo com -ing"
       },
       {
-        "italiano": "when he arrived",
+        "ingles": "when he arrived",
         "traducao": "quando ele chegou",
         "genero": "Ação curta",
         "motivo": "Past Simple: verbo no passado simples"
@@ -91,13 +91,13 @@
     "alerta": "Utilizamos 'going to' para expressar algo que já planejamos fazer ou quando temos certeza de que vai acontecer baseados em evidências do presente.",
     "observacao_cards": [
       {
-        "italiano": "I am going to travel",
+        "ingles": "I am going to travel",
         "traducao": "Eu vou viajar",
         "genero": "Plano",
         "motivo": "Ação já decidida antes do momento da fala"
       },
       {
-        "italiano": "It is going to rain",
+        "ingles": "It is going to rain",
         "traducao": "Vai chover",
         "genero": "Evidência",
         "motivo": "Previsão baseada em sinais visíveis agora"
@@ -180,13 +180,13 @@
     "alerta": "Enquanto 'going to' lida com planos, 'will' é o futuro improvisado! Use para decisões na hora da fala, promessas ou previsões genéricas.",
     "observacao_cards": [
       {
-        "italiano": "I will help you",
+        "ingles": "I will help you",
         "traducao": "Eu vou te ajudar",
         "genero": "Decisão instantânea",
         "motivo": "Decidido no momento ou ofertando ajuda"
       },
       {
-        "italiano": "I think it will rain",
+        "ingles": "I think it will rain",
         "traducao": "Eu acho que vai chover",
         "genero": "Previsão",
         "motivo": "Opinião pessoal sem forte evidência"
@@ -269,13 +269,13 @@
     "alerta": "Para comparar duas coisas usamos a forma comparativa. O segredo é contar as sílabas do adjetivo: curtos ganham '-er' no final, e os longos recebem 'more' na frente.",
     "observacao_cards": [
       {
-        "italiano": "taller than",
+        "ingles": "taller than",
         "traducao": "mais alto que",
         "genero": "Adjetivo curto",
         "motivo": "tall + er"
       },
       {
-        "italiano": "more beautiful than",
+        "ingles": "more beautiful than",
         "traducao": "mais bonito(a) que",
         "genero": "Adjetivo longo",
         "motivo": "more + beautiful"
@@ -358,13 +358,13 @@
     "alerta": "Com o superlativo não comparamos dois, mas exaltamos um como o maior de todos! Adicionamos '-est' aos adjetivos curtos e 'the most' aos longos.",
     "observacao_cards": [
       {
-        "italiano": "the tallest",
+        "ingles": "the tallest",
         "traducao": "o mais alto",
         "genero": "Adjetivo curto",
         "motivo": "the + tall + est"
       },
       {
-        "italiano": "the most expensive",
+        "ingles": "the most expensive",
         "traducao": "o mais caro",
         "genero": "Adjetivo longo",
         "motivo": "the most + expensive"

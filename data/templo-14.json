@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t14_001",
-      "italiano": "school",
+      "ingles": "school",
       "portugues": "escola",
       "genero": null,
       "plural": "schools",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t14_002",
-      "italiano": "teacher",
+      "ingles": "teacher",
       "portugues": "professor / professora",
       "genero": null,
       "plural": "teachers",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t14_003",
-      "italiano": "student",
+      "ingles": "student",
       "portugues": "estudante / aluno",
       "genero": null,
       "plural": "students",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t14_004",
-      "italiano": "class",
+      "ingles": "class",
       "portugues": "aula / turma",
       "genero": null,
       "plural": "classes",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t14_005",
-      "italiano": "homework",
+      "ingles": "homework",
       "portugues": "dever de casa / lição de casa",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t14_006",
-      "italiano": "test",
+      "ingles": "test",
       "portugues": "prova / teste",
       "genero": null,
       "plural": "tests",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t14_007",
-      "italiano": "grade",
+      "ingles": "grade",
       "portugues": "nota / série",
       "genero": null,
       "plural": "grades",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t14_008",
-      "italiano": "library",
+      "ingles": "library",
       "portugues": "biblioteca",
       "genero": null,
       "plural": "libraries",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t14_009",
-      "italiano": "notebook",
+      "ingles": "notebook",
       "portugues": "caderno",
       "genero": null,
       "plural": "notebooks",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t14_010",
-      "italiano": "pencil",
+      "ingles": "pencil",
       "portugues": "lápis",
       "genero": null,
       "plural": "pencils",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t14_011",
-      "italiano": "learn",
+      "ingles": "learn",
       "portugues": "aprender",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t14_012",
-      "italiano": "study",
+      "ingles": "study",
       "portugues": "estudar",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t14_013",
-      "italiano": "read",
+      "ingles": "read",
       "portugues": "ler",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t14_014",
-      "italiano": "write",
+      "ingles": "write",
       "portugues": "escrever",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t14_015",
-      "italiano": "question",
+      "ingles": "question",
       "portugues": "pergunta / questão",
       "genero": null,
       "plural": "questions",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t14_016",
-      "italiano": "answer",
+      "ingles": "answer",
       "portugues": "resposta / responder",
       "genero": null,
       "plural": "answers",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t14_017",
-      "italiano": "correct",
+      "ingles": "correct",
       "portugues": "correto / certo",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t14_018",
-      "italiano": "wrong",
+      "ingles": "wrong",
       "portugues": "errado / incorreto",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t14_019",
-      "italiano": "subject",
+      "ingles": "subject",
       "portugues": "matéria / disciplina",
       "genero": null,
       "plural": "subjects",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t14_020",
-      "italiano": "university",
+      "ingles": "university",
       "portugues": "universidade",
       "genero": null,
       "plural": "universities",

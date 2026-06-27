@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t22_001",
-      "italiano": "anxious",
+      "ingles": "anxious",
       "portugues": "ansioso",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t22_002",
-      "italiano": "confident",
+      "ingles": "confident",
       "portugues": "confiante / seguro de si",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t22_003",
-      "italiano": "motivated",
+      "ingles": "motivated",
       "portugues": "motivado",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t22_004",
-      "italiano": "frustrated",
+      "ingles": "frustrated",
       "portugues": "frustrado",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t22_005",
-      "italiano": "overwhelmed",
+      "ingles": "overwhelmed",
       "portugues": "sobrecarregado / assolado",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t22_006",
-      "italiano": "grateful",
+      "ingles": "grateful",
       "portugues": "grato / agradecido",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t22_007",
-      "italiano": "proud",
+      "ingles": "proud",
       "portugues": "orgulhoso",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t22_008",
-      "italiano": "disappointed",
+      "ingles": "disappointed",
       "portugues": "desapontado / decepcionado",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t22_009",
-      "italiano": "enthusiastic",
+      "ingles": "enthusiastic",
       "portugues": "entusiasmado / empolgado",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t22_010",
-      "italiano": "stressed",
+      "ingles": "stressed",
       "portugues": "estressado",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t22_011",
-      "italiano": "mindset",
+      "ingles": "mindset",
       "portugues": "mentalidade / modo de pensar",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t22_012",
-      "italiano": "habit",
+      "ingles": "habit",
       "portugues": "hábito",
       "genero": null,
       "plural": "habits",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t22_013",
-      "italiano": "goal",
+      "ingles": "goal",
       "portugues": "objetivo / meta",
       "genero": null,
       "plural": "goals",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t22_014",
-      "italiano": "progress",
+      "ingles": "progress",
       "portugues": "progresso / avanço",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t22_015",
-      "italiano": "failure",
+      "ingles": "failure",
       "portugues": "fracasso / falha",
       "genero": null,
       "plural": "failures",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t22_016",
-      "italiano": "success",
+      "ingles": "success",
       "portugues": "sucesso",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t22_017",
-      "italiano": "resilience",
+      "ingles": "resilience",
       "portugues": "resiliência",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t22_018",
-      "italiano": "focus",
+      "ingles": "focus",
       "portugues": "foco / concentração",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t22_019",
-      "italiano": "discipline",
+      "ingles": "discipline",
       "portugues": "disciplina",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t22_020",
-      "italiano": "self-esteem",
+      "ingles": "self-esteem",
       "portugues": "autoestima",
       "genero": null,
       "plural": null,

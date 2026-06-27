@@ -7,13 +7,13 @@
     "alerta": "O verbo 'To Be' no passado é a base para falar sobre o que você foi ou onde esteve.",
     "observacao_cards": [
       {
-        "italiano": "was",
+        "ingles": "was",
         "traducao": "fui / era / estava",
         "genero": "Singular",
         "motivo": "Usado para I, He, She, It"
       },
       {
-        "italiano": "were",
+        "ingles": "were",
         "traducao": "fomos / éramos / estávamos",
         "genero": "Plural / You",
         "motivo": "Usado para You, We, They"
@@ -107,19 +107,19 @@
     "alerta": "Verbos regulares no passado recebem '-ed', mas preste atenção na pronúncia, que pode variar!",
     "observacao_cards": [
       {
-        "italiano": "play -> played",
+        "ingles": "play -> played",
         "traducao": "jogar -> jogou",
         "genero": "Regra Geral",
         "motivo": "Adiciona-se -ed ao final do verbo"
       },
       {
-        "italiano": "dance -> danced",
+        "ingles": "dance -> danced",
         "traducao": "dançar -> dançou",
         "genero": "Terminados em 'e'",
         "motivo": "Adiciona-se apenas -d"
       },
       {
-        "italiano": "study -> studied",
+        "ingles": "study -> studied",
         "traducao": "estudar -> estudou",
         "genero": "Consoante + 'y'",
         "motivo": "Troca o 'y' por 'ied'"
@@ -213,19 +213,19 @@
     "alerta": "Alguns dos verbos mais usados em inglês não seguem a regra do '-ed'. Eles têm formas próprias!",
     "observacao_cards": [
       {
-        "italiano": "go -> went",
+        "ingles": "go -> went",
         "traducao": "ir -> foi",
         "genero": "Irregular",
         "motivo": "Forma totalmente diferente"
       },
       {
-        "italiano": "have -> had",
+        "ingles": "have -> had",
         "traducao": "ter -> tinha / teve",
         "genero": "Irregular",
         "motivo": "Muda a terminação"
       },
       {
-        "italiano": "do -> did",
+        "ingles": "do -> did",
         "traducao": "fazer -> fez",
         "genero": "Irregular",
         "motivo": "Muda a vogal"
@@ -319,13 +319,13 @@
     "alerta": "Para perguntar ou negar algo no passado (exceto com verbo To Be), o 'did' é o seu maior aliado!",
     "observacao_cards": [
       {
-        "italiano": "did not / didn't",
+        "ingles": "did not / didn't",
         "traducao": "não (no passado)",
         "genero": "Auxiliar Negativo",
         "motivo": "Tira o verbo principal do passado"
       },
       {
-        "italiano": "Did you...?",
+        "ingles": "Did you...?",
         "traducao": "Você...? (no passado)",
         "genero": "Auxiliar Interrogativo",
         "motivo": "Inicia perguntas de sim/não no passado"
@@ -419,13 +419,13 @@
     "alerta": "O Past Continuous descreve uma ação que estava acontecendo quando, de repente, outra coisa ocorreu.",
     "observacao_cards": [
       {
-        "italiano": "was / were + -ing",
+        "ingles": "was / were + -ing",
         "traducao": "estava ... -ndo",
         "genero": "Estrutura",
         "motivo": "Forma o passado contínuo"
       },
       {
-        "italiano": "when",
+        "ingles": "when",
         "traducao": "quando",
         "genero": "Conexão",
         "motivo": "Geralmente introduz a ação curta que interrompeu a longa"

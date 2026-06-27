@@ -74,7 +74,7 @@ const Vocab = {
     if (this.filtroTexto) {
       const q = this.filtroTexto.toLowerCase().trim();
       filtrados = filtrados.filter(p =>
-        this._buscaFuzzy(p.italiano || '', q) ||
+        this._buscaFuzzy(p.ingles || '', q) ||
         this._buscaFuzzy(p.portugues || '', q) ||
         this._buscaFuzzy(p.categoria || '', q)
       );
@@ -99,7 +99,7 @@ const Vocab = {
       filtrados = [...filtrados].sort((a, b) => {
         switch (this._ordenarPor) {
           case 'alfabetica':
-            return (a.italiano || '').localeCompare(b.italiano || '', 'en');
+            return (a.ingles || '').localeCompare(b.ingles || '', 'en');
           case 'categoria':
             return (a.categoria || '').localeCompare(b.categoria || '');
           case 'nivel': {
@@ -251,7 +251,7 @@ const Vocab = {
       item.className = `vocab-item${modoExpandido ? ' vocab-item-expanded' : ''}`;
       item.setAttribute('tabindex', '0');
       item.setAttribute('role', 'listitem');
-      item.setAttribute('aria-label', `${p.italiano || ''} — ${p.portugues || ''}`);
+      item.setAttribute('aria-label', `${p.ingles || ''} — ${p.portugues || ''}`);
 
       // Determine FSRS status
       const sm = App.estado.flashcardData[p.id];
@@ -282,7 +282,7 @@ const Vocab = {
       const catCor = this._corParaCategoria(p.categoria);
 
       item.innerHTML = `
-        <span class="vocab-it">${this._escapar(p.italiano || '—')}</span>
+        <span class="vocab-it">${this._escapar(p.ingles || '—')}</span>
         <span class="vocab-seta">→</span>
         <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
         ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
@@ -292,15 +292,15 @@ const Vocab = {
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
         ${progressoHtml}
         ${exemploHtml}
-        ${modoExpandido ? this.renderizarWordFamilies(p.italiano || '') : ''}
-        ${modoExpandido ? `<div class="vocab-fonetica" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.15rem;font-style:italic">/${this._fonSimplificada(p.italiano || '')}/</div>` : ''}
+        ${modoExpandido ? this.renderizarWordFamilies(p.ingles || '') : ''}
+        ${modoExpandido ? `<div class="vocab-fonetica" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.15rem;font-style:italic">/${this._fonSimplificada(p.ingles || '')}/</div>` : ''}
         ${this._modoOutput && !this._vocabReviewAtivo ? `<div style="margin-top:0.4rem"><input type="text" placeholder="Digite a tradução..." style="padding:0.3rem 0.6rem;border:2px solid #ddd;border-radius:6px;font-size:0.85rem;width:160px;outline:none" autocomplete="off" autocapitalize="none" onkeydown="if(event.key==='Enter'){Vocab._verificarOutput(this,'${p.id}')}" data-word-id="${p.id}"></div>` : ''}
         ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}') " class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
       `;
 
       // Click: pronounce normally; in blur mode clicking blurred cell reveals it
       item.style.cursor = 'pointer';
-      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.italiano}"`;
+      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.ingles}"`;
       item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } };
       if (this.blurColuna) {
         item.onclick = (e) => {
@@ -310,7 +310,7 @@ const Vocab = {
           if (isBluCol || !target) item.classList.toggle('revelada');
         };
       } else {
-        item.onclick = () => App.pronunciar(p.italiano);
+        item.onclick = () => App.pronunciar(p.ingles);
       }
 
       listEl.appendChild(item);
@@ -479,7 +479,7 @@ const Vocab = {
     if (this.filtroTexto) {
       const q = this.filtroTexto.toLowerCase().trim();
       filtrados = filtrados.filter(p =>
-        (p.italiano || '').toLowerCase().includes(q) ||
+        (p.ingles || '').toLowerCase().includes(q) ||
         (p.portugues || '').toLowerCase().includes(q)
       );
     }
@@ -502,13 +502,13 @@ const Vocab = {
     let conteudo, mimeType, extensao;
     if (formato === 'txt') {
       conteudo = filtrados.map((p, i) =>
-        `${i + 1}. ${p.italiano} → ${p.portugues}${p.categoria ? ' [' + p.categoria + ']' : ''}${p.exemplo ? ' — ' + p.exemplo : ''}`
+        `${i + 1}. ${p.ingles} → ${p.portugues}${p.categoria ? ' [' + p.categoria + ']' : ''}${p.exemplo ? ' — ' + p.exemplo : ''}`
       ).join('\n');
       mimeType = 'text/plain;charset=utf-8';
       extensao = 'txt';
     } else {
       conteudo = JSON.stringify(filtrados.map(p => ({
-        italiano: p.italiano,
+        italiano: p.ingles,
         portugues: p.portugues,
         categoria: p.categoria || '',
         templo: p.templo_num,
@@ -665,7 +665,7 @@ const Vocab = {
     if (this.filtroTexto) {
       const q = this.filtroTexto.toLowerCase().trim();
       filtrados = filtrados.filter(p =>
-        this._buscaFuzzy(p.italiano || '', q) ||
+        this._buscaFuzzy(p.ingles || '', q) ||
         this._buscaFuzzy(p.portugues || '', q)
       );
     }
@@ -786,7 +786,7 @@ const Vocab = {
       <div style="text-align:center;padding:1.5rem">
         <div style="display:inline-block;padding:1.5rem 2.5rem;border-radius:12px;background:var(--cor-card);border-left:4px solid ${catCor};box-shadow:0 2px 8px rgba(0,0,0,0.08);max-width:350px">
           <div style="font-size:0.7rem;color:var(--cor-pietra);margin-bottom:0.5rem">${card.categoria || ''} ${nivel ? '• ' + nivel : ''}</div>
-          <div style="font-size:1.5rem;font-weight:700;margin-bottom:0.8rem">${this._escapar(card.italiano || '')}</div>
+          <div style="font-size:1.5rem;font-weight:700;margin-bottom:0.8rem">${this._escapar(card.ingles || '')}</div>
           <div class="vocab-review-resposta" style="min-height:2.5rem"></div>
           <div class="vocab-review-input" style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem">
             <input type="text" id="vocab-review-answer" placeholder="Digite a tradução..."

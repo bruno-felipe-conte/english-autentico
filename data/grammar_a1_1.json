@@ -7,43 +7,43 @@
     "alerta": "O verbo 'To Be' é o coração do inglês! Ele significa 'ser' ou 'estar' e muda dependendo de quem está falando.",
     "observacao_cards": [
       {
-        "italiano": "I am",
+        "ingles": "I am",
         "traducao": "Eu sou / estou",
         "genero": "1ª Pessoa Singular",
         "motivo": "I+AM são inseparáveis — como 'Eu' nunca muda, I+am nunca mudam entre si"
       },
       {
-        "italiano": "You are",
+        "ingles": "You are",
         "traducao": "Você é / está",
         "genero": "2ª Pessoa",
         "motivo": "YOU é democrático — trata um e muitos igual, sempre ARE"
       },
       {
-        "italiano": "He is",
+        "ingles": "He is",
         "traducao": "Ele é / está",
         "genero": "3ª Pessoa Singular (Ele)",
         "motivo": "Toda 3ª pessoa singular carrega IS como sobrenome: He IS"
       },
       {
-        "italiano": "She is",
+        "ingles": "She is",
         "traducao": "Ela é / está",
         "genero": "3ª Pessoa Singular (Ela)",
         "motivo": "Toda 3ª pessoa singular carrega IS como sobrenome: She IS"
       },
       {
-        "italiano": "It is",
+        "ingles": "It is",
         "traducao": "Ele/Ela é / está (coisas/animais)",
         "genero": "3ª Pessoa Neutra",
         "motivo": "Toda 3ª pessoa singular carrega IS como sobrenome: It IS"
       },
       {
-        "italiano": "We are",
+        "ingles": "We are",
         "traducao": "Nós somos / estamos",
         "genero": "1ª Pessoa Plural",
         "motivo": "Plural é democrático: somos nós (We) ou eles (They), sempre usamos ARE"
       },
       {
-        "italiano": "They are",
+        "ingles": "They are",
         "traducao": "Eles/Elas são / estão",
         "genero": "3ª Pessoa Plural",
         "motivo": "Plural é democrático: somos nós (We) ou eles (They), sempre usamos ARE"
@@ -148,25 +148,25 @@
     "alerta": "Fazer perguntas e negar com o verbo 'To Be' é simples: basta adicionar o 'not' ou inverter a ordem das palavras!",
     "observacao_cards": [
       {
-        "italiano": "I am not",
+        "ingles": "I am not",
         "traducao": "Eu não sou / estou",
         "genero": "Negativa",
         "motivo": "O 'NOT' é o penetra da festa: sempre chega logo após o verbo To Be para estragar a afirmação."
       },
       {
-        "italiano": "He is not (isn't)",
+        "ingles": "He is not (isn't)",
         "traducao": "Ele não é / está",
         "genero": "Negativa",
         "motivo": "Na pressa do dia a dia, 'is + not' encolhem e viram 'isn't' — junte tudo e coma a letra 'O'!"
       },
       {
-        "italiano": "Are you?",
+        "ingles": "Are you?",
         "traducao": "Você é / está?",
         "genero": "Interrogativa",
         "motivo": "Interrogação é ginástica: o verbo To Be dá um salto mortal e cai antes do sujeito!"
       },
       {
-        "italiano": "Is she?",
+        "ingles": "Is she?",
         "traducao": "Ela é / está?",
         "genero": "Interrogativa",
         "motivo": "Interrogação é ginástica: o verbo To Be dá um salto mortal e cai antes do sujeito!"
@@ -271,25 +271,25 @@
     "alerta": "Use os pronomes demonstrativos para apontar coisas. A escolha depende da distância (perto/longe) e da quantidade (singular/plural).",
     "observacao_cards": [
       {
-        "italiano": "This",
+        "ingles": "This",
         "traducao": "Este, esta, isto",
         "genero": "Singular (Perto)",
         "motivo": "THIS é para o toque — se você consegue encostar no objeto singular, use THIS."
       },
       {
-        "italiano": "That",
+        "ingles": "That",
         "traducao": "Aquele, aquela, aquilo, esse, essa",
         "genero": "Singular (Longe)",
         "motivo": "THAT é para o apontar — aponte com o dedo para aquela coisa singular longe de você."
       },
       {
-        "italiano": "These",
+        "ingles": "These",
         "traducao": "Estes, estas",
         "genero": "Plural (Perto)",
         "motivo": "THESE é o plural do toque — use para vários objetos que estão ao alcance da sua mão."
       },
       {
-        "italiano": "Those",
+        "ingles": "Those",
         "traducao": "Aqueles, aquelas",
         "genero": "Plural (Longe)",
         "motivo": "THOSE é o plural do apontar — aponte para aquele grupo de coisas distantes lá longe."
@@ -393,19 +393,19 @@
     "alerta": "Em inglês, 'A' e 'An' significam 'um/uma'. A regra não depende da letra, mas sim do SOM (consoante ou vogal). 'The' é o artigo definido 'o/a/os/as'.",
     "observacao_cards": [
       {
-        "italiano": "A",
+        "ingles": "A",
         "traducao": "Um, uma",
         "genero": "Artigo Indefinido",
         "motivo": "Use A antes de sons de consoante para evitar que as vogais batam de frente e causem um acidente fonético."
       },
       {
-        "italiano": "An",
+        "ingles": "An",
         "traducao": "Um, uma",
         "genero": "Artigo Indefinido",
         "motivo": "O 'N' em AN serve como um para-choques para separar duas vogais e manter o ritmo suave da fala."
       },
       {
-        "italiano": "The",
+        "ingles": "The",
         "traducao": "O, a, os, as",
         "genero": "Artigo Definido",
         "motivo": "THE é o holofote — use quando você e o ouvinte estão olhando exatamente para a mesma coisa específica."
@@ -510,37 +510,37 @@
     "alerta": "O plural em inglês é frequentemente fácil: basta colocar um '-s'. Mas cuidado com os irregulares teimosos que mudam a palavra toda!",
     "observacao_cards": [
       {
-        "italiano": "-s (Regular)",
+        "ingles": "-s (Regular)",
         "traducao": "-s",
         "genero": "Regra Geral",
         "motivo": "A regra geral é simples e preguiçosa: basta jogar um -S no final e pronto, virou plural."
       },
       {
-        "italiano": "Men",
+        "ingles": "Men",
         "traducao": "Homens",
         "genero": "Irregular",
         "motivo": "Plurais rebeldes: em vez de ganhar -S, mudam a vogal interna de A para E (man -> men)."
       },
       {
-        "italiano": "Women",
+        "ingles": "Women",
         "traducao": "Mulheres",
         "genero": "Irregular",
         "motivo": "Plurais rebeldes: em vez de ganhar -S, mudam a vogal interna de A para E (woman -> women)."
       },
       {
-        "italiano": "Children",
+        "ingles": "Children",
         "traducao": "Crianças",
         "genero": "Irregular",
         "motivo": "CHILDREN é um plural teimoso que ganha um sufixo antigo (-ren). Nunca, jamais adicione -S aqui!"
       },
       {
-        "italiano": "Teeth",
+        "ingles": "Teeth",
         "traducao": "Dentes",
         "genero": "Irregular",
         "motivo": "O plural dos dois 'O's: palavras com 'oo' costumam trocar os olhos por dois 'e's no plural (tooth -> teeth)."
       },
       {
-        "italiano": "Feet",
+        "ingles": "Feet",
         "traducao": "Pés",
         "genero": "Irregular",
         "motivo": "O plural dos dois 'O's: palavras com 'oo' costumam trocar os olhos por dois 'e's no plural (foot -> feet)."

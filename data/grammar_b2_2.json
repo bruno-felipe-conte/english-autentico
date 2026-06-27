@@ -7,25 +7,25 @@
     "alerta": "Como fazer deduções sobre algo que já aconteceu? Aprenda a usar os modais no passado para expressar certeza, possibilidade ou arrependimento.",
     "observacao_cards": [
       {
-        "italiano": "must have + past participle",
+        "ingles": "must have + past participle",
         "traducao": "deve ter + particípio",
         "genero": "Certeza",
         "motivo": "Quando você tem quase certeza de algo no passado."
       },
       {
-        "italiano": "might have + past participle",
+        "ingles": "might have + past participle",
         "traducao": "pode/poderia ter + particípio",
         "genero": "Possibilidade",
         "motivo": "Quando algo era possível, mas não há certeza."
       },
       {
-        "italiano": "should have + past participle",
+        "ingles": "should have + past participle",
         "traducao": "deveria ter + particípio",
         "genero": "Arrependimento / Crítica",
         "motivo": "Para algo que seria ideal ter acontecido, mas não aconteceu."
       },
       {
-        "italiano": "can't have + past participle",
+        "ingles": "can't have + past participle",
         "traducao": "não pode ter + particípio",
         "genero": "Certeza Negativa",
         "motivo": "Quando é quase impossível que algo tenha acontecido."
@@ -124,19 +124,19 @@
     "alerta": "Sabe aquela vontade de mudar o presente ou aquele arrependimento do passado? Use 'wish' e 'if only' para expressar o que você queria que fosse diferente.",
     "observacao_cards": [
       {
-        "italiano": "wish + past simple",
+        "ingles": "wish + past simple",
         "traducao": "desejar que + passado (fosse/tivesse)",
         "genero": "Desejo presente",
         "motivo": "Desejo de que uma situação no presente fosse diferente do que é."
       },
       {
-        "italiano": "wish + past perfect",
+        "ingles": "wish + past perfect",
         "traducao": "desejar que + tivesse sido",
         "genero": "Arrependimento passado",
         "motivo": "Desejo de mudar algo que já passou (mas é tarde demais)."
       },
       {
-        "italiano": "wish + would",
+        "ingles": "wish + would",
         "traducao": "desejar que + fizesse (futuro/irritação)",
         "genero": "Irritação",
         "motivo": "Para expressar irritação e vontade de que alguém mude de atitude."
@@ -235,7 +235,7 @@
     "alerta": "Como descrever algo que estará acontecendo num momento exato do futuro? O Future Continuous é perfeito para imaginar a cena!",
     "observacao_cards": [
       {
-        "italiano": "will be + verb-ing",
+        "ingles": "will be + verb-ing",
         "traducao": "estarei fazendo",
         "genero": "Ação em andamento",
         "motivo": "Focar em uma ação que ainda não estará terminada em um certo ponto do futuro."
@@ -334,13 +334,13 @@
     "alerta": "E quando você quiser dizer que, até ano que vem, você JÁ TERÁ terminado o curso? Para isso, usamos o Future Perfect.",
     "observacao_cards": [
       {
-        "italiano": "will have + past participle",
+        "ingles": "will have + past participle",
         "traducao": "terei feito",
         "genero": "Conclusão no Futuro",
         "motivo": "Indica que a ação vai terminar antes de um determinado ponto no futuro."
       },
       {
-        "italiano": "by",
+        "ingles": "by",
         "traducao": "até (um momento)",
         "genero": "Preposição Típica",
         "motivo": "Geralmente usado com o Future Perfect para estipular o prazo limite (ex: by next year)."
@@ -433,13 +433,13 @@
     "alerta": "Você cortou o próprio cabelo ou ALGUÉM cortou para você? Em inglês, há uma estrutura específica para quando pagamos ou pedimos para alguém fazer um serviço por nós.",
     "observacao_cards": [
       {
-        "italiano": "have + object + past participle",
+        "ingles": "have + object + past participle",
         "traducao": "mandar / pedir para fazer",
         "genero": "Delegação de Serviço",
         "motivo": "Quando um profissional ou terceiros fazem o trabalho por você."
       },
       {
-        "italiano": "get + object + past participle",
+        "ingles": "get + object + past participle",
         "traducao": "mandar fazer (informal)",
         "genero": "Delegação Informal",
         "motivo": "Mesmo sentido de 'have something done', mas com um tom um pouco mais informal e cotidiano."

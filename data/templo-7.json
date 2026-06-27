@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t7_001",
-      "italiano": "furthermore",
+      "ingles": "furthermore",
       "portugues": "além disso / ademais",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t7_002",
-      "italiano": "in contrast",
+      "ingles": "in contrast",
       "portugues": "em contraste / por outro lado",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t7_003",
-      "italiano": "it can be argued",
+      "ingles": "it can be argued",
       "portugues": "pode-se argumentar",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t7_004",
-      "italiano": "to a certain extent",
+      "ingles": "to a certain extent",
       "portugues": "até certo ponto",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t7_005",
-      "italiano": "on the other hand",
+      "ingles": "on the other hand",
       "portugues": "por outro lado",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t7_006",
-      "italiano": "I beg to differ",
+      "ingles": "I beg to differ",
       "portugues": "permita-me discordar",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t7_007",
-      "italiano": "conceding that",
+      "ingles": "conceding that",
       "portugues": "admitindo que / reconhecendo que",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t7_008",
-      "italiano": "with all due respect",
+      "ingles": "with all due respect",
       "portugues": "com todo o respeito",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t7_009",
-      "italiano": "it stands to reason",
+      "ingles": "it stands to reason",
       "portugues": "é razoável concluir / faz sentido",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t7_010",
-      "italiano": "to elaborate",
+      "ingles": "to elaborate",
       "portugues": "detalhar / explicar com mais detalhes",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t7_011",
-      "italiano": "rhetoric",
+      "ingles": "rhetoric",
       "portugues": "retórica",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t7_012",
-      "italiano": "eloquence",
+      "ingles": "eloquence",
       "portugues": "eloquência",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t7_013",
-      "italiano": "persuasion",
+      "ingles": "persuasion",
       "portugues": "persuasão",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t7_014",
-      "italiano": "assertion",
+      "ingles": "assertion",
       "portugues": "afirmação / assertiva",
       "genero": null,
       "plural": "assertions",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t7_015",
-      "italiano": "counterargument",
+      "ingles": "counterargument",
       "portugues": "contra-argumento",
       "genero": null,
       "plural": "counterarguments",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t7_016",
-      "italiano": "nuance",
+      "ingles": "nuance",
       "portugues": "nuance / sutileza",
       "genero": null,
       "plural": "nuances",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t7_017",
-      "italiano": "implication",
+      "ingles": "implication",
       "portugues": "implicação / consequência",
       "genero": null,
       "plural": "implications",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t7_018",
-      "italiano": "analogy",
+      "ingles": "analogy",
       "portugues": "analogia",
       "genero": null,
       "plural": "analogies",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t7_019",
-      "italiano": "inference",
+      "ingles": "inference",
       "portugues": "inferência / dedução",
       "genero": null,
       "plural": "inferences",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t7_020",
-      "italiano": "rebut",
+      "ingles": "rebut",
       "portugues": "refutar / rebater",
       "genero": null,
       "plural": null,

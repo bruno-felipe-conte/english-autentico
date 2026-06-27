@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t17_001",
-      "italiano": "job",
+      "ingles": "job",
       "portugues": "emprego / trabalho",
       "genero": null,
       "plural": "jobs",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t17_002",
-      "italiano": "work",
+      "ingles": "work",
       "portugues": "trabalho / trabalhar",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t17_003",
-      "italiano": "office",
+      "ingles": "office",
       "portugues": "escritório",
       "genero": null,
       "plural": "offices",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t17_004",
-      "italiano": "boss",
+      "ingles": "boss",
       "portugues": "chefe / patrão",
       "genero": null,
       "plural": "bosses",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t17_005",
-      "italiano": "employee",
+      "ingles": "employee",
       "portugues": "funcionário / empregado",
       "genero": null,
       "plural": "employees",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t17_006",
-      "italiano": "meeting",
+      "ingles": "meeting",
       "portugues": "reunião",
       "genero": null,
       "plural": "meetings",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t17_007",
-      "italiano": "email",
+      "ingles": "email",
       "portugues": "e-mail",
       "genero": null,
       "plural": "emails",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t17_008",
-      "italiano": "phone",
+      "ingles": "phone",
       "portugues": "telefone",
       "genero": null,
       "plural": "phones",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t17_009",
-      "italiano": "salary",
+      "ingles": "salary",
       "portugues": "salário",
       "genero": null,
       "plural": "salaries",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t17_010",
-      "italiano": "doctor",
+      "ingles": "doctor",
       "portugues": "médico / doutor",
       "genero": null,
       "plural": "doctors",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t17_011",
-      "italiano": "teacher",
+      "ingles": "teacher",
       "portugues": "professor",
       "genero": null,
       "plural": "teachers",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t17_012",
-      "italiano": "engineer",
+      "ingles": "engineer",
       "portugues": "engenheiro",
       "genero": null,
       "plural": "engineers",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t17_013",
-      "italiano": "lawyer",
+      "ingles": "lawyer",
       "portugues": "advogado",
       "genero": null,
       "plural": "lawyers",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t17_014",
-      "italiano": "nurse",
+      "ingles": "nurse",
       "portugues": "enfermeiro / enfermeira",
       "genero": null,
       "plural": "nurses",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t17_015",
-      "italiano": "chef",
+      "ingles": "chef",
       "portugues": "chef de cozinha / cozinheiro",
       "genero": null,
       "plural": "chefs",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t17_016",
-      "italiano": "driver",
+      "ingles": "driver",
       "portugues": "motorista",
       "genero": null,
       "plural": "drivers",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t17_017",
-      "italiano": "artist",
+      "ingles": "artist",
       "portugues": "artista",
       "genero": null,
       "plural": "artists",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t17_018",
-      "italiano": "manager",
+      "ingles": "manager",
       "portugues": "gerente / gestor",
       "genero": null,
       "plural": "managers",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t17_019",
-      "italiano": "firefighter",
+      "ingles": "firefighter",
       "portugues": "bombeiro",
       "genero": null,
       "plural": "firefighters",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t17_020",
-      "italiano": "accountant",
+      "ingles": "accountant",
       "portugues": "contador",
       "genero": null,
       "plural": "accountants",

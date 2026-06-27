@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t31_001",
-      "italiano": "democracy",
+      "ingles": "democracy",
       "portugues": "democracia",
       "genero": null,
       "plural": "democracies",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t31_002",
-      "italiano": "election",
+      "ingles": "election",
       "portugues": "eleição",
       "genero": null,
       "plural": "elections",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t31_003",
-      "italiano": "vote",
+      "ingles": "vote",
       "portugues": "votar / voto",
       "genero": null,
       "plural": "votes",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t31_004",
-      "italiano": "candidate",
+      "ingles": "candidate",
       "portugues": "candidato / candidata",
       "genero": null,
       "plural": "candidates",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t31_005",
-      "italiano": "congress",
+      "ingles": "congress",
       "portugues": "congresso",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t31_006",
-      "italiano": "senate",
+      "ingles": "senate",
       "portugues": "senado",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t31_007",
-      "italiano": "president",
+      "ingles": "president",
       "portugues": "presidente",
       "genero": null,
       "plural": "presidents",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t31_008",
-      "italiano": "policy",
+      "ingles": "policy",
       "portugues": "política pública / diretriz",
       "genero": null,
       "plural": "policies",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t31_009",
-      "italiano": "campaign",
+      "ingles": "campaign",
       "portugues": "campanha",
       "genero": null,
       "plural": "campaigns",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t31_010",
-      "italiano": "debate",
+      "ingles": "debate",
       "portugues": "debate",
       "genero": null,
       "plural": "debates",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t31_011",
-      "italiano": "freedom of speech",
+      "ingles": "freedom of speech",
       "portugues": "liberdade de expressão",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t31_012",
-      "italiano": "civil rights",
+      "ingles": "civil rights",
       "portugues": "direitos civis",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t31_013",
-      "italiano": "inequality",
+      "ingles": "inequality",
       "portugues": "desigualdade",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t31_014",
-      "italiano": "protest",
+      "ingles": "protest",
       "portugues": "protesto / manifestação",
       "genero": null,
       "plural": "protests",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t31_015",
-      "italiano": "legislation",
+      "ingles": "legislation",
       "portugues": "legislação",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t31_016",
-      "italiano": "tax reform",
+      "ingles": "tax reform",
       "portugues": "reforma tributária",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t31_017",
-      "italiano": "immigration",
+      "ingles": "immigration",
       "portugues": "imigração",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t31_018",
-      "italiano": "public policy",
+      "ingles": "public policy",
       "portugues": "política pública",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t31_019",
-      "italiano": "bipartisan",
+      "ingles": "bipartisan",
       "portugues": "bipartidário / de consenso entre partidos",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t31_020",
-      "italiano": "grassroots",
+      "ingles": "grassroots",
       "portugues": "movimento de base / popular",
       "genero": null,
       "plural": null,

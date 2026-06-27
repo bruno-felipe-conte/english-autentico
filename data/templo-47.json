@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t47_001",
-      "italiano": "conflict",
+      "ingles": "conflict",
       "portugues": "conflito",
       "genero": null,
       "plural": "conflicts",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t47_002",
-      "italiano": "mediation",
+      "ingles": "mediation",
       "portugues": "mediação",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t47_003",
-      "italiano": "compromise",
+      "ingles": "compromise",
       "portugues": "compromisso / acordo mútuo",
       "genero": null,
       "plural": "compromises",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t47_004",
-      "italiano": "empathy",
+      "ingles": "empathy",
       "portugues": "empatia",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t47_005",
-      "italiano": "active listening",
+      "ingles": "active listening",
       "portugues": "escuta ativa",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t47_006",
-      "italiano": "de-escalate",
+      "ingles": "de-escalate",
       "portugues": "desescalar / reduzir a tensão",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t47_007",
-      "italiano": "assert",
+      "ingles": "assert",
       "portugues": "afirmar / se posicionar",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t47_008",
-      "italiano": "boundaries",
+      "ingles": "boundaries",
       "portugues": "limites / fronteiras (pessoais ou profissionais)",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t47_009",
-      "italiano": "grievance",
+      "ingles": "grievance",
       "portugues": "queixa / reclamação formal",
       "genero": null,
       "plural": "grievances",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t47_010",
-      "italiano": "resolution",
+      "ingles": "resolution",
       "portugues": "resolução",
       "genero": null,
       "plural": "resolutions",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t47_011",
-      "italiano": "win-win",
+      "ingles": "win-win",
       "portugues": "ganha-ganha",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t47_012",
-      "italiano": "trade-off",
+      "ingles": "trade-off",
       "portugues": "troca / concessão recíproca",
       "genero": null,
       "plural": "trade-offs",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t47_013",
-      "italiano": "leverage",
+      "ingles": "leverage",
       "portugues": "alavancagem / poder de barganha",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t47_014",
-      "italiano": "BATNA",
+      "ingles": "BATNA",
       "portugues": "BATNA (melhor alternativa a um acordo negociado)",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t47_015",
-      "italiano": "anchor",
+      "ingles": "anchor",
       "portugues": "âncora / ponto de referência inicial",
       "genero": null,
       "plural": "anchors",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t47_016",
-      "italiano": "concession",
+      "ingles": "concession",
       "portugues": "concessão",
       "genero": null,
       "plural": "concessions",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t47_017",
-      "italiano": "arbitration",
+      "ingles": "arbitration",
       "portugues": "arbitragem",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t47_018",
-      "italiano": "escalate",
+      "ingles": "escalate",
       "portugues": "escalar / intensificar",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t47_019",
-      "italiano": "perspective-taking",
+      "ingles": "perspective-taking",
       "portugues": "tomada de perspectiva / ver pelo ponto de vista do outro",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t47_020",
-      "italiano": "common ground",
+      "ingles": "common ground",
       "portugues": "ponto em comum / terreno comum",
       "genero": null,
       "plural": null,

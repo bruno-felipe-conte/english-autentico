@@ -7,43 +7,43 @@
     "alerta": "Os adjetivos possessivos sempre vêm ANTES de um substantivo para mostrar a quem algo pertence.",
     "observacao_cards": [
       {
-        "italiano": "My",
+        "ingles": "My",
         "traducao": "Meu(s), Minha(s)",
         "genero": "Possessive",
         "motivo": "Refere-se a 'I' (Eu)"
       },
       {
-        "italiano": "Your",
+        "ingles": "Your",
         "traducao": "Seu(s), Sua(s)",
         "genero": "Possessive",
         "motivo": "Refere-se a 'You' (Você/Vocês)"
       },
       {
-        "italiano": "His",
+        "ingles": "His",
         "traducao": "Dele",
         "genero": "Possessive",
         "motivo": "Refere-se a 'He' (Ele)"
       },
       {
-        "italiano": "Her",
+        "ingles": "Her",
         "traducao": "Dela",
         "genero": "Possessive",
         "motivo": "Refere-se a 'She' (Ela)"
       },
       {
-        "italiano": "Its",
+        "ingles": "Its",
         "traducao": "Dele/Dela (coisas/animais)",
         "genero": "Possessive",
         "motivo": "Refere-se a 'It' (Ele/Ela neutro)"
       },
       {
-        "italiano": "Our",
+        "ingles": "Our",
         "traducao": "Nosso(s), Nossa(s)",
         "genero": "Possessive",
         "motivo": "Refere-se a 'We' (Nós)"
       },
       {
-        "italiano": "Their",
+        "ingles": "Their",
         "traducao": "Deles, Delas",
         "genero": "Possessive",
         "motivo": "Refere-se a 'They' (Eles/Elas)"
@@ -142,19 +142,19 @@
     "alerta": "Pronomes possessivos substituem o substantivo, e o caso genitivo ('s) mostra posse de forma direta conectando o dono e a coisa possuída.",
     "observacao_cards": [
       {
-        "italiano": "Mine",
+        "ingles": "Mine",
         "traducao": "Meu(s), Minha(s)",
         "genero": "Pronoun",
         "motivo": "Substitui 'my + substantivo'"
       },
       {
-        "italiano": "Yours",
+        "ingles": "Yours",
         "traducao": "Seu(s), Sua(s)",
         "genero": "Pronoun",
         "motivo": "Substitui 'your + substantivo'"
       },
       {
-        "italiano": "'s",
+        "ingles": "'s",
         "traducao": "De (Posse)",
         "genero": "Genitive Case",
         "motivo": "Adicionado ao possuidor (ex: Maria's book)"
@@ -251,19 +251,19 @@
     "alerta": "Em inglês, as palavras de pergunta (Wh- words) vêm sempre no início da frase para buscar informações específicas.",
     "observacao_cards": [
       {
-        "italiano": "What",
+        "ingles": "What",
         "traducao": "O que / Qual",
         "genero": "Question Word",
         "motivo": "Para perguntar sobre coisas ou ações"
       },
       {
-        "italiano": "Who",
+        "ingles": "Who",
         "traducao": "Quem",
         "genero": "Question Word",
         "motivo": "Para perguntar sobre pessoas"
       },
       {
-        "italiano": "Where",
+        "ingles": "Where",
         "traducao": "Onde",
         "genero": "Question Word",
         "motivo": "Para perguntar sobre lugares"
@@ -362,13 +362,13 @@
     "alerta": "O Present Simple é usado para rotinas, hábitos e fatos permanentes. Para I, You, We e They, o verbo permanece igual ao infinitivo (sem o 'to').",
     "observacao_cards": [
       {
-        "italiano": "Work",
+        "ingles": "Work",
         "traducao": "Trabalhar",
         "genero": "Verb",
         "motivo": "Mantém-se igual para I, You, We, They"
       },
       {
-        "italiano": "Like",
+        "ingles": "Like",
         "traducao": "Gostar",
         "genero": "Verb",
         "motivo": "I like, You like, We like, They like"
@@ -467,19 +467,19 @@
     "alerta": "Quando falamos sobre Ele (He), Ela (She) ou um animal/coisa (It) no presente, o verbo principal sofre uma pequena mudança no final!",
     "observacao_cards": [
       {
-        "italiano": "-s",
+        "ingles": "-s",
         "traducao": "Regra geral",
         "genero": "Spelling Rule",
         "motivo": "Adicionar 's' na maioria dos verbos (work -> works)"
       },
       {
-        "italiano": "-es",
+        "ingles": "-es",
         "traducao": "ch, sh, s, x, z, o",
         "genero": "Spelling Rule",
         "motivo": "Adicionar 'es' (watch -> watches, go -> goes)"
       },
       {
-        "italiano": "-ies",
+        "ingles": "-ies",
         "traducao": "Consoante + y",
         "genero": "Spelling Rule",
         "motivo": "Tirar o 'y' e colocar 'ies' (study -> studies)"

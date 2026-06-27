@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t27_001",
-      "italiano": "genre",
+      "ingles": "genre",
       "portugues": "gênero (musical)",
       "genero": null,
       "plural": "genres",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t27_002",
-      "italiano": "rhythm",
+      "ingles": "rhythm",
       "portugues": "ritmo",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t27_003",
-      "italiano": "melody",
+      "ingles": "melody",
       "portugues": "melodia",
       "genero": null,
       "plural": "melodies",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t27_004",
-      "italiano": "lyrics",
+      "ingles": "lyrics",
       "portugues": "letra (de música)",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t27_005",
-      "italiano": "chord",
+      "ingles": "chord",
       "portugues": "acorde",
       "genero": null,
       "plural": "chords",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t27_006",
-      "italiano": "perform",
+      "ingles": "perform",
       "portugues": "se apresentar / performar",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t27_007",
-      "italiano": "rehearse",
+      "ingles": "rehearse",
       "portugues": "ensaiar",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t27_008",
-      "italiano": "compose",
+      "ingles": "compose",
       "portugues": "compor",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t27_009",
-      "italiano": "record",
+      "ingles": "record",
       "portugues": "gravar",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t27_010",
-      "italiano": "release",
+      "ingles": "release",
       "portugues": "lançar / lançamento",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t27_011",
-      "italiano": "jazz",
+      "ingles": "jazz",
       "portugues": "jazz",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t27_012",
-      "italiano": "blues",
+      "ingles": "blues",
       "portugues": "blues",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t27_013",
-      "italiano": "hip-hop",
+      "ingles": "hip-hop",
       "portugues": "hip-hop",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t27_014",
-      "italiano": "country",
+      "ingles": "country",
       "portugues": "música country",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t27_015",
-      "italiano": "rock",
+      "ingles": "rock",
       "portugues": "rock",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t27_016",
-      "italiano": "album",
+      "ingles": "album",
       "portugues": "álbum",
       "genero": null,
       "plural": "albums",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t27_017",
-      "italiano": "concert",
+      "ingles": "concert",
       "portugues": "show / concerto",
       "genero": null,
       "plural": "concerts",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t27_018",
-      "italiano": "band",
+      "ingles": "band",
       "portugues": "banda",
       "genero": null,
       "plural": "bands",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t27_019",
-      "italiano": "solo",
+      "ingles": "solo",
       "portugues": "solo",
       "genero": null,
       "plural": "solos",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t27_020",
-      "italiano": "venue",
+      "ingles": "venue",
       "portugues": "local (de evento)",
       "genero": null,
       "plural": "venues",

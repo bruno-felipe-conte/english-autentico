@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t10_001",
-      "italiano": "Monday",
+      "ingles": "Monday",
       "portugues": "segunda-feira",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t10_002",
-      "italiano": "Tuesday",
+      "ingles": "Tuesday",
       "portugues": "terça-feira",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t10_003",
-      "italiano": "Wednesday",
+      "ingles": "Wednesday",
       "portugues": "quarta-feira",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t10_004",
-      "italiano": "Thursday",
+      "ingles": "Thursday",
       "portugues": "quinta-feira",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t10_005",
-      "italiano": "Friday",
+      "ingles": "Friday",
       "portugues": "sexta-feira",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t10_006",
-      "italiano": "Saturday",
+      "ingles": "Saturday",
       "portugues": "sábado",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t10_007",
-      "italiano": "Sunday",
+      "ingles": "Sunday",
       "portugues": "domingo",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t10_008",
-      "italiano": "January",
+      "ingles": "January",
       "portugues": "janeiro",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t10_009",
-      "italiano": "February",
+      "ingles": "February",
       "portugues": "fevereiro",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t10_010",
-      "italiano": "March",
+      "ingles": "March",
       "portugues": "março",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t10_011",
-      "italiano": "April",
+      "ingles": "April",
       "portugues": "abril",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t10_012",
-      "italiano": "May",
+      "ingles": "May",
       "portugues": "maio",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t10_013",
-      "italiano": "June",
+      "ingles": "June",
       "portugues": "junho",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t10_014",
-      "italiano": "July",
+      "ingles": "July",
       "portugues": "julho",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t10_015",
-      "italiano": "August",
+      "ingles": "August",
       "portugues": "agosto",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t10_016",
-      "italiano": "September",
+      "ingles": "September",
       "portugues": "setembro",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t10_017",
-      "italiano": "October",
+      "ingles": "October",
       "portugues": "outubro",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t10_018",
-      "italiano": "November",
+      "ingles": "November",
       "portugues": "novembro",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t10_019",
-      "italiano": "December",
+      "ingles": "December",
       "portugues": "dezembro",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t10_020",
-      "italiano": "birthday",
+      "ingles": "birthday",
       "portugues": "aniversário",
       "genero": null,
       "plural": "birthdays",

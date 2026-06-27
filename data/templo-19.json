@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t19_001",
-      "italiano": "phone",
+      "ingles": "phone",
       "portugues": "telefone",
       "genero": null,
       "plural": "phones",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t19_002",
-      "italiano": "smartphone",
+      "ingles": "smartphone",
       "portugues": "smartphone / celular inteligente",
       "genero": null,
       "plural": "smartphones",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t19_003",
-      "italiano": "computer",
+      "ingles": "computer",
       "portugues": "computador",
       "genero": null,
       "plural": "computers",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t19_004",
-      "italiano": "laptop",
+      "ingles": "laptop",
       "portugues": "laptop / notebook",
       "genero": null,
       "plural": "laptops",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t19_005",
-      "italiano": "screen",
+      "ingles": "screen",
       "portugues": "tela",
       "genero": null,
       "plural": "screens",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t19_006",
-      "italiano": "internet",
+      "ingles": "internet",
       "portugues": "internet",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t19_007",
-      "italiano": "app",
+      "ingles": "app",
       "portugues": "aplicativo / app",
       "genero": null,
       "plural": "apps",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t19_008",
-      "italiano": "password",
+      "ingles": "password",
       "portugues": "senha",
       "genero": null,
       "plural": "passwords",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t19_009",
-      "italiano": "email",
+      "ingles": "email",
       "portugues": "e-mail",
       "genero": null,
       "plural": "emails",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t19_010",
-      "italiano": "message",
+      "ingles": "message",
       "portugues": "mensagem",
       "genero": null,
       "plural": "messages",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t19_011",
-      "italiano": "social media",
+      "ingles": "social media",
       "portugues": "redes sociais / mídia social",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t19_012",
-      "italiano": "website",
+      "ingles": "website",
       "portugues": "site / página da web",
       "genero": null,
       "plural": "websites",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t19_013",
-      "italiano": "video",
+      "ingles": "video",
       "portugues": "vídeo",
       "genero": null,
       "plural": "videos",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t19_014",
-      "italiano": "download",
+      "ingles": "download",
       "portugues": "baixar / download",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t19_015",
-      "italiano": "upload",
+      "ingles": "upload",
       "portugues": "enviar / fazer upload",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t19_016",
-      "italiano": "click",
+      "ingles": "click",
       "portugues": "clicar",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t19_017",
-      "italiano": "search",
+      "ingles": "search",
       "portugues": "pesquisar / buscar",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t19_018",
-      "italiano": "battery",
+      "ingles": "battery",
       "portugues": "bateria",
       "genero": null,
       "plural": "batteries",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t19_019",
-      "italiano": "charge",
+      "ingles": "charge",
       "portugues": "carregar (bateria)",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t19_020",
-      "italiano": "camera",
+      "ingles": "camera",
       "portugues": "câmera",
       "genero": null,
       "plural": "cameras",

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t6_001",
-      "italiano": "although",
+      "ingles": "although",
       "portugues": "embora / apesar de que",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t6_002",
-      "italiano": "however",
+      "ingles": "however",
       "portugues": "no entanto / porém",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t6_003",
-      "italiano": "therefore",
+      "ingles": "therefore",
       "portugues": "portanto / por isso",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t6_004",
-      "italiano": "moreover",
+      "ingles": "moreover",
       "portugues": "além disso / ademais",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t6_005",
-      "italiano": "nevertheless",
+      "ingles": "nevertheless",
       "portugues": "mesmo assim / contudo",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t6_006",
-      "italiano": "whereas",
+      "ingles": "whereas",
       "portugues": "enquanto / ao passo que",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t6_007",
-      "italiano": "despite",
+      "ingles": "despite",
       "portugues": "apesar de",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t6_008",
-      "italiano": "unless",
+      "ingles": "unless",
       "portugues": "a menos que / se não",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t6_009",
-      "italiano": "in order to",
+      "ingles": "in order to",
       "portugues": "a fim de / para",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t6_010",
-      "italiano": "provided that",
+      "ingles": "provided that",
       "portugues": "desde que / contanto que",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t6_011",
-      "italiano": "passive voice",
+      "ingles": "passive voice",
       "portugues": "voz passiva",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t6_012",
-      "italiano": "present perfect",
+      "ingles": "present perfect",
       "portugues": "presente perfeito",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t6_013",
-      "italiano": "conditional",
+      "ingles": "conditional",
       "portugues": "condicional",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t6_014",
-      "italiano": "relative clause",
+      "ingles": "relative clause",
       "portugues": "oração relativa",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t6_015",
-      "italiano": "gerund",
+      "ingles": "gerund",
       "portugues": "gerúndio",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t6_016",
-      "italiano": "infinitive",
+      "ingles": "infinitive",
       "portugues": "infinitivo",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t6_017",
-      "italiano": "modal verb",
+      "ingles": "modal verb",
       "portugues": "verbo modal",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t6_018",
-      "italiano": "subject",
+      "ingles": "subject",
       "portugues": "sujeito",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t6_019",
-      "italiano": "clause",
+      "ingles": "clause",
       "portugues": "oração / cláusula",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t6_020",
-      "italiano": "conjunction",
+      "ingles": "conjunction",
       "portugues": "conjunção",
       "genero": null,
       "plural": null,

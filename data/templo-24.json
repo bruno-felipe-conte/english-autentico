@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t24_001",
-      "italiano": "algorithm",
+      "ingles": "algorithm",
       "portugues": "algoritmo",
       "genero": null,
       "plural": "algorithms",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t24_002",
-      "italiano": "software",
+      "ingles": "software",
       "portugues": "software",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t24_003",
-      "italiano": "hardware",
+      "ingles": "hardware",
       "portugues": "hardware",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t24_004",
-      "italiano": "data",
+      "ingles": "data",
       "portugues": "dados",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t24_005",
-      "italiano": "cloud",
+      "ingles": "cloud",
       "portugues": "nuvem (computação em nuvem)",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t24_006",
-      "italiano": "cybersecurity",
+      "ingles": "cybersecurity",
       "portugues": "segurança cibernética",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t24_007",
-      "italiano": "encryption",
+      "ingles": "encryption",
       "portugues": "criptografia",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t24_008",
-      "italiano": "platform",
+      "ingles": "platform",
       "portugues": "plataforma",
       "genero": null,
       "plural": "platforms",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t24_009",
-      "italiano": "interface",
+      "ingles": "interface",
       "portugues": "interface",
       "genero": null,
       "plural": "interfaces",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t24_010",
-      "italiano": "update",
+      "ingles": "update",
       "portugues": "atualização",
       "genero": null,
       "plural": "updates",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t24_011",
-      "italiano": "artificial intelligence",
+      "ingles": "artificial intelligence",
       "portugues": "inteligência artificial",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t24_012",
-      "italiano": "machine learning",
+      "ingles": "machine learning",
       "portugues": "aprendizado de máquina",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t24_013",
-      "italiano": "startup",
+      "ingles": "startup",
       "portugues": "startup",
       "genero": null,
       "plural": "startups",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t24_014",
-      "italiano": "developer",
+      "ingles": "developer",
       "portugues": "desenvolvedor",
       "genero": null,
       "plural": "developers",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t24_015",
-      "italiano": "code",
+      "ingles": "code",
       "portugues": "código",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t24_016",
-      "italiano": "bug",
+      "ingles": "bug",
       "portugues": "erro de software",
       "genero": null,
       "plural": "bugs",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t24_017",
-      "italiano": "server",
+      "ingles": "server",
       "portugues": "servidor",
       "genero": null,
       "plural": "servers",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t24_018",
-      "italiano": "bandwidth",
+      "ingles": "bandwidth",
       "portugues": "largura de banda",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t24_019",
-      "italiano": "virtual",
+      "ingles": "virtual",
       "portugues": "virtual",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t24_020",
-      "italiano": "streaming",
+      "ingles": "streaming",
       "portugues": "streaming",
       "genero": null,
       "plural": null,

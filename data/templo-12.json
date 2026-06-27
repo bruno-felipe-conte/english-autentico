@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t12_001",
-      "italiano": "weather",
+      "ingles": "weather",
       "portugues": "tempo (clima)",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t12_002",
-      "italiano": "sunny",
+      "ingles": "sunny",
       "portugues": "ensolarado",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t12_003",
-      "italiano": "cloudy",
+      "ingles": "cloudy",
       "portugues": "nublado",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t12_004",
-      "italiano": "rainy",
+      "ingles": "rainy",
       "portugues": "chuvoso",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t12_005",
-      "italiano": "windy",
+      "ingles": "windy",
       "portugues": "ventoso / com vento",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t12_006",
-      "italiano": "hot",
+      "ingles": "hot",
       "portugues": "quente",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t12_007",
-      "italiano": "cold",
+      "ingles": "cold",
       "portugues": "frio",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t12_008",
-      "italiano": "warm",
+      "ingles": "warm",
       "portugues": "morno / agradavelmente quente",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t12_009",
-      "italiano": "cool",
+      "ingles": "cool",
       "portugues": "fresco",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t12_010",
-      "italiano": "snow",
+      "ingles": "snow",
       "portugues": "neve",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t12_011",
-      "italiano": "storm",
+      "ingles": "storm",
       "portugues": "tempestade",
       "genero": null,
       "plural": "storms",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t12_012",
-      "italiano": "forecast",
+      "ingles": "forecast",
       "portugues": "previsão do tempo",
       "genero": null,
       "plural": "forecasts",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t12_013",
-      "italiano": "temperature",
+      "ingles": "temperature",
       "portugues": "temperatura",
       "genero": null,
       "plural": "temperatures",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t12_014",
-      "italiano": "season",
+      "ingles": "season",
       "portugues": "estação (do ano)",
       "genero": null,
       "plural": "seasons",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t12_015",
-      "italiano": "spring",
+      "ingles": "spring",
       "portugues": "primavera",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t12_016",
-      "italiano": "summer",
+      "ingles": "summer",
       "portugues": "verão",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t12_017",
-      "italiano": "fall",
+      "ingles": "fall",
       "portugues": "outono",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t12_018",
-      "italiano": "winter",
+      "ingles": "winter",
       "portugues": "inverno",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t12_019",
-      "italiano": "umbrella",
+      "ingles": "umbrella",
       "portugues": "guarda-chuva",
       "genero": null,
       "plural": "umbrellas",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t12_020",
-      "italiano": "coat",
+      "ingles": "coat",
       "portugues": "casaco",
       "genero": null,
       "plural": "coats",

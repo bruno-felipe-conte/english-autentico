@@ -7,13 +7,13 @@
     "alerta": "Usamos o Third Conditional para imaginar um passado diferente do que realmente aconteceu, geralmente expressando arrependimentos ou consequências de ações não realizadas.",
     "observacao_cards": [
       {
-        "italiano": "If I had studied",
+        "ingles": "If I had studied",
         "traducao": "Se eu tivesse estudado",
         "genero": "If Clause",
         "motivo": "Past Perfect para a condição irreal no passado"
       },
       {
-        "italiano": "I would have passed",
+        "ingles": "I would have passed",
         "traducao": "Eu teria passado",
         "genero": "Main Clause",
         "motivo": "Would have + Past Participle para o resultado hipotético"
@@ -101,13 +101,13 @@
     "alerta": "Mixed Conditionals misturam tempos verbais para mostrar como uma condição irreal no passado afeta o presente, ou como um estado irreal no presente afetou o passado.",
     "observacao_cards": [
       {
-        "italiano": "If I had worked harder",
+        "ingles": "If I had worked harder",
         "traducao": "Se eu tivesse trabalhado mais",
         "genero": "Past Condition",
         "motivo": "Past Perfect (ação no passado)"
       },
       {
-        "italiano": "I would be rich now",
+        "ingles": "I would be rich now",
         "traducao": "Eu seria rico agora",
         "genero": "Present Result",
         "motivo": "Would + verbo base (consequência no presente)"
@@ -195,19 +195,19 @@
     "alerta": "Em níveis avançados, usamos a voz passiva com tempos contínuos, tempos perfeitos e verbos modais para dar foco à ação ou a quem a recebe de forma mais sofisticada.",
     "observacao_cards": [
       {
-        "italiano": "The house is being built",
+        "ingles": "The house is being built",
         "traducao": "A casa está sendo construída",
         "genero": "Present Continuous",
         "motivo": "To be (is) + being + Past Participle"
       },
       {
-        "italiano": "The letter has been sent",
+        "ingles": "The letter has been sent",
         "traducao": "A carta foi enviada",
         "genero": "Present Perfect",
         "motivo": "Has/have + been + Past Participle"
       },
       {
-        "italiano": "It can be done",
+        "ingles": "It can be done",
         "traducao": "Isso pode ser feito",
         "genero": "Modals",
         "motivo": "Modal + be + Past Participle"
@@ -295,19 +295,19 @@
     "alerta": "Reportar perguntas e ordens exige mais do que apenas mudar o tempo verbal; precisamos reestruturar as frases e usar verbos introdutórios adequados.",
     "observacao_cards": [
       {
-        "italiano": "She asked if I was ready",
+        "ingles": "She asked if I was ready",
         "traducao": "Ela perguntou se eu estava pronto",
         "genero": "Yes/No Question",
         "motivo": "Usamos 'if' ou 'whether' em vez de verbo auxiliar"
       },
       {
-        "italiano": "He asked what I wanted",
+        "ingles": "He asked what I wanted",
         "traducao": "Ele perguntou o que eu queria",
         "genero": "Wh- Question",
         "motivo": "Ordem direta (sujeito + verbo), sem auxiliar 'do/did'"
       },
       {
-        "italiano": "She told me to stop",
+        "ingles": "She told me to stop",
         "traducao": "Ela me mandou parar",
         "genero": "Command/Order",
         "motivo": "Verbo + objeto + to + infinitivo"
@@ -395,13 +395,13 @@
     "alerta": "As Non-defining Relative Clauses adicionam informações extras a uma frase. Se as removermos, a frase principal continua a fazer sentido. Sempre usamos vírgulas!",
     "observacao_cards": [
       {
-        "italiano": "My brother, who lives in Paris, is older.",
+        "ingles": "My brother, who lives in Paris, is older.",
         "traducao": "Meu irmão, que mora em Paris, é mais velho.",
         "genero": "Extra Info (Person)",
         "motivo": "Usamos 'who' entre vírgulas para pessoas"
       },
       {
-        "italiano": "The Eiffel Tower, which was built in 1889, is famous.",
+        "ingles": "The Eiffel Tower, which was built in 1889, is famous.",
         "traducao": "A Torre Eiffel, que foi construída em 1889, é famosa.",
         "genero": "Extra Info (Thing)",
         "motivo": "Usamos 'which' para coisas ou ideias (nunca 'that')"

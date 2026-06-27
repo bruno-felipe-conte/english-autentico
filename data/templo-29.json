@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t29_001",
-      "italiano": "budget",
+      "ingles": "budget",
       "portugues": "orçamento",
       "genero": null,
       "plural": "budgets",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t29_002",
-      "italiano": "savings",
+      "ingles": "savings",
       "portugues": "poupança / economias",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t29_003",
-      "italiano": "investment",
+      "ingles": "investment",
       "portugues": "investimento",
       "genero": null,
       "plural": "investments",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t29_004",
-      "italiano": "loan",
+      "ingles": "loan",
       "portugues": "empréstimo",
       "genero": null,
       "plural": "loans",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t29_005",
-      "italiano": "mortgage",
+      "ingles": "mortgage",
       "portugues": "hipoteca / financiamento imobiliário",
       "genero": null,
       "plural": "mortgages",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t29_006",
-      "italiano": "interest rate",
+      "ingles": "interest rate",
       "portugues": "taxa de juros",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t29_007",
-      "italiano": "credit score",
+      "ingles": "credit score",
       "portugues": "pontuação de crédito",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t29_008",
-      "italiano": "tax",
+      "ingles": "tax",
       "portugues": "imposto",
       "genero": null,
       "plural": "taxes",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t29_009",
-      "italiano": "income",
+      "ingles": "income",
       "portugues": "renda / receita",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t29_010",
-      "italiano": "expense",
+      "ingles": "expense",
       "portugues": "despesa / gasto",
       "genero": null,
       "plural": "expenses",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t29_011",
-      "italiano": "debt",
+      "ingles": "debt",
       "portugues": "dívida",
       "genero": null,
       "plural": "debts",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t29_012",
-      "italiano": "insurance",
+      "ingles": "insurance",
       "portugues": "seguro",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t29_013",
-      "italiano": "retirement",
+      "ingles": "retirement",
       "portugues": "aposentadoria",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t29_014",
-      "italiano": "dividend",
+      "ingles": "dividend",
       "portugues": "dividendo",
       "genero": null,
       "plural": "dividends",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t29_015",
-      "italiano": "stock market",
+      "ingles": "stock market",
       "portugues": "bolsa de valores / mercado de ações",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t29_016",
-      "italiano": "inflation",
+      "ingles": "inflation",
       "portugues": "inflação",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t29_017",
-      "italiano": "currency",
+      "ingles": "currency",
       "portugues": "moeda",
       "genero": null,
       "plural": "currencies",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t29_018",
-      "italiano": "exchange rate",
+      "ingles": "exchange rate",
       "portugues": "taxa de câmbio",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t29_019",
-      "italiano": "pension",
+      "ingles": "pension",
       "portugues": "pensão / previdência",
       "genero": null,
       "plural": "pensions",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t29_020",
-      "italiano": "net worth",
+      "ingles": "net worth",
       "portugues": "patrimônio líquido",
       "genero": null,
       "plural": null,

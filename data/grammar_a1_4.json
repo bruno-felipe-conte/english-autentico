@@ -7,19 +7,19 @@
     "alerta": "Em inglês, 'have got' é muito comum para falar de posse e características, enquanto 'have' sozinho também é usado para posse, mas especialmente para indicar ações como comer ou tomar banho.",
     "observacao_cards": [
       {
-        "italiano": "I have got",
+        "ingles": "I have got",
         "traducao": "Eu tenho",
         "genero": "Posse",
         "motivo": "Usado para indicar que possuo algo (mais comum no Reino Unido)."
       },
       {
-        "italiano": "He has got",
+        "ingles": "He has got",
         "traducao": "Ele tem",
         "genero": "Posse",
         "motivo": "Forma para a 3ª pessoa do singular (He, She, It)."
       },
       {
-        "italiano": "I have breakfast",
+        "ingles": "I have breakfast",
         "traducao": "Eu tomo café da manhã",
         "genero": "Ação",
         "motivo": "Não usamos 'got' quando 'have' significa uma ação (comer, beber)."
@@ -113,13 +113,13 @@
     "alerta": "Em inglês, usamos 'There is' e 'There are' para dizer que algo existe em um lugar. É o equivalente ao verbo 'haver' ou 'ter' no sentido de existência.",
     "observacao_cards": [
       {
-        "italiano": "There is",
+        "ingles": "There is",
         "traducao": "Há / Tem (Singular)",
         "genero": "Existência",
         "motivo": "Usado para um único objeto, pessoa ou animal."
       },
       {
-        "italiano": "There are",
+        "ingles": "There are",
         "traducao": "Há / Têm (Plural)",
         "genero": "Existência",
         "motivo": "Usado para dois ou mais objetos, pessoas ou animais."
@@ -213,19 +213,19 @@
     "alerta": "In, On, e At são preposições de lugar que funcionam como uma pirâmide invertida: do mais amplo e geral (In) para o ponto mais específico (At).",
     "observacao_cards": [
       {
-        "italiano": "In",
+        "ingles": "In",
         "traducao": "Dentro de / Em",
         "genero": "Amplo",
         "motivo": "Para continentes, países, cidades ou espaços fechados (uma caixa)."
       },
       {
-        "italiano": "On",
+        "ingles": "On",
         "traducao": "Sobre / Na",
         "genero": "Superfície",
         "motivo": "Para ruas, avenidas, ou algo que está encostado em uma superfície."
       },
       {
-        "italiano": "At",
+        "ingles": "At",
         "traducao": "No / Na",
         "genero": "Ponto Específico",
         "motivo": "Endereços completos com número ou pontos exatos num mapa."
@@ -319,19 +319,19 @@
     "alerta": "As preposições in, on e at também funcionam para tempo! A regra da pirâmide invertida (do longo/geral para o curto/exato) se mantém perfeitamente.",
     "observacao_cards": [
       {
-        "italiano": "In",
+        "ingles": "In",
         "traducao": "Em",
         "genero": "Períodos Longos",
         "motivo": "Anos, meses, estações do ano, séculos e partes do dia (manhã, tarde)."
       },
       {
-        "italiano": "On",
+        "ingles": "On",
         "traducao": "Em (No/Na)",
         "genero": "Dias e Datas",
         "motivo": "Dias da semana e datas específicas com dia e mês."
       },
       {
-        "italiano": "At",
+        "ingles": "At",
         "traducao": "Às",
         "genero": "Horas e Momentos",
         "motivo": "Horários de relógio, feriados específicos e a exceção 'at night'."
@@ -425,13 +425,13 @@
     "alerta": "No inglês, coisas se dividem fortemente entre o que dá para contar (1, 2, 3 maçãs) e o que se precisa medir ou agrupar (como água, não existe '2 águas', mas sim '2 copos de água').",
     "observacao_cards": [
       {
-        "italiano": "Countable",
+        "ingles": "Countable",
         "traducao": "Contável",
         "genero": "Contagem",
         "motivo": "Pode ir para o plural (com 's') e aceita os artigos 'a'/'an' e números."
       },
       {
-        "italiano": "Uncountable",
+        "ingles": "Uncountable",
         "traducao": "Incontável",
         "genero": "Sem plural",
         "motivo": "Sempre no singular, não aceita 'a'/'an' diretamente ou números puros."

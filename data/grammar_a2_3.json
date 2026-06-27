@@ -7,19 +7,19 @@
     "alerta": "Use 'should' para conselhos, 'must' para obrigações fortes (ou regras) e 'have to' para necessidades externas.",
     "observacao_cards": [
       {
-        "italiano": "Should",
+        "ingles": "Should",
         "traducao": "Deveria",
         "genero": "Advice",
         "motivo": "Para dar um conselho ou sugerir o que é certo."
       },
       {
-        "italiano": "Must",
+        "ingles": "Must",
         "traducao": "Deve / Tem que",
         "genero": "Strong Obligation",
         "motivo": "Para regras, avisos fortes ou obrigações impostas por quem fala."
       },
       {
-        "italiano": "Have to",
+        "ingles": "Have to",
         "traducao": "Ter que",
         "genero": "External Obligation",
         "motivo": "Para obrigações vindas de fora (leis, chefes, horários)."
@@ -103,13 +103,13 @@
     "alerta": "Para explicar o propósito ou o motivo de uma ação, usamos frequentemente o infinitivo com 'to'.",
     "observacao_cards": [
       {
-        "italiano": "To + Verb",
+        "ingles": "To + Verb",
         "traducao": "Para + Verbo",
         "genero": "Grammar Structure",
         "motivo": "Substitui expressões mais longas como 'in order to' na fala diária."
       },
       {
-        "italiano": "Why...?",
+        "ingles": "Why...?",
         "traducao": "Por que...?",
         "genero": "Question",
         "motivo": "Pergunta comum que é respondida com o infinitivo de propósito."
@@ -187,19 +187,19 @@
     "alerta": "O Present Perfect (have/has + Particípio) conecta passado e presente. Ótimo para falar de experiências sem dizer *quando* aconteceram.",
     "observacao_cards": [
       {
-        "italiano": "Have / Has",
+        "ingles": "Have / Has",
         "traducao": "Ter (como auxiliar)",
         "genero": "Auxiliary Verb",
         "motivo": "Essencial para formar o Present Perfect. Não se traduz literalmente na maioria das vezes."
       },
       {
-        "italiano": "Past Participle",
+        "ingles": "Past Participle",
         "traducao": "Particípio Passado",
         "genero": "Verb Form",
         "motivo": "Regular: termina em -ed (played). Irregular: forma própria (seen, gone, eaten)."
       },
       {
-        "italiano": "Ever",
+        "ingles": "Ever",
         "traducao": "Já / Alguma vez",
         "genero": "Adverb",
         "motivo": "Usado em perguntas para saber se uma experiência já ocorreu em toda a vida."
@@ -283,19 +283,19 @@
     "alerta": "Estas palavras são amigas inseparáveis do Present Perfect. Elas adicionam um sentido extra de tempo à ação.",
     "observacao_cards": [
       {
-        "italiano": "Just",
+        "ingles": "Just",
         "traducao": "Acabar de",
         "genero": "Adverb",
         "motivo": "Usado para ações que terminaram num passado muito recente. Fica entre o auxiliar e o verbo principal."
       },
       {
-        "italiano": "Already",
+        "ingles": "Already",
         "traducao": "Já",
         "genero": "Adverb",
         "motivo": "Mostra que a ação aconteceu mais cedo do que o esperado. Geralmente afirmativo."
       },
       {
-        "italiano": "Yet",
+        "ingles": "Yet",
         "traducao": "Ainda / Já",
         "genero": "Adverb",
         "motivo": "Usado em negativas (ainda não) ou perguntas (já?). Vai sempre no final da frase."
@@ -379,31 +379,31 @@
     "alerta": "Elas mostram a trajetória ou movimento para algum lugar, geralmente acompanhando verbos como go, walk, run e drive.",
     "observacao_cards": [
       {
-        "italiano": "Into",
+        "ingles": "Into",
         "traducao": "Para dentro de",
         "genero": "Preposition",
         "motivo": "Movimento de fora para o interior de algo fechado."
       },
       {
-        "italiano": "Through",
+        "ingles": "Through",
         "traducao": "Através de",
         "genero": "Preposition",
         "motivo": "Movimento entrando por um lado e saindo pelo outro (ex: um túnel ou floresta)."
       },
       {
-        "italiano": "Across",
+        "ingles": "Across",
         "traducao": "Através de / Cruzando",
         "genero": "Preposition",
         "motivo": "Movimento de um lado a outro de uma superfície ou área (ex: uma rua, uma ponte)."
       },
       {
-        "italiano": "Towards",
+        "ingles": "Towards",
         "traducao": "Em direção a",
         "genero": "Preposition",
         "motivo": "Indica a direção para onde se vai, sem necessariamente chegar lá."
       },
       {
-        "italiano": "Onto",
+        "ingles": "Onto",
         "traducao": "Para cima de",
         "genero": "Preposition",
         "motivo": "Movimento de um nível mais baixo para cima de uma superfície."

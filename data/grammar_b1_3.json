@@ -7,13 +7,13 @@
     "alerta": "Question tags são pequenas perguntas no final da frase para confirmar uma informação ou pedir concordância.",
     "observacao_cards": [
       {
-        "italiano": "You are Brazilian, aren't you?",
+        "ingles": "You are Brazilian, aren't you?",
         "traducao": "Você é brasileiro, não é?",
         "genero": "Frase Afirmativa",
         "motivo": "Tag Negativa"
       },
       {
-        "italiano": "He doesn't like tea, does he?",
+        "ingles": "He doesn't like tea, does he?",
         "traducao": "Ele não gosta de chá, gosta?",
         "genero": "Frase Negativa",
         "motivo": "Tag Afirmativa"
@@ -101,13 +101,13 @@
     "alerta": "Usamos os pronomes reflexivos quando o sujeito e o objeto da ação são a mesma pessoa.",
     "observacao_cards": [
       {
-        "italiano": "myself",
+        "ingles": "myself",
         "traducao": "a mim mesmo(a)",
         "genero": "1ª Pessoa Singular",
         "motivo": "Refere-se a 'I'"
       },
       {
-        "italiano": "themselves",
+        "ingles": "themselves",
         "traducao": "a si mesmos(as)",
         "genero": "3ª Pessoa Plural",
         "motivo": "Refere-se a 'They'"
@@ -195,19 +195,19 @@
     "alerta": "Use 'both', 'either' e 'neither' para falar sobre duas coisas, pessoas ou opções.",
     "observacao_cards": [
       {
-        "italiano": "Both",
+        "ingles": "Both",
         "traducao": "Ambos(as)",
         "genero": "Inclusivo",
         "motivo": "Significa 'um e o outro'."
       },
       {
-        "italiano": "Either",
+        "ingles": "Either",
         "traducao": "Qualquer um(a) (dos dois)",
         "genero": "Alternativo",
         "motivo": "Significa 'um ou o outro'."
       },
       {
-        "italiano": "Neither",
+        "ingles": "Neither",
         "traducao": "Nenhum(a) (dos dois)",
         "genero": "Exclusivo (Negativo)",
         "motivo": "Significa 'nem um, nem o outro'."
@@ -295,13 +295,13 @@
     "alerta": "Use 'as ... as' para dizer que duas coisas são iguais em algum aspecto, e 'not as ... as' para dizer que não são.",
     "observacao_cards": [
       {
-        "italiano": "as fast as",
+        "ingles": "as fast as",
         "traducao": "tão rápido quanto",
         "genero": "Igualdade",
         "motivo": "Compara as duas partes com a mesma intensidade"
       },
       {
-        "italiano": "not as tall as",
+        "ingles": "not as tall as",
         "traducao": "não tão alto quanto",
         "genero": "Diferença",
         "motivo": "Indica que o primeiro é menor/menos intenso que o segundo"
@@ -389,13 +389,13 @@
     "alerta": "Alguns verbos mudam completamente de sentido dependendo se são seguidos por gerúndio (-ing) ou infinitivo (to).",
     "observacao_cards": [
       {
-        "italiano": "Remember to lock the door",
+        "ingles": "Remember to lock the door",
         "traducao": "Lembre-se de trancar a porta",
         "genero": "Infinitive",
         "motivo": "Lembra de algo que precisa ser feito (futuro/pendência)"
       },
       {
-        "italiano": "I remember locking the door",
+        "ingles": "I remember locking the door",
         "traducao": "Eu me lembro de ter trancado a porta",
         "genero": "Gerund",
         "motivo": "Lembra de algo que já aconteceu (passado)"

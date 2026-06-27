@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t32_001",
-      "italiano": "heritage",
+      "ingles": "heritage",
       "portugues": "herança cultural / patrimônio",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t32_002",
-      "italiano": "tradition",
+      "ingles": "tradition",
       "portugues": "tradição",
       "genero": null,
       "plural": "traditions",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t32_003",
-      "italiano": "diversity",
+      "ingles": "diversity",
       "portugues": "diversidade",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t32_004",
-      "italiano": "melting pot",
+      "ingles": "melting pot",
       "portugues": "caldeirão cultural / mistura de culturas",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t32_005",
-      "italiano": "immigrant",
+      "ingles": "immigrant",
       "portugues": "imigrante",
       "genero": null,
       "plural": "immigrants",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t32_006",
-      "italiano": "folklore",
+      "ingles": "folklore",
       "portugues": "folclore",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t32_007",
-      "italiano": "legend",
+      "ingles": "legend",
       "portugues": "lenda",
       "genero": null,
       "plural": "legends",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t32_008",
-      "italiano": "festival",
+      "ingles": "festival",
       "portugues": "festival",
       "genero": null,
       "plural": "festivals",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t32_009",
-      "italiano": "holiday",
+      "ingles": "holiday",
       "portugues": "feriado",
       "genero": null,
       "plural": "holidays",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t32_010",
-      "italiano": "identity",
+      "ingles": "identity",
       "portugues": "identidade",
       "genero": null,
       "plural": "identities",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t32_011",
-      "italiano": "Thanksgiving",
+      "ingles": "Thanksgiving",
       "portugues": "Dia de Ação de Graças",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t32_012",
-      "italiano": "Independence Day",
+      "ingles": "Independence Day",
       "portugues": "Dia da Independência",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t32_013",
-      "italiano": "jazz",
+      "ingles": "jazz",
       "portugues": "jazz",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t32_014",
-      "italiano": "blues",
+      "ingles": "blues",
       "portugues": "blues",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t32_015",
-      "italiano": "Broadway",
+      "ingles": "Broadway",
       "portugues": "Broadway",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t32_016",
-      "italiano": "Harlem",
+      "ingles": "Harlem",
       "portugues": "Harlem",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t32_017",
-      "italiano": "civil rights",
+      "ingles": "civil rights",
       "portugues": "direitos civis",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t32_018",
-      "italiano": "Great Migration",
+      "ingles": "Great Migration",
       "portugues": "Grande Migração",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t32_019",
-      "italiano": "folk music",
+      "ingles": "folk music",
       "portugues": "música folclórica",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t32_020",
-      "italiano": "rodeo",
+      "ingles": "rodeo",
       "portugues": "rodeio",
       "genero": null,
       "plural": "rodeos",

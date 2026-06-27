@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t16_001",
-      "italiano": "movie",
+      "ingles": "movie",
       "portugues": "filme",
       "genero": null,
       "plural": "movies",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t16_002",
-      "italiano": "theater",
+      "ingles": "theater",
       "portugues": "teatro / cinema",
       "genero": null,
       "plural": "theaters",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t16_003",
-      "italiano": "concert",
+      "ingles": "concert",
       "portugues": "show / concerto",
       "genero": null,
       "plural": "concerts",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t16_004",
-      "italiano": "museum",
+      "ingles": "museum",
       "portugues": "museu",
       "genero": null,
       "plural": "museums",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t16_005",
-      "italiano": "park",
+      "ingles": "park",
       "portugues": "parque",
       "genero": null,
       "plural": "parks",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t16_006",
-      "italiano": "beach",
+      "ingles": "beach",
       "portugues": "praia",
       "genero": null,
       "plural": "beaches",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t16_007",
-      "italiano": "game",
+      "ingles": "game",
       "portugues": "jogo",
       "genero": null,
       "plural": "games",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t16_008",
-      "italiano": "music",
+      "ingles": "music",
       "portugues": "música",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t16_009",
-      "italiano": "art",
+      "ingles": "art",
       "portugues": "arte",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t16_010",
-      "italiano": "fun",
+      "ingles": "fun",
       "portugues": "diversão / divertido",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t16_011",
-      "italiano": "boring",
+      "ingles": "boring",
       "portugues": "chato / entediante",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t16_012",
-      "italiano": "exciting",
+      "ingles": "exciting",
       "portugues": "emocionante / empolgante",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t16_013",
-      "italiano": "interesting",
+      "ingles": "interesting",
       "portugues": "interessante",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t16_014",
-      "italiano": "popular",
+      "ingles": "popular",
       "portugues": "popular / famoso",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t16_015",
-      "italiano": "ticket",
+      "ingles": "ticket",
       "portugues": "ingresso / bilhete",
       "genero": null,
       "plural": "tickets",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t16_016",
-      "italiano": "show",
+      "ingles": "show",
       "portugues": "espetáculo / show",
       "genero": null,
       "plural": "shows",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t16_017",
-      "italiano": "performance",
+      "ingles": "performance",
       "portugues": "apresentação / performance",
       "genero": null,
       "plural": "performances",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t16_018",
-      "italiano": "hobby",
+      "ingles": "hobby",
       "portugues": "hobby / passatempo",
       "genero": null,
       "plural": "hobbies",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t16_019",
-      "italiano": "relax",
+      "ingles": "relax",
       "portugues": "relaxar / descansar",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t16_020",
-      "italiano": "weekend",
+      "ingles": "weekend",
       "portugues": "fim de semana",
       "genero": null,
       "plural": "weekends",

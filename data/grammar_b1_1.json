@@ -7,13 +7,13 @@
     "alerta": "O Past Simple descreve ações que terminaram em um momento específico no passado. O Present Perfect descreve ações no passado que têm uma conexão com o presente, sem focar em quando aconteceram.",
     "observacao_cards": [
       {
-        "italiano": "I traveled yesterday.",
+        "ingles": "I traveled yesterday.",
         "traducao": "Eu viajei ontem.",
         "genero": "Past Simple",
         "motivo": "Tempo definido ('yesterday')"
       },
       {
-        "italiano": "I have traveled to Japan.",
+        "ingles": "I have traveled to Japan.",
         "traducao": "Eu (já) viajei para o Japão.",
         "genero": "Present Perfect",
         "motivo": "Experiência de vida, tempo não especificado"
@@ -107,13 +107,13 @@
     "alerta": "Este tempo verbal foca na *duração* de uma atividade que tem ocorrido até o presente. A fórmula é: have/has + been + verbo com -ing.",
     "observacao_cards": [
       {
-        "italiano": "I have been reading this book.",
+        "ingles": "I have been reading this book.",
         "traducao": "Eu tenho lido este livro / Eu estive lendo este livro.",
         "genero": "Estrutura",
         "motivo": "Ação que ainda não acabou, iniciada no passado."
       },
       {
-        "italiano": "It has been raining all day.",
+        "ingles": "It has been raining all day.",
         "traducao": "Tem chovido o dia todo.",
         "genero": "Duração",
         "motivo": "Enfatiza que a chuva não parou e continua agora."
@@ -201,13 +201,13 @@
     "alerta": "O Past Perfect descreve uma ação que aconteceu *antes* de outra ação no passado. É como apertar o 'rewind' em uma história já no passado.",
     "observacao_cards": [
       {
-        "italiano": "I had eaten",
+        "ingles": "I had eaten",
         "traducao": "Eu tinha comido",
         "genero": "Past Perfect",
         "motivo": "Ação mais antiga."
       },
       {
-        "italiano": "I arrived",
+        "ingles": "I arrived",
         "traducao": "Eu cheguei",
         "genero": "Past Simple",
         "motivo": "Ação mais recente no passado."
@@ -295,13 +295,13 @@
     "alerta": "Usamos a Second Conditional para falar de situações imaginárias, improváveis ou impossíveis no presente/futuro.",
     "observacao_cards": [
       {
-        "italiano": "If I had money",
+        "ingles": "If I had money",
         "traducao": "Se eu tivesse dinheiro",
         "genero": "Condição",
         "motivo": "Passado simples indicando hipótese"
       },
       {
-        "italiano": "I would travel",
+        "ingles": "I would travel",
         "traducao": "Eu viajaria",
         "genero": "Resultado",
         "motivo": "'Would' indica o resultado imaginário"
@@ -389,13 +389,13 @@
     "alerta": "A Zero Conditional fala sobre situações que são *sempre verdadeiras*. Se a condição acontece, o resultado é uma consequência certa.",
     "observacao_cards": [
       {
-        "italiano": "If you heat ice",
+        "ingles": "If you heat ice",
         "traducao": "Se você aquece gelo",
         "genero": "Condição",
         "motivo": "Present Simple"
       },
       {
-        "italiano": "it melts",
+        "ingles": "it melts",
         "traducao": "ele derrete",
         "genero": "Resultado",
         "motivo": "Present Simple"

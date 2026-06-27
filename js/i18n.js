@@ -169,6 +169,28 @@ const I18n = {
 
     // ── Achievements ──
     'ach_primeiro_passo': { pt: 'Conclua seu primeiro flashcard', en: 'Complete your first flashcard' },
+
+    // FSRS Achievements
+    'ach_fsrs_bullseye_name': { pt: '🎯 Bullseye', en: '🎯 Bullseye' },
+    'ach_fsrs_bullseye': { pt: 'Acerte 10 cartas de primeira!', en: 'Get 10 cards right on the first try!' },
+    'ach_fsrs_memory_master_name': { pt: '🧠 Memory Master', en: '🧠 Memory Master' },
+    'ach_fsrs_memory_master': { pt: 'Alcance >95% de retenção em 25 cartas.', en: 'Reach >95% retention on 25 cards.' },
+    'ach_fsrs_good_listener_name': { pt: '🎧 Good Listener', en: '🎧 Good Listener' },
+    'ach_fsrs_good_listener': { pt: 'Complete 10 sessões no Modo Escuta.', en: 'Complete 10 sessions in Listen Mode.' },
+    'ach_fsrs_temple_name': { pt: '🏛️ Temple Master', en: '🏛️ Temple Master' },
+    'ach_fsrs_temple': { pt: 'Domine um Templo (Retenção > 90%).', en: 'Master a Temple (Retention > 90%).' },
+
+    // FSRS Onboarding & UI
+    'fsrs_onb_title_1': { pt: 'Bem-vindo aos Flashcards!', en: 'Welcome to Flashcards!' },
+    'fsrs_onb_desc_1': { pt: 'Aqui você memoriza o vocabulário usando o algoritmo FSRS (Spaced Repetition).', en: 'Here you memorize vocabulary using the FSRS algorithm (Spaced Repetition).' },
+    'fsrs_onb_title_2': { pt: 'Revelar', en: 'Reveal' },
+    'fsrs_onb_desc_2': { pt: 'Clique no botão ou pressione ESPAÇO para ver a tradução.', en: 'Click the button or press SPACE to see the translation.' },
+    'fsrs_onb_title_3': { pt: 'Avaliação Honesta', en: 'Honest Rating' },
+    'fsrs_onb_desc_3': { pt: 'Seja sincero se foi difícil ou fácil. Isso calcula quando você verá a carta de novo!', en: 'Be honest if it was hard or easy. This calculates when you will see the card again!' },
+    'fsrs_onb_title_4': { pt: 'Modos de Estudo', en: 'Study Modes' },
+    'fsrs_onb_desc_4': { pt: 'Alterne para Escuta ou Reverso para treinar outras habilidades.', en: 'Switch to Listen or Reverse to train other skills.' },
+    'fsrs_due_warning': { pt: '⚠️ Você tem {num} cartas atrasadas! Salve sua retenção.', en: '⚠️ You have {num} due cards! Save your retention.' },
+
     'ach_primeiro_passo_name': { pt: 'Primeiro Passo', en: 'First Step' },
     'ach_uma_semana': { pt: '7 dias consecutivos de estudo', en: '7 consecutive days of study' },
     'ach_uma_semana_name': { pt: 'Uma Semana', en: 'One Week' },

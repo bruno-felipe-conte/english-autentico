@@ -7,19 +7,19 @@
     "alerta": "Além de 'will' e 'going to', o inglês avançado usa estruturas precisas para descrever futuros iminentes, oficiais ou inevitáveis.",
     "observacao_cards": [
       {
-        "italiano": "Be bound to",
+        "ingles": "Be bound to",
         "traducao": "Estar fadado a / Ser muito provável",
         "genero": "Future",
         "motivo": "Expressa forte certeza de que algo vai acontecer."
       },
       {
-        "italiano": "Be about to",
+        "ingles": "Be about to",
         "traducao": "Estar prestes a",
         "genero": "Future",
         "motivo": "Algo no futuro imediato, quase acontecendo."
       },
       {
-        "italiano": "Be to",
+        "ingles": "Be to",
         "traducao": "Estar programado para / Ter que",
         "genero": "Future",
         "motivo": "Usado para planos oficiais ou ordens formais."
@@ -107,25 +107,25 @@
     "alerta": "Modais menos comuns como 'dare' e expressões de preferência e conselho dão um tom muito nativo ao seu discurso.",
     "observacao_cards": [
       {
-        "italiano": "Dare",
+        "ingles": "Dare",
         "traducao": "Ousar",
         "genero": "Modal",
         "motivo": "Pode funcionar como modal em frases negativas e interrogativas (dare not)."
       },
       {
-        "italiano": "Needn't",
+        "ingles": "Needn't",
         "traducao": "Não precisar",
         "genero": "Modal",
         "motivo": "Indica ausência de obrigação ou necessidade."
       },
       {
-        "italiano": "Would rather",
+        "ingles": "Would rather",
         "traducao": "Preferir",
         "genero": "Preference",
         "motivo": "Seguido de passado simples quando o sujeito da preferência é diferente de quem realiza a ação."
       },
       {
-        "italiano": "Had better",
+        "ingles": "Had better",
         "traducao": "É melhor",
         "genero": "Advice",
         "motivo": "Um conselho forte com um tom de alerta sobre consequências negativas."
@@ -213,19 +213,19 @@
     "alerta": "Falantes nativos odeiam repetição! Aprender a omitir (ellipsis) e substituir (substitution) palavras deixa sua fala fluida e coesa.",
     "observacao_cards": [
       {
-        "italiano": "Ellipsis",
+        "ingles": "Ellipsis",
         "traducao": "Elipse",
         "genero": "Omission",
         "motivo": "Omitimos palavras ou expressões quando o contexto já deixa claro o significado."
       },
       {
-        "italiano": "So",
+        "ingles": "So",
         "traducao": "Substituição com 'so'",
         "genero": "Substitution",
         "motivo": "Substitui uma cláusula inteira após verbos como think, hope, suppose."
       },
       {
-        "italiano": "One / Ones",
+        "ingles": "One / Ones",
         "traducao": "Substituição com 'one(s)'",
         "genero": "Substitution",
         "motivo": "Substitui um substantivo para evitar repeti-lo, adaptando-se a singular ou plural."
@@ -313,25 +313,25 @@
     "alerta": "Discourse markers são as 'pontes' do discurso: eles organizam as ideias, mostram contrastes e definem a atitude do falante em relação ao texto.",
     "observacao_cards": [
       {
-        "italiano": "Nevertheless",
+        "ingles": "Nevertheless",
         "traducao": "Não obstante / Apesar disso",
         "genero": "Contrast",
         "motivo": "Introduz uma concessão ou contraste formal, semelhante a 'however'."
       },
       {
-        "italiano": "Consequently",
+        "ingles": "Consequently",
         "traducao": "Consequentemente",
         "genero": "Result",
         "motivo": "Apresenta o resultado lógico de um evento prévio."
       },
       {
-        "italiano": "Broadly speaking",
+        "ingles": "Broadly speaking",
         "traducao": "Em termos gerais",
         "genero": "Generalizing",
         "motivo": "Indica que a afirmação a seguir é uma regra geral com possíveis exceções."
       },
       {
-        "italiano": "Furthermore",
+        "ingles": "Furthermore",
         "traducao": "Além disso",
         "genero": "Addition",
         "motivo": "Adiciona uma informação complementar de peso em discursos formais."
@@ -419,25 +419,25 @@
     "alerta": "Collocations são pares de palavras que soam corretos (make a decision), e Idioms são expressões com sentido figurado. Errar isso não impede de ser entendido, mas usá-los faz você soar nativo!",
     "observacao_cards": [
       {
-        "italiano": "Make a decision",
+        "ingles": "Make a decision",
         "traducao": "Tomar uma decisão",
         "genero": "Collocation",
         "motivo": "Com 'decision' usa-se sempre 'make', e nunca 'do' ou 'take'."
       },
       {
-        "italiano": "Do business",
+        "ingles": "Do business",
         "traducao": "Fazer negócios",
         "genero": "Collocation",
         "motivo": "'Do' é usado para ações, trabalho e tarefas rotineiras."
       },
       {
-        "italiano": "Under the weather",
+        "ingles": "Under the weather",
         "traducao": "Sentindo-se mal / doente",
         "genero": "Idiom",
         "motivo": "Expressão figurada que significa não estar se sentindo 100%."
       },
       {
-        "italiano": "Bite the bullet",
+        "ingles": "Bite the bullet",
         "traducao": "Encarar uma situação difícil",
         "genero": "Idiom",
         "motivo": "Expressão usada para tomar coragem e fazer algo desagradável."

@@ -7,13 +7,13 @@
     "alerta": "Para dizer 'não' no Present Simple, precisamos da ajuda de 'don't' e 'doesn't'.",
     "observacao_cards": [
       {
-        "italiano": "don't",
+        "ingles": "don't",
         "traducao": "não (I, You, We, They)",
         "genero": "Verbo Auxiliar",
         "motivo": "Negativa para a maioria das pessoas"
       },
       {
-        "italiano": "doesn't",
+        "ingles": "doesn't",
         "traducao": "não (He, She, It)",
         "genero": "Verbo Auxiliar",
         "motivo": "Negativa para a 3ª pessoa do singular"
@@ -101,13 +101,13 @@
     "alerta": "No inglês, não basta apenas mudar a entonação da voz. Precisamos colocar 'Do' ou 'Does' no começo da frase para fazer uma pergunta no presente!",
     "observacao_cards": [
       {
-        "italiano": "Do",
+        "ingles": "Do",
         "traducao": "(Indicador de pergunta)",
         "genero": "Verbo Auxiliar",
         "motivo": "Usado antes de I, You, We, They"
       },
       {
-        "italiano": "Does",
+        "ingles": "Does",
         "traducao": "(Indicador de pergunta)",
         "genero": "Verbo Auxiliar",
         "motivo": "Usado antes de He, She, It"
@@ -200,25 +200,25 @@
     "alerta": "Usamos esses advérbios para dizer COM QUE FREQUÊNCIA fazemos algo (Sempre? Às vezes? Nunca?).",
     "observacao_cards": [
       {
-        "italiano": "always",
+        "ingles": "always",
         "traducao": "sempre (100%)",
         "genero": "Advérbio",
         "motivo": "Uma ação constante"
       },
       {
-        "italiano": "usually",
+        "ingles": "usually",
         "traducao": "normalmente (80%)",
         "genero": "Advérbio",
         "motivo": "Maior parte do tempo"
       },
       {
-        "italiano": "sometimes",
+        "ingles": "sometimes",
         "traducao": "às vezes (50%)",
         "genero": "Advérbio",
         "motivo": "Metade das vezes"
       },
       {
-        "italiano": "never",
+        "ingles": "never",
         "traducao": "nunca (0%)",
         "genero": "Advérbio",
         "motivo": "Ação inexistente"
@@ -322,25 +322,25 @@
     "alerta": "Quer obter mais do que apenas um 'Sim' ou 'Não'? Use as Question Words! Elas lideram a pergunta.",
     "observacao_cards": [
       {
-        "italiano": "when",
+        "ingles": "when",
         "traducao": "quando",
         "genero": "Question Word",
         "motivo": "Pergunta sobre tempo/data"
       },
       {
-        "italiano": "why",
+        "ingles": "why",
         "traducao": "por que",
         "genero": "Question Word",
         "motivo": "Pergunta sobre motivo/razão"
       },
       {
-        "italiano": "how",
+        "ingles": "how",
         "traducao": "como",
         "genero": "Question Word",
         "motivo": "Pergunta sobre maneira/estado"
       },
       {
-        "italiano": "how often",
+        "ingles": "how often",
         "traducao": "com que frequência",
         "genero": "Question Word",
         "motivo": "Pergunta sobre rotina/frequência"
@@ -428,19 +428,19 @@
     "alerta": "Pronomes pessoais regulares (I, He, She) FAZEM a ação. Mas e quem RECEBE a ação? Apresentando os Object Pronouns!",
     "observacao_cards": [
       {
-        "italiano": "me",
+        "ingles": "me",
         "traducao": "me / mim (recebe a ação de 'I')",
         "genero": "Object Pronoun",
         "motivo": "Objeto da frase"
       },
       {
-        "italiano": "him / her",
+        "ingles": "him / her",
         "traducao": "o, lhe, a ele / a, lhe, a ela",
         "genero": "Object Pronoun",
         "motivo": "Objetos equivalentes a He e She"
       },
       {
-        "italiano": "us / them",
+        "ingles": "us / them",
         "traducao": "nos / os, as, lhes, a eles",
         "genero": "Object Pronoun",
         "motivo": "Objetos equivalentes a We e They"

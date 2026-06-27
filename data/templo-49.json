@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t49_001",
-      "italiano": "subjunctive mood",
+      "ingles": "subjunctive mood",
       "portugues": "modo subjuntivo",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t49_002",
-      "italiano": "wish + past perfect",
+      "ingles": "wish + past perfect",
       "portugues": "wish + passado perfeito (arrependimento sobre o passado)",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t49_003",
-      "italiano": "mixed conditional",
+      "ingles": "mixed conditional",
       "portugues": "condicional misto",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t49_004",
-      "italiano": "inversion",
+      "ingles": "inversion",
       "portugues": "inversão (sujeito-verbo em estruturas formais)",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t49_005",
-      "italiano": "cleft sentence",
+      "ingles": "cleft sentence",
       "portugues": "frase clivada",
       "genero": null,
       "plural": "cleft sentences",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t49_006",
-      "italiano": "nominalization",
+      "ingles": "nominalization",
       "portugues": "nominalização (transformar verbo/adjetivo em substantivo)",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t49_007",
-      "italiano": "ellipsis",
+      "ingles": "ellipsis",
       "portugues": "elipse (omissão de palavras já compreendidas)",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t49_008",
-      "italiano": "fronting",
+      "ingles": "fronting",
       "portugues": "topicalização / frontalização",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t49_009",
-      "italiano": "passive infinitive",
+      "ingles": "passive infinitive",
       "portugues": "infinitivo passivo",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t49_010",
-      "italiano": "causative have/get",
+      "ingles": "causative have/get",
       "portugues": "causativo com have/get (fazer alguém fazer algo)",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t49_011",
-      "italiano": "reported speech",
+      "ingles": "reported speech",
       "portugues": "discurso indireto",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t49_012",
-      "italiano": "gerund vs infinitive",
+      "ingles": "gerund vs infinitive",
       "portugues": "gerúndio versus infinitivo",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t49_013",
-      "italiano": "participial phrase",
+      "ingles": "participial phrase",
       "portugues": "oração participial",
       "genero": null,
       "plural": "participial phrases",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t49_014",
-      "italiano": "absolute construction",
+      "ingles": "absolute construction",
       "portugues": "construção absoluta",
       "genero": null,
       "plural": "absolute constructions",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t49_015",
-      "italiano": "hedging language",
+      "ingles": "hedging language",
       "portugues": "linguagem de mitigação / atenuação",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t49_016",
-      "italiano": "modal perfect",
+      "ingles": "modal perfect",
       "portugues": "modal perfeito (especulação/arrependimento sobre o passado)",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t49_017",
-      "italiano": "discourse marker",
+      "ingles": "discourse marker",
       "portugues": "marcador discursivo",
       "genero": null,
       "plural": "discourse markers",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t49_018",
-      "italiano": "cohesion",
+      "ingles": "cohesion",
       "portugues": "coesão (textual)",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t49_019",
-      "italiano": "register shift",
+      "ingles": "register shift",
       "portugues": "mudança de registro (formal/informal)",
       "genero": null,
       "plural": "register shifts",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t49_020",
-      "italiano": "parallel structure",
+      "ingles": "parallel structure",
       "portugues": "estrutura paralela",
       "genero": null,
       "plural": null,

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t5_001",
-      "italiano": "morning",
+      "ingles": "morning",
       "portugues": "manhã",
       "genero": null,
       "plural": "mornings",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t5_002",
-      "italiano": "afternoon",
+      "ingles": "afternoon",
       "portugues": "tarde",
       "genero": null,
       "plural": "afternoons",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t5_003",
-      "italiano": "evening",
+      "ingles": "evening",
       "portugues": "noite (início)",
       "genero": null,
       "plural": "evenings",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t5_004",
-      "italiano": "night",
+      "ingles": "night",
       "portugues": "noite",
       "genero": null,
       "plural": "nights",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t5_005",
-      "italiano": "today",
+      "ingles": "today",
       "portugues": "hoje",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t5_006",
-      "italiano": "tomorrow",
+      "ingles": "tomorrow",
       "portugues": "amanhã",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t5_007",
-      "italiano": "yesterday",
+      "ingles": "yesterday",
       "portugues": "ontem",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t5_008",
-      "italiano": "week",
+      "ingles": "week",
       "portugues": "semana",
       "genero": null,
       "plural": "weeks",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t5_009",
-      "italiano": "month",
+      "ingles": "month",
       "portugues": "mês",
       "genero": null,
       "plural": "months",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t5_010",
-      "italiano": "year",
+      "ingles": "year",
       "portugues": "ano",
       "genero": null,
       "plural": "years",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t5_011",
-      "italiano": "wake up",
+      "ingles": "wake up",
       "portugues": "acordar",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t5_012",
-      "italiano": "go to work",
+      "ingles": "go to work",
       "portugues": "ir trabalhar",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t5_013",
-      "italiano": "have lunch",
+      "ingles": "have lunch",
       "portugues": "almoçar",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t5_014",
-      "italiano": "come home",
+      "ingles": "come home",
       "portugues": "chegar em casa / voltar para casa",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t5_015",
-      "italiano": "go to bed",
+      "ingles": "go to bed",
       "portugues": "ir dormir / ir para a cama",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t5_016",
-      "italiano": "always",
+      "ingles": "always",
       "portugues": "sempre",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t5_017",
-      "italiano": "usually",
+      "ingles": "usually",
       "portugues": "geralmente / normalmente",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t5_018",
-      "italiano": "sometimes",
+      "ingles": "sometimes",
       "portugues": "às vezes",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t5_019",
-      "italiano": "never",
+      "ingles": "never",
       "portugues": "nunca",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t5_020",
-      "italiano": "hour",
+      "ingles": "hour",
       "portugues": "hora",
       "genero": null,
       "plural": "hours",

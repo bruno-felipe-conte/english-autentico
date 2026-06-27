@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t34_001",
-      "italiano": "ethics",
+      "ingles": "ethics",
       "portugues": "ética",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t34_002",
-      "italiano": "morality",
+      "ingles": "morality",
       "portugues": "moralidade",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t34_003",
-      "italiano": "justice",
+      "ingles": "justice",
       "portugues": "justiça",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t34_004",
-      "italiano": "freedom",
+      "ingles": "freedom",
       "portugues": "liberdade",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t34_005",
-      "italiano": "equality",
+      "ingles": "equality",
       "portugues": "igualdade",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t34_006",
-      "italiano": "consciousness",
+      "ingles": "consciousness",
       "portugues": "consciência",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t34_007",
-      "italiano": "perception",
+      "ingles": "perception",
       "portugues": "percepção",
       "genero": null,
       "plural": "perceptions",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t34_008",
-      "italiano": "reasoning",
+      "ingles": "reasoning",
       "portugues": "raciocínio",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t34_009",
-      "italiano": "argument",
+      "ingles": "argument",
       "portugues": "argumento",
       "genero": null,
       "plural": "arguments",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t34_010",
-      "italiano": "fallacy",
+      "ingles": "fallacy",
       "portugues": "falácia",
       "genero": null,
       "plural": "fallacies",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t34_011",
-      "italiano": "utilitarianism",
+      "ingles": "utilitarianism",
       "portugues": "utilitarismo",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t34_012",
-      "italiano": "empathy",
+      "ingles": "empathy",
       "portugues": "empatia",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t34_013",
-      "italiano": "virtue",
+      "ingles": "virtue",
       "portugues": "virtude",
       "genero": null,
       "plural": "virtues",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t34_014",
-      "italiano": "integrity",
+      "ingles": "integrity",
       "portugues": "integridade",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t34_015",
-      "italiano": "dilemma",
+      "ingles": "dilemma",
       "portugues": "dilema",
       "genero": null,
       "plural": "dilemmas",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t34_016",
-      "italiano": "bias",
+      "ingles": "bias",
       "portugues": "viés / preconceito inconsciente",
       "genero": null,
       "plural": "biases",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t34_017",
-      "italiano": "prejudice",
+      "ingles": "prejudice",
       "portugues": "preconceito",
       "genero": null,
       "plural": "prejudices",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t34_018",
-      "italiano": "perspective",
+      "ingles": "perspective",
       "portugues": "perspectiva / ponto de vista",
       "genero": null,
       "plural": "perspectives",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t34_019",
-      "italiano": "critical thinking",
+      "ingles": "critical thinking",
       "portugues": "pensamento crítico",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t34_020",
-      "italiano": "paradox",
+      "ingles": "paradox",
       "portugues": "paradoxo",
       "genero": null,
       "plural": "paradoxes",

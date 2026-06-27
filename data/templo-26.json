@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t26_001",
-      "italiano": "basketball",
+      "ingles": "basketball",
       "portugues": "basquete",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t26_002",
-      "italiano": "football",
+      "ingles": "football",
       "portugues": "futebol americano",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t26_003",
-      "italiano": "baseball",
+      "ingles": "baseball",
       "portugues": "beisebol",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t26_004",
-      "italiano": "soccer",
+      "ingles": "soccer",
       "portugues": "futebol",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t26_005",
-      "italiano": "tennis",
+      "ingles": "tennis",
       "portugues": "tênis",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t26_006",
-      "italiano": "golf",
+      "ingles": "golf",
       "portugues": "golfe",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t26_007",
-      "italiano": "swimming",
+      "ingles": "swimming",
       "portugues": "natação",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t26_008",
-      "italiano": "running",
+      "ingles": "running",
       "portugues": "corrida",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t26_009",
-      "italiano": "hiking",
+      "ingles": "hiking",
       "portugues": "caminhada / trilha",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t26_010",
-      "italiano": "yoga",
+      "ingles": "yoga",
       "portugues": "yoga",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t26_011",
-      "italiano": "score",
+      "ingles": "score",
       "portugues": "placar / pontuação",
       "genero": null,
       "plural": "scores",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t26_012",
-      "italiano": "team",
+      "ingles": "team",
       "portugues": "time / equipe",
       "genero": null,
       "plural": "teams",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t26_013",
-      "italiano": "coach",
+      "ingles": "coach",
       "portugues": "treinador",
       "genero": null,
       "plural": "coaches",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t26_014",
-      "italiano": "player",
+      "ingles": "player",
       "portugues": "jogador",
       "genero": null,
       "plural": "players",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t26_015",
-      "italiano": "tournament",
+      "ingles": "tournament",
       "portugues": "torneio",
       "genero": null,
       "plural": "tournaments",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t26_016",
-      "italiano": "championship",
+      "ingles": "championship",
       "portugues": "campeonato",
       "genero": null,
       "plural": "championships",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t26_017",
-      "italiano": "training",
+      "ingles": "training",
       "portugues": "treinamento",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t26_018",
-      "italiano": "injury",
+      "ingles": "injury",
       "portugues": "lesão",
       "genero": null,
       "plural": "injuries",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t26_019",
-      "italiano": "compete",
+      "ingles": "compete",
       "portugues": "competir",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t26_020",
-      "italiano": "referee",
+      "ingles": "referee",
       "portugues": "árbitro",
       "genero": null,
       "plural": "referees",

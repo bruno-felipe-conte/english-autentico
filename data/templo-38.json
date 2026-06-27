@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t38_001",
-      "italiano": "myth",
+      "ingles": "myth",
       "portugues": "mito",
       "genero": null,
       "plural": "myths",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t38_002",
-      "italiano": "legend",
+      "ingles": "legend",
       "portugues": "lenda",
       "genero": null,
       "plural": "legends",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t38_003",
-      "italiano": "folklore",
+      "ingles": "folklore",
       "portugues": "folclore",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t38_004",
-      "italiano": "deity",
+      "ingles": "deity",
       "portugues": "divindade / deus",
       "genero": null,
       "plural": "deities",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t38_005",
-      "italiano": "ritual",
+      "ingles": "ritual",
       "portugues": "ritual",
       "genero": null,
       "plural": "rituals",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t38_006",
-      "italiano": "prophecy",
+      "ingles": "prophecy",
       "portugues": "profecia",
       "genero": null,
       "plural": "prophecies",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t38_007",
-      "italiano": "quest",
+      "ingles": "quest",
       "portugues": "busca / missão épica",
       "genero": null,
       "plural": "quests",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t38_008",
-      "italiano": "hero",
+      "ingles": "hero",
       "portugues": "herói",
       "genero": null,
       "plural": "heroes",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t38_009",
-      "italiano": "villain",
+      "ingles": "villain",
       "portugues": "vilão",
       "genero": null,
       "plural": "villains",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t38_010",
-      "italiano": "archetype",
+      "ingles": "archetype",
       "portugues": "arquétipo",
       "genero": null,
       "plural": "archetypes",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t38_011",
-      "italiano": "origin story",
+      "ingles": "origin story",
       "portugues": "história de origem",
       "genero": null,
       "plural": "origin stories",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t38_012",
-      "italiano": "symbolism",
+      "ingles": "symbolism",
       "portugues": "simbolismo",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t38_013",
-      "italiano": "allegory",
+      "ingles": "allegory",
       "portugues": "alegoria",
       "genero": null,
       "plural": "allegories",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t38_014",
-      "italiano": "trickster",
+      "ingles": "trickster",
       "portugues": "trapaceiro / trickster",
       "genero": null,
       "plural": "tricksters",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t38_015",
-      "italiano": "supernatural",
+      "ingles": "supernatural",
       "portugues": "sobrenatural",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t38_016",
-      "italiano": "totem",
+      "ingles": "totem",
       "portugues": "totem",
       "genero": null,
       "plural": "totems",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t38_017",
-      "italiano": "oral tradition",
+      "ingles": "oral tradition",
       "portugues": "tradição oral",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t38_018",
-      "italiano": "narrative",
+      "ingles": "narrative",
       "portugues": "narrativa",
       "genero": null,
       "plural": "narratives",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t38_019",
-      "italiano": "saga",
+      "ingles": "saga",
       "portugues": "saga",
       "genero": null,
       "plural": "sagas",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t38_020",
-      "italiano": "fable",
+      "ingles": "fable",
       "portugues": "fábula",
       "genero": null,
       "plural": "fables",

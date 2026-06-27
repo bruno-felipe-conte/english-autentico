@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t42_001",
-      "italiano": "speech",
+      "ingles": "speech",
       "portugues": "discurso",
       "genero": null,
       "plural": "speeches",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t42_002",
-      "italiano": "audience",
+      "ingles": "audience",
       "portugues": "plateia / público",
       "genero": null,
       "plural": "audiences",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t42_003",
-      "italiano": "delivery",
+      "ingles": "delivery",
       "portugues": "entrega / forma de apresentar",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t42_004",
-      "italiano": "posture",
+      "ingles": "posture",
       "portugues": "postura",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t42_005",
-      "italiano": "eye contact",
+      "ingles": "eye contact",
       "portugues": "contato visual",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t42_006",
-      "italiano": "pace",
+      "ingles": "pace",
       "portugues": "ritmo / velocidade de fala",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t42_007",
-      "italiano": "tone",
+      "ingles": "tone",
       "portugues": "tom de voz",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t42_008",
-      "italiano": "pause",
+      "ingles": "pause",
       "portugues": "pausa",
       "genero": null,
       "plural": "pauses",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t42_009",
-      "italiano": "emphasis",
+      "ingles": "emphasis",
       "portugues": "ênfase",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t42_010",
-      "italiano": "clarity",
+      "ingles": "clarity",
       "portugues": "clareza",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t42_011",
-      "italiano": "engagement",
+      "ingles": "engagement",
       "portugues": "engajamento",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t42_012",
-      "italiano": "slide",
+      "ingles": "slide",
       "portugues": "slide",
       "genero": null,
       "plural": "slides",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t42_013",
-      "italiano": "hook",
+      "ingles": "hook",
       "portugues": "gancho (introdução cativante)",
       "genero": null,
       "plural": "hooks",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t42_014",
-      "italiano": "conclusion",
+      "ingles": "conclusion",
       "portugues": "conclusão",
       "genero": null,
       "plural": "conclusions",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t42_015",
-      "italiano": "anecdote",
+      "ingles": "anecdote",
       "portugues": "anedota / história pessoal",
       "genero": null,
       "plural": "anecdotes",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t42_016",
-      "italiano": "gesture",
+      "ingles": "gesture",
       "portugues": "gesto",
       "genero": null,
       "plural": "gestures",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t42_017",
-      "italiano": "confidence",
+      "ingles": "confidence",
       "portugues": "confiança",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t42_018",
-      "italiano": "outline",
+      "ingles": "outline",
       "portugues": "esboço / estrutura",
       "genero": null,
       "plural": "outlines",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t42_019",
-      "italiano": "Q&A",
+      "ingles": "Q&A",
       "portugues": "sessão de perguntas e respostas",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t42_020",
-      "italiano": "persuade",
+      "ingles": "persuade",
       "portugues": "persuadir",
       "genero": null,
       "plural": null,

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t43_001",
-      "italiano": "candidate",
+      "ingles": "candidate",
       "portugues": "candidato",
       "genero": null,
       "plural": "candidates",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t43_002",
-      "italiano": "recruiter",
+      "ingles": "recruiter",
       "portugues": "recrutador",
       "genero": null,
       "plural": "recruiters",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t43_003",
-      "italiano": "HR",
+      "ingles": "HR",
       "portugues": "RH (Recursos Humanos)",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t43_004",
-      "italiano": "strengths",
+      "ingles": "strengths",
       "portugues": "pontos fortes",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t43_005",
-      "italiano": "weaknesses",
+      "ingles": "weaknesses",
       "portugues": "pontos fracos",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t43_006",
-      "italiano": "behavioral question",
+      "ingles": "behavioral question",
       "portugues": "pergunta comportamental",
       "genero": null,
       "plural": "behavioral questions",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t43_007",
-      "italiano": "STAR method",
+      "ingles": "STAR method",
       "portugues": "método STAR",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t43_008",
-      "italiano": "competency",
+      "ingles": "competency",
       "portugues": "competência",
       "genero": null,
       "plural": "competencies",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t43_009",
-      "italiano": "qualification",
+      "ingles": "qualification",
       "portugues": "qualificação",
       "genero": null,
       "plural": "qualifications",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t43_010",
-      "italiano": "reference",
+      "ingles": "reference",
       "portugues": "referência profissional",
       "genero": null,
       "plural": "references",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t43_011",
-      "italiano": "salary expectation",
+      "ingles": "salary expectation",
       "portugues": "pretensão salarial",
       "genero": null,
       "plural": "salary expectations",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t43_012",
-      "italiano": "culture fit",
+      "ingles": "culture fit",
       "portugues": "adequação cultural",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t43_013",
-      "italiano": "onboarding",
+      "ingles": "onboarding",
       "portugues": "integração / onboarding",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t43_014",
-      "italiano": "probation",
+      "ingles": "probation",
       "portugues": "período de experiência / probatório",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t43_015",
-      "italiano": "promotion",
+      "ingles": "promotion",
       "portugues": "promoção",
       "genero": null,
       "plural": "promotions",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t43_016",
-      "italiano": "layoff",
+      "ingles": "layoff",
       "portugues": "demissão em massa / dispensa",
       "genero": null,
       "plural": "layoffs",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t43_017",
-      "italiano": "headhunter",
+      "ingles": "headhunter",
       "portugues": "headhunter / caçador de talentos",
       "genero": null,
       "plural": "headhunters",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t43_018",
-      "italiano": "LinkedIn",
+      "ingles": "LinkedIn",
       "portugues": "LinkedIn",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t43_019",
-      "italiano": "portfolio",
+      "ingles": "portfolio",
       "portugues": "portfólio",
       "genero": null,
       "plural": "portfolios",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t43_020",
-      "italiano": "follow-up",
+      "ingles": "follow-up",
       "portugues": "acompanhamento / follow-up",
       "genero": null,
       "plural": "follow-ups",

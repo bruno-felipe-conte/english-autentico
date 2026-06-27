@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t13_001",
-      "italiano": "head",
+      "ingles": "head",
       "portugues": "cabeça",
       "genero": null,
       "plural": "heads",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t13_002",
-      "italiano": "face",
+      "ingles": "face",
       "portugues": "rosto / face",
       "genero": null,
       "plural": "faces",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t13_003",
-      "italiano": "eye",
+      "ingles": "eye",
       "portugues": "olho",
       "genero": null,
       "plural": "eyes",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t13_004",
-      "italiano": "ear",
+      "ingles": "ear",
       "portugues": "orelha / ouvido",
       "genero": null,
       "plural": "ears",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t13_005",
-      "italiano": "nose",
+      "ingles": "nose",
       "portugues": "nariz",
       "genero": null,
       "plural": "noses",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t13_006",
-      "italiano": "mouth",
+      "ingles": "mouth",
       "portugues": "boca",
       "genero": null,
       "plural": "mouths",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t13_007",
-      "italiano": "hand",
+      "ingles": "hand",
       "portugues": "mão",
       "genero": null,
       "plural": "hands",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t13_008",
-      "italiano": "arm",
+      "ingles": "arm",
       "portugues": "braço",
       "genero": null,
       "plural": "arms",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t13_009",
-      "italiano": "leg",
+      "ingles": "leg",
       "portugues": "perna",
       "genero": null,
       "plural": "legs",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t13_010",
-      "italiano": "foot",
+      "ingles": "foot",
       "portugues": "pé",
       "genero": null,
       "plural": "feet",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t13_011",
-      "italiano": "sick",
+      "ingles": "sick",
       "portugues": "doente",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t13_012",
-      "italiano": "healthy",
+      "ingles": "healthy",
       "portugues": "saudável",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t13_013",
-      "italiano": "doctor",
+      "ingles": "doctor",
       "portugues": "médico",
       "genero": null,
       "plural": "doctors",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t13_014",
-      "italiano": "hospital",
+      "ingles": "hospital",
       "portugues": "hospital",
       "genero": null,
       "plural": "hospitals",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t13_015",
-      "italiano": "medicine",
+      "ingles": "medicine",
       "portugues": "remédio / medicamento",
       "genero": null,
       "plural": "medicines",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t13_016",
-      "italiano": "pain",
+      "ingles": "pain",
       "portugues": "dor",
       "genero": null,
       "plural": "pains",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t13_017",
-      "italiano": "headache",
+      "ingles": "headache",
       "portugues": "dor de cabeça",
       "genero": null,
       "plural": "headaches",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t13_018",
-      "italiano": "fever",
+      "ingles": "fever",
       "portugues": "febre",
       "genero": null,
       "plural": "fevers",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t13_019",
-      "italiano": "rest",
+      "ingles": "rest",
       "portugues": "descansar / repouso",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t13_020",
-      "italiano": "appointment",
+      "ingles": "appointment",
       "portugues": "consulta / agendamento",
       "genero": null,
       "plural": "appointments",

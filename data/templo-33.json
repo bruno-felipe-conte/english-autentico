@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t33_001",
-      "italiano": "headline",
+      "ingles": "headline",
       "portugues": "manchete",
       "genero": null,
       "plural": "headlines",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t33_002",
-      "italiano": "article",
+      "ingles": "article",
       "portugues": "artigo",
       "genero": null,
       "plural": "articles",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t33_003",
-      "italiano": "journalist",
+      "ingles": "journalist",
       "portugues": "jornalista",
       "genero": null,
       "plural": "journalists",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t33_004",
-      "italiano": "reporter",
+      "ingles": "reporter",
       "portugues": "repórter",
       "genero": null,
       "plural": "reporters",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t33_005",
-      "italiano": "editor",
+      "ingles": "editor",
       "portugues": "editor / editora",
       "genero": null,
       "plural": "editors",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t33_006",
-      "italiano": "broadcast",
+      "ingles": "broadcast",
       "portugues": "transmissão / transmitir",
       "genero": null,
       "plural": "broadcasts",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t33_007",
-      "italiano": "podcast",
+      "ingles": "podcast",
       "portugues": "podcast",
       "genero": null,
       "plural": "podcasts",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t33_008",
-      "italiano": "bias",
+      "ingles": "bias",
       "portugues": "viés / parcialidade",
       "genero": null,
       "plural": "biases",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t33_009",
-      "italiano": "fact-check",
+      "ingles": "fact-check",
       "portugues": "verificar fatos / checagem de fatos",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t33_010",
-      "italiano": "source",
+      "ingles": "source",
       "portugues": "fonte",
       "genero": null,
       "plural": "sources",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t33_011",
-      "italiano": "breaking news",
+      "ingles": "breaking news",
       "portugues": "notícia de última hora",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t33_012",
-      "italiano": "op-ed",
+      "ingles": "op-ed",
       "portugues": "artigo de opinião",
       "genero": null,
       "plural": "op-eds",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t33_013",
-      "italiano": "social media",
+      "ingles": "social media",
       "portugues": "mídia social / redes sociais",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t33_014",
-      "italiano": "viral",
+      "ingles": "viral",
       "portugues": "viral",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t33_015",
-      "italiano": "clickbait",
+      "ingles": "clickbait",
       "portugues": "isca de cliques / clickbait",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t33_016",
-      "italiano": "subscribe",
+      "ingles": "subscribe",
       "portugues": "assinar / se inscrever",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t33_017",
-      "italiano": "live stream",
+      "ingles": "live stream",
       "portugues": "transmissão ao vivo",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t33_018",
-      "italiano": "press release",
+      "ingles": "press release",
       "portugues": "comunicado à imprensa",
       "genero": null,
       "plural": "press releases",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t33_019",
-      "italiano": "coverage",
+      "ingles": "coverage",
       "portugues": "cobertura jornalística",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t33_020",
-      "italiano": "editorial",
+      "ingles": "editorial",
       "portugues": "editorial",
       "genero": null,
       "plural": "editorials",

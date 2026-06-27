@@ -15,43 +15,43 @@
           "alerta": "O verbo 'To Be' é o coração do inglês! Ele significa 'ser' ou 'estar' e muda dependendo de quem está falando.",
           "observacao_cards": [
             {
-              "italiano": "I am",
+              "ingles": "I am",
               "traducao": "Eu sou / estou",
               "genero": "1ª Pessoa Singular",
               "motivo": "I+AM são inseparáveis — como 'Eu' nunca muda, I+am nunca mudam entre si"
             },
             {
-              "italiano": "You are",
+              "ingles": "You are",
               "traducao": "Você é / está",
               "genero": "2ª Pessoa",
               "motivo": "YOU é democrático — trata um e muitos igual, sempre ARE"
             },
             {
-              "italiano": "He is",
+              "ingles": "He is",
               "traducao": "Ele é / está",
               "genero": "3ª Pessoa Singular (Ele)",
               "motivo": "Toda 3ª pessoa singular carrega IS como sobrenome: He IS"
             },
             {
-              "italiano": "She is",
+              "ingles": "She is",
               "traducao": "Ela é / está",
               "genero": "3ª Pessoa Singular (Ela)",
               "motivo": "Toda 3ª pessoa singular carrega IS como sobrenome: She IS"
             },
             {
-              "italiano": "It is",
+              "ingles": "It is",
               "traducao": "Ele/Ela é / está (coisas/animais)",
               "genero": "3ª Pessoa Neutra",
               "motivo": "Toda 3ª pessoa singular carrega IS como sobrenome: It IS"
             },
             {
-              "italiano": "We are",
+              "ingles": "We are",
               "traducao": "Nós somos / estamos",
               "genero": "1ª Pessoa Plural",
               "motivo": "Plural é democrático: somos nós (We) ou eles (They), sempre usamos ARE"
             },
             {
-              "italiano": "They are",
+              "ingles": "They are",
               "traducao": "Eles/Elas são / estão",
               "genero": "3ª Pessoa Plural",
               "motivo": "Plural é democrático: somos nós (We) ou eles (They), sempre usamos ARE"
@@ -156,25 +156,25 @@
           "alerta": "Fazer perguntas e negar com o verbo 'To Be' é simples: basta adicionar o 'not' ou inverter a ordem das palavras!",
           "observacao_cards": [
             {
-              "italiano": "I am not",
+              "ingles": "I am not",
               "traducao": "Eu não sou / estou",
               "genero": "Negativa",
               "motivo": "O 'NOT' é o penetra da festa: sempre chega logo após o verbo To Be para estragar a afirmação."
             },
             {
-              "italiano": "He is not (isn't)",
+              "ingles": "He is not (isn't)",
               "traducao": "Ele não é / está",
               "genero": "Negativa",
               "motivo": "Na pressa do dia a dia, 'is + not' encolhem e viram 'isn't' — junte tudo e coma a letra 'O'!"
             },
             {
-              "italiano": "Are you?",
+              "ingles": "Are you?",
               "traducao": "Você é / está?",
               "genero": "Interrogativa",
               "motivo": "Interrogação é ginástica: o verbo To Be dá um salto mortal e cai antes do sujeito!"
             },
             {
-              "italiano": "Is she?",
+              "ingles": "Is she?",
               "traducao": "Ela é / está?",
               "genero": "Interrogativa",
               "motivo": "Interrogação é ginástica: o verbo To Be dá um salto mortal e cai antes do sujeito!"
@@ -279,25 +279,25 @@
           "alerta": "Use os pronomes demonstrativos para apontar coisas. A escolha depende da distância (perto/longe) e da quantidade (singular/plural).",
           "observacao_cards": [
             {
-              "italiano": "This",
+              "ingles": "This",
               "traducao": "Este, esta, isto",
               "genero": "Singular (Perto)",
               "motivo": "THIS é para o toque — se você consegue encostar no objeto singular, use THIS."
             },
             {
-              "italiano": "That",
+              "ingles": "That",
               "traducao": "Aquele, aquela, aquilo, esse, essa",
               "genero": "Singular (Longe)",
               "motivo": "THAT é para o apontar — aponte com o dedo para aquela coisa singular longe de você."
             },
             {
-              "italiano": "These",
+              "ingles": "These",
               "traducao": "Estes, estas",
               "genero": "Plural (Perto)",
               "motivo": "THESE é o plural do toque — use para vários objetos que estão ao alcance da sua mão."
             },
             {
-              "italiano": "Those",
+              "ingles": "Those",
               "traducao": "Aqueles, aquelas",
               "genero": "Plural (Longe)",
               "motivo": "THOSE é o plural do apontar — aponte para aquele grupo de coisas distantes lá longe."
@@ -401,19 +401,19 @@
           "alerta": "Em inglês, 'A' e 'An' significam 'um/uma'. A regra não depende da letra, mas sim do SOM (consoante ou vogal). 'The' é o artigo definido 'o/a/os/as'.",
           "observacao_cards": [
             {
-              "italiano": "A",
+              "ingles": "A",
               "traducao": "Um, uma",
               "genero": "Artigo Indefinido",
               "motivo": "Use A antes de sons de consoante para evitar que as vogais batam de frente e causem um acidente fonético."
             },
             {
-              "italiano": "An",
+              "ingles": "An",
               "traducao": "Um, uma",
               "genero": "Artigo Indefinido",
               "motivo": "O 'N' em AN serve como um para-choques para separar duas vogais e manter o ritmo suave da fala."
             },
             {
-              "italiano": "The",
+              "ingles": "The",
               "traducao": "O, a, os, as",
               "genero": "Artigo Definido",
               "motivo": "THE é o holofote — use quando você e o ouvinte estão olhando exatamente para a mesma coisa específica."
@@ -518,37 +518,37 @@
           "alerta": "O plural em inglês é frequentemente fácil: basta colocar um '-s'. Mas cuidado com os irregulares teimosos que mudam a palavra toda!",
           "observacao_cards": [
             {
-              "italiano": "-s (Regular)",
+              "ingles": "-s (Regular)",
               "traducao": "-s",
               "genero": "Regra Geral",
               "motivo": "A regra geral é simples e preguiçosa: basta jogar um -S no final e pronto, virou plural."
             },
             {
-              "italiano": "Men",
+              "ingles": "Men",
               "traducao": "Homens",
               "genero": "Irregular",
               "motivo": "Plurais rebeldes: em vez de ganhar -S, mudam a vogal interna de A para E (man -> men)."
             },
             {
-              "italiano": "Women",
+              "ingles": "Women",
               "traducao": "Mulheres",
               "genero": "Irregular",
               "motivo": "Plurais rebeldes: em vez de ganhar -S, mudam a vogal interna de A para E (woman -> women)."
             },
             {
-              "italiano": "Children",
+              "ingles": "Children",
               "traducao": "Crianças",
               "genero": "Irregular",
               "motivo": "CHILDREN é um plural teimoso que ganha um sufixo antigo (-ren). Nunca, jamais adicione -S aqui!"
             },
             {
-              "italiano": "Teeth",
+              "ingles": "Teeth",
               "traducao": "Dentes",
               "genero": "Irregular",
               "motivo": "O plural dos dois 'O's: palavras com 'oo' costumam trocar os olhos por dois 'e's no plural (tooth -> teeth)."
             },
             {
-              "italiano": "Feet",
+              "ingles": "Feet",
               "traducao": "Pés",
               "genero": "Irregular",
               "motivo": "O plural dos dois 'O's: palavras com 'oo' costumam trocar os olhos por dois 'e's no plural (foot -> feet)."
@@ -653,43 +653,43 @@
           "alerta": "Os adjetivos possessivos sempre vêm ANTES de um substantivo para mostrar a quem algo pertence.",
           "observacao_cards": [
             {
-              "italiano": "My",
+              "ingles": "My",
               "traducao": "Meu(s), Minha(s)",
               "genero": "Possessive",
               "motivo": "Refere-se a 'I' (Eu)"
             },
             {
-              "italiano": "Your",
+              "ingles": "Your",
               "traducao": "Seu(s), Sua(s)",
               "genero": "Possessive",
               "motivo": "Refere-se a 'You' (Você/Vocês)"
             },
             {
-              "italiano": "His",
+              "ingles": "His",
               "traducao": "Dele",
               "genero": "Possessive",
               "motivo": "Refere-se a 'He' (Ele)"
             },
             {
-              "italiano": "Her",
+              "ingles": "Her",
               "traducao": "Dela",
               "genero": "Possessive",
               "motivo": "Refere-se a 'She' (Ela)"
             },
             {
-              "italiano": "Its",
+              "ingles": "Its",
               "traducao": "Dele/Dela (coisas/animais)",
               "genero": "Possessive",
               "motivo": "Refere-se a 'It' (Ele/Ela neutro)"
             },
             {
-              "italiano": "Our",
+              "ingles": "Our",
               "traducao": "Nosso(s), Nossa(s)",
               "genero": "Possessive",
               "motivo": "Refere-se a 'We' (Nós)"
             },
             {
-              "italiano": "Their",
+              "ingles": "Their",
               "traducao": "Deles, Delas",
               "genero": "Possessive",
               "motivo": "Refere-se a 'They' (Eles/Elas)"
@@ -788,19 +788,19 @@
           "alerta": "Pronomes possessivos substituem o substantivo, e o caso genitivo ('s) mostra posse de forma direta conectando o dono e a coisa possuída.",
           "observacao_cards": [
             {
-              "italiano": "Mine",
+              "ingles": "Mine",
               "traducao": "Meu(s), Minha(s)",
               "genero": "Pronoun",
               "motivo": "Substitui 'my + substantivo'"
             },
             {
-              "italiano": "Yours",
+              "ingles": "Yours",
               "traducao": "Seu(s), Sua(s)",
               "genero": "Pronoun",
               "motivo": "Substitui 'your + substantivo'"
             },
             {
-              "italiano": "'s",
+              "ingles": "'s",
               "traducao": "De (Posse)",
               "genero": "Genitive Case",
               "motivo": "Adicionado ao possuidor (ex: Maria's book)"
@@ -897,19 +897,19 @@
           "alerta": "Em inglês, as palavras de pergunta (Wh- words) vêm sempre no início da frase para buscar informações específicas.",
           "observacao_cards": [
             {
-              "italiano": "What",
+              "ingles": "What",
               "traducao": "O que / Qual",
               "genero": "Question Word",
               "motivo": "Para perguntar sobre coisas ou ações"
             },
             {
-              "italiano": "Who",
+              "ingles": "Who",
               "traducao": "Quem",
               "genero": "Question Word",
               "motivo": "Para perguntar sobre pessoas"
             },
             {
-              "italiano": "Where",
+              "ingles": "Where",
               "traducao": "Onde",
               "genero": "Question Word",
               "motivo": "Para perguntar sobre lugares"
@@ -1008,13 +1008,13 @@
           "alerta": "O Present Simple é usado para rotinas, hábitos e fatos permanentes. Para I, You, We e They, o verbo permanece igual ao infinitivo (sem o 'to').",
           "observacao_cards": [
             {
-              "italiano": "Work",
+              "ingles": "Work",
               "traducao": "Trabalhar",
               "genero": "Verb",
               "motivo": "Mantém-se igual para I, You, We, They"
             },
             {
-              "italiano": "Like",
+              "ingles": "Like",
               "traducao": "Gostar",
               "genero": "Verb",
               "motivo": "I like, You like, We like, They like"
@@ -1113,19 +1113,19 @@
           "alerta": "Quando falamos sobre Ele (He), Ela (She) ou um animal/coisa (It) no presente, o verbo principal sofre uma pequena mudança no final!",
           "observacao_cards": [
             {
-              "italiano": "-s",
+              "ingles": "-s",
               "traducao": "Regra geral",
               "genero": "Spelling Rule",
               "motivo": "Adicionar 's' na maioria dos verbos (work -> works)"
             },
             {
-              "italiano": "-es",
+              "ingles": "-es",
               "traducao": "ch, sh, s, x, z, o",
               "genero": "Spelling Rule",
               "motivo": "Adicionar 'es' (watch -> watches, go -> goes)"
             },
             {
-              "italiano": "-ies",
+              "ingles": "-ies",
               "traducao": "Consoante + y",
               "genero": "Spelling Rule",
               "motivo": "Tirar o 'y' e colocar 'ies' (study -> studies)"
@@ -1224,13 +1224,13 @@
           "alerta": "Para dizer 'não' no Present Simple, precisamos da ajuda de 'don't' e 'doesn't'.",
           "observacao_cards": [
             {
-              "italiano": "don't",
+              "ingles": "don't",
               "traducao": "não (I, You, We, They)",
               "genero": "Verbo Auxiliar",
               "motivo": "Negativa para a maioria das pessoas"
             },
             {
-              "italiano": "doesn't",
+              "ingles": "doesn't",
               "traducao": "não (He, She, It)",
               "genero": "Verbo Auxiliar",
               "motivo": "Negativa para a 3ª pessoa do singular"
@@ -1318,13 +1318,13 @@
           "alerta": "No inglês, não basta apenas mudar a entonação da voz. Precisamos colocar 'Do' ou 'Does' no começo da frase para fazer uma pergunta no presente!",
           "observacao_cards": [
             {
-              "italiano": "Do",
+              "ingles": "Do",
               "traducao": "(Indicador de pergunta)",
               "genero": "Verbo Auxiliar",
               "motivo": "Usado antes de I, You, We, They"
             },
             {
-              "italiano": "Does",
+              "ingles": "Does",
               "traducao": "(Indicador de pergunta)",
               "genero": "Verbo Auxiliar",
               "motivo": "Usado antes de He, She, It"
@@ -1417,25 +1417,25 @@
           "alerta": "Usamos esses advérbios para dizer COM QUE FREQUÊNCIA fazemos algo (Sempre? Às vezes? Nunca?).",
           "observacao_cards": [
             {
-              "italiano": "always",
+              "ingles": "always",
               "traducao": "sempre (100%)",
               "genero": "Advérbio",
               "motivo": "Uma ação constante"
             },
             {
-              "italiano": "usually",
+              "ingles": "usually",
               "traducao": "normalmente (80%)",
               "genero": "Advérbio",
               "motivo": "Maior parte do tempo"
             },
             {
-              "italiano": "sometimes",
+              "ingles": "sometimes",
               "traducao": "às vezes (50%)",
               "genero": "Advérbio",
               "motivo": "Metade das vezes"
             },
             {
-              "italiano": "never",
+              "ingles": "never",
               "traducao": "nunca (0%)",
               "genero": "Advérbio",
               "motivo": "Ação inexistente"
@@ -1539,25 +1539,25 @@
           "alerta": "Quer obter mais do que apenas um 'Sim' ou 'Não'? Use as Question Words! Elas lideram a pergunta.",
           "observacao_cards": [
             {
-              "italiano": "when",
+              "ingles": "when",
               "traducao": "quando",
               "genero": "Question Word",
               "motivo": "Pergunta sobre tempo/data"
             },
             {
-              "italiano": "why",
+              "ingles": "why",
               "traducao": "por que",
               "genero": "Question Word",
               "motivo": "Pergunta sobre motivo/razão"
             },
             {
-              "italiano": "how",
+              "ingles": "how",
               "traducao": "como",
               "genero": "Question Word",
               "motivo": "Pergunta sobre maneira/estado"
             },
             {
-              "italiano": "how often",
+              "ingles": "how often",
               "traducao": "com que frequência",
               "genero": "Question Word",
               "motivo": "Pergunta sobre rotina/frequência"
@@ -1645,19 +1645,19 @@
           "alerta": "Pronomes pessoais regulares (I, He, She) FAZEM a ação. Mas e quem RECEBE a ação? Apresentando os Object Pronouns!",
           "observacao_cards": [
             {
-              "italiano": "me",
+              "ingles": "me",
               "traducao": "me / mim (recebe a ação de 'I')",
               "genero": "Object Pronoun",
               "motivo": "Objeto da frase"
             },
             {
-              "italiano": "him / her",
+              "ingles": "him / her",
               "traducao": "o, lhe, a ele / a, lhe, a ela",
               "genero": "Object Pronoun",
               "motivo": "Objetos equivalentes a He e She"
             },
             {
-              "italiano": "us / them",
+              "ingles": "us / them",
               "traducao": "nos / os, as, lhes, a eles",
               "genero": "Object Pronoun",
               "motivo": "Objetos equivalentes a We e They"
@@ -1750,19 +1750,19 @@
           "alerta": "Em inglês, 'have got' é muito comum para falar de posse e características, enquanto 'have' sozinho também é usado para posse, mas especialmente para indicar ações como comer ou tomar banho.",
           "observacao_cards": [
             {
-              "italiano": "I have got",
+              "ingles": "I have got",
               "traducao": "Eu tenho",
               "genero": "Posse",
               "motivo": "Usado para indicar que possuo algo (mais comum no Reino Unido)."
             },
             {
-              "italiano": "He has got",
+              "ingles": "He has got",
               "traducao": "Ele tem",
               "genero": "Posse",
               "motivo": "Forma para a 3ª pessoa do singular (He, She, It)."
             },
             {
-              "italiano": "I have breakfast",
+              "ingles": "I have breakfast",
               "traducao": "Eu tomo café da manhã",
               "genero": "Ação",
               "motivo": "Não usamos 'got' quando 'have' significa uma ação (comer, beber)."
@@ -1856,13 +1856,13 @@
           "alerta": "Em inglês, usamos 'There is' e 'There are' para dizer que algo existe em um lugar. É o equivalente ao verbo 'haver' ou 'ter' no sentido de existência.",
           "observacao_cards": [
             {
-              "italiano": "There is",
+              "ingles": "There is",
               "traducao": "Há / Tem (Singular)",
               "genero": "Existência",
               "motivo": "Usado para um único objeto, pessoa ou animal."
             },
             {
-              "italiano": "There are",
+              "ingles": "There are",
               "traducao": "Há / Têm (Plural)",
               "genero": "Existência",
               "motivo": "Usado para dois ou mais objetos, pessoas ou animais."
@@ -1956,19 +1956,19 @@
           "alerta": "In, On, e At são preposições de lugar que funcionam como uma pirâmide invertida: do mais amplo e geral (In) para o ponto mais específico (At).",
           "observacao_cards": [
             {
-              "italiano": "In",
+              "ingles": "In",
               "traducao": "Dentro de / Em",
               "genero": "Amplo",
               "motivo": "Para continentes, países, cidades ou espaços fechados (uma caixa)."
             },
             {
-              "italiano": "On",
+              "ingles": "On",
               "traducao": "Sobre / Na",
               "genero": "Superfície",
               "motivo": "Para ruas, avenidas, ou algo que está encostado em uma superfície."
             },
             {
-              "italiano": "At",
+              "ingles": "At",
               "traducao": "No / Na",
               "genero": "Ponto Específico",
               "motivo": "Endereços completos com número ou pontos exatos num mapa."
@@ -2062,19 +2062,19 @@
           "alerta": "As preposições in, on e at também funcionam para tempo! A regra da pirâmide invertida (do longo/geral para o curto/exato) se mantém perfeitamente.",
           "observacao_cards": [
             {
-              "italiano": "In",
+              "ingles": "In",
               "traducao": "Em",
               "genero": "Períodos Longos",
               "motivo": "Anos, meses, estações do ano, séculos e partes do dia (manhã, tarde)."
             },
             {
-              "italiano": "On",
+              "ingles": "On",
               "traducao": "Em (No/Na)",
               "genero": "Dias e Datas",
               "motivo": "Dias da semana e datas específicas com dia e mês."
             },
             {
-              "italiano": "At",
+              "ingles": "At",
               "traducao": "Às",
               "genero": "Horas e Momentos",
               "motivo": "Horários de relógio, feriados específicos e a exceção 'at night'."
@@ -2168,13 +2168,13 @@
           "alerta": "No inglês, coisas se dividem fortemente entre o que dá para contar (1, 2, 3 maçãs) e o que se precisa medir ou agrupar (como água, não existe '2 águas', mas sim '2 copos de água').",
           "observacao_cards": [
             {
-              "italiano": "Countable",
+              "ingles": "Countable",
               "traducao": "Contável",
               "genero": "Contagem",
               "motivo": "Pode ir para o plural (com 's') e aceita os artigos 'a'/'an' e números."
             },
             {
-              "italiano": "Uncountable",
+              "ingles": "Uncountable",
               "traducao": "Incontável",
               "genero": "Sem plural",
               "motivo": "Sempre no singular, não aceita 'a'/'an' diretamente ou números puros."
@@ -2268,13 +2268,13 @@
           "alerta": "Para falarmos sobre quantidades indefinidas, usamos 'some' e 'any'. A escolha entre eles depende do tipo de frase que estamos construindo.",
           "observacao_cards": [
             {
-              "italiano": "Some",
+              "ingles": "Some",
               "traducao": "Algum, alguns, um pouco de",
               "genero": "Afirmativas",
               "motivo": "Usado em frases afirmativas (e em pedidos ou oferecimentos)."
             },
             {
-              "italiano": "Any",
+              "ingles": "Any",
               "traducao": "Nenhum, qualquer, algum",
               "genero": "Negativas e Interrogativas",
               "motivo": "Usado em frases negativas e na maioria das perguntas."
@@ -2378,19 +2378,19 @@
           "alerta": "Quando a quantidade é grande, precisamos saber se o substantivo é contável (pode ir para o plural) ou incontável (sempre singular).",
           "observacao_cards": [
             {
-              "italiano": "Many",
+              "ingles": "Many",
               "traducao": "Muitos, muitas",
               "genero": "Contáveis",
               "motivo": "Usado com coisas que podemos contar (ex: apples, cars, people)."
             },
             {
-              "italiano": "Much",
+              "ingles": "Much",
               "traducao": "Muito, muita",
               "genero": "Incontáveis",
               "motivo": "Usado com coisas incontáveis, geralmente líquidos, sentimentos, conceitos (ex: water, time, money)."
             },
             {
-              "italiano": "A lot of",
+              "ingles": "A lot of",
               "traducao": "Muito(s), um monte de",
               "genero": "Ambos",
               "motivo": "Usado tanto para contáveis quanto incontáveis, geralmente em frases afirmativas."
@@ -2489,13 +2489,13 @@
           "alerta": "Para perguntar 'quanto' ou 'quantos', usamos 'How much' e 'How many'. O segredo está em saber se podemos contar o item (com 's' no plural) ou não!",
           "observacao_cards": [
             {
-              "italiano": "How many",
+              "ingles": "How many",
               "traducao": "Quantos / Quantas",
               "genero": "Contáveis",
               "motivo": "Usado para perguntar a quantidade de coisas contáveis (frequentemente no plural)."
             },
             {
-              "italiano": "How much",
+              "ingles": "How much",
               "traducao": "Quanto / Quanta",
               "genero": "Incontáveis e Preço",
               "motivo": "Usado para perguntar a quantidade de coisas incontáveis, ou para perguntar o preço de algo."
@@ -2594,13 +2594,13 @@
           "alerta": "O Present Continuous (ou Present Progressive) é usado para falar sobre ações que estão acontecendo neste exato momento.",
           "observacao_cards": [
             {
-              "italiano": "Verb To Be + verb-ing",
+              "ingles": "Verb To Be + verb-ing",
               "traducao": "Ser/Estar + verbo com -ing (gerúndio)",
               "genero": "Estrutura",
               "motivo": "A fórmula mágica para dizer que está fazendo algo."
             },
             {
-              "italiano": "Playing, Eating, Working",
+              "ingles": "Playing, Eating, Working",
               "traducao": "Jogando, comendo, trabalhando",
               "genero": "Sufixo -ing",
               "motivo": "Equivale ao nosso '-ndo' do português."
@@ -2699,13 +2699,13 @@
           "alerta": "Agora que você sabe afirmar o que está acontecendo, vamos aprender a negar e a fazer perguntas usando o Present Continuous.",
           "observacao_cards": [
             {
-              "italiano": "Not",
+              "ingles": "Not",
               "traducao": "Não",
               "genero": "Negativa",
               "motivo": "Coloque o 'not' logo depois do verbo To Be (am not, isn't, aren't)."
             },
             {
-              "italiano": "Am / Is / Are + Subject",
+              "ingles": "Am / Is / Are + Subject",
               "traducao": "Inversão na Pergunta",
               "genero": "Interrogativa",
               "motivo": "Para perguntar, o verbo To Be vai para o início da frase, antes do sujeito."
@@ -2804,13 +2804,13 @@
           "alerta": "Você sabe diferenciar o que você faz todo dia do que está fazendo agora? Usamos tempos verbais diferentes para isso!",
           "observacao_cards": [
             {
-              "italiano": "I study English every day.",
+              "ingles": "I study English every day.",
               "traducao": "Eu estudo inglês todo dia.",
               "genero": "Present Simple",
               "motivo": "Rotina ou hábito"
             },
             {
-              "italiano": "I am studying English now.",
+              "ingles": "I am studying English now.",
               "traducao": "Eu estou estudando inglês agora.",
               "genero": "Present Continuous",
               "motivo": "Ação acontecendo no momento"
@@ -2903,19 +2903,19 @@
           "alerta": "Como dizer o que você consegue fazer ou pedir permissão? O verbo 'can' é um super-herói: não muda com as pessoas!",
           "observacao_cards": [
             {
-              "italiano": "I can swim",
+              "ingles": "I can swim",
               "traducao": "Eu sei nadar / Eu consigo nadar",
               "genero": "Ability",
               "motivo": "Expressa habilidade"
             },
             {
-              "italiano": "Can I go to the bathroom?",
+              "ingles": "Can I go to the bathroom?",
               "traducao": "Posso ir ao banheiro?",
               "genero": "Permission",
               "motivo": "Pedido de permissão"
             },
             {
-              "italiano": "He cannot / can't sing",
+              "ingles": "He cannot / can't sing",
               "traducao": "Ele não sabe / não consegue cantar",
               "genero": "Inability",
               "motivo": "Falta de habilidade"
@@ -3008,19 +3008,19 @@
           "alerta": "Precisa dar uma ordem, conselho ou instrução? Use o modo Imperativo, indo direto ao ponto sem colocar o sujeito!",
           "observacao_cards": [
             {
-              "italiano": "Open the door.",
+              "ingles": "Open the door.",
               "traducao": "Abra a porta.",
               "genero": "Affirmative",
               "motivo": "Comando direto"
             },
             {
-              "italiano": "Don't touch that!",
+              "ingles": "Don't touch that!",
               "traducao": "Não toque nisso!",
               "genero": "Negative",
               "motivo": "Proibição ou aviso"
             },
             {
-              "italiano": "Let's go!",
+              "ingles": "Let's go!",
               "traducao": "Vamos!",
               "genero": "Suggestion",
               "motivo": "Convite (incluindo o falante)"
@@ -3113,25 +3113,25 @@
           "alerta": "Pare de falar só frases curtas! As conjunções são a cola que vai juntar suas ideias e dar fluidez ao seu inglês.",
           "observacao_cards": [
             {
-              "italiano": "and",
+              "ingles": "and",
               "traducao": "e",
               "genero": "Addition",
               "motivo": "Junta ideias similares ou informações adicionais"
             },
             {
-              "italiano": "but",
+              "ingles": "but",
               "traducao": "mas",
               "genero": "Contrast",
               "motivo": "Mostra ideias opostas ou contraste"
             },
             {
-              "italiano": "because",
+              "ingles": "because",
               "traducao": "porque",
               "genero": "Reason",
               "motivo": "Explica a causa de algo"
             },
             {
-              "italiano": "so",
+              "ingles": "so",
               "traducao": "então / por isso",
               "genero": "Result",
               "motivo": "Mostra a consequência de uma ação"
@@ -3219,13 +3219,13 @@
           "alerta": "No inglês, as características (adjetivos) vêm ANTES da coisa que descrevem. É como dizer 'o vermelho carro' em vez de 'o carro vermelho'!",
           "observacao_cards": [
             {
-              "italiano": "a red car",
+              "ingles": "a red car",
               "traducao": "um carro vermelho",
               "genero": "Adjective + Noun",
               "motivo": "Adjetivo vem antes do substantivo"
             },
             {
-              "italiano": "beautiful flowers",
+              "ingles": "beautiful flowers",
               "traducao": "flores bonitas",
               "genero": "No plural",
               "motivo": "Adjetivos nunca ganham 's' no plural"
@@ -3331,13 +3331,13 @@
           "alerta": "O verbo 'To Be' no passado é a base para falar sobre o que você foi ou onde esteve.",
           "observacao_cards": [
             {
-              "italiano": "was",
+              "ingles": "was",
               "traducao": "fui / era / estava",
               "genero": "Singular",
               "motivo": "Usado para I, He, She, It"
             },
             {
-              "italiano": "were",
+              "ingles": "were",
               "traducao": "fomos / éramos / estávamos",
               "genero": "Plural / You",
               "motivo": "Usado para You, We, They"
@@ -3431,19 +3431,19 @@
           "alerta": "Verbos regulares no passado recebem '-ed', mas preste atenção na pronúncia, que pode variar!",
           "observacao_cards": [
             {
-              "italiano": "play -> played",
+              "ingles": "play -> played",
               "traducao": "jogar -> jogou",
               "genero": "Regra Geral",
               "motivo": "Adiciona-se -ed ao final do verbo"
             },
             {
-              "italiano": "dance -> danced",
+              "ingles": "dance -> danced",
               "traducao": "dançar -> dançou",
               "genero": "Terminados em 'e'",
               "motivo": "Adiciona-se apenas -d"
             },
             {
-              "italiano": "study -> studied",
+              "ingles": "study -> studied",
               "traducao": "estudar -> estudou",
               "genero": "Consoante + 'y'",
               "motivo": "Troca o 'y' por 'ied'"
@@ -3537,19 +3537,19 @@
           "alerta": "Alguns dos verbos mais usados em inglês não seguem a regra do '-ed'. Eles têm formas próprias!",
           "observacao_cards": [
             {
-              "italiano": "go -> went",
+              "ingles": "go -> went",
               "traducao": "ir -> foi",
               "genero": "Irregular",
               "motivo": "Forma totalmente diferente"
             },
             {
-              "italiano": "have -> had",
+              "ingles": "have -> had",
               "traducao": "ter -> tinha / teve",
               "genero": "Irregular",
               "motivo": "Muda a terminação"
             },
             {
-              "italiano": "do -> did",
+              "ingles": "do -> did",
               "traducao": "fazer -> fez",
               "genero": "Irregular",
               "motivo": "Muda a vogal"
@@ -3643,13 +3643,13 @@
           "alerta": "Para perguntar ou negar algo no passado (exceto com verbo To Be), o 'did' é o seu maior aliado!",
           "observacao_cards": [
             {
-              "italiano": "did not / didn't",
+              "ingles": "did not / didn't",
               "traducao": "não (no passado)",
               "genero": "Auxiliar Negativo",
               "motivo": "Tira o verbo principal do passado"
             },
             {
-              "italiano": "Did you...?",
+              "ingles": "Did you...?",
               "traducao": "Você...? (no passado)",
               "genero": "Auxiliar Interrogativo",
               "motivo": "Inicia perguntas de sim/não no passado"
@@ -3743,13 +3743,13 @@
           "alerta": "O Past Continuous descreve uma ação que estava acontecendo quando, de repente, outra coisa ocorreu.",
           "observacao_cards": [
             {
-              "italiano": "was / were + -ing",
+              "ingles": "was / were + -ing",
               "traducao": "estava ... -ndo",
               "genero": "Estrutura",
               "motivo": "Forma o passado contínuo"
             },
             {
-              "italiano": "when",
+              "ingles": "when",
               "traducao": "quando",
               "genero": "Conexão",
               "motivo": "Geralmente introduz a ação curta que interrompeu a longa"
@@ -3843,13 +3843,13 @@
           "alerta": "Usamos o Past Continuous para uma ação que estava em andamento no passado, e o Past Simple para uma ação pontual, geralmente que a interrompeu.",
           "observacao_cards": [
             {
-              "italiano": "I was studying",
+              "ingles": "I was studying",
               "traducao": "Eu estava estudando",
               "genero": "Ação longa",
               "motivo": "Past Continuous: sujeito + was/were + verbo com -ing"
             },
             {
-              "italiano": "when he arrived",
+              "ingles": "when he arrived",
               "traducao": "quando ele chegou",
               "genero": "Ação curta",
               "motivo": "Past Simple: verbo no passado simples"
@@ -3937,13 +3937,13 @@
           "alerta": "Utilizamos 'going to' para expressar algo que já planejamos fazer ou quando temos certeza de que vai acontecer baseados em evidências do presente.",
           "observacao_cards": [
             {
-              "italiano": "I am going to travel",
+              "ingles": "I am going to travel",
               "traducao": "Eu vou viajar",
               "genero": "Plano",
               "motivo": "Ação já decidida antes do momento da fala"
             },
             {
-              "italiano": "It is going to rain",
+              "ingles": "It is going to rain",
               "traducao": "Vai chover",
               "genero": "Evidência",
               "motivo": "Previsão baseada em sinais visíveis agora"
@@ -4031,13 +4031,13 @@
           "alerta": "Enquanto 'going to' lida com planos, 'will' é o futuro improvisado! Use para decisões na hora da fala, promessas ou previsões genéricas.",
           "observacao_cards": [
             {
-              "italiano": "I will help you",
+              "ingles": "I will help you",
               "traducao": "Eu vou te ajudar",
               "genero": "Decisão instantânea",
               "motivo": "Decidido no momento ou ofertando ajuda"
             },
             {
-              "italiano": "I think it will rain",
+              "ingles": "I think it will rain",
               "traducao": "Eu acho que vai chover",
               "genero": "Previsão",
               "motivo": "Opinião pessoal sem forte evidência"
@@ -4125,13 +4125,13 @@
           "alerta": "Para comparar duas coisas usamos a forma comparativa. O segredo é contar as sílabas do adjetivo: curtos ganham '-er' no final, e os longos recebem 'more' na frente.",
           "observacao_cards": [
             {
-              "italiano": "taller than",
+              "ingles": "taller than",
               "traducao": "mais alto que",
               "genero": "Adjetivo curto",
               "motivo": "tall + er"
             },
             {
-              "italiano": "more beautiful than",
+              "ingles": "more beautiful than",
               "traducao": "mais bonito(a) que",
               "genero": "Adjetivo longo",
               "motivo": "more + beautiful"
@@ -4219,13 +4219,13 @@
           "alerta": "Com o superlativo não comparamos dois, mas exaltamos um como o maior de todos! Adicionamos '-est' aos adjetivos curtos e 'the most' aos longos.",
           "observacao_cards": [
             {
-              "italiano": "the tallest",
+              "ingles": "the tallest",
               "traducao": "o mais alto",
               "genero": "Adjetivo curto",
               "motivo": "the + tall + est"
             },
             {
-              "italiano": "the most expensive",
+              "ingles": "the most expensive",
               "traducao": "o mais caro",
               "genero": "Adjetivo longo",
               "motivo": "the most + expensive"
@@ -4313,19 +4313,19 @@
           "alerta": "Use 'should' para conselhos, 'must' para obrigações fortes (ou regras) e 'have to' para necessidades externas.",
           "observacao_cards": [
             {
-              "italiano": "Should",
+              "ingles": "Should",
               "traducao": "Deveria",
               "genero": "Advice",
               "motivo": "Para dar um conselho ou sugerir o que é certo."
             },
             {
-              "italiano": "Must",
+              "ingles": "Must",
               "traducao": "Deve / Tem que",
               "genero": "Strong Obligation",
               "motivo": "Para regras, avisos fortes ou obrigações impostas por quem fala."
             },
             {
-              "italiano": "Have to",
+              "ingles": "Have to",
               "traducao": "Ter que",
               "genero": "External Obligation",
               "motivo": "Para obrigações vindas de fora (leis, chefes, horários)."
@@ -4424,13 +4424,13 @@
           "alerta": "Para explicar o propósito ou o motivo de uma ação, usamos frequentemente o infinitivo com 'to'.",
           "observacao_cards": [
             {
-              "italiano": "To + Verb",
+              "ingles": "To + Verb",
               "traducao": "Para + Verbo",
               "genero": "Grammar Structure",
               "motivo": "Substitui expressões mais longas como 'in order to' na fala diária."
             },
             {
-              "italiano": "Why...?",
+              "ingles": "Why...?",
               "traducao": "Por que...?",
               "genero": "Question",
               "motivo": "Pergunta comum que é respondida com o infinitivo de propósito."
@@ -4523,19 +4523,19 @@
           "alerta": "O Present Perfect (have/has + Particípio) conecta passado e presente. Ótimo para falar de experiências sem dizer *quando* aconteceram.",
           "observacao_cards": [
             {
-              "italiano": "Have / Has",
+              "ingles": "Have / Has",
               "traducao": "Ter (como auxiliar)",
               "genero": "Auxiliary Verb",
               "motivo": "Essencial para formar o Present Perfect. Não se traduz literalmente na maioria das vezes."
             },
             {
-              "italiano": "Past Participle",
+              "ingles": "Past Participle",
               "traducao": "Particípio Passado",
               "genero": "Verb Form",
               "motivo": "Regular: termina em -ed (played). Irregular: forma própria (seen, gone, eaten)."
             },
             {
-              "italiano": "Ever",
+              "ingles": "Ever",
               "traducao": "Já / Alguma vez",
               "genero": "Adverb",
               "motivo": "Usado em perguntas para saber se uma experiência já ocorreu em toda a vida."
@@ -4634,19 +4634,19 @@
           "alerta": "Estas palavras são amigas inseparáveis do Present Perfect. Elas adicionam um sentido extra de tempo à ação.",
           "observacao_cards": [
             {
-              "italiano": "Just",
+              "ingles": "Just",
               "traducao": "Acabar de",
               "genero": "Adverb",
               "motivo": "Usado para ações que terminaram num passado muito recente. Fica entre o auxiliar e o verbo principal."
             },
             {
-              "italiano": "Already",
+              "ingles": "Already",
               "traducao": "Já",
               "genero": "Adverb",
               "motivo": "Mostra que a ação aconteceu mais cedo do que o esperado. Geralmente afirmativo."
             },
             {
-              "italiano": "Yet",
+              "ingles": "Yet",
               "traducao": "Ainda / Já",
               "genero": "Adverb",
               "motivo": "Usado em negativas (ainda não) ou perguntas (já?). Vai sempre no final da frase."
@@ -4745,31 +4745,31 @@
           "alerta": "Elas mostram a trajetória ou movimento para algum lugar, geralmente acompanhando verbos como go, walk, run e drive.",
           "observacao_cards": [
             {
-              "italiano": "Into",
+              "ingles": "Into",
               "traducao": "Para dentro de",
               "genero": "Preposition",
               "motivo": "Movimento de fora para o interior de algo fechado."
             },
             {
-              "italiano": "Through",
+              "ingles": "Through",
               "traducao": "Através de",
               "genero": "Preposition",
               "motivo": "Movimento entrando por um lado e saindo pelo outro (ex: um túnel ou floresta)."
             },
             {
-              "italiano": "Across",
+              "ingles": "Across",
               "traducao": "Através de / Cruzando",
               "genero": "Preposition",
               "motivo": "Movimento de um lado a outro de uma superfície ou área (ex: uma rua, uma ponte)."
             },
             {
-              "italiano": "Towards",
+              "ingles": "Towards",
               "traducao": "Em direção a",
               "genero": "Preposition",
               "motivo": "Indica a direção para onde se vai, sem necessariamente chegar lá."
             },
             {
-              "italiano": "Onto",
+              "ingles": "Onto",
               "traducao": "Para cima de",
               "genero": "Preposition",
               "motivo": "Movimento de um nível mais baixo para cima de uma superfície."
@@ -4868,25 +4868,25 @@
           "alerta": "Quando não sabemos exatamente QUEM ou O QUÊ estamos mencionando, usamos os pronomes indefinidos.",
           "observacao_cards": [
             {
-              "italiano": "some- (someone, something, somewhere)",
+              "ingles": "some- (someone, something, somewhere)",
               "traducao": "alguém, algo, algum lugar",
               "genero": "Afirmativas",
               "motivo": "Usado em frases afirmativas ou ofertas."
             },
             {
-              "italiano": "any- (anyone, anything, anywhere)",
+              "ingles": "any- (anyone, anything, anywhere)",
               "traducao": "qualquer um, qualquer coisa, qualquer lugar",
               "genero": "Negativas/Interrogativas",
               "motivo": "Comum em perguntas e com verbos na negativa."
             },
             {
-              "italiano": "no- (no one, nothing, nowhere)",
+              "ingles": "no- (no one, nothing, nowhere)",
               "traducao": "ninguém, nada, lugar nenhum",
               "genero": "Afirmativas negativas",
               "motivo": "Usado quando o verbo já está na forma afirmativa."
             },
             {
-              "italiano": "every- (everyone, everything, everywhere)",
+              "ingles": "every- (everyone, everything, everywhere)",
               "traducao": "todo mundo, tudo, todos os lugares",
               "genero": "Totalidade",
               "motivo": "Refere-se a todos os itens, pessoas ou lugares."
@@ -4980,19 +4980,19 @@
           "alerta": "Certos verbos exigem que o próximo verbo venha com '-ing' (gerúndio), enquanto outros exigem o 'to' (infinitivo).",
           "observacao_cards": [
             {
-              "italiano": "enjoy / finish / mind + -ing",
+              "ingles": "enjoy / finish / mind + -ing",
               "traducao": "curtir / terminar / importar-se",
               "genero": "Verbos de Gerúndio",
               "motivo": "Esses verbos pedem o próximo verbo na forma -ing."
             },
             {
-              "italiano": "want / hope / decide + to",
+              "ingles": "want / hope / decide + to",
               "traducao": "querer / esperar / decidir",
               "genero": "Verbos de Infinitivo",
               "motivo": "Esses verbos pedem 'to + verbo base'."
             },
             {
-              "italiano": "like / love / hate",
+              "ingles": "like / love / hate",
               "traducao": "gostar / amar / odiar",
               "genero": "Flexíveis",
               "motivo": "Podem ser seguidos por ambas as formas em muitas situações."
@@ -5091,19 +5091,19 @@
           "alerta": "Quando queremos falar sobre a intensidade de algo, usamos 'too' (em excesso) ou 'enough' (na medida certa).",
           "observacao_cards": [
             {
-              "italiano": "Too + Adjective",
+              "ingles": "Too + Adjective",
               "traducao": "Demais / Muito",
               "genero": "Excesso",
               "motivo": "Indica mais do que o necessário, geralmente com sentido negativo."
             },
             {
-              "italiano": "Adjective + Enough",
+              "ingles": "Adjective + Enough",
               "traducao": "Suficientemente (adjetivo)",
               "genero": "Suficiência",
               "motivo": "Na quantidade certa. Note que vem DEPOIS do adjetivo."
             },
             {
-              "italiano": "Enough + Noun",
+              "ingles": "Enough + Noun",
               "traducao": "Suficiente (com substantivos)",
               "genero": "Suficiência",
               "motivo": "Vem ANTES de substantivos."
@@ -5197,19 +5197,19 @@
           "alerta": "Ao invés de repetir uma frase inteira para concordar com alguém, podemos ser mais diretos!",
           "observacao_cards": [
             {
-              "italiano": "So + Auxiliar + Sujeito",
+              "ingles": "So + Auxiliar + Sujeito",
               "traducao": "Eu também / fulano também",
               "genero": "Concordância Afirmativa",
               "motivo": "Para concordar com frases afirmativas."
             },
             {
-              "italiano": "Neither + Auxiliar + Sujeito",
+              "ingles": "Neither + Auxiliar + Sujeito",
               "traducao": "Nem eu / nem fulano",
               "genero": "Concordância Negativa",
               "motivo": "Para concordar com frases negativas."
             },
             {
-              "italiano": "Auxiliar (am/do/can/did)",
+              "ingles": "Auxiliar (am/do/can/did)",
               "traducao": "Auxiliar de tempo verbal",
               "genero": "Gramática",
               "motivo": "Deve combinar com o tempo verbal da frase original."
@@ -5303,13 +5303,13 @@
           "alerta": "Quando falamos de possibilidades reais no futuro, combinamos o 'If' (se) com o verbo 'Will'.",
           "observacao_cards": [
             {
-              "italiano": "If + Simple Present",
+              "ingles": "If + Simple Present",
               "traducao": "Se + Presente Simples",
               "genero": "A Condição",
               "motivo": "Descreve a situação que precisa acontecer."
             },
             {
-              "italiano": "Will + Verbo",
+              "ingles": "Will + Verbo",
               "traducao": "Acontecerá",
               "genero": "O Resultado",
               "motivo": "O que acontecerá no futuro se a condição for cumprida."
@@ -5411,13 +5411,13 @@
           "alerta": "O Past Simple descreve ações que terminaram em um momento específico no passado. O Present Perfect descreve ações no passado que têm uma conexão com o presente, sem focar em quando aconteceram.",
           "observacao_cards": [
             {
-              "italiano": "I traveled yesterday.",
+              "ingles": "I traveled yesterday.",
               "traducao": "Eu viajei ontem.",
               "genero": "Past Simple",
               "motivo": "Tempo definido ('yesterday')"
             },
             {
-              "italiano": "I have traveled to Japan.",
+              "ingles": "I have traveled to Japan.",
               "traducao": "Eu (já) viajei para o Japão.",
               "genero": "Present Perfect",
               "motivo": "Experiência de vida, tempo não especificado"
@@ -5511,13 +5511,13 @@
           "alerta": "Este tempo verbal foca na *duração* de uma atividade que tem ocorrido até o presente. A fórmula é: have/has + been + verbo com -ing.",
           "observacao_cards": [
             {
-              "italiano": "I have been reading this book.",
+              "ingles": "I have been reading this book.",
               "traducao": "Eu tenho lido este livro / Eu estive lendo este livro.",
               "genero": "Estrutura",
               "motivo": "Ação que ainda não acabou, iniciada no passado."
             },
             {
-              "italiano": "It has been raining all day.",
+              "ingles": "It has been raining all day.",
               "traducao": "Tem chovido o dia todo.",
               "genero": "Duração",
               "motivo": "Enfatiza que a chuva não parou e continua agora."
@@ -5605,13 +5605,13 @@
           "alerta": "O Past Perfect descreve uma ação que aconteceu *antes* de outra ação no passado. É como apertar o 'rewind' em uma história já no passado.",
           "observacao_cards": [
             {
-              "italiano": "I had eaten",
+              "ingles": "I had eaten",
               "traducao": "Eu tinha comido",
               "genero": "Past Perfect",
               "motivo": "Ação mais antiga."
             },
             {
-              "italiano": "I arrived",
+              "ingles": "I arrived",
               "traducao": "Eu cheguei",
               "genero": "Past Simple",
               "motivo": "Ação mais recente no passado."
@@ -5699,13 +5699,13 @@
           "alerta": "Usamos a Second Conditional para falar de situações imaginárias, improváveis ou impossíveis no presente/futuro.",
           "observacao_cards": [
             {
-              "italiano": "If I had money",
+              "ingles": "If I had money",
               "traducao": "Se eu tivesse dinheiro",
               "genero": "Condição",
               "motivo": "Passado simples indicando hipótese"
             },
             {
-              "italiano": "I would travel",
+              "ingles": "I would travel",
               "traducao": "Eu viajaria",
               "genero": "Resultado",
               "motivo": "'Would' indica o resultado imaginário"
@@ -5793,13 +5793,13 @@
           "alerta": "A Zero Conditional fala sobre situações que são *sempre verdadeiras*. Se a condição acontece, o resultado é uma consequência certa.",
           "observacao_cards": [
             {
-              "italiano": "If you heat ice",
+              "ingles": "If you heat ice",
               "traducao": "Se você aquece gelo",
               "genero": "Condição",
               "motivo": "Present Simple"
             },
             {
-              "italiano": "it melts",
+              "ingles": "it melts",
               "traducao": "ele derrete",
               "genero": "Resultado",
               "motivo": "Present Simple"
@@ -5887,13 +5887,13 @@
           "alerta": "A Voz Passiva é usada quando a ação ou o objeto que recebe a ação é mais importante do que quem a realizou.",
           "observacao_cards": [
             {
-              "italiano": "The house is cleaned every day.",
+              "ingles": "The house is cleaned every day.",
               "traducao": "A casa é limpa todos os dias.",
               "genero": "Present Passive",
               "motivo": "Foco na casa (objeto) e não em quem limpa."
             },
             {
-              "italiano": "The book was written in 1999.",
+              "ingles": "The book was written in 1999.",
               "traducao": "O livro foi escrito em 1999.",
               "genero": "Past Passive",
               "motivo": "Foco no livro, o autor não é o principal."
@@ -5981,19 +5981,19 @@
           "alerta": "Relative Clauses (Orações Relativas) são usadas para identificar exatamente de qual pessoa, coisa ou lugar estamos falando.",
           "observacao_cards": [
             {
-              "italiano": "The man who lives next door.",
+              "ingles": "The man who lives next door.",
               "traducao": "O homem que mora ao lado.",
               "genero": "Pessoas",
               "motivo": "Usa-se 'who' (ou 'that') para pessoas."
             },
             {
-              "italiano": "The book which is on the table.",
+              "ingles": "The book which is on the table.",
               "traducao": "O livro que está na mesa.",
               "genero": "Coisas",
               "motivo": "Usa-se 'which' (ou 'that') para coisas."
             },
             {
-              "italiano": "The city where I was born.",
+              "ingles": "The city where I was born.",
               "traducao": "A cidade onde eu nasci.",
               "genero": "Lugares",
               "motivo": "Usa-se 'where' para indicar um lugar."
@@ -6081,13 +6081,13 @@
           "alerta": "Usamos o Reported Speech para relatar o que alguém disse sem usar as falas exatas (aspas). A regra principal é: dê 'um passo atrás' no tempo verbal.",
           "observacao_cards": [
             {
-              "italiano": "He said (that) he was tired.",
+              "ingles": "He said (that) he was tired.",
               "traducao": "Ele disse que estava cansado.",
               "genero": "Present -> Past",
               "motivo": "A fala original 'I am tired' muda para o passado."
             },
             {
-              "italiano": "She told me (that) she lived in London.",
+              "ingles": "She told me (that) she lived in London.",
               "traducao": "Ela me disse que morava em Londres.",
               "genero": "Say x Tell",
               "motivo": "Use 'tell' com objeto (told me), e 'say' sem (said)."
@@ -6175,13 +6175,13 @@
           "alerta": "A estrutura 'Used to' é exclusiva para falar de hábitos, rotinas ou estados no passado que não são mais verdadeiros no presente.",
           "observacao_cards": [
             {
-              "italiano": "I used to play tennis.",
+              "ingles": "I used to play tennis.",
               "traducao": "Eu costumava jogar tênis.",
               "genero": "Hábito Passado",
               "motivo": "Jogava no passado, não jogo mais."
             },
             {
-              "italiano": "She didn't use to like coffee.",
+              "ingles": "She didn't use to like coffee.",
               "traducao": "Ela não costumava gostar de café.",
               "genero": "Negativa",
               "motivo": "Atenção: com o auxiliar 'didn't', o 'use' perde o 'd'."
@@ -6269,19 +6269,19 @@
           "alerta": "Usamos modais de dedução quando não temos 100% de certeza de algo no presente, mas podemos tirar conclusões lógicas com base nas evidências.",
           "observacao_cards": [
             {
-              "italiano": "He must be tired.",
+              "ingles": "He must be tired.",
               "traducao": "Ele deve estar cansado.",
               "genero": "Quase 100% de certeza (Sim)",
               "motivo": "Usa-se 'must' quando você tem certeza de que algo é verdade baseando-se no que vê (ex: ele trabalhou 12h)."
             },
             {
-              "italiano": "It might be raining.",
+              "ingles": "It might be raining.",
               "traducao": "Pode ser que esteja chovendo.",
               "genero": "Possibilidade (50%)",
               "motivo": "Usa-se 'might', 'may' ou 'could' quando algo é possível, mas você não tem certeza."
             },
             {
-              "italiano": "That can't be John.",
+              "ingles": "That can't be John.",
               "traducao": "Aquele não pode ser o John.",
               "genero": "Quase 100% de certeza (Não)",
               "motivo": "Usa-se 'can't' quando você tem certeza de que algo é impossível (ex: John está viajando)."
@@ -6369,13 +6369,13 @@
           "alerta": "Question tags são pequenas perguntas no final da frase para confirmar uma informação ou pedir concordância.",
           "observacao_cards": [
             {
-              "italiano": "You are Brazilian, aren't you?",
+              "ingles": "You are Brazilian, aren't you?",
               "traducao": "Você é brasileiro, não é?",
               "genero": "Frase Afirmativa",
               "motivo": "Tag Negativa"
             },
             {
-              "italiano": "He doesn't like tea, does he?",
+              "ingles": "He doesn't like tea, does he?",
               "traducao": "Ele não gosta de chá, gosta?",
               "genero": "Frase Negativa",
               "motivo": "Tag Afirmativa"
@@ -6463,13 +6463,13 @@
           "alerta": "Usamos os pronomes reflexivos quando o sujeito e o objeto da ação são a mesma pessoa.",
           "observacao_cards": [
             {
-              "italiano": "myself",
+              "ingles": "myself",
               "traducao": "a mim mesmo(a)",
               "genero": "1ª Pessoa Singular",
               "motivo": "Refere-se a 'I'"
             },
             {
-              "italiano": "themselves",
+              "ingles": "themselves",
               "traducao": "a si mesmos(as)",
               "genero": "3ª Pessoa Plural",
               "motivo": "Refere-se a 'They'"
@@ -6557,19 +6557,19 @@
           "alerta": "Use 'both', 'either' e 'neither' para falar sobre duas coisas, pessoas ou opções.",
           "observacao_cards": [
             {
-              "italiano": "Both",
+              "ingles": "Both",
               "traducao": "Ambos(as)",
               "genero": "Inclusivo",
               "motivo": "Significa 'um e o outro'."
             },
             {
-              "italiano": "Either",
+              "ingles": "Either",
               "traducao": "Qualquer um(a) (dos dois)",
               "genero": "Alternativo",
               "motivo": "Significa 'um ou o outro'."
             },
             {
-              "italiano": "Neither",
+              "ingles": "Neither",
               "traducao": "Nenhum(a) (dos dois)",
               "genero": "Exclusivo (Negativo)",
               "motivo": "Significa 'nem um, nem o outro'."
@@ -6657,13 +6657,13 @@
           "alerta": "Use 'as ... as' para dizer que duas coisas são iguais em algum aspecto, e 'not as ... as' para dizer que não são.",
           "observacao_cards": [
             {
-              "italiano": "as fast as",
+              "ingles": "as fast as",
               "traducao": "tão rápido quanto",
               "genero": "Igualdade",
               "motivo": "Compara as duas partes com a mesma intensidade"
             },
             {
-              "italiano": "not as tall as",
+              "ingles": "not as tall as",
               "traducao": "não tão alto quanto",
               "genero": "Diferença",
               "motivo": "Indica que o primeiro é menor/menos intenso que o segundo"
@@ -6751,13 +6751,13 @@
           "alerta": "Alguns verbos mudam completamente de sentido dependendo se são seguidos por gerúndio (-ing) ou infinitivo (to).",
           "observacao_cards": [
             {
-              "italiano": "Remember to lock the door",
+              "ingles": "Remember to lock the door",
               "traducao": "Lembre-se de trancar a porta",
               "genero": "Infinitive",
               "motivo": "Lembra de algo que precisa ser feito (futuro/pendência)"
             },
             {
-              "italiano": "I remember locking the door",
+              "ingles": "I remember locking the door",
               "traducao": "Eu me lembro de ter trancado a porta",
               "genero": "Gerund",
               "motivo": "Lembra de algo que já aconteceu (passado)"
@@ -6853,13 +6853,13 @@
           "alerta": "Usamos o Third Conditional para imaginar um passado diferente do que realmente aconteceu, geralmente expressando arrependimentos ou consequências de ações não realizadas.",
           "observacao_cards": [
             {
-              "italiano": "If I had studied",
+              "ingles": "If I had studied",
               "traducao": "Se eu tivesse estudado",
               "genero": "If Clause",
               "motivo": "Past Perfect para a condição irreal no passado"
             },
             {
-              "italiano": "I would have passed",
+              "ingles": "I would have passed",
               "traducao": "Eu teria passado",
               "genero": "Main Clause",
               "motivo": "Would have + Past Participle para o resultado hipotético"
@@ -6947,13 +6947,13 @@
           "alerta": "Mixed Conditionals misturam tempos verbais para mostrar como uma condição irreal no passado afeta o presente, ou como um estado irreal no presente afetou o passado.",
           "observacao_cards": [
             {
-              "italiano": "If I had worked harder",
+              "ingles": "If I had worked harder",
               "traducao": "Se eu tivesse trabalhado mais",
               "genero": "Past Condition",
               "motivo": "Past Perfect (ação no passado)"
             },
             {
-              "italiano": "I would be rich now",
+              "ingles": "I would be rich now",
               "traducao": "Eu seria rico agora",
               "genero": "Present Result",
               "motivo": "Would + verbo base (consequência no presente)"
@@ -7041,19 +7041,19 @@
           "alerta": "Em níveis avançados, usamos a voz passiva com tempos contínuos, tempos perfeitos e verbos modais para dar foco à ação ou a quem a recebe de forma mais sofisticada.",
           "observacao_cards": [
             {
-              "italiano": "The house is being built",
+              "ingles": "The house is being built",
               "traducao": "A casa está sendo construída",
               "genero": "Present Continuous",
               "motivo": "To be (is) + being + Past Participle"
             },
             {
-              "italiano": "The letter has been sent",
+              "ingles": "The letter has been sent",
               "traducao": "A carta foi enviada",
               "genero": "Present Perfect",
               "motivo": "Has/have + been + Past Participle"
             },
             {
-              "italiano": "It can be done",
+              "ingles": "It can be done",
               "traducao": "Isso pode ser feito",
               "genero": "Modals",
               "motivo": "Modal + be + Past Participle"
@@ -7141,19 +7141,19 @@
           "alerta": "Reportar perguntas e ordens exige mais do que apenas mudar o tempo verbal; precisamos reestruturar as frases e usar verbos introdutórios adequados.",
           "observacao_cards": [
             {
-              "italiano": "She asked if I was ready",
+              "ingles": "She asked if I was ready",
               "traducao": "Ela perguntou se eu estava pronto",
               "genero": "Yes/No Question",
               "motivo": "Usamos 'if' ou 'whether' em vez de verbo auxiliar"
             },
             {
-              "italiano": "He asked what I wanted",
+              "ingles": "He asked what I wanted",
               "traducao": "Ele perguntou o que eu queria",
               "genero": "Wh- Question",
               "motivo": "Ordem direta (sujeito + verbo), sem auxiliar 'do/did'"
             },
             {
-              "italiano": "She told me to stop",
+              "ingles": "She told me to stop",
               "traducao": "Ela me mandou parar",
               "genero": "Command/Order",
               "motivo": "Verbo + objeto + to + infinitivo"
@@ -7241,13 +7241,13 @@
           "alerta": "As Non-defining Relative Clauses adicionam informações extras a uma frase. Se as removermos, a frase principal continua a fazer sentido. Sempre usamos vírgulas!",
           "observacao_cards": [
             {
-              "italiano": "My brother, who lives in Paris, is older.",
+              "ingles": "My brother, who lives in Paris, is older.",
               "traducao": "Meu irmão, que mora em Paris, é mais velho.",
               "genero": "Extra Info (Person)",
               "motivo": "Usamos 'who' entre vírgulas para pessoas"
             },
             {
-              "italiano": "The Eiffel Tower, which was built in 1889, is famous.",
+              "ingles": "The Eiffel Tower, which was built in 1889, is famous.",
               "traducao": "A Torre Eiffel, que foi construída em 1889, é famosa.",
               "genero": "Extra Info (Thing)",
               "motivo": "Usamos 'which' para coisas ou ideias (nunca 'that')"
@@ -7335,25 +7335,25 @@
           "alerta": "Como fazer deduções sobre algo que já aconteceu? Aprenda a usar os modais no passado para expressar certeza, possibilidade ou arrependimento.",
           "observacao_cards": [
             {
-              "italiano": "must have + past participle",
+              "ingles": "must have + past participle",
               "traducao": "deve ter + particípio",
               "genero": "Certeza",
               "motivo": "Quando você tem quase certeza de algo no passado."
             },
             {
-              "italiano": "might have + past participle",
+              "ingles": "might have + past participle",
               "traducao": "pode/poderia ter + particípio",
               "genero": "Possibilidade",
               "motivo": "Quando algo era possível, mas não há certeza."
             },
             {
-              "italiano": "should have + past participle",
+              "ingles": "should have + past participle",
               "traducao": "deveria ter + particípio",
               "genero": "Arrependimento / Crítica",
               "motivo": "Para algo que seria ideal ter acontecido, mas não aconteceu."
             },
             {
-              "italiano": "can't have + past participle",
+              "ingles": "can't have + past participle",
               "traducao": "não pode ter + particípio",
               "genero": "Certeza Negativa",
               "motivo": "Quando é quase impossível que algo tenha acontecido."
@@ -7452,19 +7452,19 @@
           "alerta": "Sabe aquela vontade de mudar o presente ou aquele arrependimento do passado? Use 'wish' e 'if only' para expressar o que você queria que fosse diferente.",
           "observacao_cards": [
             {
-              "italiano": "wish + past simple",
+              "ingles": "wish + past simple",
               "traducao": "desejar que + passado (fosse/tivesse)",
               "genero": "Desejo presente",
               "motivo": "Desejo de que uma situação no presente fosse diferente do que é."
             },
             {
-              "italiano": "wish + past perfect",
+              "ingles": "wish + past perfect",
               "traducao": "desejar que + tivesse sido",
               "genero": "Arrependimento passado",
               "motivo": "Desejo de mudar algo que já passou (mas é tarde demais)."
             },
             {
-              "italiano": "wish + would",
+              "ingles": "wish + would",
               "traducao": "desejar que + fizesse (futuro/irritação)",
               "genero": "Irritação",
               "motivo": "Para expressar irritação e vontade de que alguém mude de atitude."
@@ -7563,7 +7563,7 @@
           "alerta": "Como descrever algo que estará acontecendo num momento exato do futuro? O Future Continuous é perfeito para imaginar a cena!",
           "observacao_cards": [
             {
-              "italiano": "will be + verb-ing",
+              "ingles": "will be + verb-ing",
               "traducao": "estarei fazendo",
               "genero": "Ação em andamento",
               "motivo": "Focar em uma ação que ainda não estará terminada em um certo ponto do futuro."
@@ -7662,13 +7662,13 @@
           "alerta": "E quando você quiser dizer que, até ano que vem, você JÁ TERÁ terminado o curso? Para isso, usamos o Future Perfect.",
           "observacao_cards": [
             {
-              "italiano": "will have + past participle",
+              "ingles": "will have + past participle",
               "traducao": "terei feito",
               "genero": "Conclusão no Futuro",
               "motivo": "Indica que a ação vai terminar antes de um determinado ponto no futuro."
             },
             {
-              "italiano": "by",
+              "ingles": "by",
               "traducao": "até (um momento)",
               "genero": "Preposição Típica",
               "motivo": "Geralmente usado com o Future Perfect para estipular o prazo limite (ex: by next year)."
@@ -7761,13 +7761,13 @@
           "alerta": "Você cortou o próprio cabelo ou ALGUÉM cortou para você? Em inglês, há uma estrutura específica para quando pagamos ou pedimos para alguém fazer um serviço por nós.",
           "observacao_cards": [
             {
-              "italiano": "have + object + past participle",
+              "ingles": "have + object + past participle",
               "traducao": "mandar / pedir para fazer",
               "genero": "Delegação de Serviço",
               "motivo": "Quando um profissional ou terceiros fazem o trabalho por você."
             },
             {
-              "italiano": "get + object + past participle",
+              "ingles": "get + object + past participle",
               "traducao": "mandar fazer (informal)",
               "genero": "Delegação Informal",
               "motivo": "Mesmo sentido de 'have something done', mas com um tom um pouco mais informal e cotidiano."
@@ -7866,19 +7866,19 @@
           "alerta": "Sabia que usar ou omitir 'the' muda completamente o sentido em instituições e ideias abstratas?",
           "observacao_cards": [
             {
-              "italiano": "Go to hospital",
+              "ingles": "Go to hospital",
               "traducao": "Ir ao hospital (como paciente)",
               "genero": "Institutional",
               "motivo": "Foco no propósito da instituição"
             },
             {
-              "italiano": "Go to the hospital",
+              "ingles": "Go to the hospital",
               "traducao": "Ir ao hospital (como visitante)",
               "genero": "Specific Location",
               "motivo": "Foco no prédio físico"
             },
             {
-              "italiano": "Love",
+              "ingles": "Love",
               "traducao": "O amor (em geral)",
               "genero": "Abstract",
               "motivo": "Sem artigo para conceitos gerais"
@@ -7963,13 +7963,13 @@
           "alerta": "Você causa ou você sente? É a diferença entre ser 'boring' ou estar 'bored'.",
           "observacao_cards": [
             {
-              "italiano": "Bored",
+              "ingles": "Bored",
               "traducao": "Entediado(a)",
               "genero": "Feeling (-ed)",
               "motivo": "Descreve como alguém se sente."
             },
             {
-              "italiano": "Boring",
+              "ingles": "Boring",
               "traducao": "Entediante / Chato(a)",
               "genero": "Cause (-ing)",
               "motivo": "Descreve a coisa ou pessoa que causa o sentimento."
@@ -8054,13 +8054,13 @@
           "alerta": "Ligar ideias de contraste exige cuidado! Algumas estruturas exigem verbo, outras apenas substantivo.",
           "observacao_cards": [
             {
-              "italiano": "Although / Even though",
+              "ingles": "Although / Even though",
               "traducao": "Embora / Apesar de que",
               "genero": "Clause Linker",
               "motivo": "Exige uma oração completa (Sujeito + Verbo)"
             },
             {
-              "italiano": "Despite / In spite of",
+              "ingles": "Despite / In spite of",
               "traducao": "Apesar de",
               "genero": "Noun Linker",
               "motivo": "Exige apenas Substantivo, Pronome ou Verbo-ING"
@@ -8145,19 +8145,19 @@
           "alerta": "Expressar condições em inglês vai além do simples 'If'. Descubra como colocar limites e definir exceções.",
           "observacao_cards": [
             {
-              "italiano": "As long as",
+              "ingles": "As long as",
               "traducao": "Contanto que / Desde que",
               "genero": "Condition",
               "motivo": "Estabelece uma condição ou limite temporal"
             },
             {
-              "italiano": "Provided (that)",
+              "ingles": "Provided (that)",
               "traducao": "Contanto que / Sob a condição de que",
               "genero": "Condition (Formal)",
               "motivo": "Igual a 'As long as', mas um pouco mais formal"
             },
             {
-              "italiano": "Unless",
+              "ingles": "Unless",
               "traducao": "A menos que / A não ser que",
               "genero": "Exception",
               "motivo": "Substitui 'if not'"
@@ -8242,19 +8242,19 @@
           "alerta": "Onde o objeto da frase deve ficar? Descubra quando podemos (ou devemos) separar um Phrasal Verb.",
           "observacao_cards": [
             {
-              "italiano": "Turn it on",
+              "ingles": "Turn it on",
               "traducao": "Ligue (isso)",
               "genero": "Separable (Pronoun)",
               "motivo": "Quando o objeto é pronome, DEVE separar o verbo"
             },
             {
-              "italiano": "Turn on the TV",
+              "ingles": "Turn on the TV",
               "traducao": "Ligue a TV",
               "genero": "Separable (Noun)",
               "motivo": "Com substantivos, pode separar ou ficar junto"
             },
             {
-              "italiano": "Look after it",
+              "ingles": "Look after it",
               "traducao": "Cuidar (disso)",
               "genero": "Inseparable",
               "motivo": "Nunca se separam, seja com pronome ou substantivo"
@@ -8346,13 +8346,13 @@
           "alerta": "Ao começar uma frase com um advérbio negativo, devemos inverter o sujeito e o verbo auxiliar para dar ênfase dramática e formalidade.",
           "observacao_cards": [
             {
-              "italiano": "Hardly had I...",
+              "ingles": "Hardly had I...",
               "traducao": "Mal eu tinha...",
               "genero": "Negative Adverb",
               "motivo": "Formalidade / Ênfase"
             },
             {
-              "italiano": "Under no circumstances...",
+              "ingles": "Under no circumstances...",
               "traducao": "Sob nenhuma circunstância...",
               "genero": "Prepositional Phrase",
               "motivo": "Ênfase extrema"
@@ -8446,13 +8446,13 @@
           "alerta": "As 'cleft sentences' (orações clivadas) são usadas para focar em uma parte específica da frase que queremos destacar e dar atenção especial.",
           "observacao_cards": [
             {
-              "italiano": "It was Mary who...",
+              "ingles": "It was Mary who...",
               "traducao": "Foi a Mary que...",
               "genero": "It-cleft",
               "motivo": "Foco no sujeito"
             },
             {
-              "italiano": "What I need is...",
+              "ingles": "What I need is...",
               "traducao": "O que eu preciso é...",
               "genero": "Wh-cleft",
               "motivo": "Foco no objeto/ideia"
@@ -8546,13 +8546,13 @@
           "alerta": "As orações reduzidas de particípio permitem juntar informações de forma elegante e concisa, indicando tempo, causa ou condição no nível avançado.",
           "observacao_cards": [
             {
-              "italiano": "Having finished...",
+              "ingles": "Having finished...",
               "traducao": "Tendo terminado...",
               "genero": "Perfect Participle",
               "motivo": "Ação concluída antes"
             },
             {
-              "italiano": "Waiting for the bus...",
+              "ingles": "Waiting for the bus...",
               "traducao": "Esperando pelo ônibus...",
               "genero": "Present Participle",
               "motivo": "Ações simultâneas/Causa"
@@ -8646,13 +8646,13 @@
           "alerta": "Estruturas condicionais avançadas, como a inversão de auxiliares ou o uso de 'but for', elevam muito a formalidade e a sofisticação do seu inglês.",
           "observacao_cards": [
             {
-              "italiano": "Had I known...",
+              "ingles": "Had I known...",
               "traducao": "Se eu soubesse...",
               "genero": "Inversion",
               "motivo": "Omitir o 'If' na 3ª condicional"
             },
             {
-              "italiano": "But for your help...",
+              "ingles": "But for your help...",
               "traducao": "Se não fosse por sua ajuda...",
               "genero": "Alternative",
               "motivo": "Mais curto e poético"
@@ -8746,13 +8746,13 @@
           "alerta": "O modo subjuntivo em inglês soa bastante formal e é usado em orações após verbos de sugestão, recomendação ou exigência, exigindo o verbo na forma base.",
           "observacao_cards": [
             {
-              "italiano": "I suggest that he go...",
+              "ingles": "I suggest that he go...",
               "traducao": "Eu sugiro que ele vá...",
               "genero": "Subjunctive",
               "motivo": "Uso da forma base (go)"
             },
             {
-              "italiano": "It is crucial that she be...",
+              "ingles": "It is crucial that she be...",
               "traducao": "É crucial que ela seja/esteja...",
               "genero": "Subjunctive (To Be)",
               "motivo": "Uso de 'be' mesmo na 3ª pessoa"
@@ -8846,19 +8846,19 @@
           "alerta": "Além de 'will' e 'going to', o inglês avançado usa estruturas precisas para descrever futuros iminentes, oficiais ou inevitáveis.",
           "observacao_cards": [
             {
-              "italiano": "Be bound to",
+              "ingles": "Be bound to",
               "traducao": "Estar fadado a / Ser muito provável",
               "genero": "Future",
               "motivo": "Expressa forte certeza de que algo vai acontecer."
             },
             {
-              "italiano": "Be about to",
+              "ingles": "Be about to",
               "traducao": "Estar prestes a",
               "genero": "Future",
               "motivo": "Algo no futuro imediato, quase acontecendo."
             },
             {
-              "italiano": "Be to",
+              "ingles": "Be to",
               "traducao": "Estar programado para / Ter que",
               "genero": "Future",
               "motivo": "Usado para planos oficiais ou ordens formais."
@@ -8946,25 +8946,25 @@
           "alerta": "Modais menos comuns como 'dare' e expressões de preferência e conselho dão um tom muito nativo ao seu discurso.",
           "observacao_cards": [
             {
-              "italiano": "Dare",
+              "ingles": "Dare",
               "traducao": "Ousar",
               "genero": "Modal",
               "motivo": "Pode funcionar como modal em frases negativas e interrogativas (dare not)."
             },
             {
-              "italiano": "Needn't",
+              "ingles": "Needn't",
               "traducao": "Não precisar",
               "genero": "Modal",
               "motivo": "Indica ausência de obrigação ou necessidade."
             },
             {
-              "italiano": "Would rather",
+              "ingles": "Would rather",
               "traducao": "Preferir",
               "genero": "Preference",
               "motivo": "Seguido de passado simples quando o sujeito da preferência é diferente de quem realiza a ação."
             },
             {
-              "italiano": "Had better",
+              "ingles": "Had better",
               "traducao": "É melhor",
               "genero": "Advice",
               "motivo": "Um conselho forte com um tom de alerta sobre consequências negativas."
@@ -9052,19 +9052,19 @@
           "alerta": "Falantes nativos odeiam repetição! Aprender a omitir (ellipsis) e substituir (substitution) palavras deixa sua fala fluida e coesa.",
           "observacao_cards": [
             {
-              "italiano": "Ellipsis",
+              "ingles": "Ellipsis",
               "traducao": "Elipse",
               "genero": "Omission",
               "motivo": "Omitimos palavras ou expressões quando o contexto já deixa claro o significado."
             },
             {
-              "italiano": "So",
+              "ingles": "So",
               "traducao": "Substituição com 'so'",
               "genero": "Substitution",
               "motivo": "Substitui uma cláusula inteira após verbos como think, hope, suppose."
             },
             {
-              "italiano": "One / Ones",
+              "ingles": "One / Ones",
               "traducao": "Substituição com 'one(s)'",
               "genero": "Substitution",
               "motivo": "Substitui um substantivo para evitar repeti-lo, adaptando-se a singular ou plural."
@@ -9152,25 +9152,25 @@
           "alerta": "Discourse markers são as 'pontes' do discurso: eles organizam as ideias, mostram contrastes e definem a atitude do falante em relação ao texto.",
           "observacao_cards": [
             {
-              "italiano": "Nevertheless",
+              "ingles": "Nevertheless",
               "traducao": "Não obstante / Apesar disso",
               "genero": "Contrast",
               "motivo": "Introduz uma concessão ou contraste formal, semelhante a 'however'."
             },
             {
-              "italiano": "Consequently",
+              "ingles": "Consequently",
               "traducao": "Consequentemente",
               "genero": "Result",
               "motivo": "Apresenta o resultado lógico de um evento prévio."
             },
             {
-              "italiano": "Broadly speaking",
+              "ingles": "Broadly speaking",
               "traducao": "Em termos gerais",
               "genero": "Generalizing",
               "motivo": "Indica que a afirmação a seguir é uma regra geral com possíveis exceções."
             },
             {
-              "italiano": "Furthermore",
+              "ingles": "Furthermore",
               "traducao": "Além disso",
               "genero": "Addition",
               "motivo": "Adiciona uma informação complementar de peso em discursos formais."
@@ -9258,25 +9258,25 @@
           "alerta": "Collocations são pares de palavras que soam corretos (make a decision), e Idioms são expressões com sentido figurado. Errar isso não impede de ser entendido, mas usá-los faz você soar nativo!",
           "observacao_cards": [
             {
-              "italiano": "Make a decision",
+              "ingles": "Make a decision",
               "traducao": "Tomar uma decisão",
               "genero": "Collocation",
               "motivo": "Com 'decision' usa-se sempre 'make', e nunca 'do' ou 'take'."
             },
             {
-              "italiano": "Do business",
+              "ingles": "Do business",
               "traducao": "Fazer negócios",
               "genero": "Collocation",
               "motivo": "'Do' é usado para ações, trabalho e tarefas rotineiras."
             },
             {
-              "italiano": "Under the weather",
+              "ingles": "Under the weather",
               "traducao": "Sentindo-se mal / doente",
               "genero": "Idiom",
               "motivo": "Expressão figurada que significa não estar se sentindo 100%."
             },
             {
-              "italiano": "Bite the bullet",
+              "ingles": "Bite the bullet",
               "traducao": "Encarar uma situação difícil",
               "genero": "Idiom",
               "motivo": "Expressão usada para tomar coragem e fazer algo desagradável."

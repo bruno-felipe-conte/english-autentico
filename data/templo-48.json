@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t48_001",
-      "italiano": "cultural awareness",
+      "ingles": "cultural awareness",
       "portugues": "consciência cultural",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t48_002",
-      "italiano": "stereotype",
+      "ingles": "stereotype",
       "portugues": "estereótipo",
       "genero": null,
       "plural": "stereotypes",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t48_003",
-      "italiano": "bias",
+      "ingles": "bias",
       "portugues": "viés / preconceito",
       "genero": null,
       "plural": "biases",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t48_004",
-      "italiano": "ethnocentrism",
+      "ingles": "ethnocentrism",
       "portugues": "etnocentrismo",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t48_005",
-      "italiano": "high-context culture",
+      "ingles": "high-context culture",
       "portugues": "cultura de alto contexto",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t48_006",
-      "italiano": "low-context culture",
+      "ingles": "low-context culture",
       "portugues": "cultura de baixo contexto",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t48_007",
-      "italiano": "nonverbal cues",
+      "ingles": "nonverbal cues",
       "portugues": "sinais não verbais",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t48_008",
-      "italiano": "taboo",
+      "ingles": "taboo",
       "portugues": "tabu",
       "genero": null,
       "plural": "taboos",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t48_009",
-      "italiano": "code-switching",
+      "ingles": "code-switching",
       "portugues": "alternância de código (linguístico ou cultural)",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t48_010",
-      "italiano": "adapt",
+      "ingles": "adapt",
       "portugues": "adaptar-se",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t48_011",
-      "italiano": "inclusive",
+      "ingles": "inclusive",
       "portugues": "inclusivo",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t48_012",
-      "italiano": "intercultural",
+      "ingles": "intercultural",
       "portugues": "intercultural",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t48_013",
-      "italiano": "worldview",
+      "ingles": "worldview",
       "portugues": "visão de mundo",
       "genero": null,
       "plural": "worldviews",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t48_014",
-      "italiano": "assumption",
+      "ingles": "assumption",
       "portugues": "suposição / premissa",
       "genero": null,
       "plural": "assumptions",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t48_015",
-      "italiano": "miscommunication",
+      "ingles": "miscommunication",
       "portugues": "falha de comunicação / mal-entendido",
       "genero": null,
       "plural": "miscommunications",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t48_016",
-      "italiano": "body language",
+      "ingles": "body language",
       "portugues": "linguagem corporal",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t48_017",
-      "italiano": "direct communication",
+      "ingles": "direct communication",
       "portugues": "comunicação direta",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t48_018",
-      "italiano": "indirect communication",
+      "ingles": "indirect communication",
       "portugues": "comunicação indireta",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t48_019",
-      "italiano": "face-saving",
+      "ingles": "face-saving",
       "portugues": "salvar as aparências / preservar a honra",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t48_020",
-      "italiano": "cultural humility",
+      "ingles": "cultural humility",
       "portugues": "humildade cultural",
       "genero": null,
       "plural": null,

@@ -7,13 +7,13 @@
     "alerta": "Ao começar uma frase com um advérbio negativo, devemos inverter o sujeito e o verbo auxiliar para dar ênfase dramática e formalidade.",
     "observacao_cards": [
       {
-        "italiano": "Hardly had I...",
+        "ingles": "Hardly had I...",
         "traducao": "Mal eu tinha...",
         "genero": "Negative Adverb",
         "motivo": "Formalidade / Ênfase"
       },
       {
-        "italiano": "Under no circumstances...",
+        "ingles": "Under no circumstances...",
         "traducao": "Sob nenhuma circunstância...",
         "genero": "Prepositional Phrase",
         "motivo": "Ênfase extrema"
@@ -107,13 +107,13 @@
     "alerta": "As 'cleft sentences' (orações clivadas) são usadas para focar em uma parte específica da frase que queremos destacar e dar atenção especial.",
     "observacao_cards": [
       {
-        "italiano": "It was Mary who...",
+        "ingles": "It was Mary who...",
         "traducao": "Foi a Mary que...",
         "genero": "It-cleft",
         "motivo": "Foco no sujeito"
       },
       {
-        "italiano": "What I need is...",
+        "ingles": "What I need is...",
         "traducao": "O que eu preciso é...",
         "genero": "Wh-cleft",
         "motivo": "Foco no objeto/ideia"
@@ -207,13 +207,13 @@
     "alerta": "As orações reduzidas de particípio permitem juntar informações de forma elegante e concisa, indicando tempo, causa ou condição no nível avançado.",
     "observacao_cards": [
       {
-        "italiano": "Having finished...",
+        "ingles": "Having finished...",
         "traducao": "Tendo terminado...",
         "genero": "Perfect Participle",
         "motivo": "Ação concluída antes"
       },
       {
-        "italiano": "Waiting for the bus...",
+        "ingles": "Waiting for the bus...",
         "traducao": "Esperando pelo ônibus...",
         "genero": "Present Participle",
         "motivo": "Ações simultâneas/Causa"
@@ -307,13 +307,13 @@
     "alerta": "Estruturas condicionais avançadas, como a inversão de auxiliares ou o uso de 'but for', elevam muito a formalidade e a sofisticação do seu inglês.",
     "observacao_cards": [
       {
-        "italiano": "Had I known...",
+        "ingles": "Had I known...",
         "traducao": "Se eu soubesse...",
         "genero": "Inversion",
         "motivo": "Omitir o 'If' na 3ª condicional"
       },
       {
-        "italiano": "But for your help...",
+        "ingles": "But for your help...",
         "traducao": "Se não fosse por sua ajuda...",
         "genero": "Alternative",
         "motivo": "Mais curto e poético"
@@ -407,13 +407,13 @@
     "alerta": "O modo subjuntivo em inglês soa bastante formal e é usado em orações após verbos de sugestão, recomendação ou exigência, exigindo o verbo na forma base.",
     "observacao_cards": [
       {
-        "italiano": "I suggest that he go...",
+        "ingles": "I suggest that he go...",
         "traducao": "Eu sugiro que ele vá...",
         "genero": "Subjunctive",
         "motivo": "Uso da forma base (go)"
       },
       {
-        "italiano": "It is crucial that she be...",
+        "ingles": "It is crucial that she be...",
         "traducao": "É crucial que ela seja/esteja...",
         "genero": "Subjunctive (To Be)",
         "motivo": "Uso de 'be' mesmo na 3ª pessoa"

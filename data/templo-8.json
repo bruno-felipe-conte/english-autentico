@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t8_001",
-      "italiano": "Civil War",
+      "ingles": "Civil War",
       "portugues": "Guerra Civil",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t8_002",
-      "italiano": "slavery",
+      "ingles": "slavery",
       "portugues": "escravidão",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t8_003",
-      "italiano": "Reconstruction",
+      "ingles": "Reconstruction",
       "portugues": "Reconstrução",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t8_004",
-      "italiano": "Harlem Renaissance",
+      "ingles": "Harlem Renaissance",
       "portugues": "Renascimento do Harlem",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t8_005",
-      "italiano": "Civil Rights Movement",
+      "ingles": "Civil Rights Movement",
       "portugues": "Movimento pelos Direitos Civis",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t8_006",
-      "italiano": "segregation",
+      "ingles": "segregation",
       "portugues": "segregação",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t8_007",
-      "italiano": "abolition",
+      "ingles": "abolition",
       "portugues": "abolição",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t8_008",
-      "italiano": "suffrage",
+      "ingles": "suffrage",
       "portugues": "sufrágio / direito ao voto",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t8_009",
-      "italiano": "Great Migration",
+      "ingles": "Great Migration",
       "portugues": "Grande Migração",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t8_010",
-      "italiano": "New Deal",
+      "ingles": "New Deal",
       "portugues": "New Deal",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t8_011",
-      "italiano": "manifest destiny",
+      "ingles": "manifest destiny",
       "portugues": "destino manifesto",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t8_012",
-      "italiano": "founding fathers",
+      "ingles": "founding fathers",
       "portugues": "pais fundadores",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t8_013",
-      "italiano": "constitutional amendment",
+      "ingles": "constitutional amendment",
       "portugues": "emenda constitucional",
       "genero": null,
       "plural": "constitutional amendments",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t8_014",
-      "italiano": "emancipation",
+      "ingles": "emancipation",
       "portugues": "emancipação",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t8_015",
-      "italiano": "Jim Crow",
+      "ingles": "Jim Crow",
       "portugues": "Jim Crow (leis de segregação racial)",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t8_016",
-      "italiano": "March on Washington",
+      "ingles": "March on Washington",
       "portugues": "Marcha sobre Washington",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t8_017",
-      "italiano": "desegregation",
+      "ingles": "desegregation",
       "portugues": "dessegregação",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t8_018",
-      "italiano": "colonization",
+      "ingles": "colonization",
       "portugues": "colonização",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t8_019",
-      "italiano": "Reconstruction era",
+      "ingles": "Reconstruction era",
       "portugues": "era da Reconstrução",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t8_020",
-      "italiano": "abolitionist",
+      "ingles": "abolitionist",
       "portugues": "abolicionista",
       "genero": null,
       "plural": "abolitionists",

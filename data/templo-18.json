@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t18_001",
-      "italiano": "furniture",
+      "ingles": "furniture",
       "portugues": "móveis",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t18_002",
-      "italiano": "sofa",
+      "ingles": "sofa",
       "portugues": "sofá",
       "genero": null,
       "plural": "sofas",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t18_003",
-      "italiano": "table",
+      "ingles": "table",
       "portugues": "mesa",
       "genero": null,
       "plural": "tables",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t18_004",
-      "italiano": "chair",
+      "ingles": "chair",
       "portugues": "cadeira",
       "genero": null,
       "plural": "chairs",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t18_005",
-      "italiano": "bed",
+      "ingles": "bed",
       "portugues": "cama",
       "genero": null,
       "plural": "beds",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t18_006",
-      "italiano": "desk",
+      "ingles": "desk",
       "portugues": "escrivaninha / mesa de trabalho",
       "genero": null,
       "plural": "desks",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t18_007",
-      "italiano": "lamp",
+      "ingles": "lamp",
       "portugues": "luminária / abajur",
       "genero": null,
       "plural": "lamps",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t18_008",
-      "italiano": "shelf",
+      "ingles": "shelf",
       "portugues": "prateleira",
       "genero": null,
       "plural": "shelves",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t18_009",
-      "italiano": "mirror",
+      "ingles": "mirror",
       "portugues": "espelho",
       "genero": null,
       "plural": "mirrors",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t18_010",
-      "italiano": "door",
+      "ingles": "door",
       "portugues": "porta",
       "genero": null,
       "plural": "doors",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t18_011",
-      "italiano": "window",
+      "ingles": "window",
       "portugues": "janela",
       "genero": null,
       "plural": "windows",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t18_012",
-      "italiano": "floor",
+      "ingles": "floor",
       "portugues": "chão / piso / andar",
       "genero": null,
       "plural": "floors",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t18_013",
-      "italiano": "ceiling",
+      "ingles": "ceiling",
       "portugues": "teto",
       "genero": null,
       "plural": "ceilings",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t18_014",
-      "italiano": "wall",
+      "ingles": "wall",
       "portugues": "parede",
       "genero": null,
       "plural": "walls",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t18_015",
-      "italiano": "stove",
+      "ingles": "stove",
       "portugues": "fogão",
       "genero": null,
       "plural": "stoves",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t18_016",
-      "italiano": "refrigerator",
+      "ingles": "refrigerator",
       "portugues": "geladeira",
       "genero": null,
       "plural": "refrigerators",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t18_017",
-      "italiano": "sink",
+      "ingles": "sink",
       "portugues": "pia / lavatório",
       "genero": null,
       "plural": "sinks",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t18_018",
-      "italiano": "bathtub",
+      "ingles": "bathtub",
       "portugues": "banheira",
       "genero": null,
       "plural": "bathtubs",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t18_019",
-      "italiano": "closet",
+      "ingles": "closet",
       "portugues": "armário / guarda-roupa",
       "genero": null,
       "plural": "closets",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t18_020",
-      "italiano": "garage",
+      "ingles": "garage",
       "portugues": "garagem",
       "genero": null,
       "plural": "garages",

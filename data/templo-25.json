@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t25_001",
-      "italiano": "cuisine",
+      "ingles": "cuisine",
       "portugues": "culinária",
       "genero": null,
       "plural": "cuisines",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t25_002",
-      "italiano": "recipe",
+      "ingles": "recipe",
       "portugues": "receita",
       "genero": null,
       "plural": "recipes",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t25_003",
-      "italiano": "ingredient",
+      "ingles": "ingredient",
       "portugues": "ingrediente",
       "genero": null,
       "plural": "ingredients",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t25_004",
-      "italiano": "flavor",
+      "ingles": "flavor",
       "portugues": "sabor",
       "genero": null,
       "plural": "flavors",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t25_005",
-      "italiano": "texture",
+      "ingles": "texture",
       "portugues": "textura",
       "genero": null,
       "plural": "textures",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t25_006",
-      "italiano": "portion",
+      "ingles": "portion",
       "portugues": "porção",
       "genero": null,
       "plural": "portions",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t25_007",
-      "italiano": "appetizer",
+      "ingles": "appetizer",
       "portugues": "entrada / aperitivo",
       "genero": null,
       "plural": "appetizers",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t25_008",
-      "italiano": "entree",
+      "ingles": "entree",
       "portugues": "prato principal",
       "genero": null,
       "plural": "entrees",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t25_009",
-      "italiano": "dessert",
+      "ingles": "dessert",
       "portugues": "sobremesa",
       "genero": null,
       "plural": "desserts",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t25_010",
-      "italiano": "beverage",
+      "ingles": "beverage",
       "portugues": "bebida",
       "genero": null,
       "plural": "beverages",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t25_011",
-      "italiano": "tip",
+      "ingles": "tip",
       "portugues": "gorjeta",
       "genero": null,
       "plural": "tips",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t25_012",
-      "italiano": "split the bill",
+      "ingles": "split the bill",
       "portugues": "dividir a conta",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t25_013",
-      "italiano": "reservation",
+      "ingles": "reservation",
       "portugues": "reserva",
       "genero": null,
       "plural": "reservations",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t25_014",
-      "italiano": "dietary restriction",
+      "ingles": "dietary restriction",
       "portugues": "restrição alimentar",
       "genero": null,
       "plural": "dietary restrictions",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t25_015",
-      "italiano": "vegan",
+      "ingles": "vegan",
       "portugues": "vegano",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t25_016",
-      "italiano": "gluten-free",
+      "ingles": "gluten-free",
       "portugues": "sem glúten",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t25_017",
-      "italiano": "organic",
+      "ingles": "organic",
       "portugues": "orgânico",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t25_018",
-      "italiano": "farm-to-table",
+      "ingles": "farm-to-table",
       "portugues": "do campo à mesa",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t25_019",
-      "italiano": "takeout",
+      "ingles": "takeout",
       "portugues": "comida para viagem",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t25_020",
-      "italiano": "drive-through",
+      "ingles": "drive-through",
       "portugues": "drive-through",
       "genero": null,
       "plural": null,

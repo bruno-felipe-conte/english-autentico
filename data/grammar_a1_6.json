@@ -7,13 +7,13 @@
     "alerta": "Você sabe diferenciar o que você faz todo dia do que está fazendo agora? Usamos tempos verbais diferentes para isso!",
     "observacao_cards": [
       {
-        "italiano": "I study English every day.",
+        "ingles": "I study English every day.",
         "traducao": "Eu estudo inglês todo dia.",
         "genero": "Present Simple",
         "motivo": "Rotina ou hábito"
       },
       {
-        "italiano": "I am studying English now.",
+        "ingles": "I am studying English now.",
         "traducao": "Eu estou estudando inglês agora.",
         "genero": "Present Continuous",
         "motivo": "Ação acontecendo no momento"
@@ -106,19 +106,19 @@
     "alerta": "Como dizer o que você consegue fazer ou pedir permissão? O verbo 'can' é um super-herói: não muda com as pessoas!",
     "observacao_cards": [
       {
-        "italiano": "I can swim",
+        "ingles": "I can swim",
         "traducao": "Eu sei nadar / Eu consigo nadar",
         "genero": "Ability",
         "motivo": "Expressa habilidade"
       },
       {
-        "italiano": "Can I go to the bathroom?",
+        "ingles": "Can I go to the bathroom?",
         "traducao": "Posso ir ao banheiro?",
         "genero": "Permission",
         "motivo": "Pedido de permissão"
       },
       {
-        "italiano": "He cannot / can't sing",
+        "ingles": "He cannot / can't sing",
         "traducao": "Ele não sabe / não consegue cantar",
         "genero": "Inability",
         "motivo": "Falta de habilidade"
@@ -211,19 +211,19 @@
     "alerta": "Precisa dar uma ordem, conselho ou instrução? Use o modo Imperativo, indo direto ao ponto sem colocar o sujeito!",
     "observacao_cards": [
       {
-        "italiano": "Open the door.",
+        "ingles": "Open the door.",
         "traducao": "Abra a porta.",
         "genero": "Affirmative",
         "motivo": "Comando direto"
       },
       {
-        "italiano": "Don't touch that!",
+        "ingles": "Don't touch that!",
         "traducao": "Não toque nisso!",
         "genero": "Negative",
         "motivo": "Proibição ou aviso"
       },
       {
-        "italiano": "Let's go!",
+        "ingles": "Let's go!",
         "traducao": "Vamos!",
         "genero": "Suggestion",
         "motivo": "Convite (incluindo o falante)"
@@ -316,25 +316,25 @@
     "alerta": "Pare de falar só frases curtas! As conjunções são a cola que vai juntar suas ideias e dar fluidez ao seu inglês.",
     "observacao_cards": [
       {
-        "italiano": "and",
+        "ingles": "and",
         "traducao": "e",
         "genero": "Addition",
         "motivo": "Junta ideias similares ou informações adicionais"
       },
       {
-        "italiano": "but",
+        "ingles": "but",
         "traducao": "mas",
         "genero": "Contrast",
         "motivo": "Mostra ideias opostas ou contraste"
       },
       {
-        "italiano": "because",
+        "ingles": "because",
         "traducao": "porque",
         "genero": "Reason",
         "motivo": "Explica a causa de algo"
       },
       {
-        "italiano": "so",
+        "ingles": "so",
         "traducao": "então / por isso",
         "genero": "Result",
         "motivo": "Mostra a consequência de uma ação"
@@ -422,13 +422,13 @@
     "alerta": "No inglês, as características (adjetivos) vêm ANTES da coisa que descrevem. É como dizer 'o vermelho carro' em vez de 'o carro vermelho'!",
     "observacao_cards": [
       {
-        "italiano": "a red car",
+        "ingles": "a red car",
         "traducao": "um carro vermelho",
         "genero": "Adjective + Noun",
         "motivo": "Adjetivo vem antes do substantivo"
       },
       {
-        "italiano": "beautiful flowers",
+        "ingles": "beautiful flowers",
         "traducao": "flores bonitas",
         "genero": "No plural",
         "motivo": "Adjetivos nunca ganham 's' no plural"

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t51_001",
-      "italiano": "abstract",
+      "ingles": "abstract",
       "portugues": "resumo / abstract",
       "genero": null,
       "plural": "abstracts",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t51_002",
-      "italiano": "introduction",
+      "ingles": "introduction",
       "portugues": "introdução",
       "genero": null,
       "plural": "introductions",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t51_003",
-      "italiano": "methodology",
+      "ingles": "methodology",
       "portugues": "metodologia",
       "genero": null,
       "plural": "methodologies",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t51_004",
-      "italiano": "findings",
+      "ingles": "findings",
       "portugues": "resultados / achados",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t51_005",
-      "italiano": "discussion",
+      "ingles": "discussion",
       "portugues": "discussão (seção do artigo)",
       "genero": null,
       "plural": "discussions",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t51_006",
-      "italiano": "conclusion",
+      "ingles": "conclusion",
       "portugues": "conclusão",
       "genero": null,
       "plural": "conclusions",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t51_007",
-      "italiano": "literature review",
+      "ingles": "literature review",
       "portugues": "revisão de literatura",
       "genero": null,
       "plural": "literature reviews",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t51_008",
-      "italiano": "citation",
+      "ingles": "citation",
       "portugues": "citação (referência bibliográfica)",
       "genero": null,
       "plural": "citations",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t51_009",
-      "italiano": "paraphrase",
+      "ingles": "paraphrase",
       "portugues": "parafrasear",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t51_010",
-      "italiano": "plagiarism",
+      "ingles": "plagiarism",
       "portugues": "plágio",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t51_011",
-      "italiano": "peer-reviewed",
+      "ingles": "peer-reviewed",
       "portugues": "revisado por pares / avaliado por especialistas",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t51_012",
-      "italiano": "empirical evidence",
+      "ingles": "empirical evidence",
       "portugues": "evidência empírica",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t51_013",
-      "italiano": "theoretical framework",
+      "ingles": "theoretical framework",
       "portugues": "referencial teórico / marco teórico",
       "genero": null,
       "plural": "theoretical frameworks",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t51_014",
-      "italiano": "qualitative",
+      "ingles": "qualitative",
       "portugues": "qualitativo",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t51_015",
-      "italiano": "quantitative",
+      "ingles": "quantitative",
       "portugues": "quantitativo",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t51_016",
-      "italiano": "hypothesis",
+      "ingles": "hypothesis",
       "portugues": "hipótese",
       "genero": null,
       "plural": "hypotheses",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t51_017",
-      "italiano": "thesis statement",
+      "ingles": "thesis statement",
       "portugues": "declaração de tese / argumento central",
       "genero": null,
       "plural": "thesis statements",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t51_018",
-      "italiano": "counterargument",
+      "ingles": "counterargument",
       "portugues": "contra-argumento",
       "genero": null,
       "plural": "counterarguments",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t51_019",
-      "italiano": "transition phrase",
+      "ingles": "transition phrase",
       "portugues": "expressão de transição",
       "genero": null,
       "plural": "transition phrases",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t51_020",
-      "italiano": "hedging",
+      "ingles": "hedging",
       "portugues": "atenuação / uso de linguagem cautelosa",
       "genero": null,
       "plural": null,

@@ -7,13 +7,13 @@
     "alerta": "Para falarmos sobre quantidades indefinidas, usamos 'some' e 'any'. A escolha entre eles depende do tipo de frase que estamos construindo.",
     "observacao_cards": [
       {
-        "italiano": "Some",
+        "ingles": "Some",
         "traducao": "Algum, alguns, um pouco de",
         "genero": "Afirmativas",
         "motivo": "Usado em frases afirmativas (e em pedidos ou oferecimentos)."
       },
       {
-        "italiano": "Any",
+        "ingles": "Any",
         "traducao": "Nenhum, qualquer, algum",
         "genero": "Negativas e Interrogativas",
         "motivo": "Usado em frases negativas e na maioria das perguntas."
@@ -117,19 +117,19 @@
     "alerta": "Quando a quantidade é grande, precisamos saber se o substantivo é contável (pode ir para o plural) ou incontável (sempre singular).",
     "observacao_cards": [
       {
-        "italiano": "Many",
+        "ingles": "Many",
         "traducao": "Muitos, muitas",
         "genero": "Contáveis",
         "motivo": "Usado com coisas que podemos contar (ex: apples, cars, people)."
       },
       {
-        "italiano": "Much",
+        "ingles": "Much",
         "traducao": "Muito, muita",
         "genero": "Incontáveis",
         "motivo": "Usado com coisas incontáveis, geralmente líquidos, sentimentos, conceitos (ex: water, time, money)."
       },
       {
-        "italiano": "A lot of",
+        "ingles": "A lot of",
         "traducao": "Muito(s), um monte de",
         "genero": "Ambos",
         "motivo": "Usado tanto para contáveis quanto incontáveis, geralmente em frases afirmativas."
@@ -228,13 +228,13 @@
     "alerta": "Para perguntar 'quanto' ou 'quantos', usamos 'How much' e 'How many'. O segredo está em saber se podemos contar o item (com 's' no plural) ou não!",
     "observacao_cards": [
       {
-        "italiano": "How many",
+        "ingles": "How many",
         "traducao": "Quantos / Quantas",
         "genero": "Contáveis",
         "motivo": "Usado para perguntar a quantidade de coisas contáveis (frequentemente no plural)."
       },
       {
-        "italiano": "How much",
+        "ingles": "How much",
         "traducao": "Quanto / Quanta",
         "genero": "Incontáveis e Preço",
         "motivo": "Usado para perguntar a quantidade de coisas incontáveis, ou para perguntar o preço de algo."
@@ -333,13 +333,13 @@
     "alerta": "O Present Continuous (ou Present Progressive) é usado para falar sobre ações que estão acontecendo neste exato momento.",
     "observacao_cards": [
       {
-        "italiano": "Verb To Be + verb-ing",
+        "ingles": "Verb To Be + verb-ing",
         "traducao": "Ser/Estar + verbo com -ing (gerúndio)",
         "genero": "Estrutura",
         "motivo": "A fórmula mágica para dizer que está fazendo algo."
       },
       {
-        "italiano": "Playing, Eating, Working",
+        "ingles": "Playing, Eating, Working",
         "traducao": "Jogando, comendo, trabalhando",
         "genero": "Sufixo -ing",
         "motivo": "Equivale ao nosso '-ndo' do português."
@@ -438,13 +438,13 @@
     "alerta": "Agora que você sabe afirmar o que está acontecendo, vamos aprender a negar e a fazer perguntas usando o Present Continuous.",
     "observacao_cards": [
       {
-        "italiano": "Not",
+        "ingles": "Not",
         "traducao": "Não",
         "genero": "Negativa",
         "motivo": "Coloque o 'not' logo depois do verbo To Be (am not, isn't, aren't)."
       },
       {
-        "italiano": "Am / Is / Are + Subject",
+        "ingles": "Am / Is / Are + Subject",
         "traducao": "Inversão na Pergunta",
         "genero": "Interrogativa",
         "motivo": "Para perguntar, o verbo To Be vai para o início da frase, antes do sujeito."

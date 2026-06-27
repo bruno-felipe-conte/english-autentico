@@ -8,7 +8,91 @@ const App = {
     secaoAtiva: 'templi',
     templosData: {},       // { 1: { templo, nome, cidade, nivel, palavras: [] }, ... }
     quizData: [],          // flat array of all quiz questions
-    vocabCache: [],        // flat array of all words (with templo_num attached)
+    vocabCache: [],
+
+  // === ENERGY SYSTEM ===
+  energiaAtual: 50,
+  maxEnergia: 50,
+  lastEnergyUpdate: 0,
+  
+  carregarEnergia() {
+    try {
+      const data = JSON.parse(localStorage.getItem('en_energia') || '{}');
+      this.energiaAtual = data.energia !== undefined ? data.energia : 50;
+      this.lastEnergyUpdate = data.lastUpdate || Date.now();
+      this.processarRegeneracao();
+    } catch(e) {
+      this.energiaAtual = 50;
+      this.lastEnergyUpdate = Date.now();
+    }
+  },
+  
+  salvarEnergia() {
+    try {
+      localStorage.setItem('en_energia', JSON.stringify({
+        energia: this.energiaAtual,
+        lastUpdate: Date.now()
+      }));
+      const el = document.getElementById('stat-energy');
+      if (el) el.textContent = `⚡ ${Math.floor(this.energiaAtual)}/50`;
+    } catch(e){}
+  },
+  
+  processarRegeneracao() {
+    const now = Date.now();
+    const diffMin = (now - this.lastEnergyUpdate) / (1000 * 60);
+    // Recupera 1 energia a cada 5 minutos
+    if (diffMin > 5 && this.energiaAtual < this.maxEnergia) {
+      const ganho = Math.floor(diffMin / 5);
+      this.energiaAtual = Math.min(this.maxEnergia, this.energiaAtual + ganho);
+      this.lastEnergyUpdate = now;
+      this.salvarEnergia();
+    }
+  },
+  
+  gastarEnergia(qtd) {
+    if (this.energiaAtual < qtd) return false;
+    this.energiaAtual -= qtd;
+    this.lastEnergyUpdate = Date.now();
+    this.salvarEnergia();
+    return true;
+  },
+
+  // === CROSS MODULE: Descobrir Palavra ===
+  descobrirPalavra(wordStr) {
+    if (!this.estado.vocabCache) return false;
+    const word = wordStr.toLowerCase().trim();
+    const hit = this.estado.vocabCache.find(v => (v.ingles || '').toLowerCase() === word);
+    if (!hit) return false;
+    
+    // Injeta na fila do Flashcard como NEW
+    if (!this.estado.flashcardData) this.estado.flashcardData = {};
+    if (!this.estado.flashcardData[hit.id]) {
+      this.estado.flashcardData[hit.id] = {
+        state: 'new',
+        due: Date.now(),
+        stability: 0,
+        difficulty: 0,
+        reps: 0,
+        lapses: 0
+      };
+      this.salvarFlashcards();
+      this.notificar(`💡 Nova palavra "${hit.ingles}" descoberta e enviada para o FSRS!`, 'sucesso');
+    }
+    return true;
+  },
+
+  // === SOCIAL: Compartilhar ===
+  compartilharProgresso() {
+    const texto = `Estou no Nível ${this.estado.progresso.nivel || 1} aprendendo Inglês com o English Autentico! 🔥 Junte-se a mim!`;
+    if (navigator.share) {
+      navigator.share({ title: 'English Autentico', text: texto }).catch(()=>{});
+    } else {
+      navigator.clipboard.writeText(texto);
+      this.notificar('Copiado para a área de transferência!', 'sucesso');
+    }
+  },
+        // flat array of all words (with templo_num attached)
     conjugacoesData: [],   // verb conjugation data
     progresso: null,       // persisted in localStorage
     flashcardData: {}      // persisted in localStorage
@@ -310,11 +394,29 @@ const App = {
   // ── Initialization ─────────────────────────────────────────
   async init() {
     this.estado.progresso = this.carregarProgresso();
+    this.carregarEnergia();
+    this.salvarEnergia();
     this.estado.flashcardData = this.carregarFlashcards();
     if (typeof I18n !== 'undefined') I18n.inicializar();
     await this.carregarDados();
     this.atualizarStats();
     this.renderizarTemplos();
+
+    // FSRS Due Cards Alert
+    setTimeout(() => {
+      let due = 0;
+      const now = Date.now();
+      const fd = this.estado.flashcardData;
+      if (fd) {
+        for (const k in fd) {
+          if (fd[k].due && fd[k].due <= now) due++;
+        }
+      }
+      if (due >= 15 && typeof App.notificar === 'function') {
+        App.notificar(I18n.t('fsrs_due_warning').replace('{num}', due), 'erro');
+      }
+    }, 1500);
+
     // Kick off secondary modules once data is ready
     if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
     if (typeof Quiz !== 'undefined') Quiz.renderizarSeletor();

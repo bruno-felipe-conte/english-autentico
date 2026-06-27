@@ -7,6 +7,40 @@ const Conquistas = {
   // ── Achievement definitions ────────────────────────────────
   LISTA: [
     {
+      id: 'fsrs_bullseye',
+      emoji: '🎯',
+      get nome() { return I18n.t('ach_fsrs_bullseye_name'); },
+      get descricao() { return I18n.t('ach_fsrs_bullseye'); },
+      verificar(p, fd) { return !!p.fsrs_bullseye_ganha; } // Flag trigger manual
+    },
+    {
+      id: 'fsrs_memory_master',
+      emoji: '🧠',
+      get nome() { return I18n.t('ach_fsrs_memory_master_name'); },
+      get descricao() { return I18n.t('ach_fsrs_memory_master'); },
+      verificar(p, fd) { 
+        let cnt = 0;
+        for (const k in fd) {
+          if (fd[k].stability > 15) cnt++;
+        }
+        return cnt >= 25;
+      }
+    },
+    {
+      id: 'fsrs_good_listener',
+      emoji: '🎧',
+      get nome() { return I18n.t('ach_fsrs_good_listener_name'); },
+      get descricao() { return I18n.t('ach_fsrs_good_listener'); },
+      verificar(p, fd) { return (p.fsrs_listen_sessions || 0) >= 10; }
+    },
+    {
+      id: 'fsrs_temple',
+      emoji: '🏛️',
+      get nome() { return I18n.t('ach_fsrs_temple_name'); },
+      get descricao() { return I18n.t('ach_fsrs_temple'); },
+      verificar(p, fd) { return !!p.fsrs_temple_ganha; } // Flag trigger manual
+    },
+    {
       id: 'primeiro_passo',
       emoji: '🌱',
       get nome() { return I18n.t('ach_primeiro_passo_name'); },

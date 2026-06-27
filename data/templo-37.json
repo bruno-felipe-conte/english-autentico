@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t37_001",
-      "italiano": "continent",
+      "ingles": "continent",
       "portugues": "continente",
       "genero": null,
       "plural": "continents",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t37_002",
-      "italiano": "hemisphere",
+      "ingles": "hemisphere",
       "portugues": "hemisfério",
       "genero": null,
       "plural": "hemispheres",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t37_003",
-      "italiano": "latitude",
+      "ingles": "latitude",
       "portugues": "latitude",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t37_004",
-      "italiano": "longitude",
+      "ingles": "longitude",
       "portugues": "longitude",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t37_005",
-      "italiano": "peninsula",
+      "ingles": "peninsula",
       "portugues": "península",
       "genero": null,
       "plural": "peninsulas",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t37_006",
-      "italiano": "archipelago",
+      "ingles": "archipelago",
       "portugues": "arquipélago",
       "genero": null,
       "plural": "archipelagos",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t37_007",
-      "italiano": "plateau",
+      "ingles": "plateau",
       "portugues": "planalto / platô",
       "genero": null,
       "plural": "plateaus",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t37_008",
-      "italiano": "valley",
+      "ingles": "valley",
       "portugues": "vale",
       "genero": null,
       "plural": "valleys",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t37_009",
-      "italiano": "ridge",
+      "ingles": "ridge",
       "portugues": "crista / cordilheira",
       "genero": null,
       "plural": "ridges",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t37_010",
-      "italiano": "tributary",
+      "ingles": "tributary",
       "portugues": "afluente",
       "genero": null,
       "plural": "tributaries",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t37_011",
-      "italiano": "Pacific Ocean",
+      "ingles": "Pacific Ocean",
       "portugues": "Oceano Pacífico",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t37_012",
-      "italiano": "Atlantic Ocean",
+      "ingles": "Atlantic Ocean",
       "portugues": "Oceano Atlântico",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t37_013",
-      "italiano": "Gulf of Mexico",
+      "ingles": "Gulf of Mexico",
       "portugues": "Golfo do México",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t37_014",
-      "italiano": "Rocky Mountains",
+      "ingles": "Rocky Mountains",
       "portugues": "Montanhas Rochosas",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t37_015",
-      "italiano": "Mississippi River",
+      "ingles": "Mississippi River",
       "portugues": "Rio Mississippi",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t37_016",
-      "italiano": "Great Plains",
+      "ingles": "Great Plains",
       "portugues": "Grandes Planícies",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t37_017",
-      "italiano": "Appalachian",
+      "ingles": "Appalachian",
       "portugues": "Apalaches",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t37_018",
-      "italiano": "Midwest",
+      "ingles": "Midwest",
       "portugues": "Meio-Oeste",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t37_019",
-      "italiano": "Sun Belt",
+      "ingles": "Sun Belt",
       "portugues": "Cinturão do Sol",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t37_020",
-      "italiano": "coastline",
+      "ingles": "coastline",
       "portugues": "litoral / linha costeira",
       "genero": null,
       "plural": "coastlines",

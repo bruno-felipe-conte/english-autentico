@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t39_001",
-      "italiano": "faith",
+      "ingles": "faith",
       "portugues": "fé",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t39_002",
-      "italiano": "prayer",
+      "ingles": "prayer",
       "portugues": "oração / reza",
       "genero": null,
       "plural": "prayers",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t39_003",
-      "italiano": "worship",
+      "ingles": "worship",
       "portugues": "adoração / culto",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t39_004",
-      "italiano": "sacred",
+      "ingles": "sacred",
       "portugues": "sagrado",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t39_005",
-      "italiano": "ritual",
+      "ingles": "ritual",
       "portugues": "ritual",
       "genero": null,
       "plural": "rituals",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t39_006",
-      "italiano": "pilgrimage",
+      "ingles": "pilgrimage",
       "portugues": "peregrinação",
       "genero": null,
       "plural": "pilgrimages",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t39_007",
-      "italiano": "denomination",
+      "ingles": "denomination",
       "portugues": "denominação (religiosa)",
       "genero": null,
       "plural": "denominations",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t39_008",
-      "italiano": "theology",
+      "ingles": "theology",
       "portugues": "teologia",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t39_009",
-      "italiano": "spiritual",
+      "ingles": "spiritual",
       "portugues": "espiritual",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t39_010",
-      "italiano": "meditation",
+      "ingles": "meditation",
       "portugues": "meditação",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t39_011",
-      "italiano": "blessing",
+      "ingles": "blessing",
       "portugues": "bênção",
       "genero": null,
       "plural": "blessings",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t39_012",
-      "italiano": "sermon",
+      "ingles": "sermon",
       "portugues": "sermão",
       "genero": null,
       "plural": "sermons",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t39_013",
-      "italiano": "congregation",
+      "ingles": "congregation",
       "portugues": "congregação / fiéis",
       "genero": null,
       "plural": "congregations",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t39_014",
-      "italiano": "divine",
+      "ingles": "divine",
       "portugues": "divino",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t39_015",
-      "italiano": "scripture",
+      "ingles": "scripture",
       "portugues": "escritura (sagrada) / texto sagrado",
       "genero": null,
       "plural": "scriptures",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t39_016",
-      "italiano": "salvation",
+      "ingles": "salvation",
       "portugues": "salvação",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t39_017",
-      "italiano": "grace",
+      "ingles": "grace",
       "portugues": "graça (divina)",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t39_018",
-      "italiano": "compassion",
+      "ingles": "compassion",
       "portugues": "compaixão",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t39_019",
-      "italiano": "enlightenment",
+      "ingles": "enlightenment",
       "portugues": "iluminação (espiritual)",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t39_020",
-      "italiano": "covenant",
+      "ingles": "covenant",
       "portugues": "aliança / pacto (sagrado)",
       "genero": null,
       "plural": "covenants",

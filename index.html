@@ -2891,12 +2891,16 @@
           <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Audio Speed" style="font-family:monospace;font-size:0.72rem;font-weight:700;letter-spacing:-0.02em;min-width:2rem;">1x</button>
           <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
           <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Restart the interactive tour">❓</button>
+          
+          <button class="theme-toggle-btn" onclick="App.renderizarFunilFSRS()" title="Analytics Dashboard">📊</button>
+
           <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="My profile">👤</button>
         </div>
       </div>
       <div class="stats-bar" id="stats-bar">
         <div class="stats-primary-row">
           <span class="stat-item" id="stat-nivel">Level 1</span>
+          <span class="stat-item" id="stat-energy" title="Energia (recarrega com o tempo)">⚡ 50/50</span>
           <span class="stat-item" id="stat-xp">XP: 0/500</span>
           <span class="stat-item" id="stat-streak">🔥 0 dias</span>
         </div>
@@ -3031,7 +3035,7 @@
           <div id="swipe-hint-right" class="swipe-hint"></div>
           <div class="card-inner">
             <div class="card-frente">
-              <div class="palavra-ingles" id="card-italiano" data-i18n="fc_selecione_tempio">Selecione um Temple</div>
+              <div class="palavra-ingles" id="card-ingles" data-i18n="fc_selecione_tempio">Selecione um Temple</div>
               <div class="card-dica" id="card-dica" data-i18n="fc_use_seletor">↑ use o seletor acima</div>
               <div class="card-categoria" id="card-categoria"></div>
             </div>
@@ -3049,6 +3053,16 @@
           <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito" data-i18n-title="title_favorito">🤍</button>
         </div>
         <div id="imitacao-feedback" style="display:none;text-align:center;font-size:0.85rem;margin-bottom:0.75rem;padding:0.3rem;"></div>
+
+        <div id="meta-calibration" style="display:none; text-align:center; padding: 0.5rem; background: var(--cor-superficie); border-radius: 12px; margin-bottom: 0.8rem; border: 1.5px solid var(--cor-borda);">
+          <p style="font-size: 0.85rem; font-weight: 600; color: var(--cor-texto); margin-bottom: 0.5rem;" data-i18n="fc_meta_pergunta">Quão confiante você está?</p>
+          <div style="display:flex; gap: 0.5rem; justify-content: center;">
+            <button class="btn-secondario" onclick="Flashcards.calibrarConfianca('baixa')" style="flex:1; padding:0.4rem; font-size:0.8rem; background:#ffeaa7; color:#d35400; border-color:#ffeaa7;" data-i18n="fc_meta_baixa">Baixa</button>
+            <button class="btn-secondario" onclick="Flashcards.calibrarConfianca('media')" style="flex:1; padding:0.4rem; font-size:0.8rem; background:#81ecec; color:#00cec9; border-color:#81ecec;" data-i18n="fc_meta_media">Média</button>
+            <button class="btn-secondario" onclick="Flashcards.calibrarConfianca('alta')" style="flex:1; padding:0.4rem; font-size:0.8rem; background:#55efc4; color:#00b894; border-color:#55efc4;" data-i18n="fc_meta_alta">Alta</button>
+          </div>
+        </div>
+
         <div class="card-actions" id="card-actions" style="display:none">
           <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)" aria-label="Esqueci — não lembrarei esta palavra, revisará em breve" aria-keyshortcuts="1">
             <span class="btn-label" data-i18n="fc_btn_esqueci">❌ Esqueci</span>

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t2_001",
-      "italiano": "family",
+      "ingles": "family",
       "portugues": "família",
       "genero": null,
       "plural": "families",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t2_002",
-      "italiano": "mother",
+      "ingles": "mother",
       "portugues": "mãe",
       "genero": null,
       "plural": "mothers",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t2_003",
-      "italiano": "father",
+      "ingles": "father",
       "portugues": "pai",
       "genero": null,
       "plural": "fathers",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t2_004",
-      "italiano": "sister",
+      "ingles": "sister",
       "portugues": "irmã",
       "genero": null,
       "plural": "sisters",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t2_005",
-      "italiano": "brother",
+      "ingles": "brother",
       "portugues": "irmão",
       "genero": null,
       "plural": "brothers",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t2_006",
-      "italiano": "son",
+      "ingles": "son",
       "portugues": "filho",
       "genero": null,
       "plural": "sons",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t2_007",
-      "italiano": "daughter",
+      "ingles": "daughter",
       "portugues": "filha",
       "genero": null,
       "plural": "daughters",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t2_008",
-      "italiano": "husband",
+      "ingles": "husband",
       "portugues": "marido",
       "genero": null,
       "plural": "husbands",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t2_009",
-      "italiano": "wife",
+      "ingles": "wife",
       "portugues": "esposa",
       "genero": null,
       "plural": "wives",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t2_010",
-      "italiano": "friend",
+      "ingles": "friend",
       "portugues": "amigo / amiga",
       "genero": null,
       "plural": "friends",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t2_011",
-      "italiano": "house",
+      "ingles": "house",
       "portugues": "casa",
       "genero": null,
       "plural": "houses",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t2_012",
-      "italiano": "apartment",
+      "ingles": "apartment",
       "portugues": "apartamento",
       "genero": null,
       "plural": "apartments",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t2_013",
-      "italiano": "bedroom",
+      "ingles": "bedroom",
       "portugues": "quarto",
       "genero": null,
       "plural": "bedrooms",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t2_014",
-      "italiano": "kitchen",
+      "ingles": "kitchen",
       "portugues": "cozinha",
       "genero": null,
       "plural": "kitchens",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t2_015",
-      "italiano": "bathroom",
+      "ingles": "bathroom",
       "portugues": "banheiro",
       "genero": null,
       "plural": "bathrooms",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t2_016",
-      "italiano": "living room",
+      "ingles": "living room",
       "portugues": "sala de estar",
       "genero": null,
       "plural": "living rooms",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t2_017",
-      "italiano": "yard",
+      "ingles": "yard",
       "portugues": "quintal",
       "genero": null,
       "plural": "yards",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t2_018",
-      "italiano": "neighbor",
+      "ingles": "neighbor",
       "portugues": "vizinho / vizinha",
       "genero": null,
       "plural": "neighbors",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t2_019",
-      "italiano": "street",
+      "ingles": "street",
       "portugues": "rua",
       "genero": null,
       "plural": "streets",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t2_020",
-      "italiano": "home",
+      "ingles": "home",
       "portugues": "lar / casa",
       "genero": null,
       "plural": null,

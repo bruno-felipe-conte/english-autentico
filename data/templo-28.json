@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t28_001",
-      "italiano": "climate",
+      "ingles": "climate",
       "portugues": "clima",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t28_002",
-      "italiano": "pollution",
+      "ingles": "pollution",
       "portugues": "poluição",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t28_003",
-      "italiano": "renewable energy",
+      "ingles": "renewable energy",
       "portugues": "energia renovável",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t28_004",
-      "italiano": "recycle",
+      "ingles": "recycle",
       "portugues": "reciclar",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t28_005",
-      "italiano": "carbon footprint",
+      "ingles": "carbon footprint",
       "portugues": "pegada de carbono",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t28_006",
-      "italiano": "ecosystem",
+      "ingles": "ecosystem",
       "portugues": "ecossistema",
       "genero": null,
       "plural": "ecosystems",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t28_007",
-      "italiano": "habitat",
+      "ingles": "habitat",
       "portugues": "habitat",
       "genero": null,
       "plural": "habitats",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t28_008",
-      "italiano": "endangered",
+      "ingles": "endangered",
       "portugues": "em extinção / ameaçado",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t28_009",
-      "italiano": "conservation",
+      "ingles": "conservation",
       "portugues": "conservação",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t28_010",
-      "italiano": "sustainability",
+      "ingles": "sustainability",
       "portugues": "sustentabilidade",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t28_011",
-      "italiano": "drought",
+      "ingles": "drought",
       "portugues": "seca",
       "genero": null,
       "plural": "droughts",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t28_012",
-      "italiano": "flood",
+      "ingles": "flood",
       "portugues": "enchente / inundação",
       "genero": null,
       "plural": "floods",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t28_013",
-      "italiano": "wildfire",
+      "ingles": "wildfire",
       "portugues": "incêndio florestal",
       "genero": null,
       "plural": "wildfires",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t28_014",
-      "italiano": "deforestation",
+      "ingles": "deforestation",
       "portugues": "desmatamento",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t28_015",
-      "italiano": "solar panel",
+      "ingles": "solar panel",
       "portugues": "painel solar",
       "genero": null,
       "plural": "solar panels",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t28_016",
-      "italiano": "biodiversity",
+      "ingles": "biodiversity",
       "portugues": "biodiversidade",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t28_017",
-      "italiano": "emission",
+      "ingles": "emission",
       "portugues": "emissão",
       "genero": null,
       "plural": "emissions",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t28_018",
-      "italiano": "greenhouse",
+      "ingles": "greenhouse",
       "portugues": "efeito estufa (greenhouse gas/effect)",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t28_019",
-      "italiano": "organic",
+      "ingles": "organic",
       "portugues": "orgânico",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t28_020",
-      "italiano": "compost",
+      "ingles": "compost",
       "portugues": "composto orgânico / compostar",
       "genero": null,
       "plural": null,

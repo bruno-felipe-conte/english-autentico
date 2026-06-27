@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t41_001",
-      "italiano": "memory",
+      "ingles": "memory",
       "portugues": "memória",
       "genero": null,
       "plural": "memories",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t41_002",
-      "italiano": "recall",
+      "ingles": "recall",
       "portugues": "recordação / recuperação de memória",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t41_003",
-      "italiano": "retention",
+      "ingles": "retention",
       "portugues": "retenção",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t41_004",
-      "italiano": "cognition",
+      "ingles": "cognition",
       "portugues": "cognição",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t41_005",
-      "italiano": "attention",
+      "ingles": "attention",
       "portugues": "atenção",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t41_006",
-      "italiano": "focus",
+      "ingles": "focus",
       "portugues": "foco",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t41_007",
-      "italiano": "distraction",
+      "ingles": "distraction",
       "portugues": "distração",
       "genero": null,
       "plural": "distractions",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t41_008",
-      "italiano": "mnemonic",
+      "ingles": "mnemonic",
       "portugues": "mnemônico",
       "genero": null,
       "plural": "mnemonics",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t41_009",
-      "italiano": "spaced repetition",
+      "ingles": "spaced repetition",
       "portugues": "repetição espaçada",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t41_010",
-      "italiano": "retrieval",
+      "ingles": "retrieval",
       "portugues": "recuperação (de informação)",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t41_011",
-      "italiano": "neuroplasticity",
+      "ingles": "neuroplasticity",
       "portugues": "neuroplasticidade",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t41_012",
-      "italiano": "metacognition",
+      "ingles": "metacognition",
       "portugues": "metacognição",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t41_013",
-      "italiano": "working memory",
+      "ingles": "working memory",
       "portugues": "memória de trabalho",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t41_014",
-      "italiano": "long-term memory",
+      "ingles": "long-term memory",
       "portugues": "memória de longo prazo",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t41_015",
-      "italiano": "encoding",
+      "ingles": "encoding",
       "portugues": "codificação",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t41_016",
-      "italiano": "consolidation",
+      "ingles": "consolidation",
       "portugues": "consolidação",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t41_017",
-      "italiano": "interference",
+      "ingles": "interference",
       "portugues": "interferência",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t41_018",
-      "italiano": "association",
+      "ingles": "association",
       "portugues": "associação",
       "genero": null,
       "plural": "associations",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t41_019",
-      "italiano": "visualization",
+      "ingles": "visualization",
       "portugues": "visualização",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t41_020",
-      "italiano": "flashcard",
+      "ingles": "flashcard",
       "portugues": "cartão de memorização",
       "genero": null,
       "plural": "flashcards",

@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t15_001",
-      "italiano": "red",
+      "ingles": "red",
       "portugues": "vermelho",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t15_002",
-      "italiano": "blue",
+      "ingles": "blue",
       "portugues": "azul",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t15_003",
-      "italiano": "green",
+      "ingles": "green",
       "portugues": "verde",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t15_004",
-      "italiano": "yellow",
+      "ingles": "yellow",
       "portugues": "amarelo",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t15_005",
-      "italiano": "orange",
+      "ingles": "orange",
       "portugues": "laranja",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t15_006",
-      "italiano": "purple",
+      "ingles": "purple",
       "portugues": "roxo",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t15_007",
-      "italiano": "pink",
+      "ingles": "pink",
       "portugues": "rosa",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t15_008",
-      "italiano": "brown",
+      "ingles": "brown",
       "portugues": "marrom",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t15_009",
-      "italiano": "black",
+      "ingles": "black",
       "portugues": "preto",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t15_010",
-      "italiano": "white",
+      "ingles": "white",
       "portugues": "branco",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t15_011",
-      "italiano": "big",
+      "ingles": "big",
       "portugues": "grande",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t15_012",
-      "italiano": "small",
+      "ingles": "small",
       "portugues": "pequeno",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t15_013",
-      "italiano": "tall",
+      "ingles": "tall",
       "portugues": "alto",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t15_014",
-      "italiano": "short",
+      "ingles": "short",
       "portugues": "baixo / curto",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t15_015",
-      "italiano": "round",
+      "ingles": "round",
       "portugues": "redondo",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t15_016",
-      "italiano": "square",
+      "ingles": "square",
       "portugues": "quadrado",
       "genero": null,
       "plural": "squares",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t15_017",
-      "italiano": "heavy",
+      "ingles": "heavy",
       "portugues": "pesado",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t15_018",
-      "italiano": "light",
+      "ingles": "light",
       "portugues": "leve / claro",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t15_019",
-      "italiano": "long",
+      "ingles": "long",
       "portugues": "longo / comprido",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t15_020",
-      "italiano": "wide",
+      "ingles": "wide",
       "portugues": "largo / amplo",
       "genero": null,
       "plural": null,

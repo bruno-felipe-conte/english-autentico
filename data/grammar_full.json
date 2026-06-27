@@ -40,9 +40,9 @@
       "subtitulo": "The foundation of all English sentences",
       "alerta": "To be is irregular and essential. Master it before moving on.",
       "observacao_cards": [
-        {"italiano": "I am / You are / He is / She is / It is / We are / They are", "traducao": "Forms of 'to be' for each subject", "genero": "pattern", "motivo": "Each subject has its own form"},
-        {"italiano": "Negative: I'm not / You aren't / He isn't", "traducao": "Negative forms", "genero": "tag", "motivo": "Add 'not' after verb"},
-        {"italiano": "Question: Are you? Is she?", "traducao": "Question formation", "genero": "tag", "motivo": "Invert subject and verb"}
+        {"ingles": "I am / You are / He is / She is / It is / We are / They are", "traducao": "Forms of 'to be' for each subject", "genero": "pattern", "motivo": "Each subject has its own form"},
+        {"ingles": "Negative: I'm not / You aren't / He isn't", "traducao": "Negative forms", "genero": "tag", "motivo": "Add 'not' after verb"},
+        {"ingles": "Question: Are you? Is she?", "traducao": "Question formation", "genero": "tag", "motivo": "Invert subject and verb"}
       ],
       "tabela_visual": "<table><tr><th>Subject</th><th>To Be</th><th>Negative</th><th>Question</th></tr><tr><td>I</td><td>am</td><td>I'm not</td><td>Am I?</td></tr><tr><td>You</td><td>are</td><td>aren't/you're not</td><td>Are you?</td></tr><tr><td>He/She/It</td><td>is</td><td>isn't/he/she/it's not</td><td>Is he/she/it?</td></tr><tr><td>We</td><td>are</td><td>aren't/we're not</td><td>Are we?</td></tr><tr><td>They</td><td>are</td><td>aren't/they're not</td><td>Are they?</td></tr></table>",
       "exemplos_prc": [
@@ -71,10 +71,10 @@
       "subtitulo": "Indefinite vs definite articles explained",
       "alerta": "Articles are small but essential. Using them correctly is key to natural English.",
       "observacao_cards": [
-        {"italiano": "Use 'a' before consonant sounds (a book, a university)", "traducao": "A before consonant sounds", "genero": "pattern", "motivo": "Sound matters, not spelling"},
-        {"italiano": "Use 'an' before vowel sounds (an apple, an hour)", "traducao": "An before vowel sounds", "genero": "pattern", "motivo": "Hour has silent h = vowel sound"},
-        {"italiano": "Use 'the' for specific things everyone knows", "traducao": "The for specific/definite", "genero": "tag", "motivo": "Both speaker and listener know which"},
-        {"italiano": "Zero article for general concepts", "traducao": "No article for general", "genero": "tag", "motivo": "English allows bare nouns"}
+        {"ingles": "Use 'a' before consonant sounds (a book, a university)", "traducao": "A before consonant sounds", "genero": "pattern", "motivo": "Sound matters, not spelling"},
+        {"ingles": "Use 'an' before vowel sounds (an apple, an hour)", "traducao": "An before vowel sounds", "genero": "pattern", "motivo": "Hour has silent h = vowel sound"},
+        {"ingles": "Use 'the' for specific things everyone knows", "traducao": "The for specific/definite", "genero": "tag", "motivo": "Both speaker and listener know which"},
+        {"ingles": "Zero article for general concepts", "traducao": "No article for general", "genero": "tag", "motivo": "English allows bare nouns"}
       ],
       "tabela_visual": "<table><tr><th>Article</th><th>When to Use</th><th>Example</th></tr><tr><td>A</td><td>Singular, first mention, consonant sound</td><td>a dog, a friend</td></tr><tr><td>An</td><td>Singular, first mention, vowel sound</td><td>an apple, an umbrella</td></tr><tr><td>The</td><td>Specific, previously mentioned, superlatives</td><td>the book on the table</td></tr><tr><td>(no article)</td><td>General statements, abstract nouns</td><td>I like music</td></tr></table>",
       "exemplos_prc": [

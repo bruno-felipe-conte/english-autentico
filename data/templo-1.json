@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t1_001",
-      "italiano": "hello",
+      "ingles": "hello",
       "portugues": "olá",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t1_002",
-      "italiano": "good morning",
+      "ingles": "good morning",
       "portugues": "bom dia",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t1_003",
-      "italiano": "good afternoon",
+      "ingles": "good afternoon",
       "portugues": "boa tarde",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t1_004",
-      "italiano": "good night",
+      "ingles": "good night",
       "portugues": "boa noite (despedida)",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t1_005",
-      "italiano": "goodbye",
+      "ingles": "goodbye",
       "portugues": "tchau / adeus",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t1_006",
-      "italiano": "please",
+      "ingles": "please",
       "portugues": "por favor",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t1_007",
-      "italiano": "thank you",
+      "ingles": "thank you",
       "portugues": "obrigado / obrigada",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t1_008",
-      "italiano": "you're welcome",
+      "ingles": "you're welcome",
       "portugues": "de nada",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t1_009",
-      "italiano": "sorry",
+      "ingles": "sorry",
       "portugues": "desculpe / sinto muito",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t1_010",
-      "italiano": "excuse me",
+      "ingles": "excuse me",
       "portugues": "com licença / me desculpe",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t1_011",
-      "italiano": "yes",
+      "ingles": "yes",
       "portugues": "sim",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t1_012",
-      "italiano": "no",
+      "ingles": "no",
       "portugues": "não",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t1_013",
-      "italiano": "I don't understand",
+      "ingles": "I don't understand",
       "portugues": "não entendo",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t1_014",
-      "italiano": "can you speak slowly?",
+      "ingles": "can you speak slowly?",
       "portugues": "você pode falar mais devagar?",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t1_015",
-      "italiano": "my name is",
+      "ingles": "my name is",
       "portugues": "meu nome é",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t1_016",
-      "italiano": "nice to meet you",
+      "ingles": "nice to meet you",
       "portugues": "prazer em conhecê-lo",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t1_017",
-      "italiano": "where are you from?",
+      "ingles": "where are you from?",
       "portugues": "de onde você é?",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t1_018",
-      "italiano": "how are you?",
+      "ingles": "how are you?",
       "portugues": "como vai você?",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t1_019",
-      "italiano": "what is your name?",
+      "ingles": "what is your name?",
       "portugues": "qual é o seu nome?",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t1_020",
-      "italiano": "I am from Brazil",
+      "ingles": "I am from Brazil",
       "portugues": "eu sou do Brasil",
       "genero": null,
       "plural": null,

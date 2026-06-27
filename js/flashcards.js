@@ -191,7 +191,8 @@ const Flashcards = {
     }
     this.temploAtual     = templo;
     this.praticandoTodas = false;
-    this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
+    this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0,
+      firstTryCorrect: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
     if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
     this._metricasIniciarSessao();
     // Registrar dia de estudo para streak
@@ -217,6 +218,8 @@ const Flashcards = {
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     if (vazio)   vazio.style.display   = 'none';
+    const metaUI = document.getElementById('meta-calibration');
+    if (metaUI) metaUI.style.display = '';
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
 
@@ -285,7 +288,7 @@ const Flashcards = {
     const actions = document.getElementById('card-actions');
     if (actions) actions.style.display = 'none';
 
-    const elIt   = document.getElementById('card-italiano');
+    const elIt   = document.getElementById('card-ingles');
     const elCat  = document.getElementById('card-categoria');
     const elDica = document.getElementById('card-dica');
     const elHelp = document.getElementById('selector-helper');
@@ -307,11 +310,11 @@ const Flashcards = {
       if (elIt)  elIt.textContent  = '🎧';
       if (elCat) elCat.textContent = '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
-      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+      if (elTrad) elTrad.textContent = this.cartaAtual.ingles || '—';
     } else if (this.modoContexto) {
       // 📖 Context: show example sentence with blank
       const ex = this.cartaAtual.exemplo || '';
-      const mascarada = ex ? this._mascarar(this.cartaAtual.italiano, ex) : null;
+      const mascarada = ex ? this._mascarar(this.cartaAtual.ingles, ex) : null;
       if (mascarada) {
         if (elIt) elIt.textContent = mascarada;
         if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
@@ -321,16 +324,16 @@ const Flashcards = {
         if (elDica) elDica.textContent = I18n.t('fc_contexto_sem_exemplo_hint');
       }
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
-      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+      if (elTrad) elTrad.textContent = this.cartaAtual.ingles || '—';
     } else if (this.modoReverso) {
       // 🔄 Reverse: PT front, IT back
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
-      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+      if (elTrad) elTrad.textContent = this.cartaAtual.ingles || '—';
     } else {
       // Normal: IT front, PT back
-      if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
+      if (elIt)  elIt.textContent  = this.cartaAtual.ingles || '—';
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
@@ -446,7 +449,7 @@ const Flashcards = {
     const input = document.getElementById('fc-reverso-input');
     if (!input || !this.cartaAtual) return;
     const digitado = input.value.trim().toLowerCase().replace(/[.,!?;:]/g, '');
-    const alvo = (this.cartaAtual.italiano || '').toLowerCase().replace(/[.,!?;:]/g, '');
+    const alvo = (this.cartaAtual.ingles || '').toLowerCase().replace(/[.,!?;:]/g, '');
     const acertou = digitado === alvo || alvo.includes(digitado) && digitado.length >= alvo.length * 0.8;
     const wrap = document.getElementById('fc-reverso-input-wrap');
     if (acertou) {
@@ -454,7 +457,7 @@ const Flashcards = {
       // Grant bonus XP for verified production
       if (typeof Progressao !== 'undefined') Progressao.ganhar(3);
     } else {
-      if (wrap) wrap.innerHTML = `<span style="color:var(--cor-erro,#e74c3c);">❌ ${I18n.t('fc_reverso_erro').replace('{alvo}', this.cartaAtual.italiano)}</span>`;
+      if (wrap) wrap.innerHTML = `<span style="color:var(--cor-erro,#e74c3c);">❌ ${I18n.t('fc_reverso_erro').replace('{alvo}', this.cartaAtual.ingles)}</span>`;
     }
   },
 
@@ -471,7 +474,7 @@ const Flashcards = {
     // In reverse mode the target word is Italian; in context mode the user
     // must guess the Italian word (fill the blank); in normal mode it's Portuguese.
     const alvo = (this.modoReverso || this.modoContexto)
-      ? this.cartaAtual.italiano
+      ? this.cartaAtual.ingles
       : this.cartaAtual.portugues;
     const elDica = document.getElementById('card-dica');
 
@@ -677,6 +680,38 @@ const Flashcards = {
 
   // ── Session summary screen ─────────────────────────────────
   mostrarResumo() {
+    const metaUI = document.getElementById('meta-calibration');
+    if (metaUI) metaUI.style.display = 'none';
+    
+    const acc = total > 0 ? Math.round(((s.good + s.easy) / total) * 100) : 0;
+    
+    // Confetti Celebration
+    if (acc >= 80) {
+      for(let i=0; i<30; i++){
+        const c = document.createElement('div');
+        c.className = 'levelup-confetti';
+        c.style.left = (Math.random()*100) + 'vw';
+        c.style.backgroundColor = ['#f1c40f','#e74c3c','#3498db','#2ecc71'][Math.floor(Math.random()*4)];
+        c.style.animationDuration = (1 + Math.random()) + 's';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 2000);
+      }
+    }
+
+    // Achievements Check
+    if (this.modoEstudo === 'escuta' && acc > 50) {
+      App.estado.progresso.fsrs_listen_sessions = (App.estado.progresso.fsrs_listen_sessions || 0) + 1;
+      App.salvarProgresso();
+    }
+    if (this.sessaoStats.firstTryCorrect >= 10) {
+      App.estado.progresso.fsrs_bullseye_ganha = true;
+      App.salvarProgresso();
+    }
+    // O achievement de Memory Master (R>95%) é verificado dinamicamente no conquistas.js
+    // O achievement de Templo Master (R>90%) é verificado se o Templo atual tiver boas métricas.
+    
+    if (typeof App.checarConquistasFSRS === 'function') App.checarConquistasFSRS();
+
     const resumo = document.getElementById('flashcard-resumo');
     if (!resumo || !this.sessaoStats) return;
     const s = this.sessaoStats;
@@ -850,6 +885,8 @@ const Flashcards = {
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     if (vazio)   vazio.style.display   = 'none';
+    const metaUI = document.getElementById('meta-calibration');
+    if (metaUI) metaUI.style.display = '';
     if (resumo)  resumo.style.display  = 'none';
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
@@ -862,6 +899,15 @@ const Flashcards = {
   // ── Mode toggles (mutually exclusive) ────────────────────
   _limparModos() {
     this.modoReverso  = false;
+    
+    // Energy Check
+    if (typeof App !== 'undefined' && App.gastarEnergia) {
+      if (!App.gastarEnergia(5)) {
+        App.notificar("⚡ Sem energia suficiente! Descanse ou volte mais tarde.", "erro");
+        return;
+      }
+    }
+
     this.modoContexto = false;
     this.modoEscuta   = false;
     ['btn-reverso','btn-contexto','btn-escuta'].forEach(id => {
@@ -1067,6 +1113,8 @@ const Flashcards = {
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     if (vazio)   vazio.style.display   = 'none';
+    const metaUI = document.getElementById('meta-calibration');
+    if (metaUI) metaUI.style.display = '';
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
 
@@ -1093,6 +1141,8 @@ const Flashcards = {
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     if (vazio)   vazio.style.display   = 'none';
+    const metaUI = document.getElementById('meta-calibration');
+    if (metaUI) metaUI.style.display = '';
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
 
@@ -1115,6 +1165,8 @@ const Flashcards = {
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     if (vazio)   vazio.style.display   = 'none';
+    const metaUI = document.getElementById('meta-calibration');
+    if (metaUI) metaUI.style.display = '';
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
 
@@ -1180,8 +1232,8 @@ const Flashcards = {
 
   // ── Pronounce the current word ────────────────────────────
   pronunciar() {
-    if (this.cartaAtual && this.cartaAtual.italiano) {
-      App.pronunciar(this.cartaAtual.italiano);
+    if (this.cartaAtual && this.cartaAtual.ingles) {
+      App.pronunciar(this.cartaAtual.ingles);
     }
   },
 
@@ -1211,7 +1263,7 @@ const Flashcards = {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return null;
     const r = new SR();
-    r.lang = 'it-IT';
+    r.lang = 'en-US';
     r.continuous = false;
     r.interimResults = false;
     return r;
@@ -1237,7 +1289,7 @@ const Flashcards = {
     
     this._recognition.onresult = (e) => {
       const texto = e.results[0][0].transcript.toLowerCase();
-      const alvo = (this.cartaAtual.italiano || '').toLowerCase();
+      const alvo = (this.cartaAtual.ingles || '').toLowerCase();
       
       const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
       const alvoNormalize = alvo.replace(/[.,!?;:]/g, '').trim();

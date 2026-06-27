@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t40_001",
-      "italiano": "syntax",
+      "ingles": "syntax",
       "portugues": "sintaxe",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t40_002",
-      "italiano": "semantics",
+      "ingles": "semantics",
       "portugues": "semântica",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t40_003",
-      "italiano": "phonology",
+      "ingles": "phonology",
       "portugues": "fonologia",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t40_004",
-      "italiano": "morphology",
+      "ingles": "morphology",
       "portugues": "morfologia",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t40_005",
-      "italiano": "pragmatics",
+      "ingles": "pragmatics",
       "portugues": "pragmática",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t40_006",
-      "italiano": "bilingual",
+      "ingles": "bilingual",
       "portugues": "bilíngue",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t40_007",
-      "italiano": "fluency",
+      "ingles": "fluency",
       "portugues": "fluência",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t40_008",
-      "italiano": "proficiency",
+      "ingles": "proficiency",
       "portugues": "proficiência",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t40_009",
-      "italiano": "accent",
+      "ingles": "accent",
       "portugues": "sotaque",
       "genero": null,
       "plural": "accents",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t40_010",
-      "italiano": "dialect",
+      "ingles": "dialect",
       "portugues": "dialeto",
       "genero": null,
       "plural": "dialects",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t40_011",
-      "italiano": "idiom",
+      "ingles": "idiom",
       "portugues": "expressão idiomática",
       "genero": null,
       "plural": "idioms",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t40_012",
-      "italiano": "collocation",
+      "ingles": "collocation",
       "portugues": "colocação",
       "genero": null,
       "plural": "collocations",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t40_013",
-      "italiano": "connotation",
+      "ingles": "connotation",
       "portugues": "conotação",
       "genero": null,
       "plural": "connotations",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t40_014",
-      "italiano": "denotation",
+      "ingles": "denotation",
       "portugues": "denotação",
       "genero": null,
       "plural": "denotations",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t40_015",
-      "italiano": "register",
+      "ingles": "register",
       "portugues": "registro (linguístico)",
       "genero": null,
       "plural": "registers",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t40_016",
-      "italiano": "etymology",
+      "ingles": "etymology",
       "portugues": "etimologia",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t40_017",
-      "italiano": "cognate",
+      "ingles": "cognate",
       "portugues": "cognato",
       "genero": null,
       "plural": "cognates",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t40_018",
-      "italiano": "false friend",
+      "ingles": "false friend",
       "portugues": "falso cognato",
       "genero": null,
       "plural": "false friends",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t40_019",
-      "italiano": "loanword",
+      "ingles": "loanword",
       "portugues": "empréstimo linguístico",
       "genero": null,
       "plural": "loanwords",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t40_020",
-      "italiano": "code-switching",
+      "ingles": "code-switching",
       "portugues": "alternância de código",
       "genero": null,
       "plural": null,

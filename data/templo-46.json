@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t46_001",
-      "italiano": "teamwork",
+      "ingles": "teamwork",
       "portugues": "trabalho em equipe",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t46_002",
-      "italiano": "collaboration",
+      "ingles": "collaboration",
       "portugues": "colaboração",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t46_003",
-      "italiano": "synergy",
+      "ingles": "synergy",
       "portugues": "sinergia",
       "genero": null,
       "plural": "synergies",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t46_004",
-      "italiano": "consensus",
+      "ingles": "consensus",
       "portugues": "consenso",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t46_005",
-      "italiano": "brainstorm",
+      "ingles": "brainstorm",
       "portugues": "fazer brainstorming / gerar ideias",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t46_006",
-      "italiano": "divide tasks",
+      "ingles": "divide tasks",
       "portugues": "dividir tarefas",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t46_007",
-      "italiano": "check in",
+      "ingles": "check in",
       "portugues": "fazer uma atualização / verificar o progresso",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t46_008",
-      "italiano": "accountability",
+      "ingles": "accountability",
       "portugues": "responsabilidade / prestação de contas",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t46_009",
-      "italiano": "trust",
+      "ingles": "trust",
       "portugues": "confiança",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t46_010",
-      "italiano": "constructive feedback",
+      "ingles": "constructive feedback",
       "portugues": "feedback construtivo",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t46_011",
-      "italiano": "cross-functional",
+      "ingles": "cross-functional",
       "portugues": "multifuncional / interfuncional",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t46_012",
-      "italiano": "remote team",
+      "ingles": "remote team",
       "portugues": "equipe remota",
       "genero": null,
       "plural": "remote teams",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t46_013",
-      "italiano": "asynchronous",
+      "ingles": "asynchronous",
       "portugues": "assíncrono",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t46_014",
-      "italiano": "Kanban",
+      "ingles": "Kanban",
       "portugues": "Kanban (método visual de gestão de tarefas)",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t46_015",
-      "italiano": "sprint",
+      "ingles": "sprint",
       "portugues": "sprint (ciclo de trabalho curto)",
       "genero": null,
       "plural": "sprints",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t46_016",
-      "italiano": "retrospective",
+      "ingles": "retrospective",
       "portugues": "retrospectiva",
       "genero": null,
       "plural": "retrospectives",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t46_017",
-      "italiano": "milestone",
+      "ingles": "milestone",
       "portugues": "marco / etapa importante",
       "genero": null,
       "plural": "milestones",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t46_018",
-      "italiano": "deliverable",
+      "ingles": "deliverable",
       "portugues": "entregável",
       "genero": null,
       "plural": "deliverables",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t46_019",
-      "italiano": "scope",
+      "ingles": "scope",
       "portugues": "escopo / abrangência",
       "genero": null,
       "plural": "scopes",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t46_020",
-      "italiano": "handoff",
+      "ingles": "handoff",
       "portugues": "transferência de responsabilidade / entrega",
       "genero": null,
       "plural": "handoffs",

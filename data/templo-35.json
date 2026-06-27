@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t35_001",
-      "italiano": "hypothesis",
+      "ingles": "hypothesis",
       "portugues": "hipótese",
       "genero": null,
       "plural": "hypotheses",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t35_002",
-      "italiano": "experiment",
+      "ingles": "experiment",
       "portugues": "experimento",
       "genero": null,
       "plural": "experiments",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t35_003",
-      "italiano": "evidence",
+      "ingles": "evidence",
       "portugues": "evidência / prova",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t35_004",
-      "italiano": "theory",
+      "ingles": "theory",
       "portugues": "teoria",
       "genero": null,
       "plural": "theories",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t35_005",
-      "italiano": "observation",
+      "ingles": "observation",
       "portugues": "observação",
       "genero": null,
       "plural": "observations",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t35_006",
-      "italiano": "variable",
+      "ingles": "variable",
       "portugues": "variável",
       "genero": null,
       "plural": "variables",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t35_007",
-      "italiano": "result",
+      "ingles": "result",
       "portugues": "resultado",
       "genero": null,
       "plural": "results",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t35_008",
-      "italiano": "conclusion",
+      "ingles": "conclusion",
       "portugues": "conclusão",
       "genero": null,
       "plural": "conclusions",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t35_009",
-      "italiano": "peer review",
+      "ingles": "peer review",
       "portugues": "revisão por pares",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t35_010",
-      "italiano": "replication",
+      "ingles": "replication",
       "portugues": "replicação / reprodução",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t35_011",
-      "italiano": "biology",
+      "ingles": "biology",
       "portugues": "biologia",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t35_012",
-      "italiano": "chemistry",
+      "ingles": "chemistry",
       "portugues": "química",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t35_013",
-      "italiano": "physics",
+      "ingles": "physics",
       "portugues": "física",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t35_014",
-      "italiano": "astronomy",
+      "ingles": "astronomy",
       "portugues": "astronomia",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t35_015",
-      "italiano": "genetics",
+      "ingles": "genetics",
       "portugues": "genética",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t35_016",
-      "italiano": "evolution",
+      "ingles": "evolution",
       "portugues": "evolução",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t35_017",
-      "italiano": "molecule",
+      "ingles": "molecule",
       "portugues": "molécula",
       "genero": null,
       "plural": "molecules",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t35_018",
-      "italiano": "atom",
+      "ingles": "atom",
       "portugues": "átomo",
       "genero": null,
       "plural": "atoms",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t35_019",
-      "italiano": "energy",
+      "ingles": "energy",
       "portugues": "energia",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t35_020",
-      "italiano": "gravity",
+      "ingles": "gravity",
       "portugues": "gravidade",
       "genero": null,
       "plural": null,

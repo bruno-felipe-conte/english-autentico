@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t45_001",
-      "italiano": "leadership",
+      "ingles": "leadership",
       "portugues": "liderança",
       "genero": null,
       "plural": "leaderships",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t45_002",
-      "italiano": "vision",
+      "ingles": "vision",
       "portugues": "visão",
       "genero": null,
       "plural": "visions",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t45_003",
-      "italiano": "strategy",
+      "ingles": "strategy",
       "portugues": "estratégia",
       "genero": null,
       "plural": "strategies",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t45_004",
-      "italiano": "delegate",
+      "ingles": "delegate",
       "portugues": "delegar",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t45_005",
-      "italiano": "empower",
+      "ingles": "empower",
       "portugues": "empoderar / capacitar",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t45_006",
-      "italiano": "accountability",
+      "ingles": "accountability",
       "portugues": "responsabilidade / prestação de contas",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t45_007",
-      "italiano": "transparency",
+      "ingles": "transparency",
       "portugues": "transparência",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t45_008",
-      "italiano": "initiative",
+      "ingles": "initiative",
       "portugues": "iniciativa",
       "genero": null,
       "plural": "initiatives",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t45_009",
-      "italiano": "inspire",
+      "ingles": "inspire",
       "portugues": "inspirar",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t45_010",
-      "italiano": "mentor",
+      "ingles": "mentor",
       "portugues": "mentor / ser mentor de",
       "genero": null,
       "plural": "mentors",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t45_011",
-      "italiano": "stakeholder",
+      "ingles": "stakeholder",
       "portugues": "parte interessada / stakeholder",
       "genero": null,
       "plural": "stakeholders",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t45_012",
-      "italiano": "KPI",
+      "ingles": "KPI",
       "portugues": "indicador-chave de desempenho (KPI)",
       "genero": null,
       "plural": "KPIs",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t45_013",
-      "italiano": "benchmark",
+      "ingles": "benchmark",
       "portugues": "referência / parâmetro de comparação",
       "genero": null,
       "plural": "benchmarks",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t45_014",
-      "italiano": "agile",
+      "ingles": "agile",
       "portugues": "ágil / metodologia ágil",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t45_015",
-      "italiano": "pivot",
+      "ingles": "pivot",
       "portugues": "mudar de direção / pivotar",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t45_016",
-      "italiano": "decision-making",
+      "ingles": "decision-making",
       "portugues": "tomada de decisão",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t45_017",
-      "italiano": "risk management",
+      "ingles": "risk management",
       "portugues": "gestão de riscos",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t45_018",
-      "italiano": "innovation",
+      "ingles": "innovation",
       "portugues": "inovação",
       "genero": null,
       "plural": "innovations",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t45_019",
-      "italiano": "culture",
+      "ingles": "culture",
       "portugues": "cultura (organizacional)",
       "genero": null,
       "plural": "cultures",
@@ -233,7 +233,7 @@
     },
     {
       "id": "t45_020",
-      "italiano": "performance review",
+      "ingles": "performance review",
       "portugues": "avaliação de desempenho",
       "genero": null,
       "plural": "performance reviews",

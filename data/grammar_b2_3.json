@@ -7,19 +7,19 @@
     "alerta": "Sabia que usar ou omitir 'the' muda completamente o sentido em instituições e ideias abstratas?",
     "observacao_cards": [
       {
-        "italiano": "Go to hospital",
+        "ingles": "Go to hospital",
         "traducao": "Ir ao hospital (como paciente)",
         "genero": "Institutional",
         "motivo": "Foco no propósito da instituição"
       },
       {
-        "italiano": "Go to the hospital",
+        "ingles": "Go to the hospital",
         "traducao": "Ir ao hospital (como visitante)",
         "genero": "Specific Location",
         "motivo": "Foco no prédio físico"
       },
       {
-        "italiano": "Love",
+        "ingles": "Love",
         "traducao": "O amor (em geral)",
         "genero": "Abstract",
         "motivo": "Sem artigo para conceitos gerais"
@@ -104,13 +104,13 @@
     "alerta": "Você causa ou você sente? É a diferença entre ser 'boring' ou estar 'bored'.",
     "observacao_cards": [
       {
-        "italiano": "Bored",
+        "ingles": "Bored",
         "traducao": "Entediado(a)",
         "genero": "Feeling (-ed)",
         "motivo": "Descreve como alguém se sente."
       },
       {
-        "italiano": "Boring",
+        "ingles": "Boring",
         "traducao": "Entediante / Chato(a)",
         "genero": "Cause (-ing)",
         "motivo": "Descreve a coisa ou pessoa que causa o sentimento."
@@ -195,13 +195,13 @@
     "alerta": "Ligar ideias de contraste exige cuidado! Algumas estruturas exigem verbo, outras apenas substantivo.",
     "observacao_cards": [
       {
-        "italiano": "Although / Even though",
+        "ingles": "Although / Even though",
         "traducao": "Embora / Apesar de que",
         "genero": "Clause Linker",
         "motivo": "Exige uma oração completa (Sujeito + Verbo)"
       },
       {
-        "italiano": "Despite / In spite of",
+        "ingles": "Despite / In spite of",
         "traducao": "Apesar de",
         "genero": "Noun Linker",
         "motivo": "Exige apenas Substantivo, Pronome ou Verbo-ING"
@@ -286,19 +286,19 @@
     "alerta": "Expressar condições em inglês vai além do simples 'If'. Descubra como colocar limites e definir exceções.",
     "observacao_cards": [
       {
-        "italiano": "As long as",
+        "ingles": "As long as",
         "traducao": "Contanto que / Desde que",
         "genero": "Condition",
         "motivo": "Estabelece uma condição ou limite temporal"
       },
       {
-        "italiano": "Provided (that)",
+        "ingles": "Provided (that)",
         "traducao": "Contanto que / Sob a condição de que",
         "genero": "Condition (Formal)",
         "motivo": "Igual a 'As long as', mas um pouco mais formal"
       },
       {
-        "italiano": "Unless",
+        "ingles": "Unless",
         "traducao": "A menos que / A não ser que",
         "genero": "Exception",
         "motivo": "Substitui 'if not'"
@@ -383,19 +383,19 @@
     "alerta": "Onde o objeto da frase deve ficar? Descubra quando podemos (ou devemos) separar um Phrasal Verb.",
     "observacao_cards": [
       {
-        "italiano": "Turn it on",
+        "ingles": "Turn it on",
         "traducao": "Ligue (isso)",
         "genero": "Separable (Pronoun)",
         "motivo": "Quando o objeto é pronome, DEVE separar o verbo"
       },
       {
-        "italiano": "Turn on the TV",
+        "ingles": "Turn on the TV",
         "traducao": "Ligue a TV",
         "genero": "Separable (Noun)",
         "motivo": "Com substantivos, pode separar ou ficar junto"
       },
       {
-        "italiano": "Look after it",
+        "ingles": "Look after it",
         "traducao": "Cuidar (disso)",
         "genero": "Inseparable",
         "motivo": "Nunca se separam, seja com pronome ou substantivo"

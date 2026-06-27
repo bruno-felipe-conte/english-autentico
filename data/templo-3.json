@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t3_001",
-      "italiano": "left",
+      "ingles": "left",
       "portugues": "esquerda",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t3_002",
-      "italiano": "right",
+      "ingles": "right",
       "portugues": "direita",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t3_003",
-      "italiano": "straight ahead",
+      "ingles": "straight ahead",
       "portugues": "em frente / reto",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t3_004",
-      "italiano": "turn",
+      "ingles": "turn",
       "portugues": "virar / dobrar",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t3_005",
-      "italiano": "block",
+      "ingles": "block",
       "portugues": "quarteirão",
       "genero": null,
       "plural": "blocks",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t3_006",
-      "italiano": "corner",
+      "ingles": "corner",
       "portugues": "esquina",
       "genero": null,
       "plural": "corners",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t3_007",
-      "italiano": "map",
+      "ingles": "map",
       "portugues": "mapa",
       "genero": null,
       "plural": "maps",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t3_008",
-      "italiano": "street",
+      "ingles": "street",
       "portugues": "rua",
       "genero": null,
       "plural": "streets",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t3_009",
-      "italiano": "bus",
+      "ingles": "bus",
       "portugues": "ônibus",
       "genero": null,
       "plural": "buses",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t3_010",
-      "italiano": "train",
+      "ingles": "train",
       "portugues": "trem",
       "genero": null,
       "plural": "trains",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t3_011",
-      "italiano": "subway",
+      "ingles": "subway",
       "portugues": "metrô",
       "genero": null,
       "plural": "subways",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t3_012",
-      "italiano": "taxi",
+      "ingles": "taxi",
       "portugues": "táxi",
       "genero": null,
       "plural": "taxis",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t3_013",
-      "italiano": "airport",
+      "ingles": "airport",
       "portugues": "aeroporto",
       "genero": null,
       "plural": "airports",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t3_014",
-      "italiano": "station",
+      "ingles": "station",
       "portugues": "estação",
       "genero": null,
       "plural": "stations",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t3_015",
-      "italiano": "ticket",
+      "ingles": "ticket",
       "portugues": "passagem / bilhete",
       "genero": null,
       "plural": "tickets",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t3_016",
-      "italiano": "departure",
+      "ingles": "departure",
       "portugues": "partida / saída",
       "genero": null,
       "plural": "departures",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t3_017",
-      "italiano": "arrival",
+      "ingles": "arrival",
       "portugues": "chegada",
       "genero": null,
       "plural": "arrivals",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t3_018",
-      "italiano": "platform",
+      "ingles": "platform",
       "portugues": "plataforma",
       "genero": null,
       "plural": "platforms",
@@ -221,7 +221,7 @@
     },
     {
       "id": "t3_019",
-      "italiano": "north",
+      "ingles": "north",
       "portugues": "norte",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t3_020",
-      "italiano": "south",
+      "ingles": "south",
       "portugues": "sul",
       "genero": null,
       "plural": null,

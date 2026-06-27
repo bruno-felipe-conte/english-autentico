@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t9_001",
-      "italiano": "resume",
+      "ingles": "resume",
       "portugues": "currículo",
       "genero": null,
       "plural": "resumes",
@@ -17,7 +17,7 @@
     },
     {
       "id": "t9_002",
-      "italiano": "cover letter",
+      "ingles": "cover letter",
       "portugues": "carta de apresentação",
       "genero": null,
       "plural": "cover letters",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t9_003",
-      "italiano": "interview",
+      "ingles": "interview",
       "portugues": "entrevista",
       "genero": null,
       "plural": "interviews",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t9_004",
-      "italiano": "negotiate",
+      "ingles": "negotiate",
       "portugues": "negociar",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t9_005",
-      "italiano": "promote",
+      "ingles": "promote",
       "portugues": "promover",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t9_006",
-      "italiano": "deadline",
+      "ingles": "deadline",
       "portugues": "prazo / data limite",
       "genero": null,
       "plural": "deadlines",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t9_007",
-      "italiano": "project",
+      "ingles": "project",
       "portugues": "projeto",
       "genero": null,
       "plural": "projects",
@@ -89,7 +89,7 @@
     },
     {
       "id": "t9_008",
-      "italiano": "budget",
+      "ingles": "budget",
       "portugues": "orçamento",
       "genero": null,
       "plural": "budgets",
@@ -101,7 +101,7 @@
     },
     {
       "id": "t9_009",
-      "italiano": "client",
+      "ingles": "client",
       "portugues": "cliente",
       "genero": null,
       "plural": "clients",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t9_010",
-      "italiano": "contract",
+      "ingles": "contract",
       "portugues": "contrato",
       "genero": null,
       "plural": "contracts",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t9_011",
-      "italiano": "feedback",
+      "ingles": "feedback",
       "portugues": "feedback / retorno",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t9_012",
-      "italiano": "performance",
+      "ingles": "performance",
       "portugues": "desempenho / performance",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t9_013",
-      "italiano": "presentation",
+      "ingles": "presentation",
       "portugues": "apresentação",
       "genero": null,
       "plural": "presentations",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t9_014",
-      "italiano": "colleague",
+      "ingles": "colleague",
       "portugues": "colega de trabalho",
       "genero": null,
       "plural": "colleagues",
@@ -173,7 +173,7 @@
     },
     {
       "id": "t9_015",
-      "italiano": "schedule",
+      "ingles": "schedule",
       "portugues": "agenda / programação / horário",
       "genero": null,
       "plural": "schedules",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t9_016",
-      "italiano": "remote work",
+      "ingles": "remote work",
       "portugues": "trabalho remoto / home office",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t9_017",
-      "italiano": "overtime",
+      "ingles": "overtime",
       "portugues": "hora extra",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t9_018",
-      "italiano": "hire",
+      "ingles": "hire",
       "portugues": "contratar",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t9_019",
-      "italiano": "resign",
+      "ingles": "resign",
       "portugues": "demitir-se / pedir demissão",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t9_020",
-      "italiano": "salary raise",
+      "ingles": "salary raise",
       "portugues": "aumento de salário",
       "genero": null,
       "plural": null,

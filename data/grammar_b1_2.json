@@ -7,13 +7,13 @@
     "alerta": "A Voz Passiva é usada quando a ação ou o objeto que recebe a ação é mais importante do que quem a realizou.",
     "observacao_cards": [
       {
-        "italiano": "The house is cleaned every day.",
+        "ingles": "The house is cleaned every day.",
         "traducao": "A casa é limpa todos os dias.",
         "genero": "Present Passive",
         "motivo": "Foco na casa (objeto) e não em quem limpa."
       },
       {
-        "italiano": "The book was written in 1999.",
+        "ingles": "The book was written in 1999.",
         "traducao": "O livro foi escrito em 1999.",
         "genero": "Past Passive",
         "motivo": "Foco no livro, o autor não é o principal."
@@ -101,19 +101,19 @@
     "alerta": "Relative Clauses (Orações Relativas) são usadas para identificar exatamente de qual pessoa, coisa ou lugar estamos falando.",
     "observacao_cards": [
       {
-        "italiano": "The man who lives next door.",
+        "ingles": "The man who lives next door.",
         "traducao": "O homem que mora ao lado.",
         "genero": "Pessoas",
         "motivo": "Usa-se 'who' (ou 'that') para pessoas."
       },
       {
-        "italiano": "The book which is on the table.",
+        "ingles": "The book which is on the table.",
         "traducao": "O livro que está na mesa.",
         "genero": "Coisas",
         "motivo": "Usa-se 'which' (ou 'that') para coisas."
       },
       {
-        "italiano": "The city where I was born.",
+        "ingles": "The city where I was born.",
         "traducao": "A cidade onde eu nasci.",
         "genero": "Lugares",
         "motivo": "Usa-se 'where' para indicar um lugar."
@@ -201,13 +201,13 @@
     "alerta": "Usamos o Reported Speech para relatar o que alguém disse sem usar as falas exatas (aspas). A regra principal é: dê 'um passo atrás' no tempo verbal.",
     "observacao_cards": [
       {
-        "italiano": "He said (that) he was tired.",
+        "ingles": "He said (that) he was tired.",
         "traducao": "Ele disse que estava cansado.",
         "genero": "Present -> Past",
         "motivo": "A fala original 'I am tired' muda para o passado."
       },
       {
-        "italiano": "She told me (that) she lived in London.",
+        "ingles": "She told me (that) she lived in London.",
         "traducao": "Ela me disse que morava em Londres.",
         "genero": "Say x Tell",
         "motivo": "Use 'tell' com objeto (told me), e 'say' sem (said)."
@@ -295,13 +295,13 @@
     "alerta": "A estrutura 'Used to' é exclusiva para falar de hábitos, rotinas ou estados no passado que não são mais verdadeiros no presente.",
     "observacao_cards": [
       {
-        "italiano": "I used to play tennis.",
+        "ingles": "I used to play tennis.",
         "traducao": "Eu costumava jogar tênis.",
         "genero": "Hábito Passado",
         "motivo": "Jogava no passado, não jogo mais."
       },
       {
-        "italiano": "She didn't use to like coffee.",
+        "ingles": "She didn't use to like coffee.",
         "traducao": "Ela não costumava gostar de café.",
         "genero": "Negativa",
         "motivo": "Atenção: com o auxiliar 'didn't', o 'use' perde o 'd'."
@@ -389,19 +389,19 @@
     "alerta": "Usamos modais de dedução quando não temos 100% de certeza de algo no presente, mas podemos tirar conclusões lógicas com base nas evidências.",
     "observacao_cards": [
       {
-        "italiano": "He must be tired.",
+        "ingles": "He must be tired.",
         "traducao": "Ele deve estar cansado.",
         "genero": "Quase 100% de certeza (Sim)",
         "motivo": "Usa-se 'must' quando você tem certeza de que algo é verdade baseando-se no que vê (ex: ele trabalhou 12h)."
       },
       {
-        "italiano": "It might be raining.",
+        "ingles": "It might be raining.",
         "traducao": "Pode ser que esteja chovendo.",
         "genero": "Possibilidade (50%)",
         "motivo": "Usa-se 'might', 'may' ou 'could' quando algo é possível, mas você não tem certeza."
       },
       {
-        "italiano": "That can't be John.",
+        "ingles": "That can't be John.",
         "traducao": "Aquele não pode ser o John.",
         "genero": "Quase 100% de certeza (Não)",
         "motivo": "Usa-se 'can't' quando você tem certeza de que algo é impossível (ex: John está viajando)."

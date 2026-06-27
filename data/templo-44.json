@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t44_001",
-      "italiano": "network",
+      "ingles": "network",
       "portugues": "rede de contatos",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t44_002",
-      "italiano": "connection",
+      "ingles": "connection",
       "portugues": "contato / conexão",
       "genero": null,
       "plural": "connections",
@@ -29,7 +29,7 @@
     },
     {
       "id": "t44_003",
-      "italiano": "referral",
+      "ingles": "referral",
       "portugues": "indicação",
       "genero": null,
       "plural": "referrals",
@@ -41,7 +41,7 @@
     },
     {
       "id": "t44_004",
-      "italiano": "pitch",
+      "ingles": "pitch",
       "portugues": "apresentação / discurso de venda",
       "genero": null,
       "plural": "pitches",
@@ -53,7 +53,7 @@
     },
     {
       "id": "t44_005",
-      "italiano": "elevator pitch",
+      "ingles": "elevator pitch",
       "portugues": "discurso de elevador",
       "genero": null,
       "plural": "elevator pitches",
@@ -65,7 +65,7 @@
     },
     {
       "id": "t44_006",
-      "italiano": "business card",
+      "ingles": "business card",
       "portugues": "cartão de visita",
       "genero": null,
       "plural": "business cards",
@@ -77,7 +77,7 @@
     },
     {
       "id": "t44_007",
-      "italiano": "LinkedIn",
+      "ingles": "LinkedIn",
       "portugues": "LinkedIn",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t44_008",
-      "italiano": "follow up",
+      "ingles": "follow up",
       "portugues": "fazer acompanhamento",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t44_009",
-      "italiano": "mentor",
+      "ingles": "mentor",
       "portugues": "mentor",
       "genero": null,
       "plural": "mentors",
@@ -113,7 +113,7 @@
     },
     {
       "id": "t44_010",
-      "italiano": "mentee",
+      "ingles": "mentee",
       "portugues": "mentorado",
       "genero": null,
       "plural": "mentees",
@@ -125,7 +125,7 @@
     },
     {
       "id": "t44_011",
-      "italiano": "industry event",
+      "ingles": "industry event",
       "portugues": "evento do setor",
       "genero": null,
       "plural": "industry events",
@@ -137,7 +137,7 @@
     },
     {
       "id": "t44_012",
-      "italiano": "conference",
+      "ingles": "conference",
       "portugues": "conferência / congresso",
       "genero": null,
       "plural": "conferences",
@@ -149,7 +149,7 @@
     },
     {
       "id": "t44_013",
-      "italiano": "panel",
+      "ingles": "panel",
       "portugues": "painel / mesa-redonda",
       "genero": null,
       "plural": "panels",
@@ -161,7 +161,7 @@
     },
     {
       "id": "t44_014",
-      "italiano": "reach out",
+      "ingles": "reach out",
       "portugues": "entrar em contato",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t44_015",
-      "italiano": "cold email",
+      "ingles": "cold email",
       "portugues": "e-mail frio / e-mail a desconhecido",
       "genero": null,
       "plural": "cold emails",
@@ -185,7 +185,7 @@
     },
     {
       "id": "t44_016",
-      "italiano": "mutual contact",
+      "ingles": "mutual contact",
       "portugues": "contato em comum",
       "genero": null,
       "plural": "mutual contacts",
@@ -197,7 +197,7 @@
     },
     {
       "id": "t44_017",
-      "italiano": "professional relationship",
+      "ingles": "professional relationship",
       "portugues": "relacionamento profissional",
       "genero": null,
       "plural": "professional relationships",
@@ -209,7 +209,7 @@
     },
     {
       "id": "t44_018",
-      "italiano": "brand",
+      "ingles": "brand",
       "portugues": "marca pessoal",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t44_019",
-      "italiano": "visibility",
+      "ingles": "visibility",
       "portugues": "visibilidade",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t44_020",
-      "italiano": "collaboration",
+      "ingles": "collaboration",
       "portugues": "colaboração",
       "genero": null,
       "plural": null,

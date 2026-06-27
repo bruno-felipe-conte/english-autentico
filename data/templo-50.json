@@ -5,7 +5,7 @@
   "palavras": [
     {
       "id": "t50_001",
-      "italiano": "hit the nail on the head",
+      "ingles": "hit the nail on the head",
       "portugues": "acertar em cheio / dizer exatamente o que é",
       "genero": null,
       "plural": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t50_002",
-      "italiano": "bite the bullet",
+      "ingles": "bite the bullet",
       "portugues": "encarar a situação difícil / aguentar firme",
       "genero": null,
       "plural": null,
@@ -29,7 +29,7 @@
     },
     {
       "id": "t50_003",
-      "italiano": "break the ice",
+      "ingles": "break the ice",
       "portugues": "quebrar o gelo",
       "genero": null,
       "plural": null,
@@ -41,7 +41,7 @@
     },
     {
       "id": "t50_004",
-      "italiano": "get the hang of it",
+      "ingles": "get the hang of it",
       "portugues": "pegar o jeito / entender como funciona",
       "genero": null,
       "plural": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t50_005",
-      "italiano": "burn bridges",
+      "ingles": "burn bridges",
       "portugues": "queimar pontes",
       "genero": null,
       "plural": null,
@@ -65,7 +65,7 @@
     },
     {
       "id": "t50_006",
-      "italiano": "bite off more than you can chew",
+      "ingles": "bite off more than you can chew",
       "portugues": "querer abraçar o mundo / se comprometer além da conta",
       "genero": null,
       "plural": null,
@@ -77,7 +77,7 @@
     },
     {
       "id": "t50_007",
-      "italiano": "spill the beans",
+      "ingles": "spill the beans",
       "portugues": "contar o segredo / revelar informações",
       "genero": null,
       "plural": null,
@@ -89,7 +89,7 @@
     },
     {
       "id": "t50_008",
-      "italiano": "let the cat out of the bag",
+      "ingles": "let the cat out of the bag",
       "portugues": "revelar um segredo sem querer",
       "genero": null,
       "plural": null,
@@ -101,7 +101,7 @@
     },
     {
       "id": "t50_009",
-      "italiano": "once in a blue moon",
+      "ingles": "once in a blue moon",
       "portugues": "de vez em quando / raramente",
       "genero": null,
       "plural": null,
@@ -113,7 +113,7 @@
     },
     {
       "id": "t50_010",
-      "italiano": "under the weather",
+      "ingles": "under the weather",
       "portugues": "sem estar bem / indisposto",
       "genero": null,
       "plural": null,
@@ -125,7 +125,7 @@
     },
     {
       "id": "t50_011",
-      "italiano": "give it a shot",
+      "ingles": "give it a shot",
       "portugues": "tentar / dar uma chance",
       "genero": null,
       "plural": null,
@@ -137,7 +137,7 @@
     },
     {
       "id": "t50_012",
-      "italiano": "cut corners",
+      "ingles": "cut corners",
       "portugues": "economizar às custas da qualidade / fazer de qualquer jeito",
       "genero": null,
       "plural": null,
@@ -149,7 +149,7 @@
     },
     {
       "id": "t50_013",
-      "italiano": "pull someone's leg",
+      "ingles": "pull someone's leg",
       "portugues": "tirar sarro de alguém / brincar com alguém",
       "genero": null,
       "plural": null,
@@ -161,7 +161,7 @@
     },
     {
       "id": "t50_014",
-      "italiano": "hold your horses",
+      "ingles": "hold your horses",
       "portugues": "espere / devagar",
       "genero": null,
       "plural": null,
@@ -173,7 +173,7 @@
     },
     {
       "id": "t50_015",
-      "italiano": "read between the lines",
+      "ingles": "read between the lines",
       "portugues": "ler nas entrelinhas",
       "genero": null,
       "plural": null,
@@ -185,7 +185,7 @@
     },
     {
       "id": "t50_016",
-      "italiano": "bring to the table",
+      "ingles": "bring to the table",
       "portugues": "contribuir / trazer algo de valor",
       "genero": null,
       "plural": null,
@@ -197,7 +197,7 @@
     },
     {
       "id": "t50_017",
-      "italiano": "think outside the box",
+      "ingles": "think outside the box",
       "portugues": "pensar fora da caixa",
       "genero": null,
       "plural": null,
@@ -209,7 +209,7 @@
     },
     {
       "id": "t50_018",
-      "italiano": "touch base",
+      "ingles": "touch base",
       "portugues": "entrar em contato / verificar como as coisas estão",
       "genero": null,
       "plural": null,
@@ -221,7 +221,7 @@
     },
     {
       "id": "t50_019",
-      "italiano": "get cold feet",
+      "ingles": "get cold feet",
       "portugues": "ficar com medo na última hora / titubear",
       "genero": null,
       "plural": null,
@@ -233,7 +233,7 @@
     },
     {
       "id": "t50_020",
-      "italiano": "wrap your head around",
+      "ingles": "wrap your head around",
       "portugues": "conseguir entender / assimilar algo complexo",
       "genero": null,
       "plural": null,
