@@ -51,6 +51,7 @@ const ErrorBoundary = {
             <button onclick="location.reload()" style="padding:0.6rem 1.4rem;background:#27AE60;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer">🔄 Recarregar</button>
             <button onclick="ErrorBoundary.limparErro()" style="padding:0.6rem 1.4rem;background:#aaa;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer">✕ Ignorar</button>
             <button onclick="ErrorBoundary.mostrarDetalhes()" style="padding:0.6rem 1.4rem;background:#1A5276;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer">🔍 Detalhes</button>
+            <button onclick="ErrorBoundary.exportarLogs()" style="padding:0.6rem 1.4rem;background:#8E44AD;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer">📋 Exportar Logs</button>
           </div>
           <div id="error-boundary-detalhes" style="display:none;margin-top:1rem;text-align:left;background:#f8f8f8;padding:0.8rem;border-radius:6px;font-size:0.75rem;font-family:monospace;white-space:pre-wrap;max-height:200px;overflow-y:auto;color:#333"></div>
         </div>`;
@@ -84,4 +85,56 @@ const ErrorBoundary = {
       return fallback;
     }
   },
+
+  exportarLogs() {
+    const dados = {
+      app: 'English Autêntico',
+      exportadoEm: new Date().toISOString(),
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'N/A',
+      url: typeof location !== 'undefined' ? location.href : 'N/A',
+      totalErros: this._errorLog.length,
+      erros: this._errorLog
+    };
+    const jsonStr = JSON.stringify(dados, null, 2);
+
+    // Tenta copiar para o clipboard
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(jsonStr)
+        .then(() => {
+          if (typeof window !== 'undefined' && window.App && typeof window.App.toast === 'function') {
+            window.App.toast('📋 Logs copiados para a área de transferência!');
+          } else {
+            alert('📋 Logs copiados para a área de transferência!');
+          }
+        })
+        .catch(() => this._baixarArquivoLog(jsonStr));
+    } else {
+      this._baixarArquivoLog(jsonStr);
+    }
+    return jsonStr;
+  },
+
+  _baixarArquivoLog(conteudo) {
+    if (typeof document === 'undefined') return;
+    try {
+      const blob = new Blob([conteudo], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `english-autentico-error-log-${Date.now()}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Falha ao baixar arquivo de log:', err);
+    }
+  }
 };
+
+if (typeof window !== 'undefined') {
+  window.ErrorBoundary = ErrorBoundary;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = ErrorBoundary;
+}

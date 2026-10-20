@@ -695,9 +695,20 @@ var Vocab = window.Vocab = {
 
   // ── Escape HTML helper ────────────────────────────────────
   _escapar(str) {
-    const d = document.createElement('div');
-    d.textContent = str;
-    return d.innerHTML;
+    if (typeof window !== 'undefined' && window.Sanitize && window.Sanitize.escapeHtml) {
+      return window.Sanitize.escapeHtml(str);
+    }
+    if (typeof document !== 'undefined') {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   },
 
   // ── NOVO: Cor por categoria ────────────────────────────────

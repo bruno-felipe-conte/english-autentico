@@ -1,0 +1,191 @@
+/* =============================================================================
+   STORIES.CSS --- Antique Book Reader, 3D Page Turn & Word Modal
+   English Autentico PWA
+   ============================================================================= */
+
+.book-reader-overlay {
+  position: fixed;
+  inset: 0;
+  background: #1C1712;
+  z-index: 2500;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.book-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #2A231C;
+  color: #EDE5D8;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.book-top-actions {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.book-action-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #EDE5D8;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--raio-md);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.15s;
+}
+
+.book-action-btn.active {
+  background: #003E8A;
+  border-color: #357ABD;
+  color: #fff;
+}
+
+.book-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  perspective: 1800px;
+  overflow: hidden;
+}
+
+.antique-book {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  height: 90%;
+  max-height: 720px;
+  background: #FAF6EE;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.45);
+  border-radius: 4px;
+}
+
+.book-spine-crease {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0.02) 60%, rgba(0,0,0,0.12) 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.antique-page {
+  flex: 1;
+  padding: 2.2rem 2.4rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #FAF6EE;
+}
+
+.antique-drop-cap {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  line-height: 0.82;
+  padding-right: 0.5rem;
+  color: #003E8A;
+  font-weight: 700;
+}
+
+.antique-para {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #2C2418;
+  margin-bottom: 0.8rem;
+  text-indent: 1.5rem;
+}
+
+.antique-para.no-indent {
+  text-indent: 0;
+}
+
+.storie-palavra {
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.12s;
+}
+
+.storie-palavra:hover {
+  background: rgba(0, 62, 138, 0.15);
+}
+
+.storie-palavra-salva {
+  border-bottom: 2px solid #27AE60;
+}
+
+.book-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #2A231C;
+  color: #EDE5D8;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── 3D Page Turn Animation ── */
+.page-flipping-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  transform-style: preserve-3d;
+  z-index: 20;
+}
+
+.page-flipping-container.right-to-left {
+  right: 0;
+  transform-origin: left center;
+}
+
+.page-flipping-container.turning-next {
+  transition: transform 0.88s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: rotateY(-180deg);
+}
+
+.page-flipping-container.turning-prev {
+  transition: transform 0.88s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: rotateY(180deg);
+}
+
+/* ── Word Modal Popover ── */
+.storie-word-modal {
+  position: fixed;
+  z-index: 2600;
+  background: #FAF7F2;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: var(--raio-md);
+  padding: 0.9rem;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.storie-trad-pill {
+  display: inline-block;
+  background: rgba(0,62,138,0.1);
+  color: #003E8A;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.15rem;
+}

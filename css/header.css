@@ -1,0 +1,96 @@
+/* =============================================================================
+   HEADER.CSS --- Top Bar, Header Stats & Sidebar Navigation
+   English Autentico PWA
+   ============================================================================= */
+
+.app-header {
+  background: linear-gradient(135deg, #003E8A 0%, #002047 100%);
+  color: #F5EDD8;
+  padding: calc(0.75rem + var(--safe-top)) 1.5rem 0.6rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  position: sticky; top: 0; z-index: 1000;
+  overflow: hidden;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.header-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.header-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.streak-pill {
+  background: linear-gradient(135deg, #E65100, #BF360C);
+  color: #fff;
+  border: none;
+}
+
+.xp-bar-container {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+  margin-top: 0.4rem;
+  overflow: hidden;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #27AE60, #2ECC71);
+  transition: width 0.35s ease;
+}
+
+/* Sidebar & Navigation tabs */
+.nav-tab {
+  background: transparent;
+  border: none;
+  color: var(--cor-pietra);
+  padding: 0.5rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--trans-rapida);
+  border-radius: var(--raio-md);
+}
+
+.nav-tab.ativa {
+  background: var(--cor-veneziano);
+  color: #fff;
+}

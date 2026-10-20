@@ -1,0 +1,130 @@
+/* =============================================================================
+   MODALS.CSS --- Modal Dialogs, Popups & Toast Notifications
+   English Autentico PWA
+   ============================================================================= */
+
+/* ── Modal Overlay Base ── */
+.modal-overlay,
+.templo-modal,
+.temple-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.ativo,
+.templo-modal.ativo,
+.temple-modal.ativo {
+  display: flex;
+}
+
+/* ── Temple Modal Card ── */
+.tm-body,
+.temple-modal-body {
+  background: var(--cor-marmore);
+  border-radius: var(--raio-lg);
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--sombra-lg);
+  animation: modalEntrar 0.22s ease-out;
+}
+
+@keyframes modalEntrar {
+  from { opacity: 0; transform: scale(0.94) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.tm-header {
+  padding: 1.4rem 1.2rem;
+  color: #fff;
+  position: relative;
+}
+
+.tm-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: rgba(0,0,0,0.25);
+  border: none;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tm-content {
+  padding: 1.2rem;
+  color: var(--cor-inchiostro);
+}
+
+.tm-desc {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--cor-inchiostro-claro);
+  margin-bottom: 1.2rem;
+}
+
+.tm-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.tm-btn-primary, .tm-btn-quiz {
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--raio-md);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 0.88rem;
+}
+
+.tm-btn-primary { background: var(--cor-veneziano); color: #fff; }
+.tm-btn-quiz    { background: #D4A017; color: #fff; }
+
+/* ── Toast Notifications ── */
+#toast-container {
+  position: fixed;
+  bottom: calc(var(--nav-height) + 1.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 3000;
+  pointer-events: none;
+  max-width: 90vw;
+}
+
+.toast {
+  background: rgba(44, 36, 24, 0.95);
+  color: #FAF7F2;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  pointer-events: auto;
+  animation: toastIn 0.25s ease forwards;
+  text-align: center;
+}
+
+.toast.sucesso { background: #27AE60; color: #fff; }
+.toast.erro    { background: #C0392B; color: #fff; }
+.toast.alerta  { background: #D4A017; color: #fff; }
+.toast.saindo  { animation: toastOut 0.3s ease forwards; }
+
+@keyframes toastIn  { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes toastOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-8px); } }
