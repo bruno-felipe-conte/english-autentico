@@ -304,9 +304,23 @@ var Vocab = window.Vocab = {
     const temploData = App.estado.templosData[p.templo_num];
     const nivel = temploData ? temploData.nivel : '';
 
-    // Exemplo de uso (se disponível)
+    // Exemplo de uso com áudio autônomo (se disponível)
+    const safeExemplo = p.exemplo ? this._escapar(p.exemplo) : '';
+    const safeExemploPt = p.exemplo_pt ? this._escapar(p.exemplo_pt) : '';
+    const dicaOuvir = (typeof I18n !== 'undefined' && I18n.t) ? I18n.t('vocab_ouvir_exemplo') : 'Ouvir frase de exemplo';
     const exemploHtml = p.exemplo
-      ? `<div class="vocab-exemplo" style="font-size:0.78rem;color:var(--cor-pietra);font-style:italic;margin-top:0.2rem">"${this._escapar(p.exemplo)}"</div>`
+      ? `<div class="vocab-exemplo"
+              role="button"
+              tabindex="0"
+              data-exemplo="${safeExemplo}"
+              title="🔊 ${dicaOuvir}: &quot;${safeExemplo}&quot;${safeExemploPt ? ' — ' + safeExemploPt : ''}"
+              aria-label="${dicaOuvir}: ${safeExemplo}"
+              onclick="event.stopPropagation();Vocab.pronunciarExemplo(this.getAttribute('data-exemplo')||'',event,this)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();Vocab.pronunciarExemplo(this.getAttribute('data-exemplo')||'',event,this)}">
+          <button type="button" class="vocab-exemplo-audio-btn" aria-label="${dicaOuvir}" title="${dicaOuvir}" onclick="event.stopPropagation();Vocab.pronunciarExemplo(this.closest('.vocab-exemplo')?.getAttribute('data-exemplo')||'',event,this.closest('.vocab-exemplo'))">🔊</button>
+          <span class="vocab-exemplo-texto">"${safeExemplo}"</span>
+          ${safeExemploPt ? `<span class="vocab-exemplo-pt" style="opacity:0.75;font-style:normal;margin-left:0.35rem">(${safeExemploPt})</span>` : ''}
+        </div>`
       : '';
 
     // Barra de progresso FSRS
@@ -334,16 +348,23 @@ var Vocab = window.Vocab = {
 
     item.style.cursor = 'pointer';
     item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.ingles}"`;
-    item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } };
+    item.onkeydown = (e) => {
+      if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn, .ia-del-btn, input')) return;
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+    };
     if (this.blurColuna) {
       item.onclick = (e) => {
+        if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn, .ia-del-btn, input')) return;
         const target = e.target.closest('.vocab-pt, .vocab-it');
         const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('.vocab-pt'))
                       || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
         if (isBluCol || !target) item.classList.toggle('revelada');
       };
     } else {
-      item.onclick = () => App.pronunciar(p.ingles);
+      item.onclick = (e) => {
+        if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn, .ia-del-btn, input')) return;
+        App.pronunciar(p.ingles);
+      };
     }
 
     container.appendChild(item);
@@ -526,6 +547,7 @@ var Vocab = window.Vocab = {
       listEl.querySelectorAll('.vocab-item').forEach(item => {
         item.onclick = this.blurColuna
           ? (e) => {
+              if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn, .ia-del-btn, input')) return;
               // Não propaga se clicou na célula borrada → revela
               const target = e.target.closest('.vocab-pt, .vocab-it');
               const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('vocab-pt'))
@@ -534,7 +556,10 @@ var Vocab = window.Vocab = {
                 item.classList.toggle('revelada');
               }
             }
-          : () => App.pronunciar(item.querySelector('.vocab-it')?.textContent || '');
+          : (e) => {
+              if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn, .ia-del-btn, input')) return;
+              App.pronunciar(item.querySelector('.vocab-it')?.textContent || '');
+            };
       });
     }
   },
@@ -709,6 +734,34 @@ var Vocab = window.Vocab = {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  },
+
+  // ── Pronúncia autônoma da frase de exemplo ────────────────
+  pronunciarExemplo(texto, event, el) {
+    if (event) {
+      if (typeof event.stopPropagation === 'function') event.stopPropagation();
+      if (typeof event.preventDefault === 'function') event.preventDefault();
+    }
+    if (!texto) return;
+
+    const targetEl = el || (event && event.currentTarget ? event.currentTarget.closest('.vocab-exemplo') : null);
+    if (targetEl && targetEl.classList) {
+      targetEl.classList.add('vocab-exemplo-tocando');
+      setTimeout(() => {
+        try { targetEl.classList.remove('vocab-exemplo-tocando'); } catch (_) {}
+      }, 1600);
+    }
+
+    if (typeof App !== 'undefined' && App.pronunciar) {
+      App.pronunciar(texto);
+    } else if (typeof App !== 'undefined' && App.speak) {
+      App.speak(texto);
+    } else if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (_) {}
+      const u = new SpeechSynthesisUtterance(texto);
+      u.lang = 'en-US';
+      window.speechSynthesis.speak(u);
+    }
   },
 
   // ── NOVO: Cor por categoria ────────────────────────────────

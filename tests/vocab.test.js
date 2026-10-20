@@ -76,12 +76,19 @@ describe('vocab.js — Verificação estrutural', () => {
       'renderizarWordFamilies', 'dailyQuestVocab', 'renderizarDailyQuest',
       '_fonSimplificada', '_verificarOutput', 'compartilharLista',
       'exportarLista', 'estatisticasCategoria', 'renderizarEstatisticasCategoria',
-      'alternarAgrupamento', '_buscaFuzzy', '_levenshtein', '_escapar', '_corParaCategoria'
+      'alternarAgrupamento', '_buscaFuzzy', '_levenshtein', '_escapar', '_corParaCategoria', 'pronunciarExemplo'
     ];
     for (const fn of fns) {
       const pattern = new RegExp(`\\b${fn}\\s*[:]\\s*function|function\\s+${fn}\\s*\\(|${fn}\\s*\\(\\)\\s*\\{|${fn}\\s*\\(`);
       expect(code, `Função ${fn} não encontrada`).toMatch(pattern);
     }
+  });
+
+
+  it('pronunciarExemplo deve existir e suportar reprodução autônoma', () => {
+    expect(code).toContain('pronunciarExemplo');
+    expect(code).toContain('vocab-exemplo-audio-btn');
+    expect(code).toContain('data-exemplo');
   });
 
   it('deve implementar _levenshtein corretamente', () => {

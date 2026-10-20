@@ -1314,9 +1314,9 @@
     "semantic_hash": ""
   },
   "js/i18n.js": {
-    "mtime": 1792533187.8009593,
-    "seen": 1792534278.2172534,
-    "ast_hash": "5271106fb6d77a26226fe7d1cbda3e3b",
+    "mtime": 1792536775.2066536,
+    "seen": 1792537187.612299,
+    "ast_hash": "d00e62f81babd8ce185406af8b8cca89",
     "semantic_hash": ""
   },
   "js/ia-import.js": {
@@ -1392,9 +1392,9 @@
     "semantic_hash": ""
   },
   "js/vocab.js": {
-    "mtime": 1792533320.1417172,
-    "seen": 1792534278.2173157,
-    "ast_hash": "de5f74aab3cf58427123beddcf0e5e57",
+    "mtime": 1792536828.7672553,
+    "seen": 1792537187.7008169,
+    "ast_hash": "84b5d25263158129dfb55f36189f0691",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
@@ -1800,9 +1800,9 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1792535835.3489764,
-    "seen": 1792536151.8979182,
-    "ast_hash": "60253c75eaf17839cbe028253d883ad7",
+    "mtime": 1792536936.7883046,
+    "seen": 1792537188.601893,
+    "ast_hash": "559058c31c621f2c686808daa0ddfac2",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
@@ -1836,9 +1836,9 @@
     "semantic_hash": ""
   },
   "tests/vocab.test.js": {
-    "mtime": 1792430738.604173,
-    "seen": 1792444634.9385564,
-    "ast_hash": "82cbcceef86f5a3ce09b8233fd093415",
+    "mtime": 1792536914.3516703,
+    "seen": 1792537188.622629,
+    "ast_hash": "66ae99d09351dcf7640cd997827ad343",
     "semantic_hash": ""
   },
   "update_mod1.py": {
@@ -2118,9 +2118,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792535835.3992472,
-    "seen": 1792536152.5090456,
-    "ast_hash": "27eb9bd16da4ae6d0fd6cd2ba073eae2",
+    "mtime": 1792536947.4743805,
+    "seen": 1792537188.760568,
+    "ast_hash": "d0923cb3423a74d5f36f5b2bf38d4f64",
     "semantic_hash": ""
   },
   "index_stashed.html": {

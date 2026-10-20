@@ -3002,6 +3002,10 @@ const I18n = {
     "pt": "Clique para ouvir",
     "en": "Click to listen"
   },
+  "vocab_ouvir_exemplo": {
+    "pt": "Ouvir frase de exemplo",
+    "en": "Listen to example sentence"
+  },
   "vocab_dificeis": {
     "pt": "⚠️ Difíceis",
     "en": "⚠️ Difficult"

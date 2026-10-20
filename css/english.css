@@ -783,6 +783,89 @@ body.dark-mode .ach-desc { color:#666; }
   background:rgba(158,143,127,.15); color:var(--cor-inchiostro-claro);
   border:1px solid rgba(158,143,127,.3);
 }
+.vocab-exemplo {
+  flex-basis: 100%;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--cor-pietra);
+  font-style: italic;
+  margin-top: 0.25rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(0, 62, 138, 0.04);
+  border: 1px dashed rgba(0, 62, 138, 0.22);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  box-sizing: border-box;
+}
+.vocab-exemplo:hover {
+  background: rgba(0, 62, 138, 0.08);
+  border-color: rgba(0, 62, 138, 0.45);
+  color: var(--cor-inchiostro);
+  transform: translateY(-1px);
+}
+.vocab-exemplo:focus-visible {
+  outline: 2px solid #003E8A;
+  outline-offset: 1px;
+}
+.vocab-exemplo-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 62, 138, 0.09);
+  border: 1px solid rgba(0, 62, 138, 0.25);
+  color: #003E8A;
+  border-radius: 999px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.72rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.vocab-exemplo-audio-btn:hover,
+.vocab-exemplo:hover .vocab-exemplo-audio-btn {
+  background: #003E8A;
+  color: #fff;
+  transform: scale(1.1);
+}
+.vocab-exemplo.vocab-exemplo-tocando {
+  background: rgba(0, 62, 138, 0.14) !important;
+  border-color: #003E8A !important;
+  color: #003E8A !important;
+  box-shadow: 0 0 8px rgba(0, 62, 138, 0.25);
+}
+body.dark-mode .vocab-exemplo {
+  background: rgba(212, 168, 67, 0.06);
+  border-color: rgba(212, 168, 67, 0.25);
+  color: #C9BBA8;
+}
+body.dark-mode .vocab-exemplo:hover {
+  background: rgba(212, 168, 67, 0.12);
+  border-color: rgba(212, 168, 67, 0.5);
+  color: #F5EFEB;
+}
+body.dark-mode .vocab-exemplo-audio-btn {
+  background: rgba(212, 168, 67, 0.12);
+  border-color: rgba(212, 168, 67, 0.35);
+  color: #d4a843;
+}
+body.dark-mode .vocab-exemplo-audio-btn:hover,
+body.dark-mode .vocab-exemplo:hover .vocab-exemplo-audio-btn {
+  background: #d4a843;
+  color: #1C1816;
+}
+body.dark-mode .vocab-exemplo.vocab-exemplo-tocando {
+  background: rgba(212, 168, 67, 0.2) !important;
+  border-color: #d4a843 !important;
+  color: #d4a843 !important;
+  box-shadow: 0 0 8px rgba(212, 168, 67, 0.3);
+}
 
 /* 10. BUTTONS */
 .btn-primario {
