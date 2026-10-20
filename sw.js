@@ -1,182 +1,181 @@
 // ============================================================
-// sw.js — Service Worker  |  Cache v47  |  Offline-first PWA
-// Estratégia:
-//   • Static assets  → cache-first  (JS, CSS, HTML, ícones)
-//   • /data/*.json   → network-first com fallback de cache
-//   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
+// sw.js — Service Worker | Cache v1116 | Offline-first PWA
+// Strategy:
+//   • Static assets  → cache-first (JS, CSS, HTML, icons)
+//   • /data/*.json   → network-first with cache fallback
+//   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1060';
+const CACHE = 'english-v1116';
 
-// Todos os arquivos necessários para rodar 100% offline
+// All critical assets required for 100% offline functionality
 const STATIC = [
   './',
   './index.html',
+  './favicon.ico',
   './css/english.css',
-  './css/styles.css',
-  // JS — módulos da aplicação (URLs com ?v=1001 para forçar atualização de cache)
-  './js/audio.js?v=1001',
-  './js/conquistas.js?v=1001',
-  './js/core.js?v=1002',
-  './js/dialoghi.js?v=1002',
-  './js/audio-store.js?v=1006',
-  './js/canzoni.js?v=1034',
-  './js/imitazione.js?v=1003',
-  './js/flashcards.js?v=1004',
-  './js/grammar.js?v=1007',
-  './js/heatmap.js?v=1001',
-  './js/onboarding.js?v=1001',
-  './js/profilo.js?v=1001',
-  './js/progression.js?v=1002',
-  './js/quiz.js?v=1003',
+  './css/english.css?v=1101',
+  // Decoupled i18n locales
+  './data/locales/pt-BR.json',
+  './data/locales/en-US.json',
+  // Application JS modules with cache busting
+  './js/audio.js?v=1101',
+  './js/conquistas.js?v=1101',
+  './js/core.js?v=1101',
+  './js/dialogues.js?v=1101',
+  './js/audio-store.js?v=1101',
+  './js/audio_cache.js?v=1101',
+  './js/voice_engine.js?v=1101',
+  './js/tts_worker.js?v=1101',
+  './js/songs.js?v=1101',
+  './js/pronunciation.js?v=1101',
+  './js/flashcards.js?v=1101',
+  './js/grammar.js?v=1101',
+  './js/heatmap.js?v=1101',
+  './js/onboarding.js?v=1101',
+  './js/profile.js?v=1101',
+  './js/progression.js?v=1101',
+  './js/quiz.js?v=1101',
   './js/quiz_data.js',
-  './js/vocab.js?v=1003',
-  './js/i18n.js?v=1009',
-  './js/notificacoes.js?v=1001',
-  './js/tour.js?v=1001',
-  './js/storie.js?v=1004',
-  './js/ia-import.js?v=1001',
-  // Dados
+  './js/vocab.js?v=1101',
+  './js/i18n.js?v=1101',
+  './js/notificacoes.js?v=1101',
+  './js/tour.js?v=1101',
+  './js/stories.js?v=1110',
+  './js/ia-import.js?v=1101',
+  // Datasets
   './data/conjugacoes.json',
   './data/grammar.json',
   './data/quizzes.json',
-  './data/dialogi.json',
-  './data/canzoni.json',
-  './data/imitazioni.json',
-  './data/storie.json',
-  // Templos 1-51 (gerados dinamicamente)
-  ...Array.from({length: 51}, (_, i) => `./data/templo-${i+1}.json`),
-  // Manifesto e ícone
+  './data/dialogues.json',
+  './data/songs.json',
+  './data/pronunciation.json',
+  './data/stories.json',
+  // Temples 1-51
+  ...Array.from({ length: 51 }, (_, i) => `./data/temple-${i + 1}.json`),
+  // WASM Neural Config
+  './wasm/en_US-lessac-low.json',
+  // Web Manifest & App Icons
   './manifest.webmanifest',
   './icons/icon.svg',
 ];
 
-// ── Install: pré-cache de tudo ────────────────────────────
+// ── Install: Pre-cache static assets ─────────────────────────
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE).then(cache =>
-      // addAll falha se qualquer recurso não for encontrado;
-      // tentamos individualmente para não abortar por arquivos opcionais
       Promise.allSettled(STATIC.map(url => cache.add(url)))
-    )
+    ).then(() => self.skipWaiting())
   );
-  self.skipWaiting();
 });
 
-// ── Activate: apaga caches antigos ───────────────────────
+// ── Activate: Clean up outdated caches ───────────────────────
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    )
+      Promise.all(
+        keys.filter(k => k !== CACHE).map(k => caches.delete(k))
+      )
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// ── Fetch ─────────────────────────────────────────────────
+// ── Push Notifications (No Server Required) ──────────────────
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'AGENDAR_LEMBRETE') {
+    const { delayMs, titulo, corpo, tag } = event.data;
+    setTimeout(() => {
+      self.registration.showNotification(titulo, {
+        body: corpo,
+        icon: './icons/icon.svg',
+        badge: './icons/icon.svg',
+        tag: tag || 'study-reminder',
+        renotify: true,
+        data: { url: './' }
+      });
+    }, delayMs);
+  }
+});
+
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clientList => {
+      const existing = clientList.find(c => c.url.includes(self.location.origin));
+      if (existing) return existing.focus();
+      return clients.openWindow(event.notification.data?.url || './');
+    })
+  );
+});
+
+// ── Fetch: Cache-first for statics, network-first for data ───
 self.addEventListener('fetch', event => {
-  const req = event.request;
-  if (req.method !== 'GET') return;
+  const { request } = event;
+  const url = new URL(request.url);
 
-  const url = new URL(req.url);
+  // Skip non-GET requests and browser extensions
+  if (request.method !== 'GET') return;
+  if (!url.protocol.startsWith('http')) return;
 
-  // 1. Google Fonts — stale-while-revalidate
-  //    Após a primeira visita ficam disponíveis offline
-  if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {
+  // External audio files (MP3/WAV/streaming) - fetch normally or cache if requested
+  if (url.pathname.match(/\.(mp3|wav|ogg|m4a)$/i)) {
+    event.respondWith(
+      caches.match(request).then(cached => cached || fetch(request))
+    );
+    return;
+  }
+
+  // Google Fonts: Stale-While-Revalidate
+  if (url.hostname.includes('fonts.googleapis.com') || url.hostname.includes('fonts.gstatic.com')) {
     event.respondWith(
       caches.open(CACHE).then(cache =>
-        cache.match(req).then(cached => {
-          const network = fetch(req).then(res => {
-            cache.put(req, res.clone());
-            return res;
+        cache.match(request).then(cached => {
+          const fetchPromise = fetch(request).then(networkResponse => {
+            if (networkResponse.ok) {
+              cache.put(request, networkResponse.clone());
+            }
+            return networkResponse;
           }).catch(() => cached);
-          return cached || network;
+          return cached || fetchPromise;
         })
       )
     );
     return;
   }
 
-  // Ignora requisições cross-origin que não sejam fontes
-  if (url.origin !== self.location.origin) return;
-
-  // 2. /data/*.json — network-first (recebe atualizações de conteúdo)
-  //    Se offline, entrega do cache. Se não tiver no cache, entrega fallback estruturado.
+  // /data/*.json: Network-first with cache fallback
   if (url.pathname.includes('/data/')) {
     event.respondWith(
-      fetch(req)
-        .then(res => {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(req, clone));
-          return res;
+      fetch(request)
+        .then(networkResponse => {
+          if (networkResponse.ok) {
+            const clone = networkResponse.clone();
+            caches.open(CACHE).then(cache => cache.put(request, clone));
+          }
+          return networkResponse;
         })
-        .catch(() => caches.match(req).then(cached => {
-          if (cached) return cached;
-          // Fallback estruturado para prevenir WSOD
-          const fallbackData = { 
-            palavras: [], 
-            storie: [], 
-            dialogi: [], 
-            canzoni: [], 
-            grammar: [], 
-            quizzes: [], 
-            imitazioni: [] 
-          };
-          return new Response(JSON.stringify(fallbackData), {
-            headers: { 'Content-Type': 'application/json' }
-          });
-        }))
+        .catch(() => caches.match(request))
     );
     return;
   }
 
-  // 3. Tudo o mais — cache-first
+  // Static assets: Cache-first with network fallback
   event.respondWith(
-    caches.match(req).then(cached => cached || fetch(req).then(res => {
-      if (res.ok) {
-        const clone = res.clone();
-        caches.open(CACHE).then(c => c.put(req, clone));
-      }
-      return res;
-    }))
-  );
-});
+    caches.match(request, { ignoreSearch: false }).then(cached => {
+      if (cached) return cached;
 
-// ── Push Notifications ────────────────────────────────────
-// Recebe mensagem da página para agendar lembretes locais
-self.addEventListener('message', event => {
-  if (!event.data) return;
-
-  if (event.data.type === 'AGENDAR_LEMBRETE') {
-    const { delayMs, titulo, corpo, tag } = event.data;
-    // NOTE: setTimeout inside a SW is unreliable — Chrome/Firefox kill idle SWs
-    // in ~30s. For delays > 30s this will silently fail. A proper fix requires
-    // the Background Sync API or server-side Web Push. For now we only fire
-    // if the delay is short enough to be safe (< 25 seconds).
-    if (delayMs < 25000) {
-      setTimeout(() => {
-        self.registration.showNotification(titulo, {
-          body:    corpo,
-          icon:    './icons/icon.svg',
-          badge:   './icons/icon.svg',
-          tag:     tag || 'english-reminder',
-          renotify: true,
-          data:    { url: './' },
-        });
-      }, delayMs);
-    }
-    // Long-delay reminders are a no-op until Background Sync is implemented.
-  }
-});
-
-// Clique na notificação → abre o app
-self.addEventListener('notificationclick', event => {
-  event.notification.close();
-  event.waitUntil(
-    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(lista => {
-      const existente = lista.find(c => c.url.includes('english') || c.url.endsWith('/'));
-      if (existente) return existente.focus();
-      return clients.openWindow(event.notification.data?.url || './');
+      return fetch(request).then(networkResponse => {
+        if (networkResponse.ok && (url.origin === self.location.origin)) {
+          const clone = networkResponse.clone();
+          caches.open(CACHE).then(cache => cache.put(request, clone));
+        }
+        return networkResponse;
+      }).catch(() => {
+        // Offline HTML navigation fallback
+        if (request.mode === 'navigate') {
+          return caches.match('./index.html');
+        }
+      });
     })
   );
 });
