@@ -180,14 +180,18 @@ const Flashcards = {
 
   // ── Initialize for a specific temple ──────────────────────
   init(templo) {
-    if (!templo || isNaN(templo)) return;
-    if (!Progressao.temploDesbloqueado(templo)) {
-      App.notificar('notif_fc_bloqueado', 'erro');
-      return;
-    }
-    if (!App.estado.templosData[templo]) {
-      App.notificar('notif_fc_vocab_nao_carregado', 'erro');
-      return;
+    if (!templo) return;
+    const ehCustom = templo === 'custom';
+    if (!ehCustom) {
+      if (isNaN(templo)) return;
+      if (!Progressao.temploDesbloqueado(templo)) {
+        App.notificar('notif_fc_bloqueado', 'erro');
+        return;
+      }
+      if (!App.estado.templosData[templo]) {
+        App.notificar('notif_fc_vocab_nao_carregado', 'erro');
+        return;
+      }
     }
     this.temploAtual     = templo;
     this.praticandoTodas = false;
@@ -239,14 +243,22 @@ const Flashcards = {
 
   // ── Load and sort cards due for review ────────────────────
   carregarCartas() {
-    const data = App.estado.templosData[this.temploAtual];
-    if (!data || !data.palavras) { this.cartasDisponiveis = []; return; }
+    let listaPalavras = [];
+    if (this.temploAtual === 'custom') {
+      const todos = App.estado?.vocabCache || [];
+      listaPalavras = todos.filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    } else {
+      const data = App.estado.templosData[this.temploAtual];
+      listaPalavras = data?.palavras || [];
+    }
+
+    if (!listaPalavras.length) { this.cartasDisponiveis = []; return; }
 
     const agora   = Date.now();
     const novas   = [];
     const devidas = [];
 
-    data.palavras.forEach(palavra => {
+    listaPalavras.forEach(palavra => {
       let fsrs = App.estado.flashcardData[palavra.id];
 
       // Migrate SM-2 records automatically
@@ -288,7 +300,7 @@ const Flashcards = {
     const actions = document.getElementById('card-actions');
     if (actions) actions.style.display = 'none';
 
-    const elIt   = document.getElementById('card-ingles');
+    const elIt   = (document.getElementById('card-ingles') || document.getElementById('card-italiano'));
     const elCat  = document.getElementById('card-categoria');
     const elDica = document.getElementById('card-dica');
     const elHelp = document.getElementById('selector-helper');
@@ -349,10 +361,43 @@ const Flashcards = {
       elIpa.textContent = raw ? (raw.startsWith('/') ? raw : `/${raw}/`) : '';
     }
 
+    // Verso word header
+    const elVersoIt = document.getElementById('card-verso-it');
+    if (elVersoIt) elVersoIt.textContent = this.cartaAtual.ingles || this.cartaAtual.italiano || '';
+
+    // Deck stacking physical depth
+    const restantes = this.cartasDisponiveis.length - this.indiceAtual;
+    const layer1 = document.getElementById('deck-layer-1');
+    const layer2 = document.getElementById('deck-layer-2');
+    if (layer1) layer1.style.display = restantes >= 2 ? 'block' : 'none';
+    if (layer2) layer2.style.display = restantes >= 3 ? 'block' : 'none';
+
+    // Progressive hint pearls
+    const elPearls = document.getElementById('dica-pearls');
+    if (elPearls) {
+      elPearls.textContent = this.nivelDica === 1 ? '● ○ ○' : (this.nivelDica === 2 ? '● ● ○' : (this.nivelDica >= 3 ? '● ● ●' : '○ ○ ○'));
+    }
+
+    // Mode pills update
+    const isNormal = !this.modoReverso && !this.modoContexto && !this.modoEscuta;
+    const btnNormal = document.getElementById('btn-modo-normal');
+    if (btnNormal) btnNormal.classList.toggle('ativo', isNormal);
+    const btnRev = document.getElementById('btn-reverso');
+    if (btnRev) btnRev.classList.toggle('ativo', !!this.modoReverso);
+    const btnCtx = document.getElementById('btn-contexto');
+    if (btnCtx) btnCtx.classList.toggle('ativo', !!this.modoContexto);
+    const btnEsc = document.getElementById('btn-escuta');
+    if (btnEsc) btnEsc.classList.toggle('ativo', !!this.modoEscuta);
+
     this.atualizarContador();
-    // Update favorite button state
+    // Update favorite button state preserving label
     const btnFav = document.getElementById('btn-favorito');
-    if (btnFav) btnFav.textContent = App.ehFavorito(this.cartaAtual.id) ? '❤️' : '🤍';
+    if (btnFav) {
+      const ico = btnFav.querySelector('.btn-tool-icon');
+      const ehFav = App.ehFavorito(this.cartaAtual.id);
+      if (ico) ico.textContent = ehFav ? '❤️' : '🤍';
+      else btnFav.textContent = ehFav ? '❤️' : '🤍';
+    }
 
     const vazio = document.getElementById('flashcard-vazio');
     if (vazio) vazio.style.display = 'none';
@@ -470,6 +515,10 @@ const Flashcards = {
     // Mark dica button
     const btnDica = document.getElementById('btn-dica');
     if (btnDica) btnDica.classList.add('ativo');
+    const elPearls = document.getElementById('dica-pearls');
+    if (elPearls) {
+      elPearls.textContent = this.nivelDica === 1 ? '● ○ ○' : (this.nivelDica === 2 ? '● ● ○' : '● ● ●');
+    }
 
     // In reverse mode the target word is Italian; in context mode the user
     // must guess the Italian word (fill the blank); in normal mode it's Portuguese.
@@ -812,7 +861,11 @@ const Flashcards = {
     if (!this.cartaAtual) return;
     const adicionado = App.toggleFavorito(this.cartaAtual.id);
     const btn = document.getElementById('btn-favorito');
-    if (btn) btn.textContent = adicionado ? '❤️' : '🤍';
+    if (btn) {
+      const ico = btn.querySelector('.btn-tool-icon');
+      if (ico) ico.textContent = adicionado ? '❤️' : '🤍';
+      else btn.textContent = adicionado ? '❤️' : '🤍';
+    }
     App.notificar(adicionado ? 'notif_fc_favorito_add' : 'notif_fc_favorito_rem', 'alerta');
   },
 
@@ -899,21 +952,14 @@ const Flashcards = {
   // ── Mode toggles (mutually exclusive) ────────────────────
   _limparModos() {
     this.modoReverso  = false;
-    
-    // Energy Check
-    if (typeof App !== 'undefined' && App.gastarEnergia) {
-      if (!App.gastarEnergia(5)) {
-        App.notificar("⚡ Sem energia suficiente! Descanse ou volte mais tarde.", "erro");
-        return;
-      }
-    }
-
     this.modoContexto = false;
     this.modoEscuta   = false;
-    ['btn-reverso','btn-contexto','btn-escuta'].forEach(id => {
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta'].forEach(id => {
       const b = document.getElementById(id);
       if (b) b.classList.remove('ativo');
     });
+    const btnNormal = document.getElementById('btn-modo-normal');
+    if (btnNormal) btnNormal.classList.add('ativo');
   },
 
   _onboardingModo(chave, msgKey) {
@@ -961,38 +1007,38 @@ const Flashcards = {
     }
   },
 
-  // ── Mask Italian word in example sentence ─────────────────
+  // ── Mask English word in example sentence ─────────────────
   // Handles: accented chars, short words (≤4 chars), inflected forms.
-  _mascarar(italiano, exemplo) {
-    if (!italiano || !exemplo) return exemplo || '';
+  _mascarar(ingles, exemplo) {
+    if (!ingles || !exemplo) return exemplo || '';
 
     const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
     // 1. Exact case-insensitive match (handles most cases)
-    const r1 = exemplo.replace(new RegExp(escape(italiano), 'gi'), '___');
+    const r1 = exemplo.replace(new RegExp(escape(ingles), 'gi'), '___');
     if (r1 !== exemplo) return r1;
 
     // 2. Diacritic-insensitive: strip combining marks, find position, replace in original
     const stripped = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
     const exStripped = stripped(exemplo);
-    const itStripped = stripped(italiano);
+    const itStripped = stripped(ingles);
     const idx = exStripped.toLowerCase().indexOf(itStripped.toLowerCase());
     if (idx !== -1) {
-      return exemplo.slice(0, idx) + '___' + exemplo.slice(idx + italiano.length);
+      return exemplo.slice(0, idx) + '___' + exemplo.slice(idx + ingles.length);
     }
 
     // 3. Prefix match on first 4 chars (covers inflected forms, e.g. "caffè" → "caff")
-    if (italiano.length >= 3) {
-      const prefix = escape(stripped(italiano).slice(0, Math.min(4, italiano.length)));
+    if (ingles.length >= 3) {
+      const prefix = escape(stripped(ingles).slice(0, Math.min(4, ingles.length)));
       const r3 = exStripped.replace(new RegExp(prefix + '\\S*', 'gi'), '___');
       if (r3 !== exStripped) {
         // Apply the same replacement to the original text
-        return exemplo.replace(new RegExp(escape(italiano.slice(0, Math.min(4, italiano.length))) + '\\S*', 'gi'), '___');
+        return exemplo.replace(new RegExp(escape(ingles.slice(0, Math.min(4, ingles.length))) + '\\S*', 'gi'), '___');
       }
     }
 
     // 4. No match found — show placeholder so the answer is never accidentally revealed
-    return `___ (${italiano.length} lettre)`;
+    return `___ (${ingles.length} letters)`;
   },
 
   // ── Swipe-to-rate (touch devices) ─────────────────────────
@@ -1153,11 +1199,17 @@ const Flashcards = {
 
   // ── Practice all cards regardless of schedule ─────────────
   praticaTodas() {
-    const data = App.estado.templosData[this.temploAtual];
-    if (!data || !data.palavras || data.palavras.length === 0) return;
+    let palavrasTemplo = [];
+    if (this.temploAtual === 'custom') {
+      palavrasTemplo = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    } else {
+      const data = App.estado.templosData[this.temploAtual];
+      palavrasTemplo = data?.palavras || [];
+    }
+    if (!palavrasTemplo || palavrasTemplo.length === 0) return;
     this.praticandoTodas  = true;
     this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [], streak: 0, streakAtual: 0 };
-    this.cartasDisponiveis = [...data.palavras];
+    this.cartasDisponiveis = [...palavrasTemplo];
     this.indiceAtual      = 0;
     this.virada           = false;
 
@@ -1233,13 +1285,19 @@ const Flashcards = {
   // ── Pronounce the current word ────────────────────────────
   pronunciar() {
     if (this.cartaAtual && this.cartaAtual.ingles) {
-      App.pronunciar(this.cartaAtual.ingles);
+      App.speak(this.cartaAtual.ingles);
+    }
+  },
+
+  pronunciarLento() {
+    if (this.cartaAtual && this.cartaAtual.ingles) {
+      App.speak(this.cartaAtual.ingles, 0.72);
     }
   },
 
   // ── Populate temple selector ──────────────────────────────
   atualizarSelectTemplo() {
-    const sel = document.getElementById('flashcard-templo-select');
+    const sel = document.getElementById('flashcard-temple-select') || document.getElementById('flashcard-templo-select');
     if (!sel) return;
     const anterior = sel.value;
     sel.innerHTML  = `<option value="">${I18n.t('fc_selecionar_templo')}</option>`;
@@ -1253,6 +1311,18 @@ const Flashcards = {
       opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
       sel.appendChild(opt);
     });
+
+    // Adiciona opção de deck customizado se houver palavras adicionadas via IA
+    const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    if (customVocab.length > 0) {
+      const optCustom = document.createElement('option');
+      optCustom.value = 'custom';
+      optCustom.textContent = `🤖 Palavras Adicionadas (${customVocab.length})`;
+      optCustom.style.fontWeight = 'bold';
+      optCustom.style.color = '#7B68A0';
+      sel.appendChild(optCustom);
+    }
+
     if (anterior && sel.querySelector(`option[value="${anterior}"]`)) {
       sel.value = anterior;
     }
@@ -1282,7 +1352,13 @@ const Flashcards = {
     
     this.gravando = true;
     const btnGravar = document.getElementById('btn-gravar');
-    if (btnGravar) { btnGravar.textContent = I18n.t('fc_gravar_parar'); btnGravar.style.background = '#C0392B'; btnGravar.style.color = '#fff'; }
+    if (btnGravar) {
+      const lbl = btnGravar.querySelector('.btn-tool-label');
+      if (lbl) lbl.textContent = I18n.t('fc_gravar_parar') || 'Parar';
+      else btnGravar.textContent = I18n.t('fc_gravar_parar') || 'Parar';
+      btnGravar.style.background = '#C0392B';
+      btnGravar.style.color = '#fff';
+    }
     
     this._recognition = this._iniciarReconhecimento();
     if (!this._recognition) return;
@@ -1294,13 +1370,19 @@ const Flashcards = {
       const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
       const alvoNormalize = alvo.replace(/[.,!?;:]/g, '').trim();
       
-      const reconheceu = textoNormalize.includes(alvoNormalize);
+      const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
       this._mostrarFeedbackPronuncia(texto, reconheceu);
     };
     this._recognition.onerror = () => { App.notificar('notif_fc_nao_ouviu', 'alerta'); };
     this._recognition.onend = () => {
       this.gravando = false;
-      if (btnGravar) { btnGravar.textContent = I18n.t('fc_gravar_imitar'); btnGravar.style.background = ''; btnGravar.style.color = ''; }
+      if (btnGravar) {
+        const lbl = btnGravar.querySelector('.btn-tool-label');
+        if (lbl) lbl.textContent = I18n.t('fc_gravar_imitar') || 'Imitar';
+        else btnGravar.textContent = I18n.t('fc_gravar_imitar') || 'Imitar';
+        btnGravar.style.background = '';
+        btnGravar.style.color = '';
+      }
     };
     this._recognition.start();
   },
@@ -1364,3 +1446,7 @@ document.addEventListener('i18n:changed', () => {
     Flashcards.mostrarCarta();
   }
 });
+
+
+window.Flashcards = Flashcards;
+window.FSRS = FSRS;

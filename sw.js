@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker | Cache v1116 | Offline-first PWA
+// sw.js — Service Worker | Cache v1117 | Offline-first PWA
 // Strategy:
 //   • Static assets  → cache-first (JS, CSS, HTML, icons)
 //   • /data/*.json   → network-first with cache fallback
 //   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1116';
+const CACHE = 'english-v1118';
 
 // All critical assets required for 100% offline functionality
 const STATIC = [
@@ -14,35 +14,40 @@ const STATIC = [
   './index.html',
   './favicon.ico',
   './css/english.css',
-  './css/english.css?v=1101',
+  './css/english.css?v=1118',
+  './css/components.css',
+  './css/components.css?v=1118',
   // Decoupled i18n locales
   './data/locales/pt-BR.json',
   './data/locales/en-US.json',
+  // Core infrastructure & security
+  './js/constants.js?v=1118',
+  './js/sanitize.js?v=1118',
   // Application JS modules with cache busting
-  './js/audio.js?v=1101',
-  './js/conquistas.js?v=1101',
-  './js/core.js?v=1101',
-  './js/dialogues.js?v=1101',
-  './js/audio-store.js?v=1101',
-  './js/audio_cache.js?v=1101',
-  './js/voice_engine.js?v=1101',
-  './js/tts_worker.js?v=1101',
-  './js/songs.js?v=1101',
-  './js/pronunciation.js?v=1101',
-  './js/flashcards.js?v=1101',
-  './js/grammar.js?v=1101',
-  './js/heatmap.js?v=1101',
-  './js/onboarding.js?v=1101',
-  './js/profile.js?v=1101',
-  './js/progression.js?v=1101',
-  './js/quiz.js?v=1101',
+  './js/audio.js?v=1118',
+  './js/conquistas.js?v=1118',
+  './js/core.js?v=1118',
+  './js/dialogues.js?v=1118',
+  './js/audio-store.js?v=1118',
+  './js/audio_cache.js?v=1118',
+  './js/voice_engine.js?v=1118',
+  './js/tts_worker.js?v=1118',
+  './js/songs.js?v=1118',
+  './js/pronunciation.js?v=1118',
+  './js/flashcards.js?v=1118',
+  './js/grammar.js?v=1118',
+  './js/heatmap.js?v=1118',
+  './js/onboarding.js?v=1118',
+  './js/profile.js?v=1118',
+  './js/progression.js?v=1118',
+  './js/quiz.js?v=1118',
   './js/quiz_data.js',
-  './js/vocab.js?v=1101',
-  './js/i18n.js?v=1101',
-  './js/notificacoes.js?v=1101',
-  './js/tour.js?v=1101',
-  './js/stories.js?v=1110',
-  './js/ia-import.js?v=1101',
+  './js/vocab.js?v=1118',
+  './js/i18n.js?v=1118',
+  './js/notificacoes.js?v=1118',
+  './js/tour.js?v=1118',
+  './js/stories.js?v=1118',
+  './js/ia-import.js?v=1118',
   // Datasets
   './data/conjugacoes.json',
   './data/grammar.json',

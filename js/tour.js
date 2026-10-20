@@ -17,25 +17,25 @@ const Tour = {
     const drv = window.driver.js.driver;
 
     const passos = [
-      { sec: "templi",     prep: () => window.scrollTo(0,0) },
-      { sec: "templi",     prep: () => window.scrollTo(0,0) },
-      { sec: "templi",     prep: null },
-      { sec: "templi",     prep: () => window.scrollTo(0,0) },
-      { sec: "flashcard",  prep: null },
-      { sec: "flashcard",  prep: null },
-      { sec: "flashcard",  prep: () => { const a = document.getElementById("card-actions"); if (a) a.style.display = "grid"; }},
-      { sec: "quiz",       prep: () => { if (typeof Quiz !== "undefined") Quiz.renderizarSeletor(); }},
-      { sec: "grammatica", prep: () => { if (typeof Grammatica !== "undefined") Grammatica.renderizarSeletor(); }},
-      { sec: "vocabolario",prep: () => { if (typeof Vocab !== "undefined") Vocab.renderizar(); }},
-      { sec: "storie",     prep: () => { if (typeof Storie !== "undefined") Storie.renderizarSeletor(); }},
-      { sec: "dialoghi",   prep: () => { if (typeof Dialoghi !== "undefined") Dialoghi.renderizarSeletor(); }},
-      { sec: "canzoni",    prep: () => { if (typeof Canzoni !== "undefined") Canzoni.renderizarSeletor(); }},
+      { sec: "temples",    prep: () => window.scrollTo(0,0) },
+      { sec: "temples",    prep: () => window.scrollTo(0,0) },
+      { sec: "temples",    prep: null },
+      { sec: "temples",    prep: () => window.scrollTo(0,0) },
+      { sec: "flashcards", prep: null },
+      { sec: "flashcards", prep: null },
+      { sec: "flashcards", prep: () => { const a = document.getElementById("card-actions"); if (a) a.style.display = "grid"; }},
+      { sec: "quiz",       prep: () => { if (typeof Quiz !== "undefined") (Quiz.renderizarSeletor || Quiz.render)?.(); }},
+      { sec: "grammar",    prep: () => { if (typeof Grammar !== "undefined") (Grammar.renderizarSeletor || Grammar.render)?.(); }},
+      { sec: "vocab",      prep: () => { if (typeof Vocab !== "undefined") Vocab.renderizar?.(); }},
+      { sec: "stories",    prep: () => { if (typeof Stories !== "undefined") (Stories.renderizarSeletor || Stories.render)?.(); }},
+      { sec: "dialogues",  prep: () => { if (typeof Dialogues !== "undefined") (Dialogues.renderizarSeletor || Dialogues.render)?.(); }},
+      { sec: "songs",      prep: () => { if (typeof Songs !== "undefined") (Songs.renderizarSeletor || Songs.render)?.(); }},
     ];
 
     const stepSelectors = [
       ".app-header",
       ".stats-bar",
-      "#templos-grid .templo-card:first-child",
+      "#temples-grid .templo-card:first-child, #templos-grid .templo-card:first-child",
       "#meta-prazo-container",
       ".card-selecao-templo",
       "#btn-modos-wrapper",
@@ -43,9 +43,9 @@ const Tour = {
       ".quiz-templo-btn:not(.bloqueado)",
       ".gram-nivel-banner",
       "#vocab-blur-btns",
-      "#storie-container",
+      "#stories-container, #storie-container",
       ".dialogo-card",
-      "#canzoni-container",
+      "#songs-container, #canzoni-container",
     ];
 
     const navegar = (idx, cb) => {
@@ -79,7 +79,7 @@ const Tour = {
       steps: [
         { element: ".app-header",         popover: { title: I18n.t('tour_welcome_title'),     description: I18n.t('tour_welcome_desc'),    side: "bottom", align: "center" } },
         { element: ".stats-bar",           popover: { title: I18n.t('tour_stats_title'),       description: I18n.t('tour_stats_desc'),      side: "bottom", align: "center" } },
-        { element: "#templos-grid .templo-card:first-child", popover: { title: I18n.t('tour_templi_title'), description: I18n.t('tour_templi_desc'), side: "bottom", align: "center" } },
+        { element: "#temples-grid .templo-card:first-child, #templos-grid .templo-card:first-child", popover: { title: I18n.t('tour_templi_title'), description: I18n.t('tour_templi_desc'), side: "bottom", align: "center" } },
         { element: "#meta-prazo-container",popover: { title: I18n.t('tour_goal_title'),       description: I18n.t('tour_goal_desc'),       side: "bottom", align: "center" } },
         { element: ".card-selecao-templo", popover: { title: I18n.t('tour_flashcard_title'),  description: I18n.t('tour_flashcard_desc'),  side: "bottom", align: "center" } },
         { element: "#btn-modos-wrapper",   popover: { title: I18n.t('tour_modes_title'),      description: I18n.t('tour_modes_desc'),      side: "bottom", align: "center" } },
@@ -87,9 +87,9 @@ const Tour = {
         { element: ".quiz-templo-btn:not(.bloqueado)", popover: { title: I18n.t('tour_quiz_title'),  description: I18n.t('tour_quiz_desc'), side: "top",    align: "center" } },
         { element: ".gram-nivel-banner",   popover: { title: I18n.t('tour_grammatica_title'),  description: I18n.t('tour_grammatica_desc'), side: "bottom", align: "center" } },
         { element: "#vocab-blur-btns",     popover: { title: I18n.t('tour_vocabolario_title'),  description: I18n.t('tour_vocabolario_desc'), side: "bottom", align: "center" } },
-        { element: "#storie-container",    popover: { title: I18n.t('tour_reading_title'),     description: I18n.t('tour_reading_desc'),    side: "bottom", align: "center" } },
+        { element: "#stories-container, #storie-container",    popover: { title: I18n.t('tour_reading_title'),     description: I18n.t('tour_reading_desc'),    side: "bottom", align: "center" } },
         { element: ".dialogo-card",        popover: { title: I18n.t('tour_dialoghi_title'),    description: I18n.t('tour_dialoghi_desc'),   side: "bottom", align: "center" } },
-        { element: "#canzoni-container",   popover: { title: I18n.t('tour_canzoni_title'),     description: I18n.t('tour_canzoni_desc'),    side: "bottom", align: "center" } },
+        { element: "#songs-container, #canzoni-container",   popover: { title: I18n.t('tour_canzoni_title'),     description: I18n.t('tour_canzoni_desc'),    side: "bottom", align: "center" } },
       ]
     });
 

@@ -3,12 +3,142 @@
 // ============================================================
 
 const App = {
+
+  _migrateLegacyStorage() {
+    try {
+      const keyMap = {
+        'en_progresso': 'en_progress',
+        'en_voz_preferida': 'en_preferred_voice',
+        'en_storie_lidas': 'en_stories_read',
+        'en_quiz_historico': 'en_quiz_history',
+        'en_canzoni_custom': 'en_songs_custom',
+        'en_dialoghi_custom': 'en_dialogues_custom',
+        'en_storie_custom': 'en_stories_custom',
+        'en_imitazioni_custom': 'en_pronunciation_custom',
+        'en_canzoni_ocultas': 'en_songs_hidden'
+      };
+      for (const [oldKey, newKey] of Object.entries(keyMap)) {
+        const val = localStorage.getItem(oldKey);
+        if (val !== null && localStorage.getItem(newKey) === null) {
+          localStorage.setItem(newKey, val);
+          localStorage.removeItem(oldKey);
+        }
+      }
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith('en_book_bm_')) {
+          const newK = k.replace('en_book_bm_', 'en_book_bookmark_');
+          if (localStorage.getItem(newK) === null) {
+            localStorage.setItem(newK, localStorage.getItem(k));
+            localStorage.removeItem(k);
+          }
+        }
+      }
+    } catch (e) { console.error("[core] error:", e); }
+  },
+
+  toggleSidebarPin(e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const isPinned = document.body.classList.contains('sidebar-pinned');
+    const newState = !isPinned;
+    localStorage.setItem('en_sidebar_pinned', newState ? 'true' : 'false');
+    this.initSidebarPin();
+  },
+
+  initSidebarPin() {
+    const isPinned = localStorage.getItem('en_sidebar_pinned') === 'true';
+    const pinBtn = document.getElementById('sidebar-pin-btn');
+    const pinIcon = document.getElementById('sidebar-pin-icon');
+    const svgUnpinned = '<svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>';
+    const svgPinned = '<svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>';
+
+    if (isPinned) {
+      document.body.classList.add('sidebar-pinned');
+      if (pinBtn) pinBtn.classList.add('pinned');
+      if (pinIcon) pinIcon.innerHTML = svgPinned;
+    } else {
+      document.body.classList.remove('sidebar-pinned');
+      if (pinBtn) pinBtn.classList.remove('pinned');
+      if (pinIcon) pinIcon.innerHTML = svgUnpinned;
+    }
+  },
+
+  toggleAudioSpeed() {
+    const p = this.estado.progresso;
+    if (!p) return;
+    if (p.audio_rate === 1) p.audio_rate = 0.85;
+    else if (p.audio_rate === 0.85) p.audio_rate = 0.7;
+    else if (p.audio_rate === 0.7) p.audio_rate = 0.5;
+    else p.audio_rate = 1;
+    localStorage.setItem('en_audio_speed', p.audio_rate.toString());
+    this.salvarProgresso();
+    this.atualizarAudioSpeedUI();
+    const desc = (typeof I18n !== 'undefined' && I18n.language === 'en') ? 'Audio Speed: ' : 'Velocidade: ';
+    this.notificar(desc + p.audio_rate + 'x', 'info');
+  },
+
+  atualizarAudioSpeedUI() {
+    const btn = document.getElementById('btn-audio-speed');
+    if (!btn) return;
+    const ico = document.getElementById('btn-audio-speed-ico') || btn;
+    const rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+    let label = rate.toString();
+    if (label.startsWith('0.')) label = label.substring(1);
+    ico.textContent = label + 'x';
+  },
+
+  async speak(text, customRate = null) {
+    if (!text) return;
+    if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
+
+    const normalized = (typeof VoiceEngine !== 'undefined')
+      ? VoiceEngine.normalizeForSpeech(text)
+      : text;
+
+    if (!normalized) return;
+
+    if (typeof AudioCache !== 'undefined') {
+      try {
+        const cached = await AudioCache.getAudio(normalized);
+        if (cached && cached.url) {
+          const a = new Audio(cached.url);
+          if (typeof VoiceEngine !== 'undefined') VoiceEngine.applyMasteringAudioElement(a);
+          a.play().catch(() => {});
+          return;
+        }
+      } catch (e) { console.error("[core] error:", e); }
+    }
+
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (e) { console.error("[core] error:", e); }
+      const voice = (typeof VoiceEngine !== 'undefined') ? VoiceEngine.getSelectedVoice() : null;
+      let speed = (customRate !== null)
+        ? customRate
+        : (parseFloat(localStorage.getItem('en_audio_speed')) || 0.85);
+      speed = Math.max(0.5, Math.min(2.0, speed));
+
+      const u = new SpeechSynthesisUtterance(normalized);
+      u.lang = 'en-US';
+      if (voice) u.voice = voice;
+      u.rate = speed;
+      this._currentUtterance = u;
+      u.onend = () => { this._currentUtterance = null; };
+      u.onerror = () => { this._currentUtterance = null; };
+
+      window.speechSynthesis.speak(u);
+    }
+  },
+
   // ── State ──────────────────────────────────────────────────
   estado: {
-    secaoAtiva: 'templi',
+    secaoAtiva: 'temples',
     templosData: {},       // { 1: { templo, nome, cidade, nivel, palavras: [] }, ... }
     quizData: [],          // flat array of all quiz questions
-    vocabCache: [],
+    vocabCache: [],        // flat array of all words (with templo_num attached)
+    conjugacoesData: [],   // verb conjugation data
+    progresso: null,       // persisted in localStorage
+    flashcardData: {}      // persisted in localStorage
+  },
 
   // === ENERGY SYSTEM ===
   energiaAtual: 50,
@@ -91,11 +221,6 @@ const App = {
       navigator.clipboard.writeText(texto);
       this.notificar('Copiado para a área de transferência!', 'sucesso');
     }
-  },
-        // flat array of all words (with templo_num attached)
-    conjugacoesData: [],   // verb conjugation data
-    progresso: null,       // persisted in localStorage
-    flashcardData: {}      // persisted in localStorage
   },
 
   // Temple gradient palettes (index = temple number, 1-based)
@@ -281,8 +406,10 @@ const App = {
     41:15, 47:15, 48:15, 49:15, 50:15, 51:22,
   },
 
-  // Secret unlock code — change to your personal password
-  UNLOCK_CODE: '2012',
+  // Secret unlock code — stored in localStorage (default: '2012')
+  get UNLOCK_CODE() {
+    return localStorage.getItem('en_unlock_code') || '2012';
+  },
 
   // English descriptions per temple (difficulty proportional to level)
   TEMPLO_DESC: [
@@ -393,6 +520,10 @@ const App = {
 
   // ── Initialization ─────────────────────────────────────────
   async init() {
+    // Seamless one-time migration for legacy storage keys
+    this._migrateLegacyStorage();
+    this.initSidebarPin();
+
     this.estado.progresso = this.carregarProgresso();
     this.carregarEnergia();
     this.salvarEnergia();
@@ -445,14 +576,22 @@ const App = {
       Onboarding.mostrar();
     }
 
+    // Hash routing & deep linking
+    const handleHash = () => {
+      const hash = window.location.hash.replace('#', '').trim();
+      if (hash) this.navegar(hash);
+    };
+    window.addEventListener('hashchange', handleHash);
+    if (window.location.hash) handleHash();
+
     // Set up keyboard shortcuts
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
-      if (e.key === '1') this.navegar('templi');
-      else if (e.key === '2') this.navegar('flashcard');
+      if (e.key === '1') this.navegar('temples');
+      else if (e.key === '2') this.navegar('flashcards');
       else if (e.key === '3') this.navegar('quiz');
-      else if (e.key === '4') this.navegar('vocabolario');
-      else if (e.key === '5') this.navegar('grammatica');
+      else if (e.key === '4') this.navegar('vocab');
+      else if (e.key === '5') this.navegar('grammar');
     });
   },
 
@@ -462,7 +601,7 @@ const App = {
     // Load templo-1.json through templo-51.json; skip gracefully on 404
     for (let i = 1; i <= 51; i++) {
       promises.push(
-        fetch(`data/templo-${i}.json`)
+        fetch(`data/temple-${i}.json`)
           .then(r => {
             if (!r.ok) return null;
             return r.json();
@@ -529,18 +668,36 @@ const App = {
 
   // ── Navigation ─────────────────────────────────────────────
   navegar(secao) {
-    // 'home' é um alias para 'templi' (seção inicial)
-    if (secao === 'home') secao = 'templi';
+
+    const sectionMap = {
+      'home': 'temples',
+      'templi': 'temples', 'templo': 'temples',
+      'dialoghi': 'dialogues', 'dialogo': 'dialogues',
+      'canzoni': 'songs', 'canzone': 'songs',
+      'imitazione': 'pronunciation',
+      'flashcard': 'flashcards',
+      'vocabolario': 'vocab',
+      'grammatica': 'grammar',
+      'storie': 'stories',
+      'profilo': 'profile'
+    };
+    secao = sectionMap[secao] || secao;
     this.estado.secaoAtiva = secao;
+
+    if (window.location.hash !== '#' + secao) {
+      try { history.replaceState(null, '', '#' + secao); } catch (e) { console.error("[core] error:", e); }
+    }
 
     // Update tab buttons
     document.querySelectorAll('.nav-tab').forEach(btn => {
-      btn.classList.toggle('ativa', btn.dataset.section === secao);
+      const s = sectionMap[btn.dataset.section] || btn.dataset.section;
+      btn.classList.toggle('ativa', s === secao);
     });
 
     // Update bottom nav buttons
     document.querySelectorAll('#bottom-nav button').forEach(btn => {
-      btn.classList.toggle('ativa', btn.dataset.section === secao);
+      const s = sectionMap[btn.dataset.section] || btn.dataset.section;
+      btn.classList.toggle('ativa', s === secao);
     });
 
     // Show/hide sections
@@ -554,42 +711,47 @@ const App = {
       this.salvarProgresso();
     }
 
-    // Lazy-render on first visit
-    if (secao === 'dialoghi' && typeof Dialoghi !== 'undefined') {
-      Dialoghi.renderizarSeletor();
+    // Lazy-render on first visit (supports English and legacy module names)
+    if ((secao === 'dialogues' || secao === 'dialoghi') && typeof Dialogues !== 'undefined') {
+      if (Dialogues.renderizarSeletor) Dialogues.renderizarSeletor();
+      else if (Dialogues.render) Dialogues.render();
     }
-    if (secao === 'canzoni' && typeof Canzoni !== 'undefined') {
-      Canzoni.renderizarSeletor();
+    if ((secao === 'songs' || secao === 'canzoni') && typeof Songs !== 'undefined') {
+      if (Songs.renderizarSeletor) Songs.renderizarSeletor();
+      else if (Songs.render) Songs.render();
     }
-    if (secao === 'imitazione' && typeof Imitazione !== 'undefined') {
-      Imitazione.renderizar();
+    if ((secao === 'pronunciation' || secao === 'imitazione') && typeof Pronunciation !== 'undefined') {
+      if (Pronunciation.render) Pronunciation.render();
+      else if (Pronunciation.renderizar) Pronunciation.renderizar();
     }
-    if (secao === 'vocabolario' && typeof Vocab !== 'undefined') {
-      Vocab.renderizar();
+    if ((secao === 'vocab' || secao === 'vocabolario') && typeof Vocab !== 'undefined') {
+      Vocab.renderizar ? Vocab.renderizar() : (Vocab.render ? Vocab.render() : null);
     }
     if (secao === 'quiz' && typeof Quiz !== 'undefined') {
-      Quiz.renderizarSeletor();
+      Quiz.renderizarSeletor ? Quiz.renderizarSeletor() : (Quiz.renderSelector ? Quiz.renderSelector() : null);
     }
-    if (secao === 'flashcard' && typeof Flashcards !== 'undefined') {
-      Flashcards.atualizarSelectTemplo();
+    if ((secao === 'flashcards' || secao === 'flashcard') && typeof Flashcards !== 'undefined') {
+      Flashcards.atualizarSelectTemplo ? Flashcards.atualizarSelectTemplo() : null;
     }
-    if (secao === 'grammatica' && typeof Grammatica !== 'undefined') {
-      Grammatica.renderizarSeletor();
+    if ((secao === 'grammar' || secao === 'grammatica') && typeof Grammatica !== 'undefined') {
+      Grammatica.renderizarSeletor ? Grammatica.renderizarSeletor() : null;
     }
-    if (secao === 'storie' && typeof Storie !== 'undefined') {
-      Storie._filtroNivel = '';
-      Storie._filtroTexto = '';
-      Storie.renderizarSeletor();
+    if ((secao === 'stories' || secao === 'storie') && typeof Stories !== 'undefined') {
+      Stories._filtroNivel = '';
+      Stories._filtroTexto = '';
+      if (Stories.renderizarSeletor) Stories.renderizarSeletor();
+      else if (Stories.renderSelector) Stories.renderSelector();
     }
-    if (secao === 'profilo' && typeof Profilo !== 'undefined') {
-      Profilo.renderizar();
+    if ((secao === 'profile' || secao === 'profilo') && typeof Profile !== 'undefined') {
+      if (Profile.render) Profile.render();
+      else if (Profile.renderizar) Profile.renderizar();
     }
   },
 
   // ── localStorage ───────────────────────────────────────────
   carregarProgresso() {
     try {
-      const raw = localStorage.getItem('en_progresso');
+      const raw = localStorage.getItem('en_progress');
       if (raw) {
         const p = JSON.parse(raw);
         // Backward compatibility
@@ -627,7 +789,7 @@ const App = {
 
   salvarProgresso() {
     try {
-      localStorage.setItem('en_progresso', JSON.stringify(this.estado.progresso));
+      localStorage.setItem('en_progress', JSON.stringify(this.estado.progresso));
     } catch (e) {
       if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
         alert(I18n.t('storage_limite'));
@@ -661,7 +823,7 @@ const App = {
   // ── Temple grid rendering ──────────────────────────────────
   // ── Parola del Giorno ─────────────────────────────────────
   renderizarParolaDia() {
-    const container = document.getElementById('parola-del-giorno');
+    const container = document.getElementById('word-of-the-day') || document.getElementById('parola-del-giorno');
     if (!container) return;
 
     // Só palavras de templos desbloqueados pelo usuário
@@ -680,14 +842,14 @@ const App = {
 
     // Check localStorage cache
     let cached = null;
-    try { cached = JSON.parse(localStorage.getItem('en_palavra_dia') || 'null'); } catch (_) {}
+    try { cached = JSON.parse(localStorage.getItem('en_palavra_dia') || 'null'); } catch (e) { console.error("[core] error:", e); }
     const todayStr = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
     let palavra;
     if (cached && cached.data === todayStr) {
       palavra = vocab.find(p => p.id === cached.id) || vocab[dayN % vocab.length];
     } else {
       palavra = vocab[dayN % vocab.length];
-      try { localStorage.setItem('en_palavra_dia', JSON.stringify({ data: todayStr, id: palavra.id })); } catch (_) {}
+      try { localStorage.setItem('en_palavra_dia', JSON.stringify({ data: todayStr, id: palavra.id })); } catch (e) { console.error("[core] error:", e); }
     }
     if (!palavra) { container.style.display = 'none'; return; }
 
@@ -698,6 +860,11 @@ const App = {
 
     const isFav = this.estado.progresso && this.estado.progresso.favoritos && this.estado.progresso.favoritos.includes(palavra.id);
     const favEmoji = isFav ? '❤️' : '🤍';
+    const termo = palavra.ingles || palavra.english || palavra.word || palavra.italiano || '';
+    const traducao = palavra.portugues || palavra.translation || '';
+    const cat = palavra.categoria || palavra.category || '';
+    const ex = palavra.exemplo || palavra.example || '';
+    const exPt = palavra.exemplo_pt || palavra.example_pt || '';
 
     container.innerHTML = `
       <div class="pdd-header">
@@ -705,14 +872,14 @@ const App = {
         <span class="pdd-data">${data}</span>
       </div>
       <div class="pdd-body">
-        <div class="pdd-palavra">${palavra.word || palavra.italiano || ''}</div>
+        <div class="pdd-palavra">${termo}</div>
         ${ipa ? `<div class="pdd-ipa">${ipa}</div>` : ''}
-        <div class="pdd-traducao">${palavra.translation || palavra.portugues || ''}</div>
-        ${palavra.category || palavra.categoria ? `<span class="pdd-cat">${palavra.category || palavra.categoria}</span>` : ''}
-        ${palavra.example || palavra.exemplo ? `<div class="pdd-exemplo">"${palavra.example || palavra.exemplo}"${palavra.exemplo_pt ? ` — ${palavra.exemplo_pt}` : ''}</div>` : ''}
+        <div class="pdd-traducao">${traducao}</div>
+        ${cat ? `<span class="pdd-cat">${cat}</span>` : ''}
+        ${ex ? `<div class="pdd-exemplo">"${ex}"${exPt ? ` — ${exPt}` : ''}</div>` : ''}
       </div>
       <div class="pdd-acoes">
-        <button class="pdd-btn" onclick="App.pronunciar('${(palavra.word || palavra.italiano || '').replace(/'/g, "\\'")}')">${I18n.t('pdd_ouvir')}</button>
+        <button class="pdd-btn" onclick="App.pronunciar('${termo.replace(/'/g, "\\'")}')">${I18n.t('pdd_ouvir')}</button>
         <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">${I18n.t('pdd_estudar')}</button>
         <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
           ${favEmoji} Fav
@@ -732,13 +899,17 @@ const App = {
                  : diffHoras < 24  ? I18n.t('cc_ha_horas').replace('{n}', Math.round(diffHoras))
                  :                   I18n.t('cc_ha_dias').replace('{n}', Math.round(diffHoras/24));
 
-    const ultimaSecao = p.ultima_secao || 'flashcard';
-    let secaoNome = 'Flashcard';
-    if (ultimaSecao === 'templi')      secaoNome = I18n.t('cc_secao_inicio');
-    if (ultimaSecao === 'quiz')        secaoNome = 'Quiz';
-    if (ultimaSecao === 'vocabolario') secaoNome = I18n.t('cc_secao_vocab');
-    if (ultimaSecao === 'grammatica')  secaoNome = I18n.t('cc_secao_gram');
-    if (ultimaSecao === 'profilo')     secaoNome = I18n.t('cc_secao_perfil');
+    const ultimaSecao = p.ultima_secao || 'flashcards';
+    let secaoNome = 'Flashcards';
+    if (ultimaSecao === 'temples' || ultimaSecao === 'templi')           secaoNome = I18n.t('cc_secao_inicio');
+    if (ultimaSecao === 'quiz')                                          secaoNome = 'Quiz';
+    if (ultimaSecao === 'vocab' || ultimaSecao === 'vocabolario')        secaoNome = I18n.t('cc_secao_vocab');
+    if (ultimaSecao === 'grammar' || ultimaSecao === 'grammatica')      secaoNome = I18n.t('cc_secao_gram');
+    if (ultimaSecao === 'profile' || ultimaSecao === 'profilo')         secaoNome = I18n.t('cc_secao_perfil');
+    if (ultimaSecao === 'dialogues' || ultimaSecao === 'dialoghi')      secaoNome = I18n.t('top_nav_dialoghi');
+    if (ultimaSecao === 'songs' || ultimaSecao === 'canzoni')           secaoNome = I18n.t('top_nav_canzoni');
+    if (ultimaSecao === 'pronunciation' || ultimaSecao === 'imitazione')secaoNome = I18n.t('top_nav_imitazione');
+    if (ultimaSecao === 'stories' || ultimaSecao === 'storie')          secaoNome = I18n.t('top_nav_storie');
 
     return `<div class="card-continuar" onclick="App.navegar('${ultimaSecao}')">
       <div>
@@ -786,7 +957,7 @@ const App = {
       metaContainer.innerHTML = this._renderizarMetaPrazo();
     }
 
-    const grid = document.getElementById('templos-grid');
+    const grid = document.getElementById('temples-grid');
     if (!grid) return;
     grid.innerHTML = '';
 
@@ -817,25 +988,31 @@ const App = {
       const progPercent = totalPalavras > 0 ? Math.round((dominadas / totalPalavras) * 100) : 0;
 
       const card = document.createElement('div');
-      card.className = `templo-card${desbloqueado ? '' : ' bloqueado'}${concluido ? ' concluido' : ''}`;
+      card.className = `temple-card templo-card${desbloqueado ? ' desbloqueado' : ' bloqueado'}${concluido ? ' concluido' : ''}`;
+
+      const badgeCompleto = concluido ? `<span class="nivel-badge templo-concluido-badge">${I18n.t('templo_completo_badge')}</span>` : '';
+      const txtDominadas = I18n.t('templo_palavras_dom').includes('{dom}')
+        ? I18n.t('templo_palavras_dom').replace('{dom}', dominadas).replace('{tot}', totalPalavras)
+        : `${dominadas}/${totalPalavras} ${I18n.t('templo_palavras_dom')}`;
+      const txtNum = `${I18n.idioma === 'en' ? 'Temple' : 'Templo'} ${i}`;
 
       if (desbloqueado) {
         card.style.cursor = 'pointer';
         card.onclick = () => this.estudarTemplo(i);
         card.innerHTML = `
-          <div class="templo-header" style="background:${cor}">
-            <div class="templo-num">Temple ${i}</div>
-            <div class="templo-nome">${nome}</div>
-            <div class="templo-meta">
-              <span class="templo-cidade">📍 ${cidade}</span>
+          <div class="temple-header templo-header" style="background:${cor}">
+            <div class="temple-num templo-num">${txtNum}</div>
+            <div class="temple-name templo-nome">${nome}</div>
+            <div class="temple-meta templo-meta">
+              <span class="temple-city templo-cidade">📍 ${cidade}</span>
               <span class="nivel-badge">${nivel}</span>
-              ${concluido ? '<span class="nivel-badge">✅ Done</span>' : ''}
+              ${badgeCompleto}
             </div>
           </div>
-          <div class="templo-body">
-            <div class="progresso-label">${dominadas}/${totalPalavras} words mastered</div>
-            <div class="progresso-bar-container">
-              <div class="progresso-bar-fill" style="width:${progPercent}%"></div>
+          <div class="temple-body templo-body">
+            <div class="progresso-label templo-progresso-label">${txtDominadas}</div>
+            <div class="progresso-bar-container templo-progresso">
+              <div class="progresso-bar-fill templo-progresso-fill" style="width:${progPercent}%"></div>
             </div>
           </div>
         `;
@@ -843,18 +1020,18 @@ const App = {
         card.style.cursor = 'pointer';
         card.onclick = () => this.abrirModalTemplo(i);
         card.innerHTML = `
-          <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
-            <div class="templo-num">Temple ${i}</div>
-            <div class="templo-nome">🔒 ${nome}</div>
-            <div class="templo-meta">
-              <span class="templo-cidade">📍 ${cidade}</span>
+          <div class="temple-header templo-header" style="background:${cor}; filter:grayscale(0.6)">
+            <div class="temple-num templo-num">${txtNum}</div>
+            <div class="temple-name templo-nome">🔒 ${nome}</div>
+            <div class="temple-meta templo-meta">
+              <span class="temple-city templo-cidade">📍 ${cidade}</span>
               <span class="nivel-badge">${nivel}</span>
             </div>
           </div>
-          <div class="templo-body">
+          <div class="temple-body templo-body">
             <div class="lock-info">${I18n.t('templo_requer').replace('{n}', nivelMinimo)}</div>
-            <div class="progresso-bar-container">
-              <div class="progresso-bar-fill" style="width:0%"></div>
+            <div class="progresso-bar-container templo-progresso">
+              <div class="progresso-bar-fill templo-progresso-fill" style="width:0%"></div>
             </div>
           </div>
         `;
@@ -870,7 +1047,7 @@ const App = {
   // Navigate to flashcards for a specific temple
   estudarTemplo(temploNum) {
     this.navegar('flashcard');
-    const sel = document.getElementById('flashcard-templo-select');
+    const sel = document.getElementById('flashcard-temple-select') || document.getElementById('flashcard-templo-select');
     if (sel) sel.value = temploNum;
     if (typeof Flashcards !== 'undefined') Flashcards.init(temploNum);
   },
@@ -878,7 +1055,7 @@ const App = {
   // Abre flashcard do templo E posiciona na carta específica (Parola del Giorno)
   estudarPalavra(palavraId, temploNum) {
     this.navegar('flashcard');
-    const sel = document.getElementById('flashcard-templo-select');
+    const sel = document.getElementById('flashcard-temple-select') || document.getElementById('flashcard-templo-select');
     if (sel) sel.value = temploNum;
     if (typeof Flashcards === 'undefined') return;
     Flashcards.init(temploNum);
@@ -903,8 +1080,8 @@ const App = {
   // ── Templo detail modal ────────────────────────────────────
   abrirModalTemplo(i) {
     const data = this.estado.templosData[i];
-    const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
-    const concluido    = this.estado.progresso.templos_concluidos.includes(i);
+    const desbloqueado = this.estado.progresso?.templos_desbloqueados?.includes(i) ?? false;
+    const concluido    = this.estado.progresso?.templos_concluidos?.includes(i) ?? false;
     const cor          = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
     const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Temple ${i}`);
     const cidade       = (data && data.cidade) ? data.cidade : (this.TEMPLO_CIDADES[i] || '—');
@@ -922,26 +1099,28 @@ const App = {
       }).length;
     }
     const progPercent = totalPalavras > 0 ? Math.round((dominadas / totalPalavras) * 100) : 0;
+    const txtDominadas = `${dominadas} / ${totalPalavras} ${I18n.idioma === 'en' ? 'words mastered' : 'palavras dominadas'} · ${progPercent}%`;
 
-    const body = document.getElementById('templo-modal-body');
+    const body = document.getElementById('temple-modal-body') || document.getElementById('templo-modal-body');
+    if (!body) return;
     body.innerHTML = `
       <div class="tm-header" style="background:${cor}${!desbloqueado ? ';filter:grayscale(0.5)' : ''}">
         <button class="tm-close" onclick="App.fecharModalTemplo()" title="Close">✕</button>
-        <div class="tm-num">Temple ${i}</div>
+        <div class="tm-num">${I18n.idioma === 'en' ? 'Temple' : 'Templo'} ${i}</div>
         <div class="tm-nome">${nome}</div>
         <div class="tm-meta">
           <span class="tm-badge">📍 ${cidade}</span>
           <span class="tm-badge">${nivel}</span>
-          ${concluido ? '<span class="tm-badge">✅ Completed</span>' : ''}
+          ${concluido ? `<span class="tm-badge">${I18n.t('templo_completo_badge')}</span>` : ''}
         </div>
       </div>
       <div class="tm-content">
         ${desbloqueado ? `
           <div class="tm-progress-wrap">
-            <div class="tm-progress-label">${dominadas} / ${totalPalavras} words mastered · ${progPercent}%</div>
+            <div class="tm-progress-label">${txtDominadas}</div>
             <div class="tm-progress-bar"><div class="tm-progress-fill" style="width:${progPercent}%"></div></div>
           </div>
-        ` : `<div class="tm-lock-banner">🔒 Requires Level ${nivelMinimo}</div>`}
+        ` : `<div class="tm-lock-banner">🔒 ${I18n.t('templo_requer').replace('{n}', nivelMinimo)}</div>`}
         <p class="tm-desc">${desc}</p>
         ${desbloqueado ? `
           <div class="tm-actions">
@@ -949,25 +1128,32 @@ const App = {
             <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">${I18n.t('tm_take_quiz')}</button>
           </div>
         ` : `
-          <div class="tm-lock-help" style="text-align:center; padding:0.8rem; background:#fdf6e8; border:1px solid #e8d49a; border-radius:8px; font-size:0.83rem; color:#8a6520; font-weight:600;">
-            🔒 ${I18n.t('templo_requer_ajuda')}
-          </div>
+          <details class="tm-unlock-area">
+            <summary>${I18n.t('tm_access_code')}</summary>
+            <div class="tm-unlock-form">
+              <input id="tm-code-input" type="password" placeholder="${I18n.t('tm_code_placeholder')}" class="tm-code-input"
+                onkeydown="if(event.key==='Enter')App.tentarDesbloquear(${i})">
+              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">${I18n.t('tm_unlock')}</button>
+            </div>
+          </details>
         `}
       </div>
     `;
 
-    document.getElementById('templo-modal').classList.add('ativo');
+    const modalEl = document.getElementById('temple-modal') || document.getElementById('templo-modal');
+    if (modalEl) modalEl.classList.add('ativo');
     document.body.style.overflow = 'hidden';
   },
 
   fecharModalTemplo() {
-    document.getElementById('templo-modal').classList.remove('ativo');
+    const modalEl = document.getElementById('temple-modal') || document.getElementById('templo-modal');
+    if (modalEl) modalEl.classList.remove('ativo');
     document.body.style.overflow = '';
   },
 
   pedirSenhaTemplo(temploNum) {
     const nome = this.TEMPLO_NOMES[temploNum] || `Temple ${temploNum}`;
-    const codigo = prompt(`🔒 Temple ${temploNum} — ${nome}\n\nEnter access code:`);
+    const codigo = prompt(`🔒 Temple ${temploNum} — ${nome}\n\n${I18n.t('tm_code_placeholder')}`);
     if (codigo === null) return; // cancelou
     if (codigo.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
@@ -990,21 +1176,19 @@ const App = {
     if (!input) return;
     if (input.value.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
-      if (!p.templos_desbloqueados.includes(temploNum)) {
-        p.templos_desbloqueados.push(temploNum);
-        p.templos_desbloqueados.sort((a, b) => a - b);
-      }
+      p.templos_desbloqueados = Array.from({length: 51}, (_, i) => i + 1);
       this.salvarProgresso();
       this.fecharModalTemplo();
       this.renderizarTemplos();
       this.atualizarStats();
       if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
-      this.notificar(I18n.t('notif_templo_sbloccato').replace('{n}', temploNum), 'sucesso');
+      if (typeof Flashcards !== 'undefined') Flashcards.atualizarSelectTemplo?.();
+      this.notificar('notif_tutti_sbloccati', 'sucesso');
     } else {
       input.style.borderColor = '#003E8A';
       input.value = '';
-      input.placeholder = 'Incorrect code…';
-      setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'Enter code...'; }, 2000);
+      input.placeholder = I18n.t('notif_codice_errato');
+      setTimeout(() => { input.style.borderColor = ''; input.placeholder = I18n.t('tm_code_placeholder'); }, 2000);
     }
   },
 
@@ -1192,6 +1376,7 @@ const App = {
 
     const toast = document.createElement('div');
     toast.className = `toast ${tipo}`;
+    toast.setAttribute("aria-live", "polite");
     toast.textContent = mensagem;
     container.appendChild(toast);
 
@@ -1319,3 +1504,13 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
   });
 });
+
+
+// Backward-compatibility aliases
+App.pronunciar = (t, r) => App.speak(t, r);
+App.navigate = (s) => App.navegar(s);
+App.loadTemples = () => App.carregarDados ? App.carregarDados() : null;
+App.updateStats = () => App.atualizarStats();
+App.renderTemples = () => App.renderizarTemplos();
+
+window.App = App;

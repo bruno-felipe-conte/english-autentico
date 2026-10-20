@@ -1,0 +1,264 @@
+{
+  "imitazioni": [
+    {
+      "id": "imi_001",
+      "frase_ingles": "Oh my God!",
+      "frase_portugues": "Oh meu Deus!",
+      "nivel": "A1",
+      "contexto": "A very common expression of surprise or shock in English.",
+      "audio_ipa": "/oʊ maɪ ɡɒd/",
+      "dica_fonetica": "Na pronúncia americana, 'God' tem a vogal aberta /ɑː/ (como em 'father'), sem arredondamento labial.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_002",
+      "frase_ingles": "How are you doing?",
+      "frase_portugues": "Como você está?",
+      "nivel": "A1",
+      "contexto": "Informal way to greet someone and ask how they are.",
+      "audio_ipa": "/haʊ ɑːr juː ˈduːɪŋ/",
+      "dica_fonetica": "Connected speech: 'How are' soa quase como 'How-er'. O ritmo flui com tonicidade principal em 'doing'.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_003",
+      "frase_ingles": "I'm afraid I can't make it.",
+      "frase_portugues": "Infelizmente não poderei comparecer.",
+      "nivel": "A2",
+      "contexto": "A polite way to say you cannot attend something or do something.",
+      "audio_ipa": "/aɪm əˈfreɪd aɪ kænt meɪk ɪt/",
+      "dica_fonetica": "Linking: Conecte o 'k' final de 'make' diretamente com o 'i' de 'it' (/meɪ.kɪt/). O 't' de 'can't' é glotalizado.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_004",
+      "frase_ingles": "That makes perfect sense.",
+      "frase_portugues": "Isso faz todo o sentido.",
+      "nivel": "B1",
+      "contexto": "Used to confirm that you understood something clearly.",
+      "audio_ipa": "/ðæt meɪks ˈpɜːrfɪkt sɛns/",
+      "dica_fonetica": "Em 'perfect sense', o 't' final de 'perfect' é quase inaudível (unreleased stop) antes do 's' de 'sense'.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_005",
+      "frase_ingles": "Could you say that again, please?",
+      "frase_portugues": "Você poderia repetir isso, por favor?",
+      "nivel": "A1",
+      "contexto": "Essential phrase when you didn't hear or understand something.",
+      "audio_ipa": "/kʊd juː seɪ ðæt əˈɡeɪn pliːz/",
+      "dica_fonetica": "Palatalização: O 'd' de 'Could' se junta com o 'y' de 'you' soando como /kʊdʒuː/ ('could-joo').",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_006",
+      "frase_ingles": "It's on the tip of my tongue.",
+      "frase_portugues": "Está na ponta da língua.",
+      "nivel": "B1",
+      "contexto": "Used when you almost remember something but can't quite get it.",
+      "audio_ipa": "/ɪts ɒn ðə tɪp əv maɪ tʌŋ/",
+      "dica_fonetica": "A preposição 'of' reduz para o schwa /əv/. Mantenha o ritmo ágil até a palavra tônica 'tongue'.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_007",
+      "frase_ingles": "I couldn't agree more.",
+      "frase_portugues": "Não poderia concordar mais.",
+      "nivel": "B1",
+      "contexto": "A strong way to express complete agreement with someone.",
+      "audio_ipa": "/aɪ ˈkʊdnt əˈɡriː mɔːr/",
+      "dica_fonetica": "Na contração 'couldn't', o 'dn' produz uma transição nasal rápida sem vogal intermediária.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_008",
+      "frase_ingles": "Never mind.",
+      "frase_portugues": "Deixa para lá. / Não se preocupe.",
+      "nivel": "A2",
+      "contexto": "Used to dismiss something or tell someone not to worry about it.",
+      "audio_ipa": "/ˈnɛvər maɪnd/",
+      "dica_fonetica": "Entonação descendente natural. O 'd' final de 'mind' é suave e contido.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_009",
+      "frase_ingles": "Break a leg!",
+      "frase_portugues": "Que tudo corra bem! (Boa sorte!)",
+      "nivel": "B1",
+      "contexto": "Idiomatic expression used to wish someone good luck before a performance or challenge.",
+      "audio_ipa": "/breɪk ə lɛɡ/",
+      "dica_fonetica": "Ligação consonantal suave: 'Break a' conecta como /breɪ.kə/, reduzindo o artigo 'a' para schwa.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_010",
+      "frase_ingles": "You're absolutely right.",
+      "frase_portugues": "Você tem toda a razão.",
+      "nivel": "A2",
+      "contexto": "A polite and emphatic way to confirm agreement.",
+      "audio_ipa": "/jʊər ˈæbsəluːtli raɪt/",
+      "dica_fonetica": "Em 'absolutely', a ênfase recai na primeira sílaba /ˈæb/. O 't' antes de 'ly' é articulado sem explosão de ar.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_011",
+      "frase_ingles": "What do you do for a living?",
+      "frase_portugues": "O que você faz da vida? / Qual é a sua profissão?",
+      "nivel": "A2",
+      "contexto": "Common question when getting to know someone new.",
+      "audio_ipa": "/wɒt duː juː duː fər ə ˈlɪvɪŋ/",
+      "dica_fonetica": "Redução de preposição: 'for a' vira /fərə/. Em fala fluida americana, 'What do you' soa como /wʌ.də.jə/.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_012",
+      "frase_ingles": "Long time no see!",
+      "frase_portugues": "Quanto tempo!",
+      "nivel": "A2",
+      "contexto": "Said to someone you haven't seen for a long time.",
+      "audio_ipa": "/lɒŋ taɪm noʊ siː/",
+      "dica_fonetica": "O som nasal velar /ŋ/ em 'long' sustenta a transição suave para 'time'. Ritmo compassado e alegre.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_013",
+      "frase_ingles": "Nice to meet you.",
+      "frase_portugues": "Prazer em conhecer você.",
+      "nivel": "A1",
+      "contexto": "Standard polite greeting when introduced to someone for the first time.",
+      "audio_ipa": "/naɪs tuː miːt juː/",
+      "dica_fonetica": "Redução e assimilação: 'meet you' frequentemente assimila para /miː.tʃuː/ com som de 'ch'.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_014",
+      "frase_ingles": "Have a great day!",
+      "frase_portugues": "Tenha um ótimo dia!",
+      "nivel": "A1",
+      "contexto": "A warm and polite farewell wishing someone well.",
+      "audio_ipa": "/hæv ə ɡreɪt deɪ/",
+      "dica_fonetica": "Conecte 'Have a' em /hæ.və/. 'Great day' une os dois sons consonantais sem pausa entre eles.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_015",
+      "frase_ingles": "I'll keep you posted.",
+      "frase_portugues": "Vou te manter informado.",
+      "nivel": "A2",
+      "contexto": "Promise to give regular updates about a developing situation.",
+      "audio_ipa": "/aɪl kiːp juː ˈpoʊstɪd/",
+      "dica_fonetica": "Flapped T americano: Em 'posted', o 't' entre vogais transforma-se em flap suave /d/.",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_016",
+      "frase_ingles": "Let's call it a day.",
+      "frase_portugues": "Vamos encerrar por hoje.",
+      "nivel": "B1",
+      "contexto": "Common idiom used to stop working or conclude the day's activities.",
+      "audio_ipa": "/lɛts kɔːl ɪt ə deɪ/",
+      "dica_fonetica": "Cadeia de linking: 'call it a' vira uma única palavra fonética /kɔː.lɪ.tə/ com flap T.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_017",
+      "frase_ingles": "Better late than never.",
+      "frase_portugues": "Antes tarde do que nunca.",
+      "nivel": "B1",
+      "contexto": "Popular proverb suggesting it is better to do something late than not at all.",
+      "audio_ipa": "/ˈbɛtər leɪt ðæn ˈnɛvər/",
+      "dica_fonetica": "Em 'better', aplique o flap T americano rápido /bɛ.ɾər/, mantendo a cadência rítmica da frase.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_018",
+      "frase_ingles": "To be perfectly honest, I have mixed feelings about this.",
+      "frase_portugues": "Para ser bem sincero, tenho sentimentos mistos sobre isso.",
+      "nivel": "B2",
+      "contexto": "Diplomatic expression used to share nuanced opinions or hesitation.",
+      "audio_ipa": "/tuː biː ˈpɜːrfɪktli ˈɒnɪst aɪ hæv mɪkst ˈfiːlɪŋz əˈbaʊt ðɪs/",
+      "dica_fonetica": "O 'h' em 'honest' é mudo. O 'ed' em 'mixed' tem som de /t/ e conecta suavemente com 'feelings'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_019",
+      "frase_ingles": "It goes without saying that practice makes perfect.",
+      "frase_portugues": "É evidente que a prática leva à perfeição.",
+      "nivel": "B2",
+      "contexto": "Expresses an accepted truth that is obvious to everyone.",
+      "audio_ipa": "/ɪt ɡoʊz wɪðˈaʊt ˈseɪɪŋ ðæt ˈpræktɪs meɪks ˈpɜːrfɪkt/",
+      "dica_fonetica": "Mantenha o foco rítmico nas palavras de conteúdo ('practice', 'makes', 'perfect') reduzindo 'that' a /ðət/.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_020",
+      "frase_ingles": "Let's touch base first thing tomorrow morning.",
+      "frase_portugues": "Vamos nos falar logo cedo amanhã de manhã.",
+      "nivel": "B2",
+      "contexto": "Business idiom to coordinate briefly at the start of the next day.",
+      "audio_ipa": "/lɛts tʌtʃ beɪs fɜːrst θɪŋ təˈmɔːroʊ ˈmɔːrnɪŋ/",
+      "dica_fonetica": "No encontro 'touch base', o 'ch' transita sem interrupção de fluxo para a plosiva bilabial /b/.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_021",
+      "frase_ingles": "I can't wrap my head around this issue.",
+      "frase_portugues": "Não consigo compreender a complexidade deste problema.",
+      "nivel": "B2",
+      "contexto": "Idiom expressing difficulty in understanding a complex or confusing idea.",
+      "audio_ipa": "/aɪ kænt ræp maɪ hɛd əˈraʊnd ðɪs ˈɪʃuː/",
+      "dica_fonetica": "O 'w' em 'wrap' é mudo (/ræp/). Em 'around this', o 'd' une-se suavemente ao 'th' sonoro /ð/.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_022",
+      "frase_ingles": "We need to weigh the pros and cons carefully.",
+      "frase_portugues": "Precisamos pesar os prós e os contras com cuidado.",
+      "nivel": "B2",
+      "contexto": "Used when deliberating important decisions with trade-offs.",
+      "audio_ipa": "/wiː niːd tuː weɪ ðə proʊz ænd kɒnz ˈkɛərfəli/",
+      "dica_fonetica": "O 'gh' em 'weigh' é mudo (/weɪ/). A conjunção 'and' reduz-se ao som /ən/ em 'pros and cons'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_023",
+      "frase_ingles": "I am somewhat reluctant to jump to hasty conclusions.",
+      "frase_portugues": "Estou um tanto relutante em tirar conclusões precipitadas.",
+      "nivel": "C1",
+      "contexto": "Intellectual statement emphasizing caution before passing judgment.",
+      "audio_ipa": "/aɪ æm ˈsʌmwɒt rɪˈlʌktənt tuː dʒʌmp tuː ˈheɪsti kənˈkluːʒənz/",
+      "dica_fonetica": "Entonação controlada e formal. A partícula 'to' reduz para schwa /tə/ antes de consoantes.",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imi_024",
+      "frase_ingles": "The subtle nuances in his speech were remarkably articulate.",
+      "frase_portugues": "As nuances sutis em seu discurso foram notavelmente articuladas.",
+      "nivel": "C1",
+      "contexto": "High-register observation on precision and eloquence in rhetoric.",
+      "audio_ipa": "/ðə ˈsʌtəl ˈnjuːɑːnsɪz ɪn hɪz spiːtʃ wɜːr rɪˈmɑːrkəbli ɑːrˈtɪkjələt/",
+      "dica_fonetica": "O 'b' em 'subtle' é totalmente mudo (/ˈsʌtəl/). A última sílaba de 'articulate' termina em schwa curto /lət/.",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imi_025",
+      "frase_ingles": "It is imperative that we remain objective despite the controversy.",
+      "frase_portugues": "É imperativo que permaneçamos objetivos apesar da controvérsia.",
+      "nivel": "C1",
+      "contexto": "Formal directive urging professional detachment and rigor.",
+      "audio_ipa": "/ɪt ɪz ɪmˈpɛrətɪv ðæt wiː rɪˈmeɪn əbˈdʒɛktɪv dɪˈspaɪt ðə ˈkɒntrəvɜːrsi/",
+      "dica_fonetica": "Acentuação tônica rigorosa em 'im-PER-a-tive' e 'con-tro-ver-sy', mantendo o ritmo de fala formal.",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imi_026",
+      "frase_ingles": "His argument lacks substantial empirical evidence to support it.",
+      "frase_portugues": "Seu argumento carece de evidências empíricas substanciais para sustentá-lo.",
+      "nivel": "C1",
+      "contexto": "Academic assessment criticizing the absence of empirical backing.",
+      "audio_ipa": "/hɪz ˈɑːrɡjəmənt læks səbˈstænʃəl ɪmˈpɪrɪkəl ˈɛvɪdəns tuː səˈpɔːrt ɪt/ ",
+      "dica_fonetica": "Em 'support it', o 't' final une-se ao pronome /səˈpɔːr.tɪt/, com 'it' suavemente glotalizado no fim.",
+      "xp_recompensa": 30
+    }
+  ]
+}

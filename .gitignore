@@ -3,3 +3,13 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+.env
+*.log
+coverage/
+.nyc_output/
+data/*.json.bak
+playwright-report/
+test-results/
+/*.png
+

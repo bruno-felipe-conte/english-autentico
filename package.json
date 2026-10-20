@@ -14,6 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "sideEffects": false,
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/bruno-felipe-conte/english-autentico/issues"

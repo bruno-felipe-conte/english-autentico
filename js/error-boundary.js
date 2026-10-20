@@ -9,6 +9,8 @@ const ErrorBoundary = {
   _inicializado: false,
 
   init(containerId) {
+    // Load persisted error log
+    try { this._errorLog = JSON.parse(localStorage.getItem("en_error_log") || "[]").slice(-20); } catch(_) {}
     this._container = document.getElementById(containerId);
     if (!this._container) return;
     this._inicializado = true;
@@ -34,6 +36,8 @@ const ErrorBoundary = {
     };
 
     this._errorLog.push(errorInfo);
+    if (this._errorLog.length > 20) this._errorLog.shift();
+    try { localStorage.setItem("en_error_log", JSON.stringify(this._errorLog)); } catch(_) {}
     console.error('[ErrorBoundary]', errorInfo);
 
     // Mostrar UI de erro

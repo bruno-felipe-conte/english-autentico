@@ -126,6 +126,7 @@ const Quiz = {
         templo: temploNum,
         tipo: 'vocabulario',
         nivel: data.nivel || 'A1',
+        ingles: termoStr,
         pergunta: I18n.t('quiz_what_does_mean').replace('{w}', termoStr),
         resposta_correta: p.portugues,
         alternativas: alternativas,
@@ -161,24 +162,26 @@ const Quiz = {
 
     // Question type badge
     const tipoBadge = document.getElementById('quiz-tipo');
-    if (tipoBadge) tipoBadge.textContent = I18n.t('quiz_tipo_' + p.tipo) || p.tipo || I18n.t('quiz_tipo_vocabulario');
+    const rawTipo = (p.tipo || 'vocabulario').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (tipoBadge) tipoBadge.textContent = I18n.t('quiz_tipo_' + rawTipo) || p.tipo || I18n.t('quiz_tipo_vocabulario');
 
     // Question text
     const perguntaEl = document.getElementById('quiz-pergunta');
     if (perguntaEl) {
       perguntaEl.textContent = p.pergunta;
-      const tLang = p.ingles;
+      const tLang = p.ingles || (p.tipo === 'vocabulario' ? p.pergunta.match(/"([^"]+)"/)?.[1] : null) || p.resposta_correta;
       if (tLang) perguntaEl.dataset.ingles = tLang;
       else delete perguntaEl.dataset.ingles;
     }
 
     const btnOuvir = document.getElementById('btn-ouvir-quiz');
     if (btnOuvir) {
-      if (p.tipo === 'listening') {
+      if (p.tipo === 'listening' || p.tipo === 'vocabulario') {
         btnOuvir.style.display = 'flex';
-        // Auto play audio when question appears
-        const tLang = p.ingles;
-        if (tLang) setTimeout(() => { if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(tLang); }, 400);
+        if (p.tipo === 'listening') {
+          const tLang = p.ingles || p.resposta_correta;
+          if (tLang) setTimeout(() => { if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(tLang); }, 400);
+        }
       } else {
         btnOuvir.style.display = 'none';
       }
@@ -296,10 +299,17 @@ const Quiz = {
     // Store ref so proximaPergunta() can cancel it if user clicks Continuar first
     const delay = correto ? 1500 : 2500;
     if (this._autoAdvanceTimer) clearTimeout(this._autoAdvanceTimer);
-    this._autoAdvanceTimer = setTimeout(() => {
-      this._autoAdvanceTimer = null;
-      this.proximaPergunta();
-    }, delay);
+    if (this._autoAdvanceTimer) clearTimeout(this._autoAdvanceTimer);
+      timerBar.style.transition = "none";
+      timerBar.style.width = "100%";
+      void timerBar.offsetWidth;
+      timerBar.style.transition = "width " + delay + "ms linear";
+      timerBar.style.width = "0%";
+      timerBar.dataset.start = Date.now();
+      this._autoAdvanceTimer = setTimeout(() => {
+        this._autoAdvanceTimer = null;
+        this.proximaPergunta();
+      }, delay);
   },
 
   // ── Advance to next question ───────────────────────────────
@@ -386,15 +396,12 @@ const Quiz = {
         : '';
 
       acoesContainer.innerHTML = `
-        <button class="btn-secondario" onclick="App.navegar('home')" data-i18n="fc_resumo_inicio">${I18n.t('fc_resumo_inicio') || 'Início'}</button>
+        <button class="btn-primario" onclick="Quiz.voltarSelector()" data-i18n="quiz_voltar">${I18n.t('quiz_voltar') || '← Voltar ao Seletor'}</button>
         ${reviewBtn}
-        <button class="btn-primario" onclick="Quiz._proximoTemploDisponivel()" data-i18n="fc_resumo_proximo_templo">${I18n.t('fc_resumo_proximo_templo') || 'Próximo Templo'}</button>
+        <button class="btn-secondario" onclick="Quiz._proximoTemploDisponivel()" data-i18n="fc_resumo_proximo_templo">${I18n.t('fc_resumo_proximo_templo') || 'Próximo Templo'}</button>
+        <button class="btn-secondario" onclick="App.navegar('home')" data-i18n="fc_resumo_inicio">${I18n.t('fc_resumo_inicio') || 'Início'}</button>
       `;
     }
-    
-    // Hide old button
-    const btnVelho = resultado.querySelector('button[onclick="Quiz.voltarSelector()"]');
-    if (btnVelho) btnVelho.style.display = 'none';
 
     // Give XP e streak apenas na primeira chamada (não em re-renders por i18n)
     if (!somenteUI) {
@@ -416,7 +423,7 @@ const Quiz = {
       }
 
       try {
-        const historico = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]');
+        const historico = JSON.parse(localStorage.getItem('en_quiz_history') || localStorage.getItem('en_quiz_historico') || '[]');
         historico.unshift({
           templo: this.temploAtual,
           pontuacao: pct,
@@ -425,7 +432,9 @@ const Quiz = {
           total: total,
           data: Date.now()
         });
-        localStorage.setItem('en_quiz_historico', JSON.stringify(historico.slice(0, 50)));
+        const histJson = JSON.stringify(historico.slice(0, 50));
+        localStorage.setItem('en_quiz_history', histJson);
+        localStorage.setItem('en_quiz_historico', histJson);
       } catch (e) { /* ignore */ }
     }
   },
@@ -494,7 +503,7 @@ const Quiz = {
 
     // ── M-3: Calcular histórico por templo para ordenação ───
     let historico = [];
-    try { historico = JSON.parse(localStorage.getItem('en_quiz_historico') || '[]'); } catch (_) {}
+    try { historico = JSON.parse(localStorage.getItem('en_quiz_history') || localStorage.getItem('en_quiz_historico') || '[]'); } catch (_) {}
 
     const temploStats = {};
     historico.forEach(h => {
@@ -714,16 +723,41 @@ const Quiz = {
   // ── M-5: Salva erro para revisão futura ────────────────────
   _salvarErro(pergunta) {
     try {
-      const fila = JSON.parse(localStorage.getItem('en_quiz_erros') || '[]');
+      const fila = JSON.parse(localStorage.getItem("en_quiz_erros") || "[]");
       // Conta tentativas ANTES de remover o duplicado
       const existing = fila.find(e => e.id === pergunta.id);
       const tentativas = existing ? (existing.tentativas || 1) : 0;
       const idx = fila.findIndex(e => e.id === pergunta.id);
       if (idx >= 0) fila.splice(idx, 1);
 
-      // Calcula próxima revisão (SRS simples: 1min, 10min, 1h, 1d, 3d)
-      const intervalos = [60000, 600000, 3600000, 86400000, 259200000];
-      const intervalo = intervalos[Math.min(tentativas, intervalos.length - 1)];
+      // Usa FSRS para calcular intervalo após erro (rating=1 = Again)
+      let intervalo = 60000; // fallback 1min
+      if (typeof window.FSRS !== "undefined") {
+        // Converte para formato FSRS card
+        const cardFSRS = {
+          difficulty: existing?.difficulty || 5,
+          stability: existing?.stability || 0,
+          lapses: existing?.lapses || 0,
+          reps: existing?.reps || 0,
+          state: existing?.state || "new",
+          lastReview: existing?.lastReview || null
+        };
+        const reviewed = window.FSRS.review(cardFSRS, 1); // rating=1 = Again
+        intervalo = window.FSRS.nextInterval(reviewed.stability);
+        // Salva dados FSRS no item para próximas revisões
+        Object.assign(pergunta, {
+          difficulty: reviewed.difficulty,
+          stability: reviewed.stability,
+          lapses: reviewed.lapses,
+          reps: reviewed.reps,
+          state: reviewed.state,
+          lastReview: reviewed.lastReview
+        });
+      } else {
+        // Fallback: intervalos fixos
+        const intervalos = [60000, 600000, 3600000, 86400000, 259200000];
+        intervalo = intervalos[Math.min(tentativas, intervalos.length - 1)];
+      }
 
       fila.push({
         ...pergunta,
@@ -733,7 +767,7 @@ const Quiz = {
       });
 
       // Mantém máximo 100 itens
-      localStorage.setItem('en_quiz_erros', JSON.stringify(fila.slice(-100)));
+      localStorage.setItem("en_quiz_erros", JSON.stringify(fila.slice(-100)));
     } catch (_) {}
   },
 
@@ -994,7 +1028,7 @@ const Quiz = {
           const correta = ex.opcoes[ex.resposta];
           perguntas.push({
             id: `gram_${livello}_${ex.pergunta.slice(0,32).replace(/\s+/g,'_')}`,
-            tipo: 'gramática',
+            tipo: 'gramatica',
             nivel: livello,
             pergunta: ex.pergunta,
             resposta_correta: correta,
@@ -1059,3 +1093,6 @@ document.addEventListener('i18n:changed', () => {
     Quiz.renderizarSeletor();
   }
 });
+
+
+window.Quiz = Quiz;

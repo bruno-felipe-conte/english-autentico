@@ -8,6 +8,7 @@ const Onboarding = {
 
   deveExibir() {
     try {
+      if (window.location.search.includes('no_onb')) return false;
       return !localStorage.getItem(this.STORAGE_KEY);
     } catch (e) {
       return true;
@@ -31,6 +32,10 @@ const Onboarding = {
     if (modal) modal.style.display = 'none';
 
     // Tour só inicia quando o usuário clicar em ❓ no header
+  },
+
+  pularTudo() {
+    this.concluir();
   },
 
   proximoSlide() {
@@ -84,3 +89,5 @@ const Onboarding = {
     }
   }
 };
+
+window.Onboarding = Onboarding;

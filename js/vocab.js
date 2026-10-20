@@ -2,7 +2,8 @@
 // vocab.js — Vocabulary browser with search and filters
 // ============================================================
 
-const Vocab = {
+console.log('[vocab.js executing]');
+var Vocab = window.Vocab = {
   filtroTexto: '',
   filtroTemplo: '',
   filtroCategoria: '',
@@ -18,6 +19,10 @@ const Vocab = {
   _verbReviewCards: [], // cartas atuais do vocab review
   _verbReviewIndex: 0,
   _vocabXP: 0,         // XP ganho na sessão atual
+  _debounceTimer: null, // debounce timer for search
+  _limiteVisivel: 100,  // Virtualização: limite de itens no DOM
+  _observer: null,      // IntersectionObserver para scroll virtualizado
+  _itensFiltrados: [],  // Itens filtrados da sessão atual
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
     const listEl = document.getElementById('vocab-list');
@@ -36,17 +41,17 @@ const Vocab = {
       return;
     }
 
-    // Onboarding banner (primeira vez)
-    if (!this._onboardingMostrado) {
+    // Onboarding banner (primeira vez ao visitar a aba de Vocabulário)
+    if (!this._onboardingMostrado && App.estado && (App.estado.secaoAtiva === 'vocab' || App.estado.secaoAtiva === 'vocabolario')) {
       this._onboardingMostrado = true;
       setTimeout(() => {
         App.notificar(I18n.t('vocab_tip_ocultar'), 'alerta');
-      }, 800);
+      }, 500);
     }
 
     // Update origin pills active state
     const pillStyle = (active) => active
-      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
+      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #003E8A;background:#003E8A;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
       : 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600';
     const pT = document.getElementById('vocab-pill-todos');
     const pC = document.getElementById('vocab-pill-custom');
@@ -154,9 +159,9 @@ const Vocab = {
           : I18n.t('vocab_resultados').replace('{m}', mostrando).replace('{f}', filtrados.length).replace('{t}', total);
 
       // Botão "estudar este filtro" só aparece quando há filtro ativo e resultados
-      const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos;
+      const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos || this.filtroOrigem;
       const btnEstudar = (temFiltro && filtrados.length > 0)
-        ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#9B2335;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">${I18n.t('vocab_estudar_filtro')}</button>`
+        ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#003E8A;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">${I18n.t('vocab_estudar_filtro')}</button>`
         : '';
 
       // Chips de filtros ativos
@@ -188,8 +193,15 @@ const Vocab = {
       statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}${btnExportar}${btnCompartilhar}${chipsHtml}`;
     }
 
-    // Limit display to 100
-    const visivel = filtrados.slice(0, 100);
+    // Cache dos itens filtrados e virtualização progressiva
+    this._itensFiltrados = filtrados;
+    this._limiteVisivel = Math.min(100, filtrados.length);
+    if (this._observer) {
+      try { this._observer.disconnect(); } catch (_) {}
+      this._observer = null;
+    }
+
+    const visivel = filtrados.slice(0, this._limiteVisivel);
 
     if (visivel.length === 0) {
       // Empty state — filtro sem resultados
@@ -226,15 +238,16 @@ const Vocab = {
 
     // When grouping is active, ensure items are sorted by category so headers
     // appear once per group regardless of the current sort order
+    let itensParaRender = visivel;
     if (agrupado) {
-      visivel = [...visivel].sort((a, b) => {
+      itensParaRender = [...visivel].sort((a, b) => {
         const ca = a.categoria || 'Sem categoria';
         const cb = b.categoria || 'Sem categoria';
         return ca.localeCompare(cb);
       });
     }
 
-    visivel.forEach((p, idx) => {
+    itensParaRender.forEach((p) => {
       // Inserir header de categoria se agrupado
       if (agrupado && (p.categoria || 'Sem categoria') !== catAtual) {
         catAtual = p.categoria || 'Sem categoria';
@@ -247,97 +260,159 @@ const Vocab = {
         header.setAttribute('aria-level', '3');
         listEl.appendChild(header);
       }
-      const item = document.createElement('div');
-      item.className = `vocab-item${modoExpandido ? ' vocab-item-expanded' : ''}`;
-      item.setAttribute('tabindex', '0');
-      item.setAttribute('role', 'listitem');
-      item.setAttribute('aria-label', `${p.ingles || ''} — ${p.portugues || ''}`);
-
-      // Determine FSRS status
-      const sm = App.estado.flashcardData[p.id];
-      let sm2Icon = '🌱'; // new
-      let sm2Pct = 0;
-      if (sm) {
-        const reps = sm.reps || sm.repeticoes || 0;
-        const stability = sm.stability || 0;
-        if ((reps >= 3) || (stability > 7)) { sm2Icon = '⭐'; sm2Pct = 100; }
-        else if (reps > 0) { sm2Icon = '📚'; sm2Pct = Math.min(99, Math.round((reps / 3) * 100)); }
-        else { sm2Pct = 0; }
-      }
-      const erros = sm ? (sm.erros || 0) : 0;
-
-      // Temple data for level badge
-      const temploData = App.estado.templosData[p.templo_num];
-      const nivel = temploData ? temploData.nivel : '';
-
-      // NOVO: Exemplo de uso (se disponível)
-      const exemploHtml = p.exemplo
-        ? `<div class="vocab-exemplo" style="font-size:0.78rem;color:var(--cor-pietra);font-style:italic;margin-top:0.2rem">"${this._escapar(p.exemplo)}"</div>`
-        : '';
-
-      // NOVO: Barra de progresso FSRS
-      const progressoHtml = `<div class="vocab-progresso" style="width:40px;height:4px;background:#e0e0e0;border-radius:2px;margin-top:0.2rem;overflow:hidden"><div style="width:${sm2Pct}%;height:100%;background:${sm2Pct >= 100 ? '#27AE60' : sm2Pct > 0 ? '#F39C12' : '#ccc'};border-radius:2px;transition:width 0.3s"></div></div>`;
-
-      // NOVO: Coluna categoria com cor
-      const catCor = this._corParaCategoria(p.categoria);
-
-      item.innerHTML = `
-        <span class="vocab-it">${this._escapar(p.ingles || '—')}</span>
-        <span class="vocab-seta">→</span>
-        <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
-        ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
-        ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
-        ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} errors">⚠️ ${erros}</span>` : ''}
-        ${App.ehFavorito(p.id) ? '<span class="vocab-fav-badge">❤️</span>' : ''}
-        <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
-        ${progressoHtml}
-        ${exemploHtml}
-        ${modoExpandido ? this.renderizarWordFamilies(p.ingles || '') : ''}
-        ${modoExpandido ? `<div class="vocab-fonetica" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.15rem;font-style:italic">/${this._fonSimplificada(p.ingles || '')}/</div>` : ''}
-        ${this._modoOutput && !this._vocabReviewAtivo ? `<div style="margin-top:0.4rem"><input type="text" placeholder="Digite a tradução..." style="padding:0.3rem 0.6rem;border:2px solid #ddd;border-radius:6px;font-size:0.85rem;width:160px;outline:none" autocomplete="off" autocapitalize="none" onkeydown="if(event.key==='Enter'){Vocab._verificarOutput(this,'${p.id}')}" data-word-id="${p.id}"></div>` : ''}
-        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}') " class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
-      `;
-
-      // Click: pronounce normally; in blur mode clicking blurred cell reveals it
-      item.style.cursor = 'pointer';
-      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.ingles}"`;
-      item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } };
-      if (this.blurColuna) {
-        item.onclick = (e) => {
-          const target = e.target.closest('.vocab-pt, .vocab-it');
-          const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('vocab-pt'))
-                        || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
-          if (isBluCol || !target) item.classList.toggle('revelada');
-        };
-      } else {
-        item.onclick = () => App.pronunciar(p.ingles);
-      }
-
-      listEl.appendChild(item);
+      this._renderizarItem(p, listEl, modoExpandido);
     });
 
     // Reapply blur class after re-render
     if (this.blurColuna) {
       listEl.classList.add(`blur-${this.blurColuna}`);
+      if (this.blurColuna === 'it') listEl.classList.add('blur-en');
       const btnPt = document.getElementById('vocab-btn-blur-pt');
-      const btnIt = document.getElementById('vocab-btn-blur-it');
+      const btnIt = document.getElementById('vocab-btn-blur-it') || document.getElementById('vocab-btn-blur-en');
       if (btnPt) btnPt.classList.toggle('ativo', this.blurColuna === 'pt');
-      if (btnIt) btnIt.classList.toggle('ativo', this.blurColuna === 'it');
+      if (btnIt) btnIt.classList.toggle('ativo', this.blurColuna === 'it' || this.blurColuna === 'en');
     }
 
-    // Show "more results" hint if truncated
-    if (filtrados.length > 100) {
-      const more = document.createElement('p');
-      more.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.8rem;font-size:0.83rem;';
-      more.textContent = I18n.t('vocab_e_mais').replace('{n}', filtrados.length - 100);
-      listEl.appendChild(more);
+    // Virtualização / Sentinel de scroll infinito para itens restantes
+    if (filtrados.length > this._limiteVisivel) {
+      this._adicionarSentinel(listEl);
+    }
+  },
+
+  // ── Renderiza um item individual no DOM ────────────────────
+  _renderizarItem(p, container, modoExpandido) {
+    const item = document.createElement('div');
+    item.className = `vocab-item${modoExpandido ? ' vocab-item-expanded' : ''}`;
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('aria-label', `${p.ingles || ''} — ${p.portugues || ''}`);
+
+    // Determine FSRS status
+    const sm = App.estado.flashcardData[p.id];
+    let sm2Icon = '🌱'; // new
+    let sm2Pct = 0;
+    if (sm) {
+      const reps = sm.reps || sm.repeticoes || 0;
+      const stability = sm.stability || 0;
+      if ((reps >= 3) || (stability > 7)) { sm2Icon = '⭐'; sm2Pct = 100; }
+      else if (reps > 0) { sm2Icon = '📚'; sm2Pct = Math.min(99, Math.round((reps / 3) * 100)); }
+      else { sm2Pct = 0; }
+    }
+    const erros = sm ? (sm.erros || 0) : 0;
+
+    // Temple data for level badge
+    const temploData = App.estado.templosData[p.templo_num];
+    const nivel = temploData ? temploData.nivel : '';
+
+    // Exemplo de uso (se disponível)
+    const exemploHtml = p.exemplo
+      ? `<div class="vocab-exemplo" style="font-size:0.78rem;color:var(--cor-pietra);font-style:italic;margin-top:0.2rem">"${this._escapar(p.exemplo)}"</div>`
+      : '';
+
+    // Barra de progresso FSRS
+    const progressoHtml = `<div class="vocab-progresso" style="width:40px;height:4px;background:#e0e0e0;border-radius:2px;margin-top:0.2rem;overflow:hidden"><div style="width:${sm2Pct}%;height:100%;background:${sm2Pct >= 100 ? '#27AE60' : sm2Pct > 0 ? '#F39C12' : '#ccc'};border-radius:2px;transition:width 0.3s"></div></div>`;
+
+    // Coluna categoria com cor
+    const catCor = this._corParaCategoria(p.categoria);
+
+    item.innerHTML = `
+      <span class="vocab-it">${this._escapar(p.ingles || '—')}</span>
+      <span class="vocab-seta">→</span>
+      <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
+      ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
+      ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
+      ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} errors">⚠️ ${erros}</span>` : ''}
+      ${App.ehFavorito(p.id) ? '<span class="vocab-fav-badge">❤️</span>' : ''}
+      <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
+      ${progressoHtml}
+      ${exemploHtml}
+      ${modoExpandido ? this.renderizarWordFamilies(p.ingles || '') : ''}
+      ${modoExpandido ? `<div class="vocab-fonetica" style="font-size:0.72rem;color:var(--cor-pietra);margin-top:0.15rem;font-style:italic">/${this._fonSimplificada(p.ingles || '')}/</div>` : ''}
+      ${this._modoOutput && !this._vocabReviewAtivo ? `<div style="margin-top:0.4rem"><input type="text" placeholder="Digite a tradução..." style="padding:0.3rem 0.6rem;border:2px solid #ddd;border-radius:6px;font-size:0.85rem;width:160px;outline:none" autocomplete="off" autocapitalize="none" onkeydown="if(event.key==='Enter'){Vocab._verificarOutput(this,'${p.id}')}" data-word-id="${p.id}"></div>` : ''}
+      ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}') " class="ia-del-btn" title="Remove word" aria-label="Remove word">🗑️</button>` : ''}
+    `;
+
+    item.style.cursor = 'pointer';
+    item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.t('vocab_click_listen')} "${p.ingles}"`;
+    item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } };
+    if (this.blurColuna) {
+      item.onclick = (e) => {
+        const target = e.target.closest('.vocab-pt, .vocab-it');
+        const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('.vocab-pt'))
+                      || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
+        if (isBluCol || !target) item.classList.toggle('revelada');
+      };
+    } else {
+      item.onclick = () => App.pronunciar(p.ingles);
+    }
+
+    container.appendChild(item);
+  },
+
+  // ── Adiciona o Sentinel do IntersectionObserver ───────────
+  _adicionarSentinel(container) {
+    const velhos = container.querySelectorAll('.vocab-sentinel');
+    velhos.forEach(v => v.remove());
+
+    const restantes = (this._itensFiltrados || []).length - this._limiteVisivel;
+    if (restantes <= 0) return;
+
+    const sentinel = document.createElement('div');
+    sentinel.className = 'vocab-sentinel';
+    sentinel.style.cssText = 'text-align:center;padding:0.9rem;margin-top:0.5rem;color:var(--cor-inchiostro-claro,#003E8A);font-size:0.82rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:0.5rem;cursor:pointer;background:rgba(0,62,138,0.04);border-radius:8px;border:1px dashed rgba(0,62,138,0.2);';
+    sentinel.innerHTML = `<span>⏳ Carregar mais palavras (${restantes} restantes)...</span>`;
+    sentinel.title = "Clique para carregar mais ou continue rolando";
+    sentinel.onclick = () => this._carregarMais();
+
+    container.appendChild(sentinel);
+
+    if (typeof IntersectionObserver !== 'undefined') {
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        if (entries[0] && entries[0].isIntersecting) {
+          this._carregarMais();
+        }
+      }, { rootMargin: '250px' });
+      this._observer.observe(sentinel);
+    }
+  },
+
+  // ── Carrega o próximo lote de palavras virtualizadas ───────
+  _carregarMais() {
+    if (!this._itensFiltrados || this._limiteVisivel >= this._itensFiltrados.length) return;
+    const container = document.getElementById('vocab-list');
+    if (!container) return;
+
+    const step = 50;
+    const inicio = this._limiteVisivel;
+    const fim = Math.min(this._limiteVisivel + step, this._itensFiltrados.length);
+    this._limiteVisivel = fim;
+
+    const lote = this._itensFiltrados.slice(inicio, fim);
+    const sentinel = container.querySelector('.vocab-sentinel');
+
+    lote.forEach(p => {
+      if (sentinel) {
+        this._renderizarItem(p, container, this._expandido);
+        container.insertBefore(container.lastElementChild, sentinel);
+      } else {
+        this._renderizarItem(p, container, this._expandido);
+      }
+    });
+
+    if (this._limiteVisivel < this._itensFiltrados.length) {
+      this._adicionarSentinel(container);
+    } else if (sentinel) {
+      if (this._observer) this._observer.disconnect();
+      sentinel.remove();
     }
   },
 
   // ── Search handler ────────────────────────────────────────
   buscar(texto) {
     this.filtroTexto = texto;
-    this.renderizar();
+    if (this._debounceTimer) clearTimeout(this._debounceTimer);
+    this._debounceTimer = setTimeout(() => this.renderizar(), 150);
   },
 
   // ── Temple filter handler ─────────────────────────────────
@@ -358,7 +433,7 @@ const Vocab = {
     if (this.filtroDificeis) {
       this.filtroFavoritos = false;
       this.filtroTexto = this.filtroTemplo = this.filtroCategoria = '';
-      ['vocab-busca','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+      ['vocab-busca','vocab-temple-filter','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
         const el = document.getElementById(id); if (el) el.value = '';
       });
     }
@@ -371,7 +446,7 @@ const Vocab = {
     if (this.filtroFavoritos) {
       this.filtroDificeis  = false;
       this.filtroTexto = this.filtroTemplo = this.filtroCategoria = '';
-      ['vocab-busca','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+      ['vocab-busca','vocab-temple-filter','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
         const el = document.getElementById(id); if (el) el.value = '';
       });
     }
@@ -385,7 +460,7 @@ const Vocab = {
   },
 
   _popularFiltroTemplo() {
-    const sel = document.getElementById('vocab-templo-filtro');
+    const sel = document.getElementById('vocab-temple-filter') || document.getElementById('vocab-templo-filtro');
     if (!sel) return;
 
     // Keep "Tutti i templi" option
@@ -426,20 +501,23 @@ const Vocab = {
 
   // ── Blur column toggle (self-test mode) ──────────────────
   toggleBlur(coluna) {
+    // Normalizar coluna ('en' ou 'it' representam a coluna da língua-alvo)
+    const colNormalizada = (coluna === 'en' || coluna === 'it') ? 'it' : 'pt';
     // Se já está ativo nessa coluna → desativa; senão ativa
-    this.blurColuna = this.blurColuna === coluna ? null : coluna;
+    this.blurColuna = this.blurColuna === colNormalizada ? null : colNormalizada;
 
     const listEl = document.getElementById('vocab-list');
     if (listEl) {
       listEl.classList.toggle('blur-pt', this.blurColuna === 'pt');
       listEl.classList.toggle('blur-it', this.blurColuna === 'it');
+      listEl.classList.toggle('blur-en', this.blurColuna === 'it');
       // Resetar itens revelados ao trocar ou desativar
       listEl.querySelectorAll('.vocab-item.revelada').forEach(el => el.classList.remove('revelada'));
     }
 
     // Atualizar botões
     const btnPt = document.getElementById('vocab-btn-blur-pt');
-    const btnIt = document.getElementById('vocab-btn-blur-it');
+    const btnIt = document.getElementById('vocab-btn-blur-it') || document.getElementById('vocab-btn-blur-en');
     if (btnPt) btnPt.classList.toggle('ativo', this.blurColuna === 'pt');
     if (btnIt) btnIt.classList.toggle('ativo', this.blurColuna === 'it');
 
@@ -508,7 +586,7 @@ const Vocab = {
       extensao = 'txt';
     } else {
       conteudo = JSON.stringify(filtrados.map(p => ({
-        italiano: p.ingles,
+        english: p.ingles || p.english,
         portugues: p.portugues,
         categoria: p.categoria || '',
         templo: p.templo_num,
@@ -644,7 +722,7 @@ const Vocab = {
     this.filtroOrigem = '';
     this.filtroDificeis = false;
     this.filtroFavoritos = false;
-    ['vocab-busca','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+    ['vocab-busca','vocab-temple-filter','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
       const el = document.getElementById(id); if (el) el.value = '';
     });
     this.renderizar();
@@ -654,6 +732,8 @@ const Vocab = {
   estudarFiltroAtual() {
     const todos = App.estado.vocabCache;
     let filtrados = todos;
+    if (this.filtroOrigem === 'custom') filtrados = filtrados.filter(p => p._custom || p.custom);
+    if (this.filtroOrigem === 'nativo') filtrados = filtrados.filter(p => !p._custom && !p.custom);
     if (this.filtroTemplo) {
       const num = parseInt(this.filtroTemplo, 10);
       filtrados = filtrados.filter(p => p.templo_num === num);
@@ -939,51 +1019,51 @@ const Vocab = {
 
   // ── Colocações / Contexto ─────────────────────────────────
   _buscarColocacoes(palavra) {
-    // Busca no dialogi e storie por frases que contêm a palavra
+    // Busca em dialogues por frases que contêm a palavra
     const colocacoes = [];
-    if (App.estado.dialoghi) {
-      Object.values(App.estado.dialoghi).forEach(d => {
-        if (d.frasi) {
-          d.frasi.forEach(f => {
-            if ((f.it || '').toLowerCase().includes(palavra.toLowerCase())) {
-              colocacoes.push({ tipo: 'dialogo', texto: f.it, trad: f.pt || '' });
-            }
-          });
-        }
+    const dialogs = App.estado.dialogues || App.estado.dialoghi;
+    if (dialogs) {
+      Object.values(dialogs).forEach(d => {
+        const turns = d.turns || d.frasi || d.falas || [];
+        turns.forEach(f => {
+          const textEn = f.en || f.ingles || f.frase || f.sentence || f.it || '';
+          const textPt = f.pt || f.portugues || f.traducao || '';
+          if (textEn.toLowerCase().includes(palavra.toLowerCase())) {
+            colocacoes.push({ tipo: 'dialogo', texto: textEn, trad: textPt });
+          }
+        });
       });
     }
     return colocacoes.slice(0, 3); // Máximo 3 colocações
   },
 
-  // ── Word Families (agrupamento morfológico) ───────────────
+  // ── Word Families (agrupamento morfológico para inglês) ─────
   wordFamilies(palavra) {
     const families = {
-      'giocare': ['giocare', 'gioco', 'giocatore', 'giocattolo', 'giocherebbe'],
-      'mangiare': ['mangiare', 'mangio', 'mangiato', 'mangiatore', 'mangiabile'],
-      'parlare': ['parlare', 'parlo', 'parlato', 'parlante', 'parlamento'],
-      'leggere': ['leggere', 'leggo', 'letto', 'lettore', 'leggibile'],
-      'scrivere': ['scrivere', 'scrivo', 'scritto', 'scrittore', 'scrivibile'],
-      'correre': ['correre', 'corro', 'corso', 'corridore', 'corribile'],
-      'dormire': ['dormire', 'dormo', 'dormito', 'dormiente', 'dormiglione'],
-      'lavorare': ['lavorare', 'lavoro', 'lavorato', 'lavoratore', 'lavorativo'],
-      'studiare': ['studiare', 'studio', 'studiato', 'studioso', 'studiante'],
-      'pensare': ['pensare', 'penso', 'pensato', 'pensatore', 'pensieroso'],
-      'vedere': ['vedere', 'vedo', 'visto', 'vedente', 'vedetta'],
-      'sentire': ['sentire', 'sento', 'sentito', 'sentimento', 'sensibile'],
-      'capire': ['capire', 'capisco', 'capito', 'capiente', 'incomprensibile'],
-      'prendere': ['prendere', 'prendo', 'preso', 'prenditore', 'prendibile'],
-      'dare': ['dare', 'do', 'dato', 'datore', 'dabile'],
-      'fare': ['fare', 'faccio', 'fatto', 'fattore', 'fattibile'],
-      'andare': ['andare', 'vado', 'andato', 'andatura', 'andante'],
-      'venire': ['venire', 'vengo', 'venuto', 'venuta', 'prevenire'],
-      'stare': ['stare', 'sto', 'stato', 'stante', 'stabile'],
-      'avere': ['avere', 'ho', 'avuto', 'avente', 'avanzare'],
-      'essere': ['essere', 'sono', 'stato', 'essenza', 'essenziale'],
+      'play': ['play', 'player', 'playful', 'playing', 'played', 'replay'],
+      'speak': ['speak', 'speaker', 'speech', 'spoken', 'speaking'],
+      'work': ['work', 'worker', 'working', 'worked', 'workout', 'workplace'],
+      'think': ['think', 'thought', 'thinker', 'thinking', 'thoughtful'],
+      'act': ['act', 'action', 'actor', 'actress', 'active', 'activity'],
+      'create': ['create', 'creation', 'creative', 'creator', 'creativity'],
+      'help': ['help', 'helper', 'helpful', 'helpless', 'helping'],
+      'learn': ['learn', 'learner', 'learning', 'learned'],
+      'friend': ['friend', 'friendly', 'friendship', 'befriend'],
+      'care': ['care', 'careful', 'careless', 'caring'],
+      'use': ['use', 'user', 'useful', 'useless', 'usage'],
+      'live': ['live', 'alive', 'lively', 'living', 'life'],
+      'write': ['write', 'writer', 'writing', 'written', 'rewrite'],
+      'read': ['read', 'reader', 'reading', 'readable'],
+      'feel': ['feel', 'feeling', 'felt', 'feelings'],
+      'lead': ['lead', 'leader', 'leadership', 'leading'],
+      'know': ['know', 'knowledge', 'known', 'knowing', 'knowledgeable'],
+      'teach': ['teach', 'teacher', 'teaching', 'taught'],
+      'build': ['build', 'builder', 'building', 'built'],
+      'love': ['love', 'lover', 'lovely', 'loving', 'loved'],
     };
-    const base = palavra.toLowerCase().replace(/are$|ere$|ire$/, '');
+    const lower = palavra.toLowerCase().trim();
     for (const [key, family] of Object.entries(families)) {
-      const keyBase = key.replace(/are$|ere$|ire$/, '');
-      if (keyBase === base || family.some(w => w.toLowerCase().startsWith(base))) {
+      if (key === lower || family.some(w => w.toLowerCase() === lower)) {
         return family;
       }
     }
@@ -1052,18 +1132,29 @@ const Vocab = {
       </div>`;
   },
 
-  // ── Pronúncia Fonética simplificada ───────────────────────
+  // ── Pronúncia Fonética simplificada (Inglês) ──────────────
   _fonSimplificada(palavra) {
-    // Transcrição fonética simplificada para italiano
-    const regras = [
-      [/^gn/, 'ɲ'], [/^gl/, 'ʎ'], [/^sc(?=[ie])/, 'ʃ'],
-      [/^c(?=[ie])/, 'tʃ'], [/^ch(?=[ei])/, 'k'], [/^gh(?=[ei])/, 'g'],
-      [/^c(?=[aou])/, 'k'], [/^g(?=[aou])/, 'g'], [/^g(?=[ie])/, 'dʒ'],
-      [/^z/, 'dz'], [/^s(?=[bcdfgmpqtvz])/, 'z'], [/^s(?=[aeiou])/, 's'],
-      [/ci(?=[aou])/, 'tʃi'], [/gi(?=[aou])/, 'dʒi'], [/li(?=[aou])/, 'ʎi'],
-      [/ni(?=[aou])/, 'ɲi'], [/^h/, ''], [/^(?=[aeiou])/, ''],
-    ];
+    const cached = (App.estado.vocabCache || []).find(p => (p.ingles || '').toLowerCase() === palavra.toLowerCase());
+    if (cached && (cached.audio_ipa || cached.ipa)) {
+      return (cached.audio_ipa || cached.ipa).replace(/^\/|\/$/g, '');
+    }
+    // Heurísticas fonéticas simplificadas para inglês
     let result = palavra.toLowerCase();
+    const regras = [
+      [/tion/g, 'ʃən'],
+      [/sion/g, 'ʒən'],
+      [/ight/g, 'aɪt'],
+      [/th/g, 'θ'],
+      [/sh/g, 'ʃ'],
+      [/ch/g, 'tʃ'],
+      [/ph/g, 'f'],
+      [/wh/g, 'w'],
+      [/ee|ea/g, 'iː'],
+      [/oo/g, 'uː'],
+      [/qu/g, 'kw'],
+      [/ck/g, 'k'],
+      [/ng/g, 'ŋ'],
+    ];
     regras.forEach(([pattern, replacement]) => {
       result = result.replace(pattern, replacement);
     });
@@ -1142,6 +1233,10 @@ const Vocab = {
   },
 
 };
+
+if (typeof window !== 'undefined') {
+  window.Vocab = Vocab;
+}
 
 document.addEventListener('i18n:changed', () => {
   if (document.getElementById('vocab-list')) Vocab.renderizar();
