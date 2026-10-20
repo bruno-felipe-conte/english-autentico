@@ -1248,15 +1248,15 @@
     "semantic_hash": ""
   },
   "js/audio-store.js": {
-    "mtime": 1792533186.8949702,
-    "seen": 1792534278.2172155,
-    "ast_hash": "61029575bbda3ea2debc89f637ea7316",
+    "mtime": 1792534431.8939736,
+    "seen": 1792536148.795626,
+    "ast_hash": "7982b74e163a88608c872d7b23ca5303",
     "semantic_hash": ""
   },
   "js/audio.js": {
-    "mtime": 1792533186.9420276,
-    "seen": 1792534278.21722,
-    "ast_hash": "67a2d8935732826ea5d5086fb4e6501f",
+    "mtime": 1792534431.928457,
+    "seen": 1792536148.7956355,
+    "ast_hash": "11f70fddc30fe8bbf88da3b8687dcaa8",
     "semantic_hash": ""
   },
   "js/audio_cache.js": {
@@ -1266,9 +1266,9 @@
     "semantic_hash": ""
   },
   "js/conquistas.js": {
-    "mtime": 1792533187.1846442,
-    "seen": 1792534278.2172272,
-    "ast_hash": "3ea089f99f2fa892472c6d468c734a8b",
+    "mtime": 1792534431.9580283,
+    "seen": 1792536148.879288,
+    "ast_hash": "19d35f876e88fe357671f80e1527c6ea",
     "semantic_hash": ""
   },
   "js/core.js": {
@@ -1278,15 +1278,15 @@
     "semantic_hash": ""
   },
   "js/db.js": {
-    "mtime": 1792533187.3672714,
-    "seen": 1792534278.2172375,
-    "ast_hash": "dc286175f191cb719585e9308bde7c1a",
+    "mtime": 1792534431.99151,
+    "seen": 1792536149.0240655,
+    "ast_hash": "67fe541d0711587ce699cc2501fb7e26",
     "semantic_hash": ""
   },
   "js/dialogues.js": {
-    "mtime": 1792533187.492664,
-    "seen": 1792534278.2172406,
-    "ast_hash": "2e9a3e00db511ed65168f2b8dec209e7",
+    "mtime": 1792535633.6935084,
+    "seen": 1792536149.0240724,
+    "ast_hash": "3e01b906d3b1a9b87961395a67e58ba7",
     "semantic_hash": ""
   },
   "js/error-boundary.js": {
@@ -1308,9 +1308,9 @@
     "semantic_hash": ""
   },
   "js/heatmap.js": {
-    "mtime": 1792533187.720986,
-    "seen": 1792534278.2172508,
-    "ast_hash": "08d8f048ca6db0234895cb20563e937f",
+    "mtime": 1792534432.0162387,
+    "seen": 1792536149.4611654,
+    "ast_hash": "c65b5ce481e929c7433926c2f0dfa8af",
     "semantic_hash": ""
   },
   "js/i18n.js": {
@@ -1326,9 +1326,9 @@
     "semantic_hash": ""
   },
   "js/notificacoes.js": {
-    "mtime": 1792533187.9479785,
-    "seen": 1792534278.2172601,
-    "ast_hash": "76f68a8f3320dc81c7fb4a8a68bf8389",
+    "mtime": 1792534432.0544875,
+    "seen": 1792536149.6082885,
+    "ast_hash": "bd375b5c9076c36a1fbd6a37c7aeb88e",
     "semantic_hash": ""
   },
   "js/onboarding.js": {
@@ -1362,15 +1362,15 @@
     "semantic_hash": ""
   },
   "js/quiz_data.js": {
-    "mtime": 1792533188.32556,
-    "seen": 1792534278.2172842,
-    "ast_hash": "777afb925aeab8c1088ed8cafb846bf2",
+    "mtime": 1792534432.0851867,
+    "seen": 1792536149.6931264,
+    "ast_hash": "9e3058f8d744968d07a307bf777d2c3f",
     "semantic_hash": ""
   },
   "js/songs.js": {
-    "mtime": 1792533188.4501734,
-    "seen": 1792534278.217289,
-    "ast_hash": "f70751989ea7bdc40311418e03d10c65",
+    "mtime": 1792535614.5877168,
+    "seen": 1792536149.7078695,
+    "ast_hash": "d9fd4cb907bf35f1740fd8ac3d0c4d66",
     "semantic_hash": ""
   },
   "js/stories.js": {
@@ -1800,9 +1800,9 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1792534014.078289,
-    "seen": 1792534280.002357,
-    "ast_hash": "3bbee6e6d09e37cf9b7aae2ca60b188c",
+    "mtime": 1792535835.3489764,
+    "seen": 1792536151.8979182,
+    "ast_hash": "60253c75eaf17839cbe028253d883ad7",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
@@ -2118,9 +2118,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792533987.6342444,
-    "seen": 1792534280.869122,
-    "ast_hash": "198055e3ac1487d82153ab480bc80b5b",
+    "mtime": 1792535835.3992472,
+    "seen": 1792536152.5090456,
+    "ast_hash": "27eb9bd16da4ae6d0fd6cd2ba073eae2",
     "semantic_hash": ""
   },
   "index_stashed.html": {
@@ -2169,12 +2169,6 @@
     "mtime": 1792430738.179349,
     "seen": 1792444634.938608,
     "ast_hash": "af5b6d08da5b8fedb31d07aee5411734",
-    "semantic_hash": ""
-  },
-  "js/profilo.js": {
-    "mtime": 1792533188.110386,
-    "seen": 1792534278.2172718,
-    "ast_hash": "c99548dff97467cc2ef59517f63264e4",
     "semantic_hash": ""
   },
   "scripts/inspect_english_temple.mjs": {
@@ -3054,9 +3048,9 @@
     "semantic_hash": ""
   },
   "js/stories/renderer.js": {
-    "mtime": 1792533729.6455438,
-    "seen": 1792534278.2173011,
-    "ast_hash": "75905b843e56bc21adfd23a0c9d4a4e6",
+    "mtime": 1792535651.098479,
+    "seen": 1792536149.786857,
+    "ast_hash": "551209064f1d1126a5ecebe0d379203b",
     "semantic_hash": ""
   },
   "js/stories/translator.js": {

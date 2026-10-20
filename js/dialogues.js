@@ -128,7 +128,7 @@ const Dialogues = {
           oninput="Dialogues._filtroTexto=this.value;Dialogues.renderizarSeletor()"
           aria-label="Search dialogues"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
-        <button class="btn-pill-add" onclick="Dialogues.abrirFormularioCriar()" style="white-space:nowrap">${this._esc(I18n.t('dial_btn_adicionar'))}</button>
+        <button class="btn-pill-add" onclick="Dialogues.abrirFormularioCriar()">${this._esc(I18n.t('dial_btn_adicionar'))}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">${this._esc(I18n.t('btn_via_ia'))}</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">

@@ -57,7 +57,7 @@ const StoriesRenderer = {
         <input type="search" placeholder="${labels.cerca}" value="${this._escape(this._filtroTexto)}"
           oninput="Stories._filtroTexto=this.value;Stories.renderSelector()"
           style="flex:1;min-width:0;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:20px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro);font-family:inherit">
-        <button class="btn-ia-add" onclick="IAImport.abrir('storia')" style="white-space:nowrap">🤖 via IA</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('storia')">🤖 via IA</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{

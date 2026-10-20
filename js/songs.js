@@ -207,7 +207,7 @@ const Songs = {
         <input type="search" placeholder="${I18n.t('can_busca_ph')}" value="${this._filtroTexto}"
           oninput="Songs._filtroTexto=this.value;Songs.renderizarSeletor()"
           style="flex:1;min-width:140px;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
-        <button class="btn-pill-add" onclick="Songs.abrirClozeStudio()" style="white-space:nowrap;background:linear-gradient(135deg,#002047,#003E8A);border:1px solid #d4a843">${I18n.t('can_btn_cloze_studio')}</button>
+        <button class="btn-pill-add" onclick="Songs.abrirClozeStudio()">${I18n.t('can_btn_cloze_studio')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('canzone')" style="white-space:nowrap">${I18n.t('can_btn_ia')}</button>
       </div>
       <!-- Linha 2: filtros numa só linha -->
