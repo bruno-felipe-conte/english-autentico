@@ -1356,9 +1356,9 @@
     "semantic_hash": ""
   },
   "js/quiz.js": {
-    "mtime": 1792533188.2697148,
-    "seen": 1792534278.2172813,
-    "ast_hash": "4518745820e0ab1b60b87917a10b3ac1",
+    "mtime": 1792574742.0953784,
+    "seen": 1792575105.1819437,
+    "ast_hash": "659f98d6eb79158af75e62427fb9268b",
     "semantic_hash": ""
   },
   "js/quiz_data.js": {
@@ -1800,9 +1800,9 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1792573894.483114,
-    "seen": 1792574079.1037924,
-    "ast_hash": "a4d58f338af3c2d6e270771c24c548fb",
+    "mtime": 1792574852.821895,
+    "seen": 1792575107.143272,
+    "ast_hash": "c3696c7aa0e93cc4b185570781075820",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
@@ -2118,9 +2118,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792573907.1262574,
-    "seen": 1792574079.7055757,
-    "ast_hash": "6b465cb977cdd3e783011cdf8d802985",
+    "mtime": 1792574885.929184,
+    "seen": 1792575108.283666,
+    "ast_hash": "0310291dd7d46a55b3e40ad32ad02520",
     "semantic_hash": ""
   },
   "index_stashed.html": {
@@ -3066,9 +3066,9 @@
     "semantic_hash": ""
   },
   "tests/security.test.js": {
-    "mtime": 1792548043.465086,
-    "seen": 1792548430.0684109,
-    "ast_hash": "33feb876dcd09db6ca41731d548602f6",
+    "mtime": 1792574750.9103556,
+    "seen": 1792575107.1769264,
+    "ast_hash": "9dbec7e25c54611e0c691b11ef493422",
     "semantic_hash": ""
   }
 }

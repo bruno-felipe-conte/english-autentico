@@ -298,23 +298,36 @@ const Quiz = {
     // Auto-advance after delay (shorter if correct)
     // Store ref so proximaPergunta() can cancel it if user clicks Continuar first
     const delay = correto ? 1500 : 2500;
-    if (this._autoAdvanceTimer) clearTimeout(this._autoAdvanceTimer);
-    if (this._autoAdvanceTimer) clearTimeout(this._autoAdvanceTimer);
+    if (this._autoAdvanceTimer) {
+      clearTimeout(this._autoAdvanceTimer);
+      this._autoAdvanceTimer = null;
+    }
+    const timerBar = document.getElementById('quiz-timer-bar');
+    if (timerBar) {
       timerBar.style.transition = "none";
       timerBar.style.width = "100%";
       void timerBar.offsetWidth;
       timerBar.style.transition = "width " + delay + "ms linear";
       timerBar.style.width = "0%";
       timerBar.dataset.start = Date.now();
-      this._autoAdvanceTimer = setTimeout(() => {
-        this._autoAdvanceTimer = null;
-        this.proximaPergunta();
-      }, delay);
+    }
+    this._autoAdvanceTimer = setTimeout(() => {
+      this._autoAdvanceTimer = null;
+      this.proximaPergunta();
+    }, delay);
   },
 
   // ── Advance to next question ───────────────────────────────
   proximaPergunta() {
-    if (this._autoAdvanceTimer) { clearTimeout(this._autoAdvanceTimer); this._autoAdvanceTimer = null; }
+    if (this._autoAdvanceTimer) {
+      clearTimeout(this._autoAdvanceTimer);
+      this._autoAdvanceTimer = null;
+    }
+    const timerBar = document.getElementById('quiz-timer-bar');
+    if (timerBar) {
+      timerBar.style.transition = 'none';
+      timerBar.style.width = '100%';
+    }
     this.perguntaAtual++;
     if (this.perguntaAtual >= this.perguntas.length) {
       this.mostrarResultado();
@@ -1096,3 +1109,7 @@ document.addEventListener('i18n:changed', () => {
 
 
 window.Quiz = Quiz;
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Quiz;
+}

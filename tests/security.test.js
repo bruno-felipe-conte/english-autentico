@@ -6,10 +6,12 @@ const test = require('node:test');
 
 // Mock browser globals for testing
 global.window = global;
+global.window.addEventListener = () => {};
 global.document = {
   getElementById: () => null,
   createElement: () => ({ setAttribute: () => {}, click: () => {} }),
-  body: { appendChild: () => {}, removeChild: () => {} }
+  body: { appendChild: () => {}, removeChild: () => {} },
+  addEventListener: () => {}
 };
 global.localStorage = {
   _store: {},
@@ -167,3 +169,78 @@ test('🔊 Grammatica._extrairFraseInglesExercicio e VoiceEngine.normalizeForSpe
   const norm2 = VoiceEngine.normalizeForSpeech(comParenteses);
   assert.strictEqual(norm2, 'Julia is in her office.');
 });
+
+test('🧠 Quiz SRS utiliza FSRS.review(rating=1) e reseta barra de tempo', () => {
+  global.I18n = { t: (k) => k };
+  global.SomFeedback = { correto: () => {}, errado: () => {} };
+  // Mock FSRS se não carregado globalmente
+  global.window.FSRS = {
+    review(card, rating) {
+      assert.strictEqual(rating, 1, 'Rating de erro no Quiz deve ser 1 (Again)');
+      return {
+        stability: 0.4,
+        difficulty: 7.2,
+        lapses: (card.lapses || 0) + 1,
+        reps: (card.reps || 0) + 1,
+        state: 'learning'
+      };
+    },
+    nextInterval(stability) {
+      return 60000; // 1 minuto
+    }
+  };
+
+  const timerElement = {
+    style: { display: '', transition: '', width: '' },
+    dataset: {},
+    offsetWidth: 100
+  };
+
+  const oldGetElementById = global.document.getElementById;
+  global.document.getElementById = (id) => {
+    if (id === 'quiz-timer-bar') return timerElement;
+    if (id === 'opcoes-grid') return { querySelectorAll: () => [] };
+    if (id === 'explicacao-container') return { style: {} };
+    if (id === 'quiz-explicacao') return { textContent: '' };
+    return null;
+  };
+
+  // Carrega Quiz
+  delete require.cache[require.resolve('../js/quiz.js')];
+  const Quiz = require('../js/quiz.js');
+
+  const pMock = {
+    id: 'q_test_1',
+    pergunta: 'What is the past of go?',
+    opcoes: ['went', 'gone', 'goed'],
+    resposta_correta: 'went',
+    explicacao: 'Went is the past simple of go.'
+  };
+
+  Quiz.perguntas = [pMock];
+  Quiz.perguntaAtual = 0;
+  Quiz.respondido = false;
+
+  // Executa erro: resposta incorreta
+  Quiz.checarResposta('goed');
+
+  // Verifica que erro foi salvo via FSRS em localStorage
+  const filaErros = JSON.parse(global.localStorage.getItem('en_quiz_erros') || '[]');
+  assert.strictEqual(filaErros.length, 1);
+  assert.strictEqual(filaErros[0].id, 'q_test_1');
+  assert.strictEqual(filaErros[0].stability, 0.4);
+  assert.strictEqual(filaErros[0].difficulty, 7.2);
+
+  // Verifica que a barra de timer foi acionada com transição de delay
+  assert.strictEqual(timerElement.style.width, '0%');
+  assert.ok(timerElement.style.transition.includes('linear'));
+
+  // Avança para a próxima pergunta e verifica que a transição reseta imediatamente
+  Quiz.proximaPergunta();
+  assert.strictEqual(timerElement.style.transition, 'none');
+  assert.strictEqual(timerElement.style.width, '100%');
+
+  // Restaura getElementById
+  global.document.getElementById = oldGetElementById;
+});
+
