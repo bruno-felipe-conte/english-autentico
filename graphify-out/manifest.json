@@ -1266,9 +1266,9 @@
     "semantic_hash": ""
   },
   "js/conquistas.js": {
-    "mtime": 1792534431.9580283,
-    "seen": 1792536148.879288,
-    "ast_hash": "19d35f876e88fe357671f80e1527c6ea",
+    "mtime": 1792573800.675327,
+    "seen": 1792574077.2749891,
+    "ast_hash": "6a1755a6d516757215c29a2157bbe861",
     "semantic_hash": ""
   },
   "js/core.js": {
@@ -1800,9 +1800,9 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1792548066.939885,
-    "seen": 1792548430.0613995,
-    "ast_hash": "b427573867df0d0d5ec426b96d45260c",
+    "mtime": 1792573894.483114,
+    "seen": 1792574079.1037924,
+    "ast_hash": "a4d58f338af3c2d6e270771c24c548fb",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
@@ -2118,9 +2118,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792548072.36841,
-    "seen": 1792548430.3119886,
-    "ast_hash": "c98a3e828edf9834ca989991149ae83a",
+    "mtime": 1792573907.1262574,
+    "seen": 1792574079.7055757,
+    "ast_hash": "6b465cb977cdd3e783011cdf8d802985",
     "semantic_hash": ""
   },
   "index_stashed.html": {
