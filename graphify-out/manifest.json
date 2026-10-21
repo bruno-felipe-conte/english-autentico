@@ -1800,9 +1800,9 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1792574852.821895,
-    "seen": 1792575107.143272,
-    "ast_hash": "c3696c7aa0e93cc4b185570781075820",
+    "mtime": 1792575509.9355795,
+    "seen": 1792575710.6992614,
+    "ast_hash": "0fbd17033c5297ac51a6e2dcdd3808b9",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
@@ -2118,9 +2118,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792574885.929184,
-    "seen": 1792575108.283666,
-    "ast_hash": "0310291dd7d46a55b3e40ad32ad02520",
+    "mtime": 1792575540.6064513,
+    "seen": 1792575711.001848,
+    "ast_hash": "72ef0b89be988cbfa42da4bc3b3a21b7",
     "semantic_hash": ""
   },
   "index_stashed.html": {
