@@ -27,10 +27,14 @@ const VoiceEngine = {
     // A. Strip HTML tags
     s = s.replace(/<[^>]*>/g, ' ');
 
+    // Strip Portuguese instruction prefixes (e.g., "Complete a frase de apresentação: Hello, I am...")
+    s = s.replace(/^\s*(Complete|Como\s+(dizer|perguntar|responder)|Para\s+(dizer|clima|expressar)|Escreva|Identifique|Inverta|Observe|Transforme|Pense|Escute|Preencha|Traduza|Diga|Pergunta|Resposta|Atenção|Digite)\b[^:\n]*:\s*/i, '');
+
     // B. Strip parenthetical Portuguese translations common in bilingual flashcards & lessons
     // Ex: "to understand (compreender, entender)" -> "to understand"
+    s = s.replace(/\s*\(=[^)]+\)/g, '');
     s = s.replace(/\s*\([a-zà-úA-ZÀ-Ú\s,;.\-–—\/?!0-9]+\)/gi, (match) => {
-      const ptClues = /\b(o|a|os|as|um|uma|de|do|da|em|no|na|para|com|por|que|se|ex|exemplo|verbo|lit|literalmente|trad|tradução)\b/i;
+      const ptClues = /\b(o|a|os|as|um|uma|de|do|da|em|no|na|para|com|por|que|se|ex|exemplo|verbo|lit|literalmente|trad|tradução|nem|no que)\b/i;
       if (ptClues.test(match)) return '';
       return '';
     });
@@ -440,3 +444,7 @@ const VoiceEngine = {
 VoiceEngine.normalizarParaFala = (t) => VoiceEngine.normalizeForSpeech(t);
 VoiceEngine.obterMelhoresVozesInglesas = () => VoiceEngine.getBestEnglishVoices();
 VoiceEngine.obterVozSelecionada = () => VoiceEngine.getSelectedVoice();
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = VoiceEngine;
+}

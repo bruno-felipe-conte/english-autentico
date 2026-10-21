@@ -1,17 +1,17 @@
 # Graph Report - english-autentico  (2026-10-20)
 
 ## Corpus Check
-- 419 files · ~1,863,645 words
+- 419 files · ~1,864,143 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 2128 nodes · 2442 edges · 263 communities (150 shown, 113 thin omitted)
+- 2128 nodes · 2444 edges · 255 communities (144 shown, 111 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `13e6933d`
+- Built from commit: `5d8b13e7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -61,7 +61,6 @@
 - vocab.test.js
 - pathlib
 - 2.2 MELHORIAS MÉDIAS (Sprints 3-6)
-- 4.1 ROADMAP DE IMPLEMENTAÇÃO
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
 - 4.1 ROADMAP DE IMPLEMENTAÇÃO
 - fix3841.py
@@ -83,7 +82,6 @@
 - cripto_a1_final.py
 - _piloto_lezioni.js
 - ✅ Expansão das 21 Histórias Filosóficas - Concluída
-- 2.3 MELHORIAS GRANDES (Sprints 7-12)
 - Debates Cruzados
 - Feature Sync & Audit: Audio Speed & Language Toggle
 - Feature Sync: AI Handoff Instructions
@@ -173,8 +171,6 @@
 - audio.js
 - flashcards.js
 - songs.js
-- 1.2 ANÁLISE MULTI-PERSPECTIVA — PROBLEMAS CONSOLIDADOS
-- 2.1 QUICK WINS (Implementar imediatamente — Sprints 1-2)
 - MÓDULO 13 — VOCABULÁRIO AVANÇADO
 - MÓDULO 14 — ONBOARDING E TOUR
 - MÓDULO 15 — NOTIFICAÇÕES
@@ -187,7 +183,6 @@
 - 1️⃣6️⃣ TESTING LOCALIZATION COMPLETENESS
 - 1️⃣ UI TEXTS - LOCALIZATION MAPPING
 - 2️⃣ TEMPLE SYSTEM - LOCALIZATION
-- 3.1 MÉTRICAS DE SUCESSO (KPIs)
 - send
 - audio_cache.js
 - audio-store.js
@@ -196,7 +191,6 @@
 - db.js
 - dialogues.js
 - security.test.js
-- grammar.js
 - heatmap.js
 - i18n.js
 - ia-import.js
@@ -208,12 +202,10 @@
 - stories.js
 - tour.js
 - vocab.js
-- voice_engine.js
 - sw.js
 - send
 - send
 - send
-- ═══════════════════════════════════════════════════════════════
 - gerar_t18.py
 - enrich_wave5_part2.mjs
 - enrich_wave1.mjs
@@ -298,7 +290,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (263 total, 113 thin omitted)
+## Communities (255 total, 111 thin omitted)
 
 ### Community 0 - "json"
 Cohesion: 0.03
@@ -449,8 +441,8 @@ Cohesion: 0.21
 Nodes (5): gerar_palavras_tematicas(), gerar_quizzes_gramatica(), gerar_templo(), gerar_templo_completo(), level_to_color()
 
 ### Community 37 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.17
-Nodes (12): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, English Learning App Pro — Brainstorm Multi-Perspectiva com Melhoria Contínua, FASE 1 — PLANEJAR (Plan), FASE 2 — FAZER (Do) (+4 more)
+Cohesion: 0.04
+Nodes (48): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 ANÁLISE MULTI-PERSPECTIVA — PROBLEMAS CONSOLIDADOS, 1.3 CONSOLIDAÇÃO — MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, 3.1 MÉTRICAS DE SUCESSO (KPIs), 3.2 VALIDAÇÃO CRUZADA — CONSENSO ENTRE PERSPECTIVAS (+40 more)
 
 ### Community 38 - "ref_http"
 Cohesion: 0.14
@@ -473,12 +465,8 @@ Cohesion: 0.18
 Nodes (5): buscaFuzzy(), fs, levenshtein(), path, root
 
 ### Community 44 - "2.2 MELHORIAS MÉDIAS (Sprints 3-6)"
-Cohesion: 0.18
-Nodes (11): 2.2 MELHORIAS MÉDIAS (Sprints 3-6), M-10: Tela de Preparação do Diálogo, M-1: Pré-teste Diagnóstico, M-2: Chunks Highlighting, M-3: Modo "Fill the Gap", M-4: Timer Opcional no Modo Prática, M-5: Dialogue Streak, M-6: IndexedDB Migration (+3 more)
-
-### Community 45 - "4.1 ROADMAP DE IMPLEMENTAÇÃO"
-Cohesion: 0.17
-Nodes (12): ═══════════════════════════════════════════════════════════════, 4.1 ROADMAP DE IMPLEMENTAÇÃO, 4.2 CICLO DE MELHORIA CONTÍNUA, 4.3 RISCOS E MITIGAÇÕES, Revisão Mensal:, Revisão Semanal:, Revisão Trimestral:, SPRINT 1 (Semana 1-2) — Quick Wins (+4 more)
+Cohesion: 0.06
+Nodes (32): ═══════════════════════════════════════════════════════════════, 2.1 QUICK WINS (Implementar imediatamente — Sprints 1-2), 2.2 MELHORIAS MÉDIAS (Sprints 3-6), 2.3 MELHORIAS GRANDES (Sprints 7-12), G-10: Dialogue Report Card, G-1: SRS para Diálogos (Dialogue Recall), G-2: Modo "Conversation" (Produção Livre), G-3: Skill Tree de Competências Comunicativas (+24 more)
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
 Cohesion: 0.18
@@ -559,10 +547,6 @@ Nodes (6): fs, grammar, GRAMMAR_PATH, lez1, lez2, path
 ### Community 66 - "✅ Expansão das 21 Histórias Filosóficas - Concluída"
 Cohesion: 0.25
 Nodes (7): 🎓 Conteúdo por Parágrafo, ✅ Expansão das 21 Histórias Filosóficas - Concluída, 📚 Lista das 21 Histórias Filosóficas, 📝 Onde Estão os Dados, ✅ Qualidade Verificada, 📊 Resultado, 🎯 Resumo Rápido
-
-### Community 67 - "2.3 MELHORIAS GRANDES (Sprints 7-12)"
-Cohesion: 0.18
-Nodes (11): 2.3 MELHORIAS GRANDES (Sprints 7-12), G-10: Dialogue Report Card, G-1: SRS para Diálogos (Dialogue Recall), G-2: Modo "Conversation" (Produção Livre), G-3: Skill Tree de Competências Comunicativas, G-4: Cross-Módulo Integration, G-5: Dialogue Arcs (Narrativa Progressiva), G-6: Dificuldade Adaptativa (+3 more)
 
 ### Community 68 - "Debates Cruzados"
 Cohesion: 0.25
@@ -832,21 +816,9 @@ Nodes (4): CDPClient, createTab(), main(), sleep()
 Cohesion: 0.50
 Nodes (3): pending, send(), ws
 
-### Community 159 - "1.2 ANÁLISE MULTI-PERSPECTIVA — PROBLEMAS CONSOLIDADOS"
-Cohesion: 0.20
-Nodes (10): ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 ANÁLISE MULTI-PERSPECTIVA — PROBLEMAS CONSOLIDADOS, 1.3 CONSOLIDAÇÃO — MATRIZ DE IMPACTO vs ESFORÇO, Arquitetura da Aba de Diálogos:, Fluxo do Aluno:, 🔵 PERSPECTIVA 1: UX/UI DESIGNER (Referência: Duolingo, Babbel, Busuu), 🟢 PERSPECTIVA 2: LINGUISTA APLICADO (SLA / CEFR) (+2 more)
-
-### Community 161 - "2.1 QUICK WINS (Implementar imediatamente — Sprints 1-2)"
-Cohesion: 0.20
-Nodes (10): ═══════════════════════════════════════════════════════════════, 2.1 QUICK WINS (Implementar imediatamente — Sprints 1-2), QW-1: Toggle de Tradução, QW-2: Flashcards Automáticos do Diálogo, QW-3: Sanitização XSS Completa, QW-4: Ordenação Inteligente no Seletor, QW-5: i18n Completo, QW-6: Explicação de Erros (Tooltip) (+2 more)
-
-### Community 175 - "3.1 MÉTRICAS DE SUCESSO (KPIs)"
-Cohesion: 0.25
-Nodes (8): 3.1 MÉTRICAS DE SUCESSO (KPIs), 3.2 VALIDAÇÃO CRUZADA — CONSENSO ENTRE PERSPECTIVAS, ═══════════════════════════════════════════════════════════════, Métricas de Aprendizagem:, Métricas de Engajamento:, Métricas de Produto:, Propostas com CONFLITO entre perspectivas:, Propostas validadas por TODAS as 4 perspectivas:
-
 ### Community 183 - "security.test.js"
-Cohesion: 0.12
-Nodes (6): ErrorBoundary, Sanitize, assert, ErrorBoundary, Sanitize, test
+Cohesion: 0.10
+Nodes (8): ErrorBoundary, Grammatica, Sanitize, VoiceEngine, assert, ErrorBoundary, Sanitize, test
 
 ### Community 190 - "generare_tutte_le_storie.py"
 Cohesion: 0.32
@@ -855,10 +827,6 @@ Nodes (3): generate_expanded_story(), main(), process_all_stories()
 ### Community 195 - "vocab.js"
 Cohesion: 0.11
 Nodes (37): _adicionarSentinel(), alternarAgrupamento(), alternarModoOutput(), _atualizarStreakVocab(), _buscaFuzzy(), buscar(), _carregarMais(), compartilharLista() (+29 more)
-
-### Community 203 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.33
-Nodes (6): ═══════════════════════════════════════════════════════════════, Nota por Dimensão (Consolidada):, Top 5 Melhorias de Maior Impacto:, Top 5 Problemas Mais Críticos:, Top 5 Quick Wins (fazer esta semana):, Visão de Futuro:
 
 ### Community 209 - "inspect_italian_temple.mjs"
 Cohesion: 0.50
@@ -906,8 +874,8 @@ Nodes (5): ═══════════════════════
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1384 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **113 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1382 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **111 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

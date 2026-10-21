@@ -134,3 +134,36 @@ test('🔄 Algoritmo de Retry com Backoff Exponencial trata 429 e 5xx', async ()
   assert.strictEqual(res3.status, 503);
   assert.strictEqual(chamadas3, 3);
 });
+
+test('🔊 Grammatica._extrairFraseInglesExercicio e VoiceEngine.normalizeForSpeech isolam áudio em inglês', () => {
+  const Grammatica = require('../js/grammar.js');
+  const VoiceEngine = require('../js/voice_engine.js');
+
+  // Caso do usuário: Frase com instrução em português e sentença em inglês
+  const exUsuario = {
+    tipo: 'escolha',
+    pergunta: 'Complete a frase de apresentação: Hello, I ___ Michael and this is my friend Lucas.',
+    opcoes: ['is', 'are', 'am', 'be'],
+    resposta: 2
+  };
+
+  const extraida = Grammatica._extrairFraseInglesExercicio(exUsuario);
+  assert.strictEqual(extraida, 'Hello, I am Michael and this is my friend Lucas.');
+  assert.strictEqual(extraida.includes('Complete'), false);
+  assert.strictEqual(extraida.includes('apresentação'), false);
+
+  const btnHtml = Grammatica._botaoOuvirExercicio(exUsuario);
+  assert.strictEqual(btnHtml.includes("App.pronunciar('Hello, I am Michael and this is my friend Lucas.')"), true);
+  assert.strictEqual(btnHtml.includes('Complete'), false);
+
+  // Normalização de fala no VoiceEngine
+  const rawFala = 'Complete a frase de apresentação: Hello, I am Michael and this is my friend Lucas.';
+  const normalizada = VoiceEngine.normalizeForSpeech(rawFala);
+  assert.strictEqual(normalizada, 'Hello, I am Michael and this is my friend Lucas.');
+  assert.strictEqual(normalizada.includes('Complete'), false);
+
+  // Remoção de anotações e traduções entre parênteses
+  const comParenteses = 'Julia is in her office. (= Julia está no escritório dela agora.)';
+  const norm2 = VoiceEngine.normalizeForSpeech(comParenteses);
+  assert.strictEqual(norm2, 'Julia is in her office.');
+});

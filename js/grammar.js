@@ -577,20 +577,87 @@ const Grammatica = {
     }
   },
 
-  _botaoOuvirExercicio(ex) {
-    let fraseParaOuvir = '';
-    if (ex.tipo === 'escolha' && Array.isArray(ex.opcoes) && typeof ex.resposta === 'number') {
-      const opCorreta = ex.opcoes[ex.resposta] || '';
-      if (ex.pergunta && ex.pergunta.includes('___')) {
-        fraseParaOuvir = ex.pergunta.replace(/___+/g, opCorreta).replace(/\*\*|\*/g, '');
-      } else {
-        fraseParaOuvir = opCorreta;
-      }
-    } else if (ex.resposta) {
-      fraseParaOuvir = String(ex.resposta);
+  _extrairFraseInglesExercicio(ex) {
+    if (!ex) return '';
+    const p = ex.pergunta || '';
+    const tipo = ex.tipo;
+    const resp = ex.resposta;
+    const revelacao = ex.revelacao;
+    const opcoes = ex.opcoes;
+
+    let fill = '';
+    if (tipo === 'escolha' && Array.isArray(opcoes) && typeof resp === 'number' && resp < opcoes.length) {
+      fill = opcoes[resp] || '';
+    } else if (resp && !String(resp).toLowerCase().match(/^(porque|qual|a frase|regra|explicação|não se usa|usa-se|em inglês|o verbo|a short)/)) {
+      fill = String(resp);
     }
-    fraseParaOuvir = fraseParaOuvir.replace(/\n+/g, ' ').trim();
-    if (!fraseParaOuvir || fraseParaOuvir.length > 180) return '';
+
+    let raw = '';
+    if (revelacao) {
+      raw = String(revelacao);
+    } else if (p.includes('___') && fill) {
+      raw = p.replace(/___+/g, fill);
+    } else if (fill) {
+      raw = fill;
+    } else if (p) {
+      raw = p;
+    }
+
+    // 1. Limpeza de formatação markdown
+    let s = raw.replace(/\*\*|\*/g, '').replace(/_/g, '');
+
+    // 2. Remover anotações explicativas / traduções entre parênteses em português como (= ...), (Ela ...)
+    s = s.replace(/\s*\(=[^)]+\)/g, '');
+    s = s.replace(/\s*\([^)]*\b(o|a|os|as|um|uma|de|do|da|em|no|na|para|com|por|que|se|não|está|estavam|era|eram|verbo|trad|tradução|nem|no que|antes de|tampa|aonde|quem|qual|dirigir|concordam|sempre)\b[^)]*\)/gi, '');
+
+    // 3. Se houver quebra de linha seguida de frase entre aspas (ex: instrução em cima, frase em baixo)
+    const mBlock = s.match(/[\n\r]+\s*["'“‘]([^"'”’]{3,})["'”’]/);
+    if (mBlock) {
+      s = mBlock[1].trim();
+    }
+
+    // 4. Se houver dois pontos (:) seguido de frase em inglês
+    const mColon = s.match(/:\s*["'“‘]?([A-Z][^:"'\n\r]+[.!?]?)["'”’]?\s*$/);
+    if (mColon && mColon[1].trim().split(/\s+/).length >= 2) {
+      const afterColon = mColon[1].trim();
+      const beforeColon = s.slice(0, s.indexOf(':'));
+      if (/\b(complete|como|para|dizer|digite|qual|escreva|identifique|inverta|observe|transforme|pense|escute|você|se|caso)\b/i.test(beforeColon)) {
+        s = afterColon;
+      }
+    } else {
+      // Tentar remover prefixo de comando clássico até o ':'
+      const cmdPrefix = /^\s*[^:\n\r]*\b(Complete|Como|Para\s+dizer|Para\s+clima|Digite|Escreva|Identifique|Inverta|Observe|Transforme|Pense|Escute|Preencha|Traduza|Diga|Pergunta|Resposta|Atenção)\b[^:\n]*:\s*/i;
+      s = s.replace(cmdPrefix, '');
+    }
+
+    // 5. Remover rótulos residuais como 'Pergunta: ...' ou 'Resposta curta: ...'
+    s = s.replace(/Pergunta\s*:\s*/gi, '');
+    s = s.replace(/Resposta(\s+[a-zçã]+)*\s*:\s*/gi, '');
+
+    // 6. Desembrulhar aspas simples ou duplas envolventes
+    s = s.trim();
+    const mQuote = s.match(/^["'“‘](.*)["'”’]$/s);
+    if (mQuote) {
+      s = mQuote[1].trim();
+    }
+
+    // 7. Normalizar espaços e quebras
+    s = s.replace(/\s+/g, ' ').trim();
+
+    // 8. Descartar se for explicação puramente teórica em português (sem palavras gramaticais inglesas)
+    const ptDetector = /\b(porque|portanto|adjetivo|substantivo|conjunção|pretérito|passado|futuro|afirmativa|negativa|interrogativa|correto|correta|significa|indica|usa-se)\b/i;
+    const enDetector = /\b(the|is|are|am|was|were|have|has|had|do|does|did|will|would|can|could|should|may|might|this|that|these|those|you|he|she|it|we|they|my|your|his|her|its|our|their)\b/i;
+    if (ptDetector.test(s) && !enDetector.test(s)) {
+      return '';
+    }
+
+    return s;
+  },
+
+  _botaoOuvirExercicio(ex) {
+    if (!ex) return '';
+    const fraseParaOuvir = this._extrairFraseInglesExercicio(ex);
+    if (!fraseParaOuvir || fraseParaOuvir.length > 220) return '';
     const safe = fraseParaOuvir.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
     return `<div style="margin-top:0.55rem"><button class="gram-audio-mini-btn" onclick="App.pronunciar('${safe}')">🔊 Ouvir pronúncia em inglês</button></div>`;
   },
@@ -1056,3 +1123,7 @@ const Grammatica = {
     return `<div class="gram-coda">💡 ${this._formatarPergunta(u.coda)}</div>`;
   }
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Grammatica;
+}
