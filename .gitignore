@@ -12,4 +12,6 @@ data/*.json.bak
 playwright-report/
 test-results/
 /*.png
+__pycache__/
+*.pyc
 
