@@ -430,19 +430,38 @@ const Profile = {
     }
 
     const backup = {
-      versao: 3,
+      versao: 4,
       data: new Date().toISOString(),
       progresso:         JSON.parse(localStorage.getItem('en_progress')        || 'null'),
       flashcards:        JSON.parse(localStorage.getItem('en_flashcards')       || '{}'),
       diario:            JSON.parse(localStorage.getItem('en_diario')           || '{}'),
-      quiz_historico:    JSON.parse(localStorage.getItem('en_quiz_history')   || '[]'),
+      quiz_historico:    JSON.parse(localStorage.getItem('en_quiz_history')   || localStorage.getItem('en_quiz_historico') || '[]'),
       storie_lidas:      JSON.parse(localStorage.getItem('en_stories_read')     || '[]'),
       onboarding:        localStorage.getItem('en_onboarding_done'),
       tema:              localStorage.getItem('en_tema'),
-      idioma:            localStorage.getItem('en_language') || 'pt',
+      idioma:            localStorage.getItem('en_language') || localStorage.getItem('en_idioma') || 'pt',
       audio_speed:       localStorage.getItem('en_audio_speed') || '0.85',
-      voz_preferida:     localStorage.getItem('en_preferred_voice') || null,
+      voz_preferida:     localStorage.getItem('en_preferred_voice') || localStorage.getItem('en_voz_preferida') || null,
       bookmarks:         bookmarks,
+      // preferências essenciais v4
+      som:                   localStorage.getItem('en_som'),
+      sidebar_pinned:        localStorage.getItem('en_sidebar_pinned'),
+      usar_voz_neural:       localStorage.getItem('en_usar_voz_neural'),
+      voz_neural_instalada:  localStorage.getItem('en_voz_neural_instalada'),
+      imersao_usada:         localStorage.getItem('en_immersion_used') || localStorage.getItem('en_imersao_usada'),
+      palavra_dia:           localStorage.getItem('en_word_of_the_day') || localStorage.getItem('en_palavra_dia'),
+      tour_done:             localStorage.getItem('en_tour_done') || localStorage.getItem('en_onboarding_done'),
+      ultimo_aviso_backup:   localStorage.getItem('en_ultimo_aviso_backup') || localStorage.getItem('it_ultimo_aviso_backup'),
+      energia:               localStorage.getItem('en_energia'),
+      // streaks & SRS
+      fc_streak:             localStorage.getItem('en_fc_streak'),
+      fc_streak_date:        localStorage.getItem('en_fc_streak_date'),
+      gram_streak:           localStorage.getItem('en_gram_streak'),
+      gram_streak_date:      localStorage.getItem('en_gram_streak_date'),
+      quiz_streak:           localStorage.getItem('en_quiz_streak'),
+      quiz_streak_date:      localStorage.getItem('en_quiz_streak_date'),
+      dialogues_completed:   JSON.parse(localStorage.getItem('en_dialogues_completed') || '[]'),
+      quiz_erros:            JSON.parse(localStorage.getItem('en_quiz_erros') || '[]'),
       // conteúdo customizado
       canzoni_custom:    JSON.parse(localStorage.getItem('en_songs_custom')   || '[]'),
       dialoghi_custom:   JSON.parse(localStorage.getItem('en_dialogues_custom')  || '[]'),
@@ -463,46 +482,97 @@ const Profile = {
   },
 
   // ── Importar backup ───────────────────────────────────────
+  _restaurarBackup(backup) {
+    if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
+
+    if (backup.progresso)         localStorage.setItem('en_progress',         JSON.stringify(backup.progresso));
+    if (backup.flashcards)        localStorage.setItem('en_flashcards',        JSON.stringify(backup.flashcards));
+    if (backup.diario)            localStorage.setItem('en_diario',            JSON.stringify(backup.diario));
+    if (backup.quiz_historico)    localStorage.setItem('en_quiz_history',    JSON.stringify(backup.quiz_historico));
+    if (backup.storie_lidas)      localStorage.setItem('en_stories_read',      JSON.stringify(backup.storie_lidas));
+    if (backup.onboarding)        localStorage.setItem('en_onboarding_done',   backup.onboarding);
+    if (backup.tour_done)         localStorage.setItem('en_tour_done',         backup.tour_done);
+    if (backup.tema)              localStorage.setItem('en_tema',              backup.tema);
+    if (backup.idioma)            localStorage.setItem('en_language',          backup.idioma);
+    if (backup.audio_speed)       localStorage.setItem('en_audio_speed',       backup.audio_speed);
+    if (backup.voz_preferida)     localStorage.setItem('en_preferred_voice',   backup.voz_preferida);
+
+    // Preferências v4 (top-level ou aninhadas em backup.preferencias)
+    const prefs = backup.preferencias || {};
+    const som = backup.som !== undefined ? backup.som : prefs.som;
+    if (som !== undefined && som !== null) localStorage.setItem('en_som', String(som));
+
+    const pinned = backup.sidebar_pinned !== undefined ? backup.sidebar_pinned : prefs.sidebar_pinned;
+    if (pinned !== undefined && pinned !== null) localStorage.setItem('en_sidebar_pinned', String(pinned));
+
+    const vozNeur = backup.usar_voz_neural !== undefined ? backup.usar_voz_neural : prefs.usar_voz_neural;
+    if (vozNeur !== undefined && vozNeur !== null) localStorage.setItem('en_usar_voz_neural', String(vozNeur));
+
+    const vozNeurInst = backup.voz_neural_instalada !== undefined ? backup.voz_neural_instalada : prefs.voz_neural_instalada;
+    if (vozNeurInst !== undefined && vozNeurInst !== null) localStorage.setItem('en_voz_neural_instalada', String(vozNeurInst));
+
+    const imersao = backup.imersao_usada || prefs.immersion_used || prefs.imersao_usada;
+    if (imersao) localStorage.setItem('en_immersion_used', String(imersao));
+
+    const palavra = backup.palavra_dia || prefs.word_of_the_day || prefs.palavra_dia;
+    if (palavra) localStorage.setItem('en_word_of_the_day', String(palavra));
+
+    const ultimoAviso = backup.ultimo_aviso_backup || prefs.ultimo_aviso_backup;
+    if (ultimoAviso) localStorage.setItem('en_ultimo_aviso_backup', String(ultimoAviso));
+
+    const energia = backup.energia !== undefined ? backup.energia : prefs.energia;
+    if (energia !== undefined && energia !== null) localStorage.setItem('en_energia', String(energia));
+
+    if (backup.fc_streak)         localStorage.setItem('en_fc_streak',         String(backup.fc_streak));
+    if (backup.fc_streak_date)    localStorage.setItem('en_fc_streak_date',    String(backup.fc_streak_date));
+    if (backup.gram_streak)       localStorage.setItem('en_gram_streak',       String(backup.gram_streak));
+    if (backup.gram_streak_date)  localStorage.setItem('en_gram_streak_date',  String(backup.gram_streak_date));
+    if (backup.quiz_streak)       localStorage.setItem('en_quiz_streak',       String(backup.quiz_streak));
+    if (backup.quiz_streak_date)  localStorage.setItem('en_quiz_streak_date',  String(backup.quiz_streak_date));
+    if (backup.dialogues_completed?.length) localStorage.setItem('en_dialogues_completed', JSON.stringify(backup.dialogues_completed));
+    if (backup.quiz_erros?.length) localStorage.setItem('en_quiz_erros', JSON.stringify(backup.quiz_erros));
+
+    if (backup.bookmarks && typeof backup.bookmarks === 'object') {
+      for (const [k, v] of Object.entries(backup.bookmarks)) {
+        if (k.startsWith('en_book_bookmark_')) localStorage.setItem(k, v);
+      }
+    }
+
+    if (backup.canzoni_custom?.length)    localStorage.setItem('en_songs_custom',    JSON.stringify(backup.canzoni_custom));
+    if (backup.dialoghi_custom?.length)   localStorage.setItem('en_dialogues_custom',   JSON.stringify(backup.dialoghi_custom));
+    if (backup.storie_custom?.length)     localStorage.setItem('en_stories_custom',     JSON.stringify(backup.storie_custom));
+    if (backup.imitazioni_custom?.length) localStorage.setItem('en_pronunciation_custom', JSON.stringify(backup.imitazioni_custom));
+    if (backup.vocab_custom?.length)      localStorage.setItem('en_vocab_custom',      JSON.stringify(backup.vocab_custom));
+    if (backup.canzoni_ocultas?.length)   localStorage.setItem('en_songs_hidden',   JSON.stringify(backup.canzoni_ocultas));
+
+    if (typeof App !== 'undefined' && typeof App.notificar === 'function') {
+      App.notificar('notif_backup_imp', 'sucesso');
+    }
+    if (typeof window !== 'undefined' && window.location && typeof window.location.reload === 'function') {
+      setTimeout(() => window.location.reload(), 1200);
+    }
+  },
+
   importBackup(event) {
-    const file = event.target.files?.[0];
+    if (event && (event.versao || event.progresso)) {
+      return this._restaurarBackup(event);
+    }
+    const file = event?.target?.files?.[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
         const backup = JSON.parse(e.target.result);
-        if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
-        if (!confirm(I18n.t('prof_confirm_importar'))) return;
-        if (backup.progresso)         localStorage.setItem('en_progress',         JSON.stringify(backup.progresso));
-        if (backup.flashcards)        localStorage.setItem('en_flashcards',        JSON.stringify(backup.flashcards));
-        if (backup.diario)            localStorage.setItem('en_diario',            JSON.stringify(backup.diario));
-        if (backup.quiz_historico)    localStorage.setItem('en_quiz_history',    JSON.stringify(backup.quiz_historico));
-        if (backup.storie_lidas)      localStorage.setItem('en_stories_read',      JSON.stringify(backup.storie_lidas));
-        if (backup.onboarding)        localStorage.setItem('en_onboarding_done',   backup.onboarding);
-        if (backup.tema)              localStorage.setItem('en_tema',              backup.tema);
-        if (backup.idioma)            localStorage.setItem('en_language',            backup.idioma);
-        if (backup.audio_speed)       localStorage.setItem('en_audio_speed',       backup.audio_speed);
-        if (backup.voz_preferida)     localStorage.setItem('en_preferred_voice',     backup.voz_preferida);
-
-        if (backup.bookmarks && typeof backup.bookmarks === 'object') {
-          for (const [k, v] of Object.entries(backup.bookmarks)) {
-            if (k.startsWith('en_book_bookmark_')) localStorage.setItem(k, v);
-          }
-        }
-
-        if (backup.canzoni_custom?.length)    localStorage.setItem('en_songs_custom',    JSON.stringify(backup.canzoni_custom));
-        if (backup.dialoghi_custom?.length)   localStorage.setItem('en_dialogues_custom',   JSON.stringify(backup.dialoghi_custom));
-        if (backup.storie_custom?.length)     localStorage.setItem('en_stories_custom',     JSON.stringify(backup.storie_custom));
-        if (backup.imitazioni_custom?.length) localStorage.setItem('en_pronunciation_custom', JSON.stringify(backup.imitazioni_custom));
-        if (backup.vocab_custom?.length)      localStorage.setItem('en_vocab_custom',      JSON.stringify(backup.vocab_custom));
-        if (backup.canzoni_ocultas?.length)   localStorage.setItem('en_songs_hidden',   JSON.stringify(backup.canzoni_ocultas));
-        App.notificar('notif_backup_imp', 'sucesso');
-        setTimeout(() => location.reload(), 1200);
+        if (typeof confirm === 'function' && !confirm(I18n.t('prof_confirm_importar'))) return;
+        this._restaurarBackup(backup);
       } catch(err) {
-        App.notificar(I18n.t('notif_arquivo_inv') + err.message, 'erro');
+        if (typeof App !== 'undefined' && typeof App.notificar === 'function') {
+          App.notificar(I18n.t('notif_arquivo_inv') + err.message, 'erro');
+        }
       }
     };
     reader.readAsText(file);
-    event.target.value = ''; // reset input
+    if (event?.target) event.target.value = '';
   },
 
   // ── Reset total de progresso ──────────────────────────────
@@ -513,9 +583,13 @@ const Profile = {
     // Remove chaves fixas do app
     const chavesFixas = [
       'en_progress', 'en_flashcards', 'en_diario', 'en_onboarding_done', 'en_word_of_the_day',
-      'en_quiz_history', 'en_stories_read', 'en_tour_done', 'en_audio_speed', 'en_preferred_voice',
+      'en_quiz_history', 'en_quiz_historico', 'en_stories_read', 'en_tour_done', 'en_audio_speed', 'en_preferred_voice',
       'en_songs_custom', 'en_dialogues_custom', 'en_stories_custom', 'en_pronunciation_custom',
-      'en_vocab_custom', 'en_songs_hidden'
+      'en_vocab_custom', 'en_songs_hidden',
+      'en_som', 'en_sidebar_pinned', 'en_usar_voz_neural', 'en_voz_neural_instalada',
+      'en_immersion_used', 'en_imersao_usada', 'en_palavra_dia', 'en_ultimo_aviso_backup', 'it_ultimo_aviso_backup',
+      'en_energia', 'en_fc_streak', 'en_fc_streak_date', 'en_gram_streak', 'en_gram_streak_date',
+      'en_quiz_streak', 'en_quiz_streak_date', 'en_dialogues_completed', 'en_quiz_erros'
     ];
     chavesFixas.forEach(k => localStorage.removeItem(k));
 
@@ -639,3 +713,7 @@ Profile.atualizarSelectVozes = () => Profile.updateVoiceSelect();
 
 window.Profile = Profile;
 window.Profilo = Profile;
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Profile;
+}

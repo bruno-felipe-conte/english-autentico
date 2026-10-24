@@ -2150,6 +2150,22 @@ const I18n = {
     "pt": "⚠️ Apagar Tudo",
     "en": "⚠️ Delete All"
   },
+  "backup_popup_titulo": {
+    "pt": "⚠️ Salve seu Progresso!",
+    "en": "⚠️ Save your Progress!"
+  },
+  "backup_popup_desc": {
+    "pt": "Se o cache ou histórico do navegador forem limpos, sua evolução nos estudos (XP, flashcards e templos) será perdida. Faça um backup regular!",
+    "en": "If your browser cache or history is cleared, your learning progress (XP, flashcards, and temples) will be lost. Back up your data regularly!"
+  },
+  "backup_popup_btn": {
+    "pt": "💾 Fazer Backup Agora",
+    "en": "💾 Back Up Now"
+  },
+  "backup_popup_fechar": {
+    "pt": "Fechar",
+    "en": "Close"
+  },
   "prof_backup_desc": {
     "pt": "O English Autentico guarda seu progresso apenas neste navegador. Exporte regularmente para não perder caso limpe o cache.",
     "en": "English Autentico saves your progress only in this browser. Export regularly to avoid losing it if you clear the cache."

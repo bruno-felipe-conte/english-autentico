@@ -467,14 +467,22 @@ VOCABULARY THEME: [REPLACE HERE — e.g. "train travel and tickets", "typical fo
   },
 
   // ── Importadores por tipo ────────────────────────────────
-    _validateSchema(data, type) {
+  _sanitizar(str) {
+    if (typeof str !== 'string') return str;
+    if (typeof Sanitize !== 'undefined' && typeof Sanitize.escapeHtml === 'function') {
+      return Sanitize.escapeHtml(str.trim());
+    }
+    return str.replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
+  },
+
+  _validateSchema(data, type) {
     const schemas = {
       dialogo: (d) => {
         const arr = Array.isArray(d) ? d : (d.dialogues || d.dialogi || [d]);
         if (!Array.isArray(arr)) return "Esperava array de diálogos";
         for (const item of arr) {
           if (!item.titulo && !item.title) return "Diálogo sem título";
-          if (!item.turni && !item.turns) return "Diálogo sem turnos";
+          if (!item.turni && !item.turns && !item.turnos) return "Diálogo sem turnos";
           if (!item.nivel && !item.level) return "Diálogo sem nível";
         }
         return null;
@@ -493,16 +501,16 @@ VOCABULARY THEME: [REPLACE HERE — e.g. "train travel and tickets", "typical fo
         if (!Array.isArray(arr)) return "Esperava array de histórias";
         for (const item of arr) {
           if (!item.titulo && !item.title) return "História sem título";
-          if (!item.testo && !item.paragraphs && !item.paragrafi) return "História sem texto";
+          if (!item.testo && !item.paragraphs && !item.paragrafi && !item.paragrafos && !item.text) return "História sem texto";
         }
         return null;
       },
       imitazione: (d) => {
-        const arr = Array.isArray(d) ? d : (d.pronunciation || d.imitazioni || [d]);
+        const arr = Array.isArray(d) ? d : (d.pronunciation || d.imitazioni || d.frases || d.phrases || [d]);
         if (!Array.isArray(arr)) return "Esperava array de frases";
         for (const item of arr) {
-          if (!item.frase_ingles && !item.phrase_english && !item.sentence) return "Frase sem texto em inglês";
-          if (!item.frase_portugues && !item.phrase_portuguese && !item.translation) return "Frase sem tradução";
+          if (!item.frase_ingles && !item.phrase_english && !item.sentence && !item.frase_italiano && !item.frase && !item.english) return "Frase sem texto em inglês";
+          if (!item.frase_portugues && !item.phrase_portuguese && !item.translation && !item.traducao && !item.portugues) return "Frase sem tradução";
         }
         return null;
       },
@@ -531,7 +539,7 @@ VOCABULARY THEME: [REPLACE HERE — e.g. "train travel and tickets", "typical fo
       d.icone = d.icone || d.icon || '💬';
       d.nivel = d.nivel || d.level || 'A1';
       d.contexto = d.contexto || d.context || '';
-      d.turni = d.turni || d.turns || [];
+      d.turni = d.turni || d.turns || d.turnos || [];
       d.turni.forEach((t, ti) => {
         t.id = t.id || (ti + 1);
         t.personaggio = t.personaggio || t.speaker || (t.options || t.alternativas ? 'You' : 'Character');
@@ -595,7 +603,9 @@ VOCABULARY THEME: [REPLACE HERE — e.g. "train travel and tickets", "typical fo
       if (!d.id) d.id = 'stor_custom_' + Date.now() + '_' + i;
       d._custom = true;
       if (d.title && !d.titulo) d.titulo = d.title;
-      if (d.paragraphs && !d.paragrafi && !d.testo) d.testo = d.paragraphs;
+      if (!d.testo) {
+        d.testo = d.paragraphs || d.paragrafi || d.paragrafos || d.text || [];
+      }
       return (typeof Stories !== 'undefined' && Stories._normalizar) ? Stories._normalizar(d) : d;
     });
     try { localStorage.setItem(key, JSON.stringify([...existing, ...normalizadas])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Storage is full! Please delete older custom content.', 'erro'); } }
@@ -606,14 +616,21 @@ VOCABULARY THEME: [REPLACE HERE — e.g. "train travel and tickets", "typical fo
   },
 
   _importarImitazione(data) {
-    let arr = Array.isArray(data) ? data : (data.pronunciation || data.imitazioni || [data]);
+    let arr;
+    if (Array.isArray(data)) {
+      arr = data;
+    } else if (data.pronunciation || data.imitazioni || data.frases || data.phrases) {
+      arr = data.pronunciation || data.imitazioni || data.frases || data.phrases;
+    } else {
+      arr = [data];
+    }
     const key = 'en_pronunciation_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     arr.forEach((d, i) => {
       if (!d.id) d.id = 'imi_custom_' + Date.now() + '_' + i;
       d._custom = true;
-      d.frase_ingles = d.frase_ingles || d.phrase_english || d.sentence || d.phrase || d.frase_italiano || d.frase || '';
-      d.frase_portugues = d.frase_portugues || d.phrase_portuguese || d.translation || d.traducao || '';
+      d.frase_ingles = d.frase_ingles || d.phrase_english || d.sentence || d.phrase || d.frase_italiano || d.frase || d.english || '';
+      d.frase_portugues = d.frase_portugues || d.phrase_portuguese || d.translation || d.traducao || d.portugues || '';
       d.nivel = d.nivel || d.level || 'A1';
       d.contexto = d.contexto || d.context || '';
       d.audio_ipa = d.audio_ipa || '';
@@ -763,3 +780,7 @@ VOCABULARY THEME: [REPLACE HERE — e.g. "train travel and tickets", "typical fo
     renders[tipo]?.();
   },
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = IAImport;
+}

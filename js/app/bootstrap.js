@@ -148,6 +148,10 @@ const AppBootstrap = {
       Onboarding.mostrar();
     }
 
+    if (typeof BackupReminder !== 'undefined') {
+      BackupReminder.verificarLembrete();
+    }
+
     // Hash routing & deep linking
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '').trim();
