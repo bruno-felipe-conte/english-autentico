@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker | Cache v1125 | Offline-first PWA
+// sw.js — Service Worker | Cache v1126 | Offline-first PWA
 // Strategy:
 //   • Static assets  → cache-first (JS, CSS, HTML, icons)
 //   • /data/*.json   → network-first with cache fallback
 //   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1125';
+const CACHE = 'english-v1126';
 
 // All critical assets required for 100% offline functionality
 const STATIC = [
@@ -55,7 +55,7 @@ const STATIC = [
   './js/tts_worker.js?v=1125',
   './js/songs.js?v=1125',
   './js/pronunciation.js?v=1125',
-  './js/flashcards.js?v=1125',
+  './js/flashcards.js?v=1126',
   './js/grammar.js?v=1125',
   './js/heatmap.js?v=1125',
   './js/onboarding.js?v=1125',

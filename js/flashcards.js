@@ -278,8 +278,15 @@ const Flashcards = {
     this.cartasDisponiveis = [...novas, ...devidas].slice(0, 20);
   },
 
+  _limparReversoInput() {
+    const wraps = document.querySelectorAll('#fc-reverso-input-wrap, #fc-reverso-feedback');
+    wraps.forEach(el => el.remove());
+  },
+
   // ── Render current card ────────────────────────────────────
   mostrarCarta() {
+    this._limparReversoInput();
+
     if (this.indiceAtual >= this.cartasDisponiveis.length) {
       this.mostrarVazio();
       return;
@@ -470,39 +477,48 @@ const Flashcards = {
 
     // Modo Reverso: inject optional typing field before answer
     if (this.modoReverso) {
+      this._limparReversoInput();
       const elTrad = document.getElementById('card-traducao');
-      if (elTrad && !document.getElementById('fc-reverso-input')) {
+      if (elTrad) {
         const wrapper = document.createElement('div');
         wrapper.id = 'fc-reverso-input-wrap';
-        wrapper.style.cssText = 'margin:0.5rem 0;display:flex;gap:0.4rem;align-items:center;';
+        wrapper.style.cssText = 'margin:0.5rem 0;display:flex;flex-direction:column;gap:0.4rem;align-items:stretch;width:100%;';
+        wrapper.setAttribute('onclick', 'event.stopPropagation()');
         wrapper.innerHTML = `
-          <input id="fc-reverso-input" type="text"
-            placeholder="${I18n.t('fc_reverso_placeholder')}"
-            style="flex:1;padding:0.35rem 0.6rem;border-radius:6px;border:1px solid var(--cor-borda, #ccc);font-size:0.9rem;"
-            onkeydown="if(event.key==='Enter')Flashcards._verificarReversoInput()">
-          <button onclick="Flashcards._verificarReversoInput()"
-            style="padding:0.35rem 0.7rem;border-radius:6px;background:var(--cor-primaria,#4a90d9);color:#fff;border:none;cursor:pointer;font-size:0.85rem;">
-            ${I18n.t('fc_reverso_verificar')}
-          </button>`;
+          <div style="display:flex;gap:0.4rem;width:100%;align-items:center;">
+            <input id="fc-reverso-input" type="text"
+              placeholder="${I18n.t('fc_reverso_placeholder')}"
+              style="flex:1;padding:0.35rem 0.6rem;border-radius:6px;border:1px solid var(--cor-borda, #ccc);font-size:0.9rem;"
+              onclick="event.stopPropagation()"
+              onkeydown="event.stopPropagation();if(event.key==='Enter')Flashcards._verificarReversoInput()">
+            <button type="button" onclick="event.stopPropagation();Flashcards._verificarReversoInput()"
+              style="padding:0.35rem 0.7rem;border-radius:6px;background:var(--cor-primaria,#4a90d9);color:#fff;border:none;cursor:pointer;font-size:0.85rem;">
+              ${I18n.t('fc_reverso_verificar')}
+            </button>
+          </div>
+          <div id="fc-reverso-feedback" style="font-size:0.85rem;margin-top:0.15rem;text-align:left;"></div>`;
         elTrad.parentNode.insertBefore(wrapper, elTrad);
-        document.getElementById('fc-reverso-input')?.focus();
+        setTimeout(() => document.getElementById('fc-reverso-input')?.focus(), 50);
       }
     }
   },
 
   _verificarReversoInput() {
     const input = document.getElementById('fc-reverso-input');
+    const fb = document.getElementById('fc-reverso-feedback');
     if (!input || !this.cartaAtual) return;
     const digitado = input.value.trim().toLowerCase().replace(/[.,!?;:]/g, '');
-    const alvo = (this.cartaAtual.ingles || '').toLowerCase().replace(/[.,!?;:]/g, '');
-    const acertou = digitado === alvo || alvo.includes(digitado) && digitado.length >= alvo.length * 0.8;
-    const wrap = document.getElementById('fc-reverso-input-wrap');
+    const alvo = (this.cartaAtual.ingles || this.cartaAtual.italiano || '').toLowerCase().replace(/[.,!?;:]/g, '');
+    const acertou = digitado === alvo || (alvo.includes(digitado) && digitado.length >= alvo.length * 0.8);
     if (acertou) {
-      if (wrap) wrap.innerHTML = `<span style="color:var(--cor-sucesso,#2ecc71);font-weight:bold;">✅ ${I18n.t('fc_reverso_acerto')} +3 XP</span>`;
+      input.disabled = true;
+      input.style.borderColor = 'var(--cor-sucesso, #2ecc71)';
+      if (fb) fb.innerHTML = `<span style="color:var(--cor-sucesso,#2ecc71);font-weight:bold;">✅ ${I18n.t('fc_reverso_acerto')} +3 XP</span>`;
       // Grant bonus XP for verified production
       if (typeof Progressao !== 'undefined') Progressao.ganhar(3);
     } else {
-      if (wrap) wrap.innerHTML = `<span style="color:var(--cor-erro,#e74c3c);">❌ ${I18n.t('fc_reverso_erro').replace('{alvo}', this.cartaAtual.ingles)}</span>`;
+      input.style.borderColor = 'var(--cor-erro, #e74c3c)';
+      if (fb) fb.innerHTML = `<span style="color:var(--cor-erro,#e74c3c);">❌ ${I18n.t('fc_reverso_erro').replace('{alvo}', this.cartaAtual.ingles || this.cartaAtual.italiano)}</span>`;
     }
   },
 
@@ -679,6 +695,7 @@ const Flashcards = {
 
   // ── Empty / all-done state ────────────────────────────────
   mostrarVazio() {
+    this._limparReversoInput();
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     const vazio   = document.getElementById('flashcard-vazio');
@@ -951,6 +968,7 @@ const Flashcards = {
 
   // ── Mode toggles (mutually exclusive) ────────────────────
   _limparModos() {
+    this._limparReversoInput();
     this.modoReverso  = false;
     this.modoContexto = false;
     this.modoEscuta   = false;
