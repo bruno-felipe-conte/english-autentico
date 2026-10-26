@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "data/quizzes.json": {
-    "mtime": 1792430738.325186,
-    "seen": 1792444634.938384,
-    "ast_hash": "1355c85dcfcb5c608a8c4e42b6483fbe",
+    "mtime": 1793048996.660988,
+    "seen": 1793049165.1324315,
+    "ast_hash": "034bb9f4c3cf34b7b8acc13530107244",
     "semantic_hash": ""
   },
   "data/songs.json": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "js/progression.js": {
-    "mtime": 1792533188.1534624,
-    "seen": 1792534278.2172744,
-    "ast_hash": "44c3fd1aff263cad3439ef12c6883da7",
+    "mtime": 1793048676.2959006,
+    "seen": 1793049165.4609385,
+    "ast_hash": "4824480ed895efa2e19500dc0544f7ee",
     "semantic_hash": ""
   },
   "js/pronunciation.js": {
@@ -522,9 +522,9 @@
     "semantic_hash": ""
   },
   "js/vocab.js": {
-    "mtime": 1792536828.7672553,
-    "seen": 1792537187.7008169,
-    "ast_hash": "84b5d25263158129dfb55f36189f0691",
+    "mtime": 1793048959.8730395,
+    "seen": 1793049165.5290802,
+    "ast_hash": "f6b9c79c9d3099374cc6246f09070346",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
@@ -546,14 +546,14 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1793046088.7273853,
-    "seen": 1793046131.6144953,
-    "ast_hash": "c34f9c94338a8bb366e8b34e1deb0f75",
+    "mtime": 1793048699.15338,
+    "seen": 1793049165.7772565,
+    "ast_hash": "18da50875022b0821705133594b39383",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
-    "mtime": 1793046062.695079,
-    "seen": 1793046131.614498,
+    "mtime": 1793049135.9484885,
+    "seen": 1793049165.777259,
     "ast_hash": "f196824657d8858bc7fa44eecbba38b1",
     "semantic_hash": ""
   },
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793046102.1978054,
-    "seen": 1793046131.729899,
-    "ast_hash": "ccf82a641ce063cccb9c61abff9c4226",
+    "mtime": 1793048974.0289123,
+    "seen": 1793049165.9042053,
+    "ast_hash": "24df21f7ca4cb11a2271e0c6a9c0c447",
     "semantic_hash": ""
   },
   "playwright-report/index.html": {
@@ -1446,9 +1446,9 @@
     "semantic_hash": ""
   },
   "js/app/bootstrap.js": {
-    "mtime": 1792860278.6973064,
-    "seen": 1792860620.2993152,
-    "ast_hash": "93d68554ae15a003dcaacbac315c584e",
+    "mtime": 1793048660.7707605,
+    "seen": 1793049165.356504,
+    "ast_hash": "3c8d4ee6530d208a69d31b10383438ae",
     "semantic_hash": ""
   },
   "js/app/navigation.js": {
@@ -1464,9 +1464,9 @@
     "semantic_hash": ""
   },
   "js/app/templos.js": {
-    "mtime": 1792533569.093399,
-    "seen": 1792534278.2172003,
-    "ast_hash": "dd828e91abf8135f2db2ff5e283c7fb2",
+    "mtime": 1793048648.2697692,
+    "seen": 1793049165.3691442,
+    "ast_hash": "204fec247d4db6bc86b9748f2a93d972",
     "semantic_hash": ""
   },
   "js/app/tts.js": {
@@ -1530,9 +1530,165 @@
     "semantic_hash": ""
   },
   "tests/computer_use_journey.spec.js": {
-    "mtime": 1793045897.9987173,
-    "seen": 1793046131.6185205,
-    "ast_hash": "724de5c8712a227fc33bfaa6cfb34966",
+    "mtime": 1793049070.1747918,
+    "seen": 1793049165.7815132,
+    "ast_hash": "30a353e78fa5098c3aad84ce41f76fbe",
+    "semantic_hash": ""
+  },
+  "data/temple-52.json": {
+    "mtime": 1793048343.9272082,
+    "seen": 1793049165.3392804,
+    "ast_hash": "5222f4e7c45d4b3a7477bb73917eb1cc",
+    "semantic_hash": ""
+  },
+  "data/temple-53.json": {
+    "mtime": 1793048343.9302833,
+    "seen": 1793049165.339283,
+    "ast_hash": "33c59081581d757b1c8955746cb31753",
+    "semantic_hash": ""
+  },
+  "data/temple-54.json": {
+    "mtime": 1793048343.9722483,
+    "seen": 1793049165.3392844,
+    "ast_hash": "75b37fb62a14b64a6667fd9a34ff4cbd",
+    "semantic_hash": ""
+  },
+  "data/temple-55.json": {
+    "mtime": 1793048344.0062606,
+    "seen": 1793049165.339286,
+    "ast_hash": "06e566c6658afd775c3e1986ac419ca8",
+    "semantic_hash": ""
+  },
+  "data/temple-56.json": {
+    "mtime": 1793048344.0135593,
+    "seen": 1793049165.3392875,
+    "ast_hash": "a3adeb132adc44686f17bbb5b92a7220",
+    "semantic_hash": ""
+  },
+  "data/temple-57.json": {
+    "mtime": 1793048344.0306141,
+    "seen": 1793049165.3392892,
+    "ast_hash": "b55604e211ebe6c91b513c81d655d905",
+    "semantic_hash": ""
+  },
+  "data/temple-58.json": {
+    "mtime": 1793048344.0526576,
+    "seen": 1793049165.3392904,
+    "ast_hash": "718644867f8d56b60d40834a403f59b0",
+    "semantic_hash": ""
+  },
+  "data/temple-59.json": {
+    "mtime": 1793048344.0711632,
+    "seen": 1793049165.3392916,
+    "ast_hash": "2e6f38b3b4e97ccb0dfb9fb1588870f6",
+    "semantic_hash": ""
+  },
+  "data/temple-60.json": {
+    "mtime": 1793048344.0859962,
+    "seen": 1793049165.3441246,
+    "ast_hash": "fee46f070d9fe099c2e17bd0c94b3037",
+    "semantic_hash": ""
+  },
+  "data/temple-61.json": {
+    "mtime": 1793048344.1010246,
+    "seen": 1793049165.3441272,
+    "ast_hash": "0422a2a765252a4605f8fd9b18e7830a",
+    "semantic_hash": ""
+  },
+  "data/temple-62.json": {
+    "mtime": 1793048344.1139946,
+    "seen": 1793049165.3441288,
+    "ast_hash": "8a77f1fdc4a890b5797379e554bf2fb6",
+    "semantic_hash": ""
+  },
+  "data/temple-63.json": {
+    "mtime": 1793048344.126995,
+    "seen": 1793049165.3441298,
+    "ast_hash": "48e5b789278c25a870878fd937f5d451",
+    "semantic_hash": ""
+  },
+  "data/temple-64.json": {
+    "mtime": 1793048344.1409936,
+    "seen": 1793049165.3441312,
+    "ast_hash": "7ba51693fa632061a6cc066c33ded928",
+    "semantic_hash": ""
+  },
+  "data/temple-65.json": {
+    "mtime": 1793048344.1520164,
+    "seen": 1793049165.3441324,
+    "ast_hash": "eaba9cdc0d2ea6afb2e77ff019c17f38",
+    "semantic_hash": ""
+  },
+  "data/temple-66.json": {
+    "mtime": 1793048344.1682043,
+    "seen": 1793049165.3441339,
+    "ast_hash": "a4db164c7a3368dd31fd3f2bb3c0eed8",
+    "semantic_hash": ""
+  },
+  "data/temple-67.json": {
+    "mtime": 1793048344.181228,
+    "seen": 1793049165.3441348,
+    "ast_hash": "1df7e4d8f4353959befead8613ec9477",
+    "semantic_hash": ""
+  },
+  "data/temple-68.json": {
+    "mtime": 1793048344.1922197,
+    "seen": 1793049165.3441362,
+    "ast_hash": "4ca907a3c141874d8597b13d83122bea",
+    "semantic_hash": ""
+  },
+  "data/temple-69.json": {
+    "mtime": 1793048344.2052124,
+    "seen": 1793049165.3441374,
+    "ast_hash": "c35c38528455696cbfed50a932e9ee92",
+    "semantic_hash": ""
+  },
+  "data/temple-70.json": {
+    "mtime": 1793048344.2172186,
+    "seen": 1793049165.348198,
+    "ast_hash": "ab736acc19590ab51dc316f243da79b8",
+    "semantic_hash": ""
+  },
+  "data/temple-71.json": {
+    "mtime": 1793048344.237218,
+    "seen": 1793049165.3482008,
+    "ast_hash": "f2febc6c247e315d26f20dc881f85715",
+    "semantic_hash": ""
+  },
+  "data/temple-72.json": {
+    "mtime": 1793048344.2512329,
+    "seen": 1793049165.3482025,
+    "ast_hash": "22b9590220449285e1a417d41b89f225",
+    "semantic_hash": ""
+  },
+  "data/temple-73.json": {
+    "mtime": 1793048344.2667875,
+    "seen": 1793049165.3482041,
+    "ast_hash": "7cb3749e3cfb74ac634bf98e7dcde2bb",
+    "semantic_hash": ""
+  },
+  "data/temple-74.json": {
+    "mtime": 1793048344.2818036,
+    "seen": 1793049165.348205,
+    "ast_hash": "1e102c77b684dec988c7976998bb1ae0",
+    "semantic_hash": ""
+  },
+  "data/temple-75.json": {
+    "mtime": 1793048344.2957916,
+    "seen": 1793049165.3482063,
+    "ast_hash": "c8799467842ced5ca8acac6b5d4f4bec",
+    "semantic_hash": ""
+  },
+  "data/temple-76.json": {
+    "mtime": 1793048344.3057911,
+    "seen": 1793049165.3482075,
+    "ast_hash": "2a6ba9ecac8571f7623f6be4a353d6e9",
+    "semantic_hash": ""
+  },
+  "data/top1000_frequencia.json": {
+    "mtime": 1793048530.4136474,
+    "seen": 1793049165.3565001,
+    "ast_hash": "b4efbe2f304e811a404c72facf930bc5",
     "semantic_hash": ""
   }
 }

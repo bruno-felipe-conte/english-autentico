@@ -259,4 +259,44 @@ test.describe('End-to-End User Journeys (Computer Use Testing)', () => {
     expect(exportResult.versao).toBe(4);
     expect(exportResult.progresso).toBeDefined();
   });
+
+  test('7. Content Expansion: Temples 52-76 and Top 1000 Frequency Filter', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.app-container');
+
+    // Wait for all 76 temples to load
+    await page.waitForFunction(() => Object.keys(App.estado.templosData).length >= 76);
+
+    const counts = await page.evaluate(() => {
+      const tKeys = Object.keys(App.estado.templosData).map(Number);
+      const totalWords = App.estado.vocabCache.length;
+      const t52Words = App.estado.templosData[52]?.palavras?.length || 0;
+      const t76Words = App.estado.templosData[76]?.palavras?.length || 0;
+      return { totalTemples: tKeys.length, totalWords, t52Words, t76Words };
+    });
+
+    expect(counts.totalTemples).toBeGreaterThanOrEqual(76);
+    expect(counts.totalWords).toBeGreaterThanOrEqual(1500);
+    expect(counts.t52Words).toBe(20);
+    expect(counts.t76Words).toBe(20);
+
+    // Test Vocabulary Top 1000 Frequency Filter
+    await page.evaluate(() => App.navegar('vocab'));
+    await page.waitForSelector('#vocab-list');
+
+    // Select Top 1.000 Mais Usadas
+    await page.selectOption('#vocab-frequencia-filtro', 'top1000');
+    await page.waitForTimeout(300);
+
+    // Verify frequency badge exists
+    const freqBadges = page.locator('.vocab-freq-badge');
+    await expect(freqBadges.first()).toBeVisible();
+    const badgeText = await freqBadges.first().textContent();
+    expect(badgeText).toContain('⚡');
+
+    // Select Top 1-250 (Fundamentais)
+    await page.selectOption('#vocab-frequencia-filtro', 'top250');
+    await page.waitForTimeout(300);
+    expect(await page.locator('.vocab-item').count()).toBeGreaterThan(0);
+  });
 });

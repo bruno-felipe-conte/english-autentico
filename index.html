@@ -413,6 +413,14 @@
         <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
           <option value="" data-i18n="vocab_todas_categorias">All categories</option>
         </select>
+        <select id="vocab-frequencia-filtro" onchange="Vocab.filtrarFrequencia(this.value)" style="border-radius:8px;border:1.5px solid var(--cor-borda,#ddd);padding:0.35rem 0.6rem;font-size:0.85rem;background:var(--cor-superficie,#fff);color:var(--cor-texto,#222)">
+          <option value="">⚡ Todas as Frequências</option>
+          <option value="top1000">🔥 Top 1.000 Mais Usadas</option>
+          <option value="top250">🥇 Top 1–250 (Fundamentais)</option>
+          <option value="top500">🥈 Top 251–500 (Cotidiano)</option>
+          <option value="top750">🥉 Top 501–750 (Intermediário)</option>
+          <option value="top1000_tier4">🎯 Top 751–1.000 (Avançado)</option>
+        </select>
       </div>
       <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
         <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #003E8A;background:#003E8A;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>

@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker | Cache v1127 | Offline-first PWA
+// sw.js — Service Worker | Cache v1128 | Offline-first PWA
 // Strategy:
 //   • Static assets  → cache-first (JS, CSS, HTML, icons)
 //   • /data/*.json   → network-first with cache fallback
 //   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1127';
+const CACHE = 'english-v1128';
 
 // All critical assets required for 100% offline functionality
 const STATIC = [
@@ -83,8 +83,9 @@ const STATIC = [
   './data/songs.json',
   './data/pronunciation.json',
   './data/stories.json',
-  // Temples 1-51
-  ...Array.from({ length: 51 }, (_, i) => `./data/temple-${i + 1}.json`),
+  './data/top1000_frequencia.json',
+  // Temples 1-76
+  ...Array.from({ length: 76 }, (_, i) => `./data/temple-${i + 1}.json`),
   // WASM Neural Config
   './wasm/en_US-lessac-low.json',
   // Web Manifest & App Icons

@@ -7,7 +7,12 @@
       "nivel": "A1",
       "pergunta": "I ___ from Brazil.",
       "resposta_correta": "am",
-      "alternativas": ["am", "is", "are", "be"],
+      "alternativas": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
       "explicacao": "'I' sempre usa o verbo 'to be' na forma 'am'. Por exemplo: I am happy.",
       "xp_recompensa": 20
     },
@@ -18,7 +23,12 @@
       "nivel": "A1",
       "pergunta": "She ___ my best friend.",
       "resposta_correta": "is",
-      "alternativas": ["am", "is", "are", "be"],
+      "alternativas": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
       "explicacao": "'She' usa o verbo 'to be' na forma 'is'. Por exemplo: She is a teacher.",
       "xp_recompensa": 20
     },
@@ -29,7 +39,12 @@
       "nivel": "A1",
       "pergunta": "They ___ in New York.",
       "resposta_correta": "are",
-      "alternativas": ["am", "is", "are", "be"],
+      "alternativas": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
       "explicacao": "'They' usa o verbo 'to be' na forma 'are'. Por exemplo: They are friends.",
       "xp_recompensa": 20
     },
@@ -40,7 +55,12 @@
       "nivel": "A1",
       "pergunta": "I want ___ apple for lunch.",
       "resposta_correta": "an",
-      "alternativas": ["a", "an", "the", "no article"],
+      "alternativas": [
+        "a",
+        "an",
+        "the",
+        "no article"
+      ],
       "explicacao": "'An' é usado antes de vogais (ou sons de vogal). Por exemplo: an apple, an egg.",
       "xp_recompensa": 20
     },
@@ -51,7 +71,12 @@
       "nivel": "A1",
       "pergunta": "___ sun is very hot today.",
       "resposta_correta": "The",
-      "alternativas": ["A", "An", "The", "No article"],
+      "alternativas": [
+        "A",
+        "An",
+        "The",
+        "No article"
+      ],
       "explicacao": "'The' é usado com coisas únicas e específicas. O sol só existe um!",
       "xp_recompensa": 20
     },
@@ -62,7 +87,12 @@
       "nivel": "A1",
       "pergunta": "I need ___ new umbrella.",
       "resposta_correta": "a",
-      "alternativas": ["a", "an", "the", "no article"],
+      "alternativas": [
+        "a",
+        "an",
+        "the",
+        "no article"
+      ],
       "explicacao": "'A' é usado antes de consoantes. Por exemplo: a new umbrella, a book.",
       "xp_recompensa": 20
     },
@@ -73,7 +103,12 @@
       "nivel": "A1",
       "pergunta": "This is ___ book.",
       "resposta_correta": "my",
-      "alternativas": ["I", "me", "my", "mine"],
+      "alternativas": [
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
       "explicacao": "'My' é um adjetivo possessivo que significa 'meu' ou 'minha'.",
       "xp_recompensa": 20
     },
@@ -84,7 +119,12 @@
       "nivel": "A1",
       "pergunta": "Where is ___ car? (They)",
       "resposta_correta": "their",
-      "alternativas": ["they", "them", "their", "theirs"],
+      "alternativas": [
+        "they",
+        "them",
+        "their",
+        "theirs"
+      ],
       "explicacao": "'Their' é o adjetivo possessivo correspondente a 'They' (deles/delas).",
       "xp_recompensa": 20
     },
@@ -95,7 +135,12 @@
       "nivel": "A1",
       "pergunta": "___ name is Sarah.",
       "resposta_correta": "Her",
-      "alternativas": ["She", "Her", "Hers", "Him"],
+      "alternativas": [
+        "She",
+        "Her",
+        "Hers",
+        "Him"
+      ],
       "explicacao": "'Her' é o adjetivo possessivo para 'She' (dela).",
       "xp_recompensa": 20
     },
@@ -106,7 +151,12 @@
       "nivel": "A1",
       "pergunta": "I ___ a dog.",
       "resposta_correta": "have",
-      "alternativas": ["have", "has", "had", "having"],
+      "alternativas": [
+        "have",
+        "has",
+        "had",
+        "having"
+      ],
       "explicacao": "Com 'I', 'You', 'We' e 'They', usamos 'have'.",
       "xp_recompensa": 20
     },
@@ -117,7 +167,12 @@
       "nivel": "A1",
       "pergunta": "He ___ a new car.",
       "resposta_correta": "has",
-      "alternativas": ["have", "has", "had", "having"],
+      "alternativas": [
+        "have",
+        "has",
+        "had",
+        "having"
+      ],
       "explicacao": "Com 'He', 'She' e 'It', usamos 'has' no presente.",
       "xp_recompensa": 20
     },
@@ -128,7 +183,12 @@
       "nivel": "A1",
       "pergunta": "We ___ lunch at 1 PM.",
       "resposta_correta": "have",
-      "alternativas": ["have", "has", "are", "do"],
+      "alternativas": [
+        "have",
+        "has",
+        "are",
+        "do"
+      ],
       "explicacao": "'Have lunch' significa 'almoçar'. Usamos 'have' com 'We'.",
       "xp_recompensa": 20
     },
@@ -139,7 +199,12 @@
       "nivel": "A1",
       "pergunta": "___ are you from?",
       "resposta_correta": "Where",
-      "alternativas": ["Where", "What", "Who", "When"],
+      "alternativas": [
+        "Where",
+        "What",
+        "Who",
+        "When"
+      ],
       "explicacao": "'Where' é usado para perguntar sobre lugares (De onde você é?).",
       "xp_recompensa": 20
     },
@@ -150,7 +215,12 @@
       "nivel": "A1",
       "pergunta": "___ is your name?",
       "resposta_correta": "What",
-      "alternativas": ["Where", "What", "Who", "How"],
+      "alternativas": [
+        "Where",
+        "What",
+        "Who",
+        "How"
+      ],
       "explicacao": "'What' é usado para perguntar sobre coisas ou informações.",
       "xp_recompensa": 20
     },
@@ -161,7 +231,12 @@
       "nivel": "A1",
       "pergunta": "___ old are you?",
       "resposta_correta": "How",
-      "alternativas": ["What", "Who", "When", "How"],
+      "alternativas": [
+        "What",
+        "Who",
+        "When",
+        "How"
+      ],
       "explicacao": "A expressão 'How old' é usada para perguntar a idade.",
       "xp_recompensa": 20
     },
@@ -172,7 +247,12 @@
       "nivel": "B1",
       "pergunta": "___ you like coffee?",
       "resposta_correta": "Do",
-      "alternativas": ["Do", "Does", "Is", "Are"],
+      "alternativas": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
       "explicacao": "'Do' é usado com 'I/You/We/They' para fazer perguntas no Present Simple.",
       "xp_recompensa": 20
     },
@@ -183,7 +263,12 @@
       "nivel": "B1",
       "pergunta": "___ she live in London?",
       "resposta_correta": "Does",
-      "alternativas": ["Do", "Does", "Is", "Are"],
+      "alternativas": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
       "explicacao": "'Does' é usado com 'He/She/It' para fazer perguntas no Present Simple.",
       "xp_recompensa": 20
     },
@@ -194,7 +279,12 @@
       "nivel": "B1",
       "pergunta": "No, I ___ not like tea.",
       "resposta_correta": "do",
-      "alternativas": ["do", "does", "am", "are"],
+      "alternativas": [
+        "do",
+        "does",
+        "am",
+        "are"
+      ],
       "explicacao": "Para negar com 'I', usamos 'do not' ou 'don't'.",
       "xp_recompensa": 20
     },
@@ -205,7 +295,12 @@
       "nivel": "B2",
       "pergunta": "I work ___ Monday.",
       "resposta_correta": "on",
-      "alternativas": ["in", "on", "at", "to"],
+      "alternativas": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
       "explicacao": "Usamos a preposição 'on' antes de dias da semana.",
       "xp_recompensa": 20
     },
@@ -216,7 +311,12 @@
       "nivel": "B2",
       "pergunta": "My birthday is ___ August.",
       "resposta_correta": "in",
-      "alternativas": ["in", "on", "at", "to"],
+      "alternativas": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
       "explicacao": "Usamos a preposição 'in' antes de meses do ano.",
       "xp_recompensa": 20
     },
@@ -227,7 +327,12 @@
       "nivel": "B2",
       "pergunta": "The meeting is ___ 8 PM.",
       "resposta_correta": "at",
-      "alternativas": ["in", "on", "at", "to"],
+      "alternativas": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
       "explicacao": "Usamos a preposição 'at' para horas específicas.",
       "xp_recompensa": 20
     },
@@ -238,7 +343,12 @@
       "nivel": "B2",
       "pergunta": "There is ___ milk in the fridge.",
       "resposta_correta": "some",
-      "alternativas": ["some", "any", "many", "a"],
+      "alternativas": [
+        "some",
+        "any",
+        "many",
+        "a"
+      ],
       "explicacao": "'Some' é usado em frases afirmativas com substantivos incontáveis.",
       "xp_recompensa": 20
     },
@@ -249,7 +359,12 @@
       "nivel": "B2",
       "pergunta": "I don't have ___ money.",
       "resposta_correta": "any",
-      "alternativas": ["some", "any", "many", "a"],
+      "alternativas": [
+        "some",
+        "any",
+        "many",
+        "a"
+      ],
       "explicacao": "'Any' é usado em frases negativas e interrogativas.",
       "xp_recompensa": 20
     },
@@ -260,7 +375,12 @@
       "nivel": "B2",
       "pergunta": "How ___ apples do you want?",
       "resposta_correta": "many",
-      "alternativas": ["much", "many", "some", "any"],
+      "alternativas": [
+        "much",
+        "many",
+        "some",
+        "any"
+      ],
       "explicacao": "'Many' é usado com substantivos contáveis no plural (apples).",
       "xp_recompensa": 20
     },
@@ -271,7 +391,12 @@
       "nivel": "B1",
       "pergunta": "He ___ to school yesterday.",
       "resposta_correta": "went",
-      "alternativas": ["go", "goes", "went", "going"],
+      "alternativas": [
+        "go",
+        "goes",
+        "went",
+        "going"
+      ],
       "explicacao": "'Went' é o passado simples do verbo irregular 'go'.",
       "xp_recompensa": 20
     },
@@ -282,7 +407,12 @@
       "nivel": "B1",
       "pergunta": "We ___ a good time at the party.",
       "resposta_correta": "had",
-      "alternativas": ["have", "has", "had", "having"],
+      "alternativas": [
+        "have",
+        "has",
+        "had",
+        "having"
+      ],
       "explicacao": "'Had' é o passado simples do verbo 'have'.",
       "xp_recompensa": 20
     },
@@ -293,7 +423,12 @@
       "nivel": "B1",
       "pergunta": "I ___ a new movie last night.",
       "resposta_correta": "saw",
-      "alternativas": ["see", "sees", "saw", "seeing"],
+      "alternativas": [
+        "see",
+        "sees",
+        "saw",
+        "seeing"
+      ],
       "explicacao": "'Saw' é o passado simples do verbo irregular 'see'.",
       "xp_recompensa": 20
     },
@@ -304,7 +439,12 @@
       "nivel": "A2",
       "pergunta": "___ you watch TV yesterday?",
       "resposta_correta": "Did",
-      "alternativas": ["Do", "Does", "Did", "Are"],
+      "alternativas": [
+        "Do",
+        "Does",
+        "Did",
+        "Are"
+      ],
       "explicacao": "Para fazer perguntas no Past Simple, usamos o auxiliar 'Did'.",
       "xp_recompensa": 20
     },
@@ -315,7 +455,12 @@
       "nivel": "A2",
       "pergunta": "She didn't ___ to the park.",
       "resposta_correta": "go",
-      "alternativas": ["go", "went", "goes", "going"],
+      "alternativas": [
+        "go",
+        "went",
+        "goes",
+        "going"
+      ],
       "explicacao": "Após o auxiliar 'didn't', o verbo volta para a forma básica (go).",
       "xp_recompensa": 20
     },
@@ -326,7 +471,12 @@
       "nivel": "A2",
       "pergunta": "They ___ arrive on time.",
       "resposta_correta": "didn't",
-      "alternativas": ["don't", "doesn't", "didn't", "aren't"],
+      "alternativas": [
+        "don't",
+        "doesn't",
+        "didn't",
+        "aren't"
+      ],
       "explicacao": "'Didn't' é o auxiliar negativo para o passado simples.",
       "xp_recompensa": 20
     },
@@ -337,7 +487,12 @@
       "nivel": "A2",
       "pergunta": "She is ___ than her sister.",
       "resposta_correta": "taller",
-      "alternativas": ["tall", "taller", "tallest", "more tall"],
+      "alternativas": [
+        "tall",
+        "taller",
+        "tallest",
+        "more tall"
+      ],
       "explicacao": "Adicionamos '-er' em adjetivos curtos para formar o comparativo (taller).",
       "xp_recompensa": 20
     },
@@ -348,7 +503,12 @@
       "nivel": "A2",
       "pergunta": "This book is ___ interesting than that one.",
       "resposta_correta": "more",
-      "alternativas": ["much", "most", "more", "very"],
+      "alternativas": [
+        "much",
+        "most",
+        "more",
+        "very"
+      ],
       "explicacao": "Para adjetivos longos, usamos 'more' antes do adjetivo no comparativo.",
       "xp_recompensa": 20
     },
@@ -359,7 +519,12 @@
       "nivel": "A2",
       "pergunta": "He is the ___ student in the class.",
       "resposta_correta": "best",
-      "alternativas": ["good", "better", "best", "most good"],
+      "alternativas": [
+        "good",
+        "better",
+        "best",
+        "most good"
+      ],
       "explicacao": "'Best' é a forma superlativa irregular do adjetivo 'good'.",
       "xp_recompensa": 20
     },
@@ -370,7 +535,12 @@
       "nivel": "A2",
       "pergunta": "I ___ go to the supermarket later.",
       "resposta_correta": "will",
-      "alternativas": ["will", "am", "do", "have"],
+      "alternativas": [
+        "will",
+        "am",
+        "do",
+        "have"
+      ],
       "explicacao": "'Will' é usado para expressar ações no futuro simples.",
       "xp_recompensa": 20
     },
@@ -381,7 +551,12 @@
       "nivel": "A2",
       "pergunta": "___ you help me with this?",
       "resposta_correta": "Will",
-      "alternativas": ["Do", "Will", "Are", "Have"],
+      "alternativas": [
+        "Do",
+        "Will",
+        "Are",
+        "Have"
+      ],
       "explicacao": "'Will' também é usado para fazer pedidos de ajuda (Will you help me?).",
       "xp_recompensa": 20
     },
@@ -392,7 +567,12 @@
       "nivel": "A2",
       "pergunta": "She ___ be at home tonight.",
       "resposta_correta": "won't",
-      "alternativas": ["won't", "will not", "doesn't", "isn't"],
+      "alternativas": [
+        "won't",
+        "will not",
+        "doesn't",
+        "isn't"
+      ],
       "explicacao": "'Won't' é a forma contraída de 'will not' (embora 'will not' também seja correto, 'won't' é mais comum e é a opção aqui).",
       "xp_recompensa": 20
     },
@@ -403,7 +583,12 @@
       "nivel": "A2",
       "pergunta": "I have ___ visited Paris.",
       "resposta_correta": "never",
-      "alternativas": ["ever", "never", "always", "yet"],
+      "alternativas": [
+        "ever",
+        "never",
+        "always",
+        "yet"
+      ],
       "explicacao": "'Never' (nunca) é usado no Present Perfect para falar de experiências não vividas.",
       "xp_recompensa": 20
     },
@@ -414,7 +599,12 @@
       "nivel": "A2",
       "pergunta": "Have you ___ eaten sushi?",
       "resposta_correta": "ever",
-      "alternativas": ["ever", "never", "always", "yet"],
+      "alternativas": [
+        "ever",
+        "never",
+        "always",
+        "yet"
+      ],
       "explicacao": "'Ever' (alguma vez) é usado em perguntas no Present Perfect.",
       "xp_recompensa": 20
     },
@@ -425,7 +615,12 @@
       "nivel": "A2",
       "pergunta": "She has ___ finished her homework.",
       "resposta_correta": "already",
-      "alternativas": ["already", "yet", "ever", "never"],
+      "alternativas": [
+        "already",
+        "yet",
+        "ever",
+        "never"
+      ],
       "explicacao": "'Already' (já) é usado no Present Perfect para ações que já aconteceram.",
       "xp_recompensa": 20
     },
@@ -436,7 +631,12 @@
       "nivel": "A2",
       "pergunta": "If it rains, I ___ stay home.",
       "resposta_correta": "will",
-      "alternativas": ["will", "would", "do", "am"],
+      "alternativas": [
+        "will",
+        "would",
+        "do",
+        "am"
+      ],
       "explicacao": "Na First Conditional, a oração principal usa 'will'.",
       "xp_recompensa": 20
     },
@@ -447,7 +647,12 @@
       "nivel": "A2",
       "pergunta": "If you ___ ice, it melts.",
       "resposta_correta": "heat",
-      "alternativas": ["heat", "will heat", "heats", "heated"],
+      "alternativas": [
+        "heat",
+        "will heat",
+        "heats",
+        "heated"
+      ],
       "explicacao": "Na Zero Conditional, ambas as orações usam Present Simple.",
       "xp_recompensa": 20
     },
@@ -458,7 +663,12 @@
       "nivel": "A2",
       "pergunta": "I will call you if I ___ time.",
       "resposta_correta": "have",
-      "alternativas": ["have", "will have", "had", "has"],
+      "alternativas": [
+        "have",
+        "will have",
+        "had",
+        "has"
+      ],
       "explicacao": "Na condicional com 'if', usamos Present Simple ('have'), e não 'will have'.",
       "xp_recompensa": 20
     },
@@ -469,7 +679,12 @@
       "nivel": "A2",
       "pergunta": "You ___ wear a seatbelt.",
       "resposta_correta": "must",
-      "alternativas": ["must", "can", "might", "could"],
+      "alternativas": [
+        "must",
+        "can",
+        "might",
+        "could"
+      ],
       "explicacao": "'Must' indica obrigação ou regra forte.",
       "xp_recompensa": 20
     },
@@ -480,7 +695,12 @@
       "nivel": "A2",
       "pergunta": "___ I borrow your pen?",
       "resposta_correta": "May",
-      "alternativas": ["Must", "May", "Should", "Would"],
+      "alternativas": [
+        "Must",
+        "May",
+        "Should",
+        "Would"
+      ],
       "explicacao": "'May' (ou 'Can') é usado para pedir permissão educadamente.",
       "xp_recompensa": 20
     },
@@ -491,8 +711,1213 @@
       "nivel": "A2",
       "pergunta": "You ___ eat more vegetables.",
       "resposta_correta": "should",
-      "alternativas": ["should", "might", "would", "can"],
+      "alternativas": [
+        "should",
+        "might",
+        "would",
+        "can"
+      ],
       "explicacao": "'Should' é usado para dar conselhos ou recomendações.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_52_01",
+      "templo": 52,
+      "tipo": "Vocabulário",
+      "nivel": "A1",
+      "pergunta": "Take the ___ to Westminster.",
+      "resposta_correta": "underground",
+      "alternativas": [
+        "underground",
+        "commuter",
+        "passenger",
+        "terminal"
+      ],
+      "explicacao": "'underground' significa 'metrô subterrâneo'. Exemplo: Take the underground to Westminster.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_52_02",
+      "templo": 52,
+      "tipo": "Tradução",
+      "nivel": "A1",
+      "pergunta": "Qual é o significado correto de 'fare'?",
+      "resposta_correta": "tarifa / valor da passagem",
+      "alternativas": [
+        "tarifa / valor da passagem",
+        "fazer baldeação",
+        "faixa de pedestres",
+        "calçada"
+      ],
+      "explicacao": "'fare' traduz-se como 'tarifa / valor da passagem'. Bus fare is cheaper during off-peak hours.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_52_03",
+      "templo": 52,
+      "tipo": "Compreensão",
+      "nivel": "A1",
+      "pergunta": "Turn left right after the big ___.",
+      "resposta_correta": "intersection",
+      "alternativas": [
+        "intersection",
+        "avenue",
+        "escalator",
+        "pathway"
+      ],
+      "explicacao": "A palavra correta é 'intersection' (cruzamento / cruz de vias). Turn left right after the big intersection.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_53_01",
+      "templo": 53,
+      "tipo": "Vocabulário",
+      "nivel": "A1",
+      "pergunta": "Open your chemistry ___ to page twenty.",
+      "resposta_correta": "textbook",
+      "alternativas": [
+        "textbook",
+        "syllabus",
+        "quiz",
+        "tutor"
+      ],
+      "explicacao": "'textbook' significa 'livro didático'. Exemplo: Open your chemistry textbook to page twenty.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_53_02",
+      "templo": 53,
+      "tipo": "Tradução",
+      "nivel": "A1",
+      "pergunta": "Qual é o significado correto de 'diploma'?",
+      "resposta_correta": "diploma acadêmico",
+      "alternativas": [
+        "diploma acadêmico",
+        "grade curricular",
+        "seminário / oficina",
+        "corpo docente / faculdade"
+      ],
+      "explicacao": "'diploma' traduz-se como 'diploma acadêmico'. She framed her university diploma on the wall.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_53_03",
+      "templo": 53,
+      "tipo": "Compreensão",
+      "nivel": "A1",
+      "pergunta": "The university ___ gathered for their annual reunion.",
+      "resposta_correta": "alumni",
+      "alternativas": [
+        "alumni",
+        "researcher",
+        "fieldwork",
+        "dissertation"
+      ],
+      "explicacao": "A palavra correta é 'alumni' (ex-alunos / graduados). The university alumni gathered for their annual reunion.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_54_01",
+      "templo": 54,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "A light morning ___ covered the green hills.",
+      "resposta_correta": "drizzle",
+      "alternativas": [
+        "drizzle",
+        "breeze",
+        "frost",
+        "hail"
+      ],
+      "explicacao": "'drizzle' significa 'chuvisco / garoa fina'. Exemplo: A light morning drizzle covered the green hills.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_54_02",
+      "templo": 54,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'chill'?",
+      "resposta_correta": "frio penetrante / calafrio",
+      "alternativas": [
+        "frio penetrante / calafrio",
+        "nublado e encoberto",
+        "umidade relativa do ar",
+        "nevasca intensa / tempestade de neve"
+      ],
+      "explicacao": "'chill' traduz-se como 'frio penetrante / calafrio'. There is a sharp autumn chill in the evening air.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_54_03",
+      "templo": 54,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "Warm ___ poured through the open window.",
+      "resposta_correta": "sunshine",
+      "alternativas": [
+        "sunshine",
+        "rainbow",
+        "meadow",
+        "cliff"
+      ],
+      "explicacao": "A palavra correta é 'sunshine' (luz do sol radiante). Warm sunshine poured through the open window.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_55_01",
+      "templo": 55,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "We relaxed on the leather ___ after dinner.",
+      "resposta_correta": "couch",
+      "alternativas": [
+        "couch",
+        "armchair",
+        "wardrobe",
+        "curtain"
+      ],
+      "explicacao": "'couch' significa 'sofá estofado'. Exemplo: We relaxed on the leather couch after dinner.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_55_02",
+      "templo": 55,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'carpet'?",
+      "resposta_correta": "carpete / tapete fixo",
+      "alternativas": [
+        "carpete / tapete fixo",
+        "travesseiro macio",
+        "cobertor quente",
+        "colchão de dormir"
+      ],
+      "explicacao": "'carpet' traduz-se como 'carpete / tapete fixo'. The bedroom floor has a soft woolen carpet.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_55_03",
+      "templo": 55,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "Keep your passport safe inside the desk ___.",
+      "resposta_correta": "drawer",
+      "alternativas": [
+        "drawer",
+        "hallway",
+        "balcony",
+        "basement"
+      ],
+      "explicacao": "A palavra correta é 'drawer' (gaveta de cômoda). Keep your passport safe inside the desk drawer.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_56_01",
+      "templo": 56,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "You will find cereal down ___ four on your left.",
+      "resposta_correta": "aisle",
+      "alternativas": [
+        "aisle",
+        "cart",
+        "basket",
+        "cashier"
+      ],
+      "explicacao": "'aisle' significa 'corredor de supermercado'. Exemplo: You will find cereal down aisle four on your left.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_56_02",
+      "templo": 56,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'coupon'?",
+      "resposta_correta": "cupom promocional",
+      "alternativas": [
+        "cupom promocional",
+        "mercadoria para venda",
+        "cliente / consumidor",
+        "comerciante varejista"
+      ],
+      "explicacao": "'coupon' traduz-se como 'cupom promocional'. Clip this digital coupon to save five dollars.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_56_03",
+      "templo": 56,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "Buy bulk groceries at ___ prices to save money.",
+      "resposta_correta": "wholesale",
+      "alternativas": [
+        "wholesale",
+        "bargain",
+        "warranty",
+        "refund"
+      ],
+      "explicacao": "A palavra correta é 'wholesale' (venda por atacado). Buy bulk groceries at wholesale prices to save money.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_57_01",
+      "templo": 57,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "Sear the steaks evenly in a cast-iron ___.",
+      "resposta_correta": "skillet",
+      "alternativas": [
+        "skillet",
+        "saucepan",
+        "spatula",
+        "whisk"
+      ],
+      "explicacao": "'skillet' significa 'frigideira de ferro ou teflon'. Exemplo: Sear the steaks evenly in a cast-iron skillet.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_57_02",
+      "templo": 57,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'peeler'?",
+      "resposta_correta": "descascador de legumes",
+      "alternativas": [
+        "descascador de legumes",
+        "ralador de queijo",
+        "concha de servir sopa",
+        "tábua de corte"
+      ],
+      "explicacao": "'peeler' traduz-se como 'descascador de legumes'. Peel potatoes swiftly with a sharp vegetable peeler.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_57_03",
+      "templo": 57,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "Drain cooked spaghetti directly through the ___.",
+      "resposta_correta": "colander",
+      "alternativas": [
+        "colander",
+        "cinnamon",
+        "nutmeg",
+        "parsley"
+      ],
+      "explicacao": "A palavra correta é 'colander' (escorredor de macarrão). Drain cooked spaghetti directly through the colander.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_58_01",
+      "templo": 58,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "Visit the local health ___ for a quick flu shot.",
+      "resposta_correta": "clinic",
+      "alternativas": [
+        "clinic",
+        "symptom",
+        "diagnosis",
+        "bandage"
+      ],
+      "explicacao": "'clinic' significa 'clínica médica ambulatorial'. Exemplo: Visit the local health clinic for a quick flu shot.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_58_02",
+      "templo": 58,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'ointment'?",
+      "resposta_correta": "pomada dermatológica",
+      "alternativas": [
+        "pomada dermatológica",
+        "receita médica",
+        "dosagem do medicamento",
+        "cápsula gelatinosa"
+      ],
+      "explicacao": "'ointment' traduz-se como 'pomada dermatológica'. Apply soothing antibiotic ointment to heal the minor cut.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_58_03",
+      "templo": 58,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "Inform hospital staff of any known food ___.",
+      "resposta_correta": "allergy",
+      "alternativas": [
+        "allergy",
+        "bruise",
+        "sprain",
+        "surgeon"
+      ],
+      "explicacao": "A palavra correta é 'allergy' (reação alérgica). Inform hospital staff of any known food allergy.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_59_01",
+      "templo": 59,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "The famous rock band stepped onto the stadium ___.",
+      "resposta_correta": "stage",
+      "alternativas": [
+        "stage",
+        "tempo",
+        "amplifier",
+        "acoustic"
+      ],
+      "explicacao": "'stage' significa 'palco de show'. Exemplo: The famous rock band stepped onto the stadium stage.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_59_02",
+      "templo": 59,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'harmony'?",
+      "resposta_correta": "harmonia musical",
+      "alternativas": [
+        "harmonia musical",
+        "baterista da banda",
+        "teclado musical eletrônico",
+        "microfone de voz"
+      ],
+      "explicacao": "'harmony' traduz-se como 'harmonia musical'. Their sweet four-part vocal harmony moved the audience.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_59_03",
+      "templo": 59,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "The festival ___ takes the stage at midnight.",
+      "resposta_correta": "headliner",
+      "alternativas": [
+        "headliner",
+        "rehearsal",
+        "composer",
+        "soundtrack"
+      ],
+      "explicacao": "A palavra correta é 'headliner' (atração principal do festival). The festival headliner takes the stage at midnight.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_60_01",
+      "templo": 60,
+      "tipo": "Vocabulário",
+      "nivel": "A2",
+      "pergunta": "The rolling green Welsh ___ looks breathtaking.",
+      "resposta_correta": "landscape",
+      "alternativas": [
+        "landscape",
+        "shore",
+        "cape",
+        "bay"
+      ],
+      "explicacao": "'landscape' significa 'paisagem natural panorâmica'. Exemplo: The rolling green Welsh landscape looks breathtaking.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_60_02",
+      "templo": 60,
+      "tipo": "Tradução",
+      "nivel": "A2",
+      "pergunta": "Qual é o significado correto de 'canyon'?",
+      "resposta_correta": "cânion / desfiladeiro íngreme",
+      "alternativas": [
+        "cânion / desfiladeiro íngreme",
+        "geleira continental milenar",
+        "pântano de vegetação baixa",
+        "ravina / desfiladeiro rochoso"
+      ],
+      "explicacao": "'canyon' traduz-se como 'cânion / desfiladeiro íngreme'. A mighty river carved this stunning red rock canyon.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_60_03",
+      "templo": 60,
+      "tipo": "Compreensão",
+      "nivel": "A2",
+      "pergunta": "Mountain climbers reached the windy snowy ___ at dawn.",
+      "resposta_correta": "summit",
+      "alternativas": [
+        "summit",
+        "slope",
+        "trail",
+        "creek"
+      ],
+      "explicacao": "A palavra correta é 'summit' (cume / pico mais alto). Mountain climbers reached the windy snowy summit at dawn.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_61_01",
+      "templo": 61,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "True friendship brings warm daily ___.",
+      "resposta_correta": "companionship",
+      "alternativas": [
+        "companionship",
+        "bond",
+        "rapport",
+        "hospitality"
+      ],
+      "explicacao": "'companionship' significa 'companheirismo afetuoso'. Exemplo: True friendship brings warm daily companionship.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_61_02",
+      "templo": 61,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'gathering'?",
+      "resposta_correta": "confraternização / reunião de pessoas",
+      "alternativas": [
+        "confraternização / reunião de pessoas",
+        "conversa bem-humorada e descontraída",
+        "compaixão / solidariedade",
+        "afeto carinhoso"
+      ],
+      "explicacao": "'gathering' traduz-se como 'confraternização / reunião de pessoas'. Our family planned an annual summer gathering by the lake.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_61_03",
+      "templo": 61,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Sports teams build lifelong ___ through shared practice.",
+      "resposta_correta": "camaraderie",
+      "alternativas": [
+        "camaraderie",
+        "intimacy",
+        "reunion",
+        "kinship"
+      ],
+      "explicacao": "A palavra correta é 'camaraderie' (camaradagem e espírito de equipe). Sports teams build lifelong camaraderie through shared practice.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_62_01",
+      "templo": 62,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Pick up an authentic handcrafted ___ in town.",
+      "resposta_correta": "souvenir",
+      "alternativas": [
+        "souvenir",
+        "itinerary",
+        "backpack",
+        "hostel"
+      ],
+      "explicacao": "'souvenir' significa 'lembrança de viagem'. Exemplo: Pick up an authentic handcrafted souvenir in town.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_62_02",
+      "templo": 62,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'excursion'?",
+      "resposta_correta": "excursão turística de um dia",
+      "alternativas": [
+        "excursão turística de um dia",
+        "visitação a pontos turísticos",
+        "monumento histórico comemorativo",
+        "ponto de referência urbano"
+      ],
+      "explicacao": "'excursion' traduz-se como 'excursão turística de um dia'. Book a guided boat excursion to the coastal caves.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_62_03",
+      "templo": 62,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Biologists launched an ocean ___ to document corals.",
+      "resposta_correta": "expedition",
+      "alternativas": [
+        "expedition",
+        "compass",
+        "travel voucher",
+        "layover"
+      ],
+      "explicacao": "A palavra correta é 'expedition' (expedição exploratória). Biologists launched an ocean expedition to document corals.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_63_01",
+      "templo": 63,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Share project responsibilities equitably with every ___.",
+      "resposta_correta": "coworker",
+      "alternativas": [
+        "coworker",
+        "supervisor",
+        "appraisal",
+        "workload"
+      ],
+      "explicacao": "'coworker' significa 'colega de trabalho diário'. Exemplo: Share project responsibilities equitably with every coworker.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_63_02",
+      "templo": 63,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'flextime'?",
+      "resposta_correta": "horário de trabalho flexível",
+      "alternativas": [
+        "horário de trabalho flexível",
+        "pedido formal de demissão",
+        "folha de pagamento de salários",
+        "indenização rescisória"
+      ],
+      "explicacao": "'flextime' traduz-se como 'horário de trabalho flexível'. Employees value flextime to balance personal life and work duties.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_63_03",
+      "templo": 63,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "The global corporation moved its main ___ to Dublin.",
+      "resposta_correta": "headquarters",
+      "alternativas": [
+        "headquarters",
+        "mentorship",
+        "telecommuting",
+        "freelancer"
+      ],
+      "explicacao": "A palavra correta é 'headquarters' (sede central da empresa). The global corporation moved its main headquarters to Dublin.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_64_01",
+      "templo": 64,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Real estate and stocks represent long-term capital ___s.",
+      "resposta_correta": "asset",
+      "alternativas": [
+        "asset",
+        "depreciation",
+        "equity",
+        "amortization"
+      ],
+      "explicacao": "'asset' significa 'ativo financeiro / bem patrimonial'. Exemplo: Real estate and stocks represent long-term capital assets.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_64_02",
+      "templo": 64,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'deposit'?",
+      "resposta_correta": "depósito bancário",
+      "alternativas": [
+        "depósito bancário",
+        "saque financeiro de fundos",
+        "livro-caixa contábil",
+        "recessão econômica"
+      ],
+      "explicacao": "'deposit' traduz-se como 'depósito bancário'. Transfer salary earnings directly into your bank deposit account.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_64_03",
+      "templo": 64,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Fiscal ___ allows governments to invest in green infrastructure.",
+      "resposta_correta": "surplus",
+      "alternativas": [
+        "surplus",
+        "deficit",
+        "yield",
+        "broker"
+      ],
+      "explicacao": "A palavra correta é 'surplus' (superávit financeiro / excedente). Fiscal surplus allows governments to invest in green infrastructure.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_65_01",
+      "templo": 65,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Olympic ___s train rigorous hours every single day.",
+      "resposta_correta": "athlete",
+      "alternativas": [
+        "athlete",
+        "playoff",
+        "trophy",
+        "opponent"
+      ],
+      "explicacao": "'athlete' significa 'atleta esportivo'. Exemplo: Olympic athletes train rigorous hours every single day.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_65_02",
+      "templo": 65,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'defense'?",
+      "resposta_correta": "defesa esportiva tática",
+      "alternativas": [
+        "defesa esportiva tática",
+        "ataque esportivo veloz",
+        "resistência física e fôlego",
+        "ginásio poliesportivo"
+      ],
+      "explicacao": "'defense' traduz-se como 'defesa esportiva tática'. Solid defensive positioning prevented the rival team from scoring.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_65_03",
+      "templo": 65,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Perform a dynamic ___ to prevent muscle injury.",
+      "resposta_correta": "warm-up",
+      "alternativas": [
+        "warm-up",
+        "stretch",
+        "relay",
+        "half-time"
+      ],
+      "explicacao": "A palavra correta é 'warm-up' (aquecimento físico pré-treino). Perform a dynamic warm-up to prevent muscle injury.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_66_01",
+      "templo": 66,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "The veteran ___ delivered breaking reports calmly.",
+      "resposta_correta": "newscaster",
+      "alternativas": [
+        "newscaster",
+        "newscast",
+        "columnist",
+        "subscriber"
+      ],
+      "explicacao": "'newscaster' significa 'locutor de notícias'. Exemplo: The veteran newscaster delivered breaking reports calmly.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_66_02",
+      "templo": 66,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'feed'?",
+      "resposta_correta": "feed de atualizações de rede social",
+      "alternativas": [
+        "feed de atualizações de rede social",
+        "legenda de foto ou vídeo",
+        "transmissão ao vivo pela internet",
+        "criador de conteúdo influenciador"
+      ],
+      "explicacao": "'feed' traduz-se como 'feed de atualizações de rede social'. Scroll through your news feed to discover trending stories.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_66_03",
+      "templo": 66,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Independent reporting resists all forms of state ___.",
+      "resposta_correta": "censorship",
+      "alternativas": [
+        "censorship",
+        "investigative report",
+        "press",
+        "interviewee"
+      ],
+      "explicacao": "A palavra correta é 'censorship' (censura institucional de conteúdo). Independent reporting resists all forms of state censorship.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_67_01",
+      "templo": 67,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Government plans fund large-scale national ___.",
+      "resposta_correta": "afforestation",
+      "alternativas": [
+        "afforestation",
+        "river basin",
+        "glaciation",
+        "renewable"
+      ],
+      "explicacao": "'afforestation' significa 'reflorestamento em novas áreas'. Exemplo: Government plans fund large-scale national afforestation.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_67_02",
+      "templo": 67,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'landfill'?",
+      "resposta_correta": "aterro sanitário municipal",
+      "alternativas": [
+        "aterro sanitário municipal",
+        "célula fotovoltaica solar",
+        "turbina eólica geradora de energia",
+        "compensação de carbono ambiental"
+      ],
+      "explicacao": "'landfill' traduz-se como 'aterro sanitário municipal'. Composting organic scraps diverts tons of waste from landfills.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_67_03",
+      "templo": 67,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Marine ___s work tirelessly to rescue injured sea turtles.",
+      "resposta_correta": "conservationist",
+      "alternativas": [
+        "conservationist",
+        "reforestation",
+        "bushfire",
+        "avalanche"
+      ],
+      "explicacao": "A palavra correta é 'conservationist' (conservacionista ambientalista). Marine conservationists work tirelessly to rescue injured sea turtles.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_68_01",
+      "templo": 68,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Spectators sat in respectful silence inside the federal ___.",
+      "resposta_correta": "courtroom",
+      "alternativas": [
+        "courtroom",
+        "attorney",
+        "testimony",
+        "acquittal"
+      ],
+      "explicacao": "'courtroom' significa 'tribunal judicial / sala de audiência'. Exemplo: Spectators sat in respectful silence inside the federal courtroom.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_68_02",
+      "templo": 68,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'lawsuit'?",
+      "resposta_correta": "processo judicial civil",
+      "alternativas": [
+        "processo judicial civil",
+        "estatuto legal / lei escrita",
+        "jurisprudência e doutrina jurídica",
+        "promotor de justiça acusador"
+      ],
+      "explicacao": "'lawsuit' traduz-se como 'processo judicial civil'. Homeowners filed a joint civil lawsuit against the builder.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_68_03",
+      "templo": 68,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Both corporate ___s agreed to mediation before trial.",
+      "resposta_correta": "litigant",
+      "alternativas": [
+        "litigant",
+        "bailiff",
+        "juror",
+        "plea"
+      ],
+      "explicacao": "A palavra correta é 'litigant' (parte litigante em processo judicial). Both corporate litigants agreed to mediation before trial.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_69_01",
+      "templo": 69,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "Maintaining genuine ___ helps us navigate tough times.",
+      "resposta_correta": "optimism",
+      "alternativas": [
+        "optimism",
+        "pessimism",
+        "serenity",
+        "gratitude"
+      ],
+      "explicacao": "'optimism' significa 'otimismo confiante'. Exemplo: Maintaining genuine optimism helps us navigate tough times.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_69_02",
+      "templo": 69,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'humility'?",
+      "resposta_correta": "humildade genuína de caráter",
+      "alternativas": [
+        "humildade genuína de caráter",
+        "benevolência compassiva",
+        "perseverança incansável",
+        "curiosidade investigativa"
+      ],
+      "explicacao": "'humility' traduz-se como 'humildade genuína de caráter'. True intellectual mastery is always accompanied by humility.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_69_03",
+      "templo": 69,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Embracing ___ fosters deeper interpersonal connections.",
+      "resposta_correta": "vulnerability",
+      "alternativas": [
+        "vulnerability",
+        "courage",
+        "dignity",
+        "generosity"
+      ],
+      "explicacao": "A palavra correta é 'vulnerability' (vulnerabilidade emocional autêntica). Embracing vulnerability fosters deeper interpersonal connections.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_70_01",
+      "templo": 70,
+      "tipo": "Vocabulário",
+      "nivel": "B1",
+      "pergunta": "She has been ___ since passing her medical residency.",
+      "resposta_correta": "on cloud nine",
+      "alternativas": [
+        "on cloud nine",
+        "call it a day",
+        "hit the sack",
+        "piece of cake"
+      ],
+      "explicacao": "'on cloud nine' significa 'nas nuvens de tanta felicidade'. Exemplo: She has been on cloud nine since passing her medical residency.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_70_02",
+      "templo": 70,
+      "tipo": "Tradução",
+      "nivel": "B1",
+      "pergunta": "Qual é o significado correto de 'cost an arm and a leg'?",
+      "resposta_correta": "custar os olhos da cara",
+      "alternativas": [
+        "custar os olhos da cara",
+        "concordar plenamente com alguém",
+        "perder a oportunidade ideal",
+        "trabalhar ou estudar até altas horas da noite"
+      ],
+      "explicacao": "'cost an arm and a leg' traduz-se como 'custar os olhos da cara'. Imported sports cars cost an arm and a leg in taxes.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_70_03",
+      "templo": 70,
+      "tipo": "Compreensão",
+      "nivel": "B1",
+      "pergunta": "Sit down with your cup of coffee and ___!",
+      "resposta_correta": "spill the tea",
+      "alternativas": [
+        "spill the tea",
+        "barking up the wrong tree",
+        "by the book",
+        "in the loop"
+      ],
+      "explicacao": "A palavra correta é 'spill the tea' (contar os detalhes quentes da fofoca). Sit down with your cup of coffee and spill the tea!",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_71_01",
+      "templo": 71,
+      "tipo": "Vocabulário",
+      "nivel": "B2",
+      "pergunta": "The two automotive giants formed an innovative ___.",
+      "resposta_correta": "joint venture",
+      "alternativas": [
+        "joint venture",
+        "acquisition",
+        "compliance",
+        "due diligence"
+      ],
+      "explicacao": "'joint venture' significa 'empreendimento conjunto / parceria estratégica'. Exemplo: The two automotive giants formed an innovative joint venture.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_71_02",
+      "templo": 71,
+      "tipo": "Tradução",
+      "nivel": "B2",
+      "pergunta": "Qual é o significado correto de 'stipulation'?",
+      "resposta_correta": "estipulação contratual expressa",
+      "alternativas": [
+        "estipulação contratual expressa",
+        "monopólio comercial exclusivo",
+        "conglomerado empresarial multissetorial",
+        "indenização protetiva contra perdas"
+      ],
+      "explicacao": "'stipulation' traduz-se como 'estipulação contratual expressa'. Review the warranty stipulations before signing the commercial contract.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_71_03",
+      "templo": 71,
+      "tipo": "Compreensão",
+      "nivel": "B2",
+      "pergunta": "___ customer support lowered annual administrative overhead.",
+      "resposta_correta": "outsourcing",
+      "alternativas": [
+        "outsourcing",
+        "procurement",
+        "subsidiary",
+        "overhead"
+      ],
+      "explicacao": "A palavra correta é 'outsourcing' (terceirização estratégica de operações). Outsourcing customer support lowered annual administrative overhead.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_72_01",
+      "templo": 72,
+      "tipo": "Vocabulário",
+      "nivel": "B2",
+      "pergunta": "Deep ___ networks power conversational language translation.",
+      "resposta_correta": "neural",
+      "alternativas": [
+        "neural",
+        "semiconductor",
+        "cryptography",
+        "biotechnology"
+      ],
+      "explicacao": "'neural' significa 'neural relativo a neurônios ou redes'. Exemplo: Deep neural networks power conversational language translation.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_72_02",
+      "templo": 72,
+      "tipo": "Tradução",
+      "nivel": "B2",
+      "pergunta": "Qual é o significado correto de 'nanotechnology'?",
+      "resposta_correta": "nanotecnologia em escala molecular",
+      "alternativas": [
+        "nanotecnologia em escala molecular",
+        "telemetria de dados remotos",
+        "escalabilidade computacional elástica",
+        "latência de transmissão de dados"
+      ],
+      "explicacao": "'nanotechnology' traduz-se como 'nanotecnologia em escala molecular'. Engineers harness nanotechnology to develop ultralightweight solar panels.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_72_03",
+      "templo": 72,
+      "tipo": "Compreensão",
+      "nivel": "B2",
+      "pergunta": "Upgraded database clustering increased total query ___.",
+      "resposta_correta": "throughput",
+      "alternativas": [
+        "throughput",
+        "malware",
+        "firmware",
+        "repository"
+      ],
+      "explicacao": "A palavra correta é 'throughput' (taxa de vazão de processamento de dados). Upgraded database clustering increased total query throughput.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_73_01",
+      "templo": 73,
+      "tipo": "Vocabulário",
+      "nivel": "B2",
+      "pergunta": "Her elegant poetic ___ captivated literary reviewers worldwide.",
+      "resposta_correta": "prose",
+      "alternativas": [
+        "prose",
+        "verse",
+        "sonnet",
+        "satire"
+      ],
+      "explicacao": "'prose' significa 'prosa literária narrativa'. Exemplo: Her elegant poetic prose captivated literary reviewers worldwide.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_73_02",
+      "templo": 73,
+      "tipo": "Tradução",
+      "nivel": "B2",
+      "pergunta": "Qual é o significado correto de 'soliloquy'?",
+      "resposta_correta": "solilóquio dramático no palco",
+      "alternativas": [
+        "solilóquio dramático no palco",
+        "protagonista principal da narrativa",
+        "antagonista opositor central",
+        "parábola moral de sabedoria"
+      ],
+      "explicacao": "'soliloquy' traduz-se como 'solilóquio dramático no palco'. Hamlet delivers his existential soliloquy alone on the darkened stage.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_73_03",
+      "templo": 73,
+      "tipo": "Compreensão",
+      "nivel": "B2",
+      "pergunta": "Plot twists build relentless suspense toward the explosive story ___.",
+      "resposta_correta": "climax",
+      "alternativas": [
+        "climax",
+        "foreshadowing",
+        "irony",
+        "memoir"
+      ],
+      "explicacao": "A palavra correta é 'climax' (clímax culminante da trama). Plot twists build relentless suspense toward the explosive story climax.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_74_01",
+      "templo": 74,
+      "tipo": "Vocabulário",
+      "nivel": "B2",
+      "pergunta": "Nations signed an international peace ___ ending the border war.",
+      "resposta_correta": "treaty",
+      "alternativas": [
+        "treaty",
+        "accord",
+        "diplomat",
+        "embassy"
+      ],
+      "explicacao": "'treaty' significa 'tratado internacional solene'. Exemplo: Nations signed an international peace treaty ending the border war.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_74_02",
+      "templo": 74,
+      "tipo": "Tradução",
+      "nivel": "B2",
+      "pergunta": "Qual é o significado correto de 'sovereignty'?",
+      "resposta_correta": "soberania nacional e territorial",
+      "alternativas": [
+        "soberania nacional e territorial",
+        "asilo político ou refúgio seguro",
+        "delegação oficial de representantes",
+        "ratificação legislativa de tratado"
+      ],
+      "explicacao": "'sovereignty' traduz-se como 'soberania nacional e territorial'. International law guarantees the territorial sovereignty of independent states.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_74_03",
+      "templo": 74,
+      "tipo": "Compreensão",
+      "nivel": "B2",
+      "pergunta": "Permanent council members exercised their historic power of ___.",
+      "resposta_correta": "veto",
+      "alternativas": [
+        "veto",
+        "referendum",
+        "bilateral",
+        "multilateral"
+      ],
+      "explicacao": "A palavra correta é 'veto' (poder de veto oficial). Permanent council members exercised their historic power of veto.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_75_01",
+      "templo": 75,
+      "tipo": "Vocabulário",
+      "nivel": "B2",
+      "pergunta": "Ocean container ships carry the vast majority of global ___.",
+      "resposta_correta": "freight",
+      "alternativas": [
+        "freight",
+        "cargo",
+        "consignment",
+        "manifest"
+      ],
+      "explicacao": "'freight' significa 'frete marítimo ou aéreo de carga'. Exemplo: Ocean container ships carry the vast majority of global freight.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_75_02",
+      "templo": 75,
+      "tipo": "Tradução",
+      "nivel": "B2",
+      "pergunta": "Qual é o significado correto de 'dock'?",
+      "resposta_correta": "cais ou doca portuária",
+      "alternativas": [
+        "cais ou doca portuária",
+        "guindaste de carga portuário",
+        "armazém logístico de depósito",
+        "distribuição logística integrada"
+      ],
+      "explicacao": "'dock' traduz-se como 'cais ou doca portuária'. Giant container vessels tied up securely along the deepwater dock.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_75_03",
+      "templo": 75,
+      "tipo": "Compreensão",
+      "nivel": "B2",
+      "pergunta": "Shipments in ___ are tracked continuously via GPS beacons.",
+      "resposta_correta": "transit",
+      "alternativas": [
+        "transit",
+        "bottleneck",
+        "customs clearance",
+        "bill of lading"
+      ],
+      "explicacao": "A palavra correta é 'transit' (trânsito internacional de mercadorias). Shipments in transit are tracked continuously via GPS beacons.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_76_01",
+      "templo": 76,
+      "tipo": "Vocabulário",
+      "nivel": "C1",
+      "pergunta": "Classical Roman ___ blended passionate emotion with formal logic.",
+      "resposta_correta": "oratory",
+      "alternativas": [
+        "oratory",
+        "articulate",
+        "sophistry",
+        "premise"
+      ],
+      "explicacao": "'oratory' significa 'oratória solene persuasiva'. Exemplo: Classical Roman oratory blended passionate emotion with formal logic.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_76_02",
+      "templo": 76,
+      "tipo": "Tradução",
+      "nivel": "C1",
+      "pergunta": "Qual é o significado correto de 'antithesis'?",
+      "resposta_correta": "antítese de contraste conceitual",
+      "alternativas": [
+        "antítese de contraste conceitual",
+        "silogismo de raciocínio dedutivo",
+        "dicotomia entre dois polos opostos",
+        "dialética filosófica de opostos"
+      ],
+      "explicacao": "'antithesis' traduz-se como 'antítese de contraste conceitual'. Love is presented as the poignant antithesis of senseless conflict.",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "q_custom_76_03",
+      "templo": 76,
+      "tipo": "Compreensão",
+      "nivel": "C1",
+      "pergunta": "A moment of quiet solitude sparked a breakthrough creative ___.",
+      "resposta_correta": "epiphany",
+      "alternativas": [
+        "epiphany",
+        "subtlety",
+        "cogent",
+        "heuristics"
+      ],
+      "explicacao": "A palavra correta é 'epiphany' (epifania / súbita revelação esclarecedora). A moment of quiet solitude sparked a breakthrough creative epiphany.",
       "xp_recompensa": 20
     }
   ]

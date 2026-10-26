@@ -1,24 +1,24 @@
 # Graph Report - english-autentico  (2026-10-26)
 
 ## Corpus Check
-- 193 files · ~1,113,433 words
+- 219 files · ~1,191,070 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: .css 9, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1151 nodes · 1217 edges · 132 communities (61 shown, 71 thin omitted)
+- 1153 nodes · 1222 edges · 126 communities (55 shown, 71 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7626367e`
+- Built from commit: `a7fbbc34`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - inspect_grammar_cdp.mjs
 - enrich_wave1.mjs
-- enrich_wave3_part1.mjs
+- enrich_wave6_part1.mjs
 - PDCA_TEMPLOS.md
 - ═══════════════════════════════════════════════════════════════
 - PDCA_dialogos.md
@@ -39,6 +39,7 @@
 - quiz.js
 - sanitize.js
 - voice_engine.js
+- enrich_wave7_part2.mjs
 - GRAMMAR (Gramática) — Relatório PDCA Completo
 - Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)
 - Canonical AI Content Generation Prompts Guide
@@ -51,27 +52,21 @@
 - ═══════════════════════════════════════════════════════════════
 - vocab.test.js
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
-- 4.1 ROADMAP DE IMPLEMENTAÇÃO
 - 🧪 TESTING PROTOCOL - ItalianLearningApp
 - 1️⃣ UNIT TESTS PER TEMPLE
 - English Autentico — System Context & Handoff Instructions
 - QA & Bug Audit Instructions for English Autentico
-- 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS
 - 🇺🇸 English Autentico
 - PROTOCOLO: VERIFICAÇÃO DE CICLO COMPLETO
 - PDCA_GRAMATICA_BRAINSTORM.md
 - Feature Sync & Audit: Audio Speed & Language Toggle
 - Feature Sync: AI Handoff Instructions
 - Ações Imediatas (até 1 semana — sem refatoração de código)
-- 2.1 QUICK WINS IMPLEMENTADOS
 - tts_worker.js
-- 2.2 MELHORIAS MÉDIAS (Próximos Sprints)
 - progression.js
 - quiz_data.js
-- ═══════════════════════════════════════════════════════════════
 - MÓDULO 11 — PERFIL E PROGRESSO
 - MÓDULO 1 — ESTRUTURA DO PROJETO E ARQUIVOS
-- ═══════════════════════════════════════════════════════════════
 - MÓDULO 10 — QUIZ
 - MÓDULO 17 — SCRIPTS DE DADOS E FERRAMENTAS
 - MÓDULO 2 — CORE E ESTADO DA APLICAÇÃO
@@ -132,7 +127,6 @@
 - send
 - send
 - enrich_wave4_part1.mjs
-- enrich_wave5_part1.mjs
 - state.js
 - send
 - enrich_wave4_part2.mjs
@@ -153,9 +147,9 @@
 1. `═══════════════════════════════════════════════════════════════` - 32 edges
 2. `Checklist de Auditoria Completa — English Autentico PWA` - 28 edges
 3. `═══════════════════════════════════════════════════════════════` - 17 edges
-4. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
-5. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
-6. `renderizar()` - 15 edges
+4. `renderizar()` - 16 edges
+5. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
+6. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
 7. `Públicos (chamados do HTML):` - 14 edges
 8. `Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)` - 13 edges
 9. `1️⃣ UNIT TESTS PER TEMPLE` - 12 edges
@@ -176,7 +170,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (132 total, 71 thin omitted)
+## Communities (126 total, 71 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -220,7 +214,7 @@ Nodes (29): author, bugs, url, description, devDependencies, http-server, @playw
 
 ### Community 13 - "ref_fs"
 Cohesion: 0.17
-Nodes (7): data, wave4Part4Lessons, data, wave6Part1Lessons, data, wave7Part2Lessons, enData
+Nodes (7): data, wave3Part1Lessons, data, wave4Part4Lessons, data, wave5Part1Lessons, enData
 
 ### Community 14 - "SPEC — Método dos Famosos: 5 Novas Features"
 Cohesion: 0.06
@@ -263,20 +257,16 @@ Cohesion: 0.17
 Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repeat (Imitação), Aba: Músicas, Aba: Perfil, Aba: Templos (Vocabulário Temático), Abas e seus parâmetros (+3 more)
 
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.17
-Nodes (12): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, English Learning App Pro — Brainstorm Multi-Perspectiva com Melhoria Contínua, FASE 1 — PLANEJAR (Plan), FASE 2 — FAZER (Do) (+4 more)
+Cohesion: 0.05
+Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
 
 ### Community 42 - "vocab.test.js"
 Cohesion: 0.06
 Nodes (24): main(), send(), main(), send(), main(), send(), outDir, artifactScreenshots (+16 more)
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
-Cohesion: 0.18
-Nodes (11): 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico, G-4: Dificuldade Adaptativa, G-5: Modo "Revisar Erros", G-6: Quiz Streak + Chain Visual (+3 more)
-
-### Community 47 - "4.1 ROADMAP DE IMPLEMENTAÇÃO"
-Cohesion: 0.18
-Nodes (11): ═══════════════════════════════════════════════════════════════, 4.1 ROADMAP DE IMPLEMENTAÇÃO, 4.2 CICLO DE MELHORIA CONTÍNUA, 4.3 RISCOS E MITIGAÇÕES, Revisão Mensal:, Revisão Semanal:, Revisão Trimestral:, SPRINT 1 (Feito) — Quick Wins (+3 more)
+Cohesion: 0.08
+Nodes (24): ═══════════════════════════════════════════════════════════════, 2.1 QUICK WINS IMPLEMENTADOS, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico (+16 more)
 
 ### Community 51 - "🧪 TESTING PROTOCOL - ItalianLearningApp"
 Cohesion: 0.09
@@ -293,10 +283,6 @@ Nodes (8): 1. Project Background, 2. Tech Stack & Architecture, 3. Core Modules,
 ### Community 57 - "QA & Bug Audit Instructions for English Autentico"
 Cohesion: 0.22
 Nodes (8): 1. LocalStorage & State Management (`js/core.js` & `js/profilo.js`), 2. Text-to-Speech (TTS) Engine (`js/core.js` & `js/audio.js`), 3. Dynamic IA Prompt Injection (`js/ia-import.js`), 4. Service Worker & Offline Cache (`sw.js` & `index.html`), 5. UI/UX and DOM Rendering, 6. The "Grammar Renderer" (`js/grammar.js` & `data/grammar.json`), 7. SRS Algorithm (Spaced Repetition in `js/flashcards.js`), QA & Bug Audit Instructions for English Autentico
-
-### Community 58 - "1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS"
-Cohesion: 0.22
-Nodes (9): ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, Arquitetura da Aba de Quiz:, 🟡 DESENVOLVEDOR FRONTEND (15 problemas):, 🟢 LINGUISTA APLICADO (12 problemas):, 🔴 PRODUCT MANAGER (12 problemas): (+1 more)
 
 ### Community 59 - "🇺🇸 English Autentico"
 Cohesion: 0.22
@@ -322,17 +308,9 @@ Nodes (6): Feature 1: Dynamic Prompts (Modo i+1), Feature 2: Offline Push Notifi
 Cohesion: 0.11
 Nodes (19): ⑩ Micro-Animação de XP no Momento do Acerto, ⑪ Streak Diário Visível no Seletor, ⑫ Criar Lição de Present Continuous no A1, ⑬ Segmentar Aba Estudo em Passos Paginados (máx. 3 elementos/tela), ⑭ Criar Lições A1 Ausentes vs. CEFR, ⑮ Desbloqueio por Mérito (substituir senha admin), ① Bug Crítico: Flip Cards em Branco, ② Score Mínimo para Bônus de Conclusão (+11 more)
 
-### Community 74 - "2.1 QUICK WINS IMPLEMENTADOS"
-Cohesion: 0.29
-Nodes (7): 2.1 QUICK WINS IMPLEMENTADOS, QW-1: Bug i18n Fix ✅, QW-2: Timer Visual ✅, QW-3: Auto-Advance ✅, QW-4: Acessibilidade ARIA ✅, QW-5: Feedback Explicativo Melhorado ✅, QW-6: Sanitização XSS ✅
-
 ### Community 81 - "tts_worker.js"
 Cohesion: 0.53
 Nodes (4): createWavFromPcm(), runInference(), synthesizeText(), writeString()
-
-### Community 82 - "2.2 MELHORIAS MÉDIAS (Próximos Sprints)"
-Cohesion: 0.33
-Nodes (6): ═══════════════════════════════════════════════════════════════, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), M-1: Empty States, M-2: Onboarding Contextual, M-3: Ordenação Inteligente no Seletor, M-4: prefers-reduced-motion
 
 ### Community 87 - "progression.js"
 Cohesion: 0.40
@@ -342,10 +320,6 @@ Nodes (3): _LEVEL_NOMES, LevelUp, Progressao
 Cohesion: 0.40
 Nodes (4): QUIZ_FAMILIA, QUIZ_NUMEROS, QUIZ_SAUDACOES, QUIZ_VERBOS
 
-### Community 89 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.40
-Nodes (5): ═══════════════════════════════════════════════════════════════, 3.1 MÉTRICAS DE SUCESSO (KPIs), 3.2 VALIDAÇÃO CRUZADA, Melhorias com CONFLITO:, Melhorias validadas por TODAS as 4 perspectivas:
-
 ### Community 92 - "MÓDULO 11 — PERFIL E PROGRESSO"
 Cohesion: 0.50
 Nodes (4): 11.1 js/profilo.js, 11.2 js/heatmap.js, 11.3 js/progression.js e js/conquistas.js, MÓDULO 11 — PERFIL E PROGRESSO
@@ -353,10 +327,6 @@ Nodes (4): 11.1 js/profilo.js, 11.2 js/heatmap.js, 11.3 js/progression.js e js/c
 ### Community 93 - "MÓDULO 1 — ESTRUTURA DO PROJETO E ARQUIVOS"
 Cohesion: 0.50
 Nodes (4): 1.1 index.html, 1.2 sw.js (Service Worker), 1.3 css/english.css e css/styles.css, MÓDULO 1 — ESTRUTURA DO PROJETO E ARQUIVOS
-
-### Community 107 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.50
-Nodes (4): ═══════════════════════════════════════════════════════════════, Nota por Dimensão:, Top 5 Problemas Mais Críticos:, Top 5 Quick Wins (implementados):
 
 ### Community 122 - "MÓDULO 10 — QUIZ"
 Cohesion: 0.67
@@ -407,8 +377,8 @@ Cohesion: 0.12
 Nodes (5): Grammatica, assert, ErrorBoundary, Sanitize, test
 
 ### Community 195 - "vocab.js"
-Cohesion: 0.11
-Nodes (37): _adicionarSentinel(), alternarAgrupamento(), alternarModoOutput(), _atualizarStreakVocab(), _buscaFuzzy(), buscar(), _carregarMais(), compartilharLista() (+29 more)
+Cohesion: 0.10
+Nodes (39): _adicionarSentinel(), alternarAgrupamento(), alternarModoOutput(), _atualizarStreakVocab(), _buscaFuzzy(), buscar(), carregarFrequencia(), _carregarMais() (+31 more)
 
 ### Community 212 - "audit_grammar_content.mjs"
 Cohesion: 0.29
@@ -440,7 +410,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Should `═══════════════════════════════════════════════════════════════` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
+- **Why does `============================================================` connect `vocab.js` to `═══════════════════════════════════════════════════════════════`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Should `PDCA_dialogos.md` be split into smaller, more focused modules?**
   _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
-- **Should `PDCA_FLASHCARDS.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._

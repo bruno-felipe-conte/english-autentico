@@ -31,7 +31,7 @@ const AppBootstrap = {
 
   async carregarDados() {
     const promises = [];
-    for (let i = 1; i <= 51; i++) {
+    for (let i = 1; i <= 76; i++) {
       promises.push(
         fetch(`data/temple-${i}.json`)
           .then(r => {

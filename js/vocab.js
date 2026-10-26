@@ -10,6 +10,8 @@ var Vocab = window.Vocab = {
   filtroOrigem: '',   // '' | 'custom' | 'nativo'
   filtroDificeis:   false,
   filtroFavoritos:  false,
+  filtroFrequencia: '', // '' | 'top1000' | 'top250' | 'top500' | 'top750' | 'top1000_tier4'
+  _freqMap: null,
   blurColuna: null,   // null | 'pt' | 'it'
   _onboardingMostrado: false,
   _ordenarPor: '',    // '' | 'alfabetica' | 'nivel' | 'progresso' | 'categoria'
@@ -74,6 +76,21 @@ var Vocab = window.Vocab = {
     if (this.filtroCategoria) {
       const cat = this.filtroCategoria.toLowerCase();
       filtrados = filtrados.filter(p => (p.categoria || '').toLowerCase() === cat);
+    }
+
+    if (this.filtroFrequencia) {
+      if (this._freqMap) {
+        filtrados = filtrados.filter(p => {
+          const info = this._freqMap.get((p.ingles || '').toLowerCase().trim());
+          if (!info) return false;
+          if (this.filtroFrequencia === 'top1000') return true;
+          if (this.filtroFrequencia === 'top250') return info.tier === 'top250';
+          if (this.filtroFrequencia === 'top500') return info.tier === 'top500';
+          if (this.filtroFrequencia === 'top750') return info.tier === 'top750';
+          if (this.filtroFrequencia === 'top1000_tier4') return info.tier === 'top1000';
+          return true;
+        });
+      }
     }
 
     if (this.filtroTexto) {
@@ -159,7 +176,7 @@ var Vocab = window.Vocab = {
           : I18n.t('vocab_resultados').replace('{m}', mostrando).replace('{f}', filtrados.length).replace('{t}', total);
 
       // Botão "estudar este filtro" só aparece quando há filtro ativo e resultados
-      const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos || this.filtroOrigem;
+      const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos || this.filtroOrigem || this.filtroFrequencia;
       const btnEstudar = (temFiltro && filtrados.length > 0)
         ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#003E8A;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">${I18n.t('vocab_estudar_filtro')}</button>`
         : '';
@@ -176,6 +193,17 @@ var Vocab = window.Vocab = {
       if (this.filtroFavoritos) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#FDEBD0;color:#CA6F1E;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">❤️ Favoritos <button onclick="Vocab.toggleFavoritos();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#CA6F1E;padding:0 0.1rem" aria-label="Remover filtro favoritos">✕</button></span>`);
       if (this.filtroOrigem === 'custom') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#E8DAEF;color:#6C3483;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">➕ Custom <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#6C3483;padding:0 0.1rem" aria-label="Remover filtro origem">✕</button></span>`);
       if (this.filtroOrigem === 'nativo') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#D4EFDF;color:#1E8449;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">📦 Nativo <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#1E8449;padding:0 0.1rem" aria-label="Remover filtro origem">✕</button></span>`);
+      if (this.filtroFrequencia) {
+        const labelsFreq = {
+          'top1000': '⚡ Top 1.000',
+          'top250': '🥇 Top 1-250',
+          'top500': '🥈 Top 251-500',
+          'top750': '🥉 Top 501-750',
+          'top1000_tier4': '🎯 Top 751-1.000'
+        };
+        const rotulo = labelsFreq[this.filtroFrequencia] || '⚡ Frequência';
+        chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#EBF5FB;color:#003E8A;border:1px solid #AED6F1;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">${rotulo} <button onclick="Vocab.filtrarFrequencia('');const el=document.getElementById('vocab-frequencia-filtro');if(el)el.value='';" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#003E8A;padding:0 0.1rem" aria-label="Remover filtro frequência">✕</button></span>`);
+      }
 
       const chipsHtml = chips.length > 0
         ? `<div style="margin-top:0.4rem;display:flex;flex-wrap:wrap;gap:0.35rem">${chips.join('')}</div>`
@@ -329,12 +357,17 @@ var Vocab = window.Vocab = {
     // Coluna categoria com cor
     const catCor = this._corParaCategoria(p.categoria);
 
+    // Top 1000 Frequency Badge
+    const freqInfo = this._freqMap ? this._freqMap.get((p.ingles || '').toLowerCase().trim()) : null;
+    const freqBadge = freqInfo ? `<span class="vocab-freq-badge" style="background:#eef2ff;color:#003E8A;border:1px solid #c7d2fe;padding:2px 6px;border-radius:999px;font-size:0.7rem;font-weight:700" title="Rank #${freqInfo.rank} no Top 1.000 Frequência">⚡ #${freqInfo.rank}</span>` : '';
+
     item.innerHTML = `
       <span class="vocab-it">${this._escapar(p.ingles || '—')}</span>
       <span class="vocab-seta">→</span>
       <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
       ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
       ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
+      ${freqBadge}
       ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} errors">⚠️ ${erros}</span>` : ''}
       ${App.ehFavorito(p.id) ? '<span class="vocab-fav-badge">❤️</span>' : ''}
       <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? I18n.t('vocab_mastered') : sm2Icon === '📚' ? I18n.t('vocab_learning') : I18n.t('vocab_new')}">${sm2Icon}</span>
@@ -478,6 +511,36 @@ var Vocab = window.Vocab = {
   popularCategorias() {
     this._popularFiltroTemplo();
     this._popularFiltroCategoria();
+    this.carregarFrequencia();
+  },
+
+  async carregarFrequencia() {
+    if (this._freqMap) return this._freqMap;
+    try {
+      const res = await fetch('data/top1000_frequencia.json');
+      if (res.ok) {
+        const data = await res.json();
+        const map = new Map();
+        (data.palavras || []).forEach(item => {
+          map.set((item.ingles || '').toLowerCase().trim(), item);
+        });
+        this._freqMap = map;
+        return map;
+      }
+    } catch (err) {
+      console.warn('[vocab] Falha ao carregar frequencia:', err);
+    }
+    this._freqMap = new Map();
+    return this._freqMap;
+  },
+
+  filtrarFrequencia(valor) {
+    this.filtroFrequencia = valor || '';
+    if (!this._freqMap) {
+      this.carregarFrequencia().then(() => this.renderizar());
+    } else {
+      this.renderizar();
+    }
   },
 
   _popularFiltroTemplo() {
@@ -578,6 +641,21 @@ var Vocab = window.Vocab = {
     if (this.filtroCategoria) {
       const cat = this.filtroCategoria.toLowerCase();
       filtrados = filtrados.filter(p => (p.categoria || '').toLowerCase() === cat);
+    }
+
+    if (this.filtroFrequencia) {
+      if (this._freqMap) {
+        filtrados = filtrados.filter(p => {
+          const info = this._freqMap.get((p.ingles || '').toLowerCase().trim());
+          if (!info) return false;
+          if (this.filtroFrequencia === 'top1000') return true;
+          if (this.filtroFrequencia === 'top250') return info.tier === 'top250';
+          if (this.filtroFrequencia === 'top500') return info.tier === 'top500';
+          if (this.filtroFrequencia === 'top750') return info.tier === 'top750';
+          if (this.filtroFrequencia === 'top1000_tier4') return info.tier === 'top1000';
+          return true;
+        });
+      }
     }
     if (this.filtroTexto) {
       const q = this.filtroTexto.toLowerCase().trim();
@@ -786,7 +864,8 @@ var Vocab = window.Vocab = {
     this.filtroOrigem = '';
     this.filtroDificeis = false;
     this.filtroFavoritos = false;
-    ['vocab-busca','vocab-temple-filter','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+    this.filtroFrequencia = '';
+    ['vocab-busca','vocab-temple-filter','vocab-templo-filtro','vocab-categoria-filtro','vocab-frequencia-filtro'].forEach(id => {
       const el = document.getElementById(id); if (el) el.value = '';
     });
     this.renderizar();

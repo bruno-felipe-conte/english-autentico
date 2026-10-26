@@ -55,6 +55,32 @@ const AppTemplos = {
     'linear-gradient(135deg, #37474F, #1C313A)',   // 48
     'linear-gradient(135deg, #4E342E, #3E2723)',   // 49
     'linear-gradient(135deg, #0D47A1, #002171)',   // 50
+    'linear-gradient(135deg, #1A5276, #0E3460)',   // 51 Oxford
+    'linear-gradient(135deg, #C0392B, #962D22)',   // 52 London
+    'linear-gradient(135deg, #003E8A, #002855)',   // 53 Cambridge
+    'linear-gradient(135deg, #1E8449, #145A32)',   // 54 Edinburgh
+    'linear-gradient(135deg, #7D3C98, #512E6D)',   // 55 Manchester
+    'linear-gradient(135deg, #D4AC0D, #B7950B)',   // 56 Bristol
+    'linear-gradient(135deg, #BA4A00, #873600)',   // 57 Glasgow
+    'linear-gradient(135deg, #2E86C1, #1B4F72)',   // 58 Belfast
+    'linear-gradient(135deg, #A93226, #78281F)',   // 59 Liverpool
+    'linear-gradient(135deg, #117A65, #0B5345)',   // 60 Cardiff
+    'linear-gradient(135deg, #229954, #196F3D)',   // 61 Dublin
+    'linear-gradient(135deg, #2874A6, #1B4F72)',   // 62 Galway
+    'linear-gradient(135deg, #B9770E, #7E5109)',   // 63 Cork
+    'linear-gradient(135deg, #2C3E50, #1A252F)',   // 64 Toronto
+    'linear-gradient(135deg, #16A085, #0E6655)',   // 65 Vancouver
+    'linear-gradient(135deg, #8E44AD, #6C3483)',   // 66 Montreal
+    'linear-gradient(135deg, #27AE60, #1E8449)',   // 67 Ottawa
+    'linear-gradient(135deg, #CA6F1E, #935116)',   // 68 Calgary
+    'linear-gradient(135deg, #2980B9, #1F618D)',   // 69 Sydney
+    'linear-gradient(135deg, #D35400, #A04000)',   // 70 Melbourne
+    'linear-gradient(135deg, #0E6251, #0B4C3E)',   // 71 Brisbane
+    'linear-gradient(135deg, #1A5276, #154360)',   // 72 Perth
+    'linear-gradient(135deg, #6C3483, #4A235A)',   // 73 Auckland
+    'linear-gradient(135deg, #1F618D, #17486B)',   // 74 Wellington
+    'linear-gradient(135deg, #B03A2E, #78281F)',   // 75 Singapore
+    'linear-gradient(135deg, #003E8A, #D4A843)',   // 76 Cape Town
   ],
 
   TEMPLO_NOMES: [
@@ -109,7 +135,32 @@ const AppTemplos = {
     'Global Perspectives',      // 48
     'Mastering Structure',      // 49
     'The Summit',               // 50
-    'Academic Excellence'       // 51
+    'Academic Excellence',      // 51
+    'Urban Transit',            // 52
+    'Academia & Study',         // 53
+    'Highland Weather',         // 54
+    'Home & Living',            // 55
+    'Market & Shopping',        // 56
+    'Kitchen & Flavors',        // 57
+    'Health & Well-being',      // 58
+    'Music & Sound',            // 59
+    'Coast & Horizons',         // 60
+    'Bonds & Social Life',      // 61
+    'Travel & Sightseeing',     // 62
+    'Career & Ambition',        // 63
+    'Commerce & Finance',       // 64
+    'Athletics & Energy',       // 65
+    'Media & Connection',       // 66
+    'Earth & Climate',          // 67
+    'Justice & Civil Rights',   // 68
+    'Emotional Insight',        // 69
+    'Idioms & Nuance',          // 70
+    'Strategy & Deals',         // 71
+    'Tech Frontiers',           // 72
+    'Arts & Literature',        // 73
+    'Global Diplomacy',         // 74
+    'Global Trade Hub',         // 75
+    'Rhetoric & Mind'           // 76
   ],
 
   TEMPLO_CIDADES: [
@@ -123,7 +174,13 @@ const AppTemplos = {
     'Birmingham', 'Liverpool', 'Coventry', 'Leicester', 'Sheffield',
     'Norwich', 'Reading', 'Oxford', 'Cambridge', 'Southampton',
     'London', 'Manchester', 'Edinburgh', 'Cardiff', 'Belfast',
-    'Dublin', 'Glasgow', 'Bristol', 'Newcastle', 'Leeds'
+    'Dublin', 'Glasgow', 'Bristol', 'Newcastle', 'Leeds',
+    'Oxford',
+    'London', 'Cambridge', 'Edinburgh', 'Manchester', 'Bristol',
+    'Glasgow', 'Belfast', 'Liverpool', 'Cardiff', 'Dublin',
+    'Galway', 'Cork', 'Toronto', 'Vancouver', 'Montreal',
+    'Ottawa', 'Calgary', 'Sydney', 'Melbourne', 'Brisbane',
+    'Perth', 'Auckland', 'Wellington', 'Singapore', 'Cape Town'
   ],
 
   TEMPLO_NIVEL_MINIMO: {
@@ -134,7 +191,10 @@ const AppTemplos = {
     16:4, 20:4, 21:4, 24:4, 29:4, 32:4, 35:4,
     26:7, 27:7, 30:7, 31:7, 37:7, 38:7, 43:7, 46:7,
     39:11, 40:11, 42:11, 44:11, 45:11,
-    41:15, 47:15, 48:15, 49:15, 50:15, 51:22
+    41:15, 47:15, 48:15, 49:15, 50:15, 51:22,
+    52:2, 53:2, 54:2, 55:2, 56:2, 57:2, 58:2, 59:2, 60:2,
+    61:4, 62:4, 63:4, 64:4, 65:4, 66:4, 67:4, 68:4, 69:4, 70:4,
+    71:7, 72:7, 73:7, 74:7, 75:11, 76:15
   },
 
   get UNLOCK_CODE() {
@@ -197,7 +257,32 @@ const AppTemplos = {
     'Wichita welcomes the world. Discuss cultural differences, global customs, and international communication.',
     'New Orleans flows with complex structures. Master advanced relative clauses, conditionals, and subtle grammar rules.',
     'Tampa is the final summit. Refine your advanced English expressions, nuances, and idioms for perfect fluency.',
-    'Oxford is the world-renowned center of excellence. Master advanced scientific terms, citations, peer reviews, and academic thesis writing.'
+    'Oxford is the world-renowned center of excellence. Master advanced scientific terms, citations, peer reviews, and academic thesis writing.',
+    'London is the heartbeat of global movement. Master transit vocabulary: underground lines, commuters, stations, and bustling streets. Travel the metropolis like a local.',
+    'Cambridge is world-renowned for scholarship and discovery. Learn essential academic tools: textbooks, syllabi, tutors, and research methods. Step into a world of knowledge.',
+    'Edinburgh sweeps across dramatic hills and unpredictable skies. Describe seasons, weather phenomena, highland mists, and the natural world with clarity.',
+    'Manchester blends historic charm with modern comfort. Master the vocabulary of home spaces, furniture, cozy corners, and daily domestic life.',
+    'Bristol buzzes with independent spirit and vibrant markets. Navigate supermarket aisles, artisan produce, receipts, and friendly bargains.',
+    'Glasgow celebrates hospitality and warm dining. Explore culinary terminology: cooking utensils, savory herbs, baking dough, and delicious starters.',
+    'Belfast embodies resilience and care. Master health essentials: clinics, symptoms, bandages, body parts, and clinical recovery.',
+    'Liverpool is the birthplace of legendary musical revolutions. Speak the language of rhythm, stages, amplifiers, recitals, and vibrant applause.',
+    'Cardiff opens outward to dramatic Welsh coastlines and green ravines. Describe breathtaking shores, tides, valleys, and hiking adventures.',
+    'Dublin is legendary for warm storytelling and deep camaraderie. Learn the vocabulary of heartfelt friendships, family bonds, and lively conversation.',
+    'Galway is the gateway to wild Atlantic journeys. Master travel planning, backpacks, scenic landmarks, excursions, and adventurous treks.',
+    'Cork is an energetic hub of business and innovation. Discuss workplace dynamics, career growth, flextime, morale, and leadership.',
+    'Toronto drives international markets and enterprise. Understand personal finance, assets, equity, investments, and economic resilience.',
+    'Vancouver thrives outdoors between mountains and ocean. Talk about sportsmanship, training, endurance, playoffs, and fitness victories.',
+    'Montreal is a cultural crossroads of digital media and dialogue. Master the vocabulary of newscasts, broadcasts, online feeds, and press freedom.',
+    'Ottawa champions sustainability and stewardship of nature. Discuss renewable power, climate action, river basins, and environmental care.',
+    'Calgary values fairness and community governance. Explore legal principles: courtrooms, due process, affidavits, and democratic rights.',
+    'Sydney inspires optimism and personal growth. Describe inner emotional states, serenity, benevolence, courage, and genuine sincerity.',
+    'Melbourne celebrates artistic subtlety and street-smart wit. Master iconic English idioms, figurative expressions, and conversational flair.',
+    'Brisbane navigates Pacific corporate trade. Master corporate strategy, joint ventures, due diligence, compliance, and contract negotiations.',
+    'Perth looks to the future with resource engineering and cutting-edge software. Discuss neural networks, semiconductors, automation, and microprocessors.',
+    'Auckland inspires vibrant Pacific creativity and dramatic literature. Analyze poetic prose, parables, stage soliloquies, and aesthetic design.',
+    'Wellington is a capital of statecraft and peace. Discuss international treaties, diplomatic accords, national sovereignty, and global cooperation.',
+    'Singapore is the world undisputed crossroads of maritime commerce. Master supply chain logistics, freight, customs clearance, and global transit.',
+    'Cape Town stands at the majestic meeting point of two oceans. Reach the pinnacle of English fluency: classical oratory, dialectics, philosophy, and cogent thought.'
   ],
 
   renderizarParolaDia() {
@@ -317,7 +402,7 @@ const AppTemplos = {
     if (!grid) return;
     grid.innerHTML = '';
 
-    for (let i = 1; i <= 51; i++) {
+    for (let i = 1; i <= 76; i++) {
       if (!this.estado.templosData[i] && !this.TEMPLO_NIVEL_MINIMO[i]) continue;
       const data = this.estado.templosData[i];
       const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
@@ -530,7 +615,7 @@ const AppTemplos = {
     if (!input) return;
     if (input.value.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
-      p.templos_desbloqueados = Array.from({length: 51}, (_, i) => i + 1);
+      p.templos_desbloqueados = Array.from({length: 76}, (_, i) => i + 1);
       this.salvarProgresso();
       this.fecharModalTemplo();
       this.renderizarTemplos();
