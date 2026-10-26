@@ -52,7 +52,7 @@ const BackupReminder = {
     container.setAttribute('aria-live', 'polite');
 
     container.innerHTML = `
-      <div class="backup-popup-card">
+      <div class="backup-popup-card" id="backup-popup-card">
         <div class="backup-popup-header">
           <div class="backup-popup-titulo">${titulo}</div>
           <button class="backup-popup-close" id="backup-popup-close-btn" aria-label="${fecharTxt}" title="${fecharTxt}">✕</button>

@@ -455,13 +455,14 @@ const Dialogues = {
 
     if (this.modo === 'leitura') {
       for (const t of d.turni) {
-        const isUtente = t.personaggio && (t.personaggio.trim().toLowerCase() === 'tu' || t.personaggio.trim().toLowerCase() === 'you' || t.personaggio.trim().toLowerCase() === 'user');
+        const pers = (t.personaggio || t.speaker || t.personagem || '').trim();
+        const isUtente = pers && (pers.toLowerCase() === 'tu' || pers.toLowerCase() === 'you' || pers.toLowerCase() === 'user' || pers.toLowerCase() === 'você' || pers.toLowerCase() === 'voce');
         const cssClass = isUtente ? 'utente' : 'personaggio';
         // Fallback: se frase estiver vazia mas há alternativas, usa a resposta correta
         const fraseExibir = t.frase || (t.alternativas ? t.alternativas[t.resposta_correta || 0] : '');
         const traducaoExibir = t.traducao || '';
-        const nomePersonagem = isUtente ? safeNome : this._esc(t.personaggio);
-        const corPersonagem = isUtente ? '' : this._corParaPersonagem(t.personaggio);
+        const nomePersonagem = isUtente ? safeNome : this._esc(pers);
+        const corPersonagem = isUtente ? '' : this._corParaPersonagem(pers);
         html += `
           <div class="dialogo-turno dialogue-turno ${cssClass}" style="${!isUtente && corPersonagem ? 'border-left: 3px solid ' + corPersonagem + '; padding-left: 0.5rem;' : ''}">
             <div class="dialogo-bubble dialogue-bubble">
@@ -482,10 +483,11 @@ const Dialogues = {
       // Modo prática: renderiza apenas o turno atual e os anteriores
       for (let i = 0; i <= this.turnoAtual; i++) {
         const t = d.turni[i];
-        const isUtente = t.personaggio && (t.personaggio.trim().toLowerCase() === 'tu' || t.personaggio.trim().toLowerCase() === 'you' || t.personaggio.trim().toLowerCase() === 'user');
+        const pers = (t.personaggio || t.speaker || t.personagem || '').trim();
+        const isUtente = pers && (pers.toLowerCase() === 'tu' || pers.toLowerCase() === 'you' || pers.toLowerCase() === 'user' || pers.toLowerCase() === 'você' || pers.toLowerCase() === 'voce');
         const cssClass = isUtente ? 'utente' : 'personaggio';
-        const nomePersonagem = isUtente ? safeNome : this._esc(t.personaggio);
-        const corPersonagem = isUtente ? '' : this._corParaPersonagem(t.personaggio);
+        const nomePersonagem = isUtente ? safeNome : this._esc(pers);
+        const corPersonagem = isUtente ? '' : this._corParaPersonagem(pers);
         
         if (i < this.turnoAtual) {
           // Histórico (já respondido)
@@ -606,8 +608,8 @@ const Dialogues = {
   mostrarResultado() {
     const d = this.dialogoAtual;
     const totalTu = d.turni.filter(t => {
-      const nome = (t.personaggio || '').trim().toLowerCase();
-      return nome === 'tu' || nome === 'you' || nome === 'user';
+      const nome = (t.personaggio || t.speaker || t.personagem || '').trim().toLowerCase();
+      return nome === 'tu' || nome === 'you' || nome === 'user' || nome === 'você' || nome === 'voce';
     }).length;
     const pct = Math.round((this.acertos / totalTu) * 100);
     
