@@ -40,8 +40,9 @@ test.describe('LocalStorage and State Handling', () => {
 
     // Handle the expected alert gracefully
     page.on('dialog', async dialog => {
-      expect(dialog.message()).toContain('Storage Limit Reached');
-      expect(dialog.message()).toContain('auto-cleanup');
+      const msg = dialog.message();
+      expect(msg).toMatch(/storage limit|limite de armazenamento/i);
+      expect(msg).toMatch(/cleanup|limpeza/i);
       await dialog.accept();
     });
 
