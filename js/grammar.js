@@ -364,6 +364,24 @@ const Grammatica = {
 
     if (u.fio && u.fio.fecho) h += `<p class="gram-fio gram-fio-fecho">${this._formatarPergunta(u.fio.fecho)}</p>`;
 
+    // Chamada de ação para o Phrasal Verbs Lab na lição b2-lez15
+    if (u.id === 'b2-lez15') {
+      h += `
+        <div style="background:linear-gradient(135deg, rgba(0,62,138,0.12), rgba(212,168,67,0.15));border:1.5px solid #003E8A;border-radius:12px;padding:1.1rem 1.25rem;margin:1.25rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+          <div>
+            <strong style="color:var(--cor-primaria,#003E8A);font-size:1.05rem;display:flex;align-items:center;gap:0.4rem;">
+              🧩 Phrasal Verbs Lab Completo
+            </strong>
+            <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--cor-texto-secundario,#555);">
+              Explore o acervo de 415 verbos com pronúncia nativa, mini-game da regra do pronome e cards FSRS.
+            </p>
+          </div>
+          <button onclick="App.navegar('phrasal')" style="background:var(--cor-primaria,#003E8A);color:#fff;border:none;padding:0.55rem 1.1rem;border-radius:8px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:0.35rem;">
+            Abrir o Lab →
+          </button>
+        </div>`;
+    }
+
     // Botão de avanço intuitivo para a Etapa 2
     h += `
       <div class="gram-step-footer">

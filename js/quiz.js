@@ -72,6 +72,26 @@ const Quiz = {
   },
 
   // ── Start mixed quiz (all unlocked temples) ────────────────
+  iniciarPhrasal() {
+    this.temploAtual = 'phrasal';
+    this.perguntaAtual = 0;
+    this.pontuacao = 0;
+    this.xpTotal = 0;
+    this.respondido = false;
+    this.combo = 0;
+    this.respostasHistorico = [];
+
+    const todas = (App.estado?.quizData || []).filter(q => q.templo === 'phrasal' || q.categoria === 'phrasal_verbs');
+    this.perguntas = [...todas].sort(() => Math.random() - 0.5).slice(0, 10);
+
+    const seletor = document.getElementById('quiz-templo-selector');
+    const container = document.getElementById('quiz-container');
+    if (seletor) seletor.style.display = 'none';
+    if (container) container.style.display = 'block';
+
+    this.mostrarPergunta();
+  },
+
   iniciarMisto() {
     this.temploAtual = 'misto';
     this.perguntaAtual = 0;
@@ -561,6 +581,17 @@ const Quiz = {
       btnMisto.onclick = () => this.iniciarMisto();
       seletor.appendChild(btnMisto);
     }
+
+    // ── Phrasal Verbs Quiz Button ──────────────────────────
+    const btnPhrasal = document.createElement('button');
+    btnPhrasal.className = 'quiz-templo-btn';
+    btnPhrasal.style.gridColumn = '1 / -1';
+    btnPhrasal.style.background = 'linear-gradient(135deg, #003E8A, #002855)';
+    btnPhrasal.style.color = '#fff';
+    btnPhrasal.style.fontWeight = '700';
+    btnPhrasal.innerHTML = '🧩 Quiz Especial: Phrasal Verbs (Partículas & Pronomes)';
+    btnPhrasal.onclick = () => this.iniciarPhrasal();
+    seletor.appendChild(btnPhrasal);
 
     // ── M-3: Templos com indicação de progresso ────────────
     sortedTemplos.forEach(i => {

@@ -1919,6 +1919,346 @@
       ],
       "explicacao": "A palavra correta é 'epiphany' (epifania / súbita revelação esclarecedora). A moment of quiet solitude sparked a breakthrough creative epiphany.",
       "xp_recompensa": 20
+    },
+    {
+      "id": "q_pv_01",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B1",
+      "pergunta": "Complete com a forma correta do pronome: 'The radio was too loud, so she turned ___.'",
+      "resposta_correta": "it off",
+      "alternativas": [
+        "it off",
+        "off it",
+        "off them",
+        "to off"
+      ],
+      "explicacao": "'Turn off' é um phrasal verb separável; quando o objeto é um pronome (it), ele DEVE ficar no meio: 'turned it off'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_02",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "B1",
+      "pergunta": "Qual partícula completa o phrasal verb com sentido de 'desistir'? 'Never give ___ on your dreams!'",
+      "resposta_correta": "up",
+      "alternativas": [
+        "up",
+        "out",
+        "away",
+        "in"
+      ],
+      "explicacao": "'Give up' significa desistir. 'Never give up on your dreams!'",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_03",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B2",
+      "pergunta": "Qual frase com 'look after' (cuidar de) está gramaticalmente correta?",
+      "resposta_correta": "Can you look after them while I am away?",
+      "alternativas": [
+        "Can you look after them while I am away?",
+        "Can you look them after while I am away?",
+        "Can you look after to them while I am away?",
+        "Can you look them after to while I am away?"
+      ],
+      "explicacao": "'Look after' é um phrasal verb inseparável (Tipo 3). O pronome deve ficar sempre DEPOIS da preposição: 'look after them'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_04",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Significado",
+      "nivel": "B1",
+      "pergunta": "O que significa o phrasal verb 'run out of' em: 'We ran out of coffee'?",
+      "resposta_correta": "Ficamos sem estoque / acabou o café",
+      "alternativas": [
+        "Ficamos sem estoque / acabou o café",
+        "Derrubamos o café no chão",
+        "Corremos para comprar café",
+        "Tomamos café correndo"
+      ],
+      "explicacao": "'Run out of' é um phrasal verb de 3 palavras (Tipo 4) que significa esgotar o estoque ou ficar sem algo.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_05",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "A2",
+      "pergunta": "Complete com a partícula correta: 'Please take ___ your shoes before entering the temple.' (tirar os sapatos)",
+      "resposta_correta": "off",
+      "alternativas": [
+        "off",
+        "out",
+        "down",
+        "away"
+      ],
+      "explicacao": "'Take off' significa tirar uma peça de roupa ou sapato (e também a decolagem de um avião).",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_06",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B2",
+      "pergunta": "Assinale a opção com a ordem OBRIGATÓRIA do pronome: 'I dropped my keys and Sean picked ___.'",
+      "resposta_correta": "them up",
+      "alternativas": [
+        "them up",
+        "up them",
+        "up they",
+        "they up"
+      ],
+      "explicacao": "Em phrasal verbs separáveis (pick up), pronomes objetos plurais (them) devem ficar no meio: 'picked them up'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_07",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Significado",
+      "nivel": "B2",
+      "pergunta": "Qual é o significado de 'put off' em: 'Don't put off until tomorrow what you can do today'?",
+      "resposta_correta": "Adiar / procrastinar",
+      "alternativas": [
+        "Adiar / procrastinar",
+        "Desligar",
+        "Colocar fora",
+        "Vestir"
+      ],
+      "explicacao": "'Put off' significa adiar ou postergar uma tarefa.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_08",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "B1",
+      "pergunta": "Complete a frase: 'I am really looking forward ___ meeting your family this weekend!'",
+      "resposta_correta": "to",
+      "alternativas": [
+        "to",
+        "for",
+        "at",
+        "with"
+      ],
+      "explicacao": "A expressão de 3 palavras é 'look forward to' (aguardar ansiosamente por algo).",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_09",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B2",
+      "pergunta": "Qual frase com o verbo 'come across' (encontrar por acaso) está correta?",
+      "resposta_correta": "I came across an old diary in the attic.",
+      "alternativas": [
+        "I came across an old diary in the attic.",
+        "I came an old diary across in the attic.",
+        "I came across it to in the attic.",
+        "I came an old diary across to in the attic."
+      ],
+      "explicacao": "'Come across' é inseparável (Tipo 3); o objeto nunca pode ficar entre 'come' e 'across'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_10",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "B1",
+      "pergunta": "Complete com a partícula que significa 'cancelar': 'Due to bad weather, they had to call ___ the concert.'",
+      "resposta_correta": "off",
+      "alternativas": [
+        "off",
+        "out",
+        "away",
+        "up"
+      ],
+      "explicacao": "'Call off' significa cancelar um evento previamente planejado.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_11",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Significado",
+      "nivel": "B1",
+      "pergunta": "O que significa 'break down' quando dito sobre uma máquina ou veículo: 'My car broke down on the highway'?",
+      "resposta_correta": "Enguiçar / parar de funcionar",
+      "alternativas": [
+        "Enguiçar / parar de funcionar",
+        "Bater contra outro carro",
+        "Ficar sem combustível",
+        "Pegar fogo"
+      ],
+      "explicacao": "'Break down' é intransitivo e significa quebrar ou enguiçar mecanicamente.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_12",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B1",
+      "pergunta": "Qual das opções apresenta a colocação correta de 'fill in' (preencher) com pronome?",
+      "resposta_correta": "Here is the form; please fill it in.",
+      "alternativas": [
+        "Here is the form; please fill it in.",
+        "Here is the form; please fill in it.",
+        "Here is the form; please fill in to it.",
+        "Here is the form; please to fill in it."
+      ],
+      "explicacao": "'Fill in' é separável; com pronome 'it', é obrigatório colocar no meio: 'fill it in'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_13",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "B2",
+      "pergunta": "Complete com a preposição correta: 'How do you put up ___ all that construction noise every day?' (tolerar)",
+      "resposta_correta": "with",
+      "alternativas": [
+        "with",
+        "for",
+        "about",
+        "to"
+      ],
+      "explicacao": "'Put up with' é a locução de 3 palavras para suportar ou tolerar algo desagradável.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_14",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Significado",
+      "nivel": "B2",
+      "pergunta": "Qual é o sentido de 'bring up' em: 'Please don't bring up politics during Sunday dinner'?",
+      "resposta_correta": "Mencionar / trazer à tona um assunto",
+      "alternativas": [
+        "Mencionar / trazer à tona um assunto",
+        "Subir escadas",
+        "Servir comida",
+        "Comprar presentes"
+      ],
+      "explicacao": "'Bring up' significa levantar ou mencionar um tópico em uma conversa.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_15",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B2",
+      "pergunta": "Qual frase expressa corretamente o ato de descartar o lixo?",
+      "resposta_correta": "Don't throw those papers away; throw them in the recycling bin.",
+      "alternativas": [
+        "Don't throw those papers away; throw them in the recycling bin.",
+        "Don't throw away them; throw in them the bin.",
+        "Don't throw them away to; throw away to them.",
+        "Don't throw to them away; throw them away to."
+      ],
+      "explicacao": "'Throw away' é separável. Com substantivo podemos usar 'throw those papers away' e com pronome 'throw them away'.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_16",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "B1",
+      "pergunta": "Complete a frase para dizer 'aparecer / chegar': 'We waited for an hour, but she didn't show ___.'",
+      "resposta_correta": "up",
+      "alternativas": [
+        "up",
+        "on",
+        "in",
+        "off"
+      ],
+      "explicacao": "'Show up' é um phrasal verb intransitivo que significa comparecer ou chegar a um local.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_17",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Significado",
+      "nivel": "B2",
+      "pergunta": "O que significa 'get over' em: 'It took him several months to get over the flu'?",
+      "resposta_correta": "Recuperar-se / superar uma doença ou choque",
+      "alternativas": [
+        "Recuperar-se / superar uma doença ou choque",
+        "Pular por cima de algo",
+        "Pegar uma gripe nova",
+        "Ficar com febre alta"
+      ],
+      "explicacao": "'Get over' significa curar-se de uma doença ou superar uma desilusão amorosa/crise.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_18",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Sintaxe",
+      "nivel": "B1",
+      "pergunta": "Qual das opções está INCORRETA segundo a regra do pronome no meio?",
+      "resposta_correta": "Turn off it right now!",
+      "alternativas": [
+        "Turn off it right now!",
+        "Turn it off right now!",
+        "Turn off the lights right now!",
+        "Turn the lights off right now!"
+      ],
+      "explicacao": "'Turn off it' viola a regra de ouro: se o objeto for pronome, a separação é obrigatória ('Turn it off').",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_19",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Partícula",
+      "nivel": "B1",
+      "pergunta": "Complete com a partícula que significa 'pesquisar no dicionário': 'If you don't know the word, look it ___.'",
+      "resposta_correta": "up",
+      "alternativas": [
+        "up",
+        "for",
+        "at",
+        "in"
+      ],
+      "explicacao": "'Look up' significa consultar uma informação em um livro, dicionário ou na internet.",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "q_pv_20",
+      "templo": "phrasal",
+      "categoria": "phrasal_verbs",
+      "tipo": "Significado",
+      "nivel": "B2",
+      "pergunta": "Em 'Against all odds, the team managed to pull off a victory', o que significa 'pull off'?",
+      "resposta_correta": "Conseguir realizar algo muito difícil com êxito",
+      "alternativas": [
+        "Conseguir realizar algo muito difícil com êxito",
+        "Puxar a corda com força",
+        "Desistir na metade do jogo",
+        "Empatar o campeonato"
+      ],
+      "explicacao": "'Pull off' é uma expressão idiomática clássica para ter sucesso em um feito improvável ou difícil.",
+      "xp_recompensa": 25
     }
   ]
 }
