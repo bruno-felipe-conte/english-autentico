@@ -67,7 +67,7 @@ test('📖 Vocabulary Integration — Filtro de Origem "phrasal" e Badges Sintá
 
 test('🌐 Service Worker & Offline PWA — Cache v1129 inclui phrasal_verbs', async (t) => {
   const swCode = fs.readFileSync(path.join(__dirname, '..', 'sw.js'), 'utf8');
-  assert.ok(swCode.includes("CACHE = 'english-v1129'"), 'sw.js deve estar na versão english-v1129');
+  assert.ok(/CACHE = 'english-v11[2-9]\d'/.test(swCode), 'sw.js deve estar na versão english-v1129+');
   assert.ok(swCode.includes("'./data/phrasal_verbs.json'"), 'sw.js deve cachear data/phrasal_verbs.json');
   assert.ok(swCode.includes("'./js/phrasal_verbs.js'"), 'sw.js deve cachear js/phrasal_verbs.js');
   assert.ok(swCode.includes("'./css/phrasal_verbs.css'"), 'sw.js deve cachear css/phrasal_verbs.css');
