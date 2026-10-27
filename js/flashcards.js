@@ -181,8 +181,8 @@ const Flashcards = {
   // ── Initialize for a specific temple ──────────────────────
   init(templo) {
     if (!templo) return;
-    const ehCustom = templo === 'custom';
-    if (!ehCustom) {
+    const ehEspecial = templo === 'custom' || templo === 'phrasal';
+    if (!ehEspecial) {
       if (isNaN(templo)) return;
       if (!Progressao.temploDesbloqueado(templo)) {
         App.notificar('notif_fc_bloqueado', 'erro');
@@ -244,7 +244,18 @@ const Flashcards = {
   // ── Load and sort cards due for review ────────────────────
   carregarCartas() {
     let listaPalavras = [];
-    if (this.temploAtual === 'custom') {
+    if (this.temploAtual === 'phrasal') {
+      const phrasals = App.estado?.phrasalVerbsData || (window.PhrasalVerbs && window.PhrasalVerbs.dados) || [];
+      listaPalavras = phrasals.map(v => ({
+        id: v.id,
+        ingles: v.phrasal_verb,
+        portugues: v.significado_pt,
+        exemplo: v.exemplo + (v.exemplo_pt ? ' — ' + v.exemplo_pt : ''),
+        audio_ipa: v.audio_ipa,
+        categoria: 'phrasal_verb',
+        nivel: v.nivel || 'B1'
+      }));
+    } else if (this.temploAtual === 'custom') {
       const todos = App.estado?.vocabCache || [];
       listaPalavras = todos.filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
     } else {
@@ -1218,7 +1229,18 @@ const Flashcards = {
   // ── Practice all cards regardless of schedule ─────────────
   praticaTodas() {
     let palavrasTemplo = [];
-    if (this.temploAtual === 'custom') {
+    if (this.temploAtual === 'phrasal') {
+      const phrasals = App.estado?.phrasalVerbsData || (window.PhrasalVerbs && window.PhrasalVerbs.dados) || [];
+      palavrasTemplo = phrasals.map(v => ({
+        id: v.id,
+        ingles: v.phrasal_verb,
+        portugues: v.significado_pt,
+        exemplo: v.exemplo + (v.exemplo_pt ? ' — ' + v.exemplo_pt : ''),
+        audio_ipa: v.audio_ipa,
+        categoria: 'phrasal_verb',
+        nivel: v.nivel || 'B1'
+      }));
+    } else if (this.temploAtual === 'custom') {
       palavrasTemplo = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
     } else {
       const data = App.estado.templosData[this.temploAtual];
@@ -1329,6 +1351,14 @@ const Flashcards = {
       opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
       sel.appendChild(opt);
     });
+
+    // Adiciona opção de Phrasal Verbs
+    const optPhrasal = document.createElement('option');
+    optPhrasal.value = 'phrasal';
+    optPhrasal.textContent = '🧩 Phrasal Verbs (415 Verbos)';
+    optPhrasal.style.fontWeight = 'bold';
+    optPhrasal.style.color = '#003E8A';
+    sel.appendChild(optPhrasal);
 
     // Adiciona opção de deck customizado se houver palavras adicionadas via IA
     const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));

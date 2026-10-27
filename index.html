@@ -31,6 +31,7 @@
   <meta name="apple-mobile-web-app-title" content="English">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://translate.googleapis.com https://api.mymemory.translated.net; img-src 'self' data:; base-uri 'self'; form-action 'self';">
   <link rel="stylesheet" href="css/components.css?v=1127">
+  <link rel="stylesheet" href="css/phrasal_verbs.css?v=1129">
 </head>
 <body>
   <script>
@@ -109,6 +110,7 @@
       <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')" title="Quiz"><span class="nav-tab-icon">❓</span><span class="nav-tab-label" data-i18n="top_nav_quiz">Quiz</span></button>
       <button class="nav-tab" data-section="vocab" onclick="App.navegar('vocab')" title="Vocabulary"><span class="nav-tab-icon">📖</span><span class="nav-tab-label" data-i18n="top_nav_vocabolario">Vocabolario</span></button>
       <button class="nav-tab" data-section="grammar" onclick="App.navegar('grammar')" title="Grammar"><span class="nav-tab-icon">📚</span><span class="nav-tab-label" data-i18n="top_nav_grammatica">Grammatica</span></button>
+      <button class="nav-tab" data-section="phrasal" onclick="App.navegar('phrasal')" title="Phrasal Verbs"><span class="nav-tab-icon">🧩</span><span class="nav-tab-label">Phrasal Verbs</span></button>
       <button class="nav-tab" data-section="stories" onclick="App.navegar('stories')" title="Stories"><span class="nav-tab-icon">📜</span><span class="nav-tab-label" data-i18n="top_nav_storie">Storie</span></button>
     </nav>
   </aside>
@@ -203,7 +205,7 @@
           <aside class="fc-studio-sidebar">
             <div class="card-selecao-templo">
               <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
-              <select id="flashcard-temple-select" onchange="Flashcards.init(this.value === 'custom' ? 'custom' : parseInt(this.value))">
+              <select id="flashcard-temple-select" onchange="Flashcards.init(this.value === 'custom' || this.value === 'phrasal' ? this.value : parseInt(this.value))">
                 <option value="">-- Seleziona tempio --</option>
               </select>
               <button class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="margin-left:auto;white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
@@ -390,6 +392,9 @@
       </div>
     </section>
 
+    <!-- SECTION: Phrasal Verbs Lab -->
+    <section id="sec-phrasal" class="section"></section>
+
     <!-- SECTION: Storie -->
     <section id="sec-stories" class="section">
       <h2 class="section-titulo" data-i18n="storie_titulo_secao">English Reading</h2>
@@ -426,6 +431,7 @@
         <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #003E8A;background:#003E8A;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
         <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
         <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
+        <button id="vocab-pill-phrasal" onclick="Vocab.filtroOrigem='phrasal';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🧩 Phrasal Verbs</button>
       </div>
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()" data-i18n="vocab_dificeis">⚠️ Difíceis</button>
@@ -586,6 +592,7 @@
   <script defer src="js/vocab.js?v=1125"></script>
   <script defer src="js/heatmap.js?v=1125"></script>
   <script defer src="js/grammar.js?v=1125"></script>
+  <script defer src="js/phrasal_verbs.js?v=1129"></script>
   <script defer src="js/profile.js?v=1125"></script>
   <script defer src="js/dialogues.js?v=1125"></script>
   <script defer src="js/songs.js?v=1125"></script>

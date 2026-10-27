@@ -61,12 +61,31 @@ var Vocab = window.Vocab = {
     if (pT) pT.style.cssText = pillStyle(this.filtroOrigem === '');
     if (pC) pC.style.cssText = pillStyle(this.filtroOrigem === 'custom');
     if (pN) pN.style.cssText = pillStyle(this.filtroOrigem === 'nativo');
+    const pP = document.getElementById('vocab-pill-phrasal');
+    if (pP) pP.style.cssText = pillStyle(this.filtroOrigem === 'phrasal');
 
     // Apply filters
     let filtrados = todos;
 
-    if (this.filtroOrigem === 'custom') filtrados = filtrados.filter(p => p._custom || p.custom);
-    if (this.filtroOrigem === 'nativo') filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    if (this.filtroOrigem === 'phrasal') {
+      const phrasals = App.estado?.phrasalVerbsData || (window.PhrasalVerbs && window.PhrasalVerbs.dados) || [];
+      filtrados = phrasals.map(v => ({
+        id: v.id,
+        ingles: v.phrasal_verb,
+        portugues: v.significado_pt,
+        exemplo: v.exemplo + (v.exemplo_pt ? ' — ' + v.exemplo_pt : ''),
+        audio_ipa: v.audio_ipa,
+        categoria: 'phrasal_verb',
+        categoria_sintatica: v.categoria_sintatica,
+        tipo: v.tipo,
+        nivel: v.nivel || 'B1',
+        regra_pronome: v.regra_pronome
+      }));
+    } else if (this.filtroOrigem === 'custom') {
+      filtrados = filtrados.filter(p => p._custom || p.custom);
+    } else if (this.filtroOrigem === 'nativo') {
+      filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    }
 
     if (this.filtroTemplo) {
       const num = parseInt(this.filtroTemplo, 10);
@@ -192,6 +211,7 @@ var Vocab = window.Vocab = {
       if (this.filtroDificeis) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#FADBD8;color:#922B21;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">⚠️ Difíceis <button onclick="Vocab.toggleDificeis();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#922B21;padding:0 0.1rem" aria-label="Remover filtro difíceis">✕</button></span>`);
       if (this.filtroFavoritos) chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#FDEBD0;color:#CA6F1E;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">❤️ Favoritos <button onclick="Vocab.toggleFavoritos();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#CA6F1E;padding:0 0.1rem" aria-label="Remover filtro favoritos">✕</button></span>`);
       if (this.filtroOrigem === 'custom') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#E8DAEF;color:#6C3483;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">➕ Custom <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#6C3483;padding:0 0.1rem" aria-label="Remover filtro origem">✕</button></span>`);
+      if (this.filtroOrigem === 'phrasal') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#E0F2FE;color:#0369A1;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">🧩 Phrasal Verbs <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#0369A1;padding:0 0.1rem" aria-label="Remover filtro phrasal">✕</button></span>`);
       if (this.filtroOrigem === 'nativo') chips.push(`<span class="vocab-chip" style="display:inline-flex;align-items:center;gap:0.25rem;background:#D4EFDF;color:#1E8449;border-radius:999px;padding:0.15rem 0.5rem;font-size:0.72rem;font-weight:600">📦 Nativo <button onclick="Vocab.filtroOrigem='';Vocab.renderizar();" style="background:none;border:none;cursor:pointer;font-size:0.7rem;color:#1E8449;padding:0 0.1rem" aria-label="Remover filtro origem">✕</button></span>`);
       if (this.filtroFrequencia) {
         const labelsFreq = {
@@ -365,6 +385,7 @@ var Vocab = window.Vocab = {
       <span class="vocab-it">${this._escapar(p.ingles || '—')}</span>
       <span class="vocab-seta">→</span>
       <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
+      ${p.tipo ? `<span class="vocab-cat-badge" style="background:${p.tipo === 'separavel' ? '#E0F2FE;color:#0369A1' : p.tipo === 'inseparavel' ? '#FEF3C7;color:#92400E' : '#F1F5F9;color:#475569'};font-size:0.7rem;padding:0.1rem 0.35rem;border-radius:4px;">${p.tipo === 'separavel' ? '↔️ Separável' : p.tipo === 'inseparavel' ? '🔒 Inseparável' : p.tipo === 'intransitivo' ? '⚡ Intransitivo' : '🔗 3 Palavras'}</span>` : ''}
       ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
       ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
       ${freqBadge}
@@ -632,8 +653,22 @@ var Vocab = window.Vocab = {
     const todos = App.estado.vocabCache;
     let filtrados = todos;
     // Aplicar mesmos filtros do renderizar()
-    if (this.filtroOrigem === 'custom') filtrados = filtrados.filter(p => p._custom || p.custom);
-    if (this.filtroOrigem === 'nativo') filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    if (this.filtroOrigem === 'phrasal') {
+      const phrasals = App.estado?.phrasalVerbsData || (window.PhrasalVerbs && window.PhrasalVerbs.dados) || [];
+      filtrados = phrasals.map(v => ({
+        id: v.id,
+        ingles: v.phrasal_verb,
+        portugues: v.significado_pt,
+        exemplo: v.exemplo + (v.exemplo_pt ? ' — ' + v.exemplo_pt : ''),
+        audio_ipa: v.audio_ipa,
+        categoria: 'phrasal_verb',
+        nivel: v.nivel || 'B1'
+      }));
+    } else if (this.filtroOrigem === 'custom') {
+      filtrados = filtrados.filter(p => p._custom || p.custom);
+    } else if (this.filtroOrigem === 'nativo') {
+      filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    }
     if (this.filtroTemplo) {
       const num = parseInt(this.filtroTemplo, 10);
       filtrados = filtrados.filter(p => p.templo_num === num);
@@ -875,8 +910,22 @@ var Vocab = window.Vocab = {
   estudarFiltroAtual() {
     const todos = App.estado.vocabCache;
     let filtrados = todos;
-    if (this.filtroOrigem === 'custom') filtrados = filtrados.filter(p => p._custom || p.custom);
-    if (this.filtroOrigem === 'nativo') filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    if (this.filtroOrigem === 'phrasal') {
+      const phrasals = App.estado?.phrasalVerbsData || (window.PhrasalVerbs && window.PhrasalVerbs.dados) || [];
+      filtrados = phrasals.map(v => ({
+        id: v.id,
+        ingles: v.phrasal_verb,
+        portugues: v.significado_pt,
+        exemplo: v.exemplo + (v.exemplo_pt ? ' — ' + v.exemplo_pt : ''),
+        audio_ipa: v.audio_ipa,
+        categoria: 'phrasal_verb',
+        nivel: v.nivel || 'B1'
+      }));
+    } else if (this.filtroOrigem === 'custom') {
+      filtrados = filtrados.filter(p => p._custom || p.custom);
+    } else if (this.filtroOrigem === 'nativo') {
+      filtrados = filtrados.filter(p => !p._custom && !p.custom);
+    }
     if (this.filtroTemplo) {
       const num = parseInt(this.filtroTemplo, 10);
       filtrados = filtrados.filter(p => p.templo_num === num);

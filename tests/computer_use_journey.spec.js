@@ -299,4 +299,64 @@ test.describe('End-to-End User Journeys (Computer Use Testing)', () => {
     await page.waitForTimeout(300);
     expect(await page.locator('.vocab-item').count()).toBeGreaterThan(0);
   });
+  test('8. Phrasal Verbs Lab: Exploration, Mini-Game and Cross-Modal Practice', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.app-container');
+
+    // 1. Navigate to Phrasal Verbs Lab
+    await page.evaluate(() => App.navegar('phrasal'));
+    await page.waitForSelector('#sec-phrasal.active');
+    await page.waitForSelector('.phrasal-card');
+
+    // Verify stats and count
+    const cardCount = await page.locator('.phrasal-card').count();
+    expect(cardCount).toBe(415);
+
+    // Verify Pronoun Rule Educational Banner
+    await expect(page.locator('.phrasal-pronoun-banner')).toBeVisible();
+    await expect(page.locator('.pronoun-badge-good')).toContainText('Turn it off');
+
+    // 2. Filter by search
+    await page.fill('#phrasal-search-input', 'turn');
+    await page.waitForTimeout(300);
+    const turnCount = await page.locator('.phrasal-card').count();
+    expect(turnCount).toBeGreaterThanOrEqual(5);
+
+    // Clear search
+    await page.fill('#phrasal-search-input', '');
+    await page.waitForTimeout(200);
+
+    // 3. Mini-Game: O Pronome no Meio
+    await page.click('.phrasal-minigame-btn');
+    await page.waitForSelector('.phrasal-modal-overlay');
+    await expect(page.locator('.phrasal-modal-title')).toContainText('O Pronome no Meio');
+
+    // Click an option and verify feedback is shown
+    await page.click('#game-opt-0');
+    await expect(page.locator('#game-feedback')).toBeVisible();
+
+    // Close mini-game
+    await page.click('.phrasal-modal-close');
+    await page.waitForSelector('.phrasal-modal-overlay', { state: 'detached' });
+
+    // 4. Flashcards Cross-Modal Integration
+    await page.evaluate(() => App.navegar('flashcards'));
+    await page.waitForSelector('#flashcard-temple-select');
+    await page.selectOption('#flashcard-temple-select', 'phrasal');
+    await page.waitForTimeout(400);
+
+    // Verify flashcard is rendered with phrasal verb data
+    const cardVisible = await page.locator('#flashcard').isVisible();
+    expect(cardVisible).toBe(true);
+
+    // 5. Vocab Cross-Modal Integration
+    await page.evaluate(() => App.navegar('vocab'));
+    await page.waitForSelector('#vocab-origem-pills');
+    await page.click('#vocab-pill-phrasal');
+    await page.waitForTimeout(300);
+
+    // Verify vocab list displays phrasal verbs with syntactic badges
+    const vocabItems = page.locator('.vocab-item');
+    expect(await vocabItems.count()).toBeGreaterThan(0);
+  });
 });

@@ -43,7 +43,8 @@ const AppState = {
     templosData: {},       // { 1: { templo, nome, cidade, nivel, palavras: [] }, ... }
     quizData: [],          // flat array of all quiz questions
     vocabCache: [],        // flat array of all words (with templo_num attached)
-    conjugacoesData: [],   // verb conjugation data
+    conjugacoesData: [],
+    phrasalVerbsData: [],   // verb conjugation data
     progresso: null,       // persisted in localStorage
     flashcardData: {}      // persisted in localStorage
   },

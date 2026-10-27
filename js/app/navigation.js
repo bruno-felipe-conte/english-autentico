@@ -40,6 +40,7 @@ const AppNavigation = {
       'vocabolario': 'vocab',
       'grammatica': 'grammar',
       'storie': 'stories',
+      'phrasal_verbs': 'phrasal', 'phrasal': 'phrasal',
       'profilo': 'profile'
     };
     secao = sectionMap[secao] || secao;
@@ -96,6 +97,9 @@ const AppNavigation = {
     }
     if ((secao === 'grammar' || secao === 'grammatica') && typeof Grammatica !== 'undefined') {
       Grammatica.renderizarSeletor ? Grammatica.renderizarSeletor() : null;
+    }
+    if (secao === 'phrasal' && typeof PhrasalVerbs !== 'undefined') {
+      if (PhrasalVerbs.renderizar) PhrasalVerbs.renderizar();
     }
     if ((secao === 'stories' || secao === 'storie') && typeof Stories !== 'undefined') {
       Stories._filtroNivel = '';

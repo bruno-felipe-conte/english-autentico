@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker | Cache v1128 | Offline-first PWA
+// sw.js — Service Worker | Cache v1129 | Offline-first PWA
 // Strategy:
 //   • Static assets  → cache-first (JS, CSS, HTML, icons)
 //   • /data/*.json   → network-first with cache fallback
 //   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1128';
+const CACHE = 'english-v1129';
 
 // All critical assets required for 100% offline functionality
 const STATIC = [
@@ -31,6 +31,8 @@ const STATIC = [
   './css/english.css?v=1125',
   './css/components.css',
   './css/components.css?v=1127',
+  './css/phrasal_verbs.css',
+  './css/phrasal_verbs.css?v=1129',
   // Decoupled i18n locales
   './data/locales/pt-BR.json',
   './data/locales/en-US.json',
@@ -57,6 +59,8 @@ const STATIC = [
   './js/pronunciation.js?v=1125',
   './js/flashcards.js?v=1126',
   './js/grammar.js?v=1125',
+  './js/phrasal_verbs.js',
+  './js/phrasal_verbs.js?v=1129',
   './js/heatmap.js?v=1125',
   './js/onboarding.js?v=1125',
   './js/backup_reminder.js?v=1125',
@@ -78,6 +82,7 @@ const STATIC = [
   // Datasets
   './data/conjugacoes.json',
   './data/grammar.json',
+  './data/phrasal_verbs.json',
   './data/quizzes.json',
   './data/dialogues.json',
   './data/songs.json',

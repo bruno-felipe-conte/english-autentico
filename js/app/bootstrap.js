@@ -68,6 +68,15 @@ const AppBootstrap = {
     );
 
     promises.push(
+      fetch('data/phrasal_verbs.json')
+        .then(r => r.ok ? r.json() : { verbos: [] })
+        .then(data => {
+          this.estado.phrasalVerbsData = data.verbos || [];
+        })
+        .catch(() => { this.estado.phrasalVerbsData = []; })
+    );
+
+    promises.push(
       fetch('data/grammar.json')
         .then(r => r.ok ? r.json() : { moduli: [] })
         .then(data => {

@@ -1,17 +1,17 @@
-# Graph Report - english-autentico  (2026-10-26)
+# Graph Report - english-autentico  (2026-10-27)
 
 ## Corpus Check
-- 219 files · ~1,191,070 words
+- 222 files · ~1,221,528 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 11 file(s) not represented in the graph (top: .css 9, (none) 1, .webmanifest 1)
+- Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1153 nodes · 1222 edges · 126 communities (55 shown, 71 thin omitted)
+- 1180 nodes · 1271 edges · 133 communities (64 shown, 69 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7fbbc34`
+- Built from commit: `ce6cdcad`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,19 +34,26 @@
 - enrich_wave3_part2.mjs
 - enrich_wave3_part3.mjs
 - backup_reminder.js
-- error-boundary.js
+- Vozes dos Especialistas — Diagnóstico Individual
 - SPEC — Expansão para 5.000 Palavras Italianas
 - quiz.js
 - sanitize.js
-- voice_engine.js
+- phrasal_verbs.test.js
 - enrich_wave7_part2.mjs
 - GRAMMAR (Gramática) — Relatório PDCA Completo
 - Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)
+- Ações de Médio Prazo (1–4 semanas)
+- PDCA_GRAMATICA_BRAINSTORM.md
 - Canonical AI Content Generation Prompts Guide
 - enrich_wave2_part2.mjs
 - SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)
 - 1. O Padrão Ouro Científico (Estado da Arte)
 - Checklist de Auditoria Completa — English Autentico PWA
+- Ações Estruturais (1–3 meses)
+- ◉ A C T — PADRONIZAÇÃO E PRÓXIMO CICLO
+- ⚖️ DECISÕES CONTROVERSAS
+- ◉ C H E C K — MÉTRICAS
+- 📅 ROADMAP 30 · 60 · 90
 - ref_http
 - Abas e seus parâmetros
 - ═══════════════════════════════════════════════════════════════
@@ -58,8 +65,8 @@
 - QA & Bug Audit Instructions for English Autentico
 - 🇺🇸 English Autentico
 - PROTOCOLO: VERIFICAÇÃO DE CICLO COMPLETO
-- PDCA_GRAMATICA_BRAINSTORM.md
-- Feature Sync & Audit: Audio Speed & Language Toggle
+- Debates Cruzados
+- phrasal_verbs.js
 - Feature Sync: AI Handoff Instructions
 - Ações Imediatas (até 1 semana — sem refatoração de código)
 - tts_worker.js
@@ -147,30 +154,30 @@
 1. `═══════════════════════════════════════════════════════════════` - 32 edges
 2. `Checklist de Auditoria Completa — English Autentico PWA` - 28 edges
 3. `═══════════════════════════════════════════════════════════════` - 17 edges
-4. `renderizar()` - 16 edges
-5. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
-6. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
-7. `Públicos (chamados do HTML):` - 14 edges
+4. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
+5. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
+6. `renderizar()` - 15 edges
+7. `renderizar()` - 14 edges
 8. `Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)` - 13 edges
 9. `1️⃣ UNIT TESTS PER TEMPLE` - 12 edges
 10. `SPEC — Expansão para 5.000 Palavras Italianas` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Públicos (chamados do HTML):` --references--> `renderizar()`  [INFERRED]
-  VOCAB_PDCA_COMPLETO.md → js/vocab.js
+- `Audit Checklist for the LLM:` --references--> `init()`  [INFERRED]
+  DOCUMENTACAO/LLM_AUDIO_AND_LANGUAGE_SYNC.md → js/phrasal_verbs.js
+- `Arquitetura: Lazy Loading de Templos com base no `index.json`` --references--> `carregarDados()`  [INFERRED]
+  DOCUMENTACAO/PDCA_TEMPLOS.md → js/phrasal_verbs.js
 - `Públicos (chamados do HTML):` --references--> `toggleDificeis()`  [INFERRED]
   VOCAB_PDCA_COMPLETO.md → js/vocab.js
 - `Públicos (chamados do HTML):` --references--> `toggleFavoritos()`  [INFERRED]
   VOCAB_PDCA_COMPLETO.md → js/vocab.js
 - `Públicos (chamados do HTML):` --references--> `popularCategorias()`  [INFERRED]
   VOCAB_PDCA_COMPLETO.md → js/vocab.js
-- `Privados (internos):` --references--> `_popularFiltroTemplo()`  [INFERRED]
-  VOCAB_PDCA_COMPLETO.md → js/vocab.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (126 total, 71 thin omitted)
+## Communities (133 total, 69 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -178,7 +185,7 @@ Nodes (4): CDPClient, createTab(), main(), sleep()
 
 ### Community 3 - "PDCA_TEMPLOS.md"
 Cohesion: 0.04
-Nodes (46): 1. AÇÕES IMEDIATAS (Até 1 semana), 1. Manter ou Traduzir a Chave `"italiano"` nos Arquivos JSON?, 2. A Senha de Bypass do Desenvolvedor (`2012`), 2. AÇÕES MÉDIAS (1 a 4 semanas), 3. AÇÕES ESTRUTURAIS (1 a 3 meses), ◉ ACT — PADRONIZAÇÃO, Ajuste A: Carga de Cidades americana correta (Desativar `TEMPLO_CIDADES` em favor dos dados do JSON), Ajuste B: Redação e inserção das descrições pedagógicas em falta (T11 ao T51) (+38 more)
+Nodes (45): 1. AÇÕES IMEDIATAS (Até 1 semana), 1. Manter ou Traduzir a Chave `"italiano"` nos Arquivos JSON?, 2. A Senha de Bypass do Desenvolvedor (`2012`), 2. AÇÕES MÉDIAS (1 a 4 semanas), 3. AÇÕES ESTRUTURAIS (1 a 3 meses), ◉ ACT — PADRONIZAÇÃO, Ajuste A: Carga de Cidades americana correta (Desativar `TEMPLO_CIDADES` em favor dos dados do JSON), Ajuste B: Redação e inserção das descrições pedagógicas em falta (T11 ao T51) (+37 more)
 
 ### Community 4 - "═══════════════════════════════════════════════════════════════"
 Cohesion: 0.05
@@ -220,9 +227,17 @@ Nodes (7): data, wave3Part1Lessons, data, wave4Part4Lessons, data, wave5Part1Les
 Cohesion: 0.06
 Nodes (31): App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR / CRIAR, Conceito, Conceito, Conceito, Conceito, CSS, CSS — Estilo dos Diálogos (+23 more)
 
+### Community 18 - "Vozes dos Especialistas — Diagnóstico Individual"
+Cohesion: 0.29
+Nodes (7): 🎓 Ana Paula (Pedagoga SLA), 🎮 Diego (Game Designer), 🔬 Fernanda (Linguista PhD), 🧠 Marcus (Psicólogo Educacional), 🎨 Roberto (LX Designer EdTech), 📱 Sofia (Aluna Real — Persona), Vozes dos Especialistas — Diagnóstico Individual
+
 ### Community 19 - "SPEC — Expansão para 5.000 Palavras Italianas"
 Cohesion: 0.07
 Nodes (26): 1. Usar o script base já existente, 2. Gerar em blocos de 5 templos por vez, 3. Critérios de qualidade por templo, 4. Atualizar core.js após gerar todos os templos, 5. Atualizar sw.js, 6. Commit e push final, App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR (+18 more)
+
+### Community 22 - "phrasal_verbs.test.js"
+Cohesion: 0.29
+Nodes (4): assert, fs, path, test
 
 ### Community 24 - "GRAMMAR (Gramática) — Relatório PDCA Completo"
 Cohesion: 0.08
@@ -231,6 +246,14 @@ Nodes (23): ALTA (P1 — Prioritária), CRÍTICA (P0 — Bloqueante para acessib
 ### Community 25 - "Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)"
 Cohesion: 0.09
 Nodes (22): Arquivos relevantes, Checklist de Qualidade por Unidade, Como Ler o Livro para Extrair Conteúdo, CSS Necessário (já implementado no index.html), Dois tipos de exercício:, Estado Atual do Projeto, Estrutura de cada unidade, Estrutura Exata do JSON (+14 more)
+
+### Community 26 - "Ações de Médio Prazo (1–4 semanas)"
+Cohesion: 0.33
+Nodes (6): ⑩ Micro-Animação de XP no Momento do Acerto, ⑪ Streak Diário Visível no Seletor, ⑦ Implementar o "Momento de Uso" Pós-Exercício, ⑧ Adicionar Timestamp às Lições Completadas + Badge de Revisão, ⑨ Surfar os Tópicos Difíceis do Aluno no Seletor, Ações de Médio Prazo (1–4 semanas)
+
+### Community 27 - "PDCA_GRAMATICA_BRAINSTORM.md"
+Cohesion: 0.40
+Nodes (4): 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · English Autentico, ◉ D O — AÇÕES, EQUIPE DE ESPECIALISTAS
 
 ### Community 28 - "Canonical AI Content Generation Prompts Guide"
 Cohesion: 0.11
@@ -247,6 +270,26 @@ Nodes (13): 1. O Padrão Ouro Científico (Estado da Arte), 2. Como o "English A
 ### Community 32 - "Checklist de Auditoria Completa — English Autentico PWA"
 Cohesion: 0.15
 Nodes (12): 12.1 js/ia-import.js, AÇÃO FINAL REQUERIDA, Checklist de Auditoria Completa — English Autentico PWA, CONTEXTO OBRIGATÓRIO (leia antes de começar), FORMATO DO RELATÓRIO DE SAÍDA, MÓDULO 12 — IA IMPORT, MÓDULO 18 — SEGURANÇA, MÓDULO 19 — PERFORMANCE (+4 more)
+
+### Community 33 - "Ações Estruturais (1–3 meses)"
+Cohesion: 0.40
+Nodes (5): ⑫ Criar Lição de Present Continuous no A1, ⑬ Segmentar Aba Estudo em Passos Paginados (máx. 3 elementos/tela), ⑭ Criar Lições A1 Ausentes vs. CEFR, ⑮ Desbloqueio por Mérito (substituir senha admin), Ações Estruturais (1–3 meses)
+
+### Community 34 - "◉ A C T — PADRONIZAÇÃO E PRÓXIMO CICLO"
+Cohesion: 0.50
+Nodes (4): ◉ A C T — PADRONIZAÇÃO E PRÓXIMO CICLO, Plano B (score < 60% ou abandono > 40% após 30 dias), Próximo Ciclo PDCA (60–90 dias), Se Funcionar (score médio ≥ 75% e retorno 48h ≥ 50% em 30 dias)
+
+### Community 35 - "⚖️ DECISÕES CONTROVERSAS"
+Cohesion: 0.50
+Nodes (4): Bloqueio de Módulos, ⚖️ DECISÕES CONTROVERSAS, Tensão vs. Segurança, UX vs. Pedagogia
+
+### Community 36 - "◉ C H E C K — MÉTRICAS"
+Cohesion: 0.50
+Nodes (4): ◉ C H E C K — MÉTRICAS, Método de Coleta (sem backend), Métricas Principais, Sinais de Alerta
+
+### Community 37 - "📅 ROADMAP 30 · 60 · 90"
+Cohesion: 0.50
+Nodes (4): Dia 30 (Sprint Urgente), Dia 60 (Sprint de Qualidade), Dia 90 (Sprint Estrutural), 📅 ROADMAP 30 · 60 · 90
 
 ### Community 38 - "ref_http"
 Cohesion: 0.10
@@ -292,21 +335,21 @@ Nodes (8): *"A different language is a different vision of life."* — Federico 
 Cohesion: 0.25
 Nodes (7): ✅ FORMATO DE RESPOSTA OBRIGATÓRIO, 🔄 FRONTEIRA DE CICLO, 🔀 FRONTEIRA DE ESTADO, 🔁 FRONTEIRA DE LEITURA, 🧩 FRONTEIRA DE MÓDULO, ⏱️ FRONTEIRA DE TEMPO, PROTOCOLO: VERIFICAÇÃO DE CICLO COMPLETO
 
-### Community 68 - "PDCA_GRAMATICA_BRAINSTORM.md"
-Cohesion: 0.06
-Nodes (34): ◉ A C T — PADRONIZAÇÃO E PRÓXIMO CICLO, ⚔️ Ana Paula × Diego — Pedagogia vs. Gamificação, 🎓 Ana Paula (Pedagoga SLA), Bloqueio de Módulos, ◉ C H E C K — MÉTRICAS, 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · English Autentico, Debates Cruzados (+26 more)
+### Community 68 - "Debates Cruzados"
+Cohesion: 0.25
+Nodes (8): ⚔️ Ana Paula × Diego — Pedagogia vs. Gamificação, Debates Cruzados, Diagnóstico Consolidado, ⚔️ Fernanda × Roberto — Rigor Linguístico vs. Fluidez de UX, Hipótese Central, ⚔️ Marcus × Sofia — Teoria vs. Experiência Vivida, ◉ P L A N — DIAGNÓSTICO, Raiz dos Problemas (por ordem de impacto)
 
-### Community 70 - "Feature Sync & Audit: Audio Speed & Language Toggle"
-Cohesion: 0.29
-Nodes (6): 1. UI Implementation (`js/profilo.js` or equivalent), 2. Audio Engine Integration (`js/core.js`), Audit Checklist for the LLM:, Feature Sync & Audit: Audio Speed & Language Toggle, Part 1: Implementing the Audio Speed Control, Part 2: Rigorous Audit of the Language Toggle (Immersion Mode)
+### Community 70 - "phrasal_verbs.js"
+Cohesion: 0.12
+Nodes (24): 1. UI Implementation (`js/profilo.js` or equivalent), 2. Audio Engine Integration (`js/core.js`), Audit Checklist for the LLM:, Feature Sync & Audit: Audio Speed & Language Toggle, Part 1: Implementing the Audio Speed Control, Part 2: Rigorous Audit of the Language Toggle (Immersion Mode), Arquitetura: Lazy Loading de Templos com base no `index.json`, abrirMiniGame() (+16 more)
 
 ### Community 71 - "Feature Sync: AI Handoff Instructions"
 Cohesion: 0.29
 Nodes (6): Feature 1: Dynamic Prompts (Modo i+1), Feature 2: Offline Push Notifications, Feature Sync: AI Handoff Instructions, Implementation Steps, Implementation Steps (`js/ia-import.js`), Verification & QA Checklist
 
 ### Community 72 - "Ações Imediatas (até 1 semana — sem refatoração de código)"
-Cohesion: 0.11
-Nodes (19): ⑩ Micro-Animação de XP no Momento do Acerto, ⑪ Streak Diário Visível no Seletor, ⑫ Criar Lição de Present Continuous no A1, ⑬ Segmentar Aba Estudo em Passos Paginados (máx. 3 elementos/tela), ⑭ Criar Lições A1 Ausentes vs. CEFR, ⑮ Desbloqueio por Mérito (substituir senha admin), ① Bug Crítico: Flip Cards em Branco, ② Score Mínimo para Bônus de Conclusão (+11 more)
+Cohesion: 0.29
+Nodes (7): ① Bug Crítico: Flip Cards em Branco, ② Score Mínimo para Bônus de Conclusão, ③ Mover o Alerta para Fora das Abas, ④ Instrução Clara no Blur-Reveal, ⑤ Reformular Campo "motivo" como Âncora Mnemônica (JSON puro), ⑥ Adicionar 3 Novas Armadilhas PT-BR → EN nas Lições A1 (JSON puro), Ações Imediatas (até 1 semana — sem refatoração de código)
 
 ### Community 81 - "tts_worker.js"
 Cohesion: 0.53
@@ -373,8 +416,8 @@ Cohesion: 0.50
 Nodes (3): pending, send(), ws
 
 ### Community 183 - "security.test.js"
-Cohesion: 0.12
-Nodes (5): Grammatica, assert, ErrorBoundary, Sanitize, test
+Cohesion: 0.11
+Nodes (7): ErrorBoundary, Grammatica, VoiceEngine, assert, ErrorBoundary, Sanitize, test
 
 ### Community 195 - "vocab.js"
 Cohesion: 0.10
@@ -394,19 +437,19 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 771 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **71 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 777 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **69 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Checklist de Auditoria Completa — English Autentico PWA` connect `Checklist de Auditoria Completa — English Autentico PWA` to `MÓDULO 6 — DIÁLOGOS`, `MÓDULO 7 — MÚSICAS (CANZONI)`, `MÓDULO 8 — LISTEN & REPEAT / IMITAÇÃO`, `MÓDULO 13 — VOCABULÁRIO AVANÇADO`, `MÓDULO 14 — ONBOARDING E TOUR`, `MÓDULO 15 — NOTIFICAÇÕES`, `MÓDULO 16 — ÁUDIO EXTERNO`, `MÓDULO 22 — TESTES`, `MÓDULO 9 — STORIE (HISTÓRIAS)`, `MÓDULO 2 — CORE E ESTADO DA APLICAÇÃO`, `MÓDULO 3 — GRAMÁTICA`, `MÓDULO 10 — QUIZ`, `MÓDULO 17 — SCRIPTS DE DADOS E FERRAMENTAS`, `MÓDULO 11 — PERFIL E PROGRESSO`, `MÓDULO 1 — ESTRUTURA DO PROJETO E ARQUIVOS`, `MÓDULO 4 — VOCABULÁRIO (TEMPLOS)`, `MÓDULO 5 — FLASHCARDS E SRS`?**
+- **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `http-server` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PDCA_TEMPLOS.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
-- **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
+  _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
+- **Why does `Checklist de Auditoria Completa — English Autentico PWA` connect `Checklist de Auditoria Completa — English Autentico PWA` to `MÓDULO 6 — DIÁLOGOS`, `MÓDULO 7 — MÚSICAS (CANZONI)`, `MÓDULO 8 — LISTEN & REPEAT / IMITAÇÃO`, `MÓDULO 13 — VOCABULÁRIO AVANÇADO`, `MÓDULO 14 — ONBOARDING E TOUR`, `MÓDULO 15 — NOTIFICAÇÕES`, `MÓDULO 16 — ÁUDIO EXTERNO`, `MÓDULO 22 — TESTES`, `MÓDULO 9 — STORIE (HISTÓRIAS)`, `MÓDULO 2 — CORE E ESTADO DA APLICAÇÃO`, `MÓDULO 3 — GRAMÁTICA`, `MÓDULO 10 — QUIZ`, `MÓDULO 17 — SCRIPTS DE DADOS E FERRAMENTAS`, `MÓDULO 11 — PERFIL E PROGRESSO`, `MÓDULO 1 — ESTRUTURA DO PROJETO E ARQUIVOS`, `MÓDULO 4 — VOCABULÁRIO (TEMPLOS)`, `MÓDULO 5 — FLASHCARDS E SRS`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Should `═══════════════════════════════════════════════════════════════` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
