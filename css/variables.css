@@ -11,6 +11,11 @@
   --safe-right:  env(safe-area-inset-right, 0px);
   --nav-height:  56px;
 
+  /* ── Fluid Scale Tokens (Etapa 1) ── */
+  --fs-base:    clamp(13px, 0.8vw + 9px, 16px);
+  --space-unit: clamp(6px, 0.6vw, 12px);
+  --h1-size:    clamp(28px, 3vw, 40px);
+
   /* ── Palette: British Academia & Warm Parchment ── */
   --cor-pergaminho:       #F5EDD8;
   --cor-marmore:          #FAF7F2;

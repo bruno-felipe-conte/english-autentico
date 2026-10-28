@@ -67,9 +67,16 @@ const AppXP = {
     const elMetaFill  = document.getElementById('meta-bar-fill');
     const elMetaLabel = document.getElementById('meta-bar-label');
     const elMetaXp    = document.getElementById('meta-bar-xp');
+    const elGoalBar   = document.getElementById('daily-goal-bar');
     if (elMetaFill)  elMetaFill.style.width   = metaPct + '%';
     if (elMetaLabel) elMetaLabel.textContent  = typeof I18n !== 'undefined' ? I18n.t('meta_do_dia_label') : 'Daily Goal';
     if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
+    if (elGoalBar) {
+      const labelTxt = typeof I18n !== 'undefined' ? I18n.t('meta_do_dia_label') : 'Meta do dia';
+      const tooltipMsg = `🎯 ${labelTxt}: ${ganhoHj}/${meta} XP (${metaPct}%)${ganhoHj >= meta ? ' ✅' : ''} • Clique para configurar`;
+      elGoalBar.setAttribute('data-tooltip', tooltipMsg);
+      elGoalBar.title = tooltipMsg;
+    }
   },
 
   ganharXP(quantidade) {

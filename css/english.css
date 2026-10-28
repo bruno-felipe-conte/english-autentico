@@ -57,7 +57,7 @@
 
 /* 3. RESET + BASE */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; font-size:18px; -webkit-text-size-adjust:100%; }
+html { scroll-behavior:smooth; font-size: var(--fs-base, 15px); -webkit-text-size-adjust:100%; }
 body {
   background-color: var(--cor-pergaminho);
   color: var(--cor-inchiostro);
@@ -162,13 +162,14 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 /* Título de seção — borda dourada centralizada */
 .section-titulo {
   font-family: var(--fonte-titulo);
-  font-size: 1.6rem;
+  font-size: var(--h1-size, clamp(26px, 2.8vw, 36px));
   font-weight: 600;
   color: var(--cor-veneziano-escuro);
   letter-spacing: .04em;
   text-align: center;
-  margin-bottom: var(--esp-lg);
-  padding-bottom: var(--esp-sm);
+  margin-top: 0.35rem;
+  margin-bottom: var(--esp-md, 1rem);
+  padding-bottom: var(--esp-xs, 0.25rem);
   position: relative;
 }
 .section-titulo::after {
@@ -177,7 +178,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 50px;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--cor-toscano), transparent);
   border-radius: 2px;
@@ -1026,7 +1027,7 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
 /* 15. RESPONSIVE */
 @media (max-width:400px) { .card-actions{flex-direction:column;} .opcoes-grid{grid-template-columns:1fr;} }
 @media (min-width:600px) { .tab-icone{display:none;} .tab-texto{display:block;} }
-@media (min-width:768px) { .templos-grid{grid-template-columns:repeat(2,1fr);} .flashcard{height:340px;} .section-titulo{font-size:2rem;} }
+@media (min-width:768px) { .templos-grid{grid-template-columns:repeat(2,1fr);} .flashcard{height:340px;} .section-titulo{font-size:var(--h1-size, 1.8rem);} }
 @media (min-width:1100px) { .templos-grid{grid-template-columns:repeat(3,1fr);} .app-container{padding:0 var(--esp-xl);} .flashcard{height:360px;max-width:560px;} }
 @media (min-width:1400px) { .templos-grid{grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)) !important; gap: 1.25rem;} }
 
@@ -3579,7 +3580,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
 @media (min-width: 1024px) {
   .app-sidebar {
     position: fixed;
-    top: var(--app-header-h, 70px); /* Encosta perfeitamente na linha vermelha do logo */
+    top: var(--app-header-h, 56px); /* Encosta perfeitamente na linha do header */
     left: 0;
     bottom: 0;
     width: 64px;
@@ -3602,13 +3603,13 @@ body.dark-mode .sidebar-pin-btn.ativo {
 
   /* Hover expansion when unpinned */
   .app-sidebar:hover:not(.pinned) {
-    width: 220px;
+    width: 200px;
     box-shadow: 8px 0 28px rgba(0, 0, 0, 0.18);
   }
 
   /* Pinned permanent expansion */
   body.sidebar-pinned .app-sidebar {
-    width: 220px;
+    width: 200px;
   }
 
   /* Área Principal Responsiva: envolve daily-goal-bar, app-container e footer */
@@ -3616,7 +3617,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     margin-left: 64px;
     width: calc(100% - 64px);
     max-width: calc(100vw - 64px);
-    min-height: calc(100vh - var(--app-header-h, 70px));
+    min-height: calc(100vh - var(--app-header-h, 56px));
     transition: margin-left 0.22s cubic-bezier(0.16, 1, 0.3, 1), width 0.22s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
@@ -3627,9 +3628,9 @@ body.dark-mode .sidebar-pin-btn.ativo {
   /* Quando a barra expande (hover ou pin), o conteúdo inteiro se adapta responsivamente sem ficar embaixo da barra */
   .app-sidebar:hover ~ .app-main-wrapper,
   body.sidebar-pinned .app-main-wrapper {
-    margin-left: 220px;
-    width: calc(100% - 220px);
-    max-width: calc(100vw - 220px);
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    max-width: calc(100vw - 200px);
   }
 
   .app-main-wrapper .daily-goal-bar {
@@ -3637,7 +3638,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     margin: 0;
     box-sizing: border-box;
     position: sticky;
-    top: var(--app-header-h, 70px);
+    top: var(--app-header-h, 56px);
     z-index: 900;
     background: var(--cor-marmore);
   }
@@ -3650,7 +3651,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto !important;
-    padding: 1rem 1.5rem;
+    padding: 0.6rem 1.25rem;
     box-sizing: border-box;
   }
 
@@ -3673,16 +3674,16 @@ body.dark-mode .sidebar-pin-btn.ativo {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 42px;
-    min-height: 42px;
+    height: 40px;
+    min-height: 40px;
     padding: 0 8px;
-    padding-right: 32px; /* space reserved for discrete pin on top tab */
+    padding-right: 28px;
     border-radius: 8px;
     border: 1px solid transparent;
     background: transparent;
     color: var(--cor-inchiostro);
     font-family: var(--fonte-ui);
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.18s ease, color 0.18s ease;
@@ -3692,7 +3693,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
   }
 
   .app-sidebar .nav-tab-icon {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     min-width: 34px;
     width: 34px;
     text-align: center;
@@ -3713,6 +3714,27 @@ body.dark-mode .sidebar-pin-btn.ativo {
   .app-sidebar.pinned .nav-tab-label {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  /* Tooltip flutuante instantâneo no estado recolhido */
+  .app-sidebar:not(:hover):not(.pinned) .nav-tab:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--cor-veneziano-escuro, #002D65);
+    color: #FAF7F2;
+    font-family: var(--fonte-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.32rem 0.65rem;
+    border-radius: 6px;
+    border: 1px solid rgba(212, 168, 67, 0.4);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    z-index: 1200;
+    pointer-events: none;
   }
 
   .app-sidebar .nav-tab:hover {
@@ -3745,6 +3767,12 @@ body.dark-mode .sidebar-pin-btn.ativo {
     box-shadow: 2px 0 16px rgba(0, 0, 0, 0.4);
   }
 
+  body.dark-mode .app-sidebar:not(:hover):not(.pinned) .nav-tab:hover::after {
+    background: #1C1816;
+    color: #EDE5D8;
+    border-color: rgba(212, 168, 67, 0.3);
+  }
+
   body.dark-mode .app-sidebar .nav-tab {
     color: #E6DFD3;
   }
@@ -3759,6 +3787,23 @@ body.dark-mode .sidebar-pin-btn.ativo {
     border-color: rgba(212, 168, 67, 0.4);
     color: #FFF8F0;
   }
+}
+
+/* Modo expandido em telas ultra-wide (≥1400px) */
+@media (min-width: 1400px) {
+  body:not(.sidebar-force-collapsed) .app-sidebar {
+    width: 200px;
+  }
+  body:not(.sidebar-force-collapsed) .app-sidebar .nav-tab-label {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body:not(.sidebar-force-collapsed) .app-main-wrapper {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    max-width: calc(100vw - 200px);
+  }
+}
 }
 
 /* Mobile & Tablet Fallback (< 1024px) */

@@ -50,34 +50,36 @@
   <!-- 1. Topo Horizontal Vermelho Clássico -->
   <header class="app-header">
     <div class="header-top">
-      <div class="header-logo-row">
+      <div class="header-left header-logo-row">
         <div class="app-logo">🇺🇸 <span class="logo-txt-full">English Autentico</span></div>
-        <div class="header-icons">
-          <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Alternar idioma / Switch language">
-            <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
-            <span class="lang-pill-div">|</span>
-            <span id="lang-pill-en" class="lang-pill-seg">EN</span>
-          </button>
-          <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
-          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
-          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('temples');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('profile')" title="Meu Perfil / My Profile"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
-        </div>
+        <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Alternar idioma / Switch language" aria-label="Alternar idioma entre Português e Inglês">
+          <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
+          <span class="lang-pill-div">|</span>
+          <span id="lang-pill-en" class="lang-pill-seg">EN</span>
+        </button>
       </div>
-      <div class="stats-bar" id="stats-bar">
+
+      <div class="header-center header-icons">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema claro/escuro" aria-label="Alternar tema claro ou escuro"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
+        <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons de feedback" aria-label="Ativar ou desativar efeitos sonoros"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
+        <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade da voz de pronúncia" aria-label="Alterar velocidade de reprodução de voz"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
+        <button class="theme-toggle-btn" onclick="App.navegar('temples');setTimeout(()=>Tour.reiniciar(),150)" title="Tour introdutório e ajuda" aria-label="Abrir tour de introdução e ajuda"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
+        <button class="theme-toggle-btn" onclick="App.navegar('profile')" title="Meu Perfil e Configurações" aria-label="Ir para Meu Perfil"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
+      </div>
+
+      <div class="header-right stats-bar" id="stats-bar">
         <div class="stats-primary-row">
-          <span class="stat-item" id="stat-nivel">Level 1</span>
-          <span class="stat-item" id="stat-xp">XP: 0/500</span>
-          <span class="stat-item" id="stat-streak">🔥 0 dias</span>
+          <span class="stat-item" id="stat-nivel" title="Nível atual">Level 1</span>
+          <span class="stat-item" id="stat-xp" title="Experiência acumulada">XP: 0/500</span>
+          <span class="stat-item" id="stat-streak" title="Ofensiva diária">🔥 0 dias</span>
         </div>
         <div class="stats-secondary-row">
-          <span class="stat-item secondary" id="stat-templi">Temples: 1/51</span>
-          <span class="stat-item secondary" id="stat-parole">Words: 0</span>
+          <span class="stat-item secondary" id="stat-templi" title="Templos desbloqueados">Temples: 1/51</span>
+          <span class="stat-item secondary" id="stat-parole" title="Palavras aprendidas">Words: 0</span>
         </div>
       </div>
     </div>
-    <div class="xp-bar-container">
+    <div class="xp-bar-container" title="Progresso para o próximo nível">
       <div class="xp-bar-fill" id="xp-bar-fill"></div>
     </div>
   </header>
@@ -117,12 +119,12 @@
 
   <!-- 3. Área Principal Responsiva (Nunca fica embaixo da barra) -->
   <div class="app-main-wrapper" id="app-main-wrapper">
-    <!-- Barra de Meta Diária Horizontal -->
-    <div class="daily-goal-bar" id="daily-goal-bar">
+    <!-- Barra de Meta Diária Horizontal Integrada (4px) -->
+    <div class="daily-goal-bar" id="daily-goal-bar" onclick="App.abrirMetaSettings()" title="Meta do dia (clique para configurar)" role="progressbar" aria-label="Meta diária de XP">
       <span class="meta-bar-label" id="meta-bar-label" data-i18n="meta_do_dia_label">🎯 Meta do dia</span>
       <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
       <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
-      <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
+      <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária" aria-label="Configurar meta diária">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
     </div>
 
     <!-- Meta settings modal -->
