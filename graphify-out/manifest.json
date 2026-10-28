@@ -384,9 +384,9 @@
     "semantic_hash": ""
   },
   "js/audio.js": {
-    "mtime": 1792534431.928457,
-    "seen": 1792536148.7956355,
-    "ast_hash": "11f70fddc30fe8bbf88da3b8687dcaa8",
+    "mtime": 1793226283.7635229,
+    "seen": 1793226402.038642,
+    "ast_hash": "cb08658f6eec8c5cf7c2808c0409cf38",
     "semantic_hash": ""
   },
   "js/audio_cache.js": {
@@ -546,14 +546,14 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1793226001.866568,
-    "seen": 1793226082.1924875,
-    "ast_hash": "ba92e0fdd58b605e09450c9cb2560c69",
+    "mtime": 1793226337.1181593,
+    "seen": 1793226403.5804412,
+    "ast_hash": "8da691cadfdf6f693cc6648c6a1b2a89",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
-    "mtime": 1793225966.2879968,
-    "seen": 1793226082.1924913,
+    "mtime": 1793226322.9478142,
+    "seen": 1793226403.5804472,
     "ast_hash": "f196824657d8858bc7fa44eecbba38b1",
     "semantic_hash": ""
   },
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793223165.8908198,
-    "seen": 1793224999.841289,
-    "ast_hash": "6a10068af875f1fe5e22ee9c94838696",
+    "mtime": 1793226247.803838,
+    "seen": 1793226404.11674,
+    "ast_hash": "7ee8ba1139426205ca878c96a309a486",
     "semantic_hash": ""
   },
   "playwright-report/index.html": {
@@ -1716,9 +1716,9 @@
     "semantic_hash": ""
   },
   "tests/stage1_acceptance.spec.js": {
-    "mtime": 1793223185.9086785,
-    "seen": 1793224999.689433,
-    "ast_hash": "7f6b223464f167c674fbe608a975b6a6",
+    "mtime": 1793226295.7263482,
+    "seen": 1793226403.7057357,
+    "ast_hash": "74dfd34ff1f3c51239e6f1843719063c",
     "semantic_hash": ""
   },
   "tests/stage2_acceptance.spec.js": {

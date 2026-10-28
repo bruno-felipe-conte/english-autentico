@@ -51,7 +51,10 @@ for (const vp of viewports) {
     // 5. Verify all header buttons and stats exist
     await expect(page.locator('#lang-toggle')).toBeVisible();
     await expect(page.locator('#theme-toggle')).toBeVisible();
-    await expect(page.locator('#btn-som')).toBeVisible();
+    const btnSom = page.locator('#btn-som');
+    await expect(btnSom).toBeVisible();
+    const btnSomIco = page.locator('#btn-som-ico');
+    await expect(btnSomIco).toHaveText('🔔');
     await expect(page.locator('#btn-audio-speed')).toBeVisible();
     await expect(page.locator('#stat-nivel')).toBeVisible();
     await expect(page.locator('#stat-xp')).toBeVisible();

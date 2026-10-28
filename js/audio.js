@@ -4,13 +4,21 @@
 // ============================================================
 
 const SomFeedback = {
-  ativo: false,
+  ativo: true,
   // NOTE: backing store for the AudioContext is this.__ctx (double underscore).
   // _ctx is a method (lazy getter) defined below — do NOT add a _ctx: null
   // property here as it would be silently overwritten by the method definition.
 
   init() {
-    this.ativo = localStorage.getItem('en_som') === '1';
+    // Garante que o app abra por padrão com o som liberado e não mutado
+    if (!localStorage.getItem('en_som_default_v2')) {
+      try {
+        localStorage.setItem('en_som', '1');
+        localStorage.setItem('en_som_default_v2', 'true');
+      } catch (_) {}
+    }
+    const salvo = localStorage.getItem('en_som');
+    this.ativo = salvo !== '0' && salvo !== 'false';
     this._atualizarBotao();
   },
 
@@ -22,19 +30,30 @@ const SomFeedback = {
     if (!this.ativo && 'speechSynthesis' in window) {
       speechSynthesis.cancel();
     }
-    App.notificar(this.ativo ? 'notif_sons_ativados' : 'notif_sons_desativados', 'alerta');
+    if (typeof App !== 'undefined' && App.notificar) {
+      App.notificar(this.ativo ? 'notif_sons_ativados' : 'notif_sons_desativados', 'alerta');
+    }
   },
 
   _atualizarBotao() {
     const btn = document.getElementById('btn-som');
-    if (btn) btn.textContent = this.ativo ? '🔔' : '🔕';
+    const ico = document.getElementById('btn-som-ico');
+    if (ico) {
+      ico.textContent = this.ativo ? '🔔' : '🔕';
+    } else if (btn) {
+      btn.textContent = this.ativo ? '🔔' : '🔕';
+    }
     if (btn) {
       if (typeof I18n !== 'undefined') {
-        btn.title = this.ativo
-          ? I18n.t('btn_som_ativo_title')
-          : I18n.t('btn_som_desativo_title');
+        const titleText = this.ativo
+          ? (I18n.t('btn_som_ativo_title') || 'Sons: ativados (clique para desligar)')
+          : (I18n.t('btn_som_desativo_title') || 'Sons: desativados (clique para ligar)');
+        btn.title = titleText;
+        btn.setAttribute('aria-label', titleText);
       } else {
-        btn.title = this.ativo ? 'Sons: ativados' : 'Sons: desativados';
+        const titleText = this.ativo ? 'Sons: ativados' : 'Sons: desativados';
+        btn.title = titleText;
+        btn.setAttribute('aria-label', titleText);
       }
     }
   },
