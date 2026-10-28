@@ -19,6 +19,39 @@ const Pronunciation = {
   _audioChunks: [],
   _userAudioUrl: null,
   _userAudioPlayer: null,
+  _recordedMimeType: '',
+
+  _isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      || (navigator.maxTouchPoints > 0 && /Macintosh|Mac OS/.test(navigator.userAgent))
+      || (window.innerWidth <= 768 && 'ontouchstart' in window);
+  },
+
+  _verificarContextoSeguro() {
+    const host = (typeof window !== 'undefined' && window.location && window.location.hostname) || (typeof location !== 'undefined' ? location.hostname : '');
+    if (typeof window !== 'undefined' && window.isSecureContext === false && !['localhost', '127.0.0.1'].includes(host)) {
+      return false;
+    }
+    return true;
+  },
+
+  _obterMimeTypeGravador() {
+    if (typeof MediaRecorder === 'undefined' || !MediaRecorder.isTypeSupported) return '';
+    const tipos = [
+      'audio/webm;codecs=opus',
+      'audio/webm',
+      'audio/mp4',
+      'audio/aac',
+      'audio/ogg;codecs=opus',
+      'audio/wav'
+    ];
+    for (const t of tipos) {
+      try {
+        if (MediaRecorder.isTypeSupported(t)) return t;
+      } catch (_) {}
+    }
+    return '';
+  },
 
   async load() {
     if (!this.dados) {
@@ -142,31 +175,38 @@ const Pronunciation = {
     }, Math.max(1200, frase.length * 75 * (1 / taxa)));
   },
 
-  // Inicializa o reconhecimento e o gravador local de áudio
+  // Inicializa a gravação local de áudio (MediaRecorder para auto-escuta comparativa)
   async _iniciarGravacaoMidia() {
     this._audioChunks = [];
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        this._mediaStream = stream;
-        this._mediaRecorder = new MediaRecorder(stream);
-        this._mediaRecorder.ondataavailable = (e) => {
-          if (e.data && e.data.size > 0) this._audioChunks.push(e.data);
-        };
-        this._mediaRecorder.onstop = () => {
-          if (this._audioChunks.length > 0) {
-            const blob = new Blob(this._audioChunks, { type: 'audio/webm' });
-            if (this._userAudioUrl) URL.revokeObjectURL(this._userAudioUrl);
-            this._userAudioUrl = URL.createObjectURL(blob);
-          }
-          if (this._mediaStream) {
-            this._mediaStream.getTracks().forEach(t => t.stop());
-            this._mediaStream = null;
-          }
-        };
-        this._mediaRecorder.start();
-      } catch (err) {
-        console.warn('MediaRecorder não disponível ou permissão negada:', err);
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return;
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      this._mediaStream = stream;
+      const mime = this._obterMimeTypeGravador();
+      this._recordedMimeType = mime;
+      this._mediaRecorder = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream);
+      this._mediaRecorder.ondataavailable = (e) => {
+        if (e.data && e.data.size > 0) this._audioChunks.push(e.data);
+      };
+      this._mediaRecorder.onstop = () => {
+        if (this._audioChunks.length > 0) {
+          const tipo = this._recordedMimeType || 'audio/webm';
+          const blob = new Blob(this._audioChunks, { type: tipo });
+          if (this._userAudioUrl) URL.revokeObjectURL(this._userAudioUrl);
+          this._userAudioUrl = URL.createObjectURL(blob);
+          this._atualizarBtnReplay();
+        }
+        if (this._mediaStream) {
+          this._mediaStream.getTracks().forEach(t => { try { t.stop(); } catch (_) {} });
+          this._mediaStream = null;
+        }
+      };
+      this._mediaRecorder.start();
+    } catch (err) {
+      console.warn('MediaRecorder não disponível ou permissão negada:', err);
+      if (this._mediaStream) {
+        this._mediaStream.getTracks().forEach(t => { try { t.stop(); } catch (_) {} });
+        this._mediaStream = null;
       }
     }
   },
@@ -174,6 +214,20 @@ const Pronunciation = {
   _pararGravacaoMidia() {
     if (this._mediaRecorder && this._mediaRecorder.state !== 'inactive') {
       try { this._mediaRecorder.stop(); } catch (_) {}
+    } else if (this._mediaStream) {
+      this._mediaStream.getTracks().forEach(t => { try { t.stop(); } catch (_) {} });
+      this._mediaStream = null;
+    }
+  },
+
+  _atualizarBtnReplay() {
+    const toolbar = document.querySelector('.dojo-replay-toolbar');
+    if (toolbar && this._userAudioUrl && !toolbar.querySelector('.btn-meu-audio')) {
+      const btn = document.createElement('button');
+      btn.className = 'btn-dojo-replay btn-meu-audio';
+      btn.onclick = () => Pronunciation.playMyRecording();
+      btn.innerHTML = '<span>🎧</span> Ouvir Minha Gravação';
+      toolbar.insertBefore(btn, toolbar.firstChild);
     }
   },
 
@@ -184,74 +238,207 @@ const Pronunciation = {
       this._userAudioPlayer.currentTime = 0;
     }
     this._userAudioPlayer = new Audio(this._userAudioUrl);
-    this._userAudioPlayer.play();
+    this._userAudioPlayer.play().catch(e => {
+      console.warn('Erro ao reproduzir áudio do usuário:', e);
+    });
   },
 
   initSpeechRecognition() {
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) {
-      alert("Seu navegador não suporta reconhecimento de voz (recomendamos Google Chrome ou Edge).");
+    if (!this._verificarContextoSeguro()) {
+      const msg = '🔒 O microfone requer conexão HTTPS no celular. Navegadores bloqueiam o microfone em conexões HTTP. Acesse via HTTPS (GitHub Pages).';
+      if (typeof App !== 'undefined' && App.notificar) App.notificar(msg, 'alerta');
+      const st = document.getElementById('dojo-mic-status');
+      if (st) st.innerText = msg;
       return false;
     }
 
-    this.recognition = new SR();
-    this.recognition.lang = 'en-US';
-    this.recognition.interimResults = false;
-    this.recognition.maxAlternatives = 1;
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) {
+      return false;
+    }
 
-    this.recognition.onstart = () => {
-      this.isRecording = true;
-      const btn = document.getElementById('dojo-btn-mic');
-      if (btn) btn.classList.add('recording');
-      const st = document.getElementById('dojo-mic-status');
-      if (st) st.innerHTML = '<span style="color:#E74C3C">●</span> Ouvindo... Fale com confiança!';
-    };
+    try {
+      this.recognition = new SR();
+      this.recognition.lang = 'en-US';
+      this.recognition.continuous = false;
+      this.recognition.interimResults = false;
+      this.recognition.maxAlternatives = 1;
 
-    this.recognition.onresult = (event) => {
-      const speechResult = event.results[0][0].transcript;
-      this.evaluatePronunciation(speechResult);
-    };
+      this.recognition.onstart = () => {
+        this.isRecording = true;
+        const btn = document.getElementById('dojo-btn-mic');
+        if (btn) btn.classList.add('recording');
+        const st = document.getElementById('dojo-mic-status');
+        if (st) st.innerHTML = '<span style="color:#E74C3C">●</span> Ouvindo... Fale com confiança!';
+      };
 
-    this.recognition.onerror = (event) => {
-      console.error('Erro de reconhecimento: ', event.error);
-      this.isRecording = false;
-      this._pararGravacaoMidia();
-      const btn = document.getElementById('dojo-btn-mic');
-      if (btn) btn.classList.remove('recording');
-      const st = document.getElementById('dojo-mic-status');
-      if (st) st.innerText = I18n.t('imit_erro_ouvir');
-    };
+      this.recognition.onresult = (event) => {
+        if (event.results && event.results[0] && event.results[0][0]) {
+          const speechResult = event.results[0][0].transcript;
+          this.evaluatePronunciation(speechResult);
+        }
+      };
 
-    this.recognition.onend = () => {
-      this.isRecording = false;
-      this._pararGravacaoMidia();
-      const btn = document.getElementById('dojo-btn-mic');
-      if (btn) btn.classList.remove('recording');
-      const st = document.getElementById('dojo-mic-status');
-      if (st && st.innerText.includes('Ouvindo')) {
-        st.innerText = 'Processando dicção...';
-      }
-    };
+      this.recognition.onerror = (event) => {
+        console.error('Erro de reconhecimento: ', event.error);
+        this.isRecording = false;
+        this._pararGravacaoMidia();
+        const btn = document.getElementById('dojo-btn-mic');
+        if (btn) btn.classList.remove('recording');
+        const st = document.getElementById('dojo-mic-status');
 
-    return true;
+        let erroTexto = I18n.t('imit_erro_ouvir') || 'Erro ao ouvir. Tente novamente.';
+        if (event.error === 'not-allowed') {
+          erroTexto = '🔒 Permissão de microfone negada. Ative o microfone nas permissões do navegador.';
+        } else if (event.error === 'service-not-allowed') {
+          erroTexto = '⚠️ Ditado por voz desativado no sistema (no iOS, ative em Ajustes > Teclado).';
+        } else if (event.error === 'audio-capture') {
+          erroTexto = '🎙️ Microfone indisponível ou ocupado por outro app.';
+        } else if (event.error === 'network') {
+          erroTexto = '🌐 Erro de rede ao conectar ao serviço de voz.';
+        } else if (event.error === 'no-speech') {
+          erroTexto = '🔇 Nenhuma fala detectada. Fale mais perto do microfone.';
+        }
+        if (st) st.innerText = erroTexto;
+        if (typeof App !== 'undefined' && App.notificar && (event.error === 'not-allowed' || event.error === 'service-not-allowed')) {
+          App.notificar(erroTexto, 'erro');
+        }
+      };
+
+      this.recognition.onend = () => {
+        this.isRecording = false;
+        this._pararGravacaoMidia();
+        const btn = document.getElementById('dojo-btn-mic');
+        if (btn) btn.classList.remove('recording');
+        const st = document.getElementById('dojo-mic-status');
+        if (st && st.innerText.includes('Ouvindo')) {
+          st.innerText = 'Processando dicção...';
+        }
+      };
+
+      return true;
+    } catch (e) {
+      console.warn('Falha ao inicializar SpeechRecognition:', e);
+      return false;
+    }
   },
 
-  async toggleRecording() {
+  toggleRecording() {
+    if (!this._verificarContextoSeguro()) {
+      const msg = '🔒 O microfone requer conexão HTTPS no celular. Navegadores bloqueiam o microfone em conexões HTTP. Acesse via HTTPS (GitHub Pages).';
+      if (typeof App !== 'undefined' && App.notificar) App.notificar(msg, 'alerta');
+      const st = document.getElementById('dojo-mic-status');
+      if (st) st.innerText = msg;
+      return;
+    }
+
+    const suportaSR = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+
+    // Se o navegador NÃO suporta Web Speech API (ex: Firefox mobile), ativa modo gravador comparativo
+    if (!suportaSR) {
+      this._toggleGravacaoFallback();
+      return;
+    }
+
     if (!this.recognition) {
-      if (!this.initSpeechRecognition()) return;
+      if (!this.initSpeechRecognition()) {
+        this._toggleGravacaoFallback();
+        return;
+      }
     }
 
     if (this.isRecording) {
-      this.recognition.stop();
+      try { this.recognition.stop(); } catch (_) {}
       this._pararGravacaoMidia();
+      this.isRecording = false;
+      const btn = document.getElementById('dojo-btn-mic');
+      if (btn) btn.classList.remove('recording');
+      const st = document.getElementById('dojo-mic-status');
+      if (st) st.innerText = 'Processando dicção...';
     } else {
-      await this._iniciarGravacaoMidia();
+      // SÍNCRONO: chama recognition.start() diretamente no frame de toque/clique do usuário
+      // Sem await antes para não expirar o gesto do usuário no Safari iOS e Chrome mobile
       try {
         this.recognition.start();
+        this.isRecording = true;
       } catch (e) {
-        console.warn('Erro ao iniciar reconhecimento:', e);
+        console.warn('Erro síncrono ao iniciar reconhecimento:', e);
+        try {
+          this.recognition.abort();
+          this.recognition.start();
+          this.isRecording = true;
+        } catch (e2) {
+          console.error('Falha crítica ao iniciar reconhecimento:', e2);
+          this._toggleGravacaoFallback();
+          return;
+        }
+      }
+
+      // Em desktop, grava áudio simultâneo para auto-escuta comparativa se suportado.
+      // Em mobile, NÃO gravamos via getUserMedia simultaneamente para evitar hardware lock.
+      if (!this._isMobile()) {
+        this._iniciarGravacaoMidia().catch(() => {});
       }
     }
+  },
+
+  // Modo fallback: Gravação e auto-escuta quando SpeechRecognition não existe (ex: Firefox mobile)
+  async _toggleGravacaoFallback() {
+    const btn = document.getElementById('dojo-btn-mic');
+    const st = document.getElementById('dojo-mic-status');
+
+    if (this.isRecording) {
+      this._pararGravacaoMidia();
+      this.isRecording = false;
+      if (btn) btn.classList.remove('recording');
+      if (st) st.innerText = 'Áudio gravado! Use os botões abaixo para ouvir e comparar.';
+      this._mostrarResultadoFallback();
+    } else {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        const msg = 'Seu navegador não suporta captura de microfone.';
+        if (st) st.innerText = msg;
+        if (typeof App !== 'undefined' && App.notificar) App.notificar(msg, 'alerta');
+        return;
+      }
+      this.isRecording = true;
+      if (btn) btn.classList.add('recording');
+      if (st) st.innerHTML = '<span style="color:#E74C3C">●</span> Gravando sua voz... Fale a frase e clique no mic para parar!';
+      await this._iniciarGravacaoMidia();
+    }
+  },
+
+  _mostrarResultadoFallback() {
+    const resContainer = document.getElementById('pronunciation-result') || document.getElementById('imitazione-resultado');
+    if (!resContainer) return;
+    resContainer.style.display = 'block';
+
+    resContainer.innerHTML = `
+      <div style="font-size:1.4rem;font-weight:700;color:#27AE60;margin-bottom:0.4rem;font-family:'Cinzel',serif">
+        Áudio Gravado com Sucesso! 🎧
+      </div>
+      <div style="font-size:0.95rem;color:var(--cor-inchiostro);margin-bottom:1rem">
+        Seu navegador não possui motor de transcrição por voz nativo (Web Speech API). Ouça sua gravação e compare com a pronúncia do modelo nativo:
+      </div>
+      <div class="dojo-replay-toolbar">
+        ${this._userAudioUrl ? `
+          <button class="btn-dojo-replay" onclick="Pronunciation.playMyRecording()">
+            <span>🎧</span> Ouvir Minha Gravação
+          </button>
+        ` : ''}
+        <button class="btn-dojo-replay" onclick="Pronunciation.playModel(1.0)">
+          <span>🔊</span> Ouvir Modelo Nativo
+        </button>
+      </div>
+      <div style="display:flex;gap:0.8rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap">
+        <button class="btn-secondario" onclick="Pronunciation.showChallenge()">
+          🔄 Gravar Novamente
+        </button>
+        <button class="btn-primario" onclick="Pronunciation.next()">
+          ➡️ Próxima Frase
+        </button>
+      </div>
+    `;
+    resContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   },
 
   normalizeText(text) {

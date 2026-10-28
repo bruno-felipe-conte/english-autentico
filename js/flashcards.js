@@ -1504,24 +1504,62 @@ const Flashcards = {
   _iniciarReconhecimento() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return null;
-    const r = new SR();
-    r.lang = 'en-US';
-    r.continuous = false;
-    r.interimResults = false;
-    return r;
+    try {
+      const r = new SR();
+      r.lang = 'en-US';
+      r.continuous = false;
+      r.interimResults = false;
+      r.maxAlternatives = 1;
+      return r;
+    } catch (_) {
+      return null;
+    }
+  },
+
+  _resetBtnGravar() {
+    this.gravando = false;
+    const btnGravar = document.getElementById('btn-gravar');
+    if (btnGravar) {
+      const lbl = btnGravar.querySelector('.btn-tool-label');
+      if (lbl) lbl.textContent = I18n.t('fc_gravar_imitar') || 'Imitar';
+      else btnGravar.textContent = I18n.t('fc_gravar_imitar') || 'Imitar';
+      btnGravar.style.background = '';
+      btnGravar.style.color = '';
+    }
   },
 
   toggleGravar() {
     if (!this.cartaAtual) return;
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) { App.notificar('notif_fc_sem_voz', 'alerta'); return; }
-    
-    if (this.gravando) {
-      if (this._recognition) this._recognition.stop();
-      this.gravando = false;
+
+    const host = (typeof window !== 'undefined' && window.location && window.location.hostname) || (typeof location !== 'undefined' ? location.hostname : '');
+    if (typeof window !== 'undefined' && window.isSecureContext === false && !['localhost', '127.0.0.1'].includes(host)) {
+      App.notificar('🔒 Microfone requer HTTPS no celular. Acesse via GitHub Pages.', 'alerta');
       return;
     }
-    
+
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { App.notificar('notif_fc_sem_voz', 'alerta'); return; }
+
+    if (this.gravando) {
+      if (this._recognition) {
+        try { this._recognition.stop(); } catch (_) {}
+      }
+      this._resetBtnGravar();
+      return;
+    }
+
+    // Aborta qualquer sessão anterior pendente para evitar InvalidStateError
+    if (this._recognition) {
+      try { this._recognition.abort(); } catch (_) {}
+      this._recognition = null;
+    }
+
+    this._recognition = this._iniciarReconhecimento();
+    if (!this._recognition) {
+      App.notificar('notif_fc_sem_voz', 'alerta');
+      return;
+    }
+
     this.gravando = true;
     const btnGravar = document.getElementById('btn-gravar');
     if (btnGravar) {
@@ -1531,32 +1569,49 @@ const Flashcards = {
       btnGravar.style.background = '#C0392B';
       btnGravar.style.color = '#fff';
     }
-    
-    this._recognition = this._iniciarReconhecimento();
-    if (!this._recognition) return;
-    
+
     this._recognition.onresult = (e) => {
-      const texto = e.results[0][0].transcript.toLowerCase();
-      const alvo = (this.cartaAtual.ingles || '').toLowerCase();
-      
-      const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
-      const alvoNormalize = alvo.replace(/[.,!?;:]/g, '').trim();
-      
-      const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
-      this._mostrarFeedbackPronuncia(texto, reconheceu);
-    };
-    this._recognition.onerror = () => { App.notificar('notif_fc_nao_ouviu', 'alerta'); };
-    this._recognition.onend = () => {
-      this.gravando = false;
-      if (btnGravar) {
-        const lbl = btnGravar.querySelector('.btn-tool-label');
-        if (lbl) lbl.textContent = I18n.t('fc_gravar_imitar') || 'Imitar';
-        else btnGravar.textContent = I18n.t('fc_gravar_imitar') || 'Imitar';
-        btnGravar.style.background = '';
-        btnGravar.style.color = '';
+      if (e.results && e.results[0] && e.results[0][0]) {
+        const texto = e.results[0][0].transcript.toLowerCase();
+        const alvo = (this.cartaAtual.ingles || '').toLowerCase();
+
+        const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
+        const alvoNormalize = alvo.replace(/[.,!?;:]/g, '').trim();
+
+        const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
+        this._mostrarFeedbackPronuncia(texto, reconheceu);
       }
     };
-    this._recognition.start();
+
+    this._recognition.onerror = (e) => {
+      this._resetBtnGravar();
+      const err = e?.error;
+      if (err === 'not-allowed') {
+        App.notificar('🔒 Permissão de microfone negada no navegador.', 'alerta');
+      } else if (err === 'service-not-allowed') {
+        App.notificar('⚠️ Ditado desativado no sistema (verifique Ajustes > Geral > Teclado).', 'alerta');
+      } else if (err === 'audio-capture') {
+        App.notificar('🎙️ Microfone indisponível ou em uso.', 'alerta');
+      } else if (err === 'network') {
+        App.notificar('🌐 Erro de rede ao conectar ao serviço de voz.', 'alerta');
+      } else if (err === 'no-speech') {
+        App.notificar('notif_fc_nao_ouviu', 'alerta');
+      } else {
+        App.notificar('notif_fc_nao_ouviu', 'alerta');
+      }
+    };
+
+    this._recognition.onend = () => {
+      this._resetBtnGravar();
+    };
+
+    try {
+      this._recognition.start();
+    } catch (err) {
+      console.warn('Erro síncrono ao iniciar reconhecimento em Flashcards:', err);
+      this._resetBtnGravar();
+      App.notificar('notif_fc_sem_voz', 'alerta');
+    }
   },
 
   _mostrarFeedbackPronuncia(texto, reconheceu) {
