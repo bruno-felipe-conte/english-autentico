@@ -13,6 +13,9 @@ window.PhrasalVerbs = {
   filtroParticula: 'todos',
   filtroNivel: 'todos',
   busca: '',
+  cardsExpandidos: new Set(),
+  expandirTodos: false,
+  regraOuroExpandida: null,
   
   // Mini-Game State
   miniGame: {
@@ -26,6 +29,84 @@ window.PhrasalVerbs = {
   async init() {
     await this.carregarDados();
     this.renderizar();
+  },
+
+  _obterRegraOuroInicial() {
+    try {
+      const visitou = localStorage.getItem('en_phrasal_visited');
+      if (!visitou) {
+        localStorage.setItem('en_phrasal_visited', '1');
+        localStorage.setItem('en_phrasal_regra_ouro', 'expanded');
+        return true;
+      }
+      return localStorage.getItem('en_phrasal_regra_ouro') === 'expanded';
+    } catch (e) {
+      return false;
+    }
+  },
+
+  toggleRegraOuro() {
+    this.regraOuroExpandida = !this.regraOuroExpandida;
+    try {
+      localStorage.setItem('en_phrasal_regra_ouro', this.regraOuroExpandida ? 'expanded' : 'collapsed');
+    } catch (e) {}
+    const body = document.getElementById('phrasal-pronoun-body');
+    const toggleBtn = document.getElementById('btn-toggle-regra-ouro');
+    if (body) {
+      body.classList.toggle('expandido', this.regraOuroExpandida);
+    }
+    if (toggleBtn) {
+      toggleBtn.textContent = this.regraOuroExpandida ? '▴' : '▾';
+      toggleBtn.setAttribute('aria-expanded', this.regraOuroExpandida ? 'true' : 'false');
+    }
+  },
+
+  scrollBaseVerbs(delta) {
+    const bar = document.getElementById('phrasal-base-verbs-bar');
+    if (bar) {
+      bar.scrollBy({ left: delta, behavior: 'smooth' });
+    }
+  },
+
+  toggleCard(id, e) {
+    if (e && e.target && (e.target.closest('button') || e.target.closest('.phrasal-card-example-box') || e.target.closest('a'))) {
+      return;
+    }
+    const isExpanded = this.cardsExpandidos.has(id);
+    if (isExpanded) {
+      this.cardsExpandidos.delete(id);
+    } else {
+      this.cardsExpandidos.add(id);
+    }
+    const cardEl = document.getElementById(`card-${id}`);
+    if (cardEl) {
+      const nowExp = !isExpanded;
+      cardEl.classList.toggle('expandido', nowExp);
+      const tBtn = cardEl.querySelector('.phrasal-card-toggle');
+      if (tBtn) {
+        tBtn.textContent = nowExp ? '▴' : '▾';
+        tBtn.setAttribute('aria-expanded', nowExp ? 'true' : 'false');
+      }
+    }
+  },
+
+  alternarExpandirTodos() {
+    const filtrados = this._aplicarFiltros();
+    if (this.expandirTodos) {
+      this.cardsExpandidos.clear();
+      this.expandirTodos = false;
+    } else {
+      filtrados.forEach(v => this.cardsExpandidos.add(v.id));
+      this.expandirTodos = true;
+    }
+    const grid = document.getElementById('phrasal-cards-grid');
+    if (grid) {
+      grid.innerHTML = filtrados.map(v => this._renderCard(v)).join('');
+    }
+    const btn = document.getElementById('phrasal-toggle-all-btn');
+    if (btn) {
+      btn.innerHTML = this.expandirTodos ? '⊟ Recolher todos' : '⊞ Expandir todos';
+    }
   },
 
   async carregarDados() {
@@ -72,6 +153,10 @@ window.PhrasalVerbs = {
       return;
     }
 
+    if (this.regraOuroExpandida === null) {
+      this.regraOuroExpandida = this._obterRegraOuroInicial();
+    }
+
     // Filter list
     const filtrados = this._aplicarFiltros();
 
@@ -95,55 +180,58 @@ window.PhrasalVerbs = {
 
     sec.innerHTML = `
       <div class="phrasal-container">
-        <!-- Hero Header -->
-        <header class="phrasal-hero">
+        <!-- Hero Header Compacto (~40px) -->
+        <header class="phrasal-hero compact">
           <div class="phrasal-hero-top">
             <div class="phrasal-hero-title-group">
               <h2>🧩 Phrasal Verbs Lab</h2>
-              <p class="phrasal-hero-subtitle">Domine os verbos frasais em inglês com regras de sintaxe, posição de pronomes e prática espaçada FSRS.</p>
-            </div>
-            <div class="phrasal-stats-bar">
-              <span class="phrasal-stat-pill" title="Total no acervo">📚 <strong>${total}</strong> Verbos</span>
-              <span class="phrasal-stat-pill" title="Separáveis: pronome no meio">↔️ <strong>${separaveis}</strong> Separáveis</span>
-              <span class="phrasal-stat-pill" title="Inseparáveis: preposição grudada">🔒 <strong>${inseparaveis}</strong> Inseparáveis</span>
-              <span class="phrasal-stat-pill" title="Intransitivos: sem objeto direto">⚡ <strong>${intransitivos}</strong> Intransitivos</span>
-              <span class="phrasal-stat-pill" title="Três palavras (Phrasal-Prepositional)">🔗 <strong>${tresPalavras}</strong> 3 Palavras</span>
+              <p class="phrasal-hero-subtitle" title="Domine os verbos frasais em inglês com regras de sintaxe, posição de pronomes e prática espaçada FSRS.">
+                Domine os verbos frasais com regras de sintaxe, pronomes e prática FSRS.
+                <span class="phrasal-info-icon" title="Domine os verbos frasais em inglês com regras de sintaxe, posição de pronomes e prática espaçada FSRS." tabindex="0" aria-label="Informações do acervo">ⓘ</span>
+              </p>
             </div>
           </div>
         </header>
 
-        <!-- Pronoun in the Middle Educational Banner -->
-        <div class="phrasal-pronoun-banner">
-          <div class="phrasal-pronoun-text">
-            <div class="phrasal-pronoun-title">
-              💡 Regra de Ouro: O Pronome no Meio
+        <!-- Pronoun in the Middle Educational Banner Compacto & Recolhível (~44px) -->
+        <div class="phrasal-pronoun-banner compact" id="phrasal-pronoun-banner">
+          <div class="phrasal-pronoun-bar">
+            <div class="phrasal-pronoun-summary" onclick="PhrasalVerbs.toggleRegraOuro()" role="button" tabindex="0" aria-expanded="${this.regraOuroExpandida ? 'true' : 'false'}" title="Clique para ver ou ocultar a explicação detalhada">
+              <span class="phrasal-pronoun-title">💡 Regra de Ouro: pronome no meio</span>
+              <div class="phrasal-pronoun-examples compact">
+                <span class="pronoun-badge-good" title="Correto: pronome no meio">Turn <u>it</u> off ✓</span>
+                <span class="pronoun-badge-bad" title="Incorreto: pronome no fim">Turn off it ✗</span>
+              </div>
             </div>
+            <div class="phrasal-pronoun-actions">
+              <button class="phrasal-minigame-btn compact" onclick="PhrasalVerbs.abrirMiniGame()" title="Treinar a Regra do Pronome no Meio com mini-jogo interativo">
+                🎮 Treinar Regra
+              </button>
+              <button class="phrasal-pronoun-toggle" onclick="PhrasalVerbs.toggleRegraOuro()" id="btn-toggle-regra-ouro" aria-label="Expandir ou recolher explicação da Regra de Ouro" aria-expanded="${this.regraOuroExpandida ? 'true' : 'false'}">
+                ${this.regraOuroExpandida ? '▴' : '▾'}
+              </button>
+            </div>
+          </div>
+          <div class="phrasal-pronoun-body ${this.regraOuroExpandida ? 'expandido' : ''}" id="phrasal-pronoun-body">
             <p class="phrasal-pronoun-desc">
               Em Phrasal Verbs Separáveis, se o objeto for um pronome (<em>it, them, him, her, me, us</em>), ele <strong>DEVE</strong> ficar entre o verbo e a partícula!
             </p>
           </div>
-          <div class="phrasal-pronoun-examples">
-            <span class="pronoun-badge-good" title="Correto: pronome no meio">✅ Turn <u>it</u> off</span>
-            <span class="pronoun-badge-bad" title="Incorreto: pronome no fim">❌ Turn off it</span>
-          </div>
-          <button class="phrasal-minigame-btn" onclick="PhrasalVerbs.abrirMiniGame()">
-            🎮 Treinar Regra
-          </button>
         </div>
 
-        <!-- Controls / Search / Filters -->
-        <section class="phrasal-controls" aria-label="Filtros de pesquisa">
-          <div class="phrasal-search-row">
+        <!-- Toolbar Sticky (Busca + Partícula + Nível + Ações + Pills + Verbos-base) -->
+        <section class="phrasal-controls sticky" aria-label="Filtros e ferramentas de pesquisa">
+          <div class="phrasal-controls-top">
             <div class="phrasal-search-box">
               <input type="text"
                 id="phrasal-search-input"
                 class="phrasal-search-input"
-                placeholder="Buscar por verbo, partícula ou significado (ex: turn, off, desistir)..."
+                placeholder="Buscar por verbo, partícula ou significado..."
                 value="${this._escapeHtml(this.busca)}"
                 oninput="PhrasalVerbs.buscar(this.value)"
                 aria-label="Buscar phrasal verb"
               />
-              ${this.busca ? `<button class="phrasal-clear-btn" onclick="PhrasalVerbs.buscar('')" title="Limpar">✕</button>` : ''}
+              ${this.busca ? `<button class="phrasal-clear-btn" onclick="PhrasalVerbs.limparBusca()" title="Limpar">✕</button>` : ''}
             </div>
 
             <div class="phrasal-filter-selects">
@@ -161,45 +249,64 @@ window.PhrasalVerbs = {
                 <option value="C1" ${this.filtroNivel === 'C1' ? 'selected' : ''}>Nível C1 (Avançado)</option>
               </select>
 
-              <button class="phrasal-action-btn" style="flex:none;padding:0.55rem 0.9rem;" onclick="PhrasalVerbs.praticarTodosNoFlashcard()" title="Praticar verbos filtrados nos Flashcards FSRS">
+              <button class="phrasal-action-btn phrasal-btn-praticar-filtro" onclick="PhrasalVerbs.praticarTodosNoFlashcard()" title="Praticar verbos filtrados nos Flashcards FSRS">
                 🗂️ Praticar Filtro (${filtrados.length})
+              </button>
+
+              <button class="phrasal-action-btn phrasal-btn-toggle-all" id="phrasal-toggle-all-btn" onclick="PhrasalVerbs.alternarExpandirTodos()" title="Expandir ou recolher todos os cards">
+                ${this.expandirTodos ? '⊟ Recolher todos' : '⊞ Expandir todos'}
               </button>
             </div>
           </div>
 
-          <!-- Syntax Type Pills -->
+          <!-- Syntax Type Filter Pills (Merged com as estatísticas do hero) -->
           <div class="phrasal-type-pills" role="tablist">
             <button class="phrasal-type-pill ${this.filtroTipo === 'todos' ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarTipo('todos')">
-              Todos (${total})
+              📚 Todos (${total})
             </button>
             <button class="phrasal-type-pill ${this.filtroTipo === 'separavel' ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarTipo('separavel')">
-              ↔️ Tipo 2: Separáveis (${separaveis})
+              ↔️ Separáveis (${separaveis})
             </button>
             <button class="phrasal-type-pill ${this.filtroTipo === 'inseparavel' ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarTipo('inseparavel')">
-              🔒 Tipo 3: Inseparáveis (${inseparaveis})
+              🔒 Inseparáveis (${inseparaveis})
             </button>
             <button class="phrasal-type-pill ${this.filtroTipo === 'intransitivo' ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarTipo('intransitivo')">
-              ⚡ Tipo 1: Intransitivos (${intransitivos})
+              ⚡ Intransitivos (${intransitivos})
             </button>
             <button class="phrasal-type-pill ${this.filtroTipo === 'tres_palavras' ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarTipo('tres_palavras')">
-              🔗 Tipo 4: Três Palavras (${tresPalavras})
+              🔗 Três Palavras (${tresPalavras})
             </button>
           </div>
 
-          <!-- Base Verbs Chips -->
-          <div class="phrasal-base-verbs-bar" aria-label="Verbos base mais comuns">
-            <button class="phrasal-base-chip ${!this.filtroBase ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarBase('')">
-              Todos os verbos
-            </button>
-            ${baseVerbsList.map(base => `
-              <button class="phrasal-base-chip ${this.filtroBase === base ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarBase('${base}')">
-                ${base} <span class="phrasal-chip-badge">${baseVerbCounts[base]}</span>
+          <!-- Base Verbs Chips Carousel -->
+          <div class="phrasal-base-verbs-wrapper">
+            <button class="phrasal-scroll-arrow left" onclick="PhrasalVerbs.scrollBaseVerbs(-180)" aria-label="Rolar verbos base para a esquerda">‹</button>
+            <div class="phrasal-base-verbs-bar" id="phrasal-base-verbs-bar" aria-label="Verbos base mais comuns">
+              <button class="phrasal-base-chip ${!this.filtroBase ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarBase('')">
+                Todos os verbos
               </button>
-            `).join('')}
+              ${baseVerbsList.map(base => `
+                <button class="phrasal-base-chip ${this.filtroBase === base ? 'ativo' : ''}" onclick="PhrasalVerbs.filtrarBase('${base}')">
+                  ${base} <span class="phrasal-chip-badge">${baseVerbCounts[base]}</span>
+                </button>
+              `).join('')}
+            </div>
+            <button class="phrasal-scroll-arrow right" onclick="PhrasalVerbs.scrollBaseVerbs(180)" aria-label="Rolar verbos base para a direita">›</button>
           </div>
         </section>
 
-        <!-- Grid of Cards -->
+        <!-- CTA de Estudo Proeminente -->
+        <div class="phrasal-study-cta-bar">
+          <button class="phrasal-primary-study-cta" onclick="PhrasalVerbs.praticarTodosNoFlashcard()" title="Estudar agora no modo Flashcards FSRS">
+            <span class="phrasal-cta-play">▶</span>
+            <div class="phrasal-cta-text-group">
+              <span class="phrasal-cta-title">Estudar agora</span>
+              <small class="phrasal-cta-subtext">${filtrados.length} verbos selecionados no filtro atual (FSRS)</small>
+            </div>
+          </button>
+        </div>
+
+        <!-- Grid of Cards Densos e Expansíveis -->
         <main class="phrasal-grid" id="phrasal-cards-grid">
           ${filtrados.length === 0 ? `
             <div class="phrasal-empty-state">
@@ -225,17 +332,18 @@ window.PhrasalVerbs = {
     const safeIpa = this._escapeHtml(v.audio_ipa || '');
     const safeRule = this._escapeHtml(v.regra_pronome || '');
     const tipo = v.tipo || 'separavel';
+    const isExpanded = this.cardsExpandidos.has(v.id);
 
     const tipoLabels = {
       'separavel': '↔️ Separável (Tipo 2)',
       'inseparavel': '🔒 Inseparável (Tipo 3)',
       'intransitivo': '⚡ Intransitivo (Tipo 1)',
-      'tres_palavras': '🔗 3 Palavras (Tipo 4)'
+      'tres_palavras': '🔗 Três Palavras (Tipo 4)'
     };
 
     return `
-      <article class="phrasal-card" id="card-${v.id}">
-        <div>
+      <article class="phrasal-card ${isExpanded ? 'expandido' : ''}" id="card-${v.id}" onclick="PhrasalVerbs.toggleCard('${v.id}', event)">
+        <div class="phrasal-card-compact-header">
           <div class="phrasal-card-header">
             <h3 class="phrasal-card-verb">
               ${safeVerb}
@@ -244,37 +352,43 @@ window.PhrasalVerbs = {
               </button>
             </h3>
             <div class="phrasal-card-meta">
-              <span class="phrasal-type-tag ${tipo}">${tipoLabels[tipo] || tipo}</span>
               ${v.nivel ? `<span class="phrasal-cefr-badge">${v.nivel}</span>` : ''}
+              <span class="phrasal-type-tag ${tipo}">${tipoLabels[tipo] || tipo}</span>
+              <button class="phrasal-card-toggle" aria-label="Expandir ou recolher detalhes" aria-expanded="${isExpanded ? 'true' : 'false'}">
+                ${isExpanded ? '▴' : '▾'}
+              </button>
             </div>
           </div>
-
-          ${safeIpa ? `<div class="phrasal-card-ipa">${safeIpa}</div>` : ''}
-
           <div class="phrasal-card-pt">${safePt}</div>
-          ${safeEn ? `<div class="phrasal-card-en-def">${safeEn}</div>` : ''}
-
-          ${safeEx ? `
-            <div class="phrasal-card-example-box" onclick="PhrasalVerbs.ouvir('${safeEx.replace(/'/g, "\\'")}', event)" title="Clique para ouvir o exemplo" style="cursor:pointer;">
-              <div class="phrasal-example-en">🗣️ "${safeEx}"</div>
-              ${safeExPt ? `<div class="phrasal-example-pt">(${safeExPt})</div>` : ''}
-            </div>
-          ` : ''}
-
-          ${safeRule ? `
-            <div class="phrasal-card-rule">
-              <strong>Regra:</strong> ${safeRule}
-            </div>
-          ` : ''}
         </div>
 
-        <div class="phrasal-card-actions">
-          <button class="phrasal-action-btn" onclick="PhrasalVerbs.ouvir('${safeVerb.replace(/'/g, "\\'")}', event)">
-            🔊 Ouvir
-          </button>
-          <button class="phrasal-action-btn" id="btn-fc-${v.id}" onclick="PhrasalVerbs.praticarNoFlashcard('${v.id}')" title="Praticar nos Flashcards">
-            🗂️ Flashcard
-          </button>
+        <div class="phrasal-card-details">
+          <div class="phrasal-card-details-inner">
+            ${safeIpa ? `<div class="phrasal-card-ipa">${safeIpa}</div>` : ''}
+            ${safeEn ? `<div class="phrasal-card-en-def">${safeEn}</div>` : ''}
+
+            ${safeEx ? `
+              <div class="phrasal-card-example-box" onclick="PhrasalVerbs.ouvir('${safeEx.replace(/'/g, "\\'")}', event)" title="Clique para ouvir o exemplo" style="cursor:pointer;">
+                <div class="phrasal-example-en">🗣️ "${safeEx}"</div>
+                ${safeExPt ? `<div class="phrasal-example-pt">(${safeExPt})</div>` : ''}
+              </div>
+            ` : ''}
+
+            ${safeRule ? `
+              <div class="phrasal-card-rule">
+                <strong>Regra:</strong> ${safeRule}
+              </div>
+            ` : ''}
+
+            <div class="phrasal-card-actions">
+              <button class="phrasal-action-btn" onclick="PhrasalVerbs.ouvir('${safeVerb.replace(/'/g, "\\'")}', event)">
+                🔊 Ouvir
+              </button>
+              <button class="phrasal-action-btn" id="btn-fc-${v.id}" onclick="PhrasalVerbs.praticarNoFlashcard('${v.id}')" title="Praticar nos Flashcards">
+                🗂️ Flashcard
+              </button>
+            </div>
+          </div>
         </div>
       </article>
     `;
@@ -351,6 +465,25 @@ window.PhrasalVerbs = {
       `;
     } else {
       grid.innerHTML = filtrados.map(v => this._renderCard(v)).join('');
+    }
+
+    // Dynamic counters update
+    const ctaSubtext = document.querySelector('.phrasal-cta-subtext');
+    if (ctaSubtext) {
+      ctaSubtext.textContent = `${filtrados.length} verbos selecionados no filtro atual (FSRS)`;
+    }
+    const toolbarBtn = document.querySelector('.phrasal-btn-praticar-filtro');
+    if (toolbarBtn) {
+      toolbarBtn.innerHTML = `🗂️ Praticar Filtro (${filtrados.length})`;
+    }
+  },
+
+  limparBusca() {
+    this.buscar('');
+    const input = document.getElementById('phrasal-search-input');
+    if (input) {
+      input.value = '';
+      input.focus();
     }
   },
 

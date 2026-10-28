@@ -426,9 +426,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793133938.999665,
-    "seen": 1793134307.7927864,
-    "ast_hash": "9d8b65f7bf244ab1edadcd58f74e0c58",
+    "mtime": 1793220314.9188006,
+    "seen": 1793224998.902203,
+    "ast_hash": "d7887824fdeec990d9cb6f20c1e650b5",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -480,9 +480,9 @@
     "semantic_hash": ""
   },
   "js/pronunciation.js": {
-    "mtime": 1792533188.190278,
-    "seen": 1792534278.217278,
-    "ast_hash": "5a01fe6aec25c57c8ecbea436e70c8f8",
+    "mtime": 1793220305.431139,
+    "seen": 1793224999.0151198,
+    "ast_hash": "793bb0489ae073f2a9e7edf779d66f77",
     "semantic_hash": ""
   },
   "js/quiz.js": {
@@ -546,14 +546,14 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1793134168.0195472,
-    "seen": 1793134308.760184,
-    "ast_hash": "691c786d74f7e079355febfdc0d8d15e",
+    "mtime": 1793224910.2252095,
+    "seen": 1793224999.6404946,
+    "ast_hash": "435726239728ed68f3396a947adc23f0",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
-    "mtime": 1793134247.6560867,
-    "seen": 1793134308.7601874,
+    "mtime": 1793224896.726355,
+    "seen": 1793224999.6404989,
     "ast_hash": "f196824657d8858bc7fa44eecbba38b1",
     "semantic_hash": ""
   },
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793133911.1661568,
-    "seen": 1793134309.0628688,
-    "ast_hash": "7eb6f1c453d74c3b4c39335b7fbcc2f1",
+    "mtime": 1793223165.8908198,
+    "seen": 1793224999.841289,
+    "ast_hash": "6a10068af875f1fe5e22ee9c94838696",
     "semantic_hash": ""
   },
   "playwright-report/index.html": {
@@ -1476,9 +1476,9 @@
     "semantic_hash": ""
   },
   "js/app/xp.js": {
-    "mtime": 1792533437.4509263,
-    "seen": 1792534278.2172089,
-    "ast_hash": "03d7db05d91ccd89c2a88219faece41f",
+    "mtime": 1793223122.7062433,
+    "seen": 1793224998.8172777,
+    "ast_hash": "2131da0b77fac5f680544e2bb16c1ed0",
     "semantic_hash": ""
   },
   "js/stories/loader.js": {
@@ -1698,15 +1698,33 @@
     "semantic_hash": ""
   },
   "js/phrasal_verbs.js": {
-    "mtime": 1793116846.6219127,
-    "seen": 1793118379.32874,
-    "ast_hash": "d7d37ec2fdd9ce464389d3c9d8f1f5e3",
+    "mtime": 1793224108.747685,
+    "seen": 1793224998.991582,
+    "ast_hash": "f0c7f5aec226442a289b17fccd9f0877",
     "semantic_hash": ""
   },
   "tests/phrasal_verbs.test.js": {
     "mtime": 1793134184.626284,
     "seen": 1793134308.782313,
     "ast_hash": "984c35c024f9ace878082ca8f14fcd3b",
+    "semantic_hash": ""
+  },
+  "tests/mobile_microphone.test.js": {
+    "mtime": 1793220291.4208858,
+    "seen": 1793224999.662349,
+    "ast_hash": "bccdce82bd0b64118deb6ddcb6527de8",
+    "semantic_hash": ""
+  },
+  "tests/stage1_acceptance.spec.js": {
+    "mtime": 1793223185.9086785,
+    "seen": 1793224999.689433,
+    "ast_hash": "7f6b223464f167c674fbe608a975b6a6",
+    "semantic_hash": ""
+  },
+  "tests/stage2_acceptance.spec.js": {
+    "mtime": 1793224813.29271,
+    "seen": 1793224999.6894362,
+    "ast_hash": "54c514bf9a42900d61e66d89315a73a8",
     "semantic_hash": ""
   }
 }
