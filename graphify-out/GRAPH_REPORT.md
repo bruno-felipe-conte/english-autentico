@@ -1,24 +1,24 @@
 # Graph Report - english-autentico  (2026-10-28)
 
 ## Corpus Check
-- 225 files · ~1,226,475 words
+- 226 files · ~1,226,932 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1200 nodes · 1298 edges · 135 communities (68 shown, 67 thin omitted)
+- 1202 nodes · 1300 edges · 128 communities (64 shown, 64 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `945588ae`
+- Built from commit: `4b86bedb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - inspect_grammar_cdp.mjs
 - enrich_wave1.mjs
-- enrich_wave6_part1.mjs
+- enrich_wave3_part1.mjs
 - PDCA_TEMPLOS.md
 - ═══════════════════════════════════════════════════════════════
 - PDCA_dialogos.md
@@ -33,13 +33,10 @@
 - SPEC — Método dos Famosos: 5 Novas Features
 - enrich_wave3_part2.mjs
 - enrich_wave3_part3.mjs
-- mobile_microphone.test.js
+- ref_path
 - Vozes dos Especialistas — Diagnóstico Individual
 - SPEC — Expansão para 5.000 Palavras Italianas
-- validate_flashcards_parity.mjs
-- validate_pronunciation_parity.mjs
-- phrasal_verbs.test.js
-- enrich_wave7_part2.mjs
+- enrich_wave5_part1.mjs
 - GRAMMAR (Gramática) — Relatório PDCA Completo
 - Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)
 - Ações de Médio Prazo (1–4 semanas)
@@ -57,11 +54,7 @@
 - ref_http
 - Abas e seus parâmetros
 - ═══════════════════════════════════════════════════════════════
-- ref_path
 - vocab.test.js
-- capture_dialogues_showcase.mjs
-- generate_all_screenshots.mjs
-- validate_vocab_parity.mjs
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
 - 🧪 TESTING PROTOCOL - ItalianLearningApp
 - 1️⃣ UNIT TESTS PER TEMPLE
@@ -179,7 +172,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (135 total, 67 thin omitted)
+## Communities (128 total, 64 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -219,19 +212,19 @@ Nodes (32): ALTA (P1 — Prioritária), CRÍTICA (P0 — Bloqueante), Descoberta
 
 ### Community 12 - "package.json"
 Cohesion: 0.05
-Nodes (33): author, bugs, url, description, devDependencies, http-server, @playwright/test, homepage (+25 more)
+Nodes (34): author, bugs, url, description, devDependencies, http-server, @playwright/test, homepage (+26 more)
 
 ### Community 13 - "ref_fs"
 Cohesion: 0.17
-Nodes (7): data, wave3Part1Lessons, data, wave4Part4Lessons, data, wave5Part1Lessons, enData
+Nodes (7): data, wave4Part4Lessons, data, wave6Part1Lessons, data, wave7Part2Lessons, enData
 
 ### Community 14 - "SPEC — Método dos Famosos: 5 Novas Features"
 Cohesion: 0.06
 Nodes (31): App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR / CRIAR, Conceito, Conceito, Conceito, Conceito, CSS, CSS — Estilo dos Diálogos (+23 more)
 
-### Community 17 - "mobile_microphone.test.js"
-Cohesion: 0.25
-Nodes (4): assert, fs, path, test
+### Community 17 - "ref_path"
+Cohesion: 0.05
+Nodes (27): main(), send(), main(), send(), main(), send(), outDir, artifactScreenshots (+19 more)
 
 ### Community 18 - "Vozes dos Especialistas — Diagnóstico Individual"
 Cohesion: 0.29
@@ -240,18 +233,6 @@ Nodes (7): 🎓 Ana Paula (Pedagoga SLA), 🎮 Diego (Game Designer), 🔬 Ferna
 ### Community 19 - "SPEC — Expansão para 5.000 Palavras Italianas"
 Cohesion: 0.07
 Nodes (26): 1. Usar o script base já existente, 2. Gerar em blocos de 5 templos por vez, 3. Critérios de qualidade por templo, 4. Atualizar core.js após gerar todos os templos, 5. Atualizar sw.js, 6. Commit e push final, App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR (+18 more)
-
-### Community 20 - "validate_flashcards_parity.mjs"
-Cohesion: 0.40
-Nodes (5): artifactScreenshots, main(), send(), outDir, saveScreenshot()
-
-### Community 21 - "validate_pronunciation_parity.mjs"
-Cohesion: 0.40
-Nodes (5): artifactScreenshots, main(), send(), outDir, saveScreenshot()
-
-### Community 22 - "phrasal_verbs.test.js"
-Cohesion: 0.29
-Nodes (4): assert, fs, path, test
 
 ### Community 24 - "GRAMMAR (Gramática) — Relatório PDCA Completo"
 Cohesion: 0.08
@@ -316,10 +297,6 @@ Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repe
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
 Cohesion: 0.05
 Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
-
-### Community 41 - "ref_path"
-Cohesion: 0.40
-Nodes (3): main(), send(), outDir
 
 ### Community 42 - "vocab.test.js"
 Cohesion: 0.18
@@ -455,8 +432,8 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 790 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **67 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 791 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **64 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

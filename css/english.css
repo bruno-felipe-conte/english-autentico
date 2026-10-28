@@ -3602,7 +3602,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
   }
 
   /* Hover expansion when unpinned */
-  .app-sidebar:hover:not(.pinned) {
+  .app-sidebar:hover {
     width: 200px;
     box-shadow: 8px 0 28px rgba(0, 0, 0, 0.18);
   }
@@ -3625,8 +3625,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     box-sizing: border-box;
   }
 
-  /* Quando a barra expande (hover ou pin), o conteúdo inteiro se adapta responsivamente sem ficar embaixo da barra */
-  .app-sidebar:hover ~ .app-main-wrapper,
+  /* Quando fixada (pinned), reserva 200px de espaço contínuo no layout principal */
   body.sidebar-pinned .app-main-wrapper {
     margin-left: 200px;
     width: calc(100% - 200px);
@@ -3711,13 +3710,14 @@ body.dark-mode .sidebar-pin-btn.ativo {
   }
 
   .app-sidebar:hover .nav-tab-label,
-  .app-sidebar.pinned .nav-tab-label {
+  .app-sidebar.pinned .nav-tab-label,
+  body.sidebar-pinned .app-sidebar .nav-tab-label {
     opacity: 1;
     pointer-events: auto;
   }
 
   /* Tooltip flutuante instantâneo no estado recolhido */
-  .app-sidebar:not(:hover):not(.pinned) .nav-tab:hover::after {
+  body:not(.sidebar-pinned) .app-sidebar:not(:hover):not(.pinned) .nav-tab:hover::after {
     content: attr(title);
     position: absolute;
     left: calc(100% + 8px);
@@ -3767,7 +3767,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     box-shadow: 2px 0 16px rgba(0, 0, 0, 0.4);
   }
 
-  body.dark-mode .app-sidebar:not(:hover):not(.pinned) .nav-tab:hover::after {
+  body.dark-mode:not(.sidebar-pinned) .app-sidebar:not(:hover):not(.pinned) .nav-tab:hover::after {
     background: #1C1816;
     color: #EDE5D8;
     border-color: rgba(212, 168, 67, 0.3);
@@ -3787,23 +3787,6 @@ body.dark-mode .sidebar-pin-btn.ativo {
     border-color: rgba(212, 168, 67, 0.4);
     color: #FFF8F0;
   }
-}
-
-/* Modo expandido em telas ultra-wide (≥1400px) */
-@media (min-width: 1400px) {
-  body:not(.sidebar-force-collapsed) .app-sidebar {
-    width: 200px;
-  }
-  body:not(.sidebar-force-collapsed) .app-sidebar .nav-tab-label {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  body:not(.sidebar-force-collapsed) .app-main-wrapper {
-    margin-left: 200px;
-    width: calc(100% - 200px);
-    max-width: calc(100vw - 200px);
-  }
-}
 }
 
 /* Mobile & Tablet Fallback (< 1024px) */

@@ -35,14 +35,24 @@ for (const vp of viewports) {
     const sec = page.locator('#sec-phrasal');
     await expect(sec).toBeVisible();
 
-    // Log breakdown of all sections above first card
-    const secBox = await sec.boundingBox();
-    const heroBox = await page.locator('.phrasal-hero').boundingBox();
-    const bannerBox = await page.locator('.phrasal-pronoun-banner').boundingBox();
-    const controlsBox = await page.locator('.phrasal-controls').boundingBox();
-    const ctaBox = await page.locator('.phrasal-primary-study-cta').boundingBox();
+    const hero = page.locator('.phrasal-hero');
+    await expect(hero).toBeVisible();
+    const banner = page.locator('.phrasal-pronoun-banner');
+    await expect(banner).toBeVisible();
+    const controls = page.locator('.phrasal-controls');
+    await expect(controls).toBeVisible();
+    const cta = page.locator('.phrasal-primary-study-cta');
+    await expect(cta).toBeVisible();
     const firstCard = page.locator('.phrasal-card').first();
-    const cardBox = await firstCard.boundingBox();
+    await expect(firstCard).toBeVisible();
+
+    // Log breakdown of all sections above first card
+    const secBox = await sec.evaluate(el => { const r = el.getBoundingClientRect(); return { y: r.y, height: r.height }; });
+    const heroBox = await hero.evaluate(el => { const r = el.getBoundingClientRect(); return { y: r.y, height: r.height }; });
+    const bannerBox = await banner.evaluate(el => { const r = el.getBoundingClientRect(); return { y: r.y, height: r.height }; });
+    const controlsBox = await controls.evaluate(el => { const r = el.getBoundingClientRect(); return { y: r.y, height: r.height }; });
+    const ctaBox = await cta.evaluate(el => { const r = el.getBoundingClientRect(); return { y: r.y, height: r.height }; });
+    const cardBox = await firstCard.evaluate(el => { const r = el.getBoundingClientRect(); return { y: r.y, height: r.height }; });
 
     console.log(`[${vp.name}] Breakdown:
       secBox.y: ${secBox.y}
