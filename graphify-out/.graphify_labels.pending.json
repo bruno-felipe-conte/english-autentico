@@ -1,7 +1,7 @@
 {
   "0": "inspect_grammar_cdp.mjs",
   "1": "enrich_wave1.mjs",
-  "2": "enrich_wave3_part1.mjs",
+  "2": "enrich_wave6_part1.mjs",
   "3": "PDCA_TEMPLOS.md",
   "4": "═══════════════════════════════════════════════════════════════",
   "5": "PDCA_dialogos.md",
@@ -19,7 +19,7 @@
   "17": "ref_path",
   "18": "Vozes dos Especialistas — Diagnóstico Individual",
   "19": "SPEC — Expansão para 5.000 Palavras Italianas",
-  "20": "enrich_wave5_part1.mjs",
+  "20": "enrich_wave7_part2.mjs",
   "24": "GRAMMAR (Gramática) — Relatório PDCA Completo",
   "25": "Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)",
   "26": "Ações de Médio Prazo (1–4 semanas)",

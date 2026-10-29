@@ -1,24 +1,24 @@
 # Graph Report - english-autentico  (2026-10-28)
 
 ## Corpus Check
-- 226 files · ~1,226,932 words
+- 227 files · ~1,227,617 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1202 nodes · 1300 edges · 128 communities (64 shown, 64 thin omitted)
+- 1204 nodes · 1302 edges · 128 communities (64 shown, 64 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4b86bedb`
+- Built from commit: `7e7b3b4e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - inspect_grammar_cdp.mjs
 - enrich_wave1.mjs
-- enrich_wave3_part1.mjs
+- enrich_wave6_part1.mjs
 - PDCA_TEMPLOS.md
 - ═══════════════════════════════════════════════════════════════
 - PDCA_dialogos.md
@@ -36,7 +36,7 @@
 - ref_path
 - Vozes dos Especialistas — Diagnóstico Individual
 - SPEC — Expansão para 5.000 Palavras Italianas
-- enrich_wave5_part1.mjs
+- enrich_wave7_part2.mjs
 - GRAMMAR (Gramática) — Relatório PDCA Completo
 - Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)
 - Ações de Médio Prazo (1–4 semanas)
@@ -211,12 +211,12 @@ Cohesion: 0.06
 Nodes (32): ALTA (P1 — Prioritária), CRÍTICA (P0 — Bloqueante), Descobertas Inesperadas, 🔍 ESTADO ATUAL, FLASHCARDS — Relatório PDCA Completo, M1 — Onboarding de 5 Passos para FSRS, M2 — Conquistas/Achievements, M3 — Push Notifications (+24 more)
 
 ### Community 12 - "package.json"
-Cohesion: 0.05
-Nodes (34): author, bugs, url, description, devDependencies, http-server, @playwright/test, homepage (+26 more)
+Cohesion: 0.04
+Nodes (35): author, bugs, url, description, devDependencies, http-server, @playwright/test, homepage (+27 more)
 
 ### Community 13 - "ref_fs"
 Cohesion: 0.17
-Nodes (7): data, wave4Part4Lessons, data, wave6Part1Lessons, data, wave7Part2Lessons, enData
+Nodes (7): data, wave3Part1Lessons, data, wave4Part4Lessons, data, wave5Part1Lessons, enData
 
 ### Community 14 - "SPEC — Método dos Famosos: 5 Novas Features"
 Cohesion: 0.06
@@ -432,14 +432,14 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 791 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 792 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **64 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `http-server` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PDCA_TEMPLOS.md` be split into smaller, more focused modules?**

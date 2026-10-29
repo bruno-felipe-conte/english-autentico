@@ -2907,40 +2907,56 @@ const I18n = {
     "en": "🃏 Smart Flashcards (FSRS)"
   },
   "tour_goal_desc": {
-    "pt": "Escolha um nível alvo e uma data limite. O app calcula quantos XP por dia você precisa e mostra seu progresso no topo.",
-    "en": "Pick a target level and a deadline date. The app calculates how many XP per day you need and shows your daily progress bar at the top."
+    "pt": "A barra fina sob o cabeçalho mostra sua meta diária de XP. Defina metas e acompanhe seu ritmo de estudos diário.",
+    "en": "The thin bar under the header tracks your daily XP goal. Keep your rhythm going every single day."
   },
   "tour_goal_title": {
-    "pt": "🎯 Defina uma Meta com Prazo",
-    "en": "🎯 Set a Goal with a Deadline"
+    "pt": "🎯 Meta Diária Integrada",
+    "en": "🎯 Integrated Daily Goal"
   },
   "tour_grammatica_desc": {
-    "pt": "90 lições do iniciante ao intermediário superior. Cada lição tem alertas práticos, explicações dos cards, exemplos e exercícios.",
-    "en": "90 lessons from beginner to upper-intermediate. Each lesson has theory cards, examples, common traps and exercises — all in English."
+    "pt": "Lições completas do A1 ao C1: teoria direta, explicações claras, armadilhas comuns, tabelas e exercícios interativos aplicados ao inglês real.",
+    "en": "Comprehensive lessons from A1 to C1: direct rules, clear explanations, common pitfalls, tables, and practical interactive exercises."
   },
   "tour_grammatica_title": {
-    "pt": "📚 Gramática — A1 ao B2",
-    "en": "📚 Grammar — A1 to B2"
+    "pt": "📚 Gramática Autêntica (A1 ao C1)",
+    "en": "📚 Authentic Grammar (A1 to C1)"
   },
   "tour_imitazione_desc": {
-    "pt": "Escute um nativo falando e grave sua própria voz. O segredo para uma dicção autêntica.",
-    "en": "Escute um nativo falando e grave sua própria voz. O segredo para uma dicção autêntica."
+    "pt": "Escute nativos falando, grave sua voz com reconhecimento de voz e receba pontuação com análise fonética instantânea.",
+    "en": "Listen to native speakers, record your voice with speech recognition, and get instant phonetic feedback and scoring."
   },
   "tour_imitazione_title": {
-    "pt": "🎙️ Imitazione",
-    "en": "🎙️ Imitazione"
+    "pt": "🎙️ Pronunciation Dojo",
+    "en": "🎙️ Pronunciation Dojo"
+  },
+  "tour_immersion_desc": {
+    "pt": "Imersão prática completa: simule conversas cotidianas em Diálogos, leia textos reais em Leituras e aprenda cantando em Músicas com letras sincronizadas e importação via IA!",
+    "en": "Complete immersion: practise everyday dialogues, read authentic stories with instant word translations, and sing along to synchronized song lyrics with AI import!"
+  },
+  "tour_immersion_title": {
+    "pt": "💬 Diálogos, Leituras & Músicas",
+    "en": "💬 Dialogues, Reading & Songs"
   },
   "tour_modes_desc": {
-    "pt": "Normal (EN→PT) · Reverso (PT→EN) · Contexto (lacunas) · Escuta (áudio). Mude de modo para desenvolver todas as habilidades!",
-    "en": "Normal (EN→PT) · Reverse (PT→EN) · Context (fill the gap) · Listen (guess from audio). Switch modes to build all-round mastery!"
+    "pt": "Normal (EN→PT) · Reverso (PT→EN) · Contexto (lacunas) · Escuta (áudio) · Escrita (desenho manual). Desenvolva todas as habilidades cognitivas!",
+    "en": "Normal (EN→PT) · Reverse (PT→EN) · Context (fill the gap) · Listen (audio guess) · Writing (finger or stylus). Build comprehensive fluency!"
   },
   "tour_modes_title": {
-    "pt": "🔄 Quatro Modos de Estudo",
-    "en": "🔄 Four Study Modes"
+    "pt": "🔄 5 Modos de Estudo",
+    "en": "🔄 5 Study Modes"
   },
   "tour_next_btn": {
     "pt": "Próximo →",
     "en": "Next →"
+  },
+  "tour_phrasal_desc": {
+    "pt": "Mais de 415 phrasal verbs classificados por tipo (separáveis, inseparáveis, intransitivos, 3 palavras). Treine a Regra de Ouro do pronome, filtre por partícula e expanda os cards para áudios e exemplos!",
+    "en": "Over 415 phrasal verbs classified by type (separable, inseparable, intransitive, 3-word). Master the Golden Pronoun Rule, filter by particle, and expand cards for audio and examples!"
+  },
+  "tour_phrasal_title": {
+    "pt": "🧩 Phrasal Verbs Lab",
+    "en": "🧩 Phrasal Verbs Lab"
   },
   "tour_prev_btn": {
     "pt": "← Voltar",
@@ -2950,13 +2966,21 @@ const I18n = {
     "pt": "{{current}} de {{total}}",
     "en": "{{current}} of {{total}}"
   },
+  "tour_pronun_desc": {
+    "pt": "Escute nativos falando, grave sua voz com reconhecimento de voz e receba pontuação com análise fonética instantânea para uma pronúncia autêntica.",
+    "en": "Listen to native speakers, record your voice with speech recognition, and receive instant phonetic feedback and scoring for authentic pronunciation."
+  },
+  "tour_pronun_title": {
+    "pt": "🎙️ Pronunciation Dojo",
+    "en": "🎙️ Pronunciation Dojo"
+  },
   "tour_quiz_desc": {
-    "pt": "Vocabulário, gramática, escuta e conjugação. Conclua quizzes para ganhar bônus de XP e fixar o conteúdo!",
-    "en": "Vocabulary, Grammar, Listening and Spelling. Complete a quiz to unlock the next temple and earn bonus XP!"
+    "pt": "Vocabulário, gramática, escuta e conjugação. 4 tipos de exercícios dinâmicos para consolidar a fixação e conquistar bônus de XP!",
+    "en": "Vocabulary, grammar, listening and spelling. 4 dynamic exercise types to solidify retention and earn bonus XP!"
   },
   "tour_quiz_title": {
-    "pt": "❓ Quiz — 4 Tipos de Exercícios",
-    "en": "❓ Quiz — 4 Exercise Types"
+    "pt": "❓ Quiz — Fixação Ativa",
+    "en": "❓ Quiz — Active Recall"
   },
   "tour_rate_desc": {
     "pt": "Errei = amanhã · Difícil = 1 dia · Bom = 3 dias · Fácil = 2 semanas. O algoritmo se ajusta com base na sua resposta — a honestidade traz os melhores resultados!",
@@ -2974,6 +2998,14 @@ const I18n = {
     "pt": "📜 Leituras — Textos Autênticos",
     "en": "📜 Reading — Authentic Texts"
   },
+  "tour_sidebar_desc": {
+    "pt": "Navegue com fluidez entre os 10 módulos de estudo. Passe o mouse para abrir e ver os nomes das abas, ou clique no alfinete (📌) para fixar o menu aberto.",
+    "en": "Smoothly navigate between all 10 study modules. Hover to reveal tab titles, or click the pin button (📌) to lock the sidebar open."
+  },
+  "tour_sidebar_title": {
+    "pt": "🏛️ Menu Lateral de Navegação",
+    "en": "🏛️ Sidebar Navigation"
+  },
   "tour_stats_desc": {
     "pt": "Cada atividade rende XP. Acumule XP para subir de nível e desbloquear novos templos. Mantenha sua sequência 🔥 ativa estudando todos os dias!",
     "en": "Every activity earns XP. Accumulate enough and your level rises, unlocking new temples. Keep your 🔥 streak alive by studying every day!"
@@ -2983,28 +3015,28 @@ const I18n = {
     "en": "🏅 Level, XP & Streak"
   },
   "tour_templi_desc": {
-    "pt": "Cada templo contém cerca de 20 palavras de uma cidade de língua inglesa. Comece pelo Templo 1 (New York). Novos templos se desbloqueiam ao subir de nível.",
-    "en": "Each temple is a set of ~20 words from an English-speaking city. Start with Temple 1 (New York). New temples unlock as your level grows."
+    "pt": "Sua jornada é dividida em Templos temáticos (New York, London, Oxford...). Cada templo contém cerca de 20 palavras essenciais com fonética, áudio nativo e exemplos.",
+    "en": "Your journey is divided into thematic Temples (New York, London, Oxford...). Each temple features ~20 essential words with phonetics, native audio and real contexts."
   },
   "tour_templi_title": {
-    "pt": "🏛️ Templos (Sua Jornada)",
-    "en": "🏛️ Temples — Your Vocabulary Packs"
+    "pt": "🏛️ Templos do Conhecimento",
+    "en": "🏛️ Temples of Knowledge"
   },
   "tour_vocabolario_desc": {
-    "pt": "Toque em \"Ocultar EN\" ou \"Ocultar PT\" para testar sua memória. Filtre por templo ou categoria e ouça a pronúncia de qualquer palavra.",
-    "en": "Tap 'Hide EN' or 'Hide PT' to cover a column and test yourself. Filter by temple or category and click any word to hear it."
+    "pt": "Dicionário completo com pronúncia em todas as palavras. Use os botões 'Ocultar EN' ou 'Ocultar PT' para testar ativamente sua memória antes de conferir.",
+    "en": "Comprehensive vocabulary bank with audio for every word. Tap 'Hide EN' or 'Hide PT' to test your active recall before revealing."
   },
   "tour_vocabolario_title": {
-    "pt": "📖 Vocabulário — Auto-Teste",
-    "en": "📖 Vocabulary — Self-Test Mode"
+    "pt": "📖 Vocabulário & Auto-Teste",
+    "en": "📖 Vocabulary & Self-Test"
   },
   "tour_welcome_desc": {
-    "pt": "Este tour de 13 passos mostrará as principais funcionalidades do app. Leva menos de 2 minutos — vamos lá!",
-    "en": "This 13-step tour shows you the main features. It takes less than 2 minutes — let's go!"
+    "pt": "Este tour interativo mostrará as principais ferramentas e recursos do app. Leva menos de 2 minutos — vamos lá!",
+    "en": "This interactive tour walks you through all key tools and features. Takes under 2 minutes — let's go!"
   },
   "tour_welcome_title": {
-    "pt": "👋 Bem-vindo ao English Autentico!",
-    "en": "👋 Welcome to English Autentico!"
+    "pt": "👋 Bem-vindo ao English Autêntico!",
+    "en": "👋 Welcome to English Autêntico!"
   },
   "vocab_btn_ia": {
     "pt": "🤖 Adicionar via IA",

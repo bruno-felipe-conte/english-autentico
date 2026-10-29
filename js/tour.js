@@ -1,7 +1,9 @@
 // tour.js — Interactive walkthrough via Driver.js
+// English Autêntico — Complete Modern Tour
 
 const Tour = {
   STORAGE_KEY: "en_tour_done",
+  _driverObj: null,
 
   reiniciar() {
     try { localStorage.removeItem(this.STORAGE_KEY); } catch(e) {}
@@ -16,83 +18,261 @@ const Tour = {
 
     const drv = window.driver.js.driver;
 
+    if (this._driverObj) {
+      try { this._driverObj.destroy(); } catch (_) {}
+      this._driverObj = null;
+    }
+
+    // 13 Passos completos do Tour do English Autêntico
     const passos = [
-      { sec: "temples",    prep: () => window.scrollTo(0,0) },
-      { sec: "temples",    prep: () => window.scrollTo(0,0) },
-      { sec: "temples",    prep: null },
-      { sec: "temples",    prep: () => window.scrollTo(0,0) },
-      { sec: "flashcards", prep: null },
-      { sec: "flashcards", prep: null },
-      { sec: "flashcards", prep: () => { const a = document.getElementById("card-actions"); if (a) a.style.display = "grid"; }},
-      { sec: "quiz",       prep: () => { if (typeof Quiz !== "undefined") (Quiz.renderizarSeletor || Quiz.render)?.(); }},
-      { sec: "grammar",    prep: () => { if (typeof Grammar !== "undefined") (Grammar.renderizarSeletor || Grammar.render)?.(); }},
-      { sec: "vocab",      prep: () => { if (typeof Vocab !== "undefined") Vocab.renderizar?.(); }},
-      { sec: "stories",    prep: () => { if (typeof Stories !== "undefined") (Stories.renderizarSeletor || Stories.render)?.(); }},
-      { sec: "dialogues",  prep: () => { if (typeof Dialogues !== "undefined") (Dialogues.renderizarSeletor || Dialogues.render)?.(); }},
-      { sec: "songs",      prep: () => { if (typeof Songs !== "undefined") (Songs.renderizarSeletor || Songs.render)?.(); }},
+      // 1. Header & Controles Globais
+      {
+        sec: "temples",
+        selector: ".app-header",
+        prep: () => window.scrollTo(0, 0),
+        titleKey: "tour_welcome_title",
+        descKey: "tour_welcome_desc",
+        side: "bottom",
+        align: "center"
+      },
+      // 2. Estatísticas & Meta Diária
+      {
+        sec: "temples",
+        selector: "#stats-bar, .header-stats, #daily-goal-bar",
+        prep: () => window.scrollTo(0, 0),
+        titleKey: "tour_stats_title",
+        descKey: "tour_stats_desc",
+        side: "bottom",
+        align: "center"
+      },
+      // 3. Menu Lateral Retrátil
+      {
+        sec: "temples",
+        selector: "#app-sidebar",
+        prep: null,
+        titleKey: "tour_sidebar_title",
+        descKey: "tour_sidebar_desc",
+        side: "right",
+        align: "start"
+      },
+      // 4. Templos do Conhecimento
+      {
+        sec: "temples",
+        selector: "#temples-grid, #templos-grid",
+        prep: () => {
+          const grid = document.getElementById("temples-grid") || document.getElementById("templos-grid");
+          if (grid) grid.scrollIntoView({ behavior: "instant", block: "center" });
+        },
+        titleKey: "tour_templi_title",
+        descKey: "tour_templi_desc",
+        side: "top",
+        align: "center"
+      },
+      // 5. Flashcards Inteligentes (FSRS)
+      {
+        sec: "flashcards",
+        selector: ".card-selecao-templo, #flashcard-arena, #sec-flashcards",
+        prep: () => {
+          if (typeof Flashcards !== "undefined" && Flashcards.atualizarSelectTemplo) {
+            Flashcards.atualizarSelectTemplo();
+          }
+        },
+        titleKey: "tour_flashcard_title",
+        descKey: "tour_flashcard_desc",
+        side: "bottom",
+        align: "center"
+      },
+      // 6. 5 Modos de Estudo nos Flashcards
+      {
+        sec: "flashcards",
+        selector: "#btn-modos-wrapper, .fc-mode-pills",
+        prep: null,
+        titleKey: "tour_modes_title",
+        descKey: "tour_modes_desc",
+        side: "bottom",
+        align: "center"
+      },
+      // 7. Avaliação Honesta no FSRS
+      {
+        sec: "flashcards",
+        selector: "#card-actions, .card-actions",
+        prep: () => {
+          const a = document.getElementById("card-actions");
+          if (a) {
+            a.style.display = "grid";
+            a.style.visibility = "visible";
+          }
+        },
+        titleKey: "tour_rate_title",
+        descKey: "tour_rate_desc",
+        side: "top",
+        align: "center"
+      },
+      // 8. Quiz de Fixação Ativa
+      {
+        sec: "quiz",
+        selector: "#quiz-templo-selector, #sec-quiz",
+        prep: () => {
+          if (typeof Quiz !== "undefined" && Quiz.renderizarSeletor) {
+            Quiz.renderizarSeletor();
+          }
+        },
+        titleKey: "tour_quiz_title",
+        descKey: "tour_quiz_desc",
+        side: "top",
+        align: "center"
+      },
+      // 9. Pronunciation Dojo
+      {
+        sec: "pronunciation",
+        selector: "#pronunciation-container, #sec-pronunciation",
+        prep: () => {
+          if (typeof Pronunciation !== "undefined") {
+            if (Pronunciation.renderizar) Pronunciation.renderizar();
+            else if (Pronunciation.render) Pronunciation.render();
+          }
+        },
+        titleKey: "tour_pronun_title",
+        descKey: "tour_pronun_desc",
+        side: "top",
+        align: "center"
+      },
+      // 10. Phrasal Verbs Lab
+      {
+        sec: "phrasal",
+        selector: ".phrasal-container, #sec-phrasal",
+        prep: () => {
+          if (typeof PhrasalVerbs !== "undefined" && PhrasalVerbs.renderizar) {
+            PhrasalVerbs.renderizar();
+          }
+        },
+        titleKey: "tour_phrasal_title",
+        descKey: "tour_phrasal_desc",
+        side: "top",
+        align: "center"
+      },
+      // 11. Vocabulário Completo & Auto-Teste
+      {
+        sec: "vocab",
+        selector: "#vocab-blur-btns, .vocab-filtros, #sec-vocab",
+        prep: () => {
+          if (typeof Vocab !== "undefined" && Vocab.renderizar) {
+            Vocab.renderizar();
+          }
+        },
+        titleKey: "tour_vocabolario_title",
+        descKey: "tour_vocabolario_desc",
+        side: "bottom",
+        align: "center"
+      },
+      // 12. Gramática Autêntica (A1 ao C1)
+      {
+        sec: "grammar",
+        selector: "#grammatica-container, #sec-grammar",
+        prep: () => {
+          if (typeof Grammatica !== "undefined" && Grammatica.renderizarSeletor) {
+            Grammatica.renderizarSeletor();
+          }
+        },
+        titleKey: "tour_grammatica_title",
+        descKey: "tour_grammatica_desc",
+        side: "top",
+        align: "center"
+      },
+      // 13. Diálogos, Leituras & Músicas
+      {
+        sec: "dialogues",
+        selector: "#dialogues-container, #sec-dialogues",
+        prep: () => {
+          if (typeof Dialogues !== "undefined" && Dialogues.renderizarSeletor) {
+            Dialogues.renderizarSeletor();
+          }
+        },
+        titleKey: "tour_immersion_title",
+        descKey: "tour_immersion_desc",
+        side: "top",
+        align: "center"
+      }
     ];
 
-    const stepSelectors = [
-      ".app-header",
-      ".stats-bar",
-      "#temples-grid .templo-card:first-child, #templos-grid .templo-card:first-child",
-      "#meta-prazo-container",
-      ".card-selecao-templo",
-      "#btn-modos-wrapper",
-      ".card-actions",
-      ".quiz-templo-btn:not(.bloqueado)",
-      ".gram-nivel-banner",
-      "#vocab-blur-btns",
-      "#stories-container, #storie-container",
-      ".dialogo-card",
-      "#songs-container, #canzoni-container",
-    ];
+    const stepsConfig = passos.map(p => ({
+      element: p.selector,
+      popover: {
+        title: (typeof I18n !== 'undefined' ? I18n.t(p.titleKey) : '') || p.titleKey,
+        description: (typeof I18n !== 'undefined' ? I18n.t(p.descKey) : '') || p.descKey,
+        side: p.side || "bottom",
+        align: p.align || "center"
+      }
+    }));
 
-    const navegar = (idx, cb) => {
-      const p = passos[idx];
-      if (!p) { cb(); return; }
-      App.navegar(p.sec);
-      if (p.prep) p.prep();
-      setTimeout(() => {
-        const sel = stepSelectors[idx];
-        if (sel) { const el = document.querySelector(sel); if (el) el.scrollIntoView({ behavior: "instant", block: "center" }); }
-        setTimeout(cb, 60);
-      }, 120);
+    const irParaPasso = (targetIdx) => {
+      if (targetIdx < 0) return;
+      if (targetIdx >= passos.length) {
+        if (driverObj) driverObj.destroy();
+        try { localStorage.setItem(Tour.STORAGE_KEY, "1"); } catch(e) {}
+        return;
+      }
+
+      const p = passos[targetIdx];
+      if (p && p.sec && typeof App !== 'undefined' && App.navegar) {
+        App.navegar(p.sec);
+        if (p.prep) {
+          try { p.prep(); } catch (err) { console.warn("[tour] prep error:", err); }
+        }
+      }
+
+      try {
+        const el = document.querySelector(p.selector);
+        if (el) {
+          el.scrollIntoView({ behavior: "instant", block: "center" });
+        }
+      } catch (_) {}
+
+      if (driverObj) {
+        driverObj.moveTo(targetIdx);
+      }
     };
 
-    let driverObj;
-    driverObj = drv({
-      showProgress: true, animate: true, allowClose: true,
-      nextBtnText: I18n.t('tour_next_btn'), 
-      prevBtnText: I18n.t('tour_prev_btn'), 
-      doneBtnText: I18n.t('tour_done_btn'),
-      progressText: I18n.t('tour_progress'),
+    const driverObj = drv({
+      showProgress: true,
+      animate: true,
+      allowClose: true,
+      nextBtnText: (typeof I18n !== 'undefined' ? I18n.t('tour_next_btn') : 'Próximo →'),
+      prevBtnText: (typeof I18n !== 'undefined' ? I18n.t('tour_prev_btn') : '← Voltar'),
+      doneBtnText: (typeof I18n !== 'undefined' ? I18n.t('tour_done_btn') : '🎉 Vamos lá!'),
+      progressText: (typeof I18n !== 'undefined' ? I18n.t('tour_progress') : '{{current}} de {{total}}'),
       popoverClass: "app-tour-theme",
-      onNextClick: () => { const cur = driverObj.getActiveIndex() ?? 0; navegar(cur + 1, () => driverObj.moveNext()); },
-      onPrevClick: () => { const cur = driverObj.getActiveIndex() ?? 0; navegar(cur - 1, () => driverObj.movePrevious()); },
-      onDestroyStarted: () => {
-        if (!driverObj.hasNextStep() || confirm(I18n.t('tour_confirm_exit'))) {
+      steps: stepsConfig,
+      onNextClick: () => {
+        const cur = driverObj.getActiveIndex() ?? 0;
+        if (cur >= passos.length - 1) {
           driverObj.destroy();
           try { localStorage.setItem(Tour.STORAGE_KEY, "1"); } catch(e) {}
+          return;
         }
+        irParaPasso(cur + 1);
       },
-      steps: [
-        { element: ".app-header",         popover: { title: I18n.t('tour_welcome_title'),     description: I18n.t('tour_welcome_desc'),    side: "bottom", align: "center" } },
-        { element: ".stats-bar",           popover: { title: I18n.t('tour_stats_title'),       description: I18n.t('tour_stats_desc'),      side: "bottom", align: "center" } },
-        { element: "#temples-grid .templo-card:first-child, #templos-grid .templo-card:first-child", popover: { title: I18n.t('tour_templi_title'), description: I18n.t('tour_templi_desc'), side: "bottom", align: "center" } },
-        { element: "#meta-prazo-container",popover: { title: I18n.t('tour_goal_title'),       description: I18n.t('tour_goal_desc'),       side: "bottom", align: "center" } },
-        { element: ".card-selecao-templo", popover: { title: I18n.t('tour_flashcard_title'),  description: I18n.t('tour_flashcard_desc'),  side: "bottom", align: "center" } },
-        { element: "#btn-modos-wrapper",   popover: { title: I18n.t('tour_modes_title'),      description: I18n.t('tour_modes_desc'),      side: "bottom", align: "center" } },
-        { element: ".card-actions",        popover: { title: I18n.t('tour_rate_title'),       description: I18n.t('tour_rate_desc'),       side: "top",    align: "center" } },
-        { element: ".quiz-templo-btn:not(.bloqueado)", popover: { title: I18n.t('tour_quiz_title'),  description: I18n.t('tour_quiz_desc'), side: "top",    align: "center" } },
-        { element: ".gram-nivel-banner",   popover: { title: I18n.t('tour_grammatica_title'),  description: I18n.t('tour_grammatica_desc'), side: "bottom", align: "center" } },
-        { element: "#vocab-blur-btns",     popover: { title: I18n.t('tour_vocabolario_title'),  description: I18n.t('tour_vocabolario_desc'), side: "bottom", align: "center" } },
-        { element: "#stories-container, #storie-container",    popover: { title: I18n.t('tour_reading_title'),     description: I18n.t('tour_reading_desc'),    side: "bottom", align: "center" } },
-        { element: ".dialogo-card",        popover: { title: I18n.t('tour_dialoghi_title'),    description: I18n.t('tour_dialoghi_desc'),   side: "bottom", align: "center" } },
-        { element: "#songs-container, #canzoni-container",   popover: { title: I18n.t('tour_canzoni_title'),     description: I18n.t('tour_canzoni_desc'),    side: "bottom", align: "center" } },
-      ]
+      onPrevClick: () => {
+        const cur = driverObj.getActiveIndex() ?? 0;
+        if (cur <= 0) return;
+        irParaPasso(cur - 1);
+      },
+      onDestroyStarted: () => {
+        try { localStorage.setItem(Tour.STORAGE_KEY, "1"); } catch(e) {}
+        driverObj.destroy();
+      }
     });
 
-    navegar(0, () => driverObj.drive());
+    this._driverObj = driverObj;
+
+    // Inicia no passo 0
+    irParaPasso(0);
+    setTimeout(() => {
+      driverObj.drive(0);
+    }, 150);
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.Tour = Tour;
+}

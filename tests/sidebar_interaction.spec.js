@@ -35,10 +35,7 @@ test.describe('Sidebar Hover & Pin Interactions', () => {
 
     // 2. Hover over sidebar: expands to 200px, main wrapper margin stays 64px (floating shadow)
     await sidebar.hover();
-    await page.waitForTimeout(300);
-
-    box = await sidebar.boundingBox();
-    expect(Math.round(box.width)).toBe(200);
+    await expect(sidebar).toHaveCSS('width', '200px');
 
     wrapperBox = await mainWrapper.boundingBox();
     expect(Math.round(wrapperBox.x)).toBe(64);
@@ -48,60 +45,37 @@ test.describe('Sidebar Hover & Pin Interactions', () => {
 
     // 3. Move mouse away: collapses back to 64px
     await page.mouse.move(500, 500);
-    await page.waitForTimeout(300);
-
-    box = await sidebar.boundingBox();
-    expect(Math.round(box.width)).toBe(64);
+    await expect(sidebar).toHaveCSS('width', '64px');
 
     opacity = await label.evaluate(el => window.getComputedStyle(el).opacity);
     expect(Number(opacity)).toBe(0);
 
     // 4. Hover again and click Pin button
     await sidebar.hover();
-    await page.waitForTimeout(300);
+    await expect(sidebar).toHaveCSS('width', '200px');
     await expect(pinBtn).toBeVisible();
     await pinBtn.click();
-    await page.waitForTimeout(300);
+    await expect(mainWrapper).toHaveCSS('margin-left', '200px');
 
     // Body should have 'sidebar-pinned' class
     const isBodyPinned = await page.evaluate(() => document.body.classList.contains('sidebar-pinned'));
     expect(isBodyPinned).toBe(true);
 
-    // When pinned, sidebar is 200px and main wrapper shifts to 200px
-    box = await sidebar.boundingBox();
-    expect(Math.round(box.width)).toBe(200);
-
-    wrapperBox = await mainWrapper.boundingBox();
-    expect(Math.round(wrapperBox.x)).toBe(200);
-
     // Move mouse away: stays pinned at 200px!
     await page.mouse.move(500, 500);
-    await page.waitForTimeout(300);
-
-    box = await sidebar.boundingBox();
-    expect(Math.round(box.width)).toBe(200);
-
-    wrapperBox = await mainWrapper.boundingBox();
-    expect(Math.round(wrapperBox.x)).toBe(200);
+    await expect(sidebar).toHaveCSS('width', '200px');
+    await expect(mainWrapper).toHaveCSS('margin-left', '200px');
 
     opacity = await label.evaluate(el => window.getComputedStyle(el).opacity);
     expect(Number(opacity)).toBe(1);
 
     // 5. Click Pin button again to unpin
     await pinBtn.click();
-    await page.waitForTimeout(300);
-
-    // Move mouse away
     await page.mouse.move(500, 500);
-    await page.waitForTimeout(300);
+    await expect(sidebar).toHaveCSS('width', '64px');
+    await expect(mainWrapper).toHaveCSS('margin-left', '64px');
 
     const isBodyStillPinned = await page.evaluate(() => document.body.classList.contains('sidebar-pinned'));
     expect(isBodyStillPinned).toBe(false);
-
-    box = await sidebar.boundingBox();
-    expect(Math.round(box.width)).toBe(64);
-
-    wrapperBox = await mainWrapper.boundingBox();
-    expect(Math.round(wrapperBox.x)).toBe(64);
   });
 });
