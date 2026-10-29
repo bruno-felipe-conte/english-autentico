@@ -1027,9 +1027,9 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
 /* 15. RESPONSIVE */
 @media (max-width:400px) { .card-actions{flex-direction:column;} .opcoes-grid{grid-template-columns:1fr;} }
 @media (min-width:600px) { .tab-icone{display:none;} .tab-texto{display:block;} }
-@media (min-width:768px) { .templos-grid{grid-template-columns:repeat(2,1fr);} .flashcard{height:340px;} .section-titulo{font-size:var(--h1-size, 1.8rem);} }
-@media (min-width:1100px) { .templos-grid{grid-template-columns:repeat(3,1fr);} .app-container{padding:0 var(--esp-xl);} .flashcard{height:360px;max-width:560px;} }
-@media (min-width:1400px) { .templos-grid{grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)) !important; gap: 1.25rem;} }
+@media (min-width:768px) { .flashcard{height:340px;} .section-titulo{font-size:var(--h1-size, 1.8rem);} }
+@media (min-width:1100px) { .app-container{padding:0 var(--esp-xl);} .flashcard{height:360px;max-width:560px;} }
+@media (min-width:1400px) { .templos-grid{grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 1.25rem;} }
 
 /* 16. UTILITIES */
 .oculto { display:none !important; }
@@ -3297,11 +3297,81 @@ body.dark-mode .cloze-studio-box {
   100% { height: 18px; }
 }
 
-/* Mic Recording Studio */
+/* Mic Recording Studio — Fixado na parte inferior da tela ("Colado ao chão") */
+#sec-pronunciation {
+  position: relative;
+  padding-bottom: 160px;
+}
+
+#sec-pronunciation .dojo-hero-card {
+  padding-bottom: 130px;
+  overflow: visible;
+}
+
+#sec-pronunciation .dojo-mic-studio {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 680px;
+  z-index: 1050;
+  border-radius: 20px 20px 0 0;
+  padding: 0.9rem 1.4rem calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+  color: #FFF8F0;
+  background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
+  border: 1.5px solid rgba(212, 168, 67, 0.4);
+  border-bottom: none;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+}
+
+#sec-pronunciation .dojo-mic-btn-wrapper {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 0.4rem;
+}
+
+#sec-pronunciation .dojo-mic-btn {
+  font-size: 2.1rem;
+}
+
+#sec-pronunciation .dojo-mic-status {
+  font-size: 0.82rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 1023px) {
+  #sec-pronunciation {
+    padding-bottom: 190px;
+  }
+  #sec-pronunciation .dojo-hero-card {
+    padding-bottom: 150px;
+  }
+  #sec-pronunciation .dojo-mic-studio {
+    bottom: var(--nav-height, 56px);
+    border-radius: 16px 16px 0 0;
+    padding: 0.75rem 1rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  }
+  #sec-pronunciation .dojo-mic-btn-wrapper {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 0.3rem;
+  }
+  #sec-pronunciation .dojo-mic-btn {
+    font-size: 1.85rem;
+  }
+  #sec-pronunciation .dojo-mic-status {
+    font-size: 0.76rem;
+  }
+}
+
 .dojo-mic-studio {
   background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
   border-radius: 18px;
-  padding: 2.2rem 1.5rem;
+  padding: 1.5rem 1.2rem;
   text-align: center;
   color: #FFF8F0;
   box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
@@ -3309,9 +3379,9 @@ body.dark-mode .cloze-studio-box {
 
 .dojo-mic-btn-wrapper {
   position: relative;
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 1rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.75rem;
 }
 
 .dojo-mic-btn {
@@ -3837,6 +3907,45 @@ body.dark-mode {
   --it-eb-cypress:      #76A889;
   --it-eb-gold:         #E5A352;
   --it-eb-amber:        #BFA175;
+}
+
+/* Curva de Esquecimento Ebbinghaus — Reduzida e reposicionada abaixo dos cards */
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact {
+  max-width: 500px;
+  width: 100%;
+  margin: 1rem auto 0;
+  padding: 0;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-card {
+  padding: 0.75rem 0.95rem;
+  margin-top: 0.35rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-header {
+  margin-bottom: 0.45rem;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-title {
+  font-size: 0.88rem;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-subtitle {
+  font-size: 0.68rem;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-badge {
+  font-size: 0.62rem;
+  padding: 1px 6px;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-legend {
+  padding-top: 0.35rem;
+  margin-top: 0.3rem;
+  font-size: 0.66rem;
+  gap: 0.75rem;
 }
 
 .it-ebbinghaus-card {

@@ -625,7 +625,11 @@ const Pronunciation = {
             </div>
           </div>
 
-          <!-- Estúdio de Gravação do Aluno -->
+          <!-- Painel Dinâmico de Diagnóstico e Feedback -->
+          <div id="pronunciation-result" class="pronunciation-result imitazione-resultado dojo-feedback-panel" style="display:none;margin-top:1.5rem">
+          </div>
+
+          <!-- Estúdio de Gravação do Aluno (Fixado na parte inferior da tela / Colado ao chão) -->
           <div class="dojo-mic-studio">
             <div class="dojo-mic-btn-wrapper">
               <button id="dojo-btn-mic" class="dojo-mic-btn" onclick="Pronunciation.toggleRecording()" title="Clique para falar">
@@ -635,10 +639,6 @@ const Pronunciation = {
             <div id="dojo-mic-status" class="dojo-mic-status">
               Clique no microfone e fale a frase acima
             </div>
-          </div>
-
-          <!-- Painel Dinâmico de Diagnóstico e Feedback -->
-          <div id="pronunciation-result" class="pronunciation-result imitazione-resultado dojo-feedback-panel" style="display:none;margin-top:1.5rem">
           </div>
         </div>
       </div>

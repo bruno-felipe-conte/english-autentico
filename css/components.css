@@ -189,21 +189,50 @@
     /* section.active: padding gerenciado pelo italia.css */
     /* section-titulo: estilo gerenciado pelo italia.css */
 
-    /* ── Templos Grid ── */
-    .templos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
-    .temple-card, .templo-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; }
-    .temple-card:not(.bloqueado):hover, .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    /* ── Templos Grid (Padrão Oficial Italiano Autêntico) ── */
+    .templos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+    .temple-card, .templo-card {
+      background-color: var(--cor-marmore);
+      border-radius: var(--raio-md, 12px);
+      overflow: hidden;
+      box-shadow: var(--sombra-md, 0 4px 12px rgba(0,0,0,0.15));
+      border: 1px solid var(--cor-pietra, rgba(165,150,134,0.3));
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .temple-card:not(.bloqueado):hover, .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
     .temple-card.bloqueado, .templo-card.bloqueado { opacity: 0.6; }
-    .temple-header, .templo-header { padding: 1.1rem 1rem; color: #FFF8F0; min-height: 90px; display: flex; flex-direction: column; justify-content: space-between; }
-    .temple-num, .templo-num { font-family: 'Cinzel', serif; font-size: 0.7rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.1em; }
-    .temple-name, .templo-nome { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600; line-height: 1.25; }
-    .temple-meta, .templo-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
-    .temple-city, .templo-cidade { font-size: 0.78rem; opacity: 0.85; }
-    .nivel-badge { display: inline-block; padding: 0.1rem 0.45rem; background: rgba(255,255,255,0.25); border-radius: 10px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; }
-    .temple-body, .templo-body { padding: 0.85rem; background: var(--cor-marmore); }
-    .progresso-bar-container { background: var(--cor-marmore-escuro); border-radius: 10px; height: 5px; margin: 0.4rem 0 0.3rem; overflow: hidden; }
-    .progresso-bar-fill { height: 100%; background: linear-gradient(90deg, #003E8A, #D4A843); border-radius: 10px; transition: width 0.5s ease; }
-    .progresso-label { font-size: 0.73rem; color: #777; margin-bottom: 0.65rem; }
+    .temple-header, .templo-header {
+      position: relative;
+      padding: 1.25rem 1.25rem 0.9rem;
+      color: #FFF8F0;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+    .temple-header::before, .templo-header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 10%;
+      right: 10%;
+      height: 80%;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      pointer-events: none;
+    }
+    .temple-num, .templo-num { font-family: 'Cinzel', serif; font-size: 0.72rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.1em; }
+    .temple-name, .templo-nome { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.45); }
+    .temple-meta, .templo-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-top: 0.25rem; }
+    .temple-city, .templo-cidade { font-size: 0.9rem; color: rgba(255,255,255,0.85); font-style: italic; }
+    .nivel-badge { display: inline-block; padding: 0.12rem 0.5rem; background: rgba(255,255,255,0.25); border-radius: 10px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; }
+    .temple-body, .templo-body { padding: 0.9rem 1.1rem; background: var(--cor-marmore); flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .progresso-bar-container, .templo-progresso { background: var(--cor-marmore-escuro); border: 1px solid var(--cor-pietra); border-radius: 5px; height: 10px; margin: 0.4rem 0 0.3rem; overflow: hidden; }
+    .progresso-bar-fill, .templo-progresso-fill { height: 100%; background: linear-gradient(90deg, #003E8A, #D4A843); border-radius: 5px; transition: width 0.5s ease; }
+    .progresso-label { font-size: 0.75rem; color: var(--cor-inchiostro-claro, #777); margin-bottom: 0.5rem; font-weight: 500; }
     .temple-card:not(.bloqueado), .templo-card:not(.bloqueado) { transition: transform 0.15s, box-shadow 0.15s; }
     .temple-card.bloqueado:hover, .templo-card.bloqueado:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
     .lock-info { text-align: center; color: #999; font-size: 0.78rem; padding: 0.3rem 0 0; }
@@ -1456,21 +1485,46 @@
     .gram-lez-num-label { font-size: 0.6rem; color: var(--cor-veneziano-escuro); font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.3; }
     .gram-lez-card.feita .gram-lez-num-label { color: #27AE60; }
     .gram-lez-titulo { font-size: 0.82rem; color: var(--cor-inchiostro); font-weight: 600; line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-    .gram-lez-meta { font-size: 0.65rem; color: #bbb; margin-top: 0.15rem; }
+    .gram-lez-meta { font-size: 0.65rem; color: #5A4535; font-weight: 500; margin-top: 0.15rem; }
     .gram-lez-arrow { color: #d4c4a8; font-size: 1.1rem; flex-shrink: 0; transition: color 0.15s; }
     .gram-lez-card:hover .gram-lez-arrow { color: var(--cor-veneziano-escuro); }
     .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
     /* Módulos bloqueados — linha inferior compacta */
     .gram-locked-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-top: 0.5rem; }
-    .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
+    .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #A59686; padding: 0.75rem 1rem; opacity: 1; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
     .gram-locked-pill-icon { font-size: 1rem; }
     .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
-    .gram-locked-pill-id { font-family: 'Cinzel', serif; font-size: 0.6rem; color: #999; letter-spacing: 0.15em; text-transform: uppercase; }
-    .gram-locked-pill-nome { font-size: 0.78rem; color: var(--cor-pietra); font-weight: 600; }
-    .gram-locked-pill-req { font-size: 0.65rem; color: #bbb; }
+    .gram-locked-pill-id { font-family: 'Cinzel', serif; font-size: 0.6rem; color: #5A4535; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+    .gram-locked-pill-nome { font-size: 0.78rem; color: #2E1B0E; font-weight: 600; }
+    .gram-locked-pill-req { font-size: 0.65rem; color: #5A4535; font-weight: 500; }
     .gram-locked-pill:hover { opacity: 1; border-color: var(--cor-veneziano-escuro); box-shadow: 0 3px 12px rgba(0, 62, 138,0.12); }
-    .gram-locked-pill-arrow { color: #ccc; font-size: 1.1rem; margin-left: auto; flex-shrink: 0; transition: color 0.15s; }
+    .gram-locked-pill-arrow { color: #5A4535; font-size: 1.1rem; margin-left: auto; flex-shrink: 0; transition: color 0.15s; }
     .gram-locked-pill:hover .gram-locked-pill-arrow { color: var(--cor-veneziano-escuro); }
+
+    /* Definição e PRC didático */
+    .gram-definicao-row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: stretch; padding: 0.6rem 0.75rem; }
+    .gram-def-card { flex: 1; min-width: 160px; border-radius: 8px; overflow: hidden; border: 1px solid #ede5d5; display: flex; flex-direction: column; background: #ffffff; }
+    .gram-def-label { padding: 0.35rem 0.75rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+    .gram-def-corpo { padding: 0.75rem 0.85rem; font-size: 0.9rem; color: #1e1e1e; line-height: 1.85; letter-spacing: 0.015em; }
+    .gram-def-fenomeno .gram-def-label { background: #eaf2fb; color: #003E8A; }
+    .gram-def-causa    .gram-def-label { background: #fef9e7; color: #7D6608; }
+    .gram-def-conceito .gram-def-label { background: #eafaf1; color: #145A32; }
+
+    .gram-prc-row { border: 1px solid #ede5d5; border-radius: 6px; overflow: hidden; transition: box-shadow 0.18s, border-color 0.18s; }
+    .gram-prc-row:hover { box-shadow: 0 0 0 2px #D4A843; border-color: var(--cor-toscano); }
+    .gram-prc-oracao { background: #f9f4ee; padding: 0.7rem 0.85rem; font-size: 0.95rem; color: #002047; cursor: pointer; line-height: 1.6; letter-spacing: 0.02em; }
+    .gram-coda { background: #2c2c2c; color: #F5EDD8; padding: 0.85rem 1.1rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.85; letter-spacing: 0.02em; }
+
+    body.dark-mode .gram-locked-pill { background: #1C1816; border-color: #3D352E; }
+    body.dark-mode .gram-locked-pill-id { color: #A89B8C; }
+    body.dark-mode .gram-locked-pill-nome { color: #E6DFD3; }
+    body.dark-mode .gram-locked-pill-req { color: #A89B8C; }
+    body.dark-mode .gram-locked-pill-arrow { color: #A89B8C; }
+    body.dark-mode .gram-lez-meta { color: #A89B8C; }
+    body.dark-mode .gram-def-card { background: #1C1816; border-color: #2D2723; }
+    body.dark-mode .gram-def-corpo { color: #E6DFD3; }
+    body.dark-mode .gram-prc-row { border-color: #2D2723; }
+    body.dark-mode .gram-prc-oracao { background: #25201D; color: #85b8f2; }
 
     /* ── Modal Admin ── */
     .gram-admin-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); backdrop-filter: blur(3px); z-index: 9999; display: flex; align-items: center; justify-content: center; animation: gramFadeIn 0.18s ease; }
@@ -3621,6 +3675,103 @@
   padding-top: 0;
   padding-bottom: 0;
   pointer-events: none;
+}
+
+.fc-seletor-drawer .card-selecao-templo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.fc-seletor-drawer .fc-select-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.fc-seletor-drawer .fc-select-row label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cor-veneziano-escuro, #002047);
+  white-space: nowrap;
+}
+
+.fc-seletor-drawer .fc-select-row select {
+  flex: 1;
+  font-family: 'Cinzel', serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--cor-veneziano-escuro, #002047);
+  background-color: #fff;
+  border: 1.5px solid #d4a843;
+  border-radius: 10px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+.fc-seletor-drawer .selector-helper {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #5A4535;
+}
+
+body.dark-mode .fc-seletor-drawer {
+  background: #1C1816;
+  border-color: rgba(212, 168, 67, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .fc-seletor-drawer .fc-select-row select {
+  background-color: #25201D;
+  color: #E6DFD3;
+}
+
+body.dark-mode .fc-seletor-drawer .selector-helper {
+  color: #A89B8C;
+}
+
+/* Curva de Esquecimento Ebbinghaus — Reduzida e reposicionada abaixo dos cards */
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact {
+  max-width: 500px;
+  width: 100%;
+  margin: 1rem auto 0;
+  padding: 0;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-card {
+  padding: 0.75rem 0.95rem;
+  margin-top: 0.35rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-header {
+  margin-bottom: 0.45rem;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-title {
+  font-size: 0.88rem;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-subtitle {
+  font-size: 0.68rem;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-badge {
+  font-size: 0.62rem;
+  padding: 1px 6px;
+}
+
+.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-legend {
+  padding-top: 0.35rem;
+  margin-top: 0.3rem;
+  font-size: 0.66rem;
+  gap: 0.75rem;
 }
 
 /* Sidebar recolhida */
