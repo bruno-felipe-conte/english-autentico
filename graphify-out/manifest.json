@@ -552,8 +552,8 @@
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
-    "mtime": 1793268947.9667797,
-    "seen": 1793269032.2293348,
+    "mtime": 1793270554.3416128,
+    "seen": 1793270720.6959755,
     "ast_hash": "f196824657d8858bc7fa44eecbba38b1",
     "semantic_hash": ""
   },
@@ -1761,6 +1761,12 @@
     "mtime": 1793268891.0015652,
     "seen": 1793269032.4760897,
     "ast_hash": "f115e7ca53ee1894a6bb2696829a9854",
+    "semantic_hash": ""
+  },
+  "tests/computer_use_verification.spec.js": {
+    "mtime": 1793270527.534928,
+    "seen": 1793270720.7227418,
+    "ast_hash": "fe2e0f1348714b74419363d760974584",
     "semantic_hash": ""
   }
 }

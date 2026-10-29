@@ -1,24 +1,24 @@
 # Graph Report - english-autentico  (2026-10-29)
 
 ## Corpus Check
-- 231 files · ~1,230,823 words
+- 232 files · ~1,231,359 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1220 nodes · 1329 edges · 137 communities (68 shown, 69 thin omitted)
+- 1223 nodes · 1333 edges · 129 communities (65 shown, 64 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4cc33da2`
+- Built from commit: `fa7d2536`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - inspect_grammar_cdp.mjs
 - enrich_wave1.mjs
-- enrich_wave6_part1.mjs
+- ref_fs
 - PDCA_TEMPLOS.md
 - ═══════════════════════════════════════════════════════════════
 - PDCA_dialogos.md
@@ -29,15 +29,15 @@
 - Workflow PDCA Multi-Especialistas — Template Reutilizável
 - FLASHCARDS — Relatório PDCA Completo
 - @playwright/test
-- ref_fs
+- enrich_wave2_part2.mjs
 - SPEC — Método dos Famosos: 5 Novas Features
 - ebbinghaus.test.js
 - enrich_wave3_part1.mjs
 - ref_path
 - Vozes dos Especialistas — Diagnóstico Individual
 - SPEC — Expansão para 5.000 Palavras Italianas
-- enrich_wave7_part2.mjs
-- enrich_wave4_part4.mjs
+- enrich_wave3_part2.mjs
+- enrich_wave3_part3.mjs
 - enrich_wave5_part1.mjs
 - package.json
 - GRAMMAR (Gramática) — Relatório PDCA Completo
@@ -45,7 +45,6 @@
 - Ações de Médio Prazo (1–4 semanas)
 - PDCA_GRAMATICA_BRAINSTORM.md
 - Canonical AI Content Generation Prompts Guide
-- scripts
 - SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)
 - 1. O Padrão Ouro Científico (Estado da Arte)
 - Checklist de Auditoria Completa — English Autentico PWA
@@ -57,14 +56,7 @@
 - ref_http
 - Abas e seus parâmetros
 - ═══════════════════════════════════════════════════════════════
-- devDependencies
-- repository
-- stage1_acceptance.spec.js
-- stage2_acceptance.spec.js
-- offline.spec.js
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
-- sidebar_interaction.spec.js
-- song.spec.js
 - 🧪 TESTING PROTOCOL - ItalianLearningApp
 - 1️⃣ UNIT TESTS PER TEMPLE
 - English Autentico — System Context & Handoff Instructions
@@ -162,7 +154,7 @@
 5. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
 6. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
 7. `renderizar()` - 15 edges
-8. `@playwright/test` - 13 edges
+8. `@playwright/test` - 14 edges
 9. `Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)` - 13 edges
 10. `1️⃣ UNIT TESTS PER TEMPLE` - 12 edges
 
@@ -181,11 +173,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (137 total, 69 thin omitted)
+## Communities (129 total, 64 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
 Nodes (4): CDPClient, createTab(), main(), sleep()
+
+### Community 2 - "ref_fs"
+Cohesion: 0.17
+Nodes (7): data, wave4Part4Lessons, data, wave6Part1Lessons, data, wave7Part2Lessons, enData
 
 ### Community 3 - "PDCA_TEMPLOS.md"
 Cohesion: 0.04
@@ -220,12 +216,8 @@ Cohesion: 0.06
 Nodes (32): ALTA (P1 — Prioritária), CRÍTICA (P0 — Bloqueante), Descobertas Inesperadas, 🔍 ESTADO ATUAL, FLASHCARDS — Relatório PDCA Completo, M1 — Onboarding de 5 Passos para FSRS, M2 — Conquistas/Achievements, M3 — Push Notifications (+24 more)
 
 ### Community 12 - "@playwright/test"
-Cohesion: 0.13
-Nodes (8): { defineConfig, devices }, @playwright/test, { test, expect }, { test, expect }, { test, expect }, { test, expect }, { test, expect }, { test, expect }
-
-### Community 13 - "ref_fs"
-Cohesion: 0.17
-Nodes (7): data, wave2Part2Lessons, data, wave3Part2Lessons, data, wave3Part3Lessons, enData
+Cohesion: 0.07
+Nodes (17): { defineConfig, devices }, @playwright/test, { test, expect }, path, { test, expect }, { test, expect }, { test, expect }, { test, expect } (+9 more)
 
 ### Community 14 - "SPEC — Método dos Famosos: 5 Novas Features"
 Cohesion: 0.06
@@ -254,8 +246,8 @@ Cohesion: 0.07
 Nodes (26): 1. Usar o script base já existente, 2. Gerar em blocos de 5 templos por vez, 3. Critérios de qualidade por templo, 4. Atualizar core.js após gerar todos os templos, 5. Atualizar sw.js, 6. Commit e push final, App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR (+18 more)
 
 ### Community 23 - "package.json"
-Cohesion: 0.15
-Nodes (12): author, bugs, url, description, homepage, keywords, license, name (+4 more)
+Cohesion: 0.09
+Nodes (22): author, bugs, url, description, devDependencies, http-server, @playwright/test, homepage (+14 more)
 
 ### Community 24 - "GRAMMAR (Gramática) — Relatório PDCA Completo"
 Cohesion: 0.08
@@ -276,10 +268,6 @@ Nodes (4): 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · Engl
 ### Community 28 - "Canonical AI Content Generation Prompts Guide"
 Cohesion: 0.11
 Nodes (17): 1. Module: 💬 Dialogues (Situational Dialogues), 2. Module: 🎵 Songs (Karaoke Cloze Player), 3. Module: 📖 Stories (3D Antique Book Reader), 4. Module: 🗣️ Pronunciation (Dojo & Speech Recognition), 5. Module: 🃏 Vocabulary & Flashcards, Canonical AI Content Generation Prompts Guide, Data Structure (`data/dialogues.json` & `en_dialogues_custom`), Data Structure (`data/pronunciation.json` & `en_pronunciation_custom`) (+9 more)
-
-### Community 29 - "scripts"
-Cohesion: 0.50
-Nodes (4): scripts, test, test:e2e, test:ui
 
 ### Community 30 - "SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)"
 Cohesion: 0.11
@@ -324,14 +312,6 @@ Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repe
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
 Cohesion: 0.05
 Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
-
-### Community 41 - "devDependencies"
-Cohesion: 0.67
-Nodes (3): devDependencies, http-server, @playwright/test
-
-### Community 42 - "repository"
-Cohesion: 0.67
-Nodes (3): repository, type, url
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
 Cohesion: 0.08
@@ -463,20 +443,20 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 797 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **69 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 799 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **64 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `@playwright/test` connect `@playwright/test` to `package.json`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **What connects `http-server` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PDCA_TEMPLOS.md` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
-- **Why does `============================================================` connect `vocab.js` to `═══════════════════════════════════════════════════════════════`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Should `═══════════════════════════════════════════════════════════════` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `PDCA_dialogos.md` be split into smaller, more focused modules?**
