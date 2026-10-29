@@ -871,16 +871,16 @@ const I18n = {
     "en": "❤️ Favorites"
   },
   "fc_btn_imitar": {
-    "pt": "🎤 Imitar",
-    "en": "🎤 Imitate"
+    "pt": "Imitar",
+    "en": "Imitate"
   },
   "fc_btn_praticar_todas": {
     "pt": "🔁 Praticar todas",
     "en": "🔁 Practice all"
   },
   "fc_btn_pronunciar": {
-    "pt": "🔊 Pronunciar",
-    "en": "🔊 Pronounce"
+    "pt": "Pronunciar",
+    "en": "Pronounce"
   },
   "fc_contexto_sem_exemplo": {
     "pt": "⚠️ Exemplo em contexto não disponível para este cartão.",

@@ -30,15 +30,15 @@
     "semantic_hash": ""
   },
   "data/locales/en-US.json": {
-    "mtime": 1792860255.1728806,
-    "seen": 1792860619.5472987,
-    "ast_hash": "5f54e48b3ea5b0f51e13672c9080484f",
+    "mtime": 1793312835.107913,
+    "seen": 1793313065.8320978,
+    "ast_hash": "db41e177fce348ec41176d80be15523a",
     "semantic_hash": ""
   },
   "data/locales/pt-BR.json": {
-    "mtime": 1792860251.9571369,
-    "seen": 1792860619.5473042,
-    "ast_hash": "5d5ef08f1373af566e978a72a8b859cf",
+    "mtime": 1793312852.7128112,
+    "seen": 1793313065.8321013,
+    "ast_hash": "28d5d81eb4ea3bd33d225dbc367613c1",
     "semantic_hash": ""
   },
   "data/palavras/used.json": {
@@ -426,9 +426,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793307753.1885164,
-    "seen": 1793311578.9368274,
-    "ast_hash": "ce3b89a6638319590fa7838c443b012c",
+    "mtime": 1793312901.5120347,
+    "seen": 1793313066.836474,
+    "ast_hash": "b8f04c1ec10caef25d018c57a32db6e2",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -444,9 +444,9 @@
     "semantic_hash": ""
   },
   "js/i18n.js": {
-    "mtime": 1793235390.1031322,
-    "seen": 1793235660.8781831,
-    "ast_hash": "93abfe48da97e257948560bfc0dad59a",
+    "mtime": 1793312322.8325317,
+    "seen": 1793313066.8483374,
+    "ast_hash": "84b75892a9037f8450a69cd059fb8495",
     "semantic_hash": ""
   },
   "js/ia-import.js": {
@@ -480,9 +480,9 @@
     "semantic_hash": ""
   },
   "js/pronunciation.js": {
-    "mtime": 1793310646.8991766,
-    "seen": 1793311579.025153,
-    "ast_hash": "b6758098c107cab06ea95ae099d746c1",
+    "mtime": 1793312471.622206,
+    "seen": 1793313066.8964303,
+    "ast_hash": "f8894475d3fb2a2dc89766a77da2fcbf",
     "semantic_hash": ""
   },
   "js/quiz.js": {
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793310688.9201758,
-    "seen": 1793311579.7008145,
-    "ast_hash": "7e253b6b1defdc0ee83b36c7fad17c20",
+    "mtime": 1793312396.8967912,
+    "seen": 1793313067.7545636,
+    "ast_hash": "05eb9640abef7256293ebbcfc47fb97b",
     "semantic_hash": ""
   },
   "playwright-report/index.html": {

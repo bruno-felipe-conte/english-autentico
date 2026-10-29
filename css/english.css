@@ -3297,91 +3297,24 @@ body.dark-mode .cloze-studio-box {
   100% { height: 18px; }
 }
 
-/* Mic Recording Studio — Fixado na parte inferior da tela ("Colado ao chão") */
-#sec-pronunciation {
-  position: relative;
-  padding-bottom: 160px;
-}
-
-#sec-pronunciation .dojo-hero-card {
-  padding-bottom: 130px;
-  overflow: visible;
-}
-
-#sec-pronunciation .dojo-mic-studio {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 680px;
-  z-index: 1050;
-  border-radius: 20px 20px 0 0;
-  padding: 0.9rem 1.4rem calc(0.9rem + env(safe-area-inset-bottom, 0px));
-  text-align: center;
-  color: #FFF8F0;
-  background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
-  border: 1.5px solid rgba(212, 168, 67, 0.4);
-  border-bottom: none;
-  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
-}
-
-#sec-pronunciation .dojo-mic-btn-wrapper {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 0.4rem;
-}
-
-#sec-pronunciation .dojo-mic-btn {
-  font-size: 2.1rem;
-}
-
-#sec-pronunciation .dojo-mic-status {
-  font-size: 0.82rem;
-  margin: 0;
-  line-height: 1.3;
-}
-
-@media (max-width: 1023px) {
-  #sec-pronunciation {
-    padding-bottom: 190px;
-  }
-  #sec-pronunciation .dojo-hero-card {
-    padding-bottom: 150px;
-  }
-  #sec-pronunciation .dojo-mic-studio {
-    bottom: var(--nav-height, 56px);
-    border-radius: 16px 16px 0 0;
-    padding: 0.75rem 1rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
-  }
-  #sec-pronunciation .dojo-mic-btn-wrapper {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 0.3rem;
-  }
-  #sec-pronunciation .dojo-mic-btn {
-    font-size: 1.85rem;
-  }
-  #sec-pronunciation .dojo-mic-status {
-    font-size: 0.76rem;
-  }
-}
-
+/* Mic Recording Studio (Integrado ao Card de Imitação, independente e com fluxo natural) */
 .dojo-mic-studio {
   background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
   border-radius: 18px;
-  padding: 1.5rem 1.2rem;
+  padding: 1.8rem 1.4rem;
+  margin-top: 1.5rem;
   text-align: center;
   color: #FFF8F0;
-  box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.12);
+  border: 1px solid rgba(212, 168, 67, 0.25);
+  position: relative;
 }
 
 .dojo-mic-btn-wrapper {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 0.75rem;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 0.85rem;
 }
 
 .dojo-mic-btn {
@@ -3390,7 +3323,7 @@ body.dark-mode .cloze-studio-box {
   border-radius: 50%;
   border: 3px solid #D4A843;
   background: linear-gradient(135deg, #FFFDF8, #EEDCC4);
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3399,6 +3332,12 @@ body.dark-mode .cloze-studio-box {
   box-shadow: 0 8px 25px rgba(0,0,0,0.35);
   position: relative;
   z-index: 2;
+}
+
+.dojo-mic-status {
+  font-size: 0.88rem;
+  color: rgba(255, 248, 240, 0.9);
+  margin-top: 0.2rem;
 }
 
 .dojo-mic-btn:hover {

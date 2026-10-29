@@ -654,12 +654,22 @@ const Flashcards = {
 
   // ── Atualiza a Curva de Esquecimento de Ebbinghaus (FSRS) ──
   atualizarEbbinghaus() {
-    if (typeof renderEbbinghausCurve !== 'function') return;
     const container = document.getElementById('ebbinghaus-container');
     if (!container) return;
+
+    // A curva de esquecimento se oculta enquanto estiver estudando os cards (Zero-Scroll & foco didático)
+    const emSessaoEstudo = !!(this.cartaAtual || (this.cartasDisponiveis && this.cartasDisponiveis.length > 0 && this.indiceAtual < this.cartasDisponiveis.length));
+    if (emSessaoEstudo) {
+      container.style.display = 'none';
+      return;
+    }
+
+    if (typeof renderEbbinghausCurve !== 'function') return;
     const cardDataMap = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData) ? App.estado.flashcardData : {};
     const fsrsCard = this.cartaAtual ? cardDataMap[this.cartaAtual.id] : null;
     const allCards = Object.values(cardDataMap);
+
+    container.style.display = 'block';
     renderEbbinghausCurve(container, allCards, fsrsCard || null, {
       desiredRetention: 0.90,
       locale: (typeof I18n !== 'undefined' ? I18n.currentLang : 'pt') || 'pt',
