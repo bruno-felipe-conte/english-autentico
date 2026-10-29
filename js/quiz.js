@@ -13,6 +13,64 @@ const Quiz = {
   _indiceAtual: 0,     // para restauração i18n
   _autoAdvanceTimer: null,
 
+  // ── Smart Retractable Quiz Bar (Zero-Scroll UX) ─────────────
+  toggleSeletor() {
+    const seletor = document.getElementById('quiz-templo-selector');
+    if (!seletor) return;
+    const visivel = seletor.style.display !== 'none';
+    if (visivel) {
+      seletor.style.display = 'none';
+    } else {
+      this.renderizarSeletor();
+      seletor.style.display = 'grid';
+    }
+    this._sincronizarBarraCompacta();
+  },
+
+  _sincronizarBarraCompacta() {
+    const bar       = document.getElementById('quiz-compact-bar');
+    const container = document.getElementById('quiz-container');
+    const seletor   = document.getElementById('quiz-templo-selector');
+    if (!bar) return;
+
+    const quizAtivo = container && container.style.display !== 'none' && this.perguntas && this.perguntas.length > 0;
+    if (!quizAtivo) {
+      bar.style.display = 'none';
+      return;
+    }
+
+    bar.style.display = 'flex';
+    const elNome = document.getElementById('quiz-compact-nome');
+    if (elNome) {
+      let nomeQuiz = '🏛️ Quiz';
+      if (this.temploAtual === 'misto') {
+        nomeQuiz = '⚡ Quick Mix';
+      } else if (this.temploAtual === 'revisao') {
+        nomeQuiz = '🔁 Error Review';
+      } else if (this.temploAtual === 'phrasal') {
+        nomeQuiz = '🧩 Phrasal Verbs';
+      } else if (this.temploAtual) {
+        const tData = App.estado?.templosData?.[this.temploAtual];
+        const tNome = tData?.nome || `Temple ${this.temploAtual}`;
+        nomeQuiz = `🏛️ T${this.temploAtual} · ${tNome}`;
+      }
+      elNome.textContent = nomeQuiz;
+    }
+
+    const elCount = document.getElementById('quiz-compact-count');
+    if (elCount) {
+      elCount.textContent = `${this.perguntaAtual + 1}/${this.perguntas.length}`;
+    }
+
+    const btnToggle = document.getElementById('quiz-compact-toggle-btn');
+    if (btnToggle) {
+      const seletorAberto = seletor && seletor.style.display !== 'none';
+      btnToggle.innerHTML = seletorAberto
+        ? '<span>✕ Ocultar</span><span class="quiz-compact-chevron">▴</span>'
+        : '<span>⚙️ Trocar</span><span class="quiz-compact-chevron">▾</span>';
+    }
+  },
+
   // ── Start quiz for a temple ────────────────────────────────
   iniciar(temploNum) {
     if (!Progressao.temploDesbloqueado(temploNum)) {
@@ -180,6 +238,8 @@ const Quiz = {
     if (barFill) barFill.style.width = Math.max(5, pct) + '%';
     if (numLabel) numLabel.textContent = I18n.t('quiz_pergunta_de').replace('{a}', this.perguntaAtual + 1).replace('{b}', total);
 
+    this._sincronizarBarraCompacta();
+
     // Question type badge
     const tipoBadge = document.getElementById('quiz-tipo');
     const rawTipo = (p.tipo || 'vocabulario').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -257,13 +317,23 @@ const Quiz = {
     // Mark all buttons with accessibility
     const grid = document.getElementById('opcoes-grid');
     if (grid) {
+      const correta = (p.resposta_correta || '').trim();
+      const escolhida = (escolha || '').trim();
+
       grid.querySelectorAll('.opcao-btn').forEach(btn => {
         btn.disabled = true;
-        btn.setAttribute('aria-checked', btn.textContent === p.resposta_correta ? 'true' : 'false');
-        if (btn.textContent === p.resposta_correta) {
+        const btnText = (btn.dataset.alt || btn.textContent || '').trim();
+        const ehCorreta = btnText === correta;
+        const foiEscolhida = btnText === escolhida;
+
+        btn.setAttribute('aria-checked', ehCorreta ? 'true' : 'false');
+        if (ehCorreta) {
           btn.classList.add('correta');
-        } else if (btn.textContent === escolha && !correto) {
+        } else if (foiEscolhida && !correto) {
           btn.classList.add('errada');
+        } else {
+          // Zero-scroll in-place transition
+          btn.classList.add('opcao-recolhida');
         }
       });
     }
@@ -389,6 +459,8 @@ const Quiz = {
     }
     const container = document.getElementById('quiz-container');
     const resultado = document.getElementById('quiz-resultado');
+    const bar = document.getElementById('quiz-compact-bar');
+    if (bar) bar.style.display = 'none';
     if (container) container.style.display = 'none';
 
     // Log quiz completion to heatmap diary (apenas na primeira chamada real)

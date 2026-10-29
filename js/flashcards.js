@@ -178,6 +178,78 @@ const Flashcards = {
   _swipeInitialized: false,
   _swipeStartX:      0,
   _swipeStartY:      0,
+  seletorRecolhido:  false,
+
+  // ── Smart Retractable Selector Bar (Zero-Scroll UX) ────────
+  toggleSeletor(forcarEstado) {
+    if (typeof forcarEstado === 'boolean') {
+      this.seletorRecolhido = forcarEstado;
+    } else {
+      this.seletorRecolhido = !this.seletorRecolhido;
+    }
+    this._sincronizarBarraCompacta();
+  },
+
+  _sincronizarBarraCompacta() {
+    const layout  = document.getElementById('fc-studio-layout') || document.querySelector('.fc-studio-layout');
+    const sidebar = document.getElementById('fc-studio-sidebar') || document.querySelector('.fc-studio-sidebar');
+    const bar     = document.getElementById('fc-compact-bar');
+    if (!bar || !sidebar) return;
+
+    const temSessaoAtiva = this.cartasDisponiveis && this.cartasDisponiveis.length > 0 && this.indiceAtual < this.cartasDisponiveis.length;
+
+    if (!temSessaoAtiva) {
+      bar.style.display = 'none';
+      sidebar.classList.remove('recolhido');
+      if (layout) layout.classList.remove('seletor-recolhido');
+      return;
+    }
+
+    bar.style.display = 'flex';
+    sidebar.classList.toggle('recolhido', !!this.seletorRecolhido);
+    if (layout) layout.classList.toggle('seletor-recolhido', !!this.seletorRecolhido);
+
+    // Label de origem
+    const elOrigem = document.getElementById('fc-compact-origem');
+    if (elOrigem) {
+      let labelOrigem = '🌍 Revisão Geral';
+      if (this.temploAtual === 'phrasal') {
+        labelOrigem = '🧩 Phrasal Verbs';
+      } else if (this.temploAtual === 'custom') {
+        labelOrigem = '🤖 Minhas Palavras';
+      } else if (this.temploAtual) {
+        const tData = App.estado?.templosData?.[this.temploAtual];
+        const tNome = tData?.nome || `Temple ${this.temploAtual}`;
+        labelOrigem = `🏛️ T${this.temploAtual} · ${tNome}`;
+      }
+      elOrigem.textContent = labelOrigem;
+    }
+
+    // Label de modo ativo
+    const elModo = document.getElementById('fc-compact-modo');
+    if (elModo) {
+      let modoTxt = '🎴 Normal';
+      if (this.modoReverso)  modoTxt = '🔄 Reverso';
+      if (this.modoContexto) modoTxt = '📖 Contexto';
+      if (this.modoEscuta)   modoTxt = '🎧 Escuta';
+      if (this.modoEscrita)  modoTxt = '✍️ Escrita';
+      elModo.textContent = modoTxt;
+    }
+
+    // Contador
+    const elCount = document.getElementById('fc-compact-count');
+    if (elCount) {
+      elCount.textContent = `${this.indiceAtual + 1}/${this.cartasDisponiveis.length}`;
+    }
+
+    // Botão de alternar
+    const btnToggle = document.getElementById('fc-compact-toggle-btn');
+    if (btnToggle) {
+      btnToggle.innerHTML = this.seletorRecolhido
+        ? '<span>⚙️ Opções</span><span class="fc-compact-chevron">▾</span>'
+        : '<span>✕ Ocultar</span><span class="fc-compact-chevron">▴</span>';
+    }
+  },
 
   // ── Initialize for a specific temple ──────────────────────
   init(templo) {
@@ -218,6 +290,7 @@ const Flashcards = {
     this.carregarCartas();
     this.indiceAtual = 0;
     this.virada      = false;
+    this.seletorRecolhido = true;
 
     const vazio   = document.getElementById('flashcard-vazio');
     const cardEl  = document.getElementById('flashcard');
@@ -532,6 +605,7 @@ const Flashcards = {
     if (vazio) vazio.style.display = 'none';
 
     this.atualizarEbbinghaus();
+    this._sincronizarBarraCompacta();
   },
 
   // ── Update progress counter with retrievability ───────────
@@ -882,6 +956,8 @@ const Flashcards = {
       }
     }
     this.cartaAtual = null;
+    this.seletorRecolhido = false;
+    this._sincronizarBarraCompacta();
     this.atualizarEbbinghaus();
   },
 
@@ -1325,6 +1401,7 @@ const Flashcards = {
     this.cartasDisponiveis = total.slice(0, 30); // cap at 30
     this.indiceAtual       = 0;
     this.virada            = false;
+    this.seletorRecolhido  = true;
     if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
 
     const vazio   = document.getElementById('flashcard-vazio');
@@ -1353,6 +1430,7 @@ const Flashcards = {
     this.cartasDisponiveis = palavras.slice(0, 20);
     this.indiceAtual     = 0;
     this.virada          = false;
+    this.seletorRecolhido = true;
     if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
 
     const vazio   = document.getElementById('flashcard-vazio');
@@ -1395,6 +1473,7 @@ const Flashcards = {
     this.cartasDisponiveis = [...palavrasTemplo];
     this.indiceAtual      = 0;
     this.virada           = false;
+    this.seletorRecolhido = true;
 
     const vazio   = document.getElementById('flashcard-vazio');
     const cardEl  = document.getElementById('flashcard');

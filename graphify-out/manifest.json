@@ -426,15 +426,15 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793238326.6007788,
-    "seen": 1793238568.4549625,
-    "ast_hash": "79e7c04473c531f6300410eb8d7f873f",
+    "mtime": 1793267475.0191383,
+    "seen": 1793269030.9284427,
+    "ast_hash": "d66267eecc1696869fa9064f58d76725",
     "semantic_hash": ""
   },
   "js/grammar.js": {
-    "mtime": 1793124659.9111655,
-    "seen": 1793124721.9996552,
-    "ast_hash": "f94dcdb0fcd7e9ee8c08bd35a8b43d1b",
+    "mtime": 1793267582.2372155,
+    "seen": 1793269030.9284487,
+    "ast_hash": "3a592efa62036b946d13cf1d27bb2871",
     "semantic_hash": ""
   },
   "js/heatmap.js": {
@@ -486,9 +486,9 @@
     "semantic_hash": ""
   },
   "js/quiz.js": {
-    "mtime": 1793124605.476649,
-    "seen": 1793124722.0655203,
-    "ast_hash": "7131fd1195f405ffccfe1c605a4ecd53",
+    "mtime": 1793268007.5603702,
+    "seen": 1793269031.108229,
+    "ast_hash": "d356fafd0b8d68a0fe41ee3239cf9a97",
     "semantic_hash": ""
   },
   "js/quiz_data.js": {
@@ -522,9 +522,9 @@
     "semantic_hash": ""
   },
   "js/vocab.js": {
-    "mtime": 1793117224.9450095,
-    "seen": 1793118379.5374167,
-    "ast_hash": "3162b894604456a767ff8e8d4b1e2c46",
+    "mtime": 1793267654.3972812,
+    "seen": 1793269031.3447034,
+    "ast_hash": "1d8fa78d31a231c8aac82be34473e2ce",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
@@ -546,14 +546,14 @@
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1793238407.4808085,
-    "seen": 1793238568.7991335,
-    "ast_hash": "d6b5ae8d33006e7a19d8a0f496fcebdd",
+    "mtime": 1793268848.7024722,
+    "seen": 1793269032.2293308,
+    "ast_hash": "9bac9b65fbe249ee66f6248ee1f18a1f",
     "semantic_hash": ""
   },
   "test-results/.last-run.json": {
-    "mtime": 1793238525.5616772,
-    "seen": 1793238568.7991364,
+    "mtime": 1793268947.9667797,
+    "seen": 1793269032.2293348,
     "ast_hash": "f196824657d8858bc7fa44eecbba38b1",
     "semantic_hash": ""
   },
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793238276.892851,
-    "seen": 1793238569.0120142,
-    "ast_hash": "d755f375b432cdcc0163fe9883454c6a",
+    "mtime": 1793268834.0591063,
+    "seen": 1793269032.8693936,
+    "ast_hash": "87109ccaf4f6413e3418ebcaacde5f49",
     "semantic_hash": ""
   },
   "playwright-report/index.html": {
@@ -1746,15 +1746,21 @@
     "semantic_hash": ""
   },
   "tests/ebbinghaus.spec.js": {
-    "mtime": 1793238458.8437703,
-    "seen": 1793238568.80944,
-    "ast_hash": "ceb391914c7abe65b59c3a3d8a58ab99",
+    "mtime": 1793268282.7607682,
+    "seen": 1793269032.262117,
+    "ast_hash": "dd90abbf0580bc9453fc13b5e07ab0cf",
     "semantic_hash": ""
   },
   "tests/ebbinghaus.test.js": {
     "mtime": 1793238360.3789434,
     "seen": 1793238568.8094428,
     "ast_hash": "1163f230e98d1aacf2f92587669c4707",
+    "semantic_hash": ""
+  },
+  "tests/zero_scroll_ux.spec.js": {
+    "mtime": 1793268891.0015652,
+    "seen": 1793269032.4760897,
+    "ast_hash": "f115e7ca53ee1894a6bb2696829a9854",
     "semantic_hash": ""
   }
 }

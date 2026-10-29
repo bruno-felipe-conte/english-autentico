@@ -25,6 +25,49 @@ var Vocab = window.Vocab = {
   _limiteVisivel: 100,  // Virtualização: limite de itens no DOM
   _observer: null,      // IntersectionObserver para scroll virtualizado
   _itensFiltrados: [],  // Itens filtrados da sessão atual
+  filtrosDrawerAberto: false,
+
+  // ── Retractable Filters Drawer Toggle (Zero-Scroll UX) ──────
+  toggleFiltrosDrawer(forcarEstado) {
+    if (typeof forcarEstado === 'boolean') {
+      this.filtrosDrawerAberto = forcarEstado;
+    } else {
+      this.filtrosDrawerAberto = !this.filtrosDrawerAberto;
+    }
+    const drawer = document.getElementById('vocab-filtros-drawer');
+    const btn = document.getElementById('vocab-btn-toggle-filtros');
+    const chevron = document.getElementById('vocab-filtros-chevron');
+    if (drawer) {
+      drawer.classList.toggle('recolhido', !this.filtrosDrawerAberto);
+    }
+    if (btn) {
+      btn.setAttribute('aria-expanded', String(this.filtrosDrawerAberto));
+    }
+    if (chevron) {
+      chevron.textContent = this.filtrosDrawerAberto ? '▴' : '▾';
+    }
+    this._atualizarFiltrosBadge();
+  },
+
+  _atualizarFiltrosBadge() {
+    const badge = document.getElementById('vocab-filtros-badge');
+    const btn = document.getElementById('vocab-btn-toggle-filtros');
+    let ativos = 0;
+    if (this.filtroTemplo) ativos++;
+    if (this.filtroCategoria) ativos++;
+    if (this.filtroFrequencia) ativos++;
+    if (this.filtroOrigem) ativos++;
+    if (this.filtroDificeis) ativos++;
+    if (this.filtroFavoritos) ativos++;
+
+    if (badge) {
+      badge.textContent = ativos;
+      badge.style.display = ativos > 0 ? 'inline-flex' : 'none';
+    }
+    if (btn) {
+      btn.classList.toggle('tem-filtros-ativos', ativos > 0);
+    }
+  },
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
     const listEl = document.getElementById('vocab-list');
@@ -63,6 +106,8 @@ var Vocab = window.Vocab = {
     if (pN) pN.style.cssText = pillStyle(this.filtroOrigem === 'nativo');
     const pP = document.getElementById('vocab-pill-phrasal');
     if (pP) pP.style.cssText = pillStyle(this.filtroOrigem === 'phrasal');
+
+    this._atualizarFiltrosBadge();
 
     // Apply filters
     let filtrados = todos;

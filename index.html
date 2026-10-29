@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="English">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://translate.googleapis.com https://api.mymemory.translated.net; img-src 'self' data:; base-uri 'self'; form-action 'self';">
-  <link rel="stylesheet" href="css/components.css?v=1127">
+  <link rel="stylesheet" href="css/components.css?v=1138">
   <link rel="stylesheet" href="css/phrasal_verbs.css?v=1129">
 </head>
 <body>
@@ -202,9 +202,21 @@
     <!-- SECTION: Flashcard -->
     <section id="sec-flashcards" class="section">
       <div class="flashcard-arena atelier-memoria">
-        <div class="fc-studio-layout">
+        <div class="fc-studio-layout" id="fc-studio-layout">
+          <!-- Barra Compacta Retrátil (Seletor Inteligente Zero-Scroll) -->
+          <div class="fc-compact-bar" id="fc-compact-bar" style="display:none">
+            <div class="fc-compact-summary" onclick="Flashcards.toggleSeletor()">
+              <span class="fc-compact-badge" id="fc-compact-origem">🏛️ Temple 1</span>
+              <span class="fc-compact-pill" id="fc-compact-modo">🎴 Normal</span>
+              <span class="fc-compact-counter" id="fc-compact-count">1/20</span>
+            </div>
+            <button type="button" class="fc-compact-toggle-btn" id="fc-compact-toggle-btn" onclick="Flashcards.toggleSeletor()" aria-label="Toggle options">
+              <span>⚙️ Options</span>
+              <span class="fc-compact-chevron">▾</span>
+            </button>
+          </div>
           <!-- Coluna 1: Estúdio Lateral (Controles, Modos e Progresso) -->
-          <aside class="fc-studio-sidebar">
+          <aside class="fc-studio-sidebar" id="fc-studio-sidebar">
             <div class="card-selecao-templo">
               <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
               <select id="flashcard-temple-select" onchange="Flashcards.init(this.value === 'custom' || this.value === 'phrasal' ? this.value : parseInt(this.value))">
@@ -357,6 +369,17 @@
     <!-- SECTION: Quiz -->
     <section id="sec-quiz" class="section">
       <h2 class="section-titulo" data-i18n="quiz_sec_titulo">Test your Knowledge</h2>
+      <!-- Barra Compacta Retrátil do Quiz (Zero-Scroll) -->
+      <div class="quiz-compact-bar" id="quiz-compact-bar" style="display:none">
+        <div class="quiz-compact-summary" onclick="Quiz.toggleSeletor()">
+          <span class="quiz-compact-badge" id="quiz-compact-nome">🏛️ Quiz</span>
+          <span class="quiz-compact-counter" id="quiz-compact-count">1/10</span>
+        </div>
+        <button type="button" class="quiz-compact-toggle-btn" id="quiz-compact-toggle-btn" onclick="Quiz.toggleSeletor()" aria-label="Toggle quiz selector">
+          <span>⚙️ Change</span>
+          <span class="quiz-compact-chevron">▾</span>
+        </button>
+      </div>
       <div class="quiz-templo-selector" id="quiz-templo-selector"></div>
       <div class="quiz-container" id="quiz-container" style="display:none">
         <div class="quiz-progresso">
@@ -418,28 +441,39 @@
     <!-- SECTION: Vocabolario -->
     <section id="sec-vocab" class="section">
       <h2 class="section-titulo" data-i18n="vocab_sec_titulo">The Vocabulary</h2>
-      <div class="vocab-filtros">
+      <div class="vocab-top-bar">
         <input type="text" id="vocab-busca" class="vocab-search" placeholder="Search in English or Portuguese..." data-i18n-placeholder="vocab_busca_placeholder" oninput="Vocab.buscar(this.value)">
-        <select id="vocab-temple-filter" onchange="Vocab.filtrarTemplo(this.value)">
-          <option value="" data-i18n="vocab_todos_templos">All temples</option>
-        </select>
-        <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
-          <option value="" data-i18n="vocab_todas_categorias">All categories</option>
-        </select>
-        <select id="vocab-frequencia-filtro" onchange="Vocab.filtrarFrequencia(this.value)" style="border-radius:8px;border:1.5px solid var(--cor-borda,#ddd);padding:0.35rem 0.6rem;font-size:0.85rem;background:var(--cor-superficie,#fff);color:var(--cor-texto,#222)">
-          <option value="">⚡ Todas as Frequências</option>
-          <option value="top1000">🔥 Top 1.000 Mais Usadas</option>
-          <option value="top250">🥇 Top 1–250 (Fundamentais)</option>
-          <option value="top500">🥈 Top 251–500 (Cotidiano)</option>
-          <option value="top750">🥉 Top 501–750 (Intermediário)</option>
-          <option value="top1000_tier4">🎯 Top 751–1.000 (Avançado)</option>
-        </select>
+        <button type="button" id="vocab-btn-toggle-filtros" class="vocab-toggle-filtros-btn" onclick="Vocab.toggleFiltrosDrawer()" aria-label="Abrir ou fechar filtros avançados">
+          <span>🎛️ Filtros</span>
+          <span id="vocab-filtros-badge" class="vocab-filtros-badge" style="display:none">0</span>
+          <span id="vocab-filtros-chevron" class="vocab-filtros-chevron">▾</span>
+        </button>
       </div>
-      <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
-        <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #003E8A;background:#003E8A;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
-        <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
-        <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
-        <button id="vocab-pill-phrasal" onclick="Vocab.filtroOrigem='phrasal';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🧩 Phrasal Verbs</button>
+
+      <!-- Gaveta de Filtros Retrátil Zero-Scroll -->
+      <div id="vocab-filtros-drawer" class="vocab-filtros-drawer recolhido">
+        <div class="vocab-filtros">
+          <select id="vocab-temple-filter" onchange="Vocab.filtrarTemplo(this.value)">
+            <option value="" data-i18n="vocab_todos_templos">All temples</option>
+          </select>
+          <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
+            <option value="" data-i18n="vocab_todas_categorias">All categories</option>
+          </select>
+          <select id="vocab-frequencia-filtro" onchange="Vocab.filtrarFrequencia(this.value)" style="border-radius:8px;border:1.5px solid var(--cor-borda,#ddd);padding:0.35rem 0.6rem;font-size:0.85rem;background:var(--cor-superficie,#fff);color:var(--cor-texto,#222)">
+            <option value="">⚡ Todas as Frequências</option>
+            <option value="top1000">🔥 Top 1.000 Mais Usadas</option>
+            <option value="top250">🥇 Top 1–250 (Fundamentais)</option>
+            <option value="top500">🥈 Top 251–500 (Cotidiano)</option>
+            <option value="top750">🥉 Top 501–750 (Intermediário)</option>
+            <option value="top1000_tier4">🎯 Top 751–1.000 (Avançado)</option>
+          </select>
+        </div>
+        <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
+          <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #003E8A;background:#003E8A;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
+          <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
+          <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
+          <button id="vocab-pill-phrasal" onclick="Vocab.filtroOrigem='phrasal';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🧩 Phrasal Verbs</button>
+        </div>
       </div>
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()" data-i18n="vocab_dificeis">⚠️ Difíceis</button>
@@ -596,11 +630,11 @@
   <script defer src="js/core.js?v=1125"></script>
   <script defer src="js/progression.js?v=1125"></script>
   <script defer src="js/ebbinghaus.js?v=1137"></script>
-  <script defer src="js/flashcards.js?v=1137"></script>
-  <script defer src="js/quiz.js?v=1125"></script>
-  <script defer src="js/vocab.js?v=1125"></script>
+  <script defer src="js/flashcards.js?v=1138"></script>
+  <script defer src="js/quiz.js?v=1138"></script>
+  <script defer src="js/vocab.js?v=1138"></script>
   <script defer src="js/heatmap.js?v=1125"></script>
-  <script defer src="js/grammar.js?v=1125"></script>
+  <script defer src="js/grammar.js?v=1138"></script>
   <script defer src="js/phrasal_verbs.js?v=1129"></script>
   <script defer src="js/profile.js?v=1125"></script>
   <script defer src="js/dialogues.js?v=1125"></script>

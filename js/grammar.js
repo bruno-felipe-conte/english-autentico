@@ -712,7 +712,7 @@ const Grammatica = {
         ? 'gram-option-correct'
         : i === indice && !correto
           ? 'gram-option-wrong'
-          : 'gram-option-disabled';
+          : 'gram-option-disabled opcao-recolhida';
     }
 
     const fb = document.getElementById('gram-feedback');

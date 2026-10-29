@@ -1,17 +1,17 @@
-# Graph Report - english-autentico  (2026-10-28)
+# Graph Report - english-autentico  (2026-10-29)
 
 ## Corpus Check
-- 230 files · ~1,229,712 words
+- 231 files · ~1,230,823 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1216 nodes · 1323 edges · 128 communities (64 shown, 64 thin omitted)
+- 1220 nodes · 1329 edges · 137 communities (68 shown, 69 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eca1f117`
+- Built from commit: `4cc33da2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,7 +28,7 @@
 - backup_reminder.test.js
 - Workflow PDCA Multi-Especialistas — Template Reutilizável
 - FLASHCARDS — Relatório PDCA Completo
-- package.json
+- @playwright/test
 - ref_fs
 - SPEC — Método dos Famosos: 5 Novas Features
 - ebbinghaus.test.js
@@ -39,11 +39,13 @@
 - enrich_wave7_part2.mjs
 - enrich_wave4_part4.mjs
 - enrich_wave5_part1.mjs
+- package.json
 - GRAMMAR (Gramática) — Relatório PDCA Completo
 - Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)
 - Ações de Médio Prazo (1–4 semanas)
 - PDCA_GRAMATICA_BRAINSTORM.md
 - Canonical AI Content Generation Prompts Guide
+- scripts
 - SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)
 - 1. O Padrão Ouro Científico (Estado da Arte)
 - Checklist de Auditoria Completa — English Autentico PWA
@@ -55,7 +57,14 @@
 - ref_http
 - Abas e seus parâmetros
 - ═══════════════════════════════════════════════════════════════
+- devDependencies
+- repository
+- stage1_acceptance.spec.js
+- stage2_acceptance.spec.js
+- offline.spec.js
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
+- sidebar_interaction.spec.js
+- song.spec.js
 - 🧪 TESTING PROTOCOL - ItalianLearningApp
 - 1️⃣ UNIT TESTS PER TEMPLE
 - English Autentico — System Context & Handoff Instructions
@@ -149,12 +158,12 @@
 1. `═══════════════════════════════════════════════════════════════` - 32 edges
 2. `Checklist de Auditoria Completa — English Autentico PWA` - 28 edges
 3. `═══════════════════════════════════════════════════════════════` - 17 edges
-4. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
-5. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
-6. `renderizar()` - 15 edges
+4. `renderizar()` - 16 edges
+5. `🔴 PROBLEMAS TÉCNICOS (Issues Críticos)` - 16 edges
+6. `🟢 OPORTUNIDADES DE MELHORIA` - 16 edges
 7. `renderizar()` - 15 edges
-8. `Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)` - 13 edges
-9. `@playwright/test` - 12 edges
+8. `@playwright/test` - 13 edges
+9. `Instruções para Continuar: grammar.json — Parla e Scrivi (30 Capítulos)` - 13 edges
 10. `1️⃣ UNIT TESTS PER TEMPLE` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -172,7 +181,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (128 total, 64 thin omitted)
+## Communities (137 total, 69 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -210,9 +219,9 @@ Nodes (34): ACT — Padronização e Próximo Ciclo, Aluno Típico (persona cent
 Cohesion: 0.06
 Nodes (32): ALTA (P1 — Prioritária), CRÍTICA (P0 — Bloqueante), Descobertas Inesperadas, 🔍 ESTADO ATUAL, FLASHCARDS — Relatório PDCA Completo, M1 — Onboarding de 5 Passos para FSRS, M2 — Conquistas/Achievements, M3 — Push Notifications (+24 more)
 
-### Community 12 - "package.json"
-Cohesion: 0.04
-Nodes (36): author, bugs, url, description, devDependencies, http-server, @playwright/test, homepage (+28 more)
+### Community 12 - "@playwright/test"
+Cohesion: 0.13
+Nodes (8): { defineConfig, devices }, @playwright/test, { test, expect }, { test, expect }, { test, expect }, { test, expect }, { test, expect }, { test, expect }
 
 ### Community 13 - "ref_fs"
 Cohesion: 0.17
@@ -244,6 +253,10 @@ Nodes (7): 🎓 Ana Paula (Pedagoga SLA), 🎮 Diego (Game Designer), 🔬 Ferna
 Cohesion: 0.07
 Nodes (26): 1. Usar o script base já existente, 2. Gerar em blocos de 5 templos por vez, 3. Critérios de qualidade por templo, 4. Atualizar core.js após gerar todos os templos, 5. Atualizar sw.js, 6. Commit e push final, App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR (+18 more)
 
+### Community 23 - "package.json"
+Cohesion: 0.15
+Nodes (12): author, bugs, url, description, homepage, keywords, license, name (+4 more)
+
 ### Community 24 - "GRAMMAR (Gramática) — Relatório PDCA Completo"
 Cohesion: 0.08
 Nodes (23): ALTA (P1 — Prioritária), CRÍTICA (P0 — Bloqueante para acessibilidade), Descobertas Inesperadas, 🔍 ESTADO ATUAL, GRAMMAR (Gramática) — Relatório PDCA Completo, 📈 MÉTRICAS DE SUCESSO, Pontos Fortes (que devem ser preservados), 🔴 PROBLEMAS CRÍTICOS (Top 20 por Impacto) (+15 more)
@@ -263,6 +276,10 @@ Nodes (4): 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · Engl
 ### Community 28 - "Canonical AI Content Generation Prompts Guide"
 Cohesion: 0.11
 Nodes (17): 1. Module: 💬 Dialogues (Situational Dialogues), 2. Module: 🎵 Songs (Karaoke Cloze Player), 3. Module: 📖 Stories (3D Antique Book Reader), 4. Module: 🗣️ Pronunciation (Dojo & Speech Recognition), 5. Module: 🃏 Vocabulary & Flashcards, Canonical AI Content Generation Prompts Guide, Data Structure (`data/dialogues.json` & `en_dialogues_custom`), Data Structure (`data/pronunciation.json` & `en_pronunciation_custom`) (+9 more)
+
+### Community 29 - "scripts"
+Cohesion: 0.50
+Nodes (4): scripts, test, test:e2e, test:ui
 
 ### Community 30 - "SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)"
 Cohesion: 0.11
@@ -307,6 +324,14 @@ Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repe
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
 Cohesion: 0.05
 Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
+
+### Community 41 - "devDependencies"
+Cohesion: 0.67
+Nodes (3): devDependencies, http-server, @playwright/test
+
+### Community 42 - "repository"
+Cohesion: 0.67
+Nodes (3): repository, type, url
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
 Cohesion: 0.08
@@ -422,7 +447,7 @@ Nodes (9): ErrorBoundary, Grammatica, Quiz, Sanitize, VoiceEngine, assert, Error
 
 ### Community 195 - "vocab.js"
 Cohesion: 0.10
-Nodes (39): _adicionarSentinel(), alternarAgrupamento(), alternarModoOutput(), _atualizarStreakVocab(), _buscaFuzzy(), buscar(), carregarFrequencia(), _carregarMais() (+31 more)
+Nodes (41): _adicionarSentinel(), alternarAgrupamento(), alternarModoOutput(), _atualizarFiltrosBadge(), _atualizarStreakVocab(), _buscaFuzzy(), buscar(), carregarFrequencia() (+33 more)
 
 ### Community 212 - "audit_grammar_content.mjs"
 Cohesion: 0.29
@@ -438,8 +463,8 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 796 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **64 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 797 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **69 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

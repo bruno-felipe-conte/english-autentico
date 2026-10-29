@@ -2,6 +2,14 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('Ebbinghaus Forgetting Curve E2E Spec', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('en_onboarding_done', 'true');
+      localStorage.setItem('en_onboarding_visto', 'true');
+      localStorage.setItem('en_sidebar_pinned', 'false');
+      localStorage.setItem('en_ultimo_aviso_backup', String(Date.now()));
+    });
+  });
   test('Renderiza o card de Ebbinghaus no estúdio de flashcards com acessibilidade', async ({ page }) => {
     await page.goto('http://localhost:8089/#flashcards');
     await page.waitForLoadState('domcontentloaded');

@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker | Cache v1137 | Offline-first PWA
+// sw.js — Service Worker | Cache v1138 | Offline-first PWA
 // Strategy:
 //   • Static assets  → cache-first (JS, CSS, HTML, icons)
 //   • /data/*.json   → network-first with cache fallback
 //   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1137';
+const CACHE = 'english-v1138';
 
 // All critical assets required for 100% offline functionality
 const STATIC = [
@@ -30,7 +30,7 @@ const STATIC = [
   './css/english.css',
   './css/english.css?v=1125',
   './css/components.css',
-  './css/components.css?v=1127',
+  './css/components.css?v=1138',
   './css/phrasal_verbs.css',
   './css/phrasal_verbs.css?v=1129',
   // Decoupled i18n locales
@@ -59,9 +59,8 @@ const STATIC = [
   './js/pronunciation.js?v=1125',
   './js/ebbinghaus.js',
   './js/ebbinghaus.js?v=1137',
-  './js/flashcards.js?v=1126',
-  './js/flashcards.js?v=1137',
-  './js/grammar.js?v=1125',
+  './js/flashcards.js?v=1138',
+  './js/grammar.js?v=1138',
   './js/phrasal_verbs.js',
   './js/phrasal_verbs.js?v=1129',
   './js/heatmap.js?v=1125',
@@ -69,9 +68,9 @@ const STATIC = [
   './js/backup_reminder.js?v=1125',
   './js/profile.js?v=1125',
   './js/progression.js?v=1125',
-  './js/quiz.js?v=1125',
+  './js/quiz.js?v=1138',
   './js/quiz_data.js',
-  './js/vocab.js?v=1125',
+  './js/vocab.js?v=1138',
   './js/i18n.js?v=1125',
   './js/notificacoes.js?v=1125',
   './js/tour.js?v=1125',
