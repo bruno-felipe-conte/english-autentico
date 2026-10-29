@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "**🔗 App online:** https://bruno-felipe-conte.github.io/english-autentico/",
   "scripts": {
-    "test": "node --test tests/security.test.js && node tests/vocab.test.js",
+    "test": "node --test tests/security.test.js tests/flashcards_drawer.test.js && node tests/vocab.test.js",
     "test:e2e": "playwright test",
     "test:ui": "playwright test --ui"
   },

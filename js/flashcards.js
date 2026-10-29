@@ -181,6 +181,18 @@ const Flashcards = {
   seletorRecolhido:  false,
 
   // ── Smart Retractable Selector Bar (Zero-Scroll UX) ────────
+  toggleGaveta(forcarEstado) {
+    return this.toggleSeletor(forcarEstado);
+  },
+
+  recolherGaveta() {
+    this.toggleSeletor(true);
+  },
+
+  abrirGaveta() {
+    this.toggleSeletor(false);
+  },
+
   toggleSeletor(forcarEstado) {
     if (typeof forcarEstado === 'boolean') {
       this.seletorRecolhido = forcarEstado;
@@ -194,6 +206,7 @@ const Flashcards = {
     const layout  = document.getElementById('fc-studio-layout') || document.querySelector('.fc-studio-layout');
     const sidebar = document.getElementById('fc-studio-sidebar') || document.querySelector('.fc-studio-sidebar');
     const bar     = document.getElementById('fc-compact-bar');
+    const drawer  = document.getElementById('fc-seletor-drawer');
     if (!bar || !sidebar) return;
 
     const temSessaoAtiva = this.cartasDisponiveis && this.cartasDisponiveis.length > 0 && this.indiceAtual < this.cartasDisponiveis.length;
@@ -201,12 +214,14 @@ const Flashcards = {
     if (!temSessaoAtiva) {
       bar.style.display = 'none';
       sidebar.classList.remove('recolhido');
+      if (drawer) drawer.classList.remove('recolhido');
       if (layout) layout.classList.remove('seletor-recolhido');
       return;
     }
 
     bar.style.display = 'flex';
     sidebar.classList.toggle('recolhido', !!this.seletorRecolhido);
+    if (drawer) drawer.classList.toggle('recolhido', !!this.seletorRecolhido);
     if (layout) layout.classList.toggle('seletor-recolhido', !!this.seletorRecolhido);
 
     // Label de origem
@@ -245,9 +260,10 @@ const Flashcards = {
     // Botão de alternar
     const btnToggle = document.getElementById('fc-compact-toggle-btn');
     if (btnToggle) {
+      btnToggle.setAttribute('aria-expanded', String(!this.seletorRecolhido));
       btnToggle.innerHTML = this.seletorRecolhido
-        ? '<span>⚙️ Opções</span><span class="fc-compact-chevron">▾</span>'
-        : '<span>✕ Ocultar</span><span class="fc-compact-chevron">▴</span>';
+        ? '<span>⚙️ Opções</span><span class="fc-compact-chevron" id="fc-compact-chevron">▾</span>'
+        : '<span>✕ Fechar</span><span class="fc-compact-chevron" id="fc-compact-chevron">▴</span>';
     }
   },
 

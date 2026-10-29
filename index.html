@@ -217,15 +217,18 @@
           </div>
           <!-- Coluna 1: Estúdio Lateral (Controles, Modos e Progresso) -->
           <aside class="fc-studio-sidebar" id="fc-studio-sidebar">
-            <div class="card-selecao-templo">
-              <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
-              <select id="flashcard-temple-select" onchange="Flashcards.init(this.value === 'custom' || this.value === 'phrasal' ? this.value : parseInt(this.value))">
-                <option value="">-- Seleziona tempio --</option>
-              </select>
-              <button class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="margin-left:auto;white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
-            </div>
+            <!-- Gaveta Retrátil de Seleção & Criação de Flashcards (Zero-Scroll UX) -->
+            <div id="fc-seletor-drawer" class="fc-seletor-drawer">
+              <div class="card-selecao-templo">
+                <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
+                <select id="flashcard-temple-select" onchange="Flashcards.init(this.value === 'custom' || this.value === 'phrasal' ? this.value : parseInt(this.value))">
+                  <option value="">-- Seleziona tempio --</option>
+                </select>
+                <button class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="margin-left:auto;white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
+              </div>
 
-            <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
+              <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
+            </div>
 
             <div class="fc-mode-pills" id="btn-modos-wrapper">
               <button id="btn-modo-normal" class="fc-mode-pill ativo" onclick="Flashcards._limparModos();Flashcards.mostrarCarta();">

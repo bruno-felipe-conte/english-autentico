@@ -3605,6 +3605,24 @@
   opacity: 0.8;
 }
 
+/* Gaveta Retrátil de Seleção & Criação de Flashcards (Zero-Scroll UX) */
+.fc-seletor-drawer {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin 0.25s ease, padding 0.25s ease;
+  max-height: 480px;
+  opacity: 1;
+  margin-bottom: 0.75rem;
+}
+
+.fc-seletor-drawer.recolhido {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  pointer-events: none;
+}
+
 /* Sidebar recolhida */
 .fc-studio-sidebar.recolhido {
   display: none !important;
