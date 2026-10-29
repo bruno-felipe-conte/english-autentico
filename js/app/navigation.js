@@ -106,6 +106,7 @@ const AppNavigation = {
     }
     if ((secao === 'flashcards' || secao === 'flashcard') && typeof Flashcards !== 'undefined') {
       Flashcards.atualizarSelectTemplo ? Flashcards.atualizarSelectTemplo() : null;
+      Flashcards.atualizarEbbinghaus ? Flashcards.atualizarEbbinghaus() : null;
     }
     if ((secao === 'grammar' || secao === 'grammatica') && typeof Grammatica !== 'undefined') {
       Grammatica.renderizarSeletor ? Grammatica.renderizarSeletor() : null;

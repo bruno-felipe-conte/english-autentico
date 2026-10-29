@@ -530,6 +530,8 @@ const Flashcards = {
 
     const vazio = document.getElementById('flashcard-vazio');
     if (vazio) vazio.style.display = 'none';
+
+    this.atualizarEbbinghaus();
   },
 
   // ── Update progress counter with retrievability ───────────
@@ -558,6 +560,21 @@ const Flashcards = {
     if (revisaoCount > 0) partes.push(`${revisaoCount} ${I18n.t('fc_revisao')}`);
 
     elInfo.innerHTML = `<strong>${atual}</strong> / ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}${rStr}`;
+  },
+
+  // ── Atualiza a Curva de Esquecimento de Ebbinghaus (FSRS) ──
+  atualizarEbbinghaus() {
+    if (typeof renderEbbinghausCurve !== 'function') return;
+    const container = document.getElementById('ebbinghaus-container');
+    if (!container) return;
+    const cardDataMap = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData) ? App.estado.flashcardData : {};
+    const fsrsCard = this.cartaAtual ? cardDataMap[this.cartaAtual.id] : null;
+    const allCards = Object.values(cardDataMap);
+    renderEbbinghausCurve(container, allCards, fsrsCard || null, {
+      desiredRetention: 0.90,
+      locale: (typeof I18n !== 'undefined' ? I18n.currentLang : 'pt') || 'pt',
+      curveMode: 'fsrs-power'
+    });
   },
 
   // ── Streak badge update during session ───────────────────
@@ -864,6 +881,8 @@ const Flashcards = {
         vazio.style.display = 'block';
       }
     }
+    this.cartaAtual = null;
+    this.atualizarEbbinghaus();
   },
 
   // ── Session summary screen ─────────────────────────────────
@@ -1672,6 +1691,7 @@ document.addEventListener('i18n:changed', () => {
   } else if (Flashcards.cartaAtual) {
     Flashcards.mostrarCarta();
   }
+  Flashcards.atualizarEbbinghaus();
 });
 
 
