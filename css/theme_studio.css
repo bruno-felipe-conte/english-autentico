@@ -13,9 +13,26 @@
   z-index: -1;
   pointer-events: none;
   background-repeat: repeat;
-  background-position: top left;
-  opacity: 1;
+  background-position: center;
+  opacity: 0.95;
   transition: opacity 0.3s ease, background 0.4s ease;
+}
+
+/* Suave vinheta que protege o centro de leitura contra ruído vetorial */
+.app-dynamic-bg::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, transparent 20%, rgba(0, 0, 0, 0.22) 100%);
+  pointer-events: none;
+}
+
+/* Escudo protetor para cards e placas de leitura contra qualquer sobreposição do fundo */
+.temple-body, .templo-body, .quiz-container, .resumo-card, .vocab-item,
+.gram-lez-card, .gram-card, .dialogo-conversa, .card-verso, .theme-studio-card,
+.card-meta-prazo, .heatmap-container {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* ── Theme Studio Container in Profile ── */

@@ -153,13 +153,12 @@ test('🎨 Estúdio de Personalização de Aparência e Arte Vetorial SVG', asyn
     }
   });
 
-  await t.test('7. Prompt Base deve conter diretrizes ergonômicas (WCAG AAA, 60-30-10) e SVG de baixo ruído', () => {
+  await t.test('7. Prompt Base deve conter diretrizes de vetorização do objeto central e proteção visual da tipografia', () => {
     const prompt = ThemeStudio.PROMPT_BASE;
     assert.ok(prompt.includes('WCAG AAA'), 'Deve incluir diretriz WCAG AAA');
-    assert.ok(prompt.includes('60-30-10'), 'Deve incluir regra 60-30-10');
-    assert.ok(prompt.includes('Minimalist architectural geometry'), 'Deve conter estilo minimalista de baixo ruído');
-    assert.ok(prompt.includes('tiling'), 'Deve conter diretriz de repetição (tiling)');
-    assert.ok(prompt.includes('rotações') || prompt.includes('rotacionados'), 'Deve conter rotações para quebrar grid');
+    assert.ok(prompt.includes('objeto-central') || prompt.includes('objeto central'), 'Deve exigir vetorização/ícone do objeto central');
+    assert.ok(prompt.includes('0.05'), 'Deve limitar opacidade a no máximo 5% para evitar disputa com o texto');
+    assert.ok(prompt.includes('tile') || prompt.includes('tiling'), 'Deve conter especificação do tile');
     assert.ok(prompt.includes('JSON'), 'Deve instruir retorno estrito em JSON');
   });
 });
