@@ -486,9 +486,9 @@
     "semantic_hash": ""
   },
   "js/quiz.js": {
-    "mtime": 1793268007.5603702,
-    "seen": 1793269031.108229,
-    "ast_hash": "d356fafd0b8d68a0fe41ee3239cf9a97",
+    "mtime": 1793378709.094429,
+    "seen": 1793378776.4867842,
+    "ast_hash": "c54a31684f392a8c7af30421e678d782",
     "semantic_hash": ""
   },
   "js/quiz_data.js": {
@@ -534,9 +534,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1793376642.1673331,
-    "seen": 1793376718.006461,
-    "ast_hash": "a272d4a29e20cec767d10959a242e25b",
+    "mtime": 1793378680.9055333,
+    "seen": 1793378776.5633426,
+    "ast_hash": "b950cab0d962209bb3fc88df38589910",
     "semantic_hash": ""
   },
   "playwright.config.js": {
@@ -1779,6 +1779,12 @@
     "mtime": 1793376603.0694141,
     "seen": 1793376718.908386,
     "ast_hash": "10a8b43fde1749eeea63c508baac5f32",
+    "semantic_hash": ""
+  },
+  "tests/quiz_tabs.test.js": {
+    "mtime": 1793378647.3431263,
+    "seen": 1793378776.787473,
+    "ast_hash": "b0898c4f0530c2dfe39ba61da00d120b",
     "semantic_hash": ""
   }
 }

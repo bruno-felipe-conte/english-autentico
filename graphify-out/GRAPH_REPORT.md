@@ -1,17 +1,17 @@
 # Graph Report - english-autentico  (2026-10-30)
 
 ## Corpus Check
-- 234 files · ~1,232,953 words
+- 235 files · ~1,233,209 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1239 nodes · 1356 edges · 138 communities (68 shown, 70 thin omitted)
+- 1247 nodes · 1366 edges · 144 communities (74 shown, 70 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f7a6fe71`
+- Built from commit: `818e7c2c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -45,6 +45,7 @@
 - Ações de Médio Prazo (1–4 semanas)
 - PDCA_GRAMATICA_BRAINSTORM.md
 - Canonical AI Content Generation Prompts Guide
+- 4.1 ROADMAP DE IMPLEMENTAÇÃO
 - SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)
 - 1. O Padrão Ouro Científico (Estado da Arte)
 - Checklist de Auditoria Completa — English Autentico PWA
@@ -55,6 +56,11 @@
 - 📅 ROADMAP 30 · 60 · 90
 - ref_http
 - Abas e seus parâmetros
+- ═══════════════════════════════════════════════════════════════
+- 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS
+- 2.1 QUICK WINS IMPLEMENTADOS
+- 2.2 MELHORIAS MÉDIAS (Próximos Sprints)
+- ═══════════════════════════════════════════════════════════════
 - ═══════════════════════════════════════════════════════════════
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
 - scripts
@@ -182,7 +188,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (138 total, 70 thin omitted)
+## Communities (144 total, 70 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -233,14 +239,14 @@ Cohesion: 0.06
 Nodes (31): App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR / CRIAR, Conceito, Conceito, Conceito, Conceito, CSS, CSS — Estilo dos Diálogos (+23 more)
 
 ### Community 15 - "ebbinghaus.test.js"
-Cohesion: 0.10
-Nodes (18): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), assert, {
+Cohesion: 0.07
+Nodes (21): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), assert, {
   EBBINGHAUS_I18N,
   predictNextStabilityGood,
   formatDaysLabel,
   computeEbbinghausCurve,
   renderEbbinghausCurve
-}, test (+10 more)
+}, test (+13 more)
 
 ### Community 17 - "ref_path"
 Cohesion: 0.06
@@ -277,6 +283,10 @@ Nodes (4): 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · Engl
 ### Community 28 - "Canonical AI Content Generation Prompts Guide"
 Cohesion: 0.11
 Nodes (17): 1. Module: 💬 Dialogues (Situational Dialogues), 2. Module: 🎵 Songs (Karaoke Cloze Player), 3. Module: 📖 Stories (3D Antique Book Reader), 4. Module: 🗣️ Pronunciation (Dojo & Speech Recognition), 5. Module: 🃏 Vocabulary & Flashcards, Canonical AI Content Generation Prompts Guide, Data Structure (`data/dialogues.json` & `en_dialogues_custom`), Data Structure (`data/pronunciation.json` & `en_pronunciation_custom`) (+9 more)
+
+### Community 29 - "4.1 ROADMAP DE IMPLEMENTAÇÃO"
+Cohesion: 0.18
+Nodes (11): ═══════════════════════════════════════════════════════════════, 4.1 ROADMAP DE IMPLEMENTAÇÃO, 4.2 CICLO DE MELHORIA CONTÍNUA, 4.3 RISCOS E MITIGAÇÕES, Revisão Mensal:, Revisão Semanal:, Revisão Trimestral:, SPRINT 1 (Feito) — Quick Wins (+3 more)
 
 ### Community 30 - "SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)"
 Cohesion: 0.11
@@ -319,12 +329,32 @@ Cohesion: 0.17
 Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repeat (Imitação), Aba: Músicas, Aba: Perfil, Aba: Templos (Vocabulário Temático), Abas e seus parâmetros (+3 more)
 
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.05
-Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
+Cohesion: 0.17
+Nodes (12): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, English Learning App Pro — Brainstorm Multi-Perspectiva com Melhoria Contínua, FASE 1 — PLANEJAR (Plan), FASE 2 — FAZER (Do) (+4 more)
+
+### Community 41 - "1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS"
+Cohesion: 0.22
+Nodes (9): ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, Arquitetura da Aba de Quiz:, 🟡 DESENVOLVEDOR FRONTEND (15 problemas):, 🟢 LINGUISTA APLICADO (12 problemas):, 🔴 PRODUCT MANAGER (12 problemas): (+1 more)
+
+### Community 42 - "2.1 QUICK WINS IMPLEMENTADOS"
+Cohesion: 0.29
+Nodes (7): 2.1 QUICK WINS IMPLEMENTADOS, QW-1: Bug i18n Fix ✅, QW-2: Timer Visual ✅, QW-3: Auto-Advance ✅, QW-4: Acessibilidade ARIA ✅, QW-5: Feedback Explicativo Melhorado ✅, QW-6: Sanitização XSS ✅
+
+### Community 43 - "2.2 MELHORIAS MÉDIAS (Próximos Sprints)"
+Cohesion: 0.33
+Nodes (6): ═══════════════════════════════════════════════════════════════, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), M-1: Empty States, M-2: Onboarding Contextual, M-3: Ordenação Inteligente no Seletor, M-4: prefers-reduced-motion
+
+### Community 44 - "═══════════════════════════════════════════════════════════════"
+Cohesion: 0.40
+Nodes (5): ═══════════════════════════════════════════════════════════════, 3.1 MÉTRICAS DE SUCESSO (KPIs), 3.2 VALIDAÇÃO CRUZADA, Melhorias com CONFLITO:, Melhorias validadas por TODAS as 4 perspectivas:
+
+### Community 45 - "═══════════════════════════════════════════════════════════════"
+Cohesion: 0.50
+Nodes (4): ═══════════════════════════════════════════════════════════════, Nota por Dimensão:, Top 5 Problemas Mais Críticos:, Top 5 Quick Wins (implementados):
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
-Cohesion: 0.08
-Nodes (24): ═══════════════════════════════════════════════════════════════, 2.1 QUICK WINS IMPLEMENTADOS, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico (+16 more)
+Cohesion: 0.18
+Nodes (11): 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico, G-4: Dificuldade Adaptativa, G-5: Modo "Revisar Erros", G-6: Quiz Streak + Chain Visual (+3 more)
 
 ### Community 49 - "scripts"
 Cohesion: 0.50
@@ -464,7 +494,7 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 806 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 813 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **70 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -477,7 +507,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `PDCA_TEMPLOS.md` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 - **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Should `═══════════════════════════════════════════════════════════════` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `PDCA_dialogos.md` be split into smaller, more focused modules?**

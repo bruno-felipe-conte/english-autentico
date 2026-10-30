@@ -10,6 +10,7 @@ const Quiz = {
   xpTotal: 0,
   respondido: false,
   combo: 0,
+  abaSeletor: 'templos', // 'templos' | 'morfologia' | 'listening' | 'gramatica' | 'verbi' | 'phrasal'
   _indiceAtual: 0,     // para restauração i18n
   _autoAdvanceTimer: null,
 
@@ -550,40 +551,49 @@ const Quiz = {
     const seletor = document.getElementById('quiz-templo-selector');
     if (resultado) resultado.style.display = 'none';
     if (seletor) seletor.style.display = 'grid';
+    this._sincronizarBarraCompacta();
     this.renderizarSeletor();
   },
 
-  // ── Render the temple selector buttons ────────────────────
+  // ── Render the temple selector buttons (Italian App Standard) ──
   renderizarSeletor() {
     const seletor = document.getElementById('quiz-templo-selector');
     if (!seletor) return;
     seletor.innerHTML = '';
     seletor.style.display = 'grid';
 
-    // ── M-2: Onboarding banner (primeira vez) ───────────────
-    if (!this._onboardingMostrado && Progressao.temploDesbloqueado(1)) {
-      this._onboardingMostrado = true;
-      const banner = document.createElement('div');
-      banner.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#2C3E50,#3498DB);color:white;padding:1rem;border-radius:12px;margin-bottom:0.5rem;text-align:center;';
-      banner.innerHTML = `<div style="font-size:1.3rem;margin-bottom:0.3rem">${I18n.t('quiz_onboarding_title')}</div><div style="font-size:0.85rem;opacity:0.9">${I18n.t('quiz_onboarding_desc')}</div>`;
-      seletor.appendChild(banner);
-    }
+    // Barra de categorias (Tabs inteligentes padronizadas com o App Italiano)
+    const tabs = [
+      { id: 'templos', label: '🏛️ Templos' },
+      { id: 'morfologia', label: '🔤 Morfologia' },
+      { id: 'listening', label: '🎧 Listening' },
+      { id: 'gramatica', label: '📚 Gramática' },
+      { id: 'verbi', label: '⏱️ Conjugação' },
+      { id: 'phrasal', label: '🧩 Phrasal Verbs' }
+    ];
 
-    // ── M-6: Quiz Streak banner ─────────────────────────────
-    const streak = this._getQuizStreak();
-    if (streak > 0) {
-      const streakBanner = document.createElement('div');
-      streakBanner.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#E67E22,#D35400);color:white;padding:0.6rem;border-radius:10px;margin-bottom:0.5rem;text-align:center;font-weight:700;';
-      const flame = streak >= 7 ? '🔥🔥🔥' : streak >= 3 ? '🔥🔥' : '🔥';
-      streakBanner.innerHTML = I18n.t('quiz_streak_banner').replace('{f}', flame).replace('{n}', streak).replace('{s}', streak !== 1 ? 's' : '');
-      seletor.appendChild(streakBanner);
-    }
+    const tabNav = document.createElement('div');
+    tabNav.className = 'quiz-tabs-nav';
 
-    // ── M-1: Verificar se há templos carregados ─────────────
-    const todosTemplos = Object.keys(App.estado.templosData).map(Number).sort((a, b) => a - b);
+    tabs.forEach(t => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      const ativa = this.abaSeletor === t.id;
+      btn.className = `quiz-tab-pill${ativa ? ' ativo' : ''}`;
+      btn.textContent = t.label;
+      btn.onclick = () => {
+        this.abaSeletor = t.id;
+        this.renderizarSeletor();
+      };
+      tabNav.appendChild(btn);
+    });
+    seletor.appendChild(tabNav);
+
+    // Usa a lista de templos carregados (1-76), ordenados sequencialmente
+    const todosTemplos = Object.keys(App.estado?.templosData || {})
+      .map(Number).sort((a, b) => a - b);
 
     if (todosTemplos.length === 0) {
-      // M-1: Empty state — nenhum templo carregado
       const empty = document.createElement('div');
       empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:#aaa;';
       empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">📭</div><div style="font-weight:600;margin-bottom:0.3rem">${I18n.t('quiz_empty_no_temples')}</div><div style="font-size:0.85rem">${I18n.t('quiz_empty_no_temples_d')}</div>`;
@@ -591,22 +601,7 @@ const Quiz = {
       return;
     }
 
-    // ── M-1: Verificar se há perguntas de quiz disponíveis ──
-    const hasQuizData = App.estado.quizData?.length > 0;
-    const hasVocab = todosTemplos.some(i => {
-      const d = App.estado.templosData[i];
-      return d?.palavras?.length >= 4;
-    });
-
-    if (!hasQuizData && !hasVocab) {
-      const empty = document.createElement('div');
-      empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:2rem;color:#aaa;';
-      empty.innerHTML = `<div style="font-size:2.5rem;margin-bottom:0.5rem">🎓</div><div style="font-weight:600;margin-bottom:0.3rem">${I18n.t('quiz_empty_almost')}</div><div style="font-size:0.85rem">${I18n.t('quiz_empty_almost_d')}</div>`;
-      seletor.appendChild(empty);
-      return;
-    }
-
-    // ── M-3: Calcular histórico por templo para ordenação ───
+    // Calcular histórico por templo para estatísticas de acerto
     let historico = [];
     try { historico = JSON.parse(localStorage.getItem('en_quiz_history') || localStorage.getItem('en_quiz_historico') || '[]'); } catch (_) {}
 
@@ -620,173 +615,151 @@ const Quiz = {
       temploStats[key].lastScore = h.pontuacao || 0;
     });
 
-    // ── M-3: Ordenação inteligente — menos feitos primeiro ──
-    const sortedTemplos = [...todosTemplos].sort((a, b) => {
-      const aUnlock = Progressao.temploDesbloqueado(a) ? 0 : 1;
-      const bUnlock = Progressao.temploDesbloqueado(b) ? 0 : 1;
-      if (aUnlock !== bUnlock) return aUnlock - bUnlock;
-
-      const aStats = temploStats[String(a)];
-      const bStats = temploStats[String(b)];
-      const aDone = aStats && aStats.total > 0 ? 1 : 0;
-      const bDone = bStats && bStats.total > 0 ? 1 : 0;
-      if (aDone !== bDone) return aDone - bDone; // não-feitos primeiro
-
-      // Entre os feitos, priorizar os com menor score (precisam de revisão)
-      if (aDone && bDone) {
-        const aAvg = aStats.acertos / (aStats.total * 10);
-        const bAvg = bStats.acertos / (bStats.total * 10);
-        if (aAvg !== bAvg) return aAvg - bAvg; // menor score primeiro
+    // ── Aba Templos ───────────────────────────────────────
+    if (this.abaSeletor === 'templos') {
+      if (Progressao.temploDesbloqueado(1)) {
+        const btnMisto = document.createElement('button');
+        btnMisto.className = 'quiz-templo-btn';
+        btnMisto.innerHTML = '🌍 Quiz Geral<br><small>Todos os templos mistos</small>';
+        btnMisto.style.gridColumn = '1 / -1';
+        btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
+        btnMisto.style.color = 'white';
+        btnMisto.onclick = () => this.iniciarMisto();
+        seletor.appendChild(btnMisto);
       }
 
-      return a - b; // fallback: número do templo
-    });
+      todosTemplos.forEach(i => {
+        const desbloqueado = Progressao.temploDesbloqueado(i);
+        const data = App.estado.templosData[i];
+        const nome = (data && data.nome) || `Temple ${i}`;
+        const nivel = data ? data.nivel : '—';
+        const stats = temploStats[String(i)];
 
-    // ── Misto Button ───────────────────────────────────────
-    if (Progressao.temploDesbloqueado(1)) {
-      const btnMisto = document.createElement('button');
-      btnMisto.className = 'quiz-templo-btn';
-      btnMisto.innerHTML = I18n.t('quiz_mixed_title');
-      btnMisto.style.gridColumn = '1 / -1';
-      btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
-      btnMisto.style.color = 'white';
-      btnMisto.onclick = () => this.iniciarMisto();
-      seletor.appendChild(btnMisto);
+        const btn = document.createElement('button');
+        btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
+
+        let statusHtml = '';
+        if (desbloqueado && stats) {
+          const avgPct = stats.totalPerguntas > 0 ? Math.round((stats.acertos / stats.totalPerguntas) * 100) : 0;
+          const stars = avgPct >= 90 ? '⭐⭐⭐' : avgPct >= 70 ? '⭐⭐' : avgPct >= 50 ? '⭐' : '☆';
+          statusHtml = `<div style="font-size:0.7rem;color:#27AE60;margin-top:0.2rem">${stars} ${avgPct}% avg</div>`;
+        }
+
+        btn.innerHTML = desbloqueado
+          ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>${statusHtml}`
+          : `🔒 ${i}. ${nome}<br><small>Nível ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+
+        if (desbloqueado) btn.onclick = () => this.iniciar(i);
+        else btn.disabled = true;
+        seletor.appendChild(btn);
+      });
+      return;
     }
 
-    // ── Phrasal Verbs Quiz Button ──────────────────────────
-    const btnPhrasal = document.createElement('button');
-    btnPhrasal.className = 'quiz-templo-btn';
-    btnPhrasal.style.gridColumn = '1 / -1';
-    btnPhrasal.style.background = 'linear-gradient(135deg, #003E8A, #002855)';
-    btnPhrasal.style.color = '#fff';
-    btnPhrasal.style.fontWeight = '700';
-    btnPhrasal.innerHTML = '🧩 Quiz Especial: Phrasal Verbs (Partículas & Pronomes)';
-    btnPhrasal.onclick = () => this.iniciarPhrasal();
-    seletor.appendChild(btnPhrasal);
+    // ── Aba Morfologia ────────────────────────────────────
+    if (this.abaSeletor === 'morfologia') {
+      todosTemplos.forEach(i => {
+        const desbloqueado = Progressao.temploDesbloqueado(i);
+        const data = App.estado.templosData[i];
+        const nome = (data && data.nome) || `Temple ${i}`;
+        const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
 
-    // ── M-3: Templos com indicação de progresso ────────────
-    sortedTemplos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Temple ${i}`;
-      const nivel = data ? data.nivel : '—';
-      const stats = temploStats[String(i)];
+        const btn = document.createElement('button');
+        btn.className = `quiz-templo-btn quiz-morf-btn${desbloqueado && temMorf ? '' : ' bloqueado'}`;
+        btn.innerHTML = `🔤 ${i}. ${nome}`;
 
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
+        if (desbloqueado && temMorf) btn.onclick = () => this.iniciarMorfologia(i);
+        else btn.disabled = true;
+        seletor.appendChild(btn);
+      });
+      return;
+    }
 
-      let statusHtml = '';
-      if (desbloqueado && stats) {
-        const avgPct = stats.totalPerguntas > 0 ? Math.round((stats.acertos / stats.totalPerguntas) * 100) : 0;
-        const stars = avgPct >= 90 ? '⭐⭐⭐' : avgPct >= 70 ? '⭐⭐' : avgPct >= 50 ? '⭐' : '☆';
-        statusHtml = `<div style="font-size:0.7rem;color:#27AE60;margin-top:0.2rem">${stars} ${avgPct}% avg</div>`;
+    // ── Aba Listening ─────────────────────────────────────
+    if (this.abaSeletor === 'listening') {
+      todosTemplos.forEach(i => {
+        const desbloqueado = Progressao.temploDesbloqueado(i);
+        const data = App.estado.templosData[i];
+        const nome = (data && data.nome) || `Temple ${i}`;
+        const temVocab = data && data.palavras && data.palavras.length >= 4;
+
+        const btn = document.createElement('button');
+        btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado && temVocab ? '' : ' bloqueado'}`;
+        btn.innerHTML = `🎧 ${i}. ${nome}`;
+
+        if (desbloqueado && temVocab) btn.onclick = () => this.iniciarListening(i);
+        else btn.disabled = true;
+        seletor.appendChild(btn);
+      });
+      return;
+    }
+
+    // ── Aba Gramática ─────────────────────────────────────
+    if (this.abaSeletor === 'gramatica') {
+      const gramData = App.estado.grammarData || { moduli: [] };
+      if (!gramData.moduli || gramData.moduli.length === 0) {
+        const msg = document.createElement('p');
+        msg.style.cssText = 'grid-column: 1 / -1; text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+        msg.textContent = I18n.t('quiz_gram_nao_carregado') || 'Nenhum módulo de gramática carregado.';
+        seletor.appendChild(msg);
+      } else {
+        gramData.moduli.forEach(mod => {
+          const btn = document.createElement('button');
+          btn.className = 'quiz-templo-btn quiz-gram-btn';
+          const nivelId = mod.id || mod.livello || 'A1';
+          btn.innerHTML = `📚 Nível ${nivelId}<br><small>${mod.nome || ''}</small>`;
+          btn.onclick = () => this.iniciarGramatica(nivelId);
+          seletor.appendChild(btn);
+        });
+      }
+      return;
+    }
+
+    // ── Aba Conjugação ────────────────────────────────────
+    if (this.abaSeletor === 'verbi') {
+      const verbosDisponiveis = (App.estado.conjugacoesData || []);
+      if (verbosDisponiveis.length === 0) {
+        const msg = document.createElement('p');
+        msg.style.cssText = 'grid-column: 1 / -1; text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+        msg.textContent = I18n.t('quiz_verbi_nao_carregado') || 'Nenhum verbo carregado no momento.';
+        seletor.appendChild(msg);
+      } else {
+        const tempos = ['Present', 'Past Simple', 'Future'];
+        tempos.forEach(tempo => {
+          const btn = document.createElement('button');
+          btn.className = 'quiz-templo-btn quiz-verbi-btn';
+          const emoji = tempo === 'Present' ? '⏱️' : tempo === 'Past Simple' ? '⏪' : '⏩';
+          const labelStr = tempo === 'Present' ? (I18n.t('quiz_tense_present') || 'Present') : tempo === 'Past Simple' ? (I18n.t('quiz_tense_past') || 'Past Simple') : (I18n.t('quiz_tense_future') || 'Future');
+          btn.innerHTML = `${emoji} ${labelStr}`;
+          btn.onclick = () => this.iniciarConjugacao(tempo);
+          seletor.appendChild(btn);
+        });
       }
 
-      btn.innerHTML = desbloqueado
-        ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>${statusHtml}`
-        : `🔒 ${i}. ${nome}<br><small>${I18n.t('quiz_nivel_requerido').replace('{n}', Progressao.TEMPLO_NIVEL[i] || i)}</small>`;
-
-      if (desbloqueado) btn.onclick = () => this.iniciar(i);
-      else btn.disabled = true;
-      seletor.appendChild(btn);
-    });
-
-    // ── M-5: Botão "Revisar Erros" ──────────────────────────
-    const errosPendentes = this._getErrosPendentes();
-    if (errosPendentes.length >= 3) {
-      const btnRevisar = document.createElement('button');
-      btnRevisar.className = 'quiz-templo-btn';
-      btnRevisar.style.cssText = 'grid-column:1/-1;background:linear-gradient(135deg,#C0392B,#E74C3C);color:white;font-weight:700;';
-      btnRevisar.innerHTML = I18n.t('quiz_review_mistakes').replace('{n}', errosPendentes.length);
-      btnRevisar.onclick = () => this.iniciarRevisao(errosPendentes);
-      seletor.appendChild(btnRevisar);
+      // Card Phrasal Verbs integrado
+      const btnPhrasal = document.createElement('button');
+      btnPhrasal.className = 'quiz-templo-btn quiz-verbi-btn';
+      btnPhrasal.style.gridColumn = '1 / -1';
+      btnPhrasal.style.background = 'linear-gradient(135deg, #003E8A, #002855)';
+      btnPhrasal.style.color = '#fff';
+      btnPhrasal.innerHTML = '🧩 Phrasal Verbs<br><small>Partículas & Pronomes</small>';
+      btnPhrasal.onclick = () => this.iniciarPhrasal();
+      seletor.appendChild(btnPhrasal);
+      return;
     }
 
-    // ── Seções especiais (Morfologia, Listening, Gramática, Conjugação) ──
-    this._renderSecaoEspecial(seletor, sortedTemplos, 'morfologia', 'quiz_morf_titulo', '🔤', 'quiz-morf-btn', (desbloqueado, data) => {
-      return desbloqueado && data?.palavras?.some(p => p.genero || p.plural);
-    }, (i) => this.iniciarMorfologia(i));
-
-    this._renderSecaoEspecial(seletor, sortedTemplos, 'listening', 'quiz_list_titulo', '🎧', 'quiz-list-btn', (desbloqueado, data) => {
-      return desbloqueado && data?.palavras?.length >= 4;
-    }, (i) => this.iniciarListening(i));
-
-    // Gramática
-    const sepGram = document.createElement('div');
-    sepGram.className = 'quiz-secao-titulo';
-    sepGram.textContent = I18n.t('quiz_gram_titulo');
-    seletor.appendChild(sepGram);
-
-    const gramData = App.estado.grammarData || { moduli: [] };
-    if (gramData.moduli.length === 0) {
-      const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-      msg.textContent = I18n.t('quiz_gram_nao_carregado');
-      seletor.appendChild(msg);
-    } else {
-      gramData.moduli.forEach(mod => {
-        const btn = document.createElement('button');
-        btn.className = 'quiz-templo-btn quiz-gram-btn';
-        btn.textContent = I18n.t('quiz_gram_nivel').replace('{n}', mod.id);
-        btn.onclick = () => this.iniciarGramatica(mod.id);
-        seletor.appendChild(btn);
-      });
-    }
-
-    // Conjugação
-    const sepVerbi = document.createElement('div');
-    sepVerbi.className = 'quiz-secao-titulo';
-    sepVerbi.textContent = I18n.t('quiz_verbi_titulo');
-    seletor.appendChild(sepVerbi);
-
-    const verbosDisponiveis = (App.estado.conjugacoesData || []);
-    if (verbosDisponiveis.length === 0) {
-      const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-      msg.textContent = I18n.t('quiz_verbi_nao_carregado');
-      seletor.appendChild(msg);
-    } else {
-      const tempos = ['Present', 'Past Simple', 'Future'];
-      tempos.forEach(tempo => {
-        const btn = document.createElement('button');
-        btn.className = 'quiz-templo-btn quiz-verbi-btn';
-        const emoji = tempo === 'Present' ? '⏱️' : tempo === 'Past Simple' ? '⏪' : '⏩';
-        const labelStr = tempo === 'Present' ? I18n.t('quiz_tense_present') : tempo === 'Past Simple' ? I18n.t('quiz_tense_past') : I18n.t('quiz_tense_future');
-        btn.textContent = labelStr;
-        btn.onclick = () => this.iniciarConjugacao(tempo);
-        seletor.appendChild(btn);
-      });
-    }
-  },
-
-  // ── M-3: Helper para renderizar seções especiais ──────────
-  _renderSecaoEspecial(seletor, templos, tipo, tituloKey, emoji, btnClass, checkFn, onClickFn) {
-    const sep = document.createElement('div');
-    sep.className = 'quiz-secao-titulo';
-    sep.textContent = I18n.t(tituloKey);
-    seletor.appendChild(sep);
-
-    let count = 0;
-    templos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      if (!checkFn(desbloqueado, data)) return;
-
-      count++;
-      const nome = (data && data.nome) || `Temple ${i}`;
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn ${btnClass}`;
-      btn.textContent = `${emoji} ${i}. ${nome}`;
-      btn.onclick = () => onClickFn(i);
-      seletor.appendChild(btn);
-    });
-
-    if (count === 0) {
-      const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.3rem;font-size:0.8rem;';
-      msg.textContent = I18n.t('quiz_no_quizzes_avail').replace('{t}', tipo);
-      seletor.appendChild(msg);
+    // ── Aba Phrasal Verbs ─────────────────────────────────
+    if (this.abaSeletor === 'phrasal') {
+      const btnPhrasal = document.createElement('button');
+      btnPhrasal.className = 'quiz-templo-btn';
+      btnPhrasal.style.gridColumn = '1 / -1';
+      btnPhrasal.style.background = 'linear-gradient(135deg, #003E8A, #002855)';
+      btnPhrasal.style.color = '#fff';
+      btnPhrasal.style.fontWeight = '700';
+      btnPhrasal.innerHTML = '🧩 Quiz Especial: Phrasal Verbs<br><small>Partículas, Pronomes & Contexto</small>';
+      btnPhrasal.onclick = () => this.iniciarPhrasal();
+      seletor.appendChild(btnPhrasal);
+      return;
     }
   },
 
@@ -1212,6 +1185,21 @@ document.addEventListener('i18n:changed', () => {
 
 
 window.Quiz = Quiz;
+
+if (typeof document !== 'undefined') {
+  const initQuiz = () => {
+    const sec = document.getElementById('sec-quiz');
+    const c = document.getElementById('quiz-templo-selector');
+    if (sec && (sec.classList?.contains?.('active') || window?.location?.hash?.includes('quiz')) && c) {
+      Quiz.renderizarSeletor();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initQuiz);
+  } else {
+    initQuiz();
+  }
+}
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = Quiz;
