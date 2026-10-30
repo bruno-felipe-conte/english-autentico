@@ -1042,30 +1042,53 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
    --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .dialogo-grid, .dialogue-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-  gap: var(--esp-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
   padding: var(--esp-lg) var(--esp-md);
+}
+
+@media (max-width: 992px) {
+  .dialogo-grid, .dialogue-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dialogo-grid, .dialogue-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .dialogo-grid, .dialogue-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }
 
 .dialogo-card, .dialogue-card {
   background-color: var(--cor-marmore);
-  border-radius: var(--raio-lg);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--sombra-md);
-  border: 1px solid var(--cor-pietra);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 2px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--esp-lg) var(--esp-md) var(--esp-md);
+  justify-content: space-between;
+  padding: 1.2rem;
   text-align: center;
   cursor: pointer;
-  transition: transform var(--trans-media), box-shadow var(--trans-media);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
   animation: entrada-templo .35s ease both;
-  gap: var(--esp-xs);
+  min-height: 145px;
 }
 .dialogo-card:hover, .dialogue-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--sombra-lg);
+  border-color: var(--cor-toscano);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* Stagger animation */
@@ -1081,13 +1104,27 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
 .dialogo-grid .dialogo-card:nth-child(10), .dialogue-grid .dialogue-card:nth-child(10) { animation-delay: .40s; }
 
 .dialogo-icone, .dialogue-icone {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
-  margin-bottom: var(--esp-xs);
+  margin-bottom: 0.5rem;
 }
 .dialogo-titulo, .dialogue-titulo {
-  font-family: var(--fonte-titulo);
-  font-weight: 600;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: var(--cor-veneziano-escuro);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.dialogo-nivel, .dialogue-nivel {
+  display: inline-block;
+  background: var(--cor-marmore-escuro);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cor-inchiostro);
+}
   font-size: .85rem;
   color: var(--cor-inchiostro);
   line-height: 1.3;
@@ -3591,7 +3628,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
 @media (min-width: 1024px) {
   .app-sidebar {
     position: fixed;
-    top: var(--app-header-h, 56px); /* Encosta perfeitamente na linha do header */
+    top: var(--app-header-h, 70px); /* Encosta perfeitamente na linha do header */
     left: 0;
     bottom: 0;
     width: 64px;
@@ -3613,14 +3650,14 @@ body.dark-mode .sidebar-pin-btn.ativo {
   }
 
   /* Hover expansion when unpinned */
-  .app-sidebar:hover {
-    width: 200px;
+  .app-sidebar:hover:not(.pinned) {
+    width: 220px;
     box-shadow: 8px 0 28px rgba(0, 0, 0, 0.18);
   }
 
   /* Pinned permanent expansion */
   body.sidebar-pinned .app-sidebar {
-    width: 200px;
+    width: 220px;
   }
 
   /* Área Principal Responsiva: envolve daily-goal-bar, app-container e footer */
@@ -3628,7 +3665,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     margin-left: 64px;
     width: calc(100% - 64px);
     max-width: calc(100vw - 64px);
-    min-height: calc(100vh - var(--app-header-h, 56px));
+    min-height: calc(100vh - var(--app-header-h, 70px));
     transition: margin-left 0.22s cubic-bezier(0.16, 1, 0.3, 1), width 0.22s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
@@ -3636,11 +3673,12 @@ body.dark-mode .sidebar-pin-btn.ativo {
     box-sizing: border-box;
   }
 
-  /* Quando fixada (pinned), reserva 200px de espaço contínuo no layout principal */
+  /* Quando a barra expande (hover ou pin), o conteúdo inteiro se adapta responsivamente sem ficar embaixo da barra */
+  .app-sidebar:hover ~ .app-main-wrapper,
   body.sidebar-pinned .app-main-wrapper {
-    margin-left: 200px;
-    width: calc(100% - 200px);
-    max-width: calc(100vw - 200px);
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    max-width: calc(100vw - 220px);
   }
 
   .app-main-wrapper .daily-goal-bar {
@@ -3648,7 +3686,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     margin: 0;
     box-sizing: border-box;
     position: sticky;
-    top: var(--app-header-h, 56px);
+    top: var(--app-header-h, 70px);
     z-index: 900;
     background: var(--cor-marmore);
   }
@@ -3684,16 +3722,16 @@ body.dark-mode .sidebar-pin-btn.ativo {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 40px;
-    min-height: 40px;
+    height: 42px;
+    min-height: 42px;
     padding: 0 8px;
-    padding-right: 28px;
+    padding-right: 32px;
     border-radius: 8px;
     border: 1px solid transparent;
     background: transparent;
     color: var(--cor-inchiostro);
     font-family: var(--fonte-ui);
-    font-size: 0.84rem;
+    font-size: 0.88rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.18s ease, color 0.18s ease;
@@ -3703,7 +3741,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
   }
 
   .app-sidebar .nav-tab-icon {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     min-width: 34px;
     width: 34px;
     text-align: center;

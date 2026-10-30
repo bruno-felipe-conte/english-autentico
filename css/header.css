@@ -47,6 +47,53 @@
   flex-shrink: 0;
 }
 
+/* ── Lang toggle pill (Italian app parity) ── */
+.lang-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  background: rgba(0,0,0,0.30) !important;
+  border: 1.5px solid rgba(255,255,255,0.25) !important;
+  border-radius: 999px !important;
+  padding: 0.18rem 0.22rem !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: border-color 0.2s, background 0.2s, transform 0.18s ease !important;
+}
+
+.lang-pill-btn:hover {
+  border-color: rgba(255,255,255,0.5) !important;
+  transform: translateY(-1px);
+}
+
+.lang-pill-btn:active {
+  transform: scale(0.95);
+}
+
+.lang-pill-seg {
+  display: inline-block;
+  padding: 0.08rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: background 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0.45;
+  color: rgba(255,255,255,0.7);
+}
+
+.lang-pill-seg.ativo,
+.lang-pill-seg.active {
+  background: #fff !important;
+  color: #003E8A !important;
+  opacity: 1 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.lang-pill-div {
+  display: none !important;
+}
+
 .header-center,
 .header-icons {
   justify-self: center;

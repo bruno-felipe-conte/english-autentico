@@ -128,7 +128,6 @@ const Dialogues = {
           oninput="Dialogues._filtroTexto=this.value;Dialogues.renderizarSeletor()"
           aria-label="Search dialogues"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
-        <button class="btn-pill-add" onclick="Dialogues.abrirFormularioCriar()">${this._esc(I18n.t('dial_btn_adicionar'))}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">${this._esc(I18n.t('btn_via_ia'))}</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
@@ -176,8 +175,8 @@ const Dialogues = {
         html += `<div style="text-align:center;color:#aaa;grid-column:1/-1;padding:2rem">
           <div style="font-size:2rem;margin-bottom:0.5rem">💬</div>
           <div style="font-weight:600;margin-bottom:0.3rem">No custom dialogues yet</div>
-          <div style="font-size:0.85rem;margin-bottom:1rem">Create your own dialogues to practice specific situations!</div>
-          <button class="btn-primario" onclick="Dialogues.abrirFormularioCriar()">+ Create First Dialogue</button>
+          <div style="font-size:0.85rem;margin-bottom:1rem">Import dialogues via AI to practice specific situations!</div>
+          <button class="btn-primario" onclick="IAImport.abrir('dialogo')">${this._esc(I18n.t('btn_via_ia'))}</button>
         </div>`;
       } else {
         html += `<div style="text-align:center;color:#aaa;grid-column:1/-1;padding:2rem">
@@ -709,6 +708,20 @@ document.addEventListener('i18n:changed', () => {
   if ((document.getElementById('dialogues-container') || document.getElementById('dialoghi-container'))) Dialogues.renderizarSeletor();
 });
 
+if (typeof document !== 'undefined') {
+  const initDialogues = () => {
+    const sec = document.getElementById('sec-dialogues') || document.getElementById('sec-dialoghi');
+    const c = document.getElementById('dialogues-container') || document.getElementById('dialoghi-container');
+    if (sec && (sec.classList.contains('active') || window.location.hash.includes('dialog')) && c) {
+      Dialogues.renderizarSeletor();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDialogues);
+  } else {
+    initDialogues();
+  }
+}
 
 // Backward-compatibility aliases
 Dialogues.todosDialoghi = () => Dialogues.allDialogues ? Dialogues.allDialogues() : (Dialogues.dados ? Dialogues.dados.dialogues : []);
