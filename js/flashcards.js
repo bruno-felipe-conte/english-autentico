@@ -96,6 +96,17 @@ const FSRS = {
     const newState    = rating === 1 ? 'learning' : 'review';
     const intervalDay = rating === 1 ? 1 : this.nextInterval(newS);
 
+    const previousHistory = Array.isArray(card.history) ? card.history : [];
+    const reviewRecord = {
+      timestamp: now,
+      rating: rating,
+      stabilityBefore: Number(s ? s.toFixed(2) : 1),
+      stabilityAfter: Number(newS.toFixed(2)),
+      retrievabilityBefore: Number(r.toFixed(3)),
+      targetPeak: rating === 1 ? 0.85 : 1.0,
+      intervalDays: intervalDay
+    };
+
     return {
       ...card,
       state:          newState,
@@ -107,6 +118,7 @@ const FSRS = {
       lastReview:     now,
       interval:       intervalDay,
       nextReview:     now + intervalDay * 86400000,
+      history:        [...previousHistory, reviewRecord]
     };
   },
 
@@ -911,10 +923,22 @@ const Flashcards = {
       // Check achievements after each review
       if (typeof Conquistas !== 'undefined') Conquistas.verificar();
 
-      this.proxima();
+      // ── Animação imediata da Curva Ebbinghaus (Seta subindo até 100% ou 85%) ──
+      this.atualizarEbbinghaus();
+      this._bloqueioAvaliacao = true;
+      const botoesAvaliar = document.querySelectorAll('.fc-btn-fsrs, .fc-action-btn, #btn-again, #btn-hard, #btn-good, #btn-easy');
+      botoesAvaliar.forEach(b => { if (b) b.disabled = true; });
+
+      // Micro-pausa de 650ms para absorção cognitiva visual da retenção restaurada
+      setTimeout(() => {
+        this._bloqueioAvaliacao = false;
+        botoesAvaliar.forEach(b => { if (b) b.disabled = false; });
+        this.proxima();
+      }, 650);
     } catch (err) {
       console.error('[FSRS] avaliar() error:', err);
       App.notificar('notif_fc_erro_resposta', 'erro');
+      this._bloqueioAvaliacao = false;
       this.proxima(); // advance anyway so user isn't stuck
     }
   },
@@ -1756,6 +1780,7 @@ const Flashcards = {
 document.addEventListener('keydown', (e) => {
   if (!document.getElementById('flashcard')) return;
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (typeof Flashcards !== 'undefined' && Flashcards._bloqueioAvaliacao) return;
   const isVirado = document.getElementById('flashcard')?.classList.contains('virado');
   switch(e.key) {
     case '1': case 'ArrowLeft':

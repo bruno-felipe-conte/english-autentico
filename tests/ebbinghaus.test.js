@@ -128,3 +128,85 @@ test('🖼️ renderEbbinghausCurve — DOM and Accessibility Compliance', async
   assert.ok(container.innerHTML.includes('it-ebbinghaus-card'), 'Has wrapper CSS class');
   assert.ok(container.innerHTML.includes('Active card'), 'Includes English badge text');
 });
+
+test('🏹 Gráfico em Cascata Multi-Ciclos (Ebbinghaus / FSRS-5)', async () => {
+  // 1. Simulação de histórico de revisões com Good e Lapso (Again)
+  const cardComHistorico = {
+    id: 'test-card-1',
+    stability: 22.0,
+    difficulty: 4.5,
+    history: [
+      {
+        timestamp: Date.now() - 86400000 * 20,
+        rating: 3, // Good -> sobe a 100%
+        stabilityBefore: 1.0,
+        stabilityAfter: 3.5,
+        retrievabilityBefore: 0.72,
+        targetPeak: 1.0,
+        intervalDays: 4
+      },
+      {
+        timestamp: Date.now() - 86400000 * 10,
+        rating: 1, // Again (Lapse) -> sobe apenas a 85%
+        stabilityBefore: 3.5,
+        stabilityAfter: 1.2,
+        retrievabilityBefore: 0.65,
+        targetPeak: 0.85,
+        intervalDays: 1
+      },
+      {
+        timestamp: Date.now() - 86400000 * 3,
+        rating: 3, // Good -> sobe a 100%
+        stabilityBefore: 1.2,
+        stabilityAfter: 5.0,
+        retrievabilityBefore: 0.88,
+        targetPeak: 1.0,
+        intervalDays: 6
+      },
+      {
+        timestamp: Date.now(),
+        rating: 4, // Easy -> sobe a 100%
+        stabilityBefore: 5.0,
+        stabilityAfter: 22.0,
+        retrievabilityBefore: 0.94,
+        targetPeak: 1.0,
+        intervalDays: 24
+      }
+    ]
+  };
+
+  // 2. Modo Padrão: 3 Recentes
+  const dataRecente = computeEbbinghausCurve([cardComHistorico], cardComHistorico, { cascadeMode: 'recent' });
+  assert.strictEqual(dataRecente.isCascade, true);
+  assert.strictEqual(dataRecente.viewMode, 'recent');
+  assert.strictEqual(dataRecente.cascadeArrows.length, 3, 'Deve exibir os últimos 3 ciclos de setas');
+  assert.strictEqual(dataRecente.cascadeSegments.length, 4, '3 ciclos passados + 1 futuro = 4 segmentos');
+
+  // Verifica que o lapso atinge o teto de 85% (y ≈ 66.9) e nota normal atinge 100% (y = 20)
+  const lapseArrow = dataRecente.cascadeArrows.find(a => a.isLapse);
+  assert.ok(lapseArrow, 'Deve conter seta de lapso');
+  assert.strictEqual(lapseArrow.targetPeakPct, 85);
+  assert.strictEqual(lapseArrow.yTo, 66.9);
+  assert.strictEqual(lapseArrow.marker, 'crimson');
+
+  const successArrow = dataRecente.cascadeArrows.find(a => !a.isLapse);
+  assert.ok(successArrow, 'Deve conter seta de sucesso');
+  assert.strictEqual(successArrow.targetPeakPct, 100);
+  assert.strictEqual(successArrow.yTo, 20);
+  assert.strictEqual(successArrow.marker, 'cypress');
+
+  // 3. Modo Todos os Ciclos
+  const dataTodos = computeEbbinghausCurve([cardComHistorico], cardComHistorico, { cascadeMode: 'all' });
+  assert.strictEqual(dataTodos.viewMode, 'all');
+  assert.strictEqual(dataTodos.cascadeArrows.length, 4, 'Deve exibir todos os 4 ciclos de setas');
+  assert.strictEqual(dataTodos.cascadeSegments.length, 5, '4 ciclos passados + 1 futuro = 5 segmentos');
+
+  // 4. Renderização no DOM
+  const container = { innerHTML: '' };
+  renderEbbinghausCurve(container, [cardComHistorico], cardComHistorico, { locale: 'pt' });
+  assert.ok(container.innerHTML.includes('eb-arrow-animated'), 'Deve conter setas animadas verticais');
+  assert.ok(container.innerHTML.includes('marker-end="url(#eb-arrowhead-cypress)"'), 'Deve conter ponta de seta verde');
+  assert.ok(container.innerHTML.includes('marker-end="url(#eb-arrowhead-crimson)"'), 'Deve conter ponta de seta vermelha (lapso)');
+  assert.ok(container.innerHTML.includes('it-eb-mode-pill'), 'Deve conter botão de alternância entre 3 Recentes e Todos');
+});
+
