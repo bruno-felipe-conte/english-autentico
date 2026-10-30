@@ -12,6 +12,8 @@
   overflow: hidden;
   border-bottom: 2px solid rgba(212, 168, 67, 0.4);
   transition: padding 0.22s ease;
+  overscroll-behavior: none;
+  touch-action: none;
 }
 
 /* ── Header Top e Organização de Linhas ── */

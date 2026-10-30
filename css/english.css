@@ -57,7 +57,15 @@
 
 /* 3. RESET + BASE */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; font-size: var(--fs-base, 15px); -webkit-text-size-adjust:100%; }
+html {
+  scroll-behavior:smooth;
+  font-size: var(--fs-base, 15px);
+  -webkit-text-size-adjust:100%;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  background-color: var(--cor-pergaminho);
+}
 body {
   background-color: var(--cor-pergaminho);
   color: var(--cor-inchiostro);
@@ -66,10 +74,29 @@ body {
   min-height: 100vh;    /* fallback */
   min-height: 100dvh;   /* dynamic viewport --- no gap in PWA/mobile */
   overflow-x: hidden;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
   background-image:
     repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(158,143,127,.04) 28px,rgba(158,143,127,.04) 29px),
     repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(201,149,42,.02) 60px,rgba(201,149,42,.02) 61px);
   transition: opacity 0.18s ease;
+}
+
+/* ── Prevenção de overscroll/bounce em PWA instalado ── */
+@media all and (display-mode: standalone) {
+  html, body {
+    overscroll-behavior: none !important;
+    overscroll-behavior-y: none !important;
+    overscroll-behavior-x: none !important;
+  }
+  .app-header {
+    position: sticky;
+    top: 0;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
 }
 body.lang-switching { opacity: 0; }
 img,video,svg { display:block; max-width:100%; }

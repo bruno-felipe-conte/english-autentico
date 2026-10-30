@@ -24,6 +24,9 @@
       flex-direction: column;
       overflow-x: hidden;    /* prevent horizontal scroll */
       touch-action: pan-x pan-y; /* prevent pinch-to-zoom entirely */
+      overscroll-behavior: none;
+      overscroll-behavior-y: none;
+      overscroll-behavior-x: none;
     }
 
     /* ── Header Compacto (Etapa 1: ~56px de altura) ── */
@@ -36,6 +39,23 @@
       overflow: hidden;
       border-bottom: 2px solid rgba(212, 168, 67, 0.4);
       transition: padding 0.22s ease;
+      overscroll-behavior: none;
+      touch-action: none;
+    }
+
+    /* ── Prevenção de overscroll/bounce em PWA instalado ── */
+    @media all and (display-mode: standalone) {
+      html, body {
+        overscroll-behavior: none !important;
+        overscroll-behavior-y: none !important;
+        overscroll-behavior-x: none !important;
+      }
+      .app-header {
+        position: sticky;
+        top: 0;
+        overscroll-behavior: none;
+        touch-action: none;
+      }
     }
     /* ── Header Top e Organização de Linhas ── */
     .header-top {
