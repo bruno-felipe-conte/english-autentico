@@ -3905,43 +3905,73 @@ body.dark-mode .fc-seletor-drawer .selector-helper {
   color: #A89B8C;
 }
 
-/* Curva de Esquecimento Ebbinghaus — Reduzida e reposicionada abaixo dos cards */
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact {
-  max-width: 500px;
+/* Curva de Esquecimento Ebbinghaus — Proporções compactas e miniatura */
+.fc-ebbinghaus-wrapper {
+  margin-top: 0.65rem;
   width: 100%;
-  margin: 1rem auto 0;
-  padding: 0;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-card {
-  padding: 0.75rem 0.95rem;
-  margin-top: 0.35rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+.fc-studio-sidebar .fc-ebbinghaus-wrapper {
+  margin-top: 0.5rem;
+  max-width: 100%;
 }
-
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-header {
-  margin-bottom: 0.45rem;
+.it-ebbinghaus-card {
+  background: var(--it-eb-surface);
+  border: 1px solid var(--it-eb-border);
+  border-radius: var(--raio-md, 12px);
+  padding: 0.55rem 0.75rem;
+  box-shadow: var(--sombra-sm, 0 1px 3px rgba(46, 27, 14, 0.12));
+  box-sizing: border-box;
 }
-
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-title {
-  font-size: 0.88rem;
+.it-ebbinghaus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  gap: 0.45rem;
 }
-
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-subtitle {
-  font-size: 0.68rem;
+.it-ebbinghaus-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--it-eb-bright);
+  margin: 0;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
 }
-
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-badge {
+.it-ebbinghaus-subtitle {
   font-size: 0.62rem;
-  padding: 1px 6px;
+  color: var(--it-eb-dim);
+  margin: 0.08rem 0 0;
+  line-height: 1.2;
 }
-
-.fc-ebbinghaus-wrapper.fc-ebbinghaus-compact .it-ebbinghaus-legend {
-  padding-top: 0.35rem;
+.it-ebbinghaus-badge {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--it-eb-depth);
+  color: var(--it-eb-bright);
+}
+.it-ebbinghaus-svg {
+  width: 100%;
+  max-height: 125px; /* Altura compacta ideal para a sidebar */
+  display: block;
+  overflow: visible;
+}
+.it-ebbinghaus-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
   margin-top: 0.3rem;
-  font-size: 0.66rem;
-  gap: 0.75rem;
+  padding-top: 0.3rem;
+  border-top: 1px dashed var(--it-eb-border);
+  font-size: 0.68rem;
+  color: var(--it-eb-dim);
 }
 
 /* Sidebar recolhida */

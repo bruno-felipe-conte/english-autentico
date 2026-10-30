@@ -1,7 +1,7 @@
 # Graph Report - english-autentico  (2026-10-30)
 
 ## Corpus Check
-- 237 files · ~1,236,043 words
+- 237 files · ~1,236,033 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: .css 11, (none) 1, .webmanifest 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8d434e36`
+- Built from commit: `4a718e51`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

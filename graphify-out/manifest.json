@@ -426,9 +426,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793312901.5120347,
-    "seen": 1793313066.836474,
-    "ast_hash": "b8f04c1ec10caef25d018c57a32db6e2",
+    "mtime": 1793385261.7205133,
+    "seen": 1793385463.7293844,
+    "ast_hash": "0f7239ed630175225e81ba806cc3e24c",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -534,9 +534,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1793384245.3188996,
-    "seen": 1793384294.405285,
-    "ast_hash": "e76e0d298009afe76611c79b2d2437ab",
+    "mtime": 1793385414.4329648,
+    "seen": 1793385464.0326111,
+    "ast_hash": "92db5b868c03c3ef31b6f18297ba1722",
     "semantic_hash": ""
   },
   "playwright.config.js": {
@@ -744,9 +744,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793384191.8322372,
-    "seen": 1793384295.1536803,
-    "ast_hash": "1123e3656bcd997da67d38fc0329e576",
+    "mtime": 1793385241.9861028,
+    "seen": 1793385464.6091692,
+    "ast_hash": "576d23647ec31862633f995b1565351a",
     "semantic_hash": ""
   },
   "playwright-report/index.html": {
@@ -1740,9 +1740,9 @@
     "semantic_hash": ""
   },
   "js/ebbinghaus.js": {
-    "mtime": 1793238128.6800148,
-    "seen": 1793238568.4496977,
-    "ast_hash": "bc8bf9d5c3402ff83dbb60cf360a69c0",
+    "mtime": 1793385281.7775812,
+    "seen": 1793385463.722594,
+    "ast_hash": "17f807f434fdd98ae89d95956290e5a2",
     "semantic_hash": ""
   },
   "tests/ebbinghaus.spec.js": {
