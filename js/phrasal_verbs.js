@@ -711,3 +711,23 @@ window.PhrasalVerbs = {
       .replace(/'/g, '&#39;');
   }
 };
+
+window.PhrasalVerbs = PhrasalVerbs;
+
+if (typeof document !== 'undefined') {
+  const initPhrasal = () => {
+    const sec = document.getElementById('sec-phrasal');
+    if (sec && (sec.classList?.contains?.('active') || window?.location?.hash?.includes('phrasal'))) {
+      PhrasalVerbs.renderizar();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPhrasal);
+  } else {
+    initPhrasal();
+  }
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = PhrasalVerbs;
+}

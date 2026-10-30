@@ -654,11 +654,11 @@ body.dark-mode .phrasal-chip-badge,
   opacity: 0.85;
 }
 
-/* ── Cards Grid ── */
+/* ── Cards Grid (4 colunas no desktop) ── */
 .phrasal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 0.65rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
 }
 
 /* ── Phrasal Card Denso & Expansível ── */

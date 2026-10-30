@@ -432,9 +432,9 @@
     "semantic_hash": ""
   },
   "js/grammar.js": {
-    "mtime": 1793267582.2372155,
-    "seen": 1793269030.9284487,
-    "ast_hash": "3a592efa62036b946d13cf1d27bb2871",
+    "mtime": 1793379582.751364,
+    "seen": 1793379757.126344,
+    "ast_hash": "e964dcdd0e457aee4536ea26a9a0d50e",
     "semantic_hash": ""
   },
   "js/heatmap.js": {
@@ -504,9 +504,9 @@
     "semantic_hash": ""
   },
   "js/stories.js": {
-    "mtime": 1792533808.9881694,
-    "seen": 1792534278.217292,
-    "ast_hash": "4e5b5c93c7d3181afdcd7ef7996574a6",
+    "mtime": 1793379611.8441043,
+    "seen": 1793379757.2220268,
+    "ast_hash": "28a117f2afb75fa7a732a5bcd2c74be9",
     "semantic_hash": ""
   },
   "js/tour.js": {
@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "js/stories/renderer.js": {
-    "mtime": 1792535651.098479,
-    "seen": 1792536149.786857,
-    "ast_hash": "551209064f1d1126a5ecebe0d379203b",
+    "mtime": 1793379339.364297,
+    "seen": 1793379757.2537234,
+    "ast_hash": "e1c57a76b114192e5d2fd60009c7d5c7",
     "semantic_hash": ""
   },
   "js/stories/translator.js": {
@@ -1698,9 +1698,9 @@
     "semantic_hash": ""
   },
   "js/phrasal_verbs.js": {
-    "mtime": 1793224108.747685,
-    "seen": 1793224998.991582,
-    "ast_hash": "f0c7f5aec226442a289b17fccd9f0877",
+    "mtime": 1793379596.8805244,
+    "seen": 1793379757.1777449,
+    "ast_hash": "4094365cb74f52563b706b49923fa923",
     "semantic_hash": ""
   },
   "tests/phrasal_verbs.test.js": {

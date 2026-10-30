@@ -1567,8 +1567,8 @@
     .gram-nivel-info { font-size: 0.73rem; opacity: 0.88; margin-bottom: 0.45rem; }
     .gram-nivel-barra { background: rgba(255,255,255,0.28); border-radius: 10px; height: 5px; }
     .gram-nivel-barra div { height: 100%; background: rgba(255,255,255,0.85); border-radius: 10px; transition: width 0.5s; }
-    /* Grid de lezioni */
-    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
+    /* Grid de lezioni (4 colunas no desktop) */
+    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
     .gram-lezioni-grid.recolhido { display: none; }
     /* Card de cada lezione */
     .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #003E8A; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'EB Garamond', Georgia, serif; }
@@ -3239,26 +3239,49 @@
       .gram-teoria-corpo table, .gram-table { font-size: 0.82rem; }
       .gram-table th, .gram-table td { padding: 0.4rem 0.6rem; }
       .gram-lezioni-grid { grid-template-columns: 1fr 1fr; }
-    }    /* ── Dialogues & Songs Grid (4 Colunas Desktop) ── */
+    }    /* ── Grids Padronizados em 4 Colunas Desktop (Diálogos, Músicas, Gramática, Phrasal Verbs, Histórias) ── */
     #sec-songs .dialogo-grid,
     #sec-canzoni .dialogo-grid,
-    .dialogo-grid, .dialogue-grid {
-      display: grid;
+    .dialogo-grid, .dialogue-grid,
+    .gram-lezioni-grid,
+    .phrasal-grid,
+    .storie-grid, .stories-grid {
+      display: grid !important;
       grid-template-columns: repeat(4, 1fr) !important;
       gap: 1.1rem;
     }
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
       #sec-songs .dialogo-grid,
       #sec-canzoni .dialogo-grid,
       .dialogo-grid, .dialogue-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.85rem;
       }
+      .gram-lezioni-grid,
+      .phrasal-grid,
+      .storie-grid, .stories-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.85rem;
+      }
+    }
+    @media (max-width: 768px) {
+      #sec-songs .dialogo-grid,
+      #sec-canzoni .dialogo-grid,
+      .dialogo-grid, .dialogue-grid,
+      .gram-lezioni-grid,
+      .phrasal-grid,
+      .storie-grid, .stories-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem;
+      }
     }
     @media (max-width: 480px) {
       #sec-songs .dialogo-grid,
       #sec-canzoni .dialogo-grid,
-      .dialogo-grid, .dialogue-grid {
+      .dialogo-grid, .dialogue-grid,
+      .gram-lezioni-grid,
+      .phrasal-grid,
+      .storie-grid, .stories-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.6rem;
       }
@@ -3266,7 +3289,10 @@
     @media (max-width: 340px) {
       #sec-songs .dialogo-grid,
       #sec-canzoni .dialogo-grid,
-      .dialogo-grid, .dialogue-grid {
+      .dialogo-grid, .dialogue-grid,
+      .gram-lezioni-grid,
+      .phrasal-grid,
+      .storie-grid, .stories-grid {
         grid-template-columns: 1fr !important;
         gap: 0.5rem;
       }

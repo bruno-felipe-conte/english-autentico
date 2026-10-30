@@ -1142,6 +1142,24 @@ const Grammatica = {
   }
 };
 
+window.Grammatica = Grammatica;
+window.Grammar = Grammatica;
+
+if (typeof document !== 'undefined') {
+  const initGrammar = () => {
+    const sec = document.getElementById('sec-grammar') || document.getElementById('sec-grammatica');
+    const c = document.getElementById('gram-niveis-container') || document.getElementById('grammar-container');
+    if (sec && (sec.classList?.contains?.('active') || window?.location?.hash?.includes('gramm')) && c) {
+      Grammatica.renderizarSeletor();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGrammar);
+  } else {
+    initGrammar();
+  }
+}
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = Grammatica;
 }

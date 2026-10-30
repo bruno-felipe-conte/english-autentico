@@ -52,11 +52,26 @@ Stories._tocarProximaSentenca = function() { return Stories._playNextSentence();
 Stories._marcarPalavras = function(t, p, i, c) { return Stories._tokenizeWords(t, p, i, c); };
 Stories._marcarPalavraSalvaNoDOM = function(p) { return Stories._markWordSavedInDOM(p); };
 
-// Global attachment
 if (typeof window !== 'undefined') {
   window.Stories = Stories;
   window.Storie = Stories;
 }
+
+if (typeof document !== 'undefined') {
+  const initStories = () => {
+    const sec = document.getElementById('sec-stories') || document.getElementById('sec-storie');
+    const c = document.getElementById('stories-container');
+    if (sec && (sec.classList?.contains?.('active') || window?.location?.hash?.includes('stori')) && c) {
+      Stories.renderSelector();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStories);
+  } else {
+    initStories();
+  }
+}
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = Stories;
 }
