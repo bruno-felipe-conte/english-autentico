@@ -153,11 +153,13 @@ test('🎨 Estúdio de Personalização de Aparência e Arte Vetorial SVG', asyn
     }
   });
 
-  await t.test('7. Prompt Base deve conter diretrizes de Overlapping Geometric Art e Tiling sem monotonia', () => {
+  await t.test('7. Prompt Base deve conter diretrizes ergonômicas (WCAG AAA, 60-30-10) e SVG de baixo ruído', () => {
     const prompt = ThemeStudio.PROMPT_BASE;
-    assert.ok(prompt.includes('Overlapping Geometric Art') || prompt.includes('overlapping geometric shapes'));
-    assert.ok(prompt.includes('tiling'));
-    assert.ok(prompt.includes('rotações') || prompt.includes('rotacionados'));
-    assert.ok(prompt.includes('JSON'));
+    assert.ok(prompt.includes('WCAG AAA'), 'Deve incluir diretriz WCAG AAA');
+    assert.ok(prompt.includes('60-30-10'), 'Deve incluir regra 60-30-10');
+    assert.ok(prompt.includes('Minimalist architectural geometry'), 'Deve conter estilo minimalista de baixo ruído');
+    assert.ok(prompt.includes('tiling'), 'Deve conter diretriz de repetição (tiling)');
+    assert.ok(prompt.includes('rotações') || prompt.includes('rotacionados'), 'Deve conter rotações para quebrar grid');
+    assert.ok(prompt.includes('JSON'), 'Deve instruir retorno estrito em JSON');
   });
 });

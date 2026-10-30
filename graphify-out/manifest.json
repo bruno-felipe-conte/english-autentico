@@ -1788,15 +1788,15 @@
     "semantic_hash": ""
   },
   "js/theme_studio.js": {
-    "mtime": 1793384096.556011,
-    "seen": 1793384294.3859372,
-    "ast_hash": "0fd2242cf9a368db41b82c449322a49c",
+    "mtime": 1793387894.4246068,
+    "seen": 1793387980.58997,
+    "ast_hash": "2a6cd748c69adc3ba6bee9375110c22f",
     "semantic_hash": ""
   },
   "tests/theme_studio.test.js": {
-    "mtime": 1793384230.1262105,
-    "seen": 1793384294.861544,
-    "ast_hash": "855160046cc3a35c4ee51dd241b49993",
+    "mtime": 1793387903.9350123,
+    "seen": 1793387980.9723365,
+    "ast_hash": "43fdab6203f5f3363b6436404a027517",
     "semantic_hash": ""
   }
 }

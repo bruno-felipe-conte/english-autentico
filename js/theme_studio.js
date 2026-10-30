@@ -8,14 +8,20 @@ const ThemeStudio = {
   STORAGE_KEY: 'ea_custom_theme',
 
   // ── Prompt Base Curado para IAs Externas (ChatGPT, Claude, Gemini) ───────────
-  PROMPT_BASE: `Você é um especialista em Design de Interfaces (UI/UX) e Arte Vetorial SVG Generativa.
-Sua missão é analisar a imagem de referência fornecida e gerar um tema visual personalizado para o aplicativo "English Autêntico".
+  PROMPT_BASE: `Você é um especialista sênior em Design de Interfaces (UI/UX), Acessibilidade Digital (WCAG AAA) e Arte Vetorial SVG Generativa.
+Sua missão é analisar a imagem de referência fornecida e gerar um tema visual altamente ergonômico, legível e elegante para o aplicativo "English Autêntico".
 
-DIRETRIZES DO TEMA:
-1. Extraia da imagem uma paleta refinada, equilibrando legibilidade e elegância.
-2. O fundo DEVE ser uma arte vetorial geométrica abstrata ("Vector flat design, complex overlapping geometric shapes, infinite scalability, sharp edges, clean lines, minimalist abstract composition").
-3. O SVG deve ser desenhado para repetição (tiling 400x400px), mas use rotações angulares internas (ex: 0°, 15°, 45°, -25°) e sobreposição de formas entre quadrantes para QUEBRAR a monotonia de um grid óbvio.
-4. Mantenha opacidades suaves nas formas de fundo (fill-opacity entre 0.08 e 0.25) para que o fundo nunca dispute a atenção com o texto principal do aplicativo.
+DIRETRIZES DE ERGONOMIA VISUAL E CORES (REGRA 60-30-10):
+1. Adaptação Harmônica (Não extraia cores cruas): Analise a atmosfera da imagem, mas ADAPTE as cores para uma interface de leitura prolongada (Dark UI).
+2. Fundos Silenciosos (60%): "background" e "surface" DEVEM ser extremamente escuros e dessaturados (luminosidade entre 5% e 14%). "surface" deve ser levemente mais claro que "background" para destacar os cards sem esforço visual.
+3. Legibilidade Absoluta: "textPrimary" deve ser um branco suave (luminosidade > 92%, baixa saturação) garantindo contraste mínimo de 12:1 contra o fundo. "textSecondary" deve ser um tom neutro acinzentado/bege claro (luminosidade entre 70% e 80%), nunca uma cor forte que canse a vista.
+4. Destaques Controlados (30% e 10%): Use as cores mais marcantes da imagem apenas em "brandPrimary" e "accentGold" (ajustando o brilho para que fiquem elegantes e não "neon"). "surfaceBorder" deve ser sutil, com opacidade entre 0.12 e 0.20.
+
+DIRETRIZES DO PADRÃO SVG (ZERO POLUIÇÃO VISUAL):
+1. O fundo DEVE ser uma composição geométrica abstrata minimalista de baixo ruído visual ("Minimalist architectural geometry, large sweeping shapes, soft depth, clean lines, calm visual rhythm").
+2. Desenhe para repetição (tiling 400x400px) usando apenas de 3 a 5 formas amplas com rotações suaves (ex: 15°, -20°, 35°) para evitar um grid marcado sem criar caos visual.
+3. PROIBIDO usar cores vibrantes ou "accentGold" no SVG. Utilize EXCLUSIVAMENTE "brandSecondary", "brandPrimary" ou "surface" nas formas do fundo.
+4. Opacidade Ultra-Suave: Mantenha "fill-opacity" ou "stop-opacity" ESTRITAMENTE entre 0.02 e 0.07. O padrão deve agir como uma marca d'água sutil de luxo, nunca disputando atenção com a tipografia.
 
 REGRAS DE FORMATAÇÃO E SEGURANÇA (OBRIGATÓRIO):
 - Retorne EXCLUSIVAMENTE um bloco de código JSON válido.
@@ -28,20 +34,20 @@ ESTRUTURA DO JSON RETORNADO:
 {
   "themeName": "Nome Curto do Tema",
   "colors": {
-    "background": "#0D1B2A",
-    "surface": "#1B263B",
-    "surfaceBorder": "rgba(212, 168, 67, 0.35)",
+    "background": "#0B1116",
+    "surface": "#131C24",
+    "surfaceBorder": "rgba(148, 163, 184, 0.15)",
     "textPrimary": "#F8FAFC",
     "textSecondary": "#CBD5E1",
-    "brandPrimary": "#00509D",
-    "brandSecondary": "#002855",
+    "brandPrimary": "#2563EB",
+    "brandSecondary": "#1E3A8A",
     "accentGold": "#D4A843",
-    "badgeBg": "rgba(212, 168, 67, 0.18)"
+    "badgeBg": "rgba(212, 168, 67, 0.15)"
   },
   "backgroundPattern": {
     "tileWidth": 400,
     "tileHeight": 400,
-    "svgContent": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='400' height='400'><defs><linearGradient id='g1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#00509D' stop-opacity='0.2'/><stop offset='100%' stop-color='#D4A843' stop-opacity='0.08'/></linearGradient></defs><g><polygon points='0,0 200,0 120,200' fill='url(#g1)'/><polygon points='200,0 400,80 320,260 160,180' fill='#00509D' fill-opacity='0.12' transform='rotate(15 280 130)'/><polygon points='0,200 180,240 80,400' fill='#D4A843' fill-opacity='0.15' transform='rotate(-20 90 300)'/><polygon points='200,200 400,160 380,400 180,360' fill='url(#g1)' transform='rotate(40 290 280)'/></g></svg>"
+    "svgContent": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='400' height='400'><defs><linearGradient id='g1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#2563EB' stop-opacity='0.06'/><stop offset='100%' stop-color='#1E3A8A' stop-opacity='0.02'/></linearGradient></defs><g><polygon points='0,0 240,0 140,240' fill='url(#g1)'/><polygon points='180,40 400,100 320,300 140,200' fill='#1E3A8A' fill-opacity='0.04' transform='rotate(15 270 170)'/><circle cx='100' cy='300' r='90' fill='#2563EB' fill-opacity='0.03'/><polygon points='200,200 400,180 380,400 180,360' fill='url(#g1)' transform='rotate(25 290 290)'/></g></svg>"
   }
 }
 \`\`\``,
