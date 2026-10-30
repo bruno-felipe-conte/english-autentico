@@ -134,4 +134,21 @@ test('Gaveta Retrátil nos Flashcards: Alternância e Recolhimento Automático',
     assert.strictEqual(elements['fc-compact-bar'].style.display, 'flex');
     assert.ok(elements['fc-compact-origem'].textContent.includes('T1'));
   });
+
+  await t.test('4. Estilização dos Flashcards adota azul marinho (#003E8A) e elimina tons vermelhos italianos', () => {
+    const fs = require('fs');
+    const path = require('path');
+    const cssPath = path.join(__dirname, '..', 'css', 'english.css');
+    const cssContent = fs.readFileSync(cssPath, 'utf8');
+
+    // Validação de ausência de tons vermelho vinho italiano nos flashcards
+    const forbiddenItalianReds = ['#A8283B', '#751422', '#4A0B14', '#8B1E2F', '#7A1926', '#5C101D', '#C4304A'];
+    for (const red of forbiddenItalianReds) {
+      assert.strictEqual(cssContent.includes(red), false, `O CSS não deve conter a cor vermelha italiana ${red}`);
+    }
+
+    // Validação de presença do azul marinho nos flashcards
+    assert.ok(cssContent.includes('.flashcard-deck-stack .card-frente'), 'Deve conter estilização de frente do deck stack');
+    assert.ok(cssContent.includes('#003E8A'), 'Deve conter o azul marinho característico (#003E8A)');
+  });
 });
