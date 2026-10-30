@@ -447,12 +447,16 @@ const Songs = {
     this.tocandoKaraoke = false;
     if (this._timerKaraoke) {
       clearInterval(this._timerKaraoke);
+      cancelAnimationFrame(this._timerKaraoke);
       this._timerKaraoke = null;
     }
     if (this._clozeVirtualTimer) {
       clearInterval(this._clozeVirtualTimer);
+      cancelAnimationFrame(this._clozeVirtualTimer);
       this._clozeVirtualTimer = null;
     }
+    this._clozeTtsActive = false;
+    this._clozeWaitingForAnswer = false;
     if (this._clozeRafId) {
       cancelAnimationFrame(this._clozeRafId);
       this._clozeRafId = null;
@@ -591,18 +595,6 @@ const Songs = {
     }
     const wordSpans = verseEl ? Array.from(verseEl.querySelectorAll('.can-word')) : [];
 
-    // Calcula limites de caracteres por palavra para mapear onboundary(charIndex)
-    const limites = [];
-    let cursor = 0;
-    wordSpans.forEach((span, wIdx) => {
-      const wText = span.dataset.raw || span.textContent || '';
-      const pos = texto.indexOf(wText, cursor);
-      const start = pos >= 0 ? pos : cursor;
-      const end = start + wText.length;
-      cursor = end;
-      limites.push({ start, end, span, wIdx });
-    });
-
     const destacarPalavra = (wIdx) => {
       wordSpans.forEach((s, i) => {
         if (i === wIdx) s.classList.add('can-word-speaking');
@@ -610,43 +602,32 @@ const Songs = {
       });
     };
 
-    let boundaryAtivo = false;
-    let palavraCursor = 0;
+    const rate = this.velocidadeAudio || 0.85;
+    let accumulatedMs = 0;
+    const wordSchedule = wordSpans.map((span, wIdx) => {
+      const wText = span.dataset.raw || span.textContent || '';
+      const durMs = Math.max(220, Math.round((120 + wText.length * 55) / rate));
+      const startMs = accumulatedMs;
+      const endMs = startMs + durMs;
+      accumulatedMs = endMs;
+      return { wIdx, span, startMs, endMs, wText };
+    });
 
-    // Fallback progressivo por timer (caso o navegador não dispare onboundary em vozes remotas)
-    const duracaoPorPalavraMs = Math.max(280, Math.round(420 / (this.velocidadeAudio || 0.85)));
     if (wordSpans.length > 0) {
       destacarPalavra(0);
     }
-    this._timerKaraoke = setInterval(() => {
-      if (!this.tocandoKaraoke) {
-        clearInterval(this._timerKaraoke);
-        this._timerKaraoke = null;
-        return;
-      }
-      if (!boundaryAtivo && wordSpans.length > 0) {
-        palavraCursor++;
-        if (palavraCursor < wordSpans.length) {
-          destacarPalavra(palavraCursor);
-        }
-      }
-    }, duracaoPorPalavraMs);
 
     if (!('speechSynthesis' in window)) {
       setTimeout(() => {
         this.pararAudio();
         if (aoTerminar) aoTerminar();
-      }, wordSpans.length * duracaoPorPalavraMs + 400);
+      }, accumulatedMs + 400);
       return;
     }
 
-    const textoNormalizado = (typeof VoiceEngine !== 'undefined')
-      ? VoiceEngine.normalizarParaFala(texto)
-      : texto;
-
-    const u = new SpeechSynthesisUtterance(textoNormalizado);
+    const u = new SpeechSynthesisUtterance(texto);
     u.lang = 'en-US';
-    u.rate = this.velocidadeAudio || 0.85;
+    u.rate = rate;
 
     let voz = (typeof VoiceEngine !== 'undefined') ? (VoiceEngine.getSelectedVoice ? VoiceEngine.getSelectedVoice() : VoiceEngine.obterVozSelecionada()) : null;
     if (!voz && typeof App !== 'undefined') {
@@ -655,17 +636,42 @@ const Songs = {
     if (voz) u.voice = voz;
 
     window._activeUtterance = u;
+    let speechStartMs = null;
 
     u.onboundary = (ev) => {
       if (ev.name === 'word' || typeof ev.charIndex === 'number') {
-        boundaryAtivo = true;
         const cIdx = ev.charIndex;
-        const item = limites.find(l => cIdx >= l.start - 1 && cIdx <= l.end + 1)
-                  || limites.find(l => l.start >= cIdx);
-        if (item) {
-          destacarPalavra(item.wIdx);
+        let accChar = 0;
+        for (let i = 0; i < wordSchedule.length; i++) {
+          const item = wordSchedule[i];
+          if (cIdx >= accChar && cIdx <= accChar + item.wText.length + 1) {
+            destacarPalavra(item.wIdx);
+            if (speechStartMs !== null) {
+              speechStartMs = performance.now() - item.startMs;
+            }
+            break;
+          }
+          accChar += item.wText.length + 1;
         }
       }
+    };
+
+    const tickerLoop = () => {
+      if (!this.tocandoKaraoke) return;
+      if (speechStartMs !== null) {
+        const elapsed = performance.now() - speechStartMs;
+        const curItem = wordSchedule.find(item => elapsed >= item.startMs && elapsed < item.endMs);
+        if (curItem) {
+          destacarPalavra(curItem.wIdx);
+        }
+      }
+      this._timerKaraoke = requestAnimationFrame(tickerLoop);
+    };
+
+    u.onstart = () => {
+      speechStartMs = performance.now();
+      if (this._timerKaraoke) cancelAnimationFrame(this._timerKaraoke);
+      this._timerKaraoke = requestAnimationFrame(tickerLoop);
     };
 
     u.onend = () => {
@@ -673,7 +679,7 @@ const Songs = {
         window._activeUtterance = null;
       }
       if (this._timerKaraoke) {
-        clearInterval(this._timerKaraoke);
+        cancelAnimationFrame(this._timerKaraoke);
         this._timerKaraoke = null;
       }
       wordSpans.forEach(s => s.classList.remove('can-word-speaking'));
@@ -1378,23 +1384,25 @@ Each item in the list must be an object containing:
     return parsed;
   },
 
-  // Gera lacunas Cloze (via {{...}} ou automático com seleção inteligente)
+  // Gera lacunas Cloze com sincronização por palavra mesmo sem arquivo de áudio (Word-by-Word Sync)
   _processarVersosParaCloze(parsedVerses, densidade = 'padrao') {
     const stopwords = new Set([
+      'the','a','an','and','or','but','in','on','at','to','for','of','with','by',
+      'from','up','about','into','over','after','is','are','was','were','be','been',
+      'being','have','has','had','do','does','did','i','you','he','she','it','we',
+      'they','me','him','her','us','them','my','your','his','its','our','their',
+      'that','this','these','those','what','which','who','whom','whose',
       'il','lo','la','i','gli','le','un','uno','una',"un'",
       'e','ed','o','od','ma','se','non','che','chi','cui',
-      'di','a','da','in','con','su','per','tra','fra',
-      'del','dello','della','dei','degli','delle',
-      'al','allo','alla','ai','agli','alle',
-      'dal','dallo','dalla','dai','dagli','dalle',
-      'nel','nello','nella','nei','negli','nelle',
-      'sul','sullo','sulla','sui','sugli','sulle',
-      'mi','ti','si','ci','vi','me','te','lui','lei','noi','voi','loro'
+      'di','a','da','in','con','su','per','tra','fra'
     ]);
 
     const clozeItems = [];
     const wordBankWords = [];
     let blankCounter = 0;
+    const rate = this._clozePlaybackRate || 0.85;
+
+    let globalTimelineSec = 0;
 
     for (let i = 0; i < parsedVerses.length; i++) {
       const v = parsedVerses[i];
@@ -1409,8 +1417,8 @@ Each item in the list must be an object containing:
       }
 
       const cleanLine = rawText.replace(/\{\{([^}]+)\}\}/g, '$1');
-      const parts = cleanLine.split(/([A-Za-zÀ-ÖØ-öø-ÿ]+(?:'[A-Za-zÀ-ÖØ-öø-ÿ]+)?)/g);
-      const wordsInLine = parts.filter(p => /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:'[A-Za-zÀ-ÖØ-öø-ÿ]+)?$/.test(p));
+      const parts = cleanLine.split(/([A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:'[A-Za-zÀ-ÖØ-öø-ÿ0-9]+)?)/g);
+      const wordsInLine = parts.filter(p => /^[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:'[A-Za-zÀ-ÖØ-öø-ÿ0-9]+)?$/.test(p));
       let chosenWord = customWord;
 
       if (!chosenWord && wordsInLine.length > 0) {
@@ -1428,41 +1436,68 @@ Each item in the list must be an object containing:
       let blankObj = null;
       const tokens = [];
 
+      // Sincronização calculada da linha
+      const verseStartTime = (v.startTime !== undefined && v.startTime > 0) ? v.startTime : globalTimelineSec;
+      let lineCursorSec = verseStartTime;
+
       let wordIndex = 0;
       for (const part of parts) {
-        if (/^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:'[A-Za-zÀ-ÖØ-öø-ÿ]+)?$/.test(part)) {
+        if (/^[A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:'[A-Za-zÀ-ÖØ-öø-ÿ0-9]+)?$/.test(part)) {
+          const wLen = part.length;
+          // Duração acústica estimada em segundos
+          const wDur = Math.max(0.24, Math.min(0.85, 0.12 + wLen * 0.055)) / rate;
+          const wTime = Math.round(lineCursorSec * 100) / 100;
+
           if (chosenWord && norm(part) === norm(chosenWord) && !blankObj) {
             const bId = `blank_${blankCounter++}`;
-            const totalW = Math.max(1, wordsInLine.length);
-            const ratio = Math.min(0.85, (wordIndex + 0.3) / totalW);
-            const pauseTime = v.startTime + (v.endTime - v.startTime) * ratio;
-
             blankObj = {
               blankId: bId,
               verseIdx: i,
               word: part,
-              pauseTime: pauseTime,
+              pauseTime: wTime,
               status: 'blurred',
               attempts: 0,
               firstTry: true
             };
-            tokens.push({ text: part, isBlank: true, blankId: bId });
+            tokens.push({
+              text: part,
+              isBlank: true,
+              blankId: bId,
+              time: wTime,
+              duration: wDur
+            });
             wordBankWords.push(part);
           } else {
-            tokens.push({ text: part, isBlank: false });
+            tokens.push({
+              text: part,
+              isBlank: false,
+              time: wTime,
+              duration: wDur
+            });
           }
+          lineCursorSec += wDur;
           wordIndex++;
         } else if (part) {
-          tokens.push({ text: part, isBlank: false, isPunct: true });
+          // Pontuação ou espaço: adiciona pausa acústica natural
+          if (/[.!?]/.test(part)) {
+            lineCursorSec += 0.35 / rate;
+          } else if (/[,;:-]/.test(part)) {
+            lineCursorSec += 0.18 / rate;
+          }
+          tokens.push({ text: part, isBlank: false, isPunct: true, time: Math.round(lineCursorSec * 100) / 100 });
         }
       }
 
+      const verseEndTime = Math.max(lineCursorSec, (v.endTime || 0));
+      globalTimelineSec = verseEndTime + (0.45 / rate); // pausa musical entre versos
+
       clozeItems.push({
         idx: i,
-        startTime: v.startTime,
-        endTime: v.endTime,
+        startTime: verseStartTime,
+        endTime: verseEndTime,
         rawText: cleanLine,
         traducao: v.traducao || '',
+        hasWordTimings: true,
         tokens,
         blank: blankObj
       });
@@ -1728,6 +1763,8 @@ Each item in the list must be an object containing:
             const targetCls = isTarget ? ' is-target' : '';
             const timingAttr = t.time !== undefined ? ` data-time="${t.time}"` : '';
             lineHtml += `${prefix}<span class="cloze-blank ${cls}${targetCls}" id="${t.blankId}" data-word="${this._esc(t.text)}"${timingAttr}>${this._esc(t.text)}</span>${suffix} `;
+          } else if (t.isPunct) {
+            lineHtml += this._esc(t.text);
           } else {
             const timingAttr = t.time !== undefined ? ` data-time="${t.time}" id="cloze-token-${i}-${tIdx}"` : '';
             lineHtml += `${prefix}<span class="cloze-word-token"${timingAttr}>${this._esc(t.text)}</span>${suffix} `;
@@ -1926,8 +1963,21 @@ Each item in the list must be an object containing:
     } else {
       const items = this._clozeItems;
       const totalDur = items[items.length - 1]?.endTime || 60;
-      this._clozeVirtualTime = pos * totalDur;
-      this._onVirtualTimeUpdate(this._clozeVirtualTime, totalDur);
+      const targetTime = pos * totalDur;
+      this._clozeVirtualTime = targetTime;
+      let targetIdx = 0;
+      for (let i = 0; i < items.length; i++) {
+        if (targetTime >= items[i].startTime && targetTime < items[i].endTime) {
+          targetIdx = i;
+          break;
+        }
+      }
+      this._clozeActiveVerseIdx = targetIdx;
+      this._clozeWaitingForAnswer = false;
+      this._atualizarUIWaitingBanner(false);
+      this._clozeTtsActive = true;
+      this._atualizarBtnPlay(true);
+      this._tocarVersoTTSCloze(targetIdx, targetTime);
     }
   },
 
@@ -1939,7 +1989,12 @@ Each item in the list must be an object containing:
       if (this._audioReal.paused) this.togglePlayPauseCloze();
     } else {
       this._clozeVirtualTime = item.startTime;
-      this._speakVerseTTS(item);
+      this._clozeActiveVerseIdx = idx;
+      this._clozeWaitingForAnswer = false;
+      this._atualizarUIWaitingBanner(false);
+      this._clozeTtsActive = true;
+      this._atualizarBtnPlay(true);
+      this._tocarVersoTTSCloze(idx, item.startTime);
     }
   },
 
@@ -2247,80 +2302,212 @@ Each item in the list must be an object containing:
     `;
   },
 
-  // ── 8. FALLBACK SINCRONIZADO VIA TTS (Para Músicas sem MP3) ──
+  // ── 8. MOTOR DE SINCRONIA VOCAL EM TEMPO REAL (Músicas sem MP3) ──
   _toggleVirtualTTS() {
-    if (this._clozeVirtualTimer) {
-      clearInterval(this._clozeVirtualTimer);
-      this._clozeVirtualTimer = null;
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-      this._atualizarBtnPlay(false);
+    if (this._clozeVirtualTimer || this._clozeTtsActive) {
+      this._pausarTTSCloze();
     } else {
-      this._atualizarBtnPlay(true);
-      const items = this._clozeItems;
-      const totalDur = items[items.length - 1]?.endTime || 60;
-
-      this._clozeVirtualTimer = setInterval(() => {
-        if (this._clozeWaitingForAnswer) return;
-        this._clozeVirtualTime += 0.25;
-        this._onVirtualTimeUpdate(this._clozeVirtualTime, totalDur);
-      }, 250);
+      this._iniciarOuRetomarTTSCloze();
     }
   },
 
-  _onVirtualTimeUpdate(curTime, totalDur) {
+  _pausarTTSCloze() {
+    this._clozeTtsActive = false;
+    if (this._clozeVirtualTimer) {
+      cancelAnimationFrame(this._clozeVirtualTimer);
+      clearInterval(this._clozeVirtualTimer);
+      this._clozeVirtualTimer = null;
+    }
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    this._atualizarBtnPlay(false);
+  },
+
+  _iniciarOuRetomarTTSCloze() {
+    this._clozeWaitingForAnswer = false;
+    this._atualizarUIWaitingBanner(false);
+    this._clozeTtsActive = true;
+    this._atualizarBtnPlay(true);
+
+    const items = this._clozeItems;
+    if (!items || items.length === 0) return;
+
+    let vIdx = this._clozeActiveVerseIdx;
+    if (vIdx < 0 || vIdx >= items.length) {
+      vIdx = 0;
+      this._clozeVirtualTime = items[0].startTime;
+    }
+
+    this._tocarVersoTTSCloze(vIdx, this._clozeVirtualTime);
+  },
+
+  _tocarVersoTTSCloze(verseIdx, fromTime = null) {
+    if (!this._clozeTtsActive || this._clozeWaitingForAnswer) return;
+
+    const items = this._clozeItems;
+    if (verseIdx >= items.length) {
+      this._pausarTTSCloze();
+      const lastEnd = items[items.length - 1]?.endTime || this._clozeVirtualTime;
+      this._clozeVirtualTime = lastEnd;
+      this._atualizarBarraProgressoVirtual(lastEnd);
+      setTimeout(() => this.mostrarResultado(), 600);
+      return;
+    }
+
+    const item = items[verseIdx];
+    this._clozeActiveVerseIdx = verseIdx;
+    this._atualizarDestaqueVersos(verseIdx);
+
+    const vStart = item.startTime;
+    const vEnd = item.endTime;
+
+    // Posição de início dentro do verso
+    let resumeTime = (fromTime !== null && fromTime >= vStart && fromTime < vEnd) ? fromTime : vStart;
+    this._clozeVirtualTime = resumeTime;
+
+    // Tokens deste verso que ainda precisam ser falados
+    const tokensRestantes = (item.tokens || []).filter(t => !t.isPunct && t.text && (t.time >= (resumeTime - 0.05)));
+    const wordsToSpeak = tokensRestantes.map(t => t.text);
+    const textToSpeak = wordsToSpeak.length > 0 ? wordsToSpeak.join(' ') : item.rawText;
+
+    if (!textToSpeak.trim()) {
+      setTimeout(() => {
+        if (this._clozeTtsActive) this._tocarVersoTTSCloze(verseIdx + 1);
+      }, 400);
+      return;
+    }
+
+    if (!('speechSynthesis' in window)) {
+      App.notificar('SpeechSynthesis não suportado neste navegador.', 'alerta');
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+
+    const u = new SpeechSynthesisUtterance(textToSpeak);
+    u.lang = 'en-US';
+    u.rate = this._clozePlaybackRate || 0.85;
+
+    let voz = (typeof VoiceEngine !== 'undefined') ? (VoiceEngine.getSelectedVoice ? VoiceEngine.getSelectedVoice() : VoiceEngine.obterVozSelecionada?.()) : null;
+    if (!voz && typeof App !== 'undefined') {
+      voz = App._getVozAmericana ? App._getVozAmericana() : (App._getEnglishVoice ? App._getEnglishVoice() : null);
+    }
+    if (voz) u.voice = voz;
+
+    window._activeUtterance = u;
+    let speechStartTime = null;
+    const startVirtualTime = resumeTime;
+
+    // Evento onboundary para atualização imediata se a voz do navegador suportar
+    u.onboundary = (ev) => {
+      if (ev.name === 'word' || typeof ev.charIndex === 'number') {
+        const cIdx = ev.charIndex;
+        let acc = 0;
+        for (const tok of tokensRestantes) {
+          if (cIdx >= acc && cIdx <= acc + tok.text.length + 1) {
+            this._clozeVirtualTime = Math.max(this._clozeVirtualTime, tok.time || this._clozeVirtualTime);
+            this._atualizarDestaquePalavras(this._clozeVirtualTime, verseIdx);
+            break;
+          }
+          acc += tok.text.length + 1;
+        }
+      }
+    };
+
+    const frameLoop = () => {
+      if (!this._clozeTtsActive || this._clozeWaitingForAnswer) return;
+
+      if (speechStartTime !== null) {
+        const elapsed = (performance.now() - speechStartTime) / 1000;
+        const curTime = startVirtualTime + elapsed;
+        this._clozeVirtualTime = curTime;
+        this._atualizarBarraProgressoVirtual(curTime);
+        this._atualizarDestaquePalavras(curTime, verseIdx);
+
+        // Se encontrou a lacuna não respondida deste verso: pausa exatamente na palavra!
+        if (item.blank && item.blank.status === 'blurred') {
+          if (curTime >= (item.blank.pauseTime || 0)) {
+            this._clozeWaitingForAnswer = true;
+            if (this._clozeVirtualTimer) {
+              cancelAnimationFrame(this._clozeVirtualTimer);
+              this._clozeVirtualTimer = null;
+            }
+            window.speechSynthesis.cancel();
+            this._atualizarBtnPlay(false);
+            this._atualizarUIWaitingBanner(true, item.blank);
+            return;
+          }
+        }
+      }
+
+      this._clozeVirtualTimer = requestAnimationFrame(frameLoop);
+    };
+
+    u.onstart = () => {
+      speechStartTime = performance.now();
+      if (this._clozeVirtualTimer) cancelAnimationFrame(this._clozeVirtualTimer);
+      this._clozeVirtualTimer = requestAnimationFrame(frameLoop);
+    };
+
+    u.onend = () => {
+      if (window._activeUtterance === u) window._activeUtterance = null;
+      if (this._clozeVirtualTimer) {
+        cancelAnimationFrame(this._clozeVirtualTimer);
+        this._clozeVirtualTimer = null;
+      }
+      if (this._clozeWaitingForAnswer) return;
+
+      this._clozeVirtualTime = vEnd;
+      this._atualizarBarraProgressoVirtual(vEnd);
+      this._atualizarDestaquePalavras(vEnd + 0.1, verseIdx);
+
+      setTimeout(() => {
+        if (this._clozeTtsActive && !this._clozeWaitingForAnswer) {
+          this._tocarVersoTTSCloze(verseIdx + 1);
+        }
+      }, 400);
+    };
+
+    u.onerror = () => {
+      if (window._activeUtterance === u) window._activeUtterance = null;
+      if (this._clozeVirtualTimer) {
+        cancelAnimationFrame(this._clozeVirtualTimer);
+        this._clozeVirtualTimer = null;
+      }
+      if (this._clozeWaitingForAnswer) return;
+      if (this._clozeTtsActive) {
+        setTimeout(() => this._tocarVersoTTSCloze(verseIdx + 1), 300);
+      }
+    };
+
+    try {
+      window.speechSynthesis.speak(u);
+    } catch (_) {
+      this._pausarTTSCloze();
+    }
+  },
+
+  _atualizarBarraProgressoVirtual(curTime) {
+    const items = this._clozeItems;
+    const totalDur = items && items.length > 0 ? (items[items.length - 1]?.endTime || 60) : 60;
     const bar = document.getElementById('cloze-prog-bar');
     if (bar) bar.style.width = `${Math.min(100, (curTime / totalDur) * 100)}%`;
     const curSpan = document.getElementById('cloze-time-cur');
     if (curSpan) curSpan.textContent = this._formatarTempo(curTime);
-
-    const items = this._clozeItems;
-    let activeIdx = -1;
-    for (let i = 0; i < items.length; i++) {
-      if (curTime >= items[i].startTime && curTime < items[i].endTime) {
-        activeIdx = i;
-        break;
-      }
-    }
-    if (activeIdx !== -1 && activeIdx !== this._clozeActiveVerseIdx) {
-      this._clozeActiveVerseIdx = activeIdx;
-      this._atualizarDestaqueVersos(activeIdx);
-      this._speakVerseTTS(items[activeIdx]);
-    }
-
-    if (activeIdx !== -1) {
-      this._atualizarDestaquePalavras(curTime, activeIdx);
-    }
-
-    // Monitora lacunas pendentes
-    const pendingBlanks = items.map(it => it.blank).filter(b => b && b.status === 'blurred');
-    if (pendingBlanks.length > 0) {
-      const target = pendingBlanks[0];
-      if (curTime >= target.pauseTime && !this._clozeWaitingForAnswer) {
-        this._clozeWaitingForAnswer = true;
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-        this._atualizarBtnPlay(false);
-        this._atualizarUIWaitingBanner(true, target);
-      }
-    }
-  },
-
-  _speakVerseTTS(item) {
-    if (!('speechSynthesis' in window) || !item) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(item.rawText);
-    u.lang = 'en-US';
-    u.rate = this._clozePlaybackRate || 0.85;
-    if (typeof App !== 'undefined' && (App._englishVoice || App._vozItaliana)) {
-      u.voice = App._englishVoice || App._vozItaliana;
-    }
-    window.speechSynthesis.speak(u);
   },
 
   _continuarTTSAposAcerto() {
+    this._clozeWaitingForAnswer = false;
+    this._atualizarUIWaitingBanner(false);
+    this._clozeTtsActive = true;
     this._atualizarBtnPlay(true);
+
     const activeItem = this._clozeItems[this._clozeActiveVerseIdx];
     if (activeItem) {
-      this._speakVerseTTS(activeItem);
+      const resumeTime = (activeItem.blank?.pauseTime || this._clozeVirtualTime) + 0.25;
+      this._tocarVersoTTSCloze(this._clozeActiveVerseIdx, resumeTime);
     }
   },
 

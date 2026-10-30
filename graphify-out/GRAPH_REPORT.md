@@ -1,17 +1,17 @@
-# Graph Report - english-autentico  (2026-10-29)
+# Graph Report - english-autentico  (2026-10-30)
 
 ## Corpus Check
-- 233 files · ~1,231,836 words
+- 234 files · ~1,232,953 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1236 nodes · 1352 edges · 147 communities (77 shown, 70 thin omitted)
+- 1239 nodes · 1356 edges · 138 communities (68 shown, 70 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `adcb9821`
+- Built from commit: `f7a6fe71`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -45,7 +45,6 @@
 - Ações de Médio Prazo (1–4 semanas)
 - PDCA_GRAMATICA_BRAINSTORM.md
 - Canonical AI Content Generation Prompts Guide
-- flashcards_drawer.test.js
 - SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)
 - 1. O Padrão Ouro Científico (Estado da Arte)
 - Checklist de Auditoria Completa — English Autentico PWA
@@ -57,16 +56,8 @@
 - ref_http
 - Abas e seus parâmetros
 - ═══════════════════════════════════════════════════════════════
-- 4.1 ROADMAP DE IMPLEMENTAÇÃO
-- 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS
-- mobile_microphone.test.js
-- 2.1 QUICK WINS IMPLEMENTADOS
-- 2.2 MELHORIAS MÉDIAS (Próximos Sprints)
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
-- phrasal_verbs.test.js
-- ═══════════════════════════════════════════════════════════════
 - scripts
-- ═══════════════════════════════════════════════════════════════
 - 🧪 TESTING PROTOCOL - ItalianLearningApp
 - 1️⃣ UNIT TESTS PER TEMPLE
 - devDependencies
@@ -191,7 +182,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (147 total, 70 thin omitted)
+## Communities (138 total, 70 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -242,14 +233,14 @@ Cohesion: 0.06
 Nodes (31): App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR / CRIAR, Conceito, Conceito, Conceito, Conceito, CSS, CSS — Estilo dos Diálogos (+23 more)
 
 ### Community 15 - "ebbinghaus.test.js"
-Cohesion: 0.38
-Nodes (8): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), assert, {
+Cohesion: 0.10
+Nodes (18): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), assert, {
   EBBINGHAUS_I18N,
   predictNextStabilityGood,
   formatDaysLabel,
   computeEbbinghausCurve,
   renderEbbinghausCurve
-}, test
+}, test (+10 more)
 
 ### Community 17 - "ref_path"
 Cohesion: 0.06
@@ -286,10 +277,6 @@ Nodes (4): 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · Engl
 ### Community 28 - "Canonical AI Content Generation Prompts Guide"
 Cohesion: 0.11
 Nodes (17): 1. Module: 💬 Dialogues (Situational Dialogues), 2. Module: 🎵 Songs (Karaoke Cloze Player), 3. Module: 📖 Stories (3D Antique Book Reader), 4. Module: 🗣️ Pronunciation (Dojo & Speech Recognition), 5. Module: 🃏 Vocabulary & Flashcards, Canonical AI Content Generation Prompts Guide, Data Structure (`data/dialogues.json` & `en_dialogues_custom`), Data Structure (`data/pronunciation.json` & `en_pronunciation_custom`) (+9 more)
-
-### Community 29 - "flashcards_drawer.test.js"
-Cohesion: 0.18
-Nodes (4): assert, MockClassList, MockElement, test
 
 ### Community 30 - "SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)"
 Cohesion: 0.11
@@ -332,48 +319,16 @@ Cohesion: 0.17
 Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repeat (Imitação), Aba: Músicas, Aba: Perfil, Aba: Templos (Vocabulário Temático), Abas e seus parâmetros (+3 more)
 
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.17
-Nodes (12): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, English Learning App Pro — Brainstorm Multi-Perspectiva com Melhoria Contínua, FASE 1 — PLANEJAR (Plan), FASE 2 — FAZER (Do) (+4 more)
-
-### Community 41 - "4.1 ROADMAP DE IMPLEMENTAÇÃO"
-Cohesion: 0.18
-Nodes (11): ═══════════════════════════════════════════════════════════════, 4.1 ROADMAP DE IMPLEMENTAÇÃO, 4.2 CICLO DE MELHORIA CONTÍNUA, 4.3 RISCOS E MITIGAÇÕES, Revisão Mensal:, Revisão Semanal:, Revisão Trimestral:, SPRINT 1 (Feito) — Quick Wins (+3 more)
-
-### Community 42 - "1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS"
-Cohesion: 0.22
-Nodes (9): ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, Arquitetura da Aba de Quiz:, 🟡 DESENVOLVEDOR FRONTEND (15 problemas):, 🟢 LINGUISTA APLICADO (12 problemas):, 🔴 PRODUCT MANAGER (12 problemas): (+1 more)
-
-### Community 43 - "mobile_microphone.test.js"
-Cohesion: 0.25
-Nodes (4): assert, fs, path, test
-
-### Community 44 - "2.1 QUICK WINS IMPLEMENTADOS"
-Cohesion: 0.29
-Nodes (7): 2.1 QUICK WINS IMPLEMENTADOS, QW-1: Bug i18n Fix ✅, QW-2: Timer Visual ✅, QW-3: Auto-Advance ✅, QW-4: Acessibilidade ARIA ✅, QW-5: Feedback Explicativo Melhorado ✅, QW-6: Sanitização XSS ✅
-
-### Community 45 - "2.2 MELHORIAS MÉDIAS (Próximos Sprints)"
-Cohesion: 0.33
-Nodes (6): ═══════════════════════════════════════════════════════════════, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), M-1: Empty States, M-2: Onboarding Contextual, M-3: Ordenação Inteligente no Seletor, M-4: prefers-reduced-motion
+Cohesion: 0.05
+Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
-Cohesion: 0.18
-Nodes (11): 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico, G-4: Dificuldade Adaptativa, G-5: Modo "Revisar Erros", G-6: Quiz Streak + Chain Visual (+3 more)
-
-### Community 47 - "phrasal_verbs.test.js"
-Cohesion: 0.33
-Nodes (4): assert, fs, path, test
-
-### Community 48 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.40
-Nodes (5): ═══════════════════════════════════════════════════════════════, 3.1 MÉTRICAS DE SUCESSO (KPIs), 3.2 VALIDAÇÃO CRUZADA, Melhorias com CONFLITO:, Melhorias validadas por TODAS as 4 perspectivas:
+Cohesion: 0.08
+Nodes (24): ═══════════════════════════════════════════════════════════════, 2.1 QUICK WINS IMPLEMENTADOS, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico (+16 more)
 
 ### Community 49 - "scripts"
 Cohesion: 0.50
 Nodes (4): scripts, test, test:e2e, test:ui
-
-### Community 50 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.50
-Nodes (4): ═══════════════════════════════════════════════════════════════, Nota por Dimensão:, Top 5 Problemas Mais Críticos:, Top 5 Quick Wins (implementados):
 
 ### Community 51 - "🧪 TESTING PROTOCOL - ItalianLearningApp"
 Cohesion: 0.09
@@ -488,8 +443,8 @@ Cohesion: 0.50
 Nodes (3): pending, send(), ws
 
 ### Community 183 - "security.test.js"
-Cohesion: 0.09
-Nodes (9): ErrorBoundary, Grammatica, Quiz, Sanitize, VoiceEngine, assert, ErrorBoundary, Sanitize (+1 more)
+Cohesion: 0.06
+Nodes (13): ErrorBoundary, Grammatica, Quiz, Sanitize, VoiceEngine, assert, MockClassList, MockElement (+5 more)
 
 ### Community 195 - "vocab.js"
 Cohesion: 0.10
@@ -509,14 +464,14 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 804 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 806 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **70 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `@playwright/test` connect `@playwright/test` to `tour.spec.js`, `package.json`, `computer_use_verification.spec.js`, `stage1_acceptance.spec.js`, `stage2_acceptance.spec.js`, `offline.spec.js`, `sidebar_interaction.spec.js`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `http-server` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PDCA_TEMPLOS.md` be split into smaller, more focused modules?**

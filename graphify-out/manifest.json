@@ -414,9 +414,9 @@
     "semantic_hash": ""
   },
   "js/dialogues.js": {
-    "mtime": 1793045526.2879426,
-    "seen": 1793046131.25061,
-    "ast_hash": "c3276f28952b1c1a4ac449db02ce2643",
+    "mtime": 1793375139.8758795,
+    "seen": 1793375275.9662068,
+    "ast_hash": "fb7104ac5c9e3aa0f766c5ec40d3f618",
     "semantic_hash": ""
   },
   "js/error-boundary.js": {
@@ -498,9 +498,9 @@
     "semantic_hash": ""
   },
   "js/songs.js": {
-    "mtime": 1792535614.5877168,
-    "seen": 1792536149.7078695,
-    "ast_hash": "d9fd4cb907bf35f1740fd8ac3d0c4d66",
+    "mtime": 1793376567.5211122,
+    "seen": 1793376717.941958,
+    "ast_hash": "e39824ef31cbc1c5b74b3f8f161d85bf",
     "semantic_hash": ""
   },
   "js/stories.js": {
@@ -534,9 +534,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1793307975.3432746,
-    "seen": 1793311579.0969539,
-    "ast_hash": "1ec17d22085c185836dcf7d0608772e4",
+    "mtime": 1793376642.1673331,
+    "seen": 1793376718.006461,
+    "ast_hash": "a272d4a29e20cec767d10959a242e25b",
     "semantic_hash": ""
   },
   "playwright.config.js": {
@@ -1773,6 +1773,12 @@
     "mtime": 1793307961.1347418,
     "seen": 1793311579.4156337,
     "ast_hash": "fc3954742f4bf17e3eef2e23d5757d2e",
+    "semantic_hash": ""
+  },
+  "tests/songs_sync.test.js": {
+    "mtime": 1793376603.0694141,
+    "seen": 1793376718.908386,
+    "ast_hash": "10a8b43fde1749eeea63c508baac5f32",
     "semantic_hash": ""
   }
 }
