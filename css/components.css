@@ -3185,25 +3185,33 @@
       .gram-teoria-corpo table, .gram-table { font-size: 0.82rem; }
       .gram-table th, .gram-table td { padding: 0.4rem 0.6rem; }
       .gram-lezioni-grid { grid-template-columns: 1fr 1fr; }
-    }    /* ── Dialogues / Dialoghi ── */
+    }    /* ── Dialogues & Songs Grid (4 Colunas Desktop) ── */
+    #sec-songs .dialogo-grid,
+    #sec-canzoni .dialogo-grid,
     .dialogo-grid, .dialogue-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr) !important;
       gap: 1.1rem;
     }
     @media (max-width: 992px) {
+      #sec-songs .dialogo-grid,
+      #sec-canzoni .dialogo-grid,
       .dialogo-grid, .dialogue-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.85rem;
       }
     }
     @media (max-width: 480px) {
+      #sec-songs .dialogo-grid,
+      #sec-canzoni .dialogo-grid,
       .dialogo-grid, .dialogue-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.6rem;
       }
     }
     @media (max-width: 340px) {
+      #sec-songs .dialogo-grid,
+      #sec-canzoni .dialogo-grid,
       .dialogo-grid, .dialogue-grid {
         grid-template-columns: 1fr !important;
         gap: 0.5rem;
@@ -3223,6 +3231,11 @@
       align-items: center;
       justify-content: space-between;
       min-height: 145px;
+    }
+    #sec-songs .dialogo-card,
+    #sec-canzoni .dialogo-card {
+      min-height: 165px;
+      justify-content: space-between;
     }
     .dialogo-card:hover, .dialogue-card:hover { transform: translateY(-3px); border-color: var(--cor-toscano); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
     .dialogo-icone, .dialogue-icone { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }

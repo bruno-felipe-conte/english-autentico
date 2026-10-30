@@ -2391,6 +2391,20 @@ document.addEventListener('i18n:changed', () => {
   if ((document.getElementById('songs-container') || document.getElementById('canzoni-container'))) Songs.renderizarSeletor();
 });
 
+if (typeof document !== 'undefined') {
+  const initSongs = () => {
+    const sec = document.getElementById('sec-songs') || document.getElementById('sec-canzoni');
+    const c = document.getElementById('songs-container') || document.getElementById('canzoni-container');
+    if (sec && (sec.classList.contains('active') || window.location.hash.includes('song') || window.location.hash.includes('canzon')) && c) {
+      Songs.renderizarSeletor();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSongs);
+  } else {
+    initSongs();
+  }
+}
 
 // Backward-compatibility aliases
 Songs.todasCanzoni = () => Songs.allSongs();
