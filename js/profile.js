@@ -199,6 +199,9 @@ const Profile = {
           </div>
         </div>
 
+        <!-- Personalização de Aparência & Arte Vetorial IA -->
+        ${(typeof ThemeStudio !== 'undefined' && typeof ThemeStudio.renderCard === 'function') ? ThemeStudio.renderCard() : ''}
+
       </div>`;
 
     // Render conquistas badges

@@ -1,17 +1,17 @@
 # Graph Report - english-autentico  (2026-10-30)
 
 ## Corpus Check
-- 235 files · ~1,233,468 words
+- 237 files · ~1,236,043 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 12 file(s) not represented in the graph (top: .css 10, (none) 1, .webmanifest 1)
+- Unclassified: 13 file(s) not represented in the graph (top: .css 11, (none) 1, .webmanifest 1)
 
 ## Summary
-- 1247 nodes · 1368 edges · 144 communities (74 shown, 70 thin omitted)
+- 1252 nodes · 1374 edges · 140 communities (70 shown, 70 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ba9223c1`
+- Built from commit: `8d434e36`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,7 +31,7 @@
 - @playwright/test
 - enrich_wave2_part2.mjs
 - SPEC — Método dos Famosos: 5 Novas Features
-- ebbinghaus.test.js
+- ref_node_test
 - enrich_wave3_part1.mjs
 - ref_path
 - Vozes dos Especialistas — Diagnóstico Individual
@@ -45,7 +45,7 @@
 - Ações de Médio Prazo (1–4 semanas)
 - PDCA_GRAMATICA_BRAINSTORM.md
 - Canonical AI Content Generation Prompts Guide
-- 4.1 ROADMAP DE IMPLEMENTAÇÃO
+- flashcards_drawer.test.js
 - SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)
 - 1. O Padrão Ouro Científico (Estado da Arte)
 - Checklist de Auditoria Completa — English Autentico PWA
@@ -57,11 +57,7 @@
 - ref_http
 - Abas e seus parâmetros
 - ═══════════════════════════════════════════════════════════════
-- 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS
-- 2.1 QUICK WINS IMPLEMENTADOS
-- 2.2 MELHORIAS MÉDIAS (Próximos Sprints)
-- ═══════════════════════════════════════════════════════════════
-- ═══════════════════════════════════════════════════════════════
+- ebbinghaus.test.js
 - 2.3 MELHORIAS GRANDES (Sprints 3-6)
 - scripts
 - 🧪 TESTING PROTOCOL - ItalianLearningApp
@@ -174,10 +170,10 @@
 10. `1️⃣ UNIT TESTS PER TEMPLE` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Arquitetura: Lazy Loading de Templos com base no `index.json`` --references--> `carregarDados()`  [INFERRED]
-  DOCUMENTACAO/PDCA_TEMPLOS.md → js/phrasal_verbs.js
 - `Audit Checklist for the LLM:` --references--> `init()`  [INFERRED]
   DOCUMENTACAO/LLM_AUDIO_AND_LANGUAGE_SYNC.md → js/phrasal_verbs.js
+- `Arquitetura: Lazy Loading de Templos com base no `index.json`` --references--> `carregarDados()`  [INFERRED]
+  DOCUMENTACAO/PDCA_TEMPLOS.md → js/phrasal_verbs.js
 - `Públicos (chamados do HTML):` --references--> `toggleDificeis()`  [INFERRED]
   VOCAB_PDCA_COMPLETO.md → js/vocab.js
 - `Públicos (chamados do HTML):` --references--> `toggleFavoritos()`  [INFERRED]
@@ -188,7 +184,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (144 total, 70 thin omitted)
+## Communities (140 total, 70 thin omitted)
 
 ### Community 0 - "inspect_grammar_cdp.mjs"
 Cohesion: 0.32
@@ -200,7 +196,7 @@ Nodes (7): data, wave4Part4Lessons, data, wave6Part1Lessons, data, wave7Part2Les
 
 ### Community 3 - "PDCA_TEMPLOS.md"
 Cohesion: 0.04
-Nodes (46): 1. AÇÕES IMEDIATAS (Até 1 semana), 1. Manter ou Traduzir a Chave `"italiano"` nos Arquivos JSON?, 2. A Senha de Bypass do Desenvolvedor (`2012`), 2. AÇÕES MÉDIAS (1 a 4 semanas), 3. AÇÕES ESTRUTURAIS (1 a 3 meses), ◉ ACT — PADRONIZAÇÃO, Ajuste A: Carga de Cidades americana correta (Desativar `TEMPLO_CIDADES` em favor dos dados do JSON), Ajuste B: Redação e inserção das descrições pedagógicas em falta (T11 ao T51) (+38 more)
+Nodes (44): 1. AÇÕES IMEDIATAS (Até 1 semana), 1. Manter ou Traduzir a Chave `"italiano"` nos Arquivos JSON?, 2. A Senha de Bypass do Desenvolvedor (`2012`), 2. AÇÕES MÉDIAS (1 a 4 semanas), ◉ ACT — PADRONIZAÇÃO, Ajuste A: Carga de Cidades americana correta (Desativar `TEMPLO_CIDADES` em favor dos dados do JSON), Ajuste B: Redação e inserção das descrições pedagógicas em falta (T11 ao T51), Ajuste C: Indicação Visual de Templo Recomendado ("Próximo Passo") (+36 more)
 
 ### Community 4 - "═══════════════════════════════════════════════════════════════"
 Cohesion: 0.05
@@ -238,19 +234,13 @@ Nodes (8): { defineConfig, devices }, @playwright/test, { test, expect }, { test
 Cohesion: 0.06
 Nodes (31): App: Italiano Autentico | Repo: bruno-felipe-conte/apprendimento-italiano, ARQUIVOS A MODIFICAR / CRIAR, Conceito, Conceito, Conceito, Conceito, CSS, CSS — Estilo dos Diálogos (+23 more)
 
-### Community 15 - "ebbinghaus.test.js"
-Cohesion: 0.07
-Nodes (21): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), assert, {
-  EBBINGHAUS_I18N,
-  predictNextStabilityGood,
-  formatDaysLabel,
-  computeEbbinghausCurve,
-  renderEbbinghausCurve
-}, test (+13 more)
+### Community 15 - "ref_node_test"
+Cohesion: 0.14
+Nodes (9): ThemeStudio, assert, fs, path, test, assert, { describe, it }, assert (+1 more)
 
 ### Community 17 - "ref_path"
-Cohesion: 0.06
-Nodes (24): main(), send(), main(), send(), main(), send(), outDir, artifactScreenshots (+16 more)
+Cohesion: 0.05
+Nodes (28): main(), send(), main(), send(), main(), send(), outDir, artifactScreenshots (+20 more)
 
 ### Community 18 - "Vozes dos Especialistas — Diagnóstico Individual"
 Cohesion: 0.29
@@ -284,9 +274,9 @@ Nodes (4): 💌 CARTA AO DESENVOLVEDOR, Ciclo PDCA — Aba de Gramática · Engl
 Cohesion: 0.11
 Nodes (17): 1. Module: 💬 Dialogues (Situational Dialogues), 2. Module: 🎵 Songs (Karaoke Cloze Player), 3. Module: 📖 Stories (3D Antique Book Reader), 4. Module: 🗣️ Pronunciation (Dojo & Speech Recognition), 5. Module: 🃏 Vocabulary & Flashcards, Canonical AI Content Generation Prompts Guide, Data Structure (`data/dialogues.json` & `en_dialogues_custom`), Data Structure (`data/pronunciation.json` & `en_pronunciation_custom`) (+9 more)
 
-### Community 29 - "4.1 ROADMAP DE IMPLEMENTAÇÃO"
-Cohesion: 0.18
-Nodes (11): ═══════════════════════════════════════════════════════════════, 4.1 ROADMAP DE IMPLEMENTAÇÃO, 4.2 CICLO DE MELHORIA CONTÍNUA, 4.3 RISCOS E MITIGAÇÕES, Revisão Mensal:, Revisão Semanal:, Revisão Trimestral:, SPRINT 1 (Feito) — Quick Wins (+3 more)
+### Community 29 - "flashcards_drawer.test.js"
+Cohesion: 0.20
+Nodes (4): assert, MockClassList, MockElement, test
 
 ### Community 30 - "SPEC — Conteúdo Criado pelo Usuário (Músicas e Diálogos)"
 Cohesion: 0.11
@@ -329,32 +319,22 @@ Cohesion: 0.17
 Nodes (11): Aba: Diálogos, Aba: Flashcards, Aba: Histórias, Aba: Listen & Repeat (Imitação), Aba: Músicas, Aba: Perfil, Aba: Templos (Vocabulário Temático), Abas e seus parâmetros (+3 more)
 
 ### Community 40 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.17
-Nodes (12): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, English Learning App Pro — Brainstorm Multi-Perspectiva com Melhoria Contínua, FASE 1 — PLANEJAR (Plan), FASE 2 — FAZER (Do) (+4 more)
+Cohesion: 0.05
+Nodes (41): ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, ═══════════════════════════════════════════════════════════════, ═══════════════════════════════════════════════════════════════ (+33 more)
 
-### Community 41 - "1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS"
-Cohesion: 0.22
-Nodes (9): ═══════════════════════════════════════════════════════════════, 1.1 ESTADO ATUAL — MAPEAMENTO COMPLETO, 1.2 CONSOLIDAÇÃO MULTI-PERSPECTIVA — 48 PROBLEMAS IDENTIFICADOS, 1.3 MATRIZ DE IMPACTO vs ESFORÇO, Arquitetura da Aba de Quiz:, 🟡 DESENVOLVEDOR FRONTEND (15 problemas):, 🟢 LINGUISTA APLICADO (12 problemas):, 🔴 PRODUCT MANAGER (12 problemas): (+1 more)
-
-### Community 42 - "2.1 QUICK WINS IMPLEMENTADOS"
-Cohesion: 0.29
-Nodes (7): 2.1 QUICK WINS IMPLEMENTADOS, QW-1: Bug i18n Fix ✅, QW-2: Timer Visual ✅, QW-3: Auto-Advance ✅, QW-4: Acessibilidade ARIA ✅, QW-5: Feedback Explicativo Melhorado ✅, QW-6: Sanitização XSS ✅
-
-### Community 43 - "2.2 MELHORIAS MÉDIAS (Próximos Sprints)"
-Cohesion: 0.33
-Nodes (6): ═══════════════════════════════════════════════════════════════, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), M-1: Empty States, M-2: Onboarding Contextual, M-3: Ordenação Inteligente no Seletor, M-4: prefers-reduced-motion
-
-### Community 44 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.40
-Nodes (5): ═══════════════════════════════════════════════════════════════, 3.1 MÉTRICAS DE SUCESSO (KPIs), 3.2 VALIDAÇÃO CRUZADA, Melhorias com CONFLITO:, Melhorias validadas por TODAS as 4 perspectivas:
-
-### Community 45 - "═══════════════════════════════════════════════════════════════"
-Cohesion: 0.50
-Nodes (4): ═══════════════════════════════════════════════════════════════, Nota por Dimensão:, Top 5 Problemas Mais Críticos:, Top 5 Quick Wins (implementados):
+### Community 41 - "ebbinghaus.test.js"
+Cohesion: 0.38
+Nodes (8): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), assert, {
+  EBBINGHAUS_I18N,
+  predictNextStabilityGood,
+  formatDaysLabel,
+  computeEbbinghausCurve,
+  renderEbbinghausCurve
+}, test
 
 ### Community 46 - "2.3 MELHORIAS GRANDES (Sprints 3-6)"
-Cohesion: 0.18
-Nodes (11): 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico, G-4: Dificuldade Adaptativa, G-5: Modo "Revisar Erros", G-6: Quiz Streak + Chain Visual (+3 more)
+Cohesion: 0.08
+Nodes (24): ═══════════════════════════════════════════════════════════════, 2.1 QUICK WINS IMPLEMENTADOS, 2.2 MELHORIAS MÉDIAS (Próximos Sprints), 2.3 MELHORIAS GRANDES (Sprints 3-6), G-10: Testes Automatizados, G-1: SRS para Perguntas Erradas, G-2: Output Produtivo (Fill the Gap), G-3: Pré-teste Diagnóstico (+16 more)
 
 ### Community 49 - "scripts"
 Cohesion: 0.50
@@ -397,8 +377,8 @@ Cohesion: 0.25
 Nodes (8): ⚔️ Ana Paula × Diego — Pedagogia vs. Gamificação, Debates Cruzados, Diagnóstico Consolidado, ⚔️ Fernanda × Roberto — Rigor Linguístico vs. Fluidez de UX, Hipótese Central, ⚔️ Marcus × Sofia — Teoria vs. Experiência Vivida, ◉ P L A N — DIAGNÓSTICO, Raiz dos Problemas (por ordem de impacto)
 
 ### Community 70 - "phrasal_verbs.js"
-Cohesion: 0.10
-Nodes (26): 1. UI Implementation (`js/profilo.js` or equivalent), 2. Audio Engine Integration (`js/core.js`), Audit Checklist for the LLM:, Feature Sync & Audit: Audio Speed & Language Toggle, Part 1: Implementing the Audio Speed Control, Part 2: Rigorous Audit of the Language Toggle (Immersion Mode), abrirMiniGame(), alternarExpandirTodos() (+18 more)
+Cohesion: 0.09
+Nodes (28): 1. UI Implementation (`js/profilo.js` or equivalent), 2. Audio Engine Integration (`js/core.js`), Audit Checklist for the LLM:, Feature Sync & Audit: Audio Speed & Language Toggle, Part 1: Implementing the Audio Speed Control, Part 2: Rigorous Audit of the Language Toggle (Immersion Mode), 3. AÇÕES ESTRUTURAIS (1 a 3 meses), Arquitetura: Lazy Loading de Templos com base no `index.json` (+20 more)
 
 ### Community 71 - "Feature Sync: AI Handoff Instructions"
 Cohesion: 0.29
@@ -473,8 +453,8 @@ Cohesion: 0.50
 Nodes (3): pending, send(), ws
 
 ### Community 183 - "security.test.js"
-Cohesion: 0.06
-Nodes (13): ErrorBoundary, Grammatica, Quiz, Sanitize, VoiceEngine, assert, MockClassList, MockElement (+5 more)
+Cohesion: 0.07
+Nodes (12): ErrorBoundary, Grammatica, Quiz, Sanitize, VoiceEngine, assert, Quiz, { test } (+4 more)
 
 ### Community 195 - "vocab.js"
 Cohesion: 0.10
@@ -494,20 +474,20 @@ Nodes (4): data, issues, layerStats, REQUIRED_LAYERS
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `http-server`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 813 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 816 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **70 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `@playwright/test` connect `@playwright/test` to `tour.spec.js`, `package.json`, `computer_use_verification.spec.js`, `stage1_acceptance.spec.js`, `stage2_acceptance.spec.js`, `offline.spec.js`, `sidebar_interaction.spec.js`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `http-server` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PDCA_TEMPLOS.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Why does `═══════════════════════════════════════════════════════════════` connect `═══════════════════════════════════════════════════════════════` to `vocab.js`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Should `═══════════════════════════════════════════════════════════════` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `PDCA_dialogos.md` be split into smaller, more focused modules?**
