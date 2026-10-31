@@ -15,4 +15,7 @@ test-results/
 __pycache__/
 *.pyc
 graphify-out/cache/
+.agents/
+TEST_INFRA.md
+TEST_READY.md
 

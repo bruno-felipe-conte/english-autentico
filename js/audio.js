@@ -20,15 +20,67 @@ const SomFeedback = {
     const salvo = localStorage.getItem('en_som');
     this.ativo = salvo !== '0' && salvo !== 'false';
     this._atualizarBotao();
+    this._initVisibility();
+    this._initInteraction();
+  },
+
+  _visibilityBound: false,
+  _initVisibility() {
+    if (this._visibilityBound) return;
+    if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+      this._visibilityBound = true;
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && this.ativo && this.__ctx && this.__ctx.state === 'suspended') {
+          if (typeof this.__ctx.resume === 'function') {
+            this.__ctx.resume().catch(() => {});
+          }
+        }
+      });
+    }
+  },
+
+  _interactionBound: false,
+  _initInteraction() {
+    if (this._interactionBound) return;
+    if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+      this._interactionBound = true;
+      const unlock = () => {
+        if (this.ativo && this.__ctx && this.__ctx.state === 'suspended') {
+          if (typeof this.__ctx.resume === 'function') {
+            this.__ctx.resume().catch(() => {});
+          }
+        }
+      };
+      window.addEventListener('click', unlock, { passive: true });
+      window.addEventListener('touchstart', unlock, { passive: true });
+      window.addEventListener('keydown', unlock, { passive: true });
+    }
+  },
+
+  resume() {
+    if (this.__ctx && this.__ctx.state === 'suspended' && typeof this.__ctx.resume === 'function') {
+      return this.__ctx.resume().catch(() => {});
+    }
+    return Promise.resolve();
   },
 
   toggle() {
     this.ativo = !this.ativo;
-    localStorage.setItem('en_som', this.ativo ? '1' : '0');
+    try {
+      localStorage.setItem('en_som', this.ativo ? '1' : '0');
+    } catch (_) {}
     this._atualizarBotao();
     // Ao mutar: para imediatamente qualquer fala em andamento
-    if (!this.ativo && 'speechSynthesis' in window) {
-      speechSynthesis.cancel();
+    if (!this.ativo) {
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        try { speechSynthesis.cancel(); } catch (_) {}
+      }
+      if (typeof AppTTS !== 'undefined' && typeof AppTTS.stop === 'function') {
+        try { AppTTS.stop(); } catch (_) {}
+      }
+      if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.parar === 'function') {
+        try { VoiceEngine.parar(); } catch (_) {}
+      }
     }
     if (typeof App !== 'undefined' && App.notificar) {
       App.notificar(this.ativo ? 'notif_sons_ativados' : 'notif_sons_desativados', 'alerta');
@@ -59,10 +111,18 @@ const SomFeedback = {
   },
 
   _ctx() {
+    this._initVisibility();
+    this._initInteraction();
     if (!this.__ctx) {
       try {
-        this.__ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) {
+          this.__ctx = new AudioCtx();
+        }
       } catch (_) { return null; }
+    }
+    if (this.__ctx && this.__ctx.state === 'suspended' && typeof this.__ctx.resume === 'function') {
+      this.__ctx.resume().catch(() => {});
     }
     return this.__ctx;
   },
@@ -71,6 +131,9 @@ const SomFeedback = {
     if (!this.ativo) return;
     const ctx = this._ctx();
     if (!ctx) return;
+    if (ctx.state === 'suspended' && typeof ctx.resume === 'function') {
+      ctx.resume().catch(() => {});
+    }
     try {
       const osc  = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -82,6 +145,19 @@ const SomFeedback = {
       gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + durMs / 1000);
       osc.start(ctx.currentTime);
       osc.stop(ctx.currentTime + durMs / 1000);
+
+      const cleanup = () => {
+        try {
+          osc.disconnect();
+          gain.disconnect();
+        } catch (_) {}
+      };
+      if (typeof osc.addEventListener === 'function') {
+        osc.addEventListener('ended', cleanup, { once: true });
+      } else {
+        osc.onended = cleanup;
+      }
+      setTimeout(cleanup, durMs + 50);
     } catch (_) {}
   },
 
@@ -107,3 +183,10 @@ const SomFeedback = {
     this._tocar(440, 40, 'sine', 0.1);
   },
 };
+
+if (typeof window !== 'undefined') {
+  window.SomFeedback = SomFeedback;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = SomFeedback;
+}

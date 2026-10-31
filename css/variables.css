@@ -27,8 +27,9 @@
   --cor-inchiostro:       #2E1B0E;
   --cor-inchiostro-claro: #6B4C3B;
   --cor-terracota:        #C0392B;
-  --cor-pietra:           #9E8F7F;
-  --cor-cielo:            #4A7FA5;
+  --cor-pietra:           #5C4D3E; /* Darkened for WCAG 2.1 AA (>= 4.5:1 against light bg) */
+  --cor-pietra-texto:     #5C4D3E;
+  --cor-cielo:            #386E94;
   --cor-verde-certo:      #3D7A4A;
   --cor-fogo:             #E65100;
 
@@ -64,14 +65,47 @@
   --trans-media:  .25s ease;
 }
 
-/* ── Dark Mode Tokens ── */
+/* ── Dark Mode Tokens (WCAG 2.1 AA Compliant) ── */
 body.dark-mode {
   --cor-pergaminho:       #161311;
   --cor-marmore:          #24201D;
   --cor-marmore-escuro:   #1E1A17;
-  --cor-veneziano:        #4A90E2;
-  --cor-veneziano-escuro: #357ABD;
+  --cor-veneziano:        #2870C4; /* Darker blue to achieve >= 4.5:1 with white text */
+  --cor-veneziano-escuro: #1B58A0;
   --cor-inchiostro:       #EDE5D8;
   --cor-inchiostro-claro: #B8A99A;
-  --cor-pietra:           #7D6F63;
+  --cor-pietra:           #A8988B; /* Higher contrast tone on dark bg (>= 5.7:1) */
+  --cor-pietra-texto:     #A8988B;
+}
+
+/* Button Contrast Hardening for WCAG 2.1 AA */
+body.dark-mode .btn-primario,
+body.dark-mode button.btn-primario {
+  background-color: var(--cor-veneziano);
+  color: #FFFFFF;
+}
+
+body.dark-mode .btn-secondario,
+body.dark-mode button.btn-secondario {
+  color: #85B8F2;
+  border-color: #85B8F2;
+}
+
+/* Secondary and helper text contrast enforcement (>= 4.5:1) */
+.card-info,
+.card-dica,
+.card-categoria,
+.empty-state-msg,
+.em-revisao,
+.resumo-lab {
+  color: var(--cor-pietra);
+}
+
+body.dark-mode .card-info,
+body.dark-mode .card-dica,
+body.dark-mode .card-categoria,
+body.dark-mode .empty-state-msg,
+body.dark-mode .em-revisao,
+body.dark-mode .resumo-lab {
+  color: var(--cor-pietra);
 }

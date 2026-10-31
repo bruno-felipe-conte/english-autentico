@@ -11,9 +11,26 @@ const StoriesPaginator = {
   _playPageTurnSound() {
     try {
       if (typeof window === 'undefined') return;
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
+      if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
+
+      let ctx = null;
+      if (typeof SomFeedback !== 'undefined' && typeof SomFeedback._ctx === 'function') {
+        ctx = SomFeedback._ctx();
+      } else if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.getAudioContext === 'function') {
+        ctx = VoiceEngine.getAudioContext();
+      } else {
+        if ((!this._sharedAudioCtx || this._sharedAudioCtx.state === 'closed') && typeof (window.AudioContext || window.webkitAudioContext) !== 'undefined') {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          this._sharedAudioCtx = new AudioCtx();
+        }
+        ctx = this._sharedAudioCtx;
+      }
+
+      if (!ctx) return;
+      if (ctx.state === 'suspended' && typeof ctx.resume === 'function') {
+        ctx.resume().catch(() => {});
+      }
+
       const dur = 0.22;
       const bufferSize = Math.floor(ctx.sampleRate * dur);
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
@@ -40,9 +57,22 @@ const StoriesPaginator = {
       filter.connect(gain);
       gain.connect(ctx.destination);
       noise.start();
-      setTimeout(() => {
-        try { ctx.close(); } catch (_) {}
-      }, dur * 1000 + 50);
+      try { noise.stop(ctx.currentTime + dur); } catch (_) {}
+
+      const cleanup = () => {
+        try {
+          noise.disconnect();
+          filter.disconnect();
+          gain.disconnect();
+        } catch (_) {}
+      };
+
+      if (typeof noise.addEventListener === 'function') {
+        noise.addEventListener('ended', cleanup, { once: true });
+      } else {
+        noise.onended = cleanup;
+      }
+      setTimeout(cleanup, dur * 1000 + 60);
     } catch (_) {}
   },
 

@@ -107,7 +107,7 @@
       </span>
     </button>
 
-    <nav class="nav-tabs">
+    <nav class="nav-tabs" aria-label="Navegação Principal">
       <button class="nav-tab ativa" data-section="temples" onclick="App.navegar('temples')" title="Temples"><span class="nav-tab-icon">🏛️</span><span class="nav-tab-label" data-i18n="top_nav_templi">Templi</span></button>
       <button class="nav-tab" data-section="dialogues" onclick="App.navegar('dialogues')" title="Dialogues"><span class="nav-tab-icon">💬</span><span class="nav-tab-label" data-i18n="top_nav_dialoghi">Dialoghi</span></button>
       <button class="nav-tab" data-section="songs" onclick="App.navegar('songs')" title="Songs"><span class="nav-tab-icon">🎵</span><span class="nav-tab-label" data-i18n="top_nav_canzoni">Canzoni</span></button>
@@ -265,7 +265,7 @@
           </aside>
 
           <!-- Coluna 2: Palco do Flashcard (Deck 3D, Ferramentas e FSRS) -->
-          <main class="fc-studio-stage">
+          <div role="region" aria-label="Flashcards Stage" class="fc-studio-stage">
             <!-- Deck Stack Wrapper (Tactile 3D Depth) -->
             <div class="flashcard-deck-stack" id="flashcard-deck-stack">
               <div class="deck-layer deck-layer-2" id="deck-layer-2"></div>
@@ -353,7 +353,7 @@
 
             <!-- Empty & Summary states -->
             <div class="empty-state" id="flashcard-vazio" style="display:none">
-              <div class="ornamento-italiano">Bravissimo!</div>
+              <div class="ornamento-ingles">Well Done!</div>
               <p class="empty-state-msg" data-i18n="fc_todas_estudadas">Todas as cartas estudadas hoje.</p>
               <p class="em-revisao" data-i18n="fc_volte_amanha">Volte amanhã para as próximas revisões.</p>
               <div class="empty-actions" style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
@@ -363,7 +363,7 @@
               </div>
             </div>
             <div id="flashcard-resumo" style="display:none"></div>
-          </main>
+          </div>
         </div>
       </div>
     </section>
@@ -398,8 +398,8 @@
           <span id="quiz-combo-badge" class="quiz-combo-badge" style="display:none"></span>
         </div>
         <div class="opcoes-grid" id="opcoes-grid"></div>
-        <div class="explicacao-container" id="explicacao-container" style="display:none">
-          <p id="quiz-explicacao"></p>
+        <div class="explicacao-container" id="explicacao-container" style="display:none" role="status" aria-live="polite">
+          <p id="quiz-explicacao" aria-live="polite"></p>
           <button class="btn-primario" onclick="Quiz.proximaPergunta()" data-i18n="quiz_continuar">Continuar →</button>
         </div>
       </div>
@@ -598,7 +598,7 @@
   </div>
 
   <!-- Bottom navigation for mobile -->
-  <nav class="bottom-nav" id="bottom-nav">
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navegação Rápida Inferior">
     <button class="nav-tab-btn ativa" data-section="temples" onclick="App.navegar('temples')" data-i18n="nav_inicio">🏛️<span>Início</span></button>
     <button class="nav-tab-btn" data-section="dialogues" onclick="App.navegar('dialogues')" data-i18n="nav_dialogos">💬<span>Diálogos</span></button>
     <button class="nav-tab-btn" data-section="songs" onclick="App.navegar('songs')" data-i18n="nav_canzoni">🎵<span>Músicas</span></button>

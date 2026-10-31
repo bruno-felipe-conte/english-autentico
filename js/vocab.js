@@ -1178,10 +1178,14 @@ var Vocab = window.Vocab = {
       this._vocabXP += 10;
     }
 
-    // Salvar no localStorage
-    try {
-      localStorage.setItem('en_flashcards', JSON.stringify(App.estado.flashcardData));
-    } catch (_) {}
+    // Salvar no localStorage (F9/F11: usa App.salvarFlashcards para GC e backup)
+    if (typeof App !== 'undefined' && typeof App.salvarFlashcards === 'function') {
+      App.salvarFlashcards();
+    } else {
+      try {
+        localStorage.setItem('en_flashcards', JSON.stringify(App.estado.flashcardData));
+      } catch (_) {}
+    }
 
     this._vocabReviewIndex++;
     this._renderizarVocabReview();
@@ -1206,9 +1210,15 @@ var Vocab = window.Vocab = {
 
     App.estado.progresso.vocab_streak = novoStreak;
     App.estado.progresso.vocab_streak_ultimo = hoje;
-    try {
-      localStorage.setItem('en_progresso', JSON.stringify(App.estado.progresso));
-    } catch (_) {}
+    // F12: Migrado de localStorage.setItem('en_progresso'...) para App.salvarProgresso() / en_progress
+    if (typeof App !== 'undefined' && typeof App.salvarProgresso === 'function') {
+      App.salvarProgresso();
+    } else {
+      try {
+        localStorage.setItem('en_progress', JSON.stringify(App.estado.progresso));
+      } catch (_) {}
+    }
+    try { localStorage.removeItem('en_progresso'); } catch (_) {}
 
     // Verificar conquistas
     this._verificarConquistasVocab(novoStreak);
@@ -1230,9 +1240,15 @@ var Vocab = window.Vocab = {
 
     if (novasConquistas.length > 0) {
       App.estado.progresso.vocab_conquistas = [...conquistas, ...novasConquistas];
-      try {
-        localStorage.setItem('en_progresso', JSON.stringify(App.estado.progresso));
-      } catch (_) {}
+      // F12: Migrado de localStorage.setItem('en_progresso'...) para App.salvarProgresso() / en_progress
+      if (typeof App !== 'undefined' && typeof App.salvarProgresso === 'function') {
+        App.salvarProgresso();
+      } else {
+        try {
+          localStorage.setItem('en_progress', JSON.stringify(App.estado.progresso));
+        } catch (_) {}
+      }
+      try { localStorage.removeItem('en_progresso'); } catch (_) {}
       // Notificar conquistas
       const labels = {
         streak3: '🔥 3 dias de vocabulário!',
@@ -1339,9 +1355,15 @@ var Vocab = window.Vocab = {
     };
 
     App.estado.progresso.vocab_daily_quest = quest;
-    try {
-      localStorage.setItem('en_progresso', JSON.stringify(App.estado.progresso));
-    } catch (_) {}
+    // F12: Migrado de localStorage.setItem('en_progresso'...) para App.salvarProgresso() / en_progress
+    if (typeof App !== 'undefined' && typeof App.salvarProgresso === 'function') {
+      App.salvarProgresso();
+    } else {
+      try {
+        localStorage.setItem('en_progress', JSON.stringify(App.estado.progresso));
+      } catch (_) {}
+    }
+    try { localStorage.removeItem('en_progresso'); } catch (_) {}
 
     return quest;
   },
@@ -1474,7 +1496,12 @@ var Vocab = window.Vocab = {
 if (typeof window !== 'undefined') {
   window.Vocab = Vocab;
 }
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Vocab;
+}
 
-document.addEventListener('i18n:changed', () => {
-  if (document.getElementById('vocab-list')) Vocab.renderizar();
-});
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+  document.addEventListener('i18n:changed', () => {
+    if (document.getElementById('vocab-list')) Vocab.renderizar();
+  });
+}

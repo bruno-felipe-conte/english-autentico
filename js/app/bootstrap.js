@@ -104,17 +104,17 @@ const AppBootstrap = {
   },
 
   async init() {
-    this._migrateLegacyStorage();
-    this.initSidebarPin();
+    if (typeof this._migrateLegacyStorage === 'function') this._migrateLegacyStorage();
+    if (typeof this.initSidebarPin === 'function') this.initSidebarPin();
 
-    this.estado.progresso = this.carregarProgresso();
-    this.carregarEnergia();
-    this.salvarEnergia();
-    this.estado.flashcardData = this.carregarFlashcards();
-    if (typeof I18n !== 'undefined') I18n.inicializar();
+    if (typeof this.carregarProgresso === 'function') this.estado.progresso = this.carregarProgresso();
+    if (typeof this.carregarEnergia === 'function') this.carregarEnergia();
+    if (typeof this.salvarEnergia === 'function') this.salvarEnergia();
+    if (typeof this.carregarFlashcards === 'function') this.estado.flashcardData = this.carregarFlashcards();
+    if (typeof I18n !== 'undefined' && typeof I18n.inicializar === 'function') I18n.inicializar();
     await this.carregarDados();
-    this.atualizarStats();
-    this.renderizarTemplos();
+    if (typeof this.atualizarStats === 'function') this.atualizarStats();
+    if (typeof this.renderizarTemplos === 'function') this.renderizarTemplos();
 
     // FSRS Due Cards Alert
     setTimeout(() => {
@@ -147,10 +147,17 @@ const AppBootstrap = {
 
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.getVoices();
-      window.speechSynthesis.onvoiceschanged = () => {
-        if (typeof this._getVozAmericana === 'function') this._getVozAmericana();
-        window.speechSynthesis.onvoiceschanged = null;
-      };
+      if (typeof window.speechSynthesis.addEventListener === 'function') {
+        window.speechSynthesis.addEventListener('voiceschanged', () => {
+          if (typeof this._getVozAmericana === 'function') this._getVozAmericana();
+        });
+      } else {
+        const prevVoicesChanged = window.speechSynthesis.onvoiceschanged;
+        window.speechSynthesis.onvoiceschanged = (e) => {
+          if (typeof prevVoicesChanged === 'function') prevVoicesChanged(e);
+          if (typeof this._getVozAmericana === 'function') this._getVozAmericana();
+        };
+      }
     }
 
     if (typeof Onboarding !== 'undefined' && Onboarding.deveExibir()) {
@@ -169,14 +176,25 @@ const AppBootstrap = {
     window.addEventListener('hashchange', handleHash);
     if (window.location.hash) handleHash();
 
-    // Keyboard shortcuts
+    // Keyboard shortcuts (F15: Guard numeric keys 1-5 during active study sessions)
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.ctrlKey || e.metaKey) return;
+      const inStudySession = document.querySelector('#sec-flashcards.active, #sec-quiz.active');
+      if (inStudySession && !e.altKey) return;
       if (e.key === '1') this.navegar('temples');
       else if (e.key === '2') this.navegar('flashcards');
       else if (e.key === '3') this.navegar('quiz');
       else if (e.key === '4') this.navegar('vocab');
       else if (e.key === '5') this.navegar('grammar');
+    });
+
+    // F20: Subtle Haptic Feedback on card flip, rating clicks, and quiz answer selections
+    document.addEventListener('click', (e) => {
+      const target = e.target && e.target.closest && e.target.closest('#flashcard, .btn-rating, .opcao-btn, [data-rating]');
+      if (target && 'vibrate' in navigator) {
+        try { navigator.vibrate(15); } catch (_) {}
+      }
     });
   }
 };

@@ -17,25 +17,15 @@ const Grammatica = {
   _adminMods: new Set(),   // módulos desbloqueados temporariamente pelo admin
 
   // ─────────────────────────────────────────────────────────
-  // Carregar dados (Stale-While-Revalidate)
+  // Carregar dados (Em memória + Service Worker offline-first)
   // ─────────────────────────────────────────────────────────
   async carregar() {
     if (this.dados) return;
+
+    // F10: Reivindica ~1.5MB de cota eliminando cache estático do localStorage
     try {
-      const cached = localStorage.getItem('en_swr_grammar');
-      if (cached) {
-        this.dados = JSON.parse(cached);
-        // Revalida em background sem bloquear a UI
-        fetch('data/grammar.json')
-          .then(r => r.ok ? r.json() : null)
-          .then(fresh => {
-            if (fresh && Array.isArray(fresh.moduli)) {
-              this.dados = fresh;
-              try { localStorage.setItem('en_swr_grammar', JSON.stringify(fresh)); } catch (_) {}
-            }
-          })
-          .catch(() => {});
-        return;
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('en_swr_grammar')) {
+        localStorage.removeItem('en_swr_grammar');
       }
     } catch (_) {}
 
@@ -43,7 +33,6 @@ const Grammatica = {
       const r = await fetch('data/grammar.json');
       if (!r.ok) throw new Error('grammar.json não encontrado');
       this.dados = await r.json();
-      try { localStorage.setItem('en_swr_grammar', JSON.stringify(this.dados)); } catch (_) {}
     } catch (e) {
       console.error('Grammatica: erro ao carregar dados', e);
       this.dados = { moduli: [] };

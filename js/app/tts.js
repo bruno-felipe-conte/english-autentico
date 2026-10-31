@@ -6,6 +6,57 @@ const AppTTS = {
   _vozAmericana: null,
   _vozAmericanaResolvida: false,
   _currentUtterance: null,
+  _activeAudio: null,
+
+  _cleanupActiveAudio() {
+    if (this._activeAudio) {
+      const a = this._activeAudio;
+      this._activeAudio = null;
+      try {
+        a.pause();
+        a.currentTime = 0;
+      } catch (_) {}
+      if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.cleanupMasteringAudioElement === 'function') {
+        VoiceEngine.cleanupMasteringAudioElement(a);
+      }
+      if (a._cachedUrl) {
+        if (typeof URL !== 'undefined' && typeof URL.revokeObjectURL === 'function') {
+          try { URL.revokeObjectURL(a._cachedUrl); } catch (_) {}
+        }
+        if (typeof AudioCache !== 'undefined' && typeof AudioCache.revokeUrl === 'function') {
+          AudioCache.revokeUrl(a._cachedUrl);
+        }
+        a._cachedUrl = null;
+      }
+    }
+  },
+
+  stop() {
+    this._cleanupActiveAudio();
+    this._currentUtterance = null;
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (_) {}
+    }
+  },
+
+  init() {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.getVoices();
+      if (typeof window.speechSynthesis.addEventListener === 'function') {
+        window.speechSynthesis.addEventListener('voiceschanged', () => {
+          this._vozAmericanaResolvida = false;
+          this._getVozAmericana();
+        });
+      } else {
+        const prev = window.speechSynthesis.onvoiceschanged;
+        window.speechSynthesis.onvoiceschanged = (e) => {
+          if (typeof prev === 'function') prev(e);
+          this._vozAmericanaResolvida = false;
+          this._getVozAmericana();
+        };
+      }
+    }
+  },
 
   _getVozAmericana() {
     if (typeof speechSynthesis === 'undefined') return null;
@@ -33,6 +84,8 @@ const AppTTS = {
     if (!text) return;
     if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
 
+    this._cleanupActiveAudio();
+
     const normalized = (typeof VoiceEngine !== 'undefined')
       ? VoiceEngine.normalizeForSpeech(text)
       : text;
@@ -44,8 +97,42 @@ const AppTTS = {
         const cached = await AudioCache.getAudio(normalized);
         if (cached && cached.url) {
           const a = new Audio(cached.url);
-          if (typeof VoiceEngine !== 'undefined') VoiceEngine.applyMasteringAudioElement(a);
-          a.play().catch(() => {});
+          a._cachedUrl = cached.url;
+          this._activeAudio = a;
+
+          if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.applyMasteringAudioElement === 'function') {
+            VoiceEngine.applyMasteringAudioElement(a);
+          }
+
+          const onFinish = () => {
+            if (this._activeAudio === a) {
+              this._cleanupActiveAudio();
+            } else {
+              if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.cleanupMasteringAudioElement === 'function') {
+                VoiceEngine.cleanupMasteringAudioElement(a);
+              }
+              if (typeof URL !== 'undefined' && typeof URL.revokeObjectURL === 'function') {
+                try { URL.revokeObjectURL(cached.url); } catch (_) {}
+              }
+              if (typeof AudioCache !== 'undefined' && typeof AudioCache.revokeUrl === 'function') {
+                AudioCache.revokeUrl(cached.url);
+              }
+            }
+          };
+
+          if (typeof a.addEventListener === 'function') {
+            a.addEventListener('ended', onFinish, { once: true });
+            a.addEventListener('pause', onFinish, { once: true });
+            a.addEventListener('error', onFinish, { once: true });
+          } else {
+            a.onended = onFinish;
+            a.onpause = onFinish;
+            a.onerror = onFinish;
+          }
+
+          a.play().catch(() => {
+            onFinish();
+          });
           return;
         }
       } catch (e) {
@@ -76,6 +163,8 @@ const AppTTS = {
   pronunciar(texto) {
     if (!texto) return;
     if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
+
+    this._cleanupActiveAudio();
 
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
       this._pronunciarRV(texto);
@@ -112,11 +201,32 @@ const AppTTS = {
     if (window.speechSynthesis.getVoices().length > 0) {
       tentarFalar();
     } else {
-      window.speechSynthesis.onvoiceschanged = () => {
-        window.speechSynthesis.onvoiceschanged = null;
+      let resolved = false;
+      const onVoices = () => {
+        if (resolved) return;
+        resolved = true;
         this._vozAmericanaResolvida = false;
         tentarFalar();
       };
+
+      if (typeof window.speechSynthesis.addEventListener === 'function') {
+        window.speechSynthesis.addEventListener('voiceschanged', onVoices, { once: true });
+      } else {
+        const prev = window.speechSynthesis.onvoiceschanged;
+        window.speechSynthesis.onvoiceschanged = (e) => {
+          if (typeof prev === 'function') prev(e);
+          onVoices();
+        };
+      }
+
+      // Defensive fallback timer if voiceschanged never fires
+      setTimeout(() => {
+        if (!resolved) {
+          resolved = true;
+          this._vozAmericanaResolvida = false;
+          tentarFalar();
+        }
+      }, 350);
     }
   },
 
@@ -159,6 +269,7 @@ const AppTTS = {
 
 if (typeof window !== 'undefined') {
   window.AppTTS = AppTTS;
+  try { AppTTS.init(); } catch (_) {}
 }
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = AppTTS;

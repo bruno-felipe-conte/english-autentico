@@ -400,6 +400,7 @@ const Quiz = {
       void timerBar.offsetWidth;
       timerBar.style.transition = "width " + delay + "ms linear";
       timerBar.style.width = "0%";
+      if (!timerBar.dataset) timerBar.dataset = {};
       timerBar.dataset.start = Date.now();
     }
     this._autoAdvanceTimer = setTimeout(() => {
@@ -770,8 +771,9 @@ const Quiz = {
       const lastDate = localStorage.getItem('en_quiz_streak_date');
       if (!lastDate) return 0;
 
-      const hoje = new Date().toISOString().slice(0, 10);
-      const ontem = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+      const offsetMs = new Date().getTimezoneOffset() * 60000;
+      const hoje = new Date(Date.now() - offsetMs).toISOString().slice(0, 10);
+      const ontem = new Date(Date.now() - 86400000 - offsetMs).toISOString().slice(0, 10);
 
       if (lastDate === hoje || lastDate === ontem) return streak;
       return 0; // quebrou o streak
@@ -781,9 +783,10 @@ const Quiz = {
   // ── M-6: Incrementa streak após quiz ──────────────────────
   _atualizarStreak() {
     try {
-      const hoje = new Date().toISOString().slice(0, 10);
+      const offsetMs = new Date().getTimezoneOffset() * 60000;
+      const hoje = new Date(Date.now() - offsetMs).toISOString().slice(0, 10);
       const lastDate = localStorage.getItem('en_quiz_streak_date');
-      const ontem = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+      const ontem = new Date(Date.now() - 86400000 - offsetMs).toISOString().slice(0, 10);
 
       let streak = parseInt(localStorage.getItem('en_quiz_streak') || '0');
       if (lastDate === hoje) return; // já fez hoje
@@ -832,7 +835,11 @@ const Quiz = {
           lastReview: existing?.lastReview || null
         };
         const reviewed = window.FSRS.review(cardFSRS, 1); // rating=1 = Again
-        intervalo = window.FSRS.nextInterval(reviewed.stability);
+        const rawInterval = window.FSRS.nextInterval(reviewed.stability);
+        // nextInterval retorna dias (inteiro >= 1); converte dias para milissegundos
+        intervalo = (typeof rawInterval === 'number' && rawInterval < 1000)
+          ? rawInterval * 86400000
+          : (Number(rawInterval) || 86400000);
         // Salva dados FSRS no item para próximas revisões
         Object.assign(pergunta, {
           difficulty: reviewed.difficulty,

@@ -201,7 +201,12 @@ const VoiceEngine = {
   applyMasteringAudioElement(audioElement) {
     try {
       const ctx = this.getAudioContext();
-      if (!ctx || !audioElement) return;
+      if (!ctx || !audioElement) return null;
+
+      // Prevent calling createMediaElementSource multiple times on the same element
+      if (audioElement._dspChainActive) {
+        return audioElement._dspChainActive;
+      }
 
       const source = ctx.createMediaElementSource(audioElement);
 
@@ -221,9 +226,61 @@ const VoiceEngine = {
       source.connect(highpass);
       highpass.connect(compressor);
       compressor.connect(ctx.destination);
+
+      const chain = { source, highpass, compressor };
+      audioElement._dspChainActive = chain;
+
+      const cleanup = () => {
+        this.cleanupMasteringAudioElement(audioElement);
+      };
+
+      if (typeof audioElement.addEventListener === 'function') {
+        audioElement.addEventListener('ended', cleanup, { once: true });
+        audioElement.addEventListener('pause', cleanup, { once: true });
+        audioElement.addEventListener('error', cleanup, { once: true });
+      } else {
+        const prevEnded = audioElement.onended;
+        audioElement.onended = (e) => {
+          cleanup();
+          if (typeof prevEnded === 'function') prevEnded.call(audioElement, e);
+        };
+        const prevPause = audioElement.onpause;
+        audioElement.onpause = (e) => {
+          cleanup();
+          if (typeof prevPause === 'function') prevPause.call(audioElement, e);
+        };
+        const prevError = audioElement.onerror;
+        audioElement.onerror = (e) => {
+          cleanup();
+          if (typeof prevError === 'function') prevError.call(audioElement, e);
+        };
+      }
+
+      return chain;
     } catch (_) {
       // Audio element already connected or Web Audio not available
+      return null;
     }
+  },
+
+  // Disconnects DSP nodes and releases resources for an HTMLAudioElement
+  cleanupMasteringAudioElement(audioElement) {
+    if (!audioElement) return;
+    try {
+      const chain = audioElement._dspChainActive;
+      if (chain) {
+        if (chain.source && typeof chain.source.disconnect === 'function') {
+          try { chain.source.disconnect(); } catch (_) {}
+        }
+        if (chain.highpass && typeof chain.highpass.disconnect === 'function') {
+          try { chain.highpass.disconnect(); } catch (_) {}
+        }
+        if (chain.compressor && typeof chain.compressor.disconnect === 'function') {
+          try { chain.compressor.disconnect(); } catch (_) {}
+        }
+        audioElement._dspChainActive = null;
+      }
+    } catch (_) {}
   },
 
   // ── 6. Neural Voice (WASM Worker) Integration ─────────────
@@ -365,6 +422,7 @@ const VoiceEngine = {
         if (this._currentAudioSource === source) {
           this._currentAudioSource = null;
         }
+        try { source.disconnect(); } catch (_) {}
         if (opcoes.onend) opcoes.onend();
       };
 
@@ -445,6 +503,9 @@ VoiceEngine.normalizarParaFala = (t) => VoiceEngine.normalizeForSpeech(t);
 VoiceEngine.obterMelhoresVozesInglesas = () => VoiceEngine.getBestEnglishVoices();
 VoiceEngine.obterVozSelecionada = () => VoiceEngine.getSelectedVoice();
 
+if (typeof window !== 'undefined') {
+  window.VoiceEngine = VoiceEngine;
+}
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = VoiceEngine;
 }

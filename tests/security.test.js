@@ -244,3 +244,9 @@ test('🧠 Quiz SRS utiliza FSRS.review(rating=1) e reseta barra de tempo', () =
   global.document.getElementById = oldGetElementById;
 });
 
+// ============================================================
+// Storage Quota, Persistence & Multi-Tab Sync (M3: F9-F13)
+// ============================================================
+require('./storage_m3.test.js');
+
+

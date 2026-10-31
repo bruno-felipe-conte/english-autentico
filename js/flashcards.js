@@ -17,63 +17,91 @@ const FSRS = {
 
   // Current retrievability given elapsed time t (days) and stability S
   retrievability(t, s) {
-    if (s <= 0 || t < 0) return 1;
-    return Math.pow(1 + this.FACTOR * t / s, this.DECAY);
+    if (!Number.isFinite(s) || s <= 0 || !Number.isFinite(t) || t < 0) return 1;
+    const r = Math.pow(1 + this.FACTOR * t / s, this.DECAY);
+    return Number.isFinite(r) ? r : 1;
   },
 
   // Days until retrievability drops to TARGET_R
   nextInterval(s) {
-    const t = s * (Math.pow(this.TARGET_R, 1 / this.DECAY) - 1) / this.FACTOR;
-    return Math.max(Math.round(t), 1);
+    const validS = Number.isFinite(s) && s > 0 ? s : 0.1;
+    const t = validS * (Math.pow(this.TARGET_R, 1 / this.DECAY) - 1) / this.FACTOR;
+    return Math.max(Math.round(Number.isFinite(t) ? t : 1), 1);
   },
 
   // Initial stability after first review (rating 1-4)
   initStability(rating) {
-    return Math.max(this.w[rating - 1], 0.1);
+    const r = (Number.isFinite(rating) && rating >= 1 && rating <= 4) ? Math.round(rating) : 3;
+    const val = this.w[r - 1];
+    return Math.max(Number.isFinite(val) ? val : 0.1, 0.1);
   },
 
   // Initial difficulty after first review (rating 1-4)
   initDifficulty(rating) {
-    const d = this.w[4] - Math.exp(this.w[5] * (rating - 1)) + 1;
-    return Math.min(Math.max(d, 1), 10);
+    const r = (Number.isFinite(rating) && rating >= 1 && rating <= 4) ? Math.round(rating) : 3;
+    const d = this.w[4] - Math.exp(this.w[5] * (r - 1)) + 1;
+    const res = Math.min(Math.max(d, 1), 10);
+    return Number.isFinite(res) ? res : 5;
   },
 
   // Difficulty after subsequent reviews (with mean reversion toward Easy baseline)
   nextDifficulty(d, rating) {
+    const validD = (Number.isFinite(d) && d >= 1 && d <= 10) ? d : this.initDifficulty(rating);
+    const r = (Number.isFinite(rating) && rating >= 1 && rating <= 4) ? Math.round(rating) : 3;
     const d0easy = this.initDifficulty(4); // ~3.28 — Easy baseline
-    const delta  = -this.w[6] * (rating - 3);
-    const raw    = d + delta;
+    const delta  = -this.w[6] * (r - 3);
+    const raw    = validD + delta;
     // w[7]=0.0589 pulls ~6% toward the easy baseline each review
     const next   = this.w[7] * d0easy + (1 - this.w[7]) * raw;
-    return Math.min(Math.max(next, 1), 10);
+    const res    = Math.min(Math.max(next, 1), 10);
+    return Number.isFinite(res) ? res : 5;
   },
 
   // Stability after a successful recall (rating 2/3/4)
   nextRecallStability(d, s, r, rating) {
-    if (s <= 0) return this.initStability(rating); // guard: treat degenerate cards as new
+    if (!Number.isFinite(s) || s <= 0) return this.initStability(rating); // guard: treat degenerate cards as new
+    const validD = (Number.isFinite(d) && d >= 1 && d <= 10) ? d : this.initDifficulty(rating);
+    const validR = Number.isFinite(r) ? Math.min(Math.max(r, 0), 1) : 1;
     const hardPenalty = rating === 2 ? this.w[15] : 1;
     const easyBonus   = rating === 4 ? this.w[16] : 1;
     const increment   = Math.exp(this.w[8]) *
-                        (11 - d) *
+                        (11 - validD) *
                         Math.pow(s, -this.w[9]) *
-                        (Math.exp(this.w[10] * (1 - r)) - 1) *
+                        (Math.exp(this.w[10] * (1 - validR)) - 1) *
                         hardPenalty * easyBonus;
-    return s * (increment + 1);
+    const res = s * (increment + 1);
+    return (Number.isFinite(res) && res > 0) ? res : this.initStability(rating);
   },
 
   // Stability after forgetting (rating 1 — Again)
   nextForgetStability(d, s, r) {
-    return this.w[11] *
-           Math.pow(d, -this.w[12]) *
-           (Math.pow(s + 1, this.w[13]) - 1) *
-           Math.exp(this.w[14] * (1 - r));
+    const validD = (Number.isFinite(d) && d >= 1 && d <= 10) ? d : 5;
+    const validS = (Number.isFinite(s) && s > 0) ? s : 0.1;
+    const validR = Number.isFinite(r) ? Math.min(Math.max(r, 0), 1) : 1;
+    const res = this.w[11] *
+           Math.pow(validD, -this.w[12]) *
+           (Math.pow(validS + 1, this.w[13]) - 1) *
+           Math.exp(this.w[14] * (1 - validR));
+    return (Number.isFinite(res) && res > 0) ? Math.max(res, 0.1) : 0.1;
   },
 
   // ── Review a card, return updated card state ───────────────
   review(card, rating) {
     const now   = Date.now();
-    const tDays = card.lastReview ? (now - card.lastReview) / 86400000 : 0;
-    let { difficulty: d, stability: s, lapses, reps, state } = card;
+    const tDays = (card && card.lastReview && Number.isFinite(card.lastReview))
+      ? Math.max(0, (now - card.lastReview) / 86400000)
+      : 0;
+
+    let lapses = Number.isFinite(card?.lapses) ? card.lapses : 0;
+    let reps   = Number.isFinite(card?.reps) ? card.reps : 0;
+    const state = card?.state || 'new';
+
+    // Strict validation as mandated by FSRS integrity
+    const rawS = card?.stability;
+    const rawD = card?.difficulty;
+    const s = Number.isFinite(rawS) && rawS > 0 ? rawS : this.initStability(rating);
+    const d = Number.isFinite(rawD) && rawD >= 1 && rawD <= 10 ? rawD : this.initDifficulty(rating);
+
     const r = (s > 0) ? this.retrievability(tDays, s) : 1;
 
     let newD, newS;
@@ -92,20 +120,28 @@ const FSRS = {
       newS = Math.max(this.nextRecallStability(d, s, r, rating), 0.1);
     }
 
+    // Ensure newD and newS are strictly finite numbers
+    if (!Number.isFinite(newD) || newD < 1 || newD > 10) newD = this.initDifficulty(rating);
+    if (!Number.isFinite(newS) || newS <= 0) newS = this.initStability(rating);
+
     reps++;
     const newState    = rating === 1 ? 'learning' : 'review';
     const intervalDay = rating === 1 ? 1 : this.nextInterval(newS);
+    const safeInterval = Number.isFinite(intervalDay) && intervalDay >= 1 ? intervalDay : 1;
 
-    const previousHistory = Array.isArray(card.history) ? card.history : [];
+    const previousHistory = Array.isArray(card?.history) ? card.history : [];
     const reviewRecord = {
       timestamp: now,
       rating: rating,
-      stabilityBefore: Number(s ? s.toFixed(2) : 1),
+      stabilityBefore: Number(Number.isFinite(s) ? s.toFixed(2) : 1),
       stabilityAfter: Number(newS.toFixed(2)),
-      retrievabilityBefore: Number(r.toFixed(3)),
+      retrievabilityBefore: Number(Number.isFinite(r) ? r.toFixed(3) : 1),
       targetPeak: rating === 1 ? 0.85 : 1.0,
-      intervalDays: intervalDay
+      intervalDays: safeInterval
     };
+
+    // Prune history to keep at most the last 5 review records to avoid unbounded array growth
+    const updatedHistory = [...previousHistory, reviewRecord].slice(-5);
 
     return {
       ...card,
@@ -116,17 +152,23 @@ const FSRS = {
       lapses,
       reps,
       lastReview:     now,
-      interval:       intervalDay,
-      nextReview:     now + intervalDay * 86400000,
-      history:        [...previousHistory, reviewRecord]
+      interval:       safeInterval,
+      nextReview:     now + safeInterval * 86400000,
+      history:        updatedHistory
     };
   },
 
   // ── Preview intervals for each rating without committing ───
   previewIntervals(card) {
     const now   = Date.now();
-    const tDays = card.lastReview ? (now - card.lastReview) / 86400000 : 0;
-    const { difficulty: d, stability: s, state } = card;
+    const tDays = (card && card.lastReview && Number.isFinite(card.lastReview))
+      ? Math.max(0, (now - card.lastReview) / 86400000)
+      : 0;
+    const rawS = card?.stability;
+    const rawD = card?.difficulty;
+    const s = Number.isFinite(rawS) && rawS > 0 ? rawS : 1;
+    const d = Number.isFinite(rawD) && rawD >= 1 && rawD <= 10 ? rawD : 5;
+    const state = card?.state || 'new';
     const r = (s > 0) ? this.retrievability(tDays, s) : 1;
 
     return [1, 2, 3, 4].map(rating => {
@@ -302,7 +344,8 @@ const Flashcards = {
     this._metricasIniciarSessao();
     // Registrar dia de estudo para streak
     try {
-      const today = new Date().toISOString().slice(0,10);
+      const hoje = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+      const today = hoje;
       const lastDate = localStorage.getItem('en_fc_streak_date') || '';
       if (lastDate !== today) {
         const prev = new Date(lastDate);
@@ -310,7 +353,7 @@ const Flashcards = {
         const diffDays = Math.round((now - prev) / 86400000);
         let streak = parseInt(localStorage.getItem('en_fc_streak') || '0');
         if (diffDays === 1) { streak++; }
-        else if (diffDays > 1) { streak = 1; }
+        else if (diffDays > 1 || !lastDate) { streak = 1; }
         localStorage.setItem('en_fc_streak', String(streak));
         localStorage.setItem('en_fc_streak_date', today);
       }
@@ -891,6 +934,7 @@ const Flashcards = {
         if (rKey) this.sessaoStats[rKey]++;
         this.sessaoStats.xp += xpGanho;
         if (wasNew && updated.state === 'review') {
+          if (!Array.isArray(this.sessaoStats.novas)) this.sessaoStats.novas = [];
           this.sessaoStats.novas.push(carta);
         }
         // Streak: increments on Good/Easy, resets on Again/Hard
@@ -907,21 +951,24 @@ const Flashcards = {
 
       // Human feedback when user presses Again (zero XP shouldn't feel like rejection)
       if (rating === 1) {
-        App.notificar(I18n.t('fc_again_mensagem'), 'alerta');
+        if (typeof App !== 'undefined' && typeof App.notificar === 'function') {
+          const msg = (typeof I18n !== 'undefined' && typeof I18n.t === 'function') ? I18n.t('fc_again_mensagem') : 'Review again';
+          App.notificar(msg, 'alerta');
+        }
       }
 
       // Metrics
       this._metricasRegistrarAvaliacao(rating, this.modoContexto, this.modoEscuta);
 
       // Log to heatmap diary
-      if (typeof Calor !== 'undefined') Calor.registrar(1);
+      if (typeof Calor !== 'undefined' && typeof Calor.registrar === 'function') Calor.registrar(1);
 
-      if (typeof Progressao !== 'undefined' && Progressao.temploConcluido(this.temploAtual)) {
-        Progressao.marcarTemploConcluido(this.temploAtual);
+      if (typeof Progressao !== 'undefined' && typeof Progressao.temploConcluido === 'function' && Progressao.temploConcluido(this.temploAtual)) {
+        if (typeof Progressao.marcarTemploConcluido === 'function') Progressao.marcarTemploConcluido(this.temploAtual);
       }
 
       // Check achievements after each review
-      if (typeof Conquistas !== 'undefined') Conquistas.verificar();
+      if (typeof Conquistas !== 'undefined' && typeof Conquistas.verificar === 'function') Conquistas.verificar();
 
       // ── Animação imediata da Curva Ebbinghaus (Seta subindo até 100% ou 85%) ──
       this.atualizarEbbinghaus();
@@ -937,7 +984,9 @@ const Flashcards = {
       }, 650);
     } catch (err) {
       console.error('[FSRS] avaliar() error:', err);
-      App.notificar('notif_fc_erro_resposta', 'erro');
+      if (typeof App !== 'undefined' && typeof App.notificar === 'function') {
+        App.notificar('notif_fc_erro_resposta', 'erro');
+      }
       this._bloqueioAvaliacao = false;
       this.proxima(); // advance anyway so user isn't stuck
     }
@@ -1013,8 +1062,11 @@ const Flashcards = {
   mostrarResumo() {
     const metaUI = document.getElementById('meta-calibration');
     if (metaUI) metaUI.style.display = 'none';
-    
-    const acc = total > 0 ? Math.round(((s.good + s.easy) / total) * 100) : 0;
+
+    const s = Object.assign({ again: 0, hard: 0, good: 0, easy: 0, novas: [], xp: 0, streak: 0 }, this.sessaoStats || {});
+    const total = s.again + s.hard + s.good + s.easy;
+    const acertos = s.good + s.easy;
+    const acc = total > 0 ? Math.round((acertos / total) * 100) : 0;
     
     // Confetti Celebration
     if (acc >= 80) {
@@ -1034,7 +1086,7 @@ const Flashcards = {
       App.estado.progresso.fsrs_listen_sessions = (App.estado.progresso.fsrs_listen_sessions || 0) + 1;
       App.salvarProgresso();
     }
-    if (this.sessaoStats.firstTryCorrect >= 10) {
+    if (this.sessaoStats && this.sessaoStats.firstTryCorrect >= 10) {
       App.estado.progresso.fsrs_bullseye_ganha = true;
       App.salvarProgresso();
     }
@@ -1045,10 +1097,7 @@ const Flashcards = {
 
     const resumo = document.getElementById('flashcard-resumo');
     if (!resumo || !this.sessaoStats) return;
-    const s = this.sessaoStats;
-    const total = s.again + s.hard + s.good + s.easy;
-    const acertos = s.good + s.easy;
-    const pct = total > 0 ? Math.round((acertos / total) * 100) : 0;
+    const pct = acc;
 
     let emoji = '🎉';
     let titulo = I18n.t('fc_resumo_sessao_concluida');
@@ -1078,7 +1127,7 @@ const Flashcards = {
       }
     }
 
-    const novCount = s.novas.length;
+    const novCount = (s.novas && Array.isArray(s.novas)) ? s.novas.length : 0;
 
 
     resumo.setAttribute('aria-live', 'polite');
@@ -1120,7 +1169,8 @@ const Flashcards = {
     this._metricasConcluirSessao();
     // Atualizar streak diário de flashcards
     try {
-      const today = new Date().toISOString().slice(0,10);
+      const offsetMs = new Date().getTimezoneOffset() * 60000;
+      const today = new Date(Date.now() - offsetMs).toISOString().slice(0, 10);
       const lastDate = localStorage.getItem('en_fc_streak_date') || '';
       const prev = new Date(lastDate);
       const now = new Date(today);
@@ -1779,25 +1829,51 @@ const Flashcards = {
 // ── Keyboard Shortcuts ──
 document.addEventListener('keydown', (e) => {
   if (!document.getElementById('flashcard')) return;
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
   if (typeof Flashcards !== 'undefined' && Flashcards._bloqueioAvaliacao) return;
   const isVirado = document.getElementById('flashcard')?.classList.contains('virado');
   switch(e.key) {
     case '1': case 'ArrowLeft':
-      if (isVirado) { e.preventDefault(); Flashcards.avaliar(1); }
+      if (isVirado) {
+        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+        e.preventDefault();
+        Flashcards.avaliar(1);
+      }
       break;
     case '2': case 'ArrowUp':
-      if (isVirado) { e.preventDefault(); Flashcards.avaliar(2); }
+      if (isVirado) {
+        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+        e.preventDefault();
+        Flashcards.avaliar(2);
+      }
       break;
     case '3': case 'ArrowDown':
-      if (isVirado) { e.preventDefault(); Flashcards.avaliar(3); }
+      if (isVirado) {
+        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+        e.preventDefault();
+        Flashcards.avaliar(3);
+      }
       break;
     case '4': case 'ArrowRight':
-      if (isVirado) { e.preventDefault(); Flashcards.avaliar(4); }
+      if (isVirado) {
+        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+        e.preventDefault();
+        Flashcards.avaliar(4);
+      }
       break;
-    case ' ': case 'Enter':
-      if (!isVirado && !document.querySelector('section.active')) { e.preventDefault(); Flashcards.virar(); }
+    case ' ': case 'Enter': {
+      const secFc = document.getElementById('sec-flashcards');
+      const isFcActive = !secFc || secFc.classList.contains('active');
+      const modalOpen = document.querySelector('.modal.ativo, .modal.active, dialog[open]');
+      if (!isVirado && isFcActive && !modalOpen) {
+        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+        if (e.target.tagName !== 'BUTTON') {
+          e.preventDefault();
+        }
+        Flashcards.virar();
+      }
       break;
+    }
     case 'h': case 'H':
       e.preventDefault(); Flashcards.mostrarDica(); break;
     case 'r': case 'R':
@@ -1823,5 +1899,36 @@ document.addEventListener('i18n:changed', () => {
 });
 
 
+// Haptic integration (F20)
+if (typeof Flashcards !== 'undefined') {
+  const _resolveNavigator = () => {
+    if (typeof window !== 'undefined' && window && window.navigator) return window.navigator;
+    if (typeof navigator !== 'undefined') return navigator;
+    return null;
+  };
+  if (typeof Flashcards.virar === 'function') {
+    const _fcOrigVirar = Flashcards.virar;
+    Flashcards.virar = function() {
+      const nav = _resolveNavigator();
+      if (nav && typeof nav.vibrate === 'function') { try { nav.vibrate(15); } catch(_) {} }
+      return _fcOrigVirar.apply(this, arguments);
+    };
+  }
+  if (typeof Flashcards.avaliar === 'function') {
+    const _fcOrigAvaliar = Flashcards.avaliar;
+    Flashcards.avaliar = function(rating) {
+      const nav = _resolveNavigator();
+      if (nav && typeof nav.vibrate === 'function') { try { nav.vibrate(15); } catch(_) {} }
+      return _fcOrigAvaliar.apply(this, arguments);
+    };
+  }
+}
+
 window.Flashcards = Flashcards;
 window.FSRS = FSRS;
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Flashcards;
+  module.exports.Flashcards = Flashcards;
+  module.exports.FSRS = FSRS;
+}

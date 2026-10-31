@@ -10,6 +10,7 @@ const AudioCache = {
   DB_VERSION: 1,
   STORE_NAME: 'audio_cache',
   _dbPromise: null,
+  _activeUrls: new Set(),
 
   // Opens or retrieves active IndexedDB connection
   _openDB() {
@@ -38,6 +39,28 @@ const AudioCache = {
     });
 
     return this._dbPromise;
+  },
+
+  // Revokes a specific object URL and removes from active tracking set
+  revokeUrl(url) {
+    if (url && typeof URL !== 'undefined' && typeof URL.revokeObjectURL === 'function') {
+      try {
+        URL.revokeObjectURL(url);
+      } catch (_) {}
+      if (this._activeUrls) {
+        this._activeUrls.delete(url);
+      }
+    }
+  },
+
+  // Revokes all currently active object URLs to prevent RAM leaks
+  revokeAllUrls() {
+    if (this._activeUrls && typeof URL !== 'undefined' && typeof URL.revokeObjectURL === 'function') {
+      this._activeUrls.forEach((url) => {
+        try { URL.revokeObjectURL(url); } catch (_) {}
+      });
+      this._activeUrls.clear();
+    }
   },
 
   // Generates consistent SHA-256 or FNV-1a hash key for text + voice ID
@@ -77,11 +100,36 @@ const AudioCache = {
 
         req.onsuccess = () => {
           if (req.result && req.result.audioBlob) {
+            let url = null;
+            if (typeof URL !== 'undefined' && typeof URL.createObjectURL === 'function') {
+              try {
+                url = URL.createObjectURL(req.result.audioBlob);
+                if (this._activeUrls) this._activeUrls.add(url);
+              } catch (_) {}
+            }
+
+            const blob = req.result.audioBlob;
+            try {
+              blob.url = url;
+              blob.hash = hash;
+              blob.timestamp = req.result.timestamp;
+              blob.blob = blob;
+            } catch (_) {}
+
             resolve({
               hash,
-              blob: req.result.audioBlob,
-              url: URL.createObjectURL(req.result.audioBlob),
-              timestamp: req.result.timestamp
+              blob,
+              url,
+              timestamp: req.result.timestamp,
+              size: (blob && blob.size) || 0,
+              type: (blob && blob.type) || 'audio/wav',
+              arrayBuffer: () => {
+                if (blob && typeof blob.arrayBuffer === 'function') {
+                  return blob.arrayBuffer();
+                }
+                return Promise.resolve(new ArrayBuffer(0));
+              },
+              slice: (...args) => (blob && typeof blob.slice === 'function' ? blob.slice(...args) : null)
             });
           } else {
             resolve(null);
@@ -127,8 +175,54 @@ const AudioCache = {
     });
   },
 
-  // Clears all cached audio files
+  // Computes cache statistics (count and total bytes)
+  async getStats() {
+    const db = await this._openDB();
+    if (!db) return { itens: 0, bytes: 0, count: 0, size: 0 };
+
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(this.STORE_NAME, 'readonly');
+        const store = tx.objectStore(this.STORE_NAME);
+        let count = 0;
+        let bytes = 0;
+
+        const req = store.openCursor();
+        req.onsuccess = (e) => {
+          const cursor = e.target.result;
+          if (cursor) {
+            count++;
+            const val = cursor.value;
+            if (val && typeof val.size === 'number') {
+              bytes += val.size;
+            } else if (val && val.audioBlob && typeof val.audioBlob.size === 'number') {
+              bytes += val.audioBlob.size;
+            }
+            cursor.continue();
+          } else {
+            resolve({ itens: count, bytes, count, size: bytes });
+          }
+        };
+        req.onerror = () => resolve({ itens: 0, bytes: 0, count: 0, size: 0 });
+      } catch (err) {
+        console.warn('[AudioCache] Error reading stats:', err);
+        resolve({ itens: 0, bytes: 0, count: 0, size: 0 });
+      }
+    });
+  },
+
+  // Compatibility aliases
+  obter(text, voiceId = 'default') {
+    return this.getAudio(text, voiceId);
+  },
+
+  estatisticas() {
+    return this.getStats();
+  },
+
+  // Clears all cached audio files and revokes active URLs
   async clearCache() {
+    this.revokeAllUrls();
     const db = await this._openDB();
     if (!db) return false;
 
@@ -143,5 +237,17 @@ const AudioCache = {
         resolve(false);
       }
     });
+  },
+
+  // Compatibility alias mapping
+  limpar() {
+    return this.clearCache();
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.AudioCache = AudioCache;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = AudioCache;
+}
