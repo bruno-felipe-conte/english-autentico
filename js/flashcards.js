@@ -1823,80 +1823,428 @@ const Flashcards = {
     }
     fb.style.display = 'block';
     setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);
+  },
+
+  // ── High-Tension Survival Challenge Mode ────────────────────
+  iniciarSobrevivencia() {
+    const flashData = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData)
+      ? App.estado.flashcardData
+      : {};
+    
+    // 1. Filtragem estrita de cartas dominadas (reps >= 3 ou estabilidade > 7)
+    const dominadasIds = Object.entries(flashData)
+      .filter(([_, sm]) => sm && (sm.reps >= 3 || sm.repeticoes >= 3 || sm.stability > 7))
+      .map(([id]) => id);
+
+    const appPool = (typeof App !== 'undefined' && App.estado) ? [
+      ...(App.estado.topFlashcards || []),
+      ...(App.estado.vocabCache || []),
+      ...Object.values(App.estado.templosData || {}).flatMap(t => (t && t.palavras) || [])
+    ] : [];
+
+    const templosPool = (typeof TEMPLOS !== 'undefined' && Array.isArray(TEMPLOS))
+      ? TEMPLOS.flatMap(t => (t && t.palavras) || [])
+      : [];
+
+    const poolGeral = [...appPool, ...templosPool];
+
+    let cartasElegiveis = poolGeral.filter(p => p && p.id && dominadasIds.includes(p.id));
+    let cartasUnicas = Array.from(new Map(cartasElegiveis.map(c => [c.id, c])).values());
+
+    if (cartasUnicas.length < 3) {
+      if (typeof App !== 'undefined' && App.notificar) {
+        App.notificar('Você precisa de pelo menos 3 cartas dominadas (reps ≥ 3 ou estabilidade > 7) para o Modo Sobrevivência. Continue revisando!', 'aviso');
+      } else if (typeof alert === 'function') {
+        alert('Você precisa de pelo menos 3 cartas dominadas (reps ≥ 3 ou estabilidade > 7) para o Modo Sobrevivência. Continue revisando!');
+      }
+      return;
+    }
+
+    const embaralhadas = [...cartasUnicas].sort(() => Math.random() - 0.5);
+
+    this.limparTimersSobrevivencia();
+    this.modoSobrevivencia = true;
+    this.sobrevivencia = {
+      ativo: true,
+      vidas: 3,
+      maxVidas: 3,
+      tempoLimiteMs: 5000,
+      tempoRestanteMs: 5000,
+      timerInterval: null,
+      cartas: embaralhadas,
+      indiceAtual: 0,
+      cartaAtual: null,
+      pontos: 0,
+      combo: 0,
+      maiorCombo: 0,
+      cartasSobrevividas: 0,
+      inicioPerguntaTimestamp: Date.now(),
+      lapsosPressao: []
+    };
+
+    // Atualiza pills de modo
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta', 'btn-escrita'].forEach(id => {
+      const b = document.getElementById(id);
+      if (b) b.classList.remove('ativo');
+    });
+    const btnSob = document.getElementById('btn-modo-sobrevivencia');
+    if (btnSob) btnSob.classList.add('ativo');
+
+    this._renderizarArenaSobrevivencia();
+    this._apresentarCartaSobrevivencia();
+  },
+
+  _renderizarArenaSobrevivencia() {
+    if (typeof document === 'undefined') return;
+    const palco = document.getElementById('sec-flashcard');
+    if (!palco) return;
+
+    const layoutPadrao = document.getElementById('fc-studio-layout');
+    const barraCompacta = document.getElementById('fc-compact-bar');
+    const drawer = document.getElementById('fc-seletor-drawer');
+    if (layoutPadrao) layoutPadrao.style.display = 'none';
+    if (barraCompacta) barraCompacta.style.display = 'none';
+    if (drawer) drawer.style.display = 'none';
+
+    const arenaAntiga = document.getElementById('fc-survival-arena');
+    if (arenaAntiga) arenaAntiga.remove();
+
+    const arena = document.createElement('div');
+    arena.id = 'fc-survival-arena';
+    arena.className = 'fc-survival-arena';
+    arena.setAttribute('role', 'region');
+    arena.setAttribute('aria-label', 'Modo Sobrevivência de Alta Tensão');
+    arena.innerHTML = `
+      <div class="fc-survival-topbar">
+        <div class="fc-survival-vidas" id="fc-survival-vidas" aria-label="Vidas restantes">❤️❤️❤️</div>
+        <div class="fc-survival-combo-badge" id="fc-survival-combo">Combo: 0</div>
+        <div class="fc-survival-score" id="fc-survival-score">Score: 0</div>
+        <button type="button" class="fc-survival-sair-btn" onclick="Flashcards.encerrarSobrevivencia()">✖ Exit</button>
+      </div>
+
+      <div class="fc-survival-timer-track" aria-hidden="true">
+        <div class="fc-survival-timer-bar" id="fc-survival-timer-bar" style="width: 100%;"></div>
+      </div>
+
+      <div class="fc-survival-card-box">
+        <div class="fc-survival-termo" id="fc-survival-termo">—</div>
+        <div class="fc-survival-prompt">Qual a tradução correta? (5 segundos!)</div>
+        <div class="fc-survival-opcoes-grid" id="fc-survival-opcoes-grid"></div>
+      </div>
+    `;
+
+    palco.appendChild(arena);
+  },
+
+  _apresentarCartaSobrevivencia() {
+    if (!this.sobrevivencia || !this.sobrevivencia.ativo) return;
+    if (typeof document === 'undefined') return;
+
+    const s = this.sobrevivencia;
+    if (s.indiceAtual >= s.cartas.length) {
+      s.cartas.sort(() => Math.random() - 0.5);
+      s.indiceAtual = 0;
+    }
+
+    const carta = s.cartas[s.indiceAtual];
+    s.cartaAtual = carta;
+    s.tempoRestanteMs = s.tempoLimiteMs;
+    s.inicioPerguntaTimestamp = Date.now();
+
+    const elVidas = document.getElementById('fc-survival-vidas');
+    const elCombo = document.getElementById('fc-survival-combo');
+    const elScore = document.getElementById('fc-survival-score');
+    const elTermo = document.getElementById('fc-survival-termo');
+    const elBar = document.getElementById('fc-survival-timer-bar');
+
+    if (elVidas) elVidas.innerHTML = '❤️'.repeat(Math.max(0, s.vidas)) + '🖤'.repeat(Math.max(0, 3 - s.vidas));
+    if (elCombo) {
+      elCombo.textContent = `Combo: ${s.combo}x`;
+      elCombo.classList.toggle('combo-fogo', s.combo >= 3);
+    }
+    if (elScore) elScore.textContent = `Score: ${s.pontos}`;
+    if (elTermo) elTermo.textContent = carta.ingles || carta.italiano || '—';
+    if (elBar) {
+      elBar.style.width = '100%';
+      elBar.classList.remove('urgencia-tempo');
+    }
+
+    const distratores = s.cartas
+      .filter(c => c.id !== carta.id && c.portugues !== carta.portugues)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
+      .map(c => c.portugues);
+
+    const opcoes = [carta.portugues, ...distratores].sort(() => Math.random() - 0.5);
+
+    const grid = document.getElementById('fc-survival-opcoes-grid');
+    if (grid) {
+      grid.innerHTML = '';
+      opcoes.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'fc-survival-opcao';
+        btn.setAttribute('data-idx', String(idx + 1));
+        btn.innerHTML = `<span class="fc-opt-badge">${idx + 1}</span><span class="fc-opt-text">${opt}</span>`;
+        btn.onclick = () => Flashcards.responderSobrevivencia(opt);
+        grid.appendChild(btn);
+      });
+    }
+
+    this.limparTimersSobrevivencia();
+    s.timerInterval = setInterval(() => {
+      s.tempoRestanteMs -= 50;
+      const pct = Math.max(0, (s.tempoRestanteMs / s.tempoLimiteMs) * 100);
+      if (elBar) {
+        elBar.style.width = `${pct}%`;
+        if (s.tempoRestanteMs <= 2000) {
+          elBar.classList.add('urgencia-tempo');
+        }
+      }
+
+      if (s.tempoRestanteMs <= 0) {
+        clearInterval(s.timerInterval);
+        Flashcards._processarTimeoutSobrevivencia();
+      }
+    }, 50);
+  },
+
+  responderSobrevivencia(opcaoEscolhida) {
+    if (!this.sobrevivencia || !this.sobrevivencia.ativo) return;
+    this.limparTimersSobrevivencia();
+
+    const s = this.sobrevivencia;
+    const carta = s.cartaAtual;
+    const deltaMs = Date.now() - s.inicioPerguntaTimestamp;
+    const acertou = carta && (opcaoEscolhida === carta.portugues);
+
+    if (acertou) {
+      s.combo++;
+      if (s.combo > s.maiorCombo) s.maiorCombo = s.combo;
+      s.cartasSobrevividas++;
+
+      const multiplicador = s.combo >= 3 ? 2.0 : 1.0;
+      const bonusLatencia = deltaMs < 800 ? 5 : 0;
+      s.pontos += Math.round((10 * multiplicador) + bonusLatencia);
+
+      s.indiceAtual++;
+      this._apresentarCartaSobrevivencia();
+    } else {
+      this._processarFalhaSobrevivencia(carta);
+    }
+  },
+
+  _processarTimeoutSobrevivencia() {
+    const carta = this.sobrevivencia?.cartaAtual;
+    this._processarFalhaSobrevivencia(carta);
+  },
+
+  _processarFalhaSobrevivencia(carta) {
+    const s = this.sobrevivencia;
+    if (!s) return;
+    s.vidas--;
+    s.combo = 0;
+
+    if (carta && carta.id && typeof App !== 'undefined' && App.estado && App.estado.flashcardData) {
+      s.lapsosPressao.push(carta);
+      let fsrs = App.estado.flashcardData[carta.id];
+      if (fsrs) {
+        fsrs.lapses = (fsrs.lapses || 0) + 1;
+        fsrs.stability = Math.max(0.1, Number(((fsrs.stability || 2.0) * 0.7).toFixed(1)));
+        fsrs.nextReview = Date.now();
+        App.estado.flashcardData[carta.id] = fsrs;
+      }
+    }
+
+    if (s.vidas <= 0) {
+      this.finalizarSobrevivencia();
+    } else {
+      s.indiceAtual++;
+      setTimeout(() => {
+        this._apresentarCartaSobrevivencia();
+      }, 400);
+    }
+  },
+
+  finalizarSobrevivencia() {
+    this.limparTimersSobrevivencia();
+    const s = this.sobrevivencia;
+    if (!s) return;
+    s.ativo = false;
+
+    if (typeof App !== 'undefined' && App.estado && App.estado.progresso) {
+      const recordes = App.estado.progresso.survival_recordes || { maior_sequencia: 0, cartas_sobrevividas: 0 };
+      const novoRecorde = {
+        maior_sequencia: Math.max(recordes.maior_sequencia || 0, s.maiorCombo),
+        cartas_sobrevividas: Math.max(recordes.cartas_sobrevividas || 0, s.cartasSobrevividas)
+      };
+      App.estado.progresso.survival_recordes = novoRecorde;
+      if (typeof App.salvarProgresso === 'function') App.salvarProgresso();
+      if (typeof App.salvarFlashcards === 'function') App.salvarFlashcards();
+    }
+
+    if (s.pontos > 0) {
+      if (typeof App !== 'undefined' && typeof App.ganharXP === 'function') {
+        App.ganharXP(Math.round(s.pontos / 2));
+      } else if (typeof Progressao !== 'undefined' && typeof Progressao.ganhar === 'function') {
+        Progressao.ganhar(Math.round(s.pontos / 2));
+      }
+    }
+
+    const arena = document.getElementById('fc-survival-arena');
+    if (arena) {
+      let htmlLapsos = '';
+      if (s.lapsosPressao.length > 0) {
+        htmlLapsos = `
+          <div class="fc-survival-lapsos">
+            <h4>⚠️ Lapsos sob Pressão (${s.lapsosPressao.length}):</h4>
+            <p class="fc-lapsos-desc">Termos que você conhecia, mas falhou sob o limite de 5s:</p>
+            <ul>
+              ${s.lapsosPressao.map(c => `<li><strong>${c.ingles || c.italiano || ''}</strong>: ${c.portugues || ''}</li>`).join('')}
+            </ul>
+          </div>`;
+      }
+
+      arena.innerHTML = `
+        <div class="fc-survival-gameover-card">
+          <div class="fc-gameover-icon">🏁</div>
+          <h3 class="fc-gameover-title">Partida Encerrada!</h3>
+          <div class="fc-gameover-stats">
+            <div class="fc-stat-col"><span class="fc-stat-val">${s.cartasSobrevividas}</span><span class="fc-stat-lbl">Cartas</span></div>
+            <div class="fc-stat-col"><span class="fc-stat-val">${s.maiorCombo}x</span><span class="fc-stat-lbl">Maior Combo</span></div>
+            <div class="fc-stat-col"><span class="fc-stat-val">${s.pontos}</span><span class="fc-stat-lbl">Pontuação</span></div>
+          </div>
+          ${htmlLapsos}
+          <div class="fc-gameover-actions">
+            <button type="button" class="btn-primario" onclick="Flashcards.iniciarSobrevivencia()">🔁 Jogar Novamente</button>
+            <button type="button" class="btn-secondario" onclick="Flashcards.encerrarSobrevivencia()">‹ Voltar ao Estúdio</button>
+          </div>
+        </div>
+      `;
+    }
+  },
+
+  limparTimersSobrevivencia() {
+    if (this.sobrevivencia && this.sobrevivencia.timerInterval) {
+      clearInterval(this.sobrevivencia.timerInterval);
+      this.sobrevivencia.timerInterval = null;
+    }
+  },
+
+  encerrarSobrevivencia() {
+    this.limparTimersSobrevivencia();
+    this.modoSobrevivencia = false;
+    if (this.sobrevivencia) this.sobrevivencia.ativo = false;
+
+    if (typeof document === 'undefined') return;
+
+    const arena = document.getElementById('fc-survival-arena');
+    if (arena) arena.remove();
+
+    const layoutPadrao = document.getElementById('fc-studio-layout');
+    const barraCompacta = document.getElementById('fc-compact-bar');
+    const drawer = document.getElementById('fc-seletor-drawer');
+    if (layoutPadrao) layoutPadrao.style.display = '';
+    if (barraCompacta) barraCompacta.style.display = '';
+    if (drawer) drawer.style.display = '';
+
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta', 'btn-escrita', 'btn-modo-sobrevivencia'].forEach(id => {
+      const b = document.getElementById(id);
+      if (b) b.classList.remove('ativo');
+    });
+    const btnNorm = document.getElementById('btn-modo-normal');
+    if (btnNorm) btnNorm.classList.add('ativo');
+
+    this.mostrarCarta();
   }
 };
 
 // ── Keyboard Shortcuts ──
-document.addEventListener('keydown', (e) => {
-  if (!document.getElementById('flashcard')) return;
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
-  if (typeof Flashcards !== 'undefined' && Flashcards._bloqueioAvaliacao) return;
-  const isVirado = document.getElementById('flashcard')?.classList.contains('virado');
-  switch(e.key) {
-    case '1': case 'ArrowLeft':
-      if (isVirado) {
-        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+if (typeof document !== 'undefined') {
+  document.addEventListener('keydown', (e) => {
+    if (typeof Flashcards !== 'undefined' && Flashcards.modoSobrevivencia && Flashcards.sobrevivencia?.ativo) {
+      if (e.key === 'Escape') {
         e.preventDefault();
-        Flashcards.avaliar(1);
+        Flashcards.encerrarSobrevivencia();
+        return;
       }
-      break;
-    case '2': case 'ArrowUp':
-      if (isVirado) {
-        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+      if (['1', '2', '3', '4'].includes(e.key)) {
         e.preventDefault();
-        Flashcards.avaliar(2);
+        const btn = document.querySelector(`.fc-survival-opcao[data-idx="${e.key}"]`);
+        if (btn) btn.click();
+        return;
       }
-      break;
-    case '3': case 'ArrowDown':
-      if (isVirado) {
-        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
-        e.preventDefault();
-        Flashcards.avaliar(3);
-      }
-      break;
-    case '4': case 'ArrowRight':
-      if (isVirado) {
-        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
-        e.preventDefault();
-        Flashcards.avaliar(4);
-      }
-      break;
-    case ' ': case 'Enter': {
-      const secFc = document.getElementById('sec-flashcards');
-      const isFcActive = !secFc || secFc.classList.contains('active');
-      const modalOpen = document.querySelector('.modal.ativo, .modal.active, dialog[open]');
-      if (!isVirado && isFcActive && !modalOpen) {
-        if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
-        if (e.target.tagName !== 'BUTTON') {
-          e.preventDefault();
-        }
-        Flashcards.virar();
-      }
-      break;
     }
-    case 'h': case 'H':
-      e.preventDefault(); Flashcards.mostrarDica(); break;
-    case 'r': case 'R':
-      e.preventDefault(); Flashcards.pronunciar(); break;
-    case 'f': case 'F':
-      e.preventDefault(); Flashcards.toggleFavorito(); break;
-  }
-});
+    if (!document.getElementById('flashcard')) return;
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+    if (typeof Flashcards !== 'undefined' && Flashcards._bloqueioAvaliacao) return;
+    const isVirado = document.getElementById('flashcard')?.classList.contains('virado');
+    switch(e.key) {
+      case '1': case 'ArrowLeft':
+        if (isVirado) {
+          if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+          e.preventDefault();
+          Flashcards.avaliar(1);
+        }
+        break;
+      case '2': case 'ArrowUp':
+        if (isVirado) {
+          if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+          e.preventDefault();
+          Flashcards.avaliar(2);
+        }
+        break;
+      case '3': case 'ArrowDown':
+        if (isVirado) {
+          if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+          e.preventDefault();
+          Flashcards.avaliar(3);
+        }
+        break;
+      case '4': case 'ArrowRight':
+        if (isVirado) {
+          if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+          e.preventDefault();
+          Flashcards.avaliar(4);
+        }
+        break;
+      case ' ': case 'Enter': {
+        const secFc = document.getElementById('sec-flashcards');
+        const isFcActive = !secFc || secFc.classList.contains('active');
+        const modalOpen = document.querySelector('.modal.ativo, .modal.active, dialog[open]');
+        if (!isVirado && isFcActive && !modalOpen) {
+          if ('vibrate' in navigator) { try { navigator.vibrate(15); } catch(_) {} }
+          if (e.target.tagName !== 'BUTTON') {
+            e.preventDefault();
+          }
+          Flashcards.virar();
+        }
+        break;
+      }
+      case 'h': case 'H':
+        e.preventDefault(); Flashcards.mostrarDica(); break;
+      case 'r': case 'R':
+        e.preventDefault(); Flashcards.pronunciar(); break;
+      case 'f': case 'F':
+        e.preventDefault(); Flashcards.toggleFavorito(); break;
+    }
+  });
 
-document.addEventListener('i18n:changed', () => {
-  if (!document.getElementById('flashcard')) return;
-  const vazio  = document.getElementById('flashcard-vazio');
-  const resumo = document.getElementById('flashcard-resumo');
+  document.addEventListener('i18n:changed', () => {
+    if (!document.getElementById('flashcard')) return;
+    const vazio  = document.getElementById('flashcard-vazio');
+    const resumo = document.getElementById('flashcard-resumo');
 
-  if (resumo && resumo.style.display !== 'none') {
-    Flashcards.mostrarResumo();
-  } else if (vazio && vazio.style.display !== 'none') {
-    Flashcards.mostrarVazio();
-  } else if (Flashcards.cartaAtual) {
-    Flashcards.mostrarCarta();
-  }
-  Flashcards.atualizarEbbinghaus();
-});
+    if (resumo && resumo.style.display !== 'none') {
+      Flashcards.mostrarResumo();
+    } else if (vazio && vazio.style.display !== 'none') {
+      Flashcards.mostrarVazio();
+    } else if (Flashcards.cartaAtual) {
+      Flashcards.mostrarCarta();
+    }
+    Flashcards.atualizarEbbinghaus();
+  });
+}
 
 
 // Haptic integration (F20)
@@ -1924,8 +2272,14 @@ if (typeof Flashcards !== 'undefined') {
   }
 }
 
-window.Flashcards = Flashcards;
-window.FSRS = FSRS;
+if (typeof window !== 'undefined') {
+  window.Flashcards = Flashcards;
+  window.FSRS = FSRS;
+}
+if (typeof globalThis !== 'undefined') {
+  globalThis.Flashcards = Flashcards;
+  globalThis.FSRS = FSRS;
+}
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = Flashcards;

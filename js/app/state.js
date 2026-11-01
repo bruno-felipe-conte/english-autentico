@@ -262,6 +262,9 @@ const AppState = {
         if (!p.conquistas)  p.conquistas  = [];
         if (!p.data_inicio) p.data_inicio = p.ultimo_estudo || Date.now();
         if (p.meta_prazo === undefined) p.meta_prazo = null;
+        if (!Array.isArray(p.palavras_conhecidas)) p.palavras_conhecidas = [];
+        if (!p.vocab_diagnostico || typeof p.vocab_diagnostico !== 'object') p.vocab_diagnostico = null;
+        if (!p.survival_recordes || typeof p.survival_recordes !== 'object') p.survival_recordes = { maior_sequencia: 0, cartas_sobrevividas: 0 };
 
         // F11: Mantém cópia de segurança em en_progress_bak
         try {
@@ -295,6 +298,9 @@ const AppState = {
             if (!pBak.conquistas)  pBak.conquistas  = [];
             if (!pBak.data_inicio) pBak.data_inicio = pBak.ultimo_estudo || Date.now();
             if (pBak.meta_prazo === undefined) pBak.meta_prazo = null;
+            if (!Array.isArray(pBak.palavras_conhecidas)) pBak.palavras_conhecidas = [];
+            if (!pBak.vocab_diagnostico || typeof pBak.vocab_diagnostico !== 'object') pBak.vocab_diagnostico = null;
+            if (!pBak.survival_recordes || typeof pBak.survival_recordes !== 'object') pBak.survival_recordes = { maior_sequencia: 0, cartas_sobrevividas: 0 };
             return pBak;
           }
         } catch (bakErr) {
@@ -329,7 +335,10 @@ const AppState = {
       favoritos:   [],
       conquistas:  [],
       data_inicio: Date.now(),
-      meta_prazo: null
+      meta_prazo: null,
+      palavras_conhecidas: [],
+      vocab_diagnostico: null,
+      survival_recordes: { maior_sequencia: 0, cartas_sobrevividas: 0 }
     };
   },
 

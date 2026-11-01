@@ -250,6 +250,9 @@
               <button id="btn-escrita" class="fc-mode-pill" onclick="Flashcards.toggleEscrita()" title="Escrita: desenhe a palavra à mão com o dedo ou mouse" data-i18n-title="title_escrita">
                 <span>✍️ Escrita</span>
               </button>
+              <button id="btn-modo-sobrevivencia" class="fc-mode-pill fc-mode-sobrevivencia" onclick="Flashcards.iniciarSobrevivencia()" title="Sobrevivência: 5s por carta sob alta tensão!" data-i18n-title="title_sobrevivencia">
+                <span>⚡ Sobrevivência</span>
+              </button>
             </div>
 
             <button id="btn-revisao-geral" class="btn-revisao-geral-atelier" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados">
@@ -390,7 +393,12 @@
           <div id="quiz-timer-bar" class="quiz-timer-bar" style="display:none;height:3px;background:var(--cor-fogo,#E67E22);border-radius:2px;margin-top:4px;"></div>
         </div>
         <div class="pergunta-container">
-          <p class="quiz-tipo-badge" id="quiz-tipo">Vocabulary</p>
+          <div class="quiz-badge-row">
+            <p class="quiz-tipo-badge" id="quiz-tipo">Vocabulary</p>
+            <button type="button" id="btn-toggle-modo-quiz" class="btn-toggle-modo-quiz" onclick="Quiz.alternarModo()" aria-pressed="false" title="Toggle between Multiple Choice and Direct Typing (No Safety Net)">
+              <span class="modo-quiz-ico">✍️</span> <span class="modo-quiz-txt">Modo Sem Rede</span>
+            </button>
+          </div>
           <p class="quiz-pergunta" id="quiz-pergunta"></p>
           <button id="btn-ouvir-quiz" class="btn-primario" style="display:none; margin: 1rem auto; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem; gap: 0.5rem; align-items: center; justify-content: center;" onclick="App.pronunciar(document.getElementById('quiz-pergunta').dataset.ingles || document.getElementById('quiz-pergunta').dataset.italiano || document.getElementById('quiz-pergunta').textContent || '')">
             <span data-i18n="quiz_ouvir">🔊 Ouvir</span>
@@ -631,6 +639,11 @@
   <script defer src="js/app/bootstrap.js?v=1125"></script>
   <script defer src="js/core.js?v=1125"></script>
   <script defer src="js/progression.js?v=1125"></script>
+  <script defer src="js/text_normalizer.js?v=1139"></script>
+  <script defer src="js/frequency.js?v=1139"></script>
+  <script defer src="js/production.js?v=1139"></script>
+  <script defer src="js/diagnostico.js?v=1139"></script>
+  <script defer src="js/coverage_meter.js?v=1139"></script>
   <script defer src="js/ebbinghaus.js?v=1137"></script>
   <script defer src="js/flashcards.js?v=1138"></script>
   <script defer src="js/quiz.js?v=1138"></script>

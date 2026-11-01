@@ -223,9 +223,9 @@ const Grammatica = {
   },
 
   // ─────────────────────────────────────────────────────────
-  // Abrir lição (Inicia sempre na Etapa 1: Aprender a Regra)
+  // Abrir lição (Inicia no Desafio Indutivo ou na Etapa 1)
   // ─────────────────────────────────────────────────────────
-  abrirUnidade(moduloId, unidadeId, etapaInicial = 'aprender') {
+  abrirUnidade(moduloId, unidadeId, etapaInicial = null) {
     const mod  = this.dados.moduli.find(m => m.id === moduloId);
     if (!mod) return;
     const unid = (mod.lezioni || []).find(u => u.id === unidadeId);
@@ -233,7 +233,15 @@ const Grammatica = {
 
     this.moduloAtual  = mod;
     this.unidadeAtual = unid;
-    this.etapaAtual   = etapaInicial;
+
+    if (etapaInicial) {
+      this.etapaAtual = etapaInicial;
+    } else {
+      const completas = (typeof App !== 'undefined' && App.estado?.progresso?.gramatica_completadas) || [];
+      const jaFezInducao = completas.includes(unid.id + '_inducao') || completas.includes(unid.id);
+      this.etapaAtual = jaFezInducao ? 'aprender' : 'inducao';
+    }
+
     this.exIndex      = 0;
     this.acertos      = 0;
     this.respondida   = false;
@@ -257,7 +265,7 @@ const Grammatica = {
   },
 
   // ─────────────────────────────────────────────────────────
-  // HTML completo da lição com Barra de 3 Etapas Didáticas
+  // HTML completo da lição com Barra de Etapas Didáticas (Estágio 0 Indução)
   // ─────────────────────────────────────────────────────────
   _htmlUnidade(u) {
     const mod = this.moduloAtual;
@@ -278,9 +286,14 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
-    // Barra de Navegação das 3 Etapas Didáticas
+    // Barra de Navegação das Etapas Didáticas com Estágio 0: Desafio Indutivo
     html += `
       <div class="gram-steps-bar" role="tablist" aria-label="Etapas da lição">
+        <button class="gram-step-btn ${this.etapaAtual === 'inducao' ? 'active' : ''}"
+                onclick="Grammatica.irParaEtapa('inducao')" role="tab" aria-selected="${this.etapaAtual === 'inducao'}">
+          <span class="gram-step-num">🎯</span>
+          <span class="gram-step-txt">Desafio Indutivo</span>
+        </button>
         <button class="gram-step-btn ${this.etapaAtual === 'aprender' ? 'active' : ''}"
                 onclick="Grammatica.irParaEtapa('aprender')" role="tab" aria-selected="${this.etapaAtual === 'aprender'}">
           <span class="gram-step-num">1</span>
@@ -299,7 +312,9 @@ const Grammatica = {
       </div>`;
 
     // Conteúdo da Etapa Ativa
-    if (this.etapaAtual === 'aprender') {
+    if (this.etapaAtual === 'inducao') {
+      html += this._htmlEtapaInducao(u);
+    } else if (this.etapaAtual === 'aprender') {
       html += this._htmlEtapaAprender(u);
     } else if (this.etapaAtual === 'exemplos') {
       html += this._htmlEtapaExemplos(u);
@@ -309,6 +324,131 @@ const Grammatica = {
 
     html += '</div>'; // lesson-layout
     return html;
+  },
+
+  _htmlEtapaInducao(u) {
+    let casoEn = '';
+    let pergunta = '';
+    let opcoes = [];
+    let explicacao = '';
+    let respostaIdx = 0;
+
+    if (u.inducao && typeof u.inducao === 'object') {
+      casoEn = u.inducao.caso_en || u.inducao.caso_it || '';
+      pergunta = u.inducao.pergunta || 'Qual é a regra aqui?';
+      opcoes = Array.isArray(u.inducao.opcoes) ? u.inducao.opcoes : [];
+      respostaIdx = u.inducao.resposta_idx ?? 0;
+      explicacao = u.inducao.explicacao || '';
+    } else if (Array.isArray(u.armadilhas) && u.armadilhas.length > 0) {
+      const a = u.armadilhas[0];
+      if (a.pt && (a.en || a.it)) {
+        casoEn = `${a.pt} ➔ ${a.en || a.it}`;
+      } else if (a.errado && a.certo) {
+        casoEn = `❌ ${a.errado}  vs  ✅ ${a.certo}`;
+      }
+      pergunta = 'Qual padrão gramatical ou de uso explica esta diferença no inglês?';
+      opcoes = [
+        a.motivo || 'Regra estrutural específica do inglês',
+        'É uma exceção sem regra fixa',
+        'Segue a tradução literal palavra por palavra'
+      ];
+      respostaIdx = 0;
+      explicacao = a.motivo || 'O inglês possui padrões estruturais e preposições idiomáticas próprias!';
+    } else {
+      casoEn = u.titulo || 'Estrutura gramatical em contraste';
+      pergunta = 'O que você intui sobre a formação desta regra no inglês?';
+      opcoes = [
+        'Existe um padrão estrutural próprio do inglês diferente do português',
+        'Funciona exatamente igual ao português em todos os casos'
+      ];
+      respostaIdx = 0;
+      explicacao = 'Exato! O inglês tem sintaxe e regras estruturais próprias.';
+    }
+
+    let h = `
+      <div class="gram-card gram-inducao-card" role="region" aria-label="Desafio Indutivo Gramatical">
+        <div class="gram-inducao-badge">🎯 DESAFIO INDUTIVO · INTUIÇÃO PRIMEIRO</div>
+        <h3 class="gram-inducao-titulo">Antes da teoria formal: deduza a regra!</h3>
+        <p class="gram-inducao-sub">Observe o caso real em inglês abaixo e tente adivinhar o porquê antes de ler a explicação.</p>
+
+        <div class="gram-inducao-contraste-box">
+          <span class="gram-inducao-caso-label">Contraste Linguístico:</span>
+          <div class="gram-inducao-caso-texto">${casoEn}</div>
+        </div>
+
+        <div class="gram-inducao-pergunta-box">
+          <h4 class="gram-inducao-pergunta">${pergunta}</h4>
+          <div class="gram-inducao-opcoes" id="gram-inducao-opcoes-grid">`;
+
+    opcoes.forEach((op, idx) => {
+      h += `
+        <button type="button" class="gram-inducao-opcao" onclick="Grammatica.responderInducao(${idx})">
+          <span class="gram-inducao-opt-num">${String.fromCharCode(65 + idx)}</span>
+          <span class="gram-inducao-opt-txt">${op}</span>
+        </button>`;
+    });
+
+    h += `
+          </div>
+        </div>
+
+        <div id="gram-inducao-feedback" class="gram-inducao-feedback" role="status" aria-live="polite" style="display:none"></div>
+      </div>`;
+
+    return h;
+  },
+
+  responderInducao(opcaoIdx) {
+    const u = this.unidadeAtual;
+    if (!u) return;
+
+    const feedback = document.getElementById('gram-inducao-feedback');
+    const botoes = document.querySelectorAll('.gram-inducao-opcao');
+    botoes.forEach(b => { if (b) b.disabled = true; });
+
+    const respostaEsperadaIdx = u.inducao?.resposta_idx ?? 0;
+    const acertou = opcaoIdx === respostaEsperadaIdx;
+
+    if (feedback) {
+      feedback.style.display = 'block';
+      if (acertou) {
+        feedback.className = 'gram-inducao-feedback correto';
+        feedback.innerHTML = `
+          <div class="gram-feedback-header">🎉 <strong>Awesome! Perfect Deduction!</strong></div>
+          <p>${u.inducao?.explicacao || 'Você deduziu com precisão o princípio gramatical do inglês antes mesmo de ler a teoria.'}</p>
+          <button class="btn-primario gram-btn-proxima-etapa" onclick="Grammatica.irParaEtapa('aprender')">
+            📖 Ver a Explicação e Exemplos →
+          </button>
+        `;
+
+        if (typeof App !== 'undefined' && typeof App.ganharXP === 'function') {
+          App.ganharXP(25);
+        } else if (typeof Progressao !== 'undefined' && typeof Progressao.ganhar === 'function') {
+          Progressao.ganhar(25);
+        }
+
+        if (typeof App !== 'undefined' && App.estado?.progresso) {
+          if (!App.estado.progresso.gramatica_completadas) {
+            App.estado.progresso.gramatica_completadas = [];
+          }
+          const tag = u.id + '_inducao';
+          if (!App.estado.progresso.gramatica_completadas.includes(tag)) {
+            App.estado.progresso.gramatica_completadas.push(tag);
+            if (typeof App.salvarProgresso === 'function') App.salvarProgresso();
+          }
+        }
+      } else {
+        feedback.className = 'gram-inducao-feedback erro';
+        feedback.innerHTML = `
+          <div class="gram-feedback-header">💡 <strong>Armadilha de L1 Detectada!</strong></div>
+          <p>${u.inducao?.feedback_erro || 'Você pensou na regra do português, mas no inglês a estrutura tem padrão diferente!'}</p>
+          <p class="gram-feedback-dica">${u.inducao?.explicacao || 'Não se preocupe: o cérebro consolida 3x mais após um erro intuitivo.'}</p>
+          <button class="btn-primario gram-btn-proxima-etapa" onclick="Grammatica.irParaEtapa('aprender')">
+            📖 Entender a Regra e Corrigir a Intuição →
+          </button>
+        `;
+      }
+    }
   },
 
   // ─────────────────────────────────────────────────────────

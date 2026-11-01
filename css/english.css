@@ -4092,4 +4092,680 @@ body.dark-mode {
   transition: all 0.4s ease;
 }
 
+/* =============================================================================
+   QUIZ DIRECT TYPING MODE ("SEM REDE" / NO SAFETY NET)
+   ============================================================================= */
+
+.quiz-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--esp-xs, 0.5rem);
+  margin-bottom: var(--esp-sm, 0.75rem);
+}
+
+.btn-toggle-modo-quiz {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--fonte-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-inchiostro-claro, #555);
+  background: var(--cor-marmore-escuro, #EFECE6);
+  border: 1.5px solid var(--cor-pietra, #D5CEBF);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 38px;
+  touch-action: manipulation;
+}
+
+.btn-toggle-modo-quiz:hover {
+  background: #FFF;
+  border-color: #1A365D;
+  color: #1A365D;
+}
+
+.btn-toggle-modo-quiz.ativo,
+.btn-toggle-modo-quiz[aria-pressed="true"] {
+  background: #1A365D;
+  border-color: #0F2342;
+  color: #FFF;
+  box-shadow: 0 2px 6px rgba(26, 54, 93, 0.25);
+}
+
+.quiz-direct-typing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-md, 1rem);
+  margin: var(--esp-md, 1rem) 0;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.quiz-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.quiz-input-resposta {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--cor-inchiostro, #2C1810);
+  background-color: #FFF;
+  border: 2px solid var(--cor-pietra, #D5CEBF);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.quiz-input-resposta:focus {
+  border-color: #1A365D;
+  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.quiz-input-resposta:disabled {
+  background-color: #F5F3EF;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.btn-quiz-enviar {
+  align-self: center;
+  min-height: 44px;
+  min-width: 180px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 24px;
+}
+
+.quiz-feedback {
+  min-height: 24px;
+  font-family: var(--fonte-ui, sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  padding: 0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.quiz-feedback:empty {
+  display: none;
+}
+
+.quiz-feedback.correto {
+  display: block;
+  background: rgba(39, 174, 96, 0.12);
+  border: 1.5px solid #27AE60;
+  color: #1E8449;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.quiz-feedback.incorreto,
+.quiz-feedback.errado {
+  display: block;
+  background: rgba(231, 76, 60, 0.12);
+  border: 1.5px solid #E74C3C;
+  color: #C0392B;
+  padding: 0.75rem 1rem;
+}
+
+.quiz-feedback.alerta {
+  display: block;
+  background: rgba(243, 156, 18, 0.12);
+  border: 1.5px solid #F39C12;
+  color: #B7950B;
+  padding: 0.75rem 1rem;
+}
+
+.quiz-diag-detalhe {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #2C1810;
+  padding-left: 0.5rem;
+  border-left: 2px solid #E74C3C;
+}
+
+.quiz-fuzzy-aviso {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #666;
+}
+
+@keyframes quizInputShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.quiz-input-resposta.shake {
+  animation: quizInputShake 0.35s ease-in-out;
+  border-color: #E74C3C;
+}
+
+/* =============================================================================
+   M2: DESAFIO INDUTIVO & MODO SOBREVIVÊNCIA
+   ============================================================================= */
+
+.gram-inducao-card {
+  background: #FFF;
+  border: 2px solid #E5D8C3;
+  border-left: 6px solid #C5A059;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-top: 1rem;
+}
+
+.gram-inducao-badge {
+  display: inline-block;
+  background: #C5A059;
+  color: #FFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.gram-inducao-titulo {
+  font-size: 1.35rem;
+  color: #1A365D;
+  margin-bottom: 0.35rem;
+}
+
+.gram-inducao-sub {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.25rem;
+}
+
+.gram-inducao-contraste-box {
+  background: #FAF7F2;
+  border: 1.5px solid #DFC9AC;
+  border-left: 4px solid #1A365D;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.gram-inducao-caso-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1A365D;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.gram-inducao-caso-texto {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: #2C1810;
+  line-height: 1.4;
+}
+
+.gram-inducao-pergunta {
+  font-size: 1.1rem;
+  color: #2C1810;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.gram-inducao-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.gram-inducao-opcao {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #FFF;
+  border: 1.5px solid #DDD0BF;
+  border-radius: 8px;
+  padding: 0.75rem 1.1rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #2C1810;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gram-inducao-opcao:hover:not(:disabled) {
+  border-color: #1A365D;
+  background: #F8FAFC;
+  transform: translateX(4px);
+}
+
+.gram-inducao-opt-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #EFECE6;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #2C1810;
+  flex-shrink: 0;
+}
+
+.gram-inducao-feedback {
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.gram-inducao-feedback.correto {
+  background: #E8F5E9;
+  border: 1.5px solid #81C784;
+  color: #1B5E20;
+}
+
+.gram-inducao-feedback.erro {
+  background: #FFF3E0;
+  border: 1.5px solid #FFB74D;
+  color: #E65100;
+}
+
+.gram-btn-proxima-etapa {
+  margin-top: 1rem;
+  min-height: 44px;
+}
+
+/* ── Modo Sobrevivência ── */
+.fc-survival-arena {
+  background: #FFF;
+  border: 2px solid #1A365D;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  max-width: 680px;
+  margin: 1.5rem auto;
+  position: relative;
+}
+
+.fc-survival-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.fc-survival-vidas {
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+}
+
+.fc-survival-combo-badge {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2C1810;
+  background: #EFECE6;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+}
+
+.fc-survival-combo-badge.combo-fogo {
+  background: #FF5722;
+  color: #FFF;
+}
+
+.fc-survival-timer-track {
+  width: 100%;
+  height: 10px;
+  background: #E0D3C1;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.fc-survival-timer-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  border-radius: 6px;
+  transition: width 0.05s linear;
+}
+
+.fc-survival-timer-bar.urgencia-tempo {
+  background: linear-gradient(90deg, #D32F2F, #FF1744);
+}
+
+.fc-survival-card-box {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.fc-survival-termo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 0.5rem;
+}
+
+.fc-survival-prompt {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.fc-survival-opcoes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.fc-survival-opcao {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #FFF;
+  border: 1.5px solid #DFC9AC;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fc-survival-opcao:hover {
+  background: #F0F4F8;
+  border-color: #1A365D;
+}
+
+.fc-survival-gameover-card {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.fc-survival-lapsos {
+  text-align: left;
+  background: #FFF8E7;
+  border: 1px solid #DFC9AC;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.fc-survival-lapsos ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0 0;
+}
+
+/* ============================================================
+   O ESPELHO — DIAGNÓSTICO & MEDIDOR DE COBERTURA LÉXICA
+   ============================================================ */
+
+.modal-backdrop-diagnostico {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-backdrop-diagnostico.ativo {
+  display: flex;
+}
+
+.modal-card-diagnostico {
+  background: #FCFBF9;
+  border: 2px solid #C5A059;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.diag-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+}
+
+.diag-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1A365D;
+}
+
+.diag-progresso-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(197, 160, 89, 0.2);
+}
+
+#diag-progresso-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1A365D, #C5A059);
+  transition: width 0.2s ease-out;
+}
+
+.diag-palco {
+  padding: 1.5rem;
+}
+
+.diag-item-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.diag-step-counter {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.diag-palavra-destaque {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1A365D;
+  margin: 0.5rem 0;
+}
+
+.diag-pergunta-prompt {
+  font-size: 1.05rem;
+  color: #2C1810;
+  margin-bottom: 0.5rem;
+}
+
+.diag-botoes-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-diag-nao, .btn-diag-sim {
+  flex: 1;
+  max-width: 180px;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 48px;
+}
+
+.btn-diag-nao {
+  background: #FFF;
+  border: 2px solid #E74C3C;
+  color: #C0392B;
+}
+
+.btn-diag-nao:hover {
+  background: #FDEDEC;
+}
+
+.btn-diag-sim {
+  background: #27AE60;
+  border: 2px solid #27AE60;
+  color: #FFF;
+}
+
+.btn-diag-sim:hover {
+  background: #219653;
+}
+
+.diag-dica-honestidade {
+  font-size: 0.8rem;
+  color: #7F8C8D;
+  margin-top: 0.5rem;
+}
+
+.diag-resultado-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+.diag-resultado-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #C5A059;
+  letter-spacing: 0.1em;
+}
+
+.diag-cefr-destaque {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FFF;
+  background: linear-gradient(135deg, #1A365D, #0A192F);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(26, 54, 93, 0.35);
+  border: 3px solid #C5A059;
+}
+
+.diag-metro-track {
+  width: 100%;
+  height: 12px;
+  background: #E0D3C1;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.75rem 0 0.25rem 0;
+}
+
+.diag-metro-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1A365D, #27AE60);
+  border-radius: 6px;
+}
+
+.diag-metro-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: #777;
+  width: 100%;
+}
+
+.espelho-cobertura-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.badge-cobertura-verde {
+  background: #E8F8F5;
+  border: 1px solid #27AE60;
+  color: #1E8449;
+}
+
+.badge-cobertura-amarela {
+  background: #FEF9E7;
+  border: 1px solid #F39C12;
+  color: #B7950B;
+}
+
+.badge-cobertura-vermelha {
+  background: #FDEDEC;
+  border: 1px solid #E74C3C;
+  color: #C0392B;
+}
+
+.espelho-unlock-keys-box {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px dashed #C5A059;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  text-align: left;
+}
+
+.unlock-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2C1810;
+}
+
+.unlock-chips-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.unlock-chip {
+  background: #FFF;
+  border: 1px solid #DFC9AC;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.78rem;
+  color: #2C1810;
+}
+
+.unlock-chip .chip-gain {
+  color: #27AE60;
+  font-weight: 700;
+  font-size: 0.72rem;
+  margin-left: 0.2rem;
+}
+
+
 

@@ -222,6 +222,15 @@ const StoriesRenderer = {
 
     const isFim = isMobile ? (this.paginaAtual >= total) : (this.paginaAtual + 1 >= total);
 
+    let coverageBadgeHtml = '';
+    if (typeof CoverageMeter !== 'undefined' && typeof TextNormalizer !== 'undefined' && Array.isArray(s.testo)) {
+      const fullText = s.testo.map(p => p.ingles || p.english || p.italiano || '').join(' ');
+      const tokens = TextNormalizer.tokenize(fullText);
+      const known = CoverageMeter.getUserKnownLemmas();
+      const covRes = CoverageMeter.calculate(tokens, known);
+      coverageBadgeHtml = CoverageMeter.renderBadgeHTML(covRes);
+    }
+
     let overlay = document.getElementById('book-reader-overlay');
     if (!overlay) {
       overlay = document.createElement('div');
@@ -238,7 +247,7 @@ const StoriesRenderer = {
           </button>
           <div class="book-top-title-wrap">
             <span class="book-top-title">${tituloExibido}</span>
-            <span class="book-top-subtitle">${autorExibido} · ${s.nivel}</span>
+            <span class="book-top-subtitle">${autorExibido} · ${s.nivel} ${coverageBadgeHtml}</span>
           </div>
         </div>
 

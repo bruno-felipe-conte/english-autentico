@@ -3,6 +3,9 @@
 // ============================================================
 
 const Quiz = {
+  _bloqueioAvanco: false,
+  modoDireto: false,            // true = Direct Typing ("No Safety Net"), false = Multiple Choice
+  _submetendoDigitacao: false,  // Debounce guard for Enter / Click
   temploAtual: null,
   perguntas: [],       // 10 questions for this session
   perguntaAtual: 0,
@@ -13,6 +16,239 @@ const Quiz = {
   abaSeletor: 'templos', // 'templos' | 'morfologia' | 'listening' | 'gramatica' | 'verbi' | 'phrasal'
   _indiceAtual: 0,     // para restauração i18n
   _autoAdvanceTimer: null,
+
+  // ── Mode Toggle: Direct Typing (Active Production) ───────────
+  inicializarModoDireto() {
+    try {
+      this.modoDireto = localStorage.getItem('en_quiz_modo_direto') === 'true';
+    } catch (_) {
+      this.modoDireto = false;
+    }
+  },
+
+  alternarModo(novoModo) {
+    if (typeof novoModo === 'boolean') {
+      this.modoDireto = novoModo;
+    } else {
+      this.modoDireto = !this.modoDireto;
+    }
+    try {
+      localStorage.setItem('en_quiz_modo_direto', this.modoDireto ? 'true' : 'false');
+    } catch (_) {}
+
+    this._atualizarBotaoModo();
+    this._aplicarModoVisual();
+  },
+
+  _atualizarBotaoModo() {
+    if (typeof document === 'undefined') return;
+    const btn = document.getElementById('btn-toggle-modo-quiz');
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', this.modoDireto ? 'true' : 'false');
+    btn.classList.toggle('ativo', this.modoDireto);
+    const txt = btn.querySelector('.modo-quiz-txt');
+    if (txt) {
+      txt.textContent = this.modoDireto ? 'Modo Sem Rede (Ativo)' : 'Modo Sem Rede';
+    }
+  },
+
+  _aplicarModoVisual() {
+    if (typeof document === 'undefined') return;
+    const grid = document.getElementById('opcoes-grid');
+    let directTyping = document.getElementById('quiz-direct-typing');
+    const input = document.getElementById('quiz-input-resposta');
+
+    if (!directTyping && this.modoDireto) {
+      this._injetarDirectTypingDOM();
+      directTyping = document.getElementById('quiz-direct-typing');
+    }
+
+    if (this.modoDireto) {
+      if (grid) grid.style.display = 'none';
+      if (directTyping) directTyping.style.display = 'flex';
+      this._vincularEventosDirectTyping();
+      if (input && !this.respondido) {
+        input.value = '';
+        input.disabled = false;
+        setTimeout(() => input.focus(), 60);
+      }
+    } else {
+      if (grid) grid.style.display = 'grid';
+      if (directTyping) directTyping.style.display = 'none';
+    }
+  },
+
+  _injetarDirectTypingDOM() {
+    let directTyping = document.getElementById('quiz-direct-typing');
+    const container = document.getElementById('quiz-container');
+    if (directTyping || !container) return;
+
+    directTyping = document.createElement('div');
+    directTyping.id = 'quiz-direct-typing';
+    directTyping.className = 'quiz-direct-typing';
+    directTyping.innerHTML = `
+      <div class="quiz-input-wrapper">
+        <label for="quiz-input-resposta" class="sr-only">Type in English</label>
+        <input type="text" id="quiz-input-resposta" class="quiz-input-resposta" placeholder="Type in English..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-describedby="quiz-feedback" />
+      </div>
+      <button type="button" id="btn-quiz-enviar" class="btn-primario btn-quiz-enviar" onclick="Quiz.verificarDigitacao()">Check (Enter)</button>
+    `;
+
+    const feedback = document.getElementById('quiz-feedback');
+    if (feedback) {
+      container.insertBefore(directTyping, feedback);
+    } else {
+      const expContainer = document.getElementById('explicacao-container');
+      container.insertBefore(directTyping, expContainer || null);
+    }
+
+    this._vincularEventosDirectTyping();
+  },
+
+  _vincularEventosDirectTyping() {
+    const input = document.getElementById('quiz-input-resposta');
+    const btnEnviar = document.getElementById('btn-quiz-enviar');
+
+    if (input && !input._bound) {
+      input._bound = true;
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          e.stopPropagation();
+          if (!this.respondido) {
+            this.verificarDigitacao();
+          } else {
+            this.proximaPergunta();
+          }
+        }
+      });
+    }
+
+    if (btnEnviar && !btnEnviar._bound) {
+      btnEnviar._bound = true;
+      btnEnviar.onclick = (e) => {
+        e.preventDefault();
+        if (!this.respondido) {
+          this.verificarDigitacao();
+        } else {
+          this.proximaPergunta();
+        }
+      };
+    }
+  },
+
+  verificarDigitacao() {
+    if (this.respondido) return;
+
+    if (this._submetendoDigitacao) return;
+    this._submetendoDigitacao = true;
+    setTimeout(() => { this._submetendoDigitacao = false; }, 250);
+
+    const input = document.getElementById('quiz-input-resposta');
+    const feedback = document.getElementById('quiz-feedback');
+    if (!input) return;
+
+    const valorDigitado = input.value.trim();
+
+    if (!valorDigitado) {
+      input.classList.add('shake');
+      setTimeout(() => input.classList.remove('shake'), 400);
+      if (feedback) {
+        feedback.className = 'quiz-feedback alerta';
+        feedback.setAttribute('role', 'status');
+        feedback.textContent = 'Digite sua resposta antes de verificar.';
+      }
+      return;
+    }
+
+    const p = this.perguntas[this.perguntaAtual];
+    if (!p) return;
+
+    this.respondido = true;
+    this._bloqueioAvanco = false;
+    input.disabled = true;
+
+    const validator = (typeof ProductionValidator !== 'undefined' ? ProductionValidator : null) ||
+                      (typeof globalThis !== 'undefined' && globalThis.ProductionValidator) ||
+                      (typeof window !== 'undefined' && window.ProductionValidator);
+
+    const esperado = p.resposta_correta || p.ingles || '';
+    const variantes = (p.variantes || []).slice();
+    if (p.ingles && p.ingles !== esperado && !variantes.includes(p.ingles)) {
+      variantes.push(p.ingles);
+    }
+
+    let check;
+    if (validator && typeof validator.validate === 'function') {
+      check = validator.validate(valorDigitado, esperado, variantes);
+    } else {
+      const normInput = valorDigitado.toLowerCase().replace(/['’]/g, "'");
+      const normExp = esperado.toLowerCase().replace(/['’]/g, "'");
+      const correto = normInput === normExp;
+      check = {
+        isCorrect: correto,
+        isFuzzy: false,
+        distance: correto ? 0 : 1,
+        diagnostic: correto ? null : `Expected: ${esperado}`
+      };
+    }
+
+    const btnEnviar = document.getElementById('btn-quiz-enviar');
+    if (btnEnviar) {
+      btnEnviar.textContent = 'Continue (Enter) →';
+    }
+
+    if (check.isCorrect) {
+      this.pontuacao++;
+      this.combo++;
+      const mult = this.combo >= 5 ? 3 : this.combo >= 3 ? 2 : 1;
+      const xpBase = p.xp_recompensa || 20;
+      this.xpTotal += xpBase * mult;
+
+      if (typeof SomFeedback !== 'undefined') SomFeedback.correto();
+
+      if (feedback) {
+        feedback.setAttribute('role', 'status');
+        feedback.className = 'quiz-feedback correto';
+        if (check.isFuzzy) {
+          feedback.innerHTML = `<span class="acerto-icon">🎉</span> Awesome! Correct answer 🎉<br><small class="quiz-fuzzy-aviso">Watch your spelling: expected "<strong>${esperado}</strong>", you typed "${valorDigitado}".</small>`;
+        } else {
+          feedback.textContent = 'Awesome! Correct answer 🎉';
+        }
+      }
+    } else {
+      this.combo = 0;
+      if (typeof SomFeedback !== 'undefined') SomFeedback.errado();
+
+      if (feedback) {
+        feedback.setAttribute('role', 'status');
+        feedback.className = 'quiz-feedback incorreto';
+        let diagHtml = '';
+        if (check.diagnostic) {
+          diagHtml = `<div class="quiz-diag-detalhe">${check.diagnostic}</div>`;
+        }
+        feedback.innerHTML = `<span class="erro-icon">❌</span> Incorrect. Correct answer: <strong>${esperado}</strong>.${diagHtml}`;
+      }
+    }
+
+    this._atualizarCombo();
+
+    const explicacaoContainer = document.getElementById('explicacao-container');
+    const explicacaoEl = document.getElementById('quiz-explicacao');
+    if (explicacaoContainer) {
+      explicacaoContainer.style.display = 'block';
+      explicacaoContainer.setAttribute('role', 'status');
+      explicacaoContainer.setAttribute('aria-live', 'polite');
+    }
+    if (explicacaoEl) {
+      explicacaoEl.textContent = p.explicacao || '';
+    }
+
+    const btnContinuar = explicacaoContainer?.querySelector('button');
+    if (btnContinuar) {
+      setTimeout(() => btnContinuar.focus(), 80);
+    }
+  },
 
   // ── Smart Retractable Quiz Bar (Zero-Scroll UX) ─────────────
   toggleSeletor() {
@@ -305,6 +541,9 @@ const Quiz = {
       timerBar.style.transition = 'width 30s linear';
       timerBar.style.width = '0%';
     }
+
+    // Aplica o Modo Sem Rede (Digitação Direta) se ativado
+    this._aplicarModoVisual();
   },
 
   // ── Check the selected answer ─────────────────────────────
@@ -420,6 +659,17 @@ const Quiz = {
       timerBar.style.transition = 'none';
       timerBar.style.width = '100%';
     }
+
+    const input = document.getElementById('quiz-input-resposta');
+    if (input) {
+      input.value = '';
+      input.disabled = false;
+    }
+    const btnEnviar = document.getElementById('btn-quiz-enviar');
+    if (btnEnviar) {
+      btnEnviar.textContent = 'Check (Enter)';
+    }
+
     this.perguntaAtual++;
     if (this.perguntaAtual >= this.perguntas.length) {
       this.mostrarResultado();
@@ -1175,23 +1425,32 @@ const Quiz = {
   }
 };
 
-document.addEventListener('i18n:changed', () => {
-  const seletor   = document.getElementById('quiz-templo-selector');
-  const resultado = document.getElementById('quiz-resultado');
-  const pergunta  = document.getElementById('quiz-pergunta');
-  if (!seletor && !resultado && !pergunta) return;
+if (typeof document !== 'undefined') {
+  document.addEventListener('i18n:changed', () => {
+    const seletor   = document.getElementById('quiz-templo-selector');
+    const resultado = document.getElementById('quiz-resultado');
+    const pergunta  = document.getElementById('quiz-pergunta');
+    if (!seletor && !resultado && !pergunta) return;
 
-  if (resultado && resultado.style.display !== 'none') {
-    Quiz.mostrarResultado(true); // somenteUI — não regrava XP/streak/histórico
-  } else if (document.getElementById('quiz-container')?.style.display !== 'none') {
-    Quiz.mostrarPergunta();
-  } else {
-    Quiz.renderizarSeletor();
-  }
-});
+    if (resultado && resultado.style.display !== 'none') {
+      Quiz.mostrarResultado(true); // somenteUI — não regrava XP/streak/histórico
+    } else if (document.getElementById('quiz-container')?.style.display !== 'none') {
+      Quiz.mostrarPergunta();
+    } else {
+      Quiz.renderizarSeletor();
+    }
+  });
+}
 
-
-window.Quiz = Quiz;
+if (typeof window !== 'undefined') {
+  window.Quiz = Quiz;
+}
+if (typeof globalThis !== 'undefined') {
+  globalThis.Quiz = Quiz;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Quiz;
+}
 
 if (typeof document !== 'undefined') {
   const initQuiz = () => {

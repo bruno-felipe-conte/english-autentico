@@ -149,6 +149,43 @@ const Profile = {
           </button>
         </div>
 
+        <!-- O Espelho / Diagnóstico de Vocabulário -->
+        <div class="profile-card profilo-card" id="profilo-card-espelho">
+          <div class="profile-card-title profilo-card-titulo">🔬 The Mirror • English CEFR & Real Vocabulary</div>
+          ${(() => {
+            const diag = (typeof App !== 'undefined' && App.estado?.progresso?.vocab_diagnostico);
+            if (diag && diag.confiavel && diag.estimativa_passiva) {
+              return `
+                <div style="display:flex;align-items:center;gap:1.25rem;margin:0.75rem 0;">
+                  <div style="font-size:1.8rem;font-weight:900;color:#FFF;background:linear-gradient(135deg, #1B365D, #0A192F);width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(27,54,93,0.3);flex-shrink:0;">
+                    ${diag.nivel_cefr || 'A1'}
+                  </div>
+                  <div>
+                    <div style="font-weight:700;font-size:1.05rem;color:var(--cor-inchiostro, #2C1810);">
+                      ${diag.estimativa_passiva.toLocaleString()} words recognized
+                    </div>
+                    <div style="font-size:0.82rem;color:#666;margin-top:2px;">
+                      Active production: ~${diag.estimativa_ativa.toLocaleString()} lemmata • ${Math.round((diag.estimativa_passiva / 3000) * 100)}% of autonomy (Laufer 95%)
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn-secondario" style="width:100%;font-size:0.85rem;margin-top:0.5rem;" onclick="VocabDiagnostic.iniciar()">
+                  🔄 Retake Vocabulary Diagnostic (&lt; 3 min)
+                </button>
+              `;
+            } else {
+              return `
+                <p style="font-size:0.85rem;color:#666;margin:0.5rem 0 0.75rem 0;line-height:1.5;">
+                  You haven't measured your objective vocabulary gap yet. Take the 3-minute adaptive test to discover your CEFR level (A1→C2) and distance to autonomous fluency!
+                </p>
+                <button type="button" class="btn-primario" style="width:100%;font-size:0.88rem;" onclick="VocabDiagnostic.iniciar()">
+                  ⚡ Quick Diagnostic (&lt; 3 min)
+                </button>
+              `;
+            }
+          })()}
+        </div>
+
         <!-- Categories -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">${I18n.t('prof_cats_est')}</div>
