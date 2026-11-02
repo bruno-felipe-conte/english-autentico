@@ -60,6 +60,91 @@ describe('The Mirror: Vocabulary Diagnostic (Abbott CAT)', () => {
     assert.equal(score.estimativa_passiva, 0); // Penalizado por fraude
     assert.equal(score.nivel_cefr, 'A1');
   });
+
+  test('Expanded bank includes exactly 25 advanced words and 25 authentic contextual sentences', () => {
+    assert.equal(Array.isArray(VocabDiagnostic.PALAVRAS_AVANCADAS), true);
+    assert.equal(VocabDiagnostic.PALAVRAS_AVANCADAS.length, 25, 'Must contain exactly 25 advanced words');
+
+    assert.equal(Array.isArray(VocabDiagnostic.FRASES_DIAGNOSTICO), true);
+    assert.equal(VocabDiagnostic.FRASES_DIAGNOSTICO.length, 25, 'Must contain exactly 25 contextual sentences');
+
+    // All sentences must have en, pt, foco, and cefr
+    VocabDiagnostic.FRASES_DIAGNOSTICO.forEach((f, idx) => {
+      assert.ok(f.en && f.en.length > 10, `Sentence ${idx} must have authentic English content`);
+      assert.ok(f.pt && f.pt.length > 5, `Sentence ${idx} must have Portuguese explanation`);
+      assert.ok(f.foco, `Sentence ${idx} must have grammatical focus`);
+      assert.ok(f.cefr, `Sentence ${idx} must define target CEFR level`);
+    });
+
+    const generated = VocabDiagnostic.gerarItensTeste();
+    assert.equal(generated.length, 62, 'Total generated items must be 25 words + 25 sentences + 12 pseudowords = 62');
+    const frases = generated.filter(i => i.tipo === 'frase');
+    const palavras = generated.filter(i => i.tipo === 'palavra' && !i.isPseudoword);
+    const pseudo = generated.filter(i => i.isPseudoword);
+    assert.equal(frases.length, 25);
+    assert.equal(palavras.length, 25);
+    assert.equal(pseudo.length, 12);
+  });
+
+  test('Psychometric scoring integrates sentence comprehension with vocabulary for holistic CEFR diagnosis', () => {
+    // 25 palavras reais conhecidas
+    const respostas = VocabDiagnostic.PALAVRAS_AVANCADAS.map(p => ({
+      tipo: 'palavra',
+      word: p.word,
+      isPseudoword: false,
+      known: true,
+      band: p.band
+    }));
+
+    // 12 pseudopalavras rejeitadas honestamente
+    VocabDiagnostic.PSEUDOPALAVRAS.forEach(w => {
+      respostas.push({
+        tipo: 'palavra',
+        word: w,
+        isPseudoword: true,
+        known: false
+      });
+    });
+
+    // Cenário 1: Compreensão plena de frases (25 de 25)
+    const respostasAltaSintaxe = [
+      ...respostas,
+      ...VocabDiagnostic.FRASES_DIAGNOSTICO.map(f => ({
+        tipo: 'frase',
+        word: f.en,
+        isPseudoword: false,
+        known: true,
+        cefr: f.cefr
+      }))
+    ];
+
+    const scoreAlto = VocabDiagnostic.calcularScore(respostasAltaSintaxe);
+    assert.equal(scoreAlto.confiavel, true);
+    assert.equal(scoreAlto.total_frases, 25);
+    assert.equal(scoreAlto.frases_acertos, 25);
+    assert.equal(scoreAlto.taxa_frases, 1.0);
+    assert.equal(scoreAlto.nivel_cefr, 'C1/C2');
+
+    // Cenário 2: Vocabulário conhecido, mas baixa compreensão sintática de frases (apenas 5 de 25)
+    const respostasBaixaSintaxe = [
+      ...respostas,
+      ...VocabDiagnostic.FRASES_DIAGNOSTICO.map((f, i) => ({
+        tipo: 'frase',
+        word: f.en,
+        isPseudoword: false,
+        known: i < 5, // apenas 5 acertos (20%)
+        cefr: f.cefr
+      }))
+    ];
+
+    const scoreModerado = VocabDiagnostic.calcularScore(respostasBaixaSintaxe);
+    assert.equal(scoreModerado.confiavel, true);
+    assert.equal(scoreModerado.frases_acertos, 5);
+    assert.equal(scoreModerado.taxa_frases, 0.2);
+    // Não pode atingir C1/C2 sem compreensão de frases!
+    assert.notEqual(scoreModerado.nivel_cefr, 'C1/C2');
+    assert.ok(['A1', 'A2', 'B1'].includes(scoreModerado.nivel_cefr));
+  });
 });
 
 describe('The Mirror: Authentic Text Lexical Coverage Meter (Laufer 95%)', () => {

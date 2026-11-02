@@ -4596,6 +4596,70 @@ body.dark-mode {
   margin: 0.5rem 0;
 }
 
+.diag-tipo-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: rgba(0, 62, 138, 0.1);
+  color: var(--cor-veneziano-escuro, #003E8A);
+  border: 1px solid rgba(0, 62, 138, 0.25);
+  text-transform: uppercase;
+}
+
+body.dark-mode .diag-tipo-badge {
+  background: rgba(74, 144, 226, 0.15);
+  color: #85B8F2;
+  border-color: rgba(74, 144, 226, 0.3);
+}
+
+.diag-frase-foco {
+  font-size: 0.85rem;
+  color: var(--cor-ouro-envelhecido, #C5A059);
+  background: rgba(197, 160, 89, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  border: 1px dashed rgba(197, 160, 89, 0.3);
+}
+
+.diag-frase-destaque {
+  margin: 0.5rem 0;
+  padding: 1.1rem 1.4rem;
+  background: rgba(0, 62, 138, 0.05);
+  border-left: 4px solid var(--cor-ouro-envelhecido, #C5A059);
+  border-radius: 8px;
+  font-family: var(--fonte-titulos, 'EB Garamond', Georgia, serif);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--cor-inchiostro, #0A192F);
+  font-style: italic;
+  max-width: 480px;
+}
+
+body.dark-mode .diag-frase-destaque {
+  background: rgba(255, 255, 255, 0.05);
+  color: #F8FAFC;
+  border-left-color: #D4A843;
+}
+
+.diag-frases-resultado {
+  background: rgba(39, 174, 96, 0.1);
+  border: 1px solid rgba(39, 174, 96, 0.3);
+  color: #1E8449;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+body.dark-mode .diag-frases-resultado {
+  background: rgba(39, 174, 96, 0.2);
+  color: #2ECC71;
+  border-color: rgba(39, 174, 96, 0.4);
+}
+
 .diag-pergunta-prompt {
   font-size: 1.05rem;
   color: #2C1810;
