@@ -4767,5 +4767,109 @@ body.dark-mode {
   margin-left: 0.2rem;
 }
 
+/* ============================================================
+   BANNER DE DIAGNÓSTICO CEFR "O ESPELHO" NA PÁGINA PRINCIPAL
+   ============================================================ */
+.banner-espelho-card {
+  background: linear-gradient(135deg, rgba(0, 62, 138, 0.08), rgba(212, 168, 67, 0.12));
+  border: 1.5px solid var(--cor-ouro-envelhecido, #D4A843);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 62, 138, 0.06);
+}
+
+.banner-espelho-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 62, 138, 0.12);
+  border-color: var(--cor-ouro-vivo, #FFD700);
+}
+
+.banner-espelho-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--cor-ouro-envelhecido, #D4A843);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.banner-espelho-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.banner-espelho-icon {
+  font-size: 1.8rem;
+  background: rgba(0, 62, 138, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.banner-espelho-textos {
+  flex: 1;
+  min-width: 220px;
+}
+
+.banner-espelho-titulo {
+  margin: 0 0 0.25rem 0;
+  font-family: var(--fonte-titulos, serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cor-inchiostro, #003E8A);
+}
+
+.banner-espelho-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--cor-pietra, #5C4D3E);
+  line-height: 1.4;
+}
+
+.btn-espelho-cta {
+  background: linear-gradient(135deg, #003E8A, #002244);
+  color: #FFF;
+  border: 1px solid var(--cor-ouro-envelhecido, #D4A843);
+  padding: 0.55rem 1.1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-espelho-cta:hover {
+  background: #002B66;
+  box-shadow: 0 4px 12px rgba(0, 62, 138, 0.3);
+}
+
+body.dark-mode .banner-espelho-card {
+  background: linear-gradient(135deg, rgba(0, 62, 138, 0.25), rgba(212, 168, 67, 0.15));
+  border-color: rgba(212, 168, 67, 0.4);
+}
+
+body.dark-mode .banner-espelho-titulo {
+  color: #F8FAFC;
+}
+
+body.dark-mode .banner-espelho-desc {
+  color: #CBD5E1;
+}
+
+body.dark-mode .btn-espelho-cta {
+  background: linear-gradient(135deg, #2563EB, #1E3A8A);
+}
+
+
 
 

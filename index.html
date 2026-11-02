@@ -67,6 +67,7 @@
         <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema claro/escuro" aria-label="Alternar tema claro ou escuro"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
         <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: ativados (clique para desligar)" aria-label="Sons: ativados (clique para desligar)"><span id="btn-som-ico" class="hdr-btn-ico">🔔</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
         <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade da voz de pronúncia" aria-label="Alterar velocidade de reprodução de voz"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
+        <button class="theme-toggle-btn" onclick="VocabDiagnostic.iniciar()" title="Diagnóstico de Nível Vocabular CEFR (< 3 min)" aria-label="Fazer Diagnóstico de Nível Vocabular CEFR"><span class="hdr-btn-ico">🔬</span><span class="hdr-btn-lbl">CEFR</span></button>
         <button class="theme-toggle-btn" onclick="App.navegar('temples');setTimeout(()=>Tour.reiniciar(),150)" title="Tour introdutório e ajuda" aria-label="Abrir tour de introdução e ajuda"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
         <button class="theme-toggle-btn" onclick="App.navegar('profile')" title="Meu Perfil e Configurações" aria-label="Ir para Meu Perfil"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
       </div>
@@ -152,6 +153,21 @@
     <section id="sec-temples" class="section active">
       <div id="continuar-container"></div>
       <div id="meta-prazo-container"></div>
+
+      <!-- O Espelho: Banner de Diagnóstico Vocabular CEFR -->
+      <div id="banner-diagnostico-cefr" class="banner-espelho-card" onclick="VocabDiagnostic.iniciar()" title="Descubra seu nível de inglês CEFR e vocabulário real com o teste rápido (< 3 min)">
+        <div class="banner-espelho-badge">🔬 O ESPELHO · DIAGNÓSTICO CEFR</div>
+        <div class="banner-espelho-conteudo">
+          <div class="banner-espelho-icon">📊</div>
+          <div class="banner-espelho-textos">
+            <h4 class="banner-espelho-titulo">Descubra seu Nível Real de Vocabulário</h4>
+            <p class="banner-espelho-desc">Teste adaptativo rápido (&lt; 3 min) com correção de Abbott e projeção de autonomia (Laufer 95%).</p>
+          </div>
+          <button type="button" class="btn-espelho-cta" onclick="event.stopPropagation();VocabDiagnostic.iniciar()">
+            ⚡ Iniciar Teste
+          </button>
+        </div>
+      </div>
 
       <!-- Heatmap di attività — topo da página -->
       <div class="heatmap-container">

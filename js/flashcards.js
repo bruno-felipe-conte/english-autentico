@@ -1852,10 +1852,19 @@ const Flashcards = {
     let cartasUnicas = Array.from(new Map(cartasElegiveis.map(c => [c.id, c])).values());
 
     if (cartasUnicas.length < 3) {
+      // Fallback gracioso para cartas atualmente carregadas na sessão ou pool geral
+      const fallbackPool = (this.cartasDisponiveis && this.cartasDisponiveis.length >= 3)
+        ? this.cartasDisponiveis
+        : poolGeral;
+      cartasElegiveis = fallbackPool.filter(p => p && p.id);
+      cartasUnicas = Array.from(new Map(cartasElegiveis.map(c => [c.id, c])).values());
+    }
+
+    if (cartasUnicas.length < 3) {
       if (typeof App !== 'undefined' && App.notificar) {
-        App.notificar('Você precisa de pelo menos 3 cartas dominadas (reps ≥ 3 ou estabilidade > 7) para o Modo Sobrevivência. Continue revisando!', 'aviso');
+        App.notificar('Você precisa de pelo menos 3 cartas disponíveis para o Modo Sobrevivência. Continue explorando!', 'aviso');
       } else if (typeof alert === 'function') {
-        alert('Você precisa de pelo menos 3 cartas dominadas (reps ≥ 3 ou estabilidade > 7) para o Modo Sobrevivência. Continue revisando!');
+        alert('Você precisa de pelo menos 3 cartas disponíveis para o Modo Sobrevivência. Continue explorando!');
       }
       return;
     }

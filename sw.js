@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker | Cache v1138 | Offline-first PWA
+// sw.js — Service Worker | Cache v1140 | Offline-first PWA
 // Strategy:
 //   • Static assets  → cache-first (JS, CSS, HTML, icons)
 //   • /data/*.json   → network-first with cache fallback
 //   • Google Fonts   → stale-while-revalidate (cached after 1st load)
 // ============================================================
 
-const CACHE = 'english-v1138';
+const CACHE = 'english-v1140';
 
 // All critical assets required for 100% offline functionality
 const STATIC = [
@@ -78,6 +78,12 @@ const STATIC = [
   './js/stories/paginator.js?v=1125',
   './js/stories/renderer.js?v=1125',
   './js/stories/tts.js?v=1125',
+  './js/text_normalizer.js?v=1139',
+  './js/frequency.js?v=1139',
+  './js/production.js?v=1139',
+  './js/diagnostico.js?v=1139',
+  './js/coverage_meter.js?v=1139',
+  './data/frequency_3000.json',
   './js/stories/translator.js?v=1125',
   './js/stories.js?v=1125',
   './js/ia-import.js?v=1125',
